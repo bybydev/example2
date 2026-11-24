@@ -1,0 +1,7 @@
+node_modules/
+out/
+artifacts/
+work/
+!work/voiceover-raw/.gitkeep
+.DS_Store
+*.log

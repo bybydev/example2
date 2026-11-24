@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "remotion-video-why-ai-output-tokens-expensive",
+  "title": "Why Ai Output Tokens Expensive",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "audio": {
+    "format": "mp3",
+    "dir": "public/voiceover",
+    "rawDir": "work/voiceover-raw",
+    "script": "content/voiceover.md",
+    "timingsDir": "content/timings",
+    "loudnorm": "I=-14:TP=-1.5:LRA=11",
+    "bitrate": "192k"
+  },
+  "timing": {
+    "defaultLeadSeconds": 0.3,
+    "defaultTailSeconds": 0.4,
+    "defaultMinSeconds": 2.0,
+    "chapterGapSeconds": 0.6
+  },
+  "chapters": [
+    {
+      "id": "01-hook",
+      "title": "Hook",
+      "paragraphs": [
+        1
+      ]
+    },
+    {
+      "id": "02-main-point",
+      "title": "Main Point",
+      "paragraphs": [
+        2
+      ]
+    }
+  ]
+}
