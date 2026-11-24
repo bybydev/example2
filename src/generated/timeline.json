@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "slug": "remotion-youtube-template",
+  "title": "Remotion YouTube Template",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "totalFrames": 360,
+  "totalSeconds": 12.0,
+  "chapters": [
+    {
+      "id": "01-hook",
+      "compositionId": "Chapter01Hook",
+      "title": "Hook",
+      "startFrame": 0,
+      "durationInFrames": 168,
+      "startSeconds": 0.0,
+      "durationSeconds": 5.6,
+      "paragraphs": [1]
+    },
+    {
+      "id": "02-main-point",
+      "compositionId": "Chapter02MainPoint",
+      "title": "Main Point",
+      "startFrame": 168,
+      "durationInFrames": 192,
+      "startSeconds": 5.6,
+      "durationSeconds": 6.4,
+      "paragraphs": [2]
+    }
+  ],
+  "clips": [
+    {
+      "paragraph": 1,
+      "chapterId": "01-hook",
+      "startFrame": 0,
+      "durationInFrames": 150,
+      "leadFrames": 9,
+      "voiceFrames": 129,
+      "audioFile": null,
+      "timingSource": "none",
+      "text": "Welcome to this video. Replace this hook paragraph with your real opening narration.",
+      "words": []
+    },
+    {
+      "paragraph": 2,
+      "chapterId": "02-main-point",
+      "startFrame": 168,
+      "durationInFrames": 192,
+      "leadFrames": 9,
+      "voiceFrames": 171,
+      "audioFile": null,
+      "timingSource": "none",
+      "text": "Here is the second paragraph. Split your script into one paragraph per blank line so each paragraph maps to one voiceover clip and one Whisper timing sidecar.",
+      "words": []
+    }
+  ]
+}

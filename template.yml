@@ -1,0 +1,18 @@
+schemaVersion: 1
+templateVersion: 0.1.0
+template:
+  name: remotion-youtube-template
+  repository: https://github.com/hoangbkit/remotion-youtube-template.git
+
+identity:
+  slug: remotion-youtube-template
+  title: Remotion YouTube Template
+
+configurationSurfaces:
+  - package.json
+  - video.config.json
+  - README.md
+  - src/generated/timeline.json
+
+lifecycle:
+  generatedManifest: .mycli/project.yml
