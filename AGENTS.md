@@ -10,6 +10,8 @@
 - **Script & narration**: `content/voiceover.md` has one paragraph per blank line; each paragraph maps 1:1 to a voiceover clip in `public/voiceover/` and a Whisper word-timing sidecar in `content/timings/`.
 - **Visual plan**: Read `content/storyboard.md` before implementing or updating scenes.
 - **Chapter isolation**: Each chapter lives in its own folder under `src/chapters/<id>/index.tsx` and is registered in `src/chapters/index.ts` and `video.config.json`. Keep edits scoped to the target chapter whenever possible.
-- **Timing-driven animation**: Always import helpers from `src/lib/timeline.ts` (`chapterById`, `chapterClips`, `wordFrame`) and anchor visual transitions to spoken words instead of hardcoded frame numbers.
-- **Design system**: Reuse tokens in `src/theme/tokens.ts` and shared components in `src/ui/` for consistent 1920x1080 YouTube layout and safe margins.
+- **Timing-driven animation**: Anchor visual transitions to spoken words instead of hardcoded frame numbers. Use `src/lib/timeline.ts` (`chapterById`, `chapterClips`, `wordFrame`) and the ergonomic helpers in `src/ui/motion.ts` (`clipRange`, `cueFrame`, `sceneWindow`, `fadeIn`, `progressBetween`, `springAt`, `slideUpStyle`).
+- **Design system**: Reuse semantic tokens in `src/theme/tokens.ts` (`TOKENS`, `SemanticTone`, `TONE_STYLES`) and shared components in `src/ui/` (`Stage`, `SceneBeat`, `Card`, `Pill`, `SectionTitle`, `DataChip`, `MeterBar`) for consistent 1920x1080 YouTube layout and safe margins.
+- **Thumbnail**: `src/Thumbnail.tsx` is registered as `<Still id="Thumbnail" />` (1280x720) in `src/Root.tsx` and rendered in CI to `out/thumbnail.png`. Keep the bottom-right corner clear for YouTube's duration badge.
+- **Publishing deliverables**: Keep `content/youtube-metadata.md` updated for title/description/tags/checklist. In-video `CaptionsOverlay` is disabled by default; generate `content/subtitles.srt` via `mycli` for YouTube's caption track.
 - **Media assets**: Place chapter images/SVGs under `public/assets/<chapter-id>/` and load them via Remotion's `staticFile()`.

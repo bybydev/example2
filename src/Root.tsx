@@ -1,5 +1,6 @@
 import React from "react";
-import { Composition } from "remotion";
+import { Composition, Still } from "remotion";
+import { Thumbnail } from "./Thumbnail";
 import { ChapterPreview, Video } from "./Video";
 import { timeline } from "./lib/timeline";
 
@@ -14,6 +15,7 @@ export const RemotionRoot: React.FC = () => {
         width={timeline.width}
         height={timeline.height}
       />
+      <Still id="Thumbnail" component={Thumbnail} width={1280} height={720} />
       {timeline.chapters.map((chapter) => (
         <Composition
           key={chapter.id}

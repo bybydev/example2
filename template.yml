@@ -1,5 +1,5 @@
 schemaVersion: 1
-templateVersion: 0.1.0
+templateVersion: 0.2.0
 template:
   name: remotion-youtube-template
   repository: https://github.com/hoangbkit/remotion-youtube-template.git

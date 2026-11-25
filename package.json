@@ -7,6 +7,7 @@
     "dev": "remotion studio src/index.ts",
     "typecheck": "tsc --noEmit",
     "build": "remotion render src/index.ts Main out/main.mp4",
+    "thumbnail": "remotion still src/index.ts Thumbnail out/thumbnail.png",
     "normalize": "sh scripts/normalize-voiceover.sh"
   },
   "dependencies": {
