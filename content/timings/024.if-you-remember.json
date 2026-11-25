@@ -1,0 +1,701 @@
+{
+  "audio": "024.if-you-remember.mp3",
+  "paragraph": 24,
+  "text": "If you remember one mental model from this video, remember this: reading tokens is parallel math, bounded by compute; writing tokens is serial memory traffic, bounded by bandwidth. Next time you see a five-times output price on an API page, you are not seeing markup. You are seeing the physics of streaming gigabytes across silicon just to pick the next word.",
+  "transcript": "If you remember one mental model from this video, remember this. Reading tokens is parallel math, bounded by compute. Writing tokens is serial memory traffic, bounded by bandwidth. Next time you see a 5x output price on an API page, you are not seeing markup. You are seeing the physics of streaming gigabytes across silicon, just to pick the next word.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 1
+    }
+  ],
+  "duration": 19.84,
+  "failed_words": 1,
+  "failures": [
+    {
+      "index": 33,
+      "word": "five-times",
+      "match": "approx",
+      "heard": "5x",
+      "start": 11.58
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "If",
+      "start": 0.0,
+      "end": 0.28,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 0.28,
+      "end": 0.38,
+      "match": "exact"
+    },
+    {
+      "word": "remember",
+      "start": 0.38,
+      "end": 0.64,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 0.64,
+      "end": 0.94,
+      "match": "exact"
+    },
+    {
+      "word": "mental",
+      "start": 0.94,
+      "end": 1.24,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 1.24,
+      "end": 1.54,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 1.54,
+      "end": 1.76,
+      "match": "exact"
+    },
+    {
+      "word": "this",
+      "start": 1.76,
+      "end": 1.92,
+      "match": "exact"
+    },
+    {
+      "word": "video,",
+      "start": 1.92,
+      "end": 2.24,
+      "match": "exact"
+    },
+    {
+      "word": "remember",
+      "start": 2.46,
+      "end": 2.84,
+      "match": "exact"
+    },
+    {
+      "word": "this:",
+      "start": 2.84,
+      "end": 3.14,
+      "match": "exact"
+    },
+    {
+      "word": "reading",
+      "start": 3.5,
+      "end": 4.02,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 4.02,
+      "end": 4.36,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 4.36,
+      "end": 4.68,
+      "match": "exact"
+    },
+    {
+      "word": "parallel",
+      "start": 4.68,
+      "end": 5.02,
+      "match": "exact"
+    },
+    {
+      "word": "math,",
+      "start": 5.02,
+      "end": 5.36,
+      "match": "exact"
+    },
+    {
+      "word": "bounded",
+      "start": 5.62,
+      "end": 6.0,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 6.0,
+      "end": 6.22,
+      "match": "exact"
+    },
+    {
+      "word": "compute;",
+      "start": 6.22,
+      "end": 6.52,
+      "match": "exact"
+    },
+    {
+      "word": "writing",
+      "start": 6.84,
+      "end": 7.26,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 7.26,
+      "end": 7.68,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 7.68,
+      "end": 7.94,
+      "match": "exact"
+    },
+    {
+      "word": "serial",
+      "start": 7.94,
+      "end": 8.16,
+      "match": "exact"
+    },
+    {
+      "word": "memory",
+      "start": 8.16,
+      "end": 8.42,
+      "match": "exact"
+    },
+    {
+      "word": "traffic,",
+      "start": 8.42,
+      "end": 8.8,
+      "match": "exact"
+    },
+    {
+      "word": "bounded",
+      "start": 9.04,
+      "end": 9.4,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 9.4,
+      "end": 9.6,
+      "match": "exact"
+    },
+    {
+      "word": "bandwidth.",
+      "start": 9.6,
+      "end": 9.94,
+      "match": "exact"
+    },
+    {
+      "word": "Next",
+      "start": 10.44,
+      "end": 10.96,
+      "match": "exact"
+    },
+    {
+      "word": "time",
+      "start": 10.96,
+      "end": 11.16,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 11.16,
+      "end": 11.3,
+      "match": "exact"
+    },
+    {
+      "word": "see",
+      "start": 11.3,
+      "end": 11.44,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 11.44,
+      "end": 11.58,
+      "match": "exact"
+    },
+    {
+      "word": "five-times",
+      "start": 11.58,
+      "end": 11.9,
+      "match": "approx",
+      "heard": "5x"
+    },
+    {
+      "word": "output",
+      "start": 11.9,
+      "end": 12.26,
+      "match": "exact"
+    },
+    {
+      "word": "price",
+      "start": 12.26,
+      "end": 12.6,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 12.6,
+      "end": 12.78,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 12.78,
+      "end": 12.9,
+      "match": "exact"
+    },
+    {
+      "word": "API",
+      "start": 12.9,
+      "end": 13.12,
+      "match": "exact"
+    },
+    {
+      "word": "page,",
+      "start": 13.12,
+      "end": 13.54,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 13.72,
+      "end": 13.88,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 13.88,
+      "end": 13.98,
+      "match": "exact"
+    },
+    {
+      "word": "not",
+      "start": 13.98,
+      "end": 14.14,
+      "match": "exact"
+    },
+    {
+      "word": "seeing",
+      "start": 14.14,
+      "end": 14.44,
+      "match": "exact"
+    },
+    {
+      "word": "markup.",
+      "start": 14.44,
+      "end": 14.84,
+      "match": "exact"
+    },
+    {
+      "word": "You",
+      "start": 15.04,
+      "end": 15.52,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 15.52,
+      "end": 15.6,
+      "match": "exact"
+    },
+    {
+      "word": "seeing",
+      "start": 15.6,
+      "end": 15.84,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 15.84,
+      "end": 16.0,
+      "match": "exact"
+    },
+    {
+      "word": "physics",
+      "start": 16.0,
+      "end": 16.24,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 16.24,
+      "end": 16.46,
+      "match": "exact"
+    },
+    {
+      "word": "streaming",
+      "start": 16.46,
+      "end": 16.72,
+      "match": "exact"
+    },
+    {
+      "word": "gigabytes",
+      "start": 16.72,
+      "end": 17.1,
+      "match": "exact"
+    },
+    {
+      "word": "across",
+      "start": 17.1,
+      "end": 17.5,
+      "match": "exact"
+    },
+    {
+      "word": "silicon",
+      "start": 17.5,
+      "end": 17.92,
+      "match": "exact"
+    },
+    {
+      "word": "just",
+      "start": 18.12,
+      "end": 18.36,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 18.36,
+      "end": 18.5,
+      "match": "exact"
+    },
+    {
+      "word": "pick",
+      "start": 18.5,
+      "end": 18.66,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 18.66,
+      "end": 18.8,
+      "match": "exact"
+    },
+    {
+      "word": "next",
+      "start": 18.8,
+      "end": 18.92,
+      "match": "exact"
+    },
+    {
+      "word": "word.",
+      "start": 18.92,
+      "end": 19.22,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "If",
+      "start": 0.0,
+      "end": 0.28
+    },
+    {
+      "word": "you",
+      "start": 0.28,
+      "end": 0.38
+    },
+    {
+      "word": "remember",
+      "start": 0.38,
+      "end": 0.64
+    },
+    {
+      "word": "one",
+      "start": 0.64,
+      "end": 0.94
+    },
+    {
+      "word": "mental",
+      "start": 0.94,
+      "end": 1.24
+    },
+    {
+      "word": "model",
+      "start": 1.24,
+      "end": 1.54
+    },
+    {
+      "word": "from",
+      "start": 1.54,
+      "end": 1.76
+    },
+    {
+      "word": "this",
+      "start": 1.76,
+      "end": 1.92
+    },
+    {
+      "word": "video,",
+      "start": 1.92,
+      "end": 2.24
+    },
+    {
+      "word": "remember",
+      "start": 2.46,
+      "end": 2.84
+    },
+    {
+      "word": "this.",
+      "start": 2.84,
+      "end": 3.14
+    },
+    {
+      "word": "Reading",
+      "start": 3.5,
+      "end": 4.02
+    },
+    {
+      "word": "tokens",
+      "start": 4.02,
+      "end": 4.36
+    },
+    {
+      "word": "is",
+      "start": 4.36,
+      "end": 4.68
+    },
+    {
+      "word": "parallel",
+      "start": 4.68,
+      "end": 5.02
+    },
+    {
+      "word": "math,",
+      "start": 5.02,
+      "end": 5.36
+    },
+    {
+      "word": "bounded",
+      "start": 5.62,
+      "end": 6.0
+    },
+    {
+      "word": "by",
+      "start": 6.0,
+      "end": 6.22
+    },
+    {
+      "word": "compute.",
+      "start": 6.22,
+      "end": 6.52
+    },
+    {
+      "word": "Writing",
+      "start": 6.84,
+      "end": 7.26
+    },
+    {
+      "word": "tokens",
+      "start": 7.26,
+      "end": 7.68
+    },
+    {
+      "word": "is",
+      "start": 7.68,
+      "end": 7.94
+    },
+    {
+      "word": "serial",
+      "start": 7.94,
+      "end": 8.16
+    },
+    {
+      "word": "memory",
+      "start": 8.16,
+      "end": 8.42
+    },
+    {
+      "word": "traffic,",
+      "start": 8.42,
+      "end": 8.8
+    },
+    {
+      "word": "bounded",
+      "start": 9.04,
+      "end": 9.4
+    },
+    {
+      "word": "by",
+      "start": 9.4,
+      "end": 9.6
+    },
+    {
+      "word": "bandwidth.",
+      "start": 9.6,
+      "end": 9.94
+    },
+    {
+      "word": "Next",
+      "start": 10.44,
+      "end": 10.96
+    },
+    {
+      "word": "time",
+      "start": 10.96,
+      "end": 11.16
+    },
+    {
+      "word": "you",
+      "start": 11.16,
+      "end": 11.3
+    },
+    {
+      "word": "see",
+      "start": 11.3,
+      "end": 11.44
+    },
+    {
+      "word": "a",
+      "start": 11.44,
+      "end": 11.58
+    },
+    {
+      "word": "5x",
+      "start": 11.58,
+      "end": 11.9
+    },
+    {
+      "word": "output",
+      "start": 11.9,
+      "end": 12.26
+    },
+    {
+      "word": "price",
+      "start": 12.26,
+      "end": 12.6
+    },
+    {
+      "word": "on",
+      "start": 12.6,
+      "end": 12.78
+    },
+    {
+      "word": "an",
+      "start": 12.78,
+      "end": 12.9
+    },
+    {
+      "word": "API",
+      "start": 12.9,
+      "end": 13.12
+    },
+    {
+      "word": "page,",
+      "start": 13.12,
+      "end": 13.54
+    },
+    {
+      "word": "you",
+      "start": 13.72,
+      "end": 13.88
+    },
+    {
+      "word": "are",
+      "start": 13.88,
+      "end": 13.98
+    },
+    {
+      "word": "not",
+      "start": 13.98,
+      "end": 14.14
+    },
+    {
+      "word": "seeing",
+      "start": 14.14,
+      "end": 14.44
+    },
+    {
+      "word": "markup.",
+      "start": 14.44,
+      "end": 14.84
+    },
+    {
+      "word": "You",
+      "start": 15.04,
+      "end": 15.52
+    },
+    {
+      "word": "are",
+      "start": 15.52,
+      "end": 15.6
+    },
+    {
+      "word": "seeing",
+      "start": 15.6,
+      "end": 15.84
+    },
+    {
+      "word": "the",
+      "start": 15.84,
+      "end": 16.0
+    },
+    {
+      "word": "physics",
+      "start": 16.0,
+      "end": 16.24
+    },
+    {
+      "word": "of",
+      "start": 16.24,
+      "end": 16.46
+    },
+    {
+      "word": "streaming",
+      "start": 16.46,
+      "end": 16.72
+    },
+    {
+      "word": "gigabytes",
+      "start": 16.72,
+      "end": 17.1
+    },
+    {
+      "word": "across",
+      "start": 17.1,
+      "end": 17.5
+    },
+    {
+      "word": "silicon,",
+      "start": 17.5,
+      "end": 17.92
+    },
+    {
+      "word": "just",
+      "start": 18.12,
+      "end": 18.36
+    },
+    {
+      "word": "to",
+      "start": 18.36,
+      "end": 18.5
+    },
+    {
+      "word": "pick",
+      "start": 18.5,
+      "end": 18.66
+    },
+    {
+      "word": "the",
+      "start": 18.66,
+      "end": 18.8
+    },
+    {
+      "word": "next",
+      "start": 18.8,
+      "end": 18.92
+    },
+    {
+      "word": "word.",
+      "start": 18.92,
+      "end": 19.22
+    }
+  ]
+}

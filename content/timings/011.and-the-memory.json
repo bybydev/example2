@@ -1,0 +1,632 @@
+{
+  "audio": "011.and-the-memory.mp3",
+  "paragraph": 11,
+  "text": "And the memory wall is only half the story. In a Transformer, every new token attends to every token before it. If the GPU had to recompute all earlier tokens from scratch at each step, generation would collapse. Instead, servers store every past token's Key and Value vectors in VRAM, creating the KV cache.",
+  "transcript": "and the memory wall is only half the story. In a transformer, every new token attends to every token before it. If the GPU had to recompute all earlier tokens from scratch at each step, generation would collapse. Instead, servers store every past token's key and value vectors in BRAM, creating the KB cache.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 2
+    }
+  ],
+  "duration": 17.04,
+  "failed_words": 2,
+  "failures": [
+    {
+      "index": 49,
+      "word": "VRAM,",
+      "match": "approx",
+      "heard": "BRAM,",
+      "start": 14.84
+    },
+    {
+      "index": 52,
+      "word": "KV",
+      "match": "approx",
+      "heard": "KB",
+      "start": 15.78
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "And",
+      "start": 0.0,
+      "end": 0.28,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.28,
+      "end": 0.36,
+      "match": "exact"
+    },
+    {
+      "word": "memory",
+      "start": 0.36,
+      "end": 0.58,
+      "match": "exact"
+    },
+    {
+      "word": "wall",
+      "start": 0.58,
+      "end": 0.78,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 0.78,
+      "end": 0.92,
+      "match": "exact"
+    },
+    {
+      "word": "only",
+      "start": 0.92,
+      "end": 1.08,
+      "match": "exact"
+    },
+    {
+      "word": "half",
+      "start": 1.08,
+      "end": 1.36,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 1.36,
+      "end": 1.54,
+      "match": "exact"
+    },
+    {
+      "word": "story.",
+      "start": 1.54,
+      "end": 1.82,
+      "match": "exact"
+    },
+    {
+      "word": "In",
+      "start": 2.06,
+      "end": 2.48,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 2.48,
+      "end": 2.58,
+      "match": "exact"
+    },
+    {
+      "word": "Transformer,",
+      "start": 2.58,
+      "end": 2.96,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 3.28,
+      "end": 3.68,
+      "match": "exact"
+    },
+    {
+      "word": "new",
+      "start": 3.68,
+      "end": 3.86,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 3.86,
+      "end": 4.14,
+      "match": "exact"
+    },
+    {
+      "word": "attends",
+      "start": 4.14,
+      "end": 4.38,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 4.38,
+      "end": 4.6,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 4.6,
+      "end": 4.78,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 4.78,
+      "end": 5.04,
+      "match": "exact"
+    },
+    {
+      "word": "before",
+      "start": 5.04,
+      "end": 5.32,
+      "match": "exact"
+    },
+    {
+      "word": "it.",
+      "start": 5.32,
+      "end": 5.56,
+      "match": "exact"
+    },
+    {
+      "word": "If",
+      "start": 5.98,
+      "end": 6.5,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 6.5,
+      "end": 6.62,
+      "match": "exact"
+    },
+    {
+      "word": "GPU",
+      "start": 6.62,
+      "end": 6.9,
+      "match": "exact"
+    },
+    {
+      "word": "had",
+      "start": 6.9,
+      "end": 7.16,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 7.16,
+      "end": 7.32,
+      "match": "exact"
+    },
+    {
+      "word": "recompute",
+      "start": 7.32,
+      "end": 7.76,
+      "match": "exact"
+    },
+    {
+      "word": "all",
+      "start": 7.76,
+      "end": 7.88,
+      "match": "exact"
+    },
+    {
+      "word": "earlier",
+      "start": 7.88,
+      "end": 8.22,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 8.22,
+      "end": 8.52,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 8.52,
+      "end": 8.78,
+      "match": "exact"
+    },
+    {
+      "word": "scratch",
+      "start": 8.78,
+      "end": 9.04,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 9.04,
+      "end": 9.24,
+      "match": "exact"
+    },
+    {
+      "word": "each",
+      "start": 9.24,
+      "end": 9.38,
+      "match": "exact"
+    },
+    {
+      "word": "step,",
+      "start": 9.38,
+      "end": 9.64,
+      "match": "exact"
+    },
+    {
+      "word": "generation",
+      "start": 9.88,
+      "end": 10.22,
+      "match": "exact"
+    },
+    {
+      "word": "would",
+      "start": 10.22,
+      "end": 10.62,
+      "match": "exact"
+    },
+    {
+      "word": "collapse.",
+      "start": 10.62,
+      "end": 10.96,
+      "match": "exact"
+    },
+    {
+      "word": "Instead,",
+      "start": 11.28,
+      "end": 11.72,
+      "match": "exact"
+    },
+    {
+      "word": "servers",
+      "start": 12.0,
+      "end": 12.48,
+      "match": "exact"
+    },
+    {
+      "word": "store",
+      "start": 12.48,
+      "end": 12.76,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 12.76,
+      "end": 12.98,
+      "match": "exact"
+    },
+    {
+      "word": "past",
+      "start": 12.98,
+      "end": 13.2,
+      "match": "exact"
+    },
+    {
+      "word": "token's",
+      "start": 13.2,
+      "end": 13.7,
+      "match": "exact"
+    },
+    {
+      "word": "Key",
+      "start": 13.7,
+      "end": 13.86,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 13.86,
+      "end": 14.02,
+      "match": "exact"
+    },
+    {
+      "word": "Value",
+      "start": 14.02,
+      "end": 14.24,
+      "match": "exact"
+    },
+    {
+      "word": "vectors",
+      "start": 14.24,
+      "end": 14.62,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 14.62,
+      "end": 14.84,
+      "match": "exact"
+    },
+    {
+      "word": "VRAM,",
+      "start": 14.84,
+      "end": 15.28,
+      "match": "approx",
+      "heard": "BRAM,"
+    },
+    {
+      "word": "creating",
+      "start": 15.3,
+      "end": 15.58,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 15.58,
+      "end": 15.78,
+      "match": "exact"
+    },
+    {
+      "word": "KV",
+      "start": 15.78,
+      "end": 16.02,
+      "match": "approx",
+      "heard": "KB"
+    },
+    {
+      "word": "cache.",
+      "start": 16.02,
+      "end": 16.3,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "and",
+      "start": 0.0,
+      "end": 0.28
+    },
+    {
+      "word": "the",
+      "start": 0.28,
+      "end": 0.36
+    },
+    {
+      "word": "memory",
+      "start": 0.36,
+      "end": 0.58
+    },
+    {
+      "word": "wall",
+      "start": 0.58,
+      "end": 0.78
+    },
+    {
+      "word": "is",
+      "start": 0.78,
+      "end": 0.92
+    },
+    {
+      "word": "only",
+      "start": 0.92,
+      "end": 1.08
+    },
+    {
+      "word": "half",
+      "start": 1.08,
+      "end": 1.36
+    },
+    {
+      "word": "the",
+      "start": 1.36,
+      "end": 1.54
+    },
+    {
+      "word": "story.",
+      "start": 1.54,
+      "end": 1.82
+    },
+    {
+      "word": "In",
+      "start": 2.06,
+      "end": 2.48
+    },
+    {
+      "word": "a",
+      "start": 2.48,
+      "end": 2.58
+    },
+    {
+      "word": "transformer,",
+      "start": 2.58,
+      "end": 2.96
+    },
+    {
+      "word": "every",
+      "start": 3.28,
+      "end": 3.68
+    },
+    {
+      "word": "new",
+      "start": 3.68,
+      "end": 3.86
+    },
+    {
+      "word": "token",
+      "start": 3.86,
+      "end": 4.14
+    },
+    {
+      "word": "attends",
+      "start": 4.14,
+      "end": 4.38
+    },
+    {
+      "word": "to",
+      "start": 4.38,
+      "end": 4.6
+    },
+    {
+      "word": "every",
+      "start": 4.6,
+      "end": 4.78
+    },
+    {
+      "word": "token",
+      "start": 4.78,
+      "end": 5.04
+    },
+    {
+      "word": "before",
+      "start": 5.04,
+      "end": 5.32
+    },
+    {
+      "word": "it.",
+      "start": 5.32,
+      "end": 5.56
+    },
+    {
+      "word": "If",
+      "start": 5.98,
+      "end": 6.5
+    },
+    {
+      "word": "the",
+      "start": 6.5,
+      "end": 6.62
+    },
+    {
+      "word": "GPU",
+      "start": 6.62,
+      "end": 6.9
+    },
+    {
+      "word": "had",
+      "start": 6.9,
+      "end": 7.16
+    },
+    {
+      "word": "to",
+      "start": 7.16,
+      "end": 7.32
+    },
+    {
+      "word": "recompute",
+      "start": 7.32,
+      "end": 7.76
+    },
+    {
+      "word": "all",
+      "start": 7.76,
+      "end": 7.88
+    },
+    {
+      "word": "earlier",
+      "start": 7.88,
+      "end": 8.22
+    },
+    {
+      "word": "tokens",
+      "start": 8.22,
+      "end": 8.52
+    },
+    {
+      "word": "from",
+      "start": 8.52,
+      "end": 8.78
+    },
+    {
+      "word": "scratch",
+      "start": 8.78,
+      "end": 9.04
+    },
+    {
+      "word": "at",
+      "start": 9.04,
+      "end": 9.24
+    },
+    {
+      "word": "each",
+      "start": 9.24,
+      "end": 9.38
+    },
+    {
+      "word": "step,",
+      "start": 9.38,
+      "end": 9.64
+    },
+    {
+      "word": "generation",
+      "start": 9.88,
+      "end": 10.22
+    },
+    {
+      "word": "would",
+      "start": 10.22,
+      "end": 10.62
+    },
+    {
+      "word": "collapse.",
+      "start": 10.62,
+      "end": 10.96
+    },
+    {
+      "word": "Instead,",
+      "start": 11.28,
+      "end": 11.72
+    },
+    {
+      "word": "servers",
+      "start": 12.0,
+      "end": 12.48
+    },
+    {
+      "word": "store",
+      "start": 12.48,
+      "end": 12.76
+    },
+    {
+      "word": "every",
+      "start": 12.76,
+      "end": 12.98
+    },
+    {
+      "word": "past",
+      "start": 12.98,
+      "end": 13.2
+    },
+    {
+      "word": "token's",
+      "start": 13.2,
+      "end": 13.7
+    },
+    {
+      "word": "key",
+      "start": 13.7,
+      "end": 13.86
+    },
+    {
+      "word": "and",
+      "start": 13.86,
+      "end": 14.02
+    },
+    {
+      "word": "value",
+      "start": 14.02,
+      "end": 14.24
+    },
+    {
+      "word": "vectors",
+      "start": 14.24,
+      "end": 14.62
+    },
+    {
+      "word": "in",
+      "start": 14.62,
+      "end": 14.84
+    },
+    {
+      "word": "BRAM,",
+      "start": 14.84,
+      "end": 15.28
+    },
+    {
+      "word": "creating",
+      "start": 15.3,
+      "end": 15.58
+    },
+    {
+      "word": "the",
+      "start": 15.58,
+      "end": 15.78
+    },
+    {
+      "word": "KB",
+      "start": 15.78,
+      "end": 16.02
+    },
+    {
+      "word": "cache.",
+      "start": 16.02,
+      "end": 16.3
+    }
+  ]
+}

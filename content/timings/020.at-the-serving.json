@@ -1,0 +1,579 @@
+{
+  "audio": "020.at-the-serving.mp3",
+  "paragraph": 20,
+  "text": "At the serving layer, PagedAttention manages KV cache memory like virtual memory pages, eliminating VRAM fragmentation so more users fit per GPU. Modern clusters also use prefill-decode disaggregation, separating compute-heavy prefill GPUs from memory-heavy decode GPUs so long prompts never stall active users streaming responses.",
+  "transcript": "At the Serving layer, Page Detention manages KV cache memory like virtual memory pages, eliminating VRAM fragmentation so more users fit per GPU. Modern clusters also use Pre-Fill Decode Disaggregation, separating compute-heavy pre-filled GPUs from memory. Heavy decode GPUs so long prompts never-stall active users' streaming responses.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 4
+    }
+  ],
+  "duration": 18.28,
+  "failed_words": 4,
+  "failures": [
+    {
+      "index": 4,
+      "word": "PagedAttention",
+      "match": "approx",
+      "heard": "Page Detention",
+      "start": 1.04
+    },
+    {
+      "index": 29,
+      "word": "compute-heavy",
+      "match": "approx",
+      "heard": "compute -heavy pre -filled",
+      "start": 11.58
+    },
+    {
+      "index": 30,
+      "word": "prefill",
+      "match": "approx",
+      "heard": "compute -heavy pre -filled",
+      "start": 12.287
+    },
+    {
+      "index": 42,
+      "word": "users",
+      "match": "approx",
+      "heard": "users'",
+      "start": 16.64
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "At",
+      "start": 0.0,
+      "end": 0.3,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.3,
+      "end": 0.36,
+      "match": "exact"
+    },
+    {
+      "word": "serving",
+      "start": 0.36,
+      "end": 0.66,
+      "match": "exact"
+    },
+    {
+      "word": "layer,",
+      "start": 0.66,
+      "end": 0.82,
+      "match": "exact"
+    },
+    {
+      "word": "PagedAttention",
+      "start": 1.04,
+      "end": 1.7,
+      "match": "approx",
+      "heard": "Page Detention"
+    },
+    {
+      "word": "manages",
+      "start": 1.7,
+      "end": 2.02,
+      "match": "exact"
+    },
+    {
+      "word": "KV",
+      "start": 2.02,
+      "end": 2.4,
+      "match": "exact"
+    },
+    {
+      "word": "cache",
+      "start": 2.4,
+      "end": 2.66,
+      "match": "exact"
+    },
+    {
+      "word": "memory",
+      "start": 2.66,
+      "end": 3.0,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 3.0,
+      "end": 3.34,
+      "match": "exact"
+    },
+    {
+      "word": "virtual",
+      "start": 3.34,
+      "end": 3.62,
+      "match": "exact"
+    },
+    {
+      "word": "memory",
+      "start": 3.62,
+      "end": 3.9,
+      "match": "exact"
+    },
+    {
+      "word": "pages,",
+      "start": 3.9,
+      "end": 4.28,
+      "match": "exact"
+    },
+    {
+      "word": "eliminating",
+      "start": 4.58,
+      "end": 4.98,
+      "match": "exact"
+    },
+    {
+      "word": "VRAM",
+      "start": 4.98,
+      "end": 5.56,
+      "match": "exact"
+    },
+    {
+      "word": "fragmentation",
+      "start": 5.56,
+      "end": 6.04,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 6.04,
+      "end": 6.42,
+      "match": "exact"
+    },
+    {
+      "word": "more",
+      "start": 6.42,
+      "end": 6.62,
+      "match": "exact"
+    },
+    {
+      "word": "users",
+      "start": 6.62,
+      "end": 6.94,
+      "match": "exact"
+    },
+    {
+      "word": "fit",
+      "start": 6.94,
+      "end": 7.2,
+      "match": "exact"
+    },
+    {
+      "word": "per",
+      "start": 7.2,
+      "end": 7.36,
+      "match": "exact"
+    },
+    {
+      "word": "GPU.",
+      "start": 7.36,
+      "end": 7.66,
+      "match": "exact"
+    },
+    {
+      "word": "Modern",
+      "start": 8.04,
+      "end": 8.56,
+      "match": "exact"
+    },
+    {
+      "word": "clusters",
+      "start": 8.56,
+      "end": 8.9,
+      "match": "exact"
+    },
+    {
+      "word": "also",
+      "start": 8.9,
+      "end": 9.22,
+      "match": "exact"
+    },
+    {
+      "word": "use",
+      "start": 9.22,
+      "end": 9.5,
+      "match": "exact"
+    },
+    {
+      "word": "prefill-decode",
+      "start": 9.5,
+      "end": 10.28,
+      "match": "exact"
+    },
+    {
+      "word": "disaggregation,",
+      "start": 10.28,
+      "end": 11.12,
+      "match": "exact"
+    },
+    {
+      "word": "separating",
+      "start": 11.14,
+      "end": 11.58,
+      "match": "exact"
+    },
+    {
+      "word": "compute-heavy",
+      "start": 11.58,
+      "end": 12.287,
+      "match": "approx",
+      "heard": "compute -heavy pre -filled"
+    },
+    {
+      "word": "prefill",
+      "start": 12.287,
+      "end": 12.7,
+      "match": "approx",
+      "heard": "compute -heavy pre -filled"
+    },
+    {
+      "word": "GPUs",
+      "start": 12.7,
+      "end": 13.34,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 13.34,
+      "end": 13.44,
+      "match": "exact"
+    },
+    {
+      "word": "memory-heavy",
+      "start": 13.44,
+      "end": 14.24,
+      "match": "exact"
+    },
+    {
+      "word": "decode",
+      "start": 14.24,
+      "end": 14.62,
+      "match": "exact"
+    },
+    {
+      "word": "GPUs",
+      "start": 14.62,
+      "end": 15.16,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 15.16,
+      "end": 15.24,
+      "match": "exact"
+    },
+    {
+      "word": "long",
+      "start": 15.24,
+      "end": 15.52,
+      "match": "exact"
+    },
+    {
+      "word": "prompts",
+      "start": 15.52,
+      "end": 15.84,
+      "match": "exact"
+    },
+    {
+      "word": "never",
+      "start": 15.84,
+      "end": 16.06,
+      "match": "exact"
+    },
+    {
+      "word": "stall",
+      "start": 16.06,
+      "end": 16.42,
+      "match": "exact"
+    },
+    {
+      "word": "active",
+      "start": 16.42,
+      "end": 16.64,
+      "match": "exact"
+    },
+    {
+      "word": "users",
+      "start": 16.64,
+      "end": 16.98,
+      "match": "approx",
+      "heard": "users'"
+    },
+    {
+      "word": "streaming",
+      "start": 16.98,
+      "end": 17.2,
+      "match": "exact"
+    },
+    {
+      "word": "responses.",
+      "start": 17.2,
+      "end": 17.66,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "At",
+      "start": 0.0,
+      "end": 0.3
+    },
+    {
+      "word": "the",
+      "start": 0.3,
+      "end": 0.36
+    },
+    {
+      "word": "Serving",
+      "start": 0.36,
+      "end": 0.66
+    },
+    {
+      "word": "layer,",
+      "start": 0.66,
+      "end": 0.82
+    },
+    {
+      "word": "Page",
+      "start": 1.04,
+      "end": 1.28
+    },
+    {
+      "word": "Detention",
+      "start": 1.28,
+      "end": 1.7
+    },
+    {
+      "word": "manages",
+      "start": 1.7,
+      "end": 2.02
+    },
+    {
+      "word": "KV",
+      "start": 2.02,
+      "end": 2.4
+    },
+    {
+      "word": "cache",
+      "start": 2.4,
+      "end": 2.66
+    },
+    {
+      "word": "memory",
+      "start": 2.66,
+      "end": 3.0
+    },
+    {
+      "word": "like",
+      "start": 3.0,
+      "end": 3.34
+    },
+    {
+      "word": "virtual",
+      "start": 3.34,
+      "end": 3.62
+    },
+    {
+      "word": "memory",
+      "start": 3.62,
+      "end": 3.9
+    },
+    {
+      "word": "pages,",
+      "start": 3.9,
+      "end": 4.28
+    },
+    {
+      "word": "eliminating",
+      "start": 4.58,
+      "end": 4.98
+    },
+    {
+      "word": "VRAM",
+      "start": 4.98,
+      "end": 5.56
+    },
+    {
+      "word": "fragmentation",
+      "start": 5.56,
+      "end": 6.04
+    },
+    {
+      "word": "so",
+      "start": 6.04,
+      "end": 6.42
+    },
+    {
+      "word": "more",
+      "start": 6.42,
+      "end": 6.62
+    },
+    {
+      "word": "users",
+      "start": 6.62,
+      "end": 6.94
+    },
+    {
+      "word": "fit",
+      "start": 6.94,
+      "end": 7.2
+    },
+    {
+      "word": "per",
+      "start": 7.2,
+      "end": 7.36
+    },
+    {
+      "word": "GPU.",
+      "start": 7.36,
+      "end": 7.66
+    },
+    {
+      "word": "Modern",
+      "start": 8.04,
+      "end": 8.56
+    },
+    {
+      "word": "clusters",
+      "start": 8.56,
+      "end": 8.9
+    },
+    {
+      "word": "also",
+      "start": 8.9,
+      "end": 9.22
+    },
+    {
+      "word": "use",
+      "start": 9.22,
+      "end": 9.5
+    },
+    {
+      "word": "Pre",
+      "start": 9.5,
+      "end": 9.7
+    },
+    {
+      "word": "-Fill",
+      "start": 9.7,
+      "end": 9.94
+    },
+    {
+      "word": "Decode",
+      "start": 9.94,
+      "end": 10.28
+    },
+    {
+      "word": "Disaggregation,",
+      "start": 10.28,
+      "end": 11.12
+    },
+    {
+      "word": "separating",
+      "start": 11.14,
+      "end": 11.58
+    },
+    {
+      "word": "compute",
+      "start": 11.58,
+      "end": 11.96
+    },
+    {
+      "word": "-heavy",
+      "start": 11.96,
+      "end": 12.28
+    },
+    {
+      "word": "pre",
+      "start": 12.28,
+      "end": 12.5
+    },
+    {
+      "word": "-filled",
+      "start": 12.5,
+      "end": 12.7
+    },
+    {
+      "word": "GPUs",
+      "start": 12.7,
+      "end": 13.34
+    },
+    {
+      "word": "from",
+      "start": 13.34,
+      "end": 13.44
+    },
+    {
+      "word": "memory.",
+      "start": 13.44,
+      "end": 13.7
+    },
+    {
+      "word": "Heavy",
+      "start": 13.92,
+      "end": 14.24
+    },
+    {
+      "word": "decode",
+      "start": 14.24,
+      "end": 14.62
+    },
+    {
+      "word": "GPUs",
+      "start": 14.62,
+      "end": 15.16
+    },
+    {
+      "word": "so",
+      "start": 15.16,
+      "end": 15.24
+    },
+    {
+      "word": "long",
+      "start": 15.24,
+      "end": 15.52
+    },
+    {
+      "word": "prompts",
+      "start": 15.52,
+      "end": 15.84
+    },
+    {
+      "word": "never",
+      "start": 15.84,
+      "end": 16.06
+    },
+    {
+      "word": "-stall",
+      "start": 16.06,
+      "end": 16.42
+    },
+    {
+      "word": "active",
+      "start": 16.42,
+      "end": 16.64
+    },
+    {
+      "word": "users'",
+      "start": 16.64,
+      "end": 16.98
+    },
+    {
+      "word": "streaming",
+      "start": 16.98,
+      "end": 17.2
+    },
+    {
+      "word": "responses.",
+      "start": 17.2,
+      "end": 17.66
+    }
+  ]
+}

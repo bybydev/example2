@@ -1,0 +1,537 @@
+{
+  "audio": "005.during-prefill-your.mp3",
+  "paragraph": 5,
+  "text": "During prefill, your entire prompt is already sitting in memory upfront. Nothing has to wait. The GPU packs all of your input tokens into one big matrix and pushes them through every layer of the model all at once, completely in parallel, in a single pass.",
+  "transcript": "During pre-fill, your entire prompt is already sitting in memory up front. Nothing has to wait. The GPU packs all of your input tokens into one big matrix and pushes them through every layer of the model all at once, completely in parallel, in a single pass.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 13.16,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "During",
+      "start": 0.0,
+      "end": 0.34,
+      "match": "exact"
+    },
+    {
+      "word": "prefill,",
+      "start": 0.34,
+      "end": 0.8,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 0.94,
+      "end": 1.28,
+      "match": "exact"
+    },
+    {
+      "word": "entire",
+      "start": 1.28,
+      "end": 1.5,
+      "match": "exact"
+    },
+    {
+      "word": "prompt",
+      "start": 1.5,
+      "end": 1.88,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 1.88,
+      "end": 2.04,
+      "match": "exact"
+    },
+    {
+      "word": "already",
+      "start": 2.04,
+      "end": 2.3,
+      "match": "exact"
+    },
+    {
+      "word": "sitting",
+      "start": 2.3,
+      "end": 2.6,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 2.6,
+      "end": 2.78,
+      "match": "exact"
+    },
+    {
+      "word": "memory",
+      "start": 2.78,
+      "end": 2.96,
+      "match": "exact"
+    },
+    {
+      "word": "upfront.",
+      "start": 2.96,
+      "end": 3.38,
+      "match": "exact"
+    },
+    {
+      "word": "Nothing",
+      "start": 3.58,
+      "end": 4.02,
+      "match": "exact"
+    },
+    {
+      "word": "has",
+      "start": 4.02,
+      "end": 4.24,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 4.24,
+      "end": 4.4,
+      "match": "exact"
+    },
+    {
+      "word": "wait.",
+      "start": 4.4,
+      "end": 4.62,
+      "match": "exact"
+    },
+    {
+      "word": "The",
+      "start": 4.8,
+      "end": 5.1,
+      "match": "exact"
+    },
+    {
+      "word": "GPU",
+      "start": 5.1,
+      "end": 5.44,
+      "match": "exact"
+    },
+    {
+      "word": "packs",
+      "start": 5.44,
+      "end": 5.72,
+      "match": "exact"
+    },
+    {
+      "word": "all",
+      "start": 5.72,
+      "end": 5.96,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 5.96,
+      "end": 6.1,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 6.1,
+      "end": 6.2,
+      "match": "exact"
+    },
+    {
+      "word": "input",
+      "start": 6.2,
+      "end": 6.4,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 6.4,
+      "end": 6.78,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 6.78,
+      "end": 7.06,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 7.06,
+      "end": 7.26,
+      "match": "exact"
+    },
+    {
+      "word": "big",
+      "start": 7.26,
+      "end": 7.46,
+      "match": "exact"
+    },
+    {
+      "word": "matrix",
+      "start": 7.46,
+      "end": 7.82,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 7.82,
+      "end": 8.16,
+      "match": "exact"
+    },
+    {
+      "word": "pushes",
+      "start": 8.16,
+      "end": 8.4,
+      "match": "exact"
+    },
+    {
+      "word": "them",
+      "start": 8.4,
+      "end": 8.58,
+      "match": "exact"
+    },
+    {
+      "word": "through",
+      "start": 8.58,
+      "end": 8.78,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 8.78,
+      "end": 9.02,
+      "match": "exact"
+    },
+    {
+      "word": "layer",
+      "start": 9.02,
+      "end": 9.28,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 9.28,
+      "end": 9.44,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 9.44,
+      "end": 9.48,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 9.48,
+      "end": 9.78,
+      "match": "exact"
+    },
+    {
+      "word": "all",
+      "start": 9.78,
+      "end": 9.98,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 9.98,
+      "end": 10.1,
+      "match": "exact"
+    },
+    {
+      "word": "once,",
+      "start": 10.1,
+      "end": 10.36,
+      "match": "exact"
+    },
+    {
+      "word": "completely",
+      "start": 10.5,
+      "end": 10.92,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 10.92,
+      "end": 11.16,
+      "match": "exact"
+    },
+    {
+      "word": "parallel,",
+      "start": 11.16,
+      "end": 11.46,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 11.68,
+      "end": 11.96,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 11.96,
+      "end": 12.04,
+      "match": "exact"
+    },
+    {
+      "word": "single",
+      "start": 12.04,
+      "end": 12.3,
+      "match": "exact"
+    },
+    {
+      "word": "pass.",
+      "start": 12.3,
+      "end": 12.52,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "During",
+      "start": 0.0,
+      "end": 0.34
+    },
+    {
+      "word": "pre",
+      "start": 0.34,
+      "end": 0.5
+    },
+    {
+      "word": "-fill,",
+      "start": 0.5,
+      "end": 0.8
+    },
+    {
+      "word": "your",
+      "start": 0.94,
+      "end": 1.28
+    },
+    {
+      "word": "entire",
+      "start": 1.28,
+      "end": 1.5
+    },
+    {
+      "word": "prompt",
+      "start": 1.5,
+      "end": 1.88
+    },
+    {
+      "word": "is",
+      "start": 1.88,
+      "end": 2.04
+    },
+    {
+      "word": "already",
+      "start": 2.04,
+      "end": 2.3
+    },
+    {
+      "word": "sitting",
+      "start": 2.3,
+      "end": 2.6
+    },
+    {
+      "word": "in",
+      "start": 2.6,
+      "end": 2.78
+    },
+    {
+      "word": "memory",
+      "start": 2.78,
+      "end": 2.96
+    },
+    {
+      "word": "up",
+      "start": 2.96,
+      "end": 3.18
+    },
+    {
+      "word": "front.",
+      "start": 3.18,
+      "end": 3.38
+    },
+    {
+      "word": "Nothing",
+      "start": 3.58,
+      "end": 4.02
+    },
+    {
+      "word": "has",
+      "start": 4.02,
+      "end": 4.24
+    },
+    {
+      "word": "to",
+      "start": 4.24,
+      "end": 4.4
+    },
+    {
+      "word": "wait.",
+      "start": 4.4,
+      "end": 4.62
+    },
+    {
+      "word": "The",
+      "start": 4.8,
+      "end": 5.1
+    },
+    {
+      "word": "GPU",
+      "start": 5.1,
+      "end": 5.44
+    },
+    {
+      "word": "packs",
+      "start": 5.44,
+      "end": 5.72
+    },
+    {
+      "word": "all",
+      "start": 5.72,
+      "end": 5.96
+    },
+    {
+      "word": "of",
+      "start": 5.96,
+      "end": 6.1
+    },
+    {
+      "word": "your",
+      "start": 6.1,
+      "end": 6.2
+    },
+    {
+      "word": "input",
+      "start": 6.2,
+      "end": 6.4
+    },
+    {
+      "word": "tokens",
+      "start": 6.4,
+      "end": 6.78
+    },
+    {
+      "word": "into",
+      "start": 6.78,
+      "end": 7.06
+    },
+    {
+      "word": "one",
+      "start": 7.06,
+      "end": 7.26
+    },
+    {
+      "word": "big",
+      "start": 7.26,
+      "end": 7.46
+    },
+    {
+      "word": "matrix",
+      "start": 7.46,
+      "end": 7.82
+    },
+    {
+      "word": "and",
+      "start": 7.82,
+      "end": 8.16
+    },
+    {
+      "word": "pushes",
+      "start": 8.16,
+      "end": 8.4
+    },
+    {
+      "word": "them",
+      "start": 8.4,
+      "end": 8.58
+    },
+    {
+      "word": "through",
+      "start": 8.58,
+      "end": 8.78
+    },
+    {
+      "word": "every",
+      "start": 8.78,
+      "end": 9.02
+    },
+    {
+      "word": "layer",
+      "start": 9.02,
+      "end": 9.28
+    },
+    {
+      "word": "of",
+      "start": 9.28,
+      "end": 9.44
+    },
+    {
+      "word": "the",
+      "start": 9.44,
+      "end": 9.48
+    },
+    {
+      "word": "model",
+      "start": 9.48,
+      "end": 9.78
+    },
+    {
+      "word": "all",
+      "start": 9.78,
+      "end": 9.98
+    },
+    {
+      "word": "at",
+      "start": 9.98,
+      "end": 10.1
+    },
+    {
+      "word": "once,",
+      "start": 10.1,
+      "end": 10.36
+    },
+    {
+      "word": "completely",
+      "start": 10.5,
+      "end": 10.92
+    },
+    {
+      "word": "in",
+      "start": 10.92,
+      "end": 11.16
+    },
+    {
+      "word": "parallel,",
+      "start": 11.16,
+      "end": 11.46
+    },
+    {
+      "word": "in",
+      "start": 11.68,
+      "end": 11.96
+    },
+    {
+      "word": "a",
+      "start": 11.96,
+      "end": 12.04
+    },
+    {
+      "word": "single",
+      "start": 12.04,
+      "end": 12.3
+    },
+    {
+      "word": "pass.",
+      "start": 12.3,
+      "end": 12.52
+    }
+  ]
+}

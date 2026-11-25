@@ -1,0 +1,603 @@
+{
+  "audio": "021.understanding-this-hardware.mp3",
+  "paragraph": 21,
+  "text": "Understanding this hardware physics immediately improves how you build AI apps. Because input is cheap and cacheable while output is slow and expensive, shift work from output to input. Provide rich context upfront and ask for concise outputs: request a twelve-line unified diff instead of rewriting an entire four-hundred-line file.",
+  "transcript": "Understanding this hardware physics immediately improves how you build AI apps. Because input is cheap and cacheable, while output is slow and expensive, shift work from output to input. Provide rich context up front and ask for concise outputs. Request a 12-line unified diff instead of rewriting an entire 400-line file.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 2
+    }
+  ],
+  "duration": 16.52,
+  "failed_words": 2,
+  "failures": [
+    {
+      "index": 40,
+      "word": "twelve-line",
+      "match": "approx",
+      "heard": "12 -line",
+      "start": 12.84
+    },
+    {
+      "index": 48,
+      "word": "four-hundred-line",
+      "match": "approx",
+      "heard": "400 -line",
+      "start": 15.02
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Understanding",
+      "start": 0.0,
+      "end": 0.64,
+      "match": "exact"
+    },
+    {
+      "word": "this",
+      "start": 0.64,
+      "end": 0.84,
+      "match": "exact"
+    },
+    {
+      "word": "hardware",
+      "start": 0.84,
+      "end": 1.08,
+      "match": "exact"
+    },
+    {
+      "word": "physics",
+      "start": 1.08,
+      "end": 1.38,
+      "match": "exact"
+    },
+    {
+      "word": "immediately",
+      "start": 1.38,
+      "end": 1.82,
+      "match": "exact"
+    },
+    {
+      "word": "improves",
+      "start": 1.82,
+      "end": 2.36,
+      "match": "exact"
+    },
+    {
+      "word": "how",
+      "start": 2.36,
+      "end": 2.6,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 2.6,
+      "end": 2.74,
+      "match": "exact"
+    },
+    {
+      "word": "build",
+      "start": 2.74,
+      "end": 3.04,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 3.04,
+      "end": 3.34,
+      "match": "exact"
+    },
+    {
+      "word": "apps.",
+      "start": 3.34,
+      "end": 3.72,
+      "match": "exact"
+    },
+    {
+      "word": "Because",
+      "start": 4.12,
+      "end": 4.6,
+      "match": "exact"
+    },
+    {
+      "word": "input",
+      "start": 4.6,
+      "end": 4.86,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 4.86,
+      "end": 5.06,
+      "match": "exact"
+    },
+    {
+      "word": "cheap",
+      "start": 5.06,
+      "end": 5.32,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 5.32,
+      "end": 5.48,
+      "match": "exact"
+    },
+    {
+      "word": "cacheable",
+      "start": 5.48,
+      "end": 5.92,
+      "match": "exact"
+    },
+    {
+      "word": "while",
+      "start": 6.06,
+      "end": 6.38,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 6.38,
+      "end": 6.66,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 6.66,
+      "end": 6.78,
+      "match": "exact"
+    },
+    {
+      "word": "slow",
+      "start": 6.78,
+      "end": 6.96,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 6.96,
+      "end": 7.06,
+      "match": "exact"
+    },
+    {
+      "word": "expensive,",
+      "start": 7.06,
+      "end": 7.36,
+      "match": "exact"
+    },
+    {
+      "word": "shift",
+      "start": 7.72,
+      "end": 8.04,
+      "match": "exact"
+    },
+    {
+      "word": "work",
+      "start": 8.04,
+      "end": 8.22,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 8.22,
+      "end": 8.38,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 8.38,
+      "end": 8.6,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 8.6,
+      "end": 8.78,
+      "match": "exact"
+    },
+    {
+      "word": "input.",
+      "start": 8.78,
+      "end": 8.98,
+      "match": "exact"
+    },
+    {
+      "word": "Provide",
+      "start": 9.34,
+      "end": 9.82,
+      "match": "exact"
+    },
+    {
+      "word": "rich",
+      "start": 9.82,
+      "end": 9.96,
+      "match": "exact"
+    },
+    {
+      "word": "context",
+      "start": 9.96,
+      "end": 10.32,
+      "match": "exact"
+    },
+    {
+      "word": "upfront",
+      "start": 10.32,
+      "end": 10.7,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 10.7,
+      "end": 11.1,
+      "match": "exact"
+    },
+    {
+      "word": "ask",
+      "start": 11.1,
+      "end": 11.26,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 11.26,
+      "end": 11.4,
+      "match": "exact"
+    },
+    {
+      "word": "concise",
+      "start": 11.4,
+      "end": 11.62,
+      "match": "exact"
+    },
+    {
+      "word": "outputs:",
+      "start": 11.62,
+      "end": 11.98,
+      "match": "exact"
+    },
+    {
+      "word": "request",
+      "start": 12.26,
+      "end": 12.74,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 12.74,
+      "end": 12.84,
+      "match": "exact"
+    },
+    {
+      "word": "twelve-line",
+      "start": 12.84,
+      "end": 13.32,
+      "match": "approx",
+      "heard": "12 -line"
+    },
+    {
+      "word": "unified",
+      "start": 13.32,
+      "end": 13.58,
+      "match": "exact"
+    },
+    {
+      "word": "diff",
+      "start": 13.58,
+      "end": 13.92,
+      "match": "exact"
+    },
+    {
+      "word": "instead",
+      "start": 13.92,
+      "end": 14.14,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 14.14,
+      "end": 14.38,
+      "match": "exact"
+    },
+    {
+      "word": "rewriting",
+      "start": 14.38,
+      "end": 14.68,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 14.68,
+      "end": 14.84,
+      "match": "exact"
+    },
+    {
+      "word": "entire",
+      "start": 14.84,
+      "end": 15.02,
+      "match": "exact"
+    },
+    {
+      "word": "four-hundred-line",
+      "start": 15.02,
+      "end": 15.7,
+      "match": "approx",
+      "heard": "400 -line"
+    },
+    {
+      "word": "file.",
+      "start": 15.7,
+      "end": 15.9,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Understanding",
+      "start": 0.0,
+      "end": 0.64
+    },
+    {
+      "word": "this",
+      "start": 0.64,
+      "end": 0.84
+    },
+    {
+      "word": "hardware",
+      "start": 0.84,
+      "end": 1.08
+    },
+    {
+      "word": "physics",
+      "start": 1.08,
+      "end": 1.38
+    },
+    {
+      "word": "immediately",
+      "start": 1.38,
+      "end": 1.82
+    },
+    {
+      "word": "improves",
+      "start": 1.82,
+      "end": 2.36
+    },
+    {
+      "word": "how",
+      "start": 2.36,
+      "end": 2.6
+    },
+    {
+      "word": "you",
+      "start": 2.6,
+      "end": 2.74
+    },
+    {
+      "word": "build",
+      "start": 2.74,
+      "end": 3.04
+    },
+    {
+      "word": "AI",
+      "start": 3.04,
+      "end": 3.34
+    },
+    {
+      "word": "apps.",
+      "start": 3.34,
+      "end": 3.72
+    },
+    {
+      "word": "Because",
+      "start": 4.12,
+      "end": 4.6
+    },
+    {
+      "word": "input",
+      "start": 4.6,
+      "end": 4.86
+    },
+    {
+      "word": "is",
+      "start": 4.86,
+      "end": 5.06
+    },
+    {
+      "word": "cheap",
+      "start": 5.06,
+      "end": 5.32
+    },
+    {
+      "word": "and",
+      "start": 5.32,
+      "end": 5.48
+    },
+    {
+      "word": "cacheable,",
+      "start": 5.48,
+      "end": 5.92
+    },
+    {
+      "word": "while",
+      "start": 6.06,
+      "end": 6.38
+    },
+    {
+      "word": "output",
+      "start": 6.38,
+      "end": 6.66
+    },
+    {
+      "word": "is",
+      "start": 6.66,
+      "end": 6.78
+    },
+    {
+      "word": "slow",
+      "start": 6.78,
+      "end": 6.96
+    },
+    {
+      "word": "and",
+      "start": 6.96,
+      "end": 7.06
+    },
+    {
+      "word": "expensive,",
+      "start": 7.06,
+      "end": 7.36
+    },
+    {
+      "word": "shift",
+      "start": 7.72,
+      "end": 8.04
+    },
+    {
+      "word": "work",
+      "start": 8.04,
+      "end": 8.22
+    },
+    {
+      "word": "from",
+      "start": 8.22,
+      "end": 8.38
+    },
+    {
+      "word": "output",
+      "start": 8.38,
+      "end": 8.6
+    },
+    {
+      "word": "to",
+      "start": 8.6,
+      "end": 8.78
+    },
+    {
+      "word": "input.",
+      "start": 8.78,
+      "end": 8.98
+    },
+    {
+      "word": "Provide",
+      "start": 9.34,
+      "end": 9.82
+    },
+    {
+      "word": "rich",
+      "start": 9.82,
+      "end": 9.96
+    },
+    {
+      "word": "context",
+      "start": 9.96,
+      "end": 10.32
+    },
+    {
+      "word": "up",
+      "start": 10.32,
+      "end": 10.54
+    },
+    {
+      "word": "front",
+      "start": 10.54,
+      "end": 10.7
+    },
+    {
+      "word": "and",
+      "start": 10.7,
+      "end": 11.1
+    },
+    {
+      "word": "ask",
+      "start": 11.1,
+      "end": 11.26
+    },
+    {
+      "word": "for",
+      "start": 11.26,
+      "end": 11.4
+    },
+    {
+      "word": "concise",
+      "start": 11.4,
+      "end": 11.62
+    },
+    {
+      "word": "outputs.",
+      "start": 11.62,
+      "end": 11.98
+    },
+    {
+      "word": "Request",
+      "start": 12.26,
+      "end": 12.74
+    },
+    {
+      "word": "a",
+      "start": 12.74,
+      "end": 12.84
+    },
+    {
+      "word": "12",
+      "start": 12.84,
+      "end": 13.04
+    },
+    {
+      "word": "-line",
+      "start": 13.04,
+      "end": 13.32
+    },
+    {
+      "word": "unified",
+      "start": 13.32,
+      "end": 13.58
+    },
+    {
+      "word": "diff",
+      "start": 13.58,
+      "end": 13.92
+    },
+    {
+      "word": "instead",
+      "start": 13.92,
+      "end": 14.14
+    },
+    {
+      "word": "of",
+      "start": 14.14,
+      "end": 14.38
+    },
+    {
+      "word": "rewriting",
+      "start": 14.38,
+      "end": 14.68
+    },
+    {
+      "word": "an",
+      "start": 14.68,
+      "end": 14.84
+    },
+    {
+      "word": "entire",
+      "start": 14.84,
+      "end": 15.02
+    },
+    {
+      "word": "400",
+      "start": 15.02,
+      "end": 15.42
+    },
+    {
+      "word": "-line",
+      "start": 15.42,
+      "end": 15.7
+    },
+    {
+      "word": "file.",
+      "start": 15.7,
+      "end": 15.9
+    }
+  ]
+}

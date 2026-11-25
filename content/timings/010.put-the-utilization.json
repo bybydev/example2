@@ -1,0 +1,651 @@
+{
+  "audio": "010.put-the-utilization.mp3",
+  "paragraph": 10,
+  "text": "Put the utilization meters side by side and the bottleneck is unmistakable. Prefill is compute-bound, keeping Tensor Cores busy around eighty percent. Decode hits the memory wall: it is memory-bound, redlining the HBM bus at one hundred percent while ninety-five percent of the GPU's compute sits completely idle, waiting on bytes.",
+  "transcript": "Put the utilization meters side by side and the bottleneck is unmistakable. Prefill is compute bound, keeping tensor cores busy around 80%. Decode hits the memory wall, it is memory bound. Redlining the HBM bus at 100% while 95% of the GPUs compute, sits completely idle, waiting on bytes.",
+  "model": "medium.en",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 10
+    },
+    {
+      "model": "medium.en",
+      "failed": 8
+    }
+  ],
+  "duration": 14.64,
+  "failed_words": 8,
+  "failures": [
+    {
+      "index": 20,
+      "word": "eighty",
+      "match": "approx",
+      "heard": "80%.",
+      "start": 6.14
+    },
+    {
+      "index": 21,
+      "word": "percent.",
+      "match": "approx",
+      "heard": "80%.",
+      "start": 6.246
+    },
+    {
+      "index": 35,
+      "word": "one",
+      "match": "approx",
+      "heard": "100",
+      "start": 10.26
+    },
+    {
+      "index": 36,
+      "word": "hundred",
+      "match": "approx",
+      "heard": "100",
+      "start": 10.281
+    },
+    {
+      "index": 37,
+      "word": "percent",
+      "match": "approx",
+      "heard": "100",
+      "start": 10.431
+    },
+    {
+      "index": 39,
+      "word": "ninety-five",
+      "match": "approx",
+      "heard": "95",
+      "start": 11.06
+    },
+    {
+      "index": 40,
+      "word": "percent",
+      "match": "approx",
+      "heard": "95",
+      "start": 11.272
+    },
+    {
+      "index": 43,
+      "word": "GPU's",
+      "match": "approx",
+      "heard": "GPUs",
+      "start": 11.92
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Put",
+      "start": 0.0,
+      "end": 0.34,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.34,
+      "end": 0.5,
+      "match": "exact"
+    },
+    {
+      "word": "utilization",
+      "start": 0.5,
+      "end": 0.94,
+      "match": "exact"
+    },
+    {
+      "word": "meters",
+      "start": 0.94,
+      "end": 1.22,
+      "match": "exact"
+    },
+    {
+      "word": "side",
+      "start": 1.22,
+      "end": 1.44,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 1.44,
+      "end": 1.58,
+      "match": "exact"
+    },
+    {
+      "word": "side",
+      "start": 1.58,
+      "end": 1.88,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 1.88,
+      "end": 2.0,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 2.0,
+      "end": 2.1,
+      "match": "exact"
+    },
+    {
+      "word": "bottleneck",
+      "start": 2.1,
+      "end": 2.38,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 2.38,
+      "end": 2.56,
+      "match": "exact"
+    },
+    {
+      "word": "unmistakable.",
+      "start": 2.56,
+      "end": 3.26,
+      "match": "exact"
+    },
+    {
+      "word": "Prefill",
+      "start": 3.68,
+      "end": 3.96,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 3.96,
+      "end": 4.12,
+      "match": "exact"
+    },
+    {
+      "word": "compute-bound,",
+      "start": 4.12,
+      "end": 4.7,
+      "match": "exact"
+    },
+    {
+      "word": "keeping",
+      "start": 4.92,
+      "end": 5.08,
+      "match": "exact"
+    },
+    {
+      "word": "Tensor",
+      "start": 5.08,
+      "end": 5.44,
+      "match": "exact"
+    },
+    {
+      "word": "Cores",
+      "start": 5.44,
+      "end": 5.62,
+      "match": "exact"
+    },
+    {
+      "word": "busy",
+      "start": 5.62,
+      "end": 5.9,
+      "match": "exact"
+    },
+    {
+      "word": "around",
+      "start": 5.9,
+      "end": 6.14,
+      "match": "exact"
+    },
+    {
+      "word": "eighty",
+      "start": 6.14,
+      "end": 6.246,
+      "match": "approx",
+      "heard": "80%."
+    },
+    {
+      "word": "percent.",
+      "start": 6.246,
+      "end": 6.37,
+      "match": "approx",
+      "heard": "80%."
+    },
+    {
+      "word": "Decode",
+      "start": 6.96,
+      "end": 7.42,
+      "match": "exact"
+    },
+    {
+      "word": "hits",
+      "start": 7.42,
+      "end": 7.56,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 7.56,
+      "end": 7.72,
+      "match": "exact"
+    },
+    {
+      "word": "memory",
+      "start": 7.72,
+      "end": 7.9,
+      "match": "exact"
+    },
+    {
+      "word": "wall:",
+      "start": 7.9,
+      "end": 8.16,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 8.3,
+      "end": 8.32,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 8.32,
+      "end": 8.44,
+      "match": "exact"
+    },
+    {
+      "word": "memory-bound,",
+      "start": 8.44,
+      "end": 8.98,
+      "match": "exact"
+    },
+    {
+      "word": "redlining",
+      "start": 9.14,
+      "end": 9.46,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 9.46,
+      "end": 9.6,
+      "match": "exact"
+    },
+    {
+      "word": "HBM",
+      "start": 9.6,
+      "end": 9.9,
+      "match": "exact"
+    },
+    {
+      "word": "bus",
+      "start": 9.9,
+      "end": 10.12,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 10.12,
+      "end": 10.26,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 10.26,
+      "end": 10.281,
+      "match": "approx",
+      "heard": "100"
+    },
+    {
+      "word": "hundred",
+      "start": 10.281,
+      "end": 10.431,
+      "match": "approx",
+      "heard": "100"
+    },
+    {
+      "word": "percent",
+      "start": 10.431,
+      "end": 10.58,
+      "match": "approx",
+      "heard": "100"
+    },
+    {
+      "word": "while",
+      "start": 10.92,
+      "end": 11.06,
+      "match": "exact"
+    },
+    {
+      "word": "ninety-five",
+      "start": 11.06,
+      "end": 11.272,
+      "match": "approx",
+      "heard": "95"
+    },
+    {
+      "word": "percent",
+      "start": 11.272,
+      "end": 11.42,
+      "match": "approx",
+      "heard": "95"
+    },
+    {
+      "word": "of",
+      "start": 11.74,
+      "end": 11.82,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 11.82,
+      "end": 11.92,
+      "match": "exact"
+    },
+    {
+      "word": "GPU's",
+      "start": 11.92,
+      "end": 12.18,
+      "match": "approx",
+      "heard": "GPUs"
+    },
+    {
+      "word": "compute",
+      "start": 12.18,
+      "end": 12.6,
+      "match": "exact"
+    },
+    {
+      "word": "sits",
+      "start": 12.74,
+      "end": 12.86,
+      "match": "exact"
+    },
+    {
+      "word": "completely",
+      "start": 12.86,
+      "end": 13.22,
+      "match": "exact"
+    },
+    {
+      "word": "idle,",
+      "start": 13.22,
+      "end": 13.54,
+      "match": "exact"
+    },
+    {
+      "word": "waiting",
+      "start": 13.7,
+      "end": 13.84,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 13.84,
+      "end": 14.02,
+      "match": "exact"
+    },
+    {
+      "word": "bytes.",
+      "start": 14.02,
+      "end": 14.3,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Put",
+      "start": 0.0,
+      "end": 0.34
+    },
+    {
+      "word": "the",
+      "start": 0.34,
+      "end": 0.5
+    },
+    {
+      "word": "utilization",
+      "start": 0.5,
+      "end": 0.94
+    },
+    {
+      "word": "meters",
+      "start": 0.94,
+      "end": 1.22
+    },
+    {
+      "word": "side",
+      "start": 1.22,
+      "end": 1.44
+    },
+    {
+      "word": "by",
+      "start": 1.44,
+      "end": 1.58
+    },
+    {
+      "word": "side",
+      "start": 1.58,
+      "end": 1.88
+    },
+    {
+      "word": "and",
+      "start": 1.88,
+      "end": 2.0
+    },
+    {
+      "word": "the",
+      "start": 2.0,
+      "end": 2.1
+    },
+    {
+      "word": "bottleneck",
+      "start": 2.1,
+      "end": 2.38
+    },
+    {
+      "word": "is",
+      "start": 2.38,
+      "end": 2.56
+    },
+    {
+      "word": "unmistakable.",
+      "start": 2.56,
+      "end": 3.26
+    },
+    {
+      "word": "Prefill",
+      "start": 3.68,
+      "end": 3.96
+    },
+    {
+      "word": "is",
+      "start": 3.96,
+      "end": 4.12
+    },
+    {
+      "word": "compute",
+      "start": 4.12,
+      "end": 4.4
+    },
+    {
+      "word": "bound,",
+      "start": 4.4,
+      "end": 4.7
+    },
+    {
+      "word": "keeping",
+      "start": 4.92,
+      "end": 5.08
+    },
+    {
+      "word": "tensor",
+      "start": 5.08,
+      "end": 5.44
+    },
+    {
+      "word": "cores",
+      "start": 5.44,
+      "end": 5.62
+    },
+    {
+      "word": "busy",
+      "start": 5.62,
+      "end": 5.9
+    },
+    {
+      "word": "around",
+      "start": 5.9,
+      "end": 6.14
+    },
+    {
+      "word": "80%.",
+      "start": 6.14,
+      "end": 6.37
+    },
+    {
+      "word": "Decode",
+      "start": 6.96,
+      "end": 7.42
+    },
+    {
+      "word": "hits",
+      "start": 7.42,
+      "end": 7.56
+    },
+    {
+      "word": "the",
+      "start": 7.56,
+      "end": 7.72
+    },
+    {
+      "word": "memory",
+      "start": 7.72,
+      "end": 7.9
+    },
+    {
+      "word": "wall,",
+      "start": 7.9,
+      "end": 8.16
+    },
+    {
+      "word": "it",
+      "start": 8.3,
+      "end": 8.32
+    },
+    {
+      "word": "is",
+      "start": 8.32,
+      "end": 8.44
+    },
+    {
+      "word": "memory",
+      "start": 8.44,
+      "end": 8.64
+    },
+    {
+      "word": "bound.",
+      "start": 8.64,
+      "end": 8.98
+    },
+    {
+      "word": "Redlining",
+      "start": 9.14,
+      "end": 9.46
+    },
+    {
+      "word": "the",
+      "start": 9.46,
+      "end": 9.6
+    },
+    {
+      "word": "HBM",
+      "start": 9.6,
+      "end": 9.9
+    },
+    {
+      "word": "bus",
+      "start": 9.9,
+      "end": 10.12
+    },
+    {
+      "word": "at",
+      "start": 10.12,
+      "end": 10.26
+    },
+    {
+      "word": "100",
+      "start": 10.26,
+      "end": 10.58
+    },
+    {
+      "word": "%",
+      "start": 10.58,
+      "end": 10.92
+    },
+    {
+      "word": "while",
+      "start": 10.92,
+      "end": 11.06
+    },
+    {
+      "word": "95",
+      "start": 11.06,
+      "end": 11.42
+    },
+    {
+      "word": "%",
+      "start": 11.42,
+      "end": 11.74
+    },
+    {
+      "word": "of",
+      "start": 11.74,
+      "end": 11.82
+    },
+    {
+      "word": "the",
+      "start": 11.82,
+      "end": 11.92
+    },
+    {
+      "word": "GPUs",
+      "start": 11.92,
+      "end": 12.18
+    },
+    {
+      "word": "compute,",
+      "start": 12.18,
+      "end": 12.6
+    },
+    {
+      "word": "sits",
+      "start": 12.74,
+      "end": 12.86
+    },
+    {
+      "word": "completely",
+      "start": 12.86,
+      "end": 13.22
+    },
+    {
+      "word": "idle,",
+      "start": 13.22,
+      "end": 13.54
+    },
+    {
+      "word": "waiting",
+      "start": 13.7,
+      "end": 13.84
+    },
+    {
+      "word": "on",
+      "start": 13.84,
+      "end": 14.02
+    },
+    {
+      "word": "bytes.",
+      "start": 14.02,
+      "end": 14.3
+    }
+  ]
+}

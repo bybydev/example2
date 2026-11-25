@@ -1,0 +1,590 @@
+{
+  "audio": "016.the-second-multiplier.mp3",
+  "paragraph": 16,
+  "text": "The second multiplier is reasoning models. Ask a reasoning model a short question and you might see a two-sentence answer, while thousands of hidden thinking tokens ran behind the scenes. Every single thinking token is still an autoregressive decode step, burning HBM bandwidth and billed at full output rates.",
+  "transcript": "The second multiplier is reasoning models. Ask a reasoning model a short question and you might see a two-sentence answer, while thousands of hidden thinking tokens ran behind the scenes. Every single thinking token is still an autoregressive decode step, burning HBN bandwidth and build at full output rates.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 3
+    }
+  ],
+  "duration": 16.44,
+  "failed_words": 3,
+  "failures": [
+    {
+      "index": 18,
+      "word": "two-sentence",
+      "match": "approx",
+      "heard": "two -sentence",
+      "start": 5.36
+    },
+    {
+      "index": 41,
+      "word": "HBM",
+      "match": "approx",
+      "heard": "HBN",
+      "start": 13.48
+    },
+    {
+      "index": 44,
+      "word": "billed",
+      "match": "approx",
+      "heard": "build",
+      "start": 14.74
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.26,
+      "match": "exact"
+    },
+    {
+      "word": "second",
+      "start": 0.26,
+      "end": 0.48,
+      "match": "exact"
+    },
+    {
+      "word": "multiplier",
+      "start": 0.48,
+      "end": 0.88,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 0.88,
+      "end": 1.34,
+      "match": "exact"
+    },
+    {
+      "word": "reasoning",
+      "start": 1.34,
+      "end": 1.74,
+      "match": "exact"
+    },
+    {
+      "word": "models.",
+      "start": 1.74,
+      "end": 2.04,
+      "match": "exact"
+    },
+    {
+      "word": "Ask",
+      "start": 2.48,
+      "end": 3.0,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 3.0,
+      "end": 3.16,
+      "match": "exact"
+    },
+    {
+      "word": "reasoning",
+      "start": 3.16,
+      "end": 3.42,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 3.42,
+      "end": 3.68,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 3.68,
+      "end": 3.94,
+      "match": "exact"
+    },
+    {
+      "word": "short",
+      "start": 3.94,
+      "end": 4.08,
+      "match": "exact"
+    },
+    {
+      "word": "question",
+      "start": 4.08,
+      "end": 4.54,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 4.54,
+      "end": 4.78,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 4.78,
+      "end": 4.9,
+      "match": "exact"
+    },
+    {
+      "word": "might",
+      "start": 4.9,
+      "end": 5.04,
+      "match": "exact"
+    },
+    {
+      "word": "see",
+      "start": 5.04,
+      "end": 5.22,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 5.22,
+      "end": 5.36,
+      "match": "exact"
+    },
+    {
+      "word": "two-sentence",
+      "start": 5.36,
+      "end": 5.84,
+      "match": "approx",
+      "heard": "two -sentence"
+    },
+    {
+      "word": "answer,",
+      "start": 5.84,
+      "end": 6.1,
+      "match": "exact"
+    },
+    {
+      "word": "while",
+      "start": 6.26,
+      "end": 6.66,
+      "match": "exact"
+    },
+    {
+      "word": "thousands",
+      "start": 6.66,
+      "end": 7.08,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 7.08,
+      "end": 7.32,
+      "match": "exact"
+    },
+    {
+      "word": "hidden",
+      "start": 7.32,
+      "end": 7.48,
+      "match": "exact"
+    },
+    {
+      "word": "thinking",
+      "start": 7.48,
+      "end": 7.78,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 7.78,
+      "end": 8.12,
+      "match": "exact"
+    },
+    {
+      "word": "ran",
+      "start": 8.12,
+      "end": 8.44,
+      "match": "exact"
+    },
+    {
+      "word": "behind",
+      "start": 8.44,
+      "end": 8.68,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 8.68,
+      "end": 8.88,
+      "match": "exact"
+    },
+    {
+      "word": "scenes.",
+      "start": 8.88,
+      "end": 9.14,
+      "match": "exact"
+    },
+    {
+      "word": "Every",
+      "start": 9.46,
+      "end": 9.94,
+      "match": "exact"
+    },
+    {
+      "word": "single",
+      "start": 9.94,
+      "end": 10.22,
+      "match": "exact"
+    },
+    {
+      "word": "thinking",
+      "start": 10.22,
+      "end": 10.5,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 10.5,
+      "end": 10.84,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 10.84,
+      "end": 11.16,
+      "match": "exact"
+    },
+    {
+      "word": "still",
+      "start": 11.16,
+      "end": 11.36,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 11.36,
+      "end": 11.58,
+      "match": "exact"
+    },
+    {
+      "word": "autoregressive",
+      "start": 11.58,
+      "end": 12.24,
+      "match": "exact"
+    },
+    {
+      "word": "decode",
+      "start": 12.24,
+      "end": 12.6,
+      "match": "exact"
+    },
+    {
+      "word": "step,",
+      "start": 12.6,
+      "end": 12.8,
+      "match": "exact"
+    },
+    {
+      "word": "burning",
+      "start": 13.02,
+      "end": 13.48,
+      "match": "exact"
+    },
+    {
+      "word": "HBM",
+      "start": 13.48,
+      "end": 14.04,
+      "match": "approx",
+      "heard": "HBN"
+    },
+    {
+      "word": "bandwidth",
+      "start": 14.04,
+      "end": 14.42,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 14.42,
+      "end": 14.74,
+      "match": "exact"
+    },
+    {
+      "word": "billed",
+      "start": 14.74,
+      "end": 15.0,
+      "match": "approx",
+      "heard": "build"
+    },
+    {
+      "word": "at",
+      "start": 15.0,
+      "end": 15.22,
+      "match": "exact"
+    },
+    {
+      "word": "full",
+      "start": 15.22,
+      "end": 15.42,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 15.42,
+      "end": 15.72,
+      "match": "exact"
+    },
+    {
+      "word": "rates.",
+      "start": 15.72,
+      "end": 16.04,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.26
+    },
+    {
+      "word": "second",
+      "start": 0.26,
+      "end": 0.48
+    },
+    {
+      "word": "multiplier",
+      "start": 0.48,
+      "end": 0.88
+    },
+    {
+      "word": "is",
+      "start": 0.88,
+      "end": 1.34
+    },
+    {
+      "word": "reasoning",
+      "start": 1.34,
+      "end": 1.74
+    },
+    {
+      "word": "models.",
+      "start": 1.74,
+      "end": 2.04
+    },
+    {
+      "word": "Ask",
+      "start": 2.48,
+      "end": 3.0
+    },
+    {
+      "word": "a",
+      "start": 3.0,
+      "end": 3.16
+    },
+    {
+      "word": "reasoning",
+      "start": 3.16,
+      "end": 3.42
+    },
+    {
+      "word": "model",
+      "start": 3.42,
+      "end": 3.68
+    },
+    {
+      "word": "a",
+      "start": 3.68,
+      "end": 3.94
+    },
+    {
+      "word": "short",
+      "start": 3.94,
+      "end": 4.08
+    },
+    {
+      "word": "question",
+      "start": 4.08,
+      "end": 4.54
+    },
+    {
+      "word": "and",
+      "start": 4.54,
+      "end": 4.78
+    },
+    {
+      "word": "you",
+      "start": 4.78,
+      "end": 4.9
+    },
+    {
+      "word": "might",
+      "start": 4.9,
+      "end": 5.04
+    },
+    {
+      "word": "see",
+      "start": 5.04,
+      "end": 5.22
+    },
+    {
+      "word": "a",
+      "start": 5.22,
+      "end": 5.36
+    },
+    {
+      "word": "two",
+      "start": 5.36,
+      "end": 5.5
+    },
+    {
+      "word": "-sentence",
+      "start": 5.5,
+      "end": 5.84
+    },
+    {
+      "word": "answer,",
+      "start": 5.84,
+      "end": 6.1
+    },
+    {
+      "word": "while",
+      "start": 6.26,
+      "end": 6.66
+    },
+    {
+      "word": "thousands",
+      "start": 6.66,
+      "end": 7.08
+    },
+    {
+      "word": "of",
+      "start": 7.08,
+      "end": 7.32
+    },
+    {
+      "word": "hidden",
+      "start": 7.32,
+      "end": 7.48
+    },
+    {
+      "word": "thinking",
+      "start": 7.48,
+      "end": 7.78
+    },
+    {
+      "word": "tokens",
+      "start": 7.78,
+      "end": 8.12
+    },
+    {
+      "word": "ran",
+      "start": 8.12,
+      "end": 8.44
+    },
+    {
+      "word": "behind",
+      "start": 8.44,
+      "end": 8.68
+    },
+    {
+      "word": "the",
+      "start": 8.68,
+      "end": 8.88
+    },
+    {
+      "word": "scenes.",
+      "start": 8.88,
+      "end": 9.14
+    },
+    {
+      "word": "Every",
+      "start": 9.46,
+      "end": 9.94
+    },
+    {
+      "word": "single",
+      "start": 9.94,
+      "end": 10.22
+    },
+    {
+      "word": "thinking",
+      "start": 10.22,
+      "end": 10.5
+    },
+    {
+      "word": "token",
+      "start": 10.5,
+      "end": 10.84
+    },
+    {
+      "word": "is",
+      "start": 10.84,
+      "end": 11.16
+    },
+    {
+      "word": "still",
+      "start": 11.16,
+      "end": 11.36
+    },
+    {
+      "word": "an",
+      "start": 11.36,
+      "end": 11.58
+    },
+    {
+      "word": "autoregressive",
+      "start": 11.58,
+      "end": 12.24
+    },
+    {
+      "word": "decode",
+      "start": 12.24,
+      "end": 12.6
+    },
+    {
+      "word": "step,",
+      "start": 12.6,
+      "end": 12.8
+    },
+    {
+      "word": "burning",
+      "start": 13.02,
+      "end": 13.48
+    },
+    {
+      "word": "HBN",
+      "start": 13.48,
+      "end": 14.04
+    },
+    {
+      "word": "bandwidth",
+      "start": 14.04,
+      "end": 14.42
+    },
+    {
+      "word": "and",
+      "start": 14.42,
+      "end": 14.74
+    },
+    {
+      "word": "build",
+      "start": 14.74,
+      "end": 15.0
+    },
+    {
+      "word": "at",
+      "start": 15.0,
+      "end": 15.22
+    },
+    {
+      "word": "full",
+      "start": 15.22,
+      "end": 15.42
+    },
+    {
+      "word": "output",
+      "start": 15.42,
+      "end": 15.72
+    },
+    {
+      "word": "rates.",
+      "start": 15.72,
+      "end": 16.04
+    }
+  ]
+}

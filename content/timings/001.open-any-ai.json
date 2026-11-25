@@ -1,0 +1,589 @@
+{
+  "audio": "001.open-any-ai.mp3",
+  "paragraph": 1,
+  "text": "Open any AI API pricing page and one number jumps right out. Input tokens might cost three dollars per million, while output tokens cost fifteen dollars. That is a five-times jump. And once you compare against cached input at thirty cents, output tokens can cost fifty times more.",
+  "transcript": "Open any AI API pricing page and one number jumps right out. Input tokens might cost $3 per million, while output tokens cost $15. That is a five times jump. And once you compare against cached input at 30 cents, output tokens can cost 50 times more.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 5
+    },
+    {
+      "model": "medium.en",
+      "failed": 7
+    }
+  ],
+  "duration": 16.44,
+  "failed_words": 5,
+  "failures": [
+    {
+      "index": 17,
+      "word": "dollars",
+      "match": "interpolated",
+      "heard": "",
+      "start": 5.98
+    },
+    {
+      "index": 25,
+      "word": "dollars.",
+      "match": "interpolated",
+      "heard": "",
+      "start": 8.54
+    },
+    {
+      "index": 29,
+      "word": "five-times",
+      "match": "approx",
+      "heard": "five times",
+      "start": 9.66
+    },
+    {
+      "index": 39,
+      "word": "thirty",
+      "match": "approx",
+      "heard": "30",
+      "start": 13.24
+    },
+    {
+      "index": 45,
+      "word": "fifty",
+      "match": "approx",
+      "heard": "50",
+      "start": 15.16
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Open",
+      "start": 0.0,
+      "end": 0.38,
+      "match": "exact"
+    },
+    {
+      "word": "any",
+      "start": 0.38,
+      "end": 0.7,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 0.7,
+      "end": 1.04,
+      "match": "exact"
+    },
+    {
+      "word": "API",
+      "start": 1.04,
+      "end": 1.42,
+      "match": "exact"
+    },
+    {
+      "word": "pricing",
+      "start": 1.42,
+      "end": 1.9,
+      "match": "exact"
+    },
+    {
+      "word": "page",
+      "start": 1.9,
+      "end": 2.22,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 2.22,
+      "end": 2.52,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 2.52,
+      "end": 2.74,
+      "match": "exact"
+    },
+    {
+      "word": "number",
+      "start": 2.74,
+      "end": 3.02,
+      "match": "exact"
+    },
+    {
+      "word": "jumps",
+      "start": 3.02,
+      "end": 3.26,
+      "match": "exact"
+    },
+    {
+      "word": "right",
+      "start": 3.26,
+      "end": 3.54,
+      "match": "exact"
+    },
+    {
+      "word": "out.",
+      "start": 3.54,
+      "end": 3.8,
+      "match": "exact"
+    },
+    {
+      "word": "Input",
+      "start": 4.18,
+      "end": 4.74,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 4.74,
+      "end": 5.08,
+      "match": "exact"
+    },
+    {
+      "word": "might",
+      "start": 5.08,
+      "end": 5.32,
+      "match": "exact"
+    },
+    {
+      "word": "cost",
+      "start": 5.32,
+      "end": 5.56,
+      "match": "exact"
+    },
+    {
+      "word": "three",
+      "start": 5.56,
+      "end": 5.98,
+      "match": "exact"
+    },
+    {
+      "word": "dollars",
+      "start": 5.98,
+      "end": 5.98,
+      "match": "interpolated",
+      "heard": ""
+    },
+    {
+      "word": "per",
+      "start": 5.98,
+      "end": 6.2,
+      "match": "exact"
+    },
+    {
+      "word": "million,",
+      "start": 6.2,
+      "end": 6.48,
+      "match": "exact"
+    },
+    {
+      "word": "while",
+      "start": 6.68,
+      "end": 7.1,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 7.1,
+      "end": 7.4,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 7.4,
+      "end": 7.72,
+      "match": "exact"
+    },
+    {
+      "word": "cost",
+      "start": 7.72,
+      "end": 8.0,
+      "match": "exact"
+    },
+    {
+      "word": "fifteen",
+      "start": 8.0,
+      "end": 8.54,
+      "match": "exact"
+    },
+    {
+      "word": "dollars.",
+      "start": 8.54,
+      "end": 8.72,
+      "match": "interpolated",
+      "heard": ""
+    },
+    {
+      "word": "That",
+      "start": 8.72,
+      "end": 9.24,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 9.24,
+      "end": 9.42,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 9.42,
+      "end": 9.66,
+      "match": "exact"
+    },
+    {
+      "word": "five-times",
+      "start": 9.66,
+      "end": 10.18,
+      "match": "approx",
+      "heard": "five times"
+    },
+    {
+      "word": "jump.",
+      "start": 10.18,
+      "end": 10.54,
+      "match": "exact"
+    },
+    {
+      "word": "And",
+      "start": 10.82,
+      "end": 11.38,
+      "match": "exact"
+    },
+    {
+      "word": "once",
+      "start": 11.38,
+      "end": 11.58,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 11.58,
+      "end": 11.68,
+      "match": "exact"
+    },
+    {
+      "word": "compare",
+      "start": 11.68,
+      "end": 11.98,
+      "match": "exact"
+    },
+    {
+      "word": "against",
+      "start": 11.98,
+      "end": 12.34,
+      "match": "exact"
+    },
+    {
+      "word": "cached",
+      "start": 12.34,
+      "end": 12.8,
+      "match": "exact"
+    },
+    {
+      "word": "input",
+      "start": 12.8,
+      "end": 13.02,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 13.02,
+      "end": 13.24,
+      "match": "exact"
+    },
+    {
+      "word": "thirty",
+      "start": 13.24,
+      "end": 13.44,
+      "match": "approx",
+      "heard": "30"
+    },
+    {
+      "word": "cents,",
+      "start": 13.44,
+      "end": 13.7,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 13.92,
+      "end": 14.3,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 14.3,
+      "end": 14.72,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 14.72,
+      "end": 14.9,
+      "match": "exact"
+    },
+    {
+      "word": "cost",
+      "start": 14.9,
+      "end": 15.16,
+      "match": "exact"
+    },
+    {
+      "word": "fifty",
+      "start": 15.16,
+      "end": 15.46,
+      "match": "approx",
+      "heard": "50"
+    },
+    {
+      "word": "times",
+      "start": 15.46,
+      "end": 15.68,
+      "match": "exact"
+    },
+    {
+      "word": "more.",
+      "start": 15.68,
+      "end": 16.0,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Open",
+      "start": 0.0,
+      "end": 0.38
+    },
+    {
+      "word": "any",
+      "start": 0.38,
+      "end": 0.7
+    },
+    {
+      "word": "AI",
+      "start": 0.7,
+      "end": 1.04
+    },
+    {
+      "word": "API",
+      "start": 1.04,
+      "end": 1.42
+    },
+    {
+      "word": "pricing",
+      "start": 1.42,
+      "end": 1.9
+    },
+    {
+      "word": "page",
+      "start": 1.9,
+      "end": 2.22
+    },
+    {
+      "word": "and",
+      "start": 2.22,
+      "end": 2.52
+    },
+    {
+      "word": "one",
+      "start": 2.52,
+      "end": 2.74
+    },
+    {
+      "word": "number",
+      "start": 2.74,
+      "end": 3.02
+    },
+    {
+      "word": "jumps",
+      "start": 3.02,
+      "end": 3.26
+    },
+    {
+      "word": "right",
+      "start": 3.26,
+      "end": 3.54
+    },
+    {
+      "word": "out.",
+      "start": 3.54,
+      "end": 3.8
+    },
+    {
+      "word": "Input",
+      "start": 4.18,
+      "end": 4.74
+    },
+    {
+      "word": "tokens",
+      "start": 4.74,
+      "end": 5.08
+    },
+    {
+      "word": "might",
+      "start": 5.08,
+      "end": 5.32
+    },
+    {
+      "word": "cost",
+      "start": 5.32,
+      "end": 5.56
+    },
+    {
+      "word": "$3",
+      "start": 5.56,
+      "end": 5.98
+    },
+    {
+      "word": "per",
+      "start": 5.98,
+      "end": 6.2
+    },
+    {
+      "word": "million,",
+      "start": 6.2,
+      "end": 6.48
+    },
+    {
+      "word": "while",
+      "start": 6.68,
+      "end": 7.1
+    },
+    {
+      "word": "output",
+      "start": 7.1,
+      "end": 7.4
+    },
+    {
+      "word": "tokens",
+      "start": 7.4,
+      "end": 7.72
+    },
+    {
+      "word": "cost",
+      "start": 7.72,
+      "end": 8.0
+    },
+    {
+      "word": "$15.",
+      "start": 8.0,
+      "end": 8.54
+    },
+    {
+      "word": "That",
+      "start": 8.72,
+      "end": 9.24
+    },
+    {
+      "word": "is",
+      "start": 9.24,
+      "end": 9.42
+    },
+    {
+      "word": "a",
+      "start": 9.42,
+      "end": 9.66
+    },
+    {
+      "word": "five",
+      "start": 9.66,
+      "end": 9.96
+    },
+    {
+      "word": "times",
+      "start": 9.96,
+      "end": 10.18
+    },
+    {
+      "word": "jump.",
+      "start": 10.18,
+      "end": 10.54
+    },
+    {
+      "word": "And",
+      "start": 10.82,
+      "end": 11.38
+    },
+    {
+      "word": "once",
+      "start": 11.38,
+      "end": 11.58
+    },
+    {
+      "word": "you",
+      "start": 11.58,
+      "end": 11.68
+    },
+    {
+      "word": "compare",
+      "start": 11.68,
+      "end": 11.98
+    },
+    {
+      "word": "against",
+      "start": 11.98,
+      "end": 12.34
+    },
+    {
+      "word": "cached",
+      "start": 12.34,
+      "end": 12.8
+    },
+    {
+      "word": "input",
+      "start": 12.8,
+      "end": 13.02
+    },
+    {
+      "word": "at",
+      "start": 13.02,
+      "end": 13.24
+    },
+    {
+      "word": "30",
+      "start": 13.24,
+      "end": 13.44
+    },
+    {
+      "word": "cents,",
+      "start": 13.44,
+      "end": 13.7
+    },
+    {
+      "word": "output",
+      "start": 13.92,
+      "end": 14.3
+    },
+    {
+      "word": "tokens",
+      "start": 14.3,
+      "end": 14.72
+    },
+    {
+      "word": "can",
+      "start": 14.72,
+      "end": 14.9
+    },
+    {
+      "word": "cost",
+      "start": 14.9,
+      "end": 15.16
+    },
+    {
+      "word": "50",
+      "start": 15.16,
+      "end": 15.46
+    },
+    {
+      "word": "times",
+      "start": 15.46,
+      "end": 15.68
+    },
+    {
+      "word": "more.",
+      "start": 15.68,
+      "end": 16.0
+    }
+  ]
+}

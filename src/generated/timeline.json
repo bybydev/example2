@@ -1,32 +1,124 @@
 {
   "schemaVersion": 1,
   "slug": "remotion-video-why-ai-output-tokens-expensive",
-  "title": "Why Ai Output Tokens Expensive",
+  "title": "Why AI Output Tokens Are So Expensive",
   "fps": 30,
   "width": 1920,
   "height": 1080,
-  "totalFrames": 360,
-  "totalSeconds": 12.0,
+  "totalFrames": 12477,
+  "totalSeconds": 415.9,
   "chapters": [
     {
       "id": "01-hook",
       "compositionId": "Chapter01Hook",
-      "title": "Hook",
+      "title": "The Pricing Paradox",
       "startFrame": 0,
-      "durationInFrames": 168,
+      "durationInFrames": 1447,
       "startSeconds": 0.0,
-      "durationSeconds": 5.6,
-      "paragraphs": [1]
+      "durationSeconds": 48.233,
+      "paragraphs": [
+        1,
+        2,
+        3
+      ]
     },
     {
-      "id": "02-main-point",
-      "compositionId": "Chapter02MainPoint",
-      "title": "Main Point",
-      "startFrame": 168,
-      "durationInFrames": 192,
-      "startSeconds": 5.6,
-      "durationSeconds": 6.4,
-      "paragraphs": [2]
+      "id": "02-prefill-vs-decode",
+      "compositionId": "Chapter02PrefillVsDecode",
+      "title": "Two Worlds: Prefill vs. Decode",
+      "startFrame": 1447,
+      "durationInFrames": 1360,
+      "startSeconds": 48.233,
+      "durationSeconds": 45.333,
+      "paragraphs": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "03-memory-wall",
+      "compositionId": "Chapter03MemoryWall",
+      "title": "Compute vs. The Memory Wall",
+      "startFrame": 2807,
+      "durationInFrames": 2202,
+      "startSeconds": 93.567,
+      "durationSeconds": 73.4,
+      "paragraphs": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "04-kv-cache",
+      "compositionId": "Chapter04KvCache",
+      "title": "The KV Cache & Slot-Time Tax",
+      "startFrame": 5009,
+      "durationInFrames": 2127,
+      "startSeconds": 166.967,
+      "durationSeconds": 70.9,
+      "paragraphs": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "id": "05-widening-gap",
+      "compositionId": "Chapter05WideningGap",
+      "title": "Why the Gap Keeps Widening",
+      "startFrame": 7136,
+      "durationInFrames": 1486,
+      "startSeconds": 237.867,
+      "durationSeconds": 49.533,
+      "paragraphs": [
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "id": "06-optimizations",
+      "compositionId": "Chapter06Optimizations",
+      "title": "How AI Labs Fight the Memory Wall",
+      "startFrame": 8622,
+      "durationInFrames": 1736,
+      "startSeconds": 287.4,
+      "durationSeconds": 57.867,
+      "paragraphs": [
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "id": "07-developer-takeaways",
+      "compositionId": "Chapter07DeveloperTakeaways",
+      "title": "What This Means for Your AI App",
+      "startFrame": 10358,
+      "durationInFrames": 1502,
+      "startSeconds": 345.267,
+      "durationSeconds": 50.067,
+      "paragraphs": [
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "id": "08-outro",
+      "compositionId": "Chapter08Outro",
+      "title": "Closing Synthesis",
+      "startFrame": 11860,
+      "durationInFrames": 617,
+      "startSeconds": 395.333,
+      "durationSeconds": 20.567,
+      "paragraphs": [
+        24
+      ]
     }
   ],
   "clips": [
@@ -34,25 +126,6328 @@
       "paragraph": 1,
       "chapterId": "01-hook",
       "startFrame": 0,
-      "durationInFrames": 150,
+      "durationInFrames": 515,
       "leadFrames": 9,
-      "voiceFrames": 129,
-      "audioFile": null,
-      "timingSource": "none",
-      "text": "Welcome to this video. Replace this hook paragraph with your real opening narration.",
-      "words": []
+      "voiceFrames": 494,
+      "audioFile": "voiceover/001.open-any-ai.mp3",
+      "timingSource": "whisper",
+      "text": "Open any AI API pricing page and one number jumps right out. Input tokens might cost three dollars per million, while output tokens cost fifteen dollars. That is a five-times jump. And once you compare against cached input at thirty cents, output tokens can cost fifty times more.",
+      "words": [
+        {
+          "w": "Open",
+          "s": 9,
+          "e": 20
+        },
+        {
+          "w": "any",
+          "s": 20,
+          "e": 30
+        },
+        {
+          "w": "AI",
+          "s": 30,
+          "e": 40
+        },
+        {
+          "w": "API",
+          "s": 40,
+          "e": 52
+        },
+        {
+          "w": "pricing",
+          "s": 52,
+          "e": 66
+        },
+        {
+          "w": "page",
+          "s": 66,
+          "e": 76
+        },
+        {
+          "w": "and",
+          "s": 76,
+          "e": 85
+        },
+        {
+          "w": "one",
+          "s": 85,
+          "e": 91
+        },
+        {
+          "w": "number",
+          "s": 91,
+          "e": 100
+        },
+        {
+          "w": "jumps",
+          "s": 100,
+          "e": 107
+        },
+        {
+          "w": "right",
+          "s": 107,
+          "e": 115
+        },
+        {
+          "w": "out.",
+          "s": 115,
+          "e": 123
+        },
+        {
+          "w": "Input",
+          "s": 134,
+          "e": 151
+        },
+        {
+          "w": "tokens",
+          "s": 151,
+          "e": 161
+        },
+        {
+          "w": "might",
+          "s": 161,
+          "e": 169
+        },
+        {
+          "w": "cost",
+          "s": 169,
+          "e": 176
+        },
+        {
+          "w": "three",
+          "s": 176,
+          "e": 188
+        },
+        {
+          "w": "dollars",
+          "s": 188,
+          "e": 190
+        },
+        {
+          "w": "per",
+          "s": 188,
+          "e": 195
+        },
+        {
+          "w": "million,",
+          "s": 195,
+          "e": 203
+        },
+        {
+          "w": "while",
+          "s": 209,
+          "e": 222
+        },
+        {
+          "w": "output",
+          "s": 222,
+          "e": 231
+        },
+        {
+          "w": "tokens",
+          "s": 231,
+          "e": 241
+        },
+        {
+          "w": "cost",
+          "s": 241,
+          "e": 249
+        },
+        {
+          "w": "fifteen",
+          "s": 249,
+          "e": 265
+        },
+        {
+          "w": "dollars.",
+          "s": 265,
+          "e": 271
+        },
+        {
+          "w": "That",
+          "s": 271,
+          "e": 286
+        },
+        {
+          "w": "is",
+          "s": 286,
+          "e": 292
+        },
+        {
+          "w": "a",
+          "s": 292,
+          "e": 299
+        },
+        {
+          "w": "five-times",
+          "s": 299,
+          "e": 314
+        },
+        {
+          "w": "jump.",
+          "s": 314,
+          "e": 325
+        },
+        {
+          "w": "And",
+          "s": 334,
+          "e": 350
+        },
+        {
+          "w": "once",
+          "s": 350,
+          "e": 356
+        },
+        {
+          "w": "you",
+          "s": 356,
+          "e": 359
+        },
+        {
+          "w": "compare",
+          "s": 359,
+          "e": 368
+        },
+        {
+          "w": "against",
+          "s": 368,
+          "e": 379
+        },
+        {
+          "w": "cached",
+          "s": 379,
+          "e": 393
+        },
+        {
+          "w": "input",
+          "s": 393,
+          "e": 400
+        },
+        {
+          "w": "at",
+          "s": 400,
+          "e": 406
+        },
+        {
+          "w": "thirty",
+          "s": 406,
+          "e": 412
+        },
+        {
+          "w": "cents,",
+          "s": 412,
+          "e": 420
+        },
+        {
+          "w": "output",
+          "s": 427,
+          "e": 438
+        },
+        {
+          "w": "tokens",
+          "s": 438,
+          "e": 451
+        },
+        {
+          "w": "can",
+          "s": 451,
+          "e": 456
+        },
+        {
+          "w": "cost",
+          "s": 456,
+          "e": 464
+        },
+        {
+          "w": "fifty",
+          "s": 464,
+          "e": 473
+        },
+        {
+          "w": "times",
+          "s": 473,
+          "e": 479
+        },
+        {
+          "w": "more.",
+          "s": 479,
+          "e": 489
+        }
+      ]
     },
     {
       "paragraph": 2,
-      "chapterId": "02-main-point",
-      "startFrame": 168,
-      "durationInFrames": 192,
+      "chapterId": "01-hook",
+      "startFrame": 515,
+      "durationInFrames": 450,
       "leadFrames": 9,
-      "voiceFrames": 171,
-      "audioFile": null,
-      "timingSource": "none",
-      "text": "Here is the second paragraph. Split your script into one paragraph per blank line so each paragraph maps to one voiceover clip and one Whisper timing sidecar.",
-      "words": []
+      "voiceFrames": 429,
+      "audioFile": "voiceover/002.at-first-glance.mp3",
+      "timingSource": "whisper",
+      "text": "At first glance, that feels backwards. Input and output tokens are both just numbers flowing through the exact same Transformer neural network and the exact same weights. One token in, one token out. So why does generating a token cost five times more than reading one?",
+      "words": [
+        {
+          "w": "At",
+          "s": 9,
+          "e": 23
+        },
+        {
+          "w": "first",
+          "s": 23,
+          "e": 29
+        },
+        {
+          "w": "glance,",
+          "s": 29,
+          "e": 40
+        },
+        {
+          "w": "that",
+          "s": 43,
+          "e": 47
+        },
+        {
+          "w": "feels",
+          "s": 47,
+          "e": 53
+        },
+        {
+          "w": "backwards.",
+          "s": 53,
+          "e": 66
+        },
+        {
+          "w": "Input",
+          "s": 81,
+          "e": 96
+        },
+        {
+          "w": "and",
+          "s": 96,
+          "e": 100
+        },
+        {
+          "w": "output",
+          "s": 100,
+          "e": 107
+        },
+        {
+          "w": "tokens",
+          "s": 107,
+          "e": 116
+        },
+        {
+          "w": "are",
+          "s": 116,
+          "e": 125
+        },
+        {
+          "w": "both",
+          "s": 125,
+          "e": 131
+        },
+        {
+          "w": "just",
+          "s": 131,
+          "e": 138
+        },
+        {
+          "w": "numbers",
+          "s": 138,
+          "e": 147
+        },
+        {
+          "w": "flowing",
+          "s": 147,
+          "e": 157
+        },
+        {
+          "w": "through",
+          "s": 157,
+          "e": 165
+        },
+        {
+          "w": "the",
+          "s": 165,
+          "e": 169
+        },
+        {
+          "w": "exact",
+          "s": 169,
+          "e": 176
+        },
+        {
+          "w": "same",
+          "s": 176,
+          "e": 185
+        },
+        {
+          "w": "Transformer",
+          "s": 185,
+          "e": 198
+        },
+        {
+          "w": "neural",
+          "s": 198,
+          "e": 209
+        },
+        {
+          "w": "network",
+          "s": 209,
+          "e": 221
+        },
+        {
+          "w": "and",
+          "s": 221,
+          "e": 235
+        },
+        {
+          "w": "the",
+          "s": 235,
+          "e": 238
+        },
+        {
+          "w": "exact",
+          "s": 238,
+          "e": 244
+        },
+        {
+          "w": "same",
+          "s": 244,
+          "e": 253
+        },
+        {
+          "w": "weights.",
+          "s": 253,
+          "e": 262
+        },
+        {
+          "w": "One",
+          "s": 268,
+          "e": 279
+        },
+        {
+          "w": "token",
+          "s": 279,
+          "e": 289
+        },
+        {
+          "w": "in,",
+          "s": 289,
+          "e": 295
+        },
+        {
+          "w": "one",
+          "s": 298,
+          "e": 304
+        },
+        {
+          "w": "token",
+          "s": 304,
+          "e": 313
+        },
+        {
+          "w": "out.",
+          "s": 313,
+          "e": 320
+        },
+        {
+          "w": "So",
+          "s": 324,
+          "e": 338
+        },
+        {
+          "w": "why",
+          "s": 338,
+          "e": 342
+        },
+        {
+          "w": "does",
+          "s": 342,
+          "e": 347
+        },
+        {
+          "w": "generating",
+          "s": 347,
+          "e": 356
+        },
+        {
+          "w": "a",
+          "s": 356,
+          "e": 362
+        },
+        {
+          "w": "token",
+          "s": 362,
+          "e": 369
+        },
+        {
+          "w": "cost",
+          "s": 369,
+          "e": 379
+        },
+        {
+          "w": "five",
+          "s": 379,
+          "e": 388
+        },
+        {
+          "w": "times",
+          "s": 388,
+          "e": 396
+        },
+        {
+          "w": "more",
+          "s": 396,
+          "e": 408
+        },
+        {
+          "w": "than",
+          "s": 408,
+          "e": 414
+        },
+        {
+          "w": "reading",
+          "s": 414,
+          "e": 420
+        },
+        {
+          "w": "one?",
+          "s": 420,
+          "e": 427
+        }
+      ]
+    },
+    {
+      "paragraph": 3,
+      "chapterId": "01-hook",
+      "startFrame": 965,
+      "durationInFrames": 464,
+      "leadFrames": 9,
+      "voiceFrames": 443,
+      "audioFile": "voiceover/003.the-answer-is.mp3",
+      "timingSource": "whisper",
+      "text": "The answer is not arbitrary markup. It comes down to GPU physics. Reading tokens and writing tokens run on the exact same model, yet on real silicon they behave like two completely different workloads with completely different bottlenecks. Let us look inside the GPU.",
+      "words": [
+        {
+          "w": "The",
+          "s": 9,
+          "e": 17
+        },
+        {
+          "w": "answer",
+          "s": 17,
+          "e": 24
+        },
+        {
+          "w": "is",
+          "s": 24,
+          "e": 30
+        },
+        {
+          "w": "not",
+          "s": 30,
+          "e": 37
+        },
+        {
+          "w": "arbitrary",
+          "s": 37,
+          "e": 49
+        },
+        {
+          "w": "markup.",
+          "s": 49,
+          "e": 68
+        },
+        {
+          "w": "It",
+          "s": 71,
+          "e": 84
+        },
+        {
+          "w": "comes",
+          "s": 84,
+          "e": 89
+        },
+        {
+          "w": "down",
+          "s": 89,
+          "e": 96
+        },
+        {
+          "w": "to",
+          "s": 96,
+          "e": 104
+        },
+        {
+          "w": "GPU",
+          "s": 104,
+          "e": 112
+        },
+        {
+          "w": "physics.",
+          "s": 112,
+          "e": 124
+        },
+        {
+          "w": "Reading",
+          "s": 132,
+          "e": 146
+        },
+        {
+          "w": "tokens",
+          "s": 146,
+          "e": 156
+        },
+        {
+          "w": "and",
+          "s": 156,
+          "e": 167
+        },
+        {
+          "w": "writing",
+          "s": 167,
+          "e": 172
+        },
+        {
+          "w": "tokens",
+          "s": 172,
+          "e": 184
+        },
+        {
+          "w": "run",
+          "s": 184,
+          "e": 193
+        },
+        {
+          "w": "on",
+          "s": 193,
+          "e": 198
+        },
+        {
+          "w": "the",
+          "s": 198,
+          "e": 200
+        },
+        {
+          "w": "exact",
+          "s": 200,
+          "e": 207
+        },
+        {
+          "w": "same",
+          "s": 207,
+          "e": 216
+        },
+        {
+          "w": "model,",
+          "s": 216,
+          "e": 227
+        },
+        {
+          "w": "yet",
+          "s": 230,
+          "e": 242
+        },
+        {
+          "w": "on",
+          "s": 242,
+          "e": 245
+        },
+        {
+          "w": "real",
+          "s": 245,
+          "e": 250
+        },
+        {
+          "w": "silicon",
+          "s": 250,
+          "e": 262
+        },
+        {
+          "w": "they",
+          "s": 262,
+          "e": 272
+        },
+        {
+          "w": "behave",
+          "s": 272,
+          "e": 281
+        },
+        {
+          "w": "like",
+          "s": 281,
+          "e": 286
+        },
+        {
+          "w": "two",
+          "s": 286,
+          "e": 292
+        },
+        {
+          "w": "completely",
+          "s": 292,
+          "e": 306
+        },
+        {
+          "w": "different",
+          "s": 306,
+          "e": 317
+        },
+        {
+          "w": "workloads",
+          "s": 317,
+          "e": 329
+        },
+        {
+          "w": "with",
+          "s": 329,
+          "e": 338
+        },
+        {
+          "w": "completely",
+          "s": 338,
+          "e": 347
+        },
+        {
+          "w": "different",
+          "s": 347,
+          "e": 356
+        },
+        {
+          "w": "bottlenecks.",
+          "s": 356,
+          "e": 374
+        },
+        {
+          "w": "Let",
+          "s": 380,
+          "e": 398
+        },
+        {
+          "w": "us",
+          "s": 398,
+          "e": 402
+        },
+        {
+          "w": "look",
+          "s": 402,
+          "e": 408
+        },
+        {
+          "w": "inside",
+          "s": 408,
+          "e": 418
+        },
+        {
+          "w": "the",
+          "s": 418,
+          "e": 428
+        },
+        {
+          "w": "GPU.",
+          "s": 428,
+          "e": 434
+        }
+      ]
+    },
+    {
+      "paragraph": 4,
+      "chapterId": "02-prefill-vs-decode",
+      "startFrame": 1447,
+      "durationInFrames": 438,
+      "leadFrames": 9,
+      "voiceFrames": 417,
+      "audioFile": "voiceover/004.every-llm-request.mp3",
+      "timingSource": "whisper",
+      "text": "Every LLM request splits into two phases. First comes prefill, where the model digests your entire prompt to emit the very first token, setting your Time to First Token. Then comes decode, where it streams the rest of the answer token by token.",
+      "words": [
+        {
+          "w": "Every",
+          "s": 9,
+          "e": 20
+        },
+        {
+          "w": "LLM",
+          "s": 20,
+          "e": 37
+        },
+        {
+          "w": "request",
+          "s": 37,
+          "e": 44
+        },
+        {
+          "w": "splits",
+          "s": 44,
+          "e": 59
+        },
+        {
+          "w": "into",
+          "s": 59,
+          "e": 66
+        },
+        {
+          "w": "two",
+          "s": 66,
+          "e": 72
+        },
+        {
+          "w": "phases.",
+          "s": 72,
+          "e": 81
+        },
+        {
+          "w": "First",
+          "s": 93,
+          "e": 107
+        },
+        {
+          "w": "comes",
+          "s": 107,
+          "e": 118
+        },
+        {
+          "w": "prefill,",
+          "s": 118,
+          "e": 133
+        },
+        {
+          "w": "where",
+          "s": 137,
+          "e": 148
+        },
+        {
+          "w": "the",
+          "s": 148,
+          "e": 152
+        },
+        {
+          "w": "model",
+          "s": 152,
+          "e": 158
+        },
+        {
+          "w": "digests",
+          "s": 158,
+          "e": 173
+        },
+        {
+          "w": "your",
+          "s": 173,
+          "e": 178
+        },
+        {
+          "w": "entire",
+          "s": 178,
+          "e": 184
+        },
+        {
+          "w": "prompt",
+          "s": 184,
+          "e": 200
+        },
+        {
+          "w": "to",
+          "s": 200,
+          "e": 206
+        },
+        {
+          "w": "emit",
+          "s": 206,
+          "e": 211
+        },
+        {
+          "w": "the",
+          "s": 211,
+          "e": 217
+        },
+        {
+          "w": "very",
+          "s": 217,
+          "e": 222
+        },
+        {
+          "w": "first",
+          "s": 222,
+          "e": 230
+        },
+        {
+          "w": "token,",
+          "s": 230,
+          "e": 239
+        },
+        {
+          "w": "setting",
+          "s": 245,
+          "e": 257
+        },
+        {
+          "w": "your",
+          "s": 257,
+          "e": 261
+        },
+        {
+          "w": "Time",
+          "s": 261,
+          "e": 267
+        },
+        {
+          "w": "to",
+          "s": 267,
+          "e": 271
+        },
+        {
+          "w": "First",
+          "s": 271,
+          "e": 277
+        },
+        {
+          "w": "Token.",
+          "s": 277,
+          "e": 285
+        },
+        {
+          "w": "Then",
+          "s": 296,
+          "e": 311
+        },
+        {
+          "w": "comes",
+          "s": 311,
+          "e": 321
+        },
+        {
+          "w": "decode,",
+          "s": 321,
+          "e": 336
+        },
+        {
+          "w": "where",
+          "s": 340,
+          "e": 349
+        },
+        {
+          "w": "it",
+          "s": 349,
+          "e": 351
+        },
+        {
+          "w": "streams",
+          "s": 351,
+          "e": 358
+        },
+        {
+          "w": "the",
+          "s": 358,
+          "e": 365
+        },
+        {
+          "w": "rest",
+          "s": 365,
+          "e": 371
+        },
+        {
+          "w": "of",
+          "s": 371,
+          "e": 377
+        },
+        {
+          "w": "the",
+          "s": 377,
+          "e": 379
+        },
+        {
+          "w": "answer",
+          "s": 378,
+          "e": 386
+        },
+        {
+          "w": "token",
+          "s": 386,
+          "e": 396
+        },
+        {
+          "w": "by",
+          "s": 396,
+          "e": 402
+        },
+        {
+          "w": "token.",
+          "s": 402,
+          "e": 410
+        }
+      ]
+    },
+    {
+      "paragraph": 5,
+      "chapterId": "02-prefill-vs-decode",
+      "startFrame": 1885,
+      "durationInFrames": 416,
+      "leadFrames": 9,
+      "voiceFrames": 395,
+      "audioFile": "voiceover/005.during-prefill-your.mp3",
+      "timingSource": "whisper",
+      "text": "During prefill, your entire prompt is already sitting in memory upfront. Nothing has to wait. The GPU packs all of your input tokens into one big matrix and pushes them through every layer of the model all at once, completely in parallel, in a single pass.",
+      "words": [
+        {
+          "w": "During",
+          "s": 9,
+          "e": 19
+        },
+        {
+          "w": "prefill,",
+          "s": 19,
+          "e": 33
+        },
+        {
+          "w": "your",
+          "s": 37,
+          "e": 47
+        },
+        {
+          "w": "entire",
+          "s": 47,
+          "e": 54
+        },
+        {
+          "w": "prompt",
+          "s": 54,
+          "e": 65
+        },
+        {
+          "w": "is",
+          "s": 65,
+          "e": 70
+        },
+        {
+          "w": "already",
+          "s": 70,
+          "e": 78
+        },
+        {
+          "w": "sitting",
+          "s": 78,
+          "e": 87
+        },
+        {
+          "w": "in",
+          "s": 87,
+          "e": 92
+        },
+        {
+          "w": "memory",
+          "s": 92,
+          "e": 98
+        },
+        {
+          "w": "upfront.",
+          "s": 98,
+          "e": 110
+        },
+        {
+          "w": "Nothing",
+          "s": 116,
+          "e": 130
+        },
+        {
+          "w": "has",
+          "s": 130,
+          "e": 136
+        },
+        {
+          "w": "to",
+          "s": 136,
+          "e": 141
+        },
+        {
+          "w": "wait.",
+          "s": 141,
+          "e": 148
+        },
+        {
+          "w": "The",
+          "s": 153,
+          "e": 162
+        },
+        {
+          "w": "GPU",
+          "s": 162,
+          "e": 172
+        },
+        {
+          "w": "packs",
+          "s": 172,
+          "e": 181
+        },
+        {
+          "w": "all",
+          "s": 181,
+          "e": 188
+        },
+        {
+          "w": "of",
+          "s": 188,
+          "e": 192
+        },
+        {
+          "w": "your",
+          "s": 192,
+          "e": 195
+        },
+        {
+          "w": "input",
+          "s": 195,
+          "e": 201
+        },
+        {
+          "w": "tokens",
+          "s": 201,
+          "e": 212
+        },
+        {
+          "w": "into",
+          "s": 212,
+          "e": 221
+        },
+        {
+          "w": "one",
+          "s": 221,
+          "e": 227
+        },
+        {
+          "w": "big",
+          "s": 227,
+          "e": 233
+        },
+        {
+          "w": "matrix",
+          "s": 233,
+          "e": 244
+        },
+        {
+          "w": "and",
+          "s": 244,
+          "e": 254
+        },
+        {
+          "w": "pushes",
+          "s": 254,
+          "e": 261
+        },
+        {
+          "w": "them",
+          "s": 261,
+          "e": 266
+        },
+        {
+          "w": "through",
+          "s": 266,
+          "e": 272
+        },
+        {
+          "w": "every",
+          "s": 272,
+          "e": 280
+        },
+        {
+          "w": "layer",
+          "s": 280,
+          "e": 287
+        },
+        {
+          "w": "of",
+          "s": 287,
+          "e": 292
+        },
+        {
+          "w": "the",
+          "s": 292,
+          "e": 294
+        },
+        {
+          "w": "model",
+          "s": 293,
+          "e": 302
+        },
+        {
+          "w": "all",
+          "s": 302,
+          "e": 308
+        },
+        {
+          "w": "at",
+          "s": 308,
+          "e": 312
+        },
+        {
+          "w": "once,",
+          "s": 312,
+          "e": 320
+        },
+        {
+          "w": "completely",
+          "s": 324,
+          "e": 337
+        },
+        {
+          "w": "in",
+          "s": 337,
+          "e": 344
+        },
+        {
+          "w": "parallel,",
+          "s": 344,
+          "e": 353
+        },
+        {
+          "w": "in",
+          "s": 359,
+          "e": 368
+        },
+        {
+          "w": "a",
+          "s": 368,
+          "e": 370
+        },
+        {
+          "w": "single",
+          "s": 370,
+          "e": 378
+        },
+        {
+          "w": "pass.",
+          "s": 378,
+          "e": 385
+        }
+      ]
+    },
+    {
+      "paragraph": 6,
+      "chapterId": "02-prefill-vs-decode",
+      "startFrame": 2301,
+      "durationInFrames": 488,
+      "leadFrames": 9,
+      "voiceFrames": 467,
+      "audioFile": "voiceover/006.decode-works-the.mp3",
+      "timingSource": "whisper",
+      "text": "Decode works the opposite way. Language models are autoregressive, meaning they only generate one token at a time. Each new word depends on the previous word, so the GPU must finish token ninety-nine and feed it back in before it can even start computing token one hundred.",
+      "words": [
+        {
+          "w": "Decode",
+          "s": 9,
+          "e": 28
+        },
+        {
+          "w": "works",
+          "s": 28,
+          "e": 35
+        },
+        {
+          "w": "the",
+          "s": 35,
+          "e": 43
+        },
+        {
+          "w": "opposite",
+          "s": 43,
+          "e": 53
+        },
+        {
+          "w": "way.",
+          "s": 53,
+          "e": 62
+        },
+        {
+          "w": "Language",
+          "s": 74,
+          "e": 91
+        },
+        {
+          "w": "models",
+          "s": 91,
+          "e": 100
+        },
+        {
+          "w": "are",
+          "s": 100,
+          "e": 110
+        },
+        {
+          "w": "autoregressive,",
+          "s": 110,
+          "e": 136
+        },
+        {
+          "w": "meaning",
+          "s": 138,
+          "e": 145
+        },
+        {
+          "w": "they",
+          "s": 145,
+          "e": 151
+        },
+        {
+          "w": "only",
+          "s": 151,
+          "e": 158
+        },
+        {
+          "w": "generate",
+          "s": 158,
+          "e": 170
+        },
+        {
+          "w": "one",
+          "s": 170,
+          "e": 179
+        },
+        {
+          "w": "token",
+          "s": 179,
+          "e": 190
+        },
+        {
+          "w": "at",
+          "s": 190,
+          "e": 196
+        },
+        {
+          "w": "a",
+          "s": 196,
+          "e": 199
+        },
+        {
+          "w": "time.",
+          "s": 199,
+          "e": 206
+        },
+        {
+          "w": "Each",
+          "s": 213,
+          "e": 226
+        },
+        {
+          "w": "new",
+          "s": 226,
+          "e": 233
+        },
+        {
+          "w": "word",
+          "s": 233,
+          "e": 241
+        },
+        {
+          "w": "depends",
+          "s": 241,
+          "e": 250
+        },
+        {
+          "w": "on",
+          "s": 250,
+          "e": 258
+        },
+        {
+          "w": "the",
+          "s": 258,
+          "e": 260
+        },
+        {
+          "w": "previous",
+          "s": 260,
+          "e": 269
+        },
+        {
+          "w": "word,",
+          "s": 269,
+          "e": 280
+        },
+        {
+          "w": "so",
+          "s": 284,
+          "e": 296
+        },
+        {
+          "w": "the",
+          "s": 296,
+          "e": 299
+        },
+        {
+          "w": "GPU",
+          "s": 299,
+          "e": 310
+        },
+        {
+          "w": "must",
+          "s": 310,
+          "e": 320
+        },
+        {
+          "w": "finish",
+          "s": 320,
+          "e": 329
+        },
+        {
+          "w": "token",
+          "s": 329,
+          "e": 339
+        },
+        {
+          "w": "ninety-nine",
+          "s": 339,
+          "e": 351
+        },
+        {
+          "w": "and",
+          "s": 351,
+          "e": 365
+        },
+        {
+          "w": "feed",
+          "s": 365,
+          "e": 376
+        },
+        {
+          "w": "it",
+          "s": 376,
+          "e": 381
+        },
+        {
+          "w": "back",
+          "s": 381,
+          "e": 385
+        },
+        {
+          "w": "in",
+          "s": 385,
+          "e": 392
+        },
+        {
+          "w": "before",
+          "s": 392,
+          "e": 401
+        },
+        {
+          "w": "it",
+          "s": 401,
+          "e": 407
+        },
+        {
+          "w": "can",
+          "s": 407,
+          "e": 409
+        },
+        {
+          "w": "even",
+          "s": 409,
+          "e": 415
+        },
+        {
+          "w": "start",
+          "s": 415,
+          "e": 420
+        },
+        {
+          "w": "computing",
+          "s": 420,
+          "e": 429
+        },
+        {
+          "w": "token",
+          "s": 429,
+          "e": 442
+        },
+        {
+          "w": "one",
+          "s": 442,
+          "e": 444
+        },
+        {
+          "w": "hundred.",
+          "s": 443,
+          "e": 451
+        }
+      ]
+    },
+    {
+      "paragraph": 7,
+      "chapterId": "03-memory-wall",
+      "startFrame": 2807,
+      "durationInFrames": 580,
+      "leadFrames": 9,
+      "voiceFrames": 559,
+      "audioFile": "voiceover/007.to-see-why.mp3",
+      "timingSource": "whisper",
+      "text": "To see why that explodes your bill, zoom inside an AI GPU like an H100. Massive high-bandwidth memory, or HBM, stores the model weights, linked by a narrow memory bus to ultra-fast on-chip SRAM and Tensor Cores. Those math units pack around a thousand teraflops of compute, but every byte must cross that bandwidth pipe first.",
+      "words": [
+        {
+          "w": "To",
+          "s": 9,
+          "e": 16
+        },
+        {
+          "w": "see",
+          "s": 16,
+          "e": 20
+        },
+        {
+          "w": "why",
+          "s": 20,
+          "e": 25
+        },
+        {
+          "w": "that",
+          "s": 25,
+          "e": 29
+        },
+        {
+          "w": "explodes",
+          "s": 29,
+          "e": 40
+        },
+        {
+          "w": "your",
+          "s": 40,
+          "e": 46
+        },
+        {
+          "w": "bill,",
+          "s": 46,
+          "e": 51
+        },
+        {
+          "w": "zoom",
+          "s": 57,
+          "e": 67
+        },
+        {
+          "w": "inside",
+          "s": 67,
+          "e": 74
+        },
+        {
+          "w": "an",
+          "s": 74,
+          "e": 83
+        },
+        {
+          "w": "AI",
+          "s": 83,
+          "e": 89
+        },
+        {
+          "w": "GPU",
+          "s": 89,
+          "e": 97
+        },
+        {
+          "w": "like",
+          "s": 97,
+          "e": 109
+        },
+        {
+          "w": "an",
+          "s": 109,
+          "e": 113
+        },
+        {
+          "w": "H100.",
+          "s": 113,
+          "e": 126
+        },
+        {
+          "w": "Massive",
+          "s": 152,
+          "e": 166
+        },
+        {
+          "w": "high-bandwidth",
+          "s": 166,
+          "e": 182
+        },
+        {
+          "w": "memory,",
+          "s": 182,
+          "e": 188
+        },
+        {
+          "w": "or",
+          "s": 198,
+          "e": 205
+        },
+        {
+          "w": "HBM,",
+          "s": 205,
+          "e": 218
+        },
+        {
+          "w": "stores",
+          "s": 225,
+          "e": 237
+        },
+        {
+          "w": "the",
+          "s": 237,
+          "e": 241
+        },
+        {
+          "w": "model",
+          "s": 241,
+          "e": 245
+        },
+        {
+          "w": "weights,",
+          "s": 245,
+          "e": 255
+        },
+        {
+          "w": "linked",
+          "s": 262,
+          "e": 273
+        },
+        {
+          "w": "by",
+          "s": 273,
+          "e": 278
+        },
+        {
+          "w": "a",
+          "s": 278,
+          "e": 281
+        },
+        {
+          "w": "narrow",
+          "s": 281,
+          "e": 288
+        },
+        {
+          "w": "memory",
+          "s": 288,
+          "e": 296
+        },
+        {
+          "w": "bus",
+          "s": 296,
+          "e": 304
+        },
+        {
+          "w": "to",
+          "s": 304,
+          "e": 311
+        },
+        {
+          "w": "ultra-fast",
+          "s": 311,
+          "e": 329
+        },
+        {
+          "w": "on-chip",
+          "s": 329,
+          "e": 341
+        },
+        {
+          "w": "SRAM",
+          "s": 341,
+          "e": 349
+        },
+        {
+          "w": "and",
+          "s": 349,
+          "e": 355
+        },
+        {
+          "w": "Tensor",
+          "s": 355,
+          "e": 359
+        },
+        {
+          "w": "Cores.",
+          "s": 359,
+          "e": 371
+        },
+        {
+          "w": "Those",
+          "s": 383,
+          "e": 397
+        },
+        {
+          "w": "math",
+          "s": 397,
+          "e": 403
+        },
+        {
+          "w": "units",
+          "s": 403,
+          "e": 410
+        },
+        {
+          "w": "pack",
+          "s": 410,
+          "e": 419
+        },
+        {
+          "w": "around",
+          "s": 419,
+          "e": 427
+        },
+        {
+          "w": "a",
+          "s": 427,
+          "e": 430
+        },
+        {
+          "w": "thousand",
+          "s": 430,
+          "e": 439
+        },
+        {
+          "w": "teraflops",
+          "s": 439,
+          "e": 457
+        },
+        {
+          "w": "of",
+          "s": 457,
+          "e": 460
+        },
+        {
+          "w": "compute,",
+          "s": 460,
+          "e": 469
+        },
+        {
+          "w": "but",
+          "s": 475,
+          "e": 483
+        },
+        {
+          "w": "every",
+          "s": 483,
+          "e": 488
+        },
+        {
+          "w": "byte",
+          "s": 488,
+          "e": 496
+        },
+        {
+          "w": "must",
+          "s": 496,
+          "e": 502
+        },
+        {
+          "w": "cross",
+          "s": 502,
+          "e": 510
+        },
+        {
+          "w": "that",
+          "s": 510,
+          "e": 517
+        },
+        {
+          "w": "bandwidth",
+          "s": 517,
+          "e": 526
+        },
+        {
+          "w": "pipe",
+          "s": 526,
+          "e": 534
+        },
+        {
+          "w": "first.",
+          "s": 534,
+          "e": 546
+        }
+      ]
+    },
+    {
+      "paragraph": 8,
+      "chapterId": "03-memory-wall",
+      "startFrame": 3387,
+      "durationInFrames": 536,
+      "leadFrames": 9,
+      "voiceFrames": 515,
+      "audioFile": "voiceover/008.during-prefill-the.mp3",
+      "timingSource": "whisper",
+      "text": "During prefill, the GPU loads each layer's weights from HBM once and multiplies them against a huge matrix of hundreds or thousands of input tokens together. That matrix-matrix multiply, called GEMM, keeps Tensor Cores packed with work. It is like a freight train hauling a thousand containers in one trip.",
+      "words": [
+        {
+          "w": "During",
+          "s": 9,
+          "e": 19
+        },
+        {
+          "w": "prefill,",
+          "s": 19,
+          "e": 32
+        },
+        {
+          "w": "the",
+          "s": 37,
+          "e": 43
+        },
+        {
+          "w": "GPU",
+          "s": 43,
+          "e": 52
+        },
+        {
+          "w": "loads",
+          "s": 52,
+          "e": 67
+        },
+        {
+          "w": "each",
+          "s": 67,
+          "e": 74
+        },
+        {
+          "w": "layer's",
+          "s": 74,
+          "e": 87
+        },
+        {
+          "w": "weights",
+          "s": 87,
+          "e": 92
+        },
+        {
+          "w": "from",
+          "s": 92,
+          "e": 98
+        },
+        {
+          "w": "HBM",
+          "s": 98,
+          "e": 110
+        },
+        {
+          "w": "once",
+          "s": 110,
+          "e": 120
+        },
+        {
+          "w": "and",
+          "s": 120,
+          "e": 129
+        },
+        {
+          "w": "multiplies",
+          "s": 129,
+          "e": 147
+        },
+        {
+          "w": "them",
+          "s": 147,
+          "e": 151
+        },
+        {
+          "w": "against",
+          "s": 151,
+          "e": 157
+        },
+        {
+          "w": "a",
+          "s": 157,
+          "e": 164
+        },
+        {
+          "w": "huge",
+          "s": 164,
+          "e": 170
+        },
+        {
+          "w": "matrix",
+          "s": 170,
+          "e": 182
+        },
+        {
+          "w": "of",
+          "s": 182,
+          "e": 190
+        },
+        {
+          "w": "hundreds",
+          "s": 190,
+          "e": 199
+        },
+        {
+          "w": "or",
+          "s": 199,
+          "e": 208
+        },
+        {
+          "w": "thousands",
+          "s": 208,
+          "e": 221
+        },
+        {
+          "w": "of",
+          "s": 221,
+          "e": 230
+        },
+        {
+          "w": "input",
+          "s": 230,
+          "e": 236
+        },
+        {
+          "w": "tokens",
+          "s": 236,
+          "e": 248
+        },
+        {
+          "w": "together.",
+          "s": 248,
+          "e": 258
+        },
+        {
+          "w": "That",
+          "s": 269,
+          "e": 286
+        },
+        {
+          "w": "matrix-matrix",
+          "s": 286,
+          "e": 308
+        },
+        {
+          "w": "multiply,",
+          "s": 308,
+          "e": 318
+        },
+        {
+          "w": "called",
+          "s": 328,
+          "e": 337
+        },
+        {
+          "w": "GEMM,",
+          "s": 337,
+          "e": 359
+        },
+        {
+          "w": "keeps",
+          "s": 361,
+          "e": 375
+        },
+        {
+          "w": "Tensor",
+          "s": 375,
+          "e": 383
+        },
+        {
+          "w": "Cores",
+          "s": 383,
+          "e": 392
+        },
+        {
+          "w": "packed",
+          "s": 392,
+          "e": 401
+        },
+        {
+          "w": "with",
+          "s": 401,
+          "e": 409
+        },
+        {
+          "w": "work.",
+          "s": 409,
+          "e": 416
+        },
+        {
+          "w": "It",
+          "s": 422,
+          "e": 437
+        },
+        {
+          "w": "is",
+          "s": 437,
+          "e": 439
+        },
+        {
+          "w": "like",
+          "s": 439,
+          "e": 443
+        },
+        {
+          "w": "a",
+          "s": 443,
+          "e": 446
+        },
+        {
+          "w": "freight",
+          "s": 446,
+          "e": 452
+        },
+        {
+          "w": "train",
+          "s": 452,
+          "e": 459
+        },
+        {
+          "w": "hauling",
+          "s": 459,
+          "e": 470
+        },
+        {
+          "w": "a",
+          "s": 470,
+          "e": 472
+        },
+        {
+          "w": "thousand",
+          "s": 471,
+          "e": 479
+        },
+        {
+          "w": "containers",
+          "s": 479,
+          "e": 497
+        },
+        {
+          "w": "in",
+          "s": 497,
+          "e": 504
+        },
+        {
+          "w": "one",
+          "s": 504,
+          "e": 508
+        },
+        {
+          "w": "trip.",
+          "s": 508,
+          "e": 515
+        }
+      ]
+    },
+    {
+      "paragraph": 9,
+      "chapterId": "03-memory-wall",
+      "startFrame": 3923,
+      "durationInFrames": 607,
+      "leadFrames": 9,
+      "voiceFrames": 586,
+      "audioFile": "voiceover/009.during-decode-you.mp3",
+      "timingSource": "whisper",
+      "text": "During decode, you only have one new token vector. Yet to produce that single output token, the GPU must still stream the entire model's weights, often over a hundred gigabytes, from HBM into SRAM, run one tiny vector multiply, discard the weights, and repeat for the next word. It is like driving an eighteen-wheeler across town to deliver a single postcard.",
+      "words": [
+        {
+          "w": "During",
+          "s": 9,
+          "e": 19
+        },
+        {
+          "w": "decode,",
+          "s": 19,
+          "e": 35
+        },
+        {
+          "w": "you",
+          "s": 36,
+          "e": 41
+        },
+        {
+          "w": "only",
+          "s": 41,
+          "e": 46
+        },
+        {
+          "w": "have",
+          "s": 46,
+          "e": 52
+        },
+        {
+          "w": "one",
+          "s": 52,
+          "e": 59
+        },
+        {
+          "w": "new",
+          "s": 59,
+          "e": 66
+        },
+        {
+          "w": "token",
+          "s": 66,
+          "e": 74
+        },
+        {
+          "w": "vector.",
+          "s": 74,
+          "e": 83
+        },
+        {
+          "w": "Yet",
+          "s": 93,
+          "e": 107
+        },
+        {
+          "w": "to",
+          "s": 107,
+          "e": 111
+        },
+        {
+          "w": "produce",
+          "s": 111,
+          "e": 121
+        },
+        {
+          "w": "that",
+          "s": 121,
+          "e": 127
+        },
+        {
+          "w": "single",
+          "s": 127,
+          "e": 135
+        },
+        {
+          "w": "output",
+          "s": 135,
+          "e": 143
+        },
+        {
+          "w": "token,",
+          "s": 143,
+          "e": 154
+        },
+        {
+          "w": "the",
+          "s": 160,
+          "e": 169
+        },
+        {
+          "w": "GPU",
+          "s": 169,
+          "e": 179
+        },
+        {
+          "w": "must",
+          "s": 179,
+          "e": 188
+        },
+        {
+          "w": "still",
+          "s": 188,
+          "e": 195
+        },
+        {
+          "w": "stream",
+          "s": 195,
+          "e": 205
+        },
+        {
+          "w": "the",
+          "s": 205,
+          "e": 211
+        },
+        {
+          "w": "entire",
+          "s": 211,
+          "e": 218
+        },
+        {
+          "w": "model's",
+          "s": 218,
+          "e": 235
+        },
+        {
+          "w": "weights,",
+          "s": 235,
+          "e": 241
+        },
+        {
+          "w": "often",
+          "s": 246,
+          "e": 259
+        },
+        {
+          "w": "over",
+          "s": 259,
+          "e": 266
+        },
+        {
+          "w": "a",
+          "s": 266,
+          "e": 268
+        },
+        {
+          "w": "hundred",
+          "s": 267,
+          "e": 275
+        },
+        {
+          "w": "gigabytes,",
+          "s": 275,
+          "e": 285
+        },
+        {
+          "w": "from",
+          "s": 292,
+          "e": 307
+        },
+        {
+          "w": "HBM",
+          "s": 307,
+          "e": 320
+        },
+        {
+          "w": "into",
+          "s": 320,
+          "e": 329
+        },
+        {
+          "w": "SRAM,",
+          "s": 329,
+          "e": 343
+        },
+        {
+          "w": "run",
+          "s": 344,
+          "e": 355
+        },
+        {
+          "w": "one",
+          "s": 355,
+          "e": 362
+        },
+        {
+          "w": "tiny",
+          "s": 362,
+          "e": 370
+        },
+        {
+          "w": "vector",
+          "s": 370,
+          "e": 379
+        },
+        {
+          "w": "multiply,",
+          "s": 379,
+          "e": 388
+        },
+        {
+          "w": "discard",
+          "s": 400,
+          "e": 412
+        },
+        {
+          "w": "the",
+          "s": 412,
+          "e": 419
+        },
+        {
+          "w": "weights,",
+          "s": 419,
+          "e": 427
+        },
+        {
+          "w": "and",
+          "s": 432,
+          "e": 437
+        },
+        {
+          "w": "repeat",
+          "s": 437,
+          "e": 445
+        },
+        {
+          "w": "for",
+          "s": 445,
+          "e": 451
+        },
+        {
+          "w": "the",
+          "s": 451,
+          "e": 454
+        },
+        {
+          "w": "next",
+          "s": 454,
+          "e": 459
+        },
+        {
+          "w": "word.",
+          "s": 459,
+          "e": 468
+        },
+        {
+          "w": "It",
+          "s": 475,
+          "e": 487
+        },
+        {
+          "w": "is",
+          "s": 487,
+          "e": 490
+        },
+        {
+          "w": "like",
+          "s": 490,
+          "e": 493
+        },
+        {
+          "w": "driving",
+          "s": 493,
+          "e": 504
+        },
+        {
+          "w": "an",
+          "s": 504,
+          "e": 509
+        },
+        {
+          "w": "eighteen-wheeler",
+          "s": 509,
+          "e": 527
+        },
+        {
+          "w": "across",
+          "s": 527,
+          "e": 533
+        },
+        {
+          "w": "town",
+          "s": 533,
+          "e": 545
+        },
+        {
+          "w": "to",
+          "s": 545,
+          "e": 551
+        },
+        {
+          "w": "deliver",
+          "s": 551,
+          "e": 557
+        },
+        {
+          "w": "a",
+          "s": 557,
+          "e": 563
+        },
+        {
+          "w": "single",
+          "s": 563,
+          "e": 569
+        },
+        {
+          "w": "postcard.",
+          "s": 569,
+          "e": 586
+        }
+      ]
+    },
+    {
+      "paragraph": 10,
+      "chapterId": "03-memory-wall",
+      "startFrame": 4530,
+      "durationInFrames": 461,
+      "leadFrames": 9,
+      "voiceFrames": 440,
+      "audioFile": "voiceover/010.put-the-utilization.mp3",
+      "timingSource": "whisper",
+      "text": "Put the utilization meters side by side and the bottleneck is unmistakable. Prefill is compute-bound, keeping Tensor Cores busy around eighty percent. Decode hits the memory wall: it is memory-bound, redlining the HBM bus at one hundred percent while ninety-five percent of the GPU's compute sits completely idle, waiting on bytes.",
+      "words": [
+        {
+          "w": "Put",
+          "s": 9,
+          "e": 19
+        },
+        {
+          "w": "the",
+          "s": 19,
+          "e": 24
+        },
+        {
+          "w": "utilization",
+          "s": 24,
+          "e": 37
+        },
+        {
+          "w": "meters",
+          "s": 37,
+          "e": 46
+        },
+        {
+          "w": "side",
+          "s": 46,
+          "e": 52
+        },
+        {
+          "w": "by",
+          "s": 52,
+          "e": 56
+        },
+        {
+          "w": "side",
+          "s": 56,
+          "e": 65
+        },
+        {
+          "w": "and",
+          "s": 65,
+          "e": 69
+        },
+        {
+          "w": "the",
+          "s": 69,
+          "e": 72
+        },
+        {
+          "w": "bottleneck",
+          "s": 72,
+          "e": 80
+        },
+        {
+          "w": "is",
+          "s": 80,
+          "e": 86
+        },
+        {
+          "w": "unmistakable.",
+          "s": 86,
+          "e": 107
+        },
+        {
+          "w": "Prefill",
+          "s": 119,
+          "e": 128
+        },
+        {
+          "w": "is",
+          "s": 128,
+          "e": 133
+        },
+        {
+          "w": "compute-bound,",
+          "s": 133,
+          "e": 150
+        },
+        {
+          "w": "keeping",
+          "s": 157,
+          "e": 161
+        },
+        {
+          "w": "Tensor",
+          "s": 161,
+          "e": 172
+        },
+        {
+          "w": "Cores",
+          "s": 172,
+          "e": 178
+        },
+        {
+          "w": "busy",
+          "s": 178,
+          "e": 186
+        },
+        {
+          "w": "around",
+          "s": 186,
+          "e": 193
+        },
+        {
+          "w": "eighty",
+          "s": 193,
+          "e": 196
+        },
+        {
+          "w": "percent.",
+          "s": 196,
+          "e": 200
+        },
+        {
+          "w": "Decode",
+          "s": 218,
+          "e": 232
+        },
+        {
+          "w": "hits",
+          "s": 232,
+          "e": 236
+        },
+        {
+          "w": "the",
+          "s": 236,
+          "e": 241
+        },
+        {
+          "w": "memory",
+          "s": 241,
+          "e": 246
+        },
+        {
+          "w": "wall:",
+          "s": 246,
+          "e": 254
+        },
+        {
+          "w": "it",
+          "s": 258,
+          "e": 260
+        },
+        {
+          "w": "is",
+          "s": 259,
+          "e": 262
+        },
+        {
+          "w": "memory-bound,",
+          "s": 262,
+          "e": 278
+        },
+        {
+          "w": "redlining",
+          "s": 283,
+          "e": 293
+        },
+        {
+          "w": "the",
+          "s": 293,
+          "e": 297
+        },
+        {
+          "w": "HBM",
+          "s": 297,
+          "e": 306
+        },
+        {
+          "w": "bus",
+          "s": 306,
+          "e": 313
+        },
+        {
+          "w": "at",
+          "s": 313,
+          "e": 317
+        },
+        {
+          "w": "one",
+          "s": 317,
+          "e": 319
+        },
+        {
+          "w": "hundred",
+          "s": 317,
+          "e": 322
+        },
+        {
+          "w": "percent",
+          "s": 322,
+          "e": 326
+        },
+        {
+          "w": "while",
+          "s": 337,
+          "e": 341
+        },
+        {
+          "w": "ninety-five",
+          "s": 341,
+          "e": 347
+        },
+        {
+          "w": "percent",
+          "s": 347,
+          "e": 352
+        },
+        {
+          "w": "of",
+          "s": 361,
+          "e": 364
+        },
+        {
+          "w": "the",
+          "s": 364,
+          "e": 367
+        },
+        {
+          "w": "GPU's",
+          "s": 367,
+          "e": 374
+        },
+        {
+          "w": "compute",
+          "s": 374,
+          "e": 387
+        },
+        {
+          "w": "sits",
+          "s": 391,
+          "e": 395
+        },
+        {
+          "w": "completely",
+          "s": 395,
+          "e": 406
+        },
+        {
+          "w": "idle,",
+          "s": 406,
+          "e": 415
+        },
+        {
+          "w": "waiting",
+          "s": 420,
+          "e": 424
+        },
+        {
+          "w": "on",
+          "s": 424,
+          "e": 430
+        },
+        {
+          "w": "bytes.",
+          "s": 430,
+          "e": 438
+        }
+      ]
+    },
+    {
+      "paragraph": 11,
+      "chapterId": "04-kv-cache",
+      "startFrame": 5009,
+      "durationInFrames": 533,
+      "leadFrames": 9,
+      "voiceFrames": 512,
+      "audioFile": "voiceover/011.and-the-memory.mp3",
+      "timingSource": "whisper",
+      "text": "And the memory wall is only half the story. In a Transformer, every new token attends to every token before it. If the GPU had to recompute all earlier tokens from scratch at each step, generation would collapse. Instead, servers store every past token's Key and Value vectors in VRAM, creating the KV cache.",
+      "words": [
+        {
+          "w": "And",
+          "s": 9,
+          "e": 17
+        },
+        {
+          "w": "the",
+          "s": 17,
+          "e": 20
+        },
+        {
+          "w": "memory",
+          "s": 20,
+          "e": 26
+        },
+        {
+          "w": "wall",
+          "s": 26,
+          "e": 32
+        },
+        {
+          "w": "is",
+          "s": 32,
+          "e": 37
+        },
+        {
+          "w": "only",
+          "s": 37,
+          "e": 41
+        },
+        {
+          "w": "half",
+          "s": 41,
+          "e": 50
+        },
+        {
+          "w": "the",
+          "s": 50,
+          "e": 55
+        },
+        {
+          "w": "story.",
+          "s": 55,
+          "e": 64
+        },
+        {
+          "w": "In",
+          "s": 71,
+          "e": 83
+        },
+        {
+          "w": "a",
+          "s": 83,
+          "e": 86
+        },
+        {
+          "w": "Transformer,",
+          "s": 86,
+          "e": 98
+        },
+        {
+          "w": "every",
+          "s": 107,
+          "e": 119
+        },
+        {
+          "w": "new",
+          "s": 119,
+          "e": 125
+        },
+        {
+          "w": "token",
+          "s": 125,
+          "e": 133
+        },
+        {
+          "w": "attends",
+          "s": 133,
+          "e": 140
+        },
+        {
+          "w": "to",
+          "s": 140,
+          "e": 147
+        },
+        {
+          "w": "every",
+          "s": 147,
+          "e": 152
+        },
+        {
+          "w": "token",
+          "s": 152,
+          "e": 160
+        },
+        {
+          "w": "before",
+          "s": 160,
+          "e": 169
+        },
+        {
+          "w": "it.",
+          "s": 169,
+          "e": 176
+        },
+        {
+          "w": "If",
+          "s": 188,
+          "e": 204
+        },
+        {
+          "w": "the",
+          "s": 204,
+          "e": 208
+        },
+        {
+          "w": "GPU",
+          "s": 208,
+          "e": 216
+        },
+        {
+          "w": "had",
+          "s": 216,
+          "e": 224
+        },
+        {
+          "w": "to",
+          "s": 224,
+          "e": 229
+        },
+        {
+          "w": "recompute",
+          "s": 229,
+          "e": 242
+        },
+        {
+          "w": "all",
+          "s": 242,
+          "e": 245
+        },
+        {
+          "w": "earlier",
+          "s": 245,
+          "e": 256
+        },
+        {
+          "w": "tokens",
+          "s": 256,
+          "e": 265
+        },
+        {
+          "w": "from",
+          "s": 265,
+          "e": 272
+        },
+        {
+          "w": "scratch",
+          "s": 272,
+          "e": 280
+        },
+        {
+          "w": "at",
+          "s": 280,
+          "e": 286
+        },
+        {
+          "w": "each",
+          "s": 286,
+          "e": 290
+        },
+        {
+          "w": "step,",
+          "s": 290,
+          "e": 298
+        },
+        {
+          "w": "generation",
+          "s": 305,
+          "e": 316
+        },
+        {
+          "w": "would",
+          "s": 316,
+          "e": 328
+        },
+        {
+          "w": "collapse.",
+          "s": 328,
+          "e": 338
+        },
+        {
+          "w": "Instead,",
+          "s": 347,
+          "e": 361
+        },
+        {
+          "w": "servers",
+          "s": 369,
+          "e": 383
+        },
+        {
+          "w": "store",
+          "s": 383,
+          "e": 392
+        },
+        {
+          "w": "every",
+          "s": 392,
+          "e": 398
+        },
+        {
+          "w": "past",
+          "s": 398,
+          "e": 405
+        },
+        {
+          "w": "token's",
+          "s": 405,
+          "e": 420
+        },
+        {
+          "w": "Key",
+          "s": 420,
+          "e": 425
+        },
+        {
+          "w": "and",
+          "s": 425,
+          "e": 430
+        },
+        {
+          "w": "Value",
+          "s": 430,
+          "e": 436
+        },
+        {
+          "w": "vectors",
+          "s": 436,
+          "e": 448
+        },
+        {
+          "w": "in",
+          "s": 448,
+          "e": 454
+        },
+        {
+          "w": "VRAM,",
+          "s": 454,
+          "e": 467
+        },
+        {
+          "w": "creating",
+          "s": 468,
+          "e": 476
+        },
+        {
+          "w": "the",
+          "s": 476,
+          "e": 482
+        },
+        {
+          "w": "KV",
+          "s": 482,
+          "e": 490
+        },
+        {
+          "w": "cache.",
+          "s": 490,
+          "e": 498
+        }
+      ]
+    },
+    {
+      "paragraph": 12,
+      "chapterId": "04-kv-cache",
+      "startFrame": 5542,
+      "durationInFrames": 517,
+      "leadFrames": 9,
+      "voiceFrames": 496,
+      "audioFile": "voiceover/012.the-kv-cache.mp3",
+      "timingSource": "whisper",
+      "text": "The KV cache eliminates redundant math, but adds a second tax. Every output token appends another slice to VRAM, so the cache grows linearly with length. Worse, on every decode step, the GPU must read both the model weights and that growing KV cache across the exact same HBM bandwidth pipe.",
+      "words": [
+        {
+          "w": "The",
+          "s": 9,
+          "e": 16
+        },
+        {
+          "w": "KV",
+          "s": 16,
+          "e": 25
+        },
+        {
+          "w": "cache",
+          "s": 25,
+          "e": 31
+        },
+        {
+          "w": "eliminates",
+          "s": 31,
+          "e": 42
+        },
+        {
+          "w": "redundant",
+          "s": 42,
+          "e": 56
+        },
+        {
+          "w": "math,",
+          "s": 56,
+          "e": 68
+        },
+        {
+          "w": "but",
+          "s": 74,
+          "e": 81
+        },
+        {
+          "w": "adds",
+          "s": 81,
+          "e": 87
+        },
+        {
+          "w": "a",
+          "s": 87,
+          "e": 92
+        },
+        {
+          "w": "second",
+          "s": 92,
+          "e": 99
+        },
+        {
+          "w": "tax.",
+          "s": 99,
+          "e": 107
+        },
+        {
+          "w": "Every",
+          "s": 116,
+          "e": 133
+        },
+        {
+          "w": "output",
+          "s": 133,
+          "e": 142
+        },
+        {
+          "w": "token",
+          "s": 142,
+          "e": 151
+        },
+        {
+          "w": "appends",
+          "s": 151,
+          "e": 163
+        },
+        {
+          "w": "another",
+          "s": 163,
+          "e": 170
+        },
+        {
+          "w": "slice",
+          "s": 170,
+          "e": 181
+        },
+        {
+          "w": "to",
+          "s": 181,
+          "e": 187
+        },
+        {
+          "w": "VRAM,",
+          "s": 187,
+          "e": 200
+        },
+        {
+          "w": "so",
+          "s": 201,
+          "e": 206
+        },
+        {
+          "w": "the",
+          "s": 206,
+          "e": 210
+        },
+        {
+          "w": "cache",
+          "s": 210,
+          "e": 215
+        },
+        {
+          "w": "grows",
+          "s": 215,
+          "e": 223
+        },
+        {
+          "w": "linearly",
+          "s": 223,
+          "e": 234
+        },
+        {
+          "w": "with",
+          "s": 234,
+          "e": 244
+        },
+        {
+          "w": "length.",
+          "s": 244,
+          "e": 252
+        },
+        {
+          "w": "Worse,",
+          "s": 259,
+          "e": 275
+        },
+        {
+          "w": "on",
+          "s": 278,
+          "e": 283
+        },
+        {
+          "w": "every",
+          "s": 283,
+          "e": 292
+        },
+        {
+          "w": "decode",
+          "s": 292,
+          "e": 304
+        },
+        {
+          "w": "step,",
+          "s": 304,
+          "e": 310
+        },
+        {
+          "w": "the",
+          "s": 317,
+          "e": 323
+        },
+        {
+          "w": "GPU",
+          "s": 323,
+          "e": 332
+        },
+        {
+          "w": "must",
+          "s": 332,
+          "e": 341
+        },
+        {
+          "w": "read",
+          "s": 341,
+          "e": 350
+        },
+        {
+          "w": "both",
+          "s": 350,
+          "e": 356
+        },
+        {
+          "w": "the",
+          "s": 356,
+          "e": 360
+        },
+        {
+          "w": "model",
+          "s": 360,
+          "e": 367
+        },
+        {
+          "w": "weights",
+          "s": 367,
+          "e": 375
+        },
+        {
+          "w": "and",
+          "s": 375,
+          "e": 384
+        },
+        {
+          "w": "that",
+          "s": 384,
+          "e": 391
+        },
+        {
+          "w": "growing",
+          "s": 391,
+          "e": 400
+        },
+        {
+          "w": "KV",
+          "s": 400,
+          "e": 413
+        },
+        {
+          "w": "cache",
+          "s": 413,
+          "e": 420
+        },
+        {
+          "w": "across",
+          "s": 420,
+          "e": 431
+        },
+        {
+          "w": "the",
+          "s": 431,
+          "e": 437
+        },
+        {
+          "w": "exact",
+          "s": 437,
+          "e": 446
+        },
+        {
+          "w": "same",
+          "s": 446,
+          "e": 458
+        },
+        {
+          "w": "HBM",
+          "s": 458,
+          "e": 473
+        },
+        {
+          "w": "bandwidth",
+          "s": 473,
+          "e": 483
+        },
+        {
+          "w": "pipe.",
+          "s": 483,
+          "e": 491
+        }
+      ]
+    },
+    {
+      "paragraph": 13,
+      "chapterId": "04-kv-cache",
+      "startFrame": 6059,
+      "durationInFrames": 537,
+      "leadFrames": 9,
+      "voiceFrames": 516,
+      "audioFile": "voiceover/013.you-might-ask.mp3",
+      "timingSource": "whisper",
+      "text": "You might ask: why not batch a hundred users together so one weight read serves a hundred tokens at once? Continuous batching helps hugely, until two walls hit. First, a hundred KV caches quickly exhaust the VRAM memory limit. Second, huge batches increase per-token latency, making streaming feel painfully slow.",
+      "words": [
+        {
+          "w": "You",
+          "s": 9,
+          "e": 18
+        },
+        {
+          "w": "might",
+          "s": 18,
+          "e": 22
+        },
+        {
+          "w": "ask:",
+          "s": 22,
+          "e": 32
+        },
+        {
+          "w": "why",
+          "s": 36,
+          "e": 46
+        },
+        {
+          "w": "not",
+          "s": 46,
+          "e": 51
+        },
+        {
+          "w": "batch",
+          "s": 51,
+          "e": 61
+        },
+        {
+          "w": "a",
+          "s": 61,
+          "e": 63
+        },
+        {
+          "w": "hundred",
+          "s": 62,
+          "e": 65
+        },
+        {
+          "w": "users",
+          "s": 65,
+          "e": 78
+        },
+        {
+          "w": "together",
+          "s": 78,
+          "e": 88
+        },
+        {
+          "w": "so",
+          "s": 88,
+          "e": 96
+        },
+        {
+          "w": "one",
+          "s": 96,
+          "e": 104
+        },
+        {
+          "w": "weight",
+          "s": 104,
+          "e": 112
+        },
+        {
+          "w": "read",
+          "s": 112,
+          "e": 119
+        },
+        {
+          "w": "serves",
+          "s": 119,
+          "e": 126
+        },
+        {
+          "w": "a",
+          "s": 126,
+          "e": 128
+        },
+        {
+          "w": "hundred",
+          "s": 127,
+          "e": 134
+        },
+        {
+          "w": "tokens",
+          "s": 134,
+          "e": 148
+        },
+        {
+          "w": "at",
+          "s": 148,
+          "e": 153
+        },
+        {
+          "w": "once?",
+          "s": 153,
+          "e": 158
+        },
+        {
+          "w": "Continuous",
+          "s": 178,
+          "e": 195
+        },
+        {
+          "w": "batching",
+          "s": 195,
+          "e": 208
+        },
+        {
+          "w": "helps",
+          "s": 208,
+          "e": 211
+        },
+        {
+          "w": "hugely,",
+          "s": 211,
+          "e": 224
+        },
+        {
+          "w": "until",
+          "s": 229,
+          "e": 236
+        },
+        {
+          "w": "two",
+          "s": 236,
+          "e": 244
+        },
+        {
+          "w": "walls",
+          "s": 244,
+          "e": 250
+        },
+        {
+          "w": "hit.",
+          "s": 250,
+          "e": 257
+        },
+        {
+          "w": "First,",
+          "s": 267,
+          "e": 284
+        },
+        {
+          "w": "a",
+          "s": 292,
+          "e": 294
+        },
+        {
+          "w": "hundred",
+          "s": 293,
+          "e": 306
+        },
+        {
+          "w": "KV",
+          "s": 306,
+          "e": 310
+        },
+        {
+          "w": "caches",
+          "s": 310,
+          "e": 322
+        },
+        {
+          "w": "quickly",
+          "s": 322,
+          "e": 330
+        },
+        {
+          "w": "exhaust",
+          "s": 330,
+          "e": 341
+        },
+        {
+          "w": "the",
+          "s": 341,
+          "e": 350
+        },
+        {
+          "w": "VRAM",
+          "s": 350,
+          "e": 359
+        },
+        {
+          "w": "memory",
+          "s": 359,
+          "e": 365
+        },
+        {
+          "w": "limit.",
+          "s": 365,
+          "e": 375
+        },
+        {
+          "w": "Second,",
+          "s": 383,
+          "e": 400
+        },
+        {
+          "w": "huge",
+          "s": 407,
+          "e": 412
+        },
+        {
+          "w": "batches",
+          "s": 412,
+          "e": 425
+        },
+        {
+          "w": "increase",
+          "s": 425,
+          "e": 431
+        },
+        {
+          "w": "per-token",
+          "s": 431,
+          "e": 446
+        },
+        {
+          "w": "latency,",
+          "s": 446,
+          "e": 454
+        },
+        {
+          "w": "making",
+          "s": 463,
+          "e": 473
+        },
+        {
+          "w": "streaming",
+          "s": 473,
+          "e": 484
+        },
+        {
+          "w": "feel",
+          "s": 484,
+          "e": 491
+        },
+        {
+          "w": "painfully",
+          "s": 491,
+          "e": 505
+        },
+        {
+          "w": "slow.",
+          "s": 505,
+          "e": 514
+        }
+      ]
+    },
+    {
+      "paragraph": 14,
+      "chapterId": "04-kv-cache",
+      "startFrame": 6596,
+      "durationInFrames": 522,
+      "leadFrames": 9,
+      "voiceFrames": 501,
+      "audioFile": "voiceover/014.zoom-out-and.mp3",
+      "timingSource": "whisper",
+      "text": "Zoom out and the pricing makes total sense. Prefill borrows a GPU for a few dozen milliseconds at peak efficiency. A thousand-token decode holds a VRAM slot hostage for ten or twenty full seconds at terrible compute efficiency. Providers are not really selling tokens. They are renting you GPU-seconds.",
+      "words": [
+        {
+          "w": "Zoom",
+          "s": 9,
+          "e": 21
+        },
+        {
+          "w": "out",
+          "s": 21,
+          "e": 27
+        },
+        {
+          "w": "and",
+          "s": 27,
+          "e": 35
+        },
+        {
+          "w": "the",
+          "s": 35,
+          "e": 38
+        },
+        {
+          "w": "pricing",
+          "s": 38,
+          "e": 46
+        },
+        {
+          "w": "makes",
+          "s": 46,
+          "e": 53
+        },
+        {
+          "w": "total",
+          "s": 53,
+          "e": 60
+        },
+        {
+          "w": "sense.",
+          "s": 60,
+          "e": 67
+        },
+        {
+          "w": "Prefill",
+          "s": 80,
+          "e": 103
+        },
+        {
+          "w": "borrows",
+          "s": 103,
+          "e": 116
+        },
+        {
+          "w": "a",
+          "s": 116,
+          "e": 118
+        },
+        {
+          "w": "GPU",
+          "s": 116,
+          "e": 124
+        },
+        {
+          "w": "for",
+          "s": 124,
+          "e": 135
+        },
+        {
+          "w": "a",
+          "s": 135,
+          "e": 139
+        },
+        {
+          "w": "few",
+          "s": 139,
+          "e": 143
+        },
+        {
+          "w": "dozen",
+          "s": 143,
+          "e": 150
+        },
+        {
+          "w": "milliseconds",
+          "s": 150,
+          "e": 161
+        },
+        {
+          "w": "at",
+          "s": 161,
+          "e": 173
+        },
+        {
+          "w": "peak",
+          "s": 173,
+          "e": 178
+        },
+        {
+          "w": "efficiency.",
+          "s": 178,
+          "e": 189
+        },
+        {
+          "w": "A",
+          "s": 200,
+          "e": 216
+        },
+        {
+          "w": "thousand-token",
+          "s": 216,
+          "e": 233
+        },
+        {
+          "w": "decode",
+          "s": 233,
+          "e": 246
+        },
+        {
+          "w": "holds",
+          "s": 246,
+          "e": 254
+        },
+        {
+          "w": "a",
+          "s": 254,
+          "e": 258
+        },
+        {
+          "w": "VRAM",
+          "s": 258,
+          "e": 268
+        },
+        {
+          "w": "slot",
+          "s": 268,
+          "e": 275
+        },
+        {
+          "w": "hostage",
+          "s": 275,
+          "e": 291
+        },
+        {
+          "w": "for",
+          "s": 291,
+          "e": 300
+        },
+        {
+          "w": "ten",
+          "s": 300,
+          "e": 307
+        },
+        {
+          "w": "or",
+          "s": 307,
+          "e": 312
+        },
+        {
+          "w": "twenty",
+          "s": 312,
+          "e": 320
+        },
+        {
+          "w": "full",
+          "s": 320,
+          "e": 325
+        },
+        {
+          "w": "seconds",
+          "s": 325,
+          "e": 337
+        },
+        {
+          "w": "at",
+          "s": 337,
+          "e": 344
+        },
+        {
+          "w": "terrible",
+          "s": 344,
+          "e": 353
+        },
+        {
+          "w": "compute",
+          "s": 353,
+          "e": 361
+        },
+        {
+          "w": "efficiency.",
+          "s": 361,
+          "e": 372
+        },
+        {
+          "w": "Providers",
+          "s": 398,
+          "e": 414
+        },
+        {
+          "w": "are",
+          "s": 414,
+          "e": 416
+        },
+        {
+          "w": "not",
+          "s": 416,
+          "e": 420
+        },
+        {
+          "w": "really",
+          "s": 420,
+          "e": 427
+        },
+        {
+          "w": "selling",
+          "s": 427,
+          "e": 433
+        },
+        {
+          "w": "tokens.",
+          "s": 433,
+          "e": 445
+        },
+        {
+          "w": "They",
+          "s": 452,
+          "e": 460
+        },
+        {
+          "w": "are",
+          "s": 460,
+          "e": 463
+        },
+        {
+          "w": "renting",
+          "s": 463,
+          "e": 470
+        },
+        {
+          "w": "you",
+          "s": 470,
+          "e": 476
+        },
+        {
+          "w": "GPU-seconds.",
+          "s": 476,
+          "e": 495
+        }
+      ]
+    },
+    {
+      "paragraph": 15,
+      "chapterId": "05-widening-gap",
+      "startFrame": 7136,
+      "durationInFrames": 539,
+      "leadFrames": 9,
+      "voiceFrames": 518,
+      "audioFile": "voiceover/015.two-modern-trends.mp3",
+      "timingSource": "whisper",
+      "text": "Two modern trends are widening this gap even further. First is prompt caching. System prompts, tool schemas, and codebase files repeat across calls, so servers reuse their precomputed KV cache and discount cached inputs up to ninety percent. Output tokens are freshly generated every time and can never be cached.",
+      "words": [
+        {
+          "w": "Two",
+          "s": 9,
+          "e": 17
+        },
+        {
+          "w": "modern",
+          "s": 17,
+          "e": 25
+        },
+        {
+          "w": "trends",
+          "s": 25,
+          "e": 34
+        },
+        {
+          "w": "are",
+          "s": 34,
+          "e": 39
+        },
+        {
+          "w": "widening",
+          "s": 39,
+          "e": 50
+        },
+        {
+          "w": "this",
+          "s": 50,
+          "e": 53
+        },
+        {
+          "w": "gap",
+          "s": 53,
+          "e": 59
+        },
+        {
+          "w": "even",
+          "s": 59,
+          "e": 66
+        },
+        {
+          "w": "further.",
+          "s": 66,
+          "e": 76
+        },
+        {
+          "w": "First",
+          "s": 85,
+          "e": 102
+        },
+        {
+          "w": "is",
+          "s": 102,
+          "e": 110
+        },
+        {
+          "w": "prompt",
+          "s": 110,
+          "e": 117
+        },
+        {
+          "w": "caching.",
+          "s": 117,
+          "e": 128
+        },
+        {
+          "w": "System",
+          "s": 134,
+          "e": 149
+        },
+        {
+          "w": "prompts,",
+          "s": 149,
+          "e": 157
+        },
+        {
+          "w": "tool",
+          "s": 165,
+          "e": 177
+        },
+        {
+          "w": "schemas,",
+          "s": 177,
+          "e": 193
+        },
+        {
+          "w": "and",
+          "s": 194,
+          "e": 198
+        },
+        {
+          "w": "codebase",
+          "s": 198,
+          "e": 208
+        },
+        {
+          "w": "files",
+          "s": 208,
+          "e": 217
+        },
+        {
+          "w": "repeat",
+          "s": 217,
+          "e": 227
+        },
+        {
+          "w": "across",
+          "s": 227,
+          "e": 235
+        },
+        {
+          "w": "calls,",
+          "s": 235,
+          "e": 248
+        },
+        {
+          "w": "so",
+          "s": 254,
+          "e": 266
+        },
+        {
+          "w": "servers",
+          "s": 266,
+          "e": 276
+        },
+        {
+          "w": "reuse",
+          "s": 276,
+          "e": 286
+        },
+        {
+          "w": "their",
+          "s": 286,
+          "e": 295
+        },
+        {
+          "w": "precomputed",
+          "s": 295,
+          "e": 311
+        },
+        {
+          "w": "KV",
+          "s": 311,
+          "e": 318
+        },
+        {
+          "w": "cache",
+          "s": 318,
+          "e": 327
+        },
+        {
+          "w": "and",
+          "s": 327,
+          "e": 336
+        },
+        {
+          "w": "discount",
+          "s": 336,
+          "e": 344
+        },
+        {
+          "w": "cached",
+          "s": 344,
+          "e": 358
+        },
+        {
+          "w": "inputs",
+          "s": 358,
+          "e": 365
+        },
+        {
+          "w": "up",
+          "s": 365,
+          "e": 374
+        },
+        {
+          "w": "to",
+          "s": 374,
+          "e": 377
+        },
+        {
+          "w": "ninety",
+          "s": 377,
+          "e": 385
+        },
+        {
+          "w": "percent.",
+          "s": 385,
+          "e": 395
+        },
+        {
+          "w": "Output",
+          "s": 414,
+          "e": 431
+        },
+        {
+          "w": "tokens",
+          "s": 431,
+          "e": 439
+        },
+        {
+          "w": "are",
+          "s": 439,
+          "e": 446
+        },
+        {
+          "w": "freshly",
+          "s": 446,
+          "e": 453
+        },
+        {
+          "w": "generated",
+          "s": 453,
+          "e": 466
+        },
+        {
+          "w": "every",
+          "s": 466,
+          "e": 476
+        },
+        {
+          "w": "time",
+          "s": 476,
+          "e": 487
+        },
+        {
+          "w": "and",
+          "s": 487,
+          "e": 491
+        },
+        {
+          "w": "can",
+          "s": 491,
+          "e": 494
+        },
+        {
+          "w": "never",
+          "s": 494,
+          "e": 500
+        },
+        {
+          "w": "be",
+          "s": 500,
+          "e": 504
+        },
+        {
+          "w": "cached.",
+          "s": 504,
+          "e": 516
+        }
+      ]
+    },
+    {
+      "paragraph": 16,
+      "chapterId": "05-widening-gap",
+      "startFrame": 7675,
+      "durationInFrames": 515,
+      "leadFrames": 9,
+      "voiceFrames": 494,
+      "audioFile": "voiceover/016.the-second-multiplier.mp3",
+      "timingSource": "whisper",
+      "text": "The second multiplier is reasoning models. Ask a reasoning model a short question and you might see a two-sentence answer, while thousands of hidden thinking tokens ran behind the scenes. Every single thinking token is still an autoregressive decode step, burning HBM bandwidth and billed at full output rates.",
+      "words": [
+        {
+          "w": "The",
+          "s": 9,
+          "e": 17
+        },
+        {
+          "w": "second",
+          "s": 17,
+          "e": 23
+        },
+        {
+          "w": "multiplier",
+          "s": 23,
+          "e": 35
+        },
+        {
+          "w": "is",
+          "s": 35,
+          "e": 49
+        },
+        {
+          "w": "reasoning",
+          "s": 49,
+          "e": 61
+        },
+        {
+          "w": "models.",
+          "s": 61,
+          "e": 70
+        },
+        {
+          "w": "Ask",
+          "s": 83,
+          "e": 99
+        },
+        {
+          "w": "a",
+          "s": 99,
+          "e": 104
+        },
+        {
+          "w": "reasoning",
+          "s": 104,
+          "e": 112
+        },
+        {
+          "w": "model",
+          "s": 112,
+          "e": 119
+        },
+        {
+          "w": "a",
+          "s": 119,
+          "e": 127
+        },
+        {
+          "w": "short",
+          "s": 127,
+          "e": 131
+        },
+        {
+          "w": "question",
+          "s": 131,
+          "e": 145
+        },
+        {
+          "w": "and",
+          "s": 145,
+          "e": 152
+        },
+        {
+          "w": "you",
+          "s": 152,
+          "e": 156
+        },
+        {
+          "w": "might",
+          "s": 156,
+          "e": 160
+        },
+        {
+          "w": "see",
+          "s": 160,
+          "e": 166
+        },
+        {
+          "w": "a",
+          "s": 166,
+          "e": 170
+        },
+        {
+          "w": "two-sentence",
+          "s": 170,
+          "e": 184
+        },
+        {
+          "w": "answer,",
+          "s": 184,
+          "e": 192
+        },
+        {
+          "w": "while",
+          "s": 197,
+          "e": 209
+        },
+        {
+          "w": "thousands",
+          "s": 209,
+          "e": 221
+        },
+        {
+          "w": "of",
+          "s": 221,
+          "e": 229
+        },
+        {
+          "w": "hidden",
+          "s": 229,
+          "e": 233
+        },
+        {
+          "w": "thinking",
+          "s": 233,
+          "e": 242
+        },
+        {
+          "w": "tokens",
+          "s": 242,
+          "e": 253
+        },
+        {
+          "w": "ran",
+          "s": 253,
+          "e": 262
+        },
+        {
+          "w": "behind",
+          "s": 262,
+          "e": 269
+        },
+        {
+          "w": "the",
+          "s": 269,
+          "e": 275
+        },
+        {
+          "w": "scenes.",
+          "s": 275,
+          "e": 283
+        },
+        {
+          "w": "Every",
+          "s": 293,
+          "e": 307
+        },
+        {
+          "w": "single",
+          "s": 307,
+          "e": 316
+        },
+        {
+          "w": "thinking",
+          "s": 316,
+          "e": 324
+        },
+        {
+          "w": "token",
+          "s": 324,
+          "e": 334
+        },
+        {
+          "w": "is",
+          "s": 334,
+          "e": 344
+        },
+        {
+          "w": "still",
+          "s": 344,
+          "e": 350
+        },
+        {
+          "w": "an",
+          "s": 350,
+          "e": 356
+        },
+        {
+          "w": "autoregressive",
+          "s": 356,
+          "e": 376
+        },
+        {
+          "w": "decode",
+          "s": 376,
+          "e": 387
+        },
+        {
+          "w": "step,",
+          "s": 387,
+          "e": 393
+        },
+        {
+          "w": "burning",
+          "s": 400,
+          "e": 413
+        },
+        {
+          "w": "HBM",
+          "s": 413,
+          "e": 430
+        },
+        {
+          "w": "bandwidth",
+          "s": 430,
+          "e": 442
+        },
+        {
+          "w": "and",
+          "s": 442,
+          "e": 451
+        },
+        {
+          "w": "billed",
+          "s": 451,
+          "e": 459
+        },
+        {
+          "w": "at",
+          "s": 459,
+          "e": 466
+        },
+        {
+          "w": "full",
+          "s": 466,
+          "e": 472
+        },
+        {
+          "w": "output",
+          "s": 472,
+          "e": 481
+        },
+        {
+          "w": "rates.",
+          "s": 481,
+          "e": 490
+        }
+      ]
+    },
+    {
+      "paragraph": 17,
+      "chapterId": "05-widening-gap",
+      "startFrame": 8190,
+      "durationInFrames": 414,
+      "leadFrames": 9,
+      "voiceFrames": 393,
+      "audioFile": "voiceover/017.look-at-a.mp3",
+      "timingSource": "whisper",
+      "text": "Look at a typical coding agent call and the inversion is stark. Ninety-three percent of your token volume might be cached input context, costing just a couple of pennies. Meanwhile, the remaining seven percent of reasoning and output tokens can eat seventy-five percent of your total bill.",
+      "words": [
+        {
+          "w": "Look",
+          "s": 9,
+          "e": 18
+        },
+        {
+          "w": "at",
+          "s": 18,
+          "e": 22
+        },
+        {
+          "w": "a",
+          "s": 22,
+          "e": 24
+        },
+        {
+          "w": "typical",
+          "s": 23,
+          "e": 31
+        },
+        {
+          "w": "coding",
+          "s": 31,
+          "e": 41
+        },
+        {
+          "w": "agent",
+          "s": 41,
+          "e": 47
+        },
+        {
+          "w": "call",
+          "s": 47,
+          "e": 56
+        },
+        {
+          "w": "and",
+          "s": 56,
+          "e": 64
+        },
+        {
+          "w": "the",
+          "s": 64,
+          "e": 66
+        },
+        {
+          "w": "inversion",
+          "s": 65,
+          "e": 73
+        },
+        {
+          "w": "is",
+          "s": 73,
+          "e": 83
+        },
+        {
+          "w": "stark.",
+          "s": 83,
+          "e": 91
+        },
+        {
+          "w": "Ninety-three",
+          "s": 98,
+          "e": 107
+        },
+        {
+          "w": "percent",
+          "s": 107,
+          "e": 113
+        },
+        {
+          "w": "of",
+          "s": 124,
+          "e": 131
+        },
+        {
+          "w": "your",
+          "s": 131,
+          "e": 134
+        },
+        {
+          "w": "token",
+          "s": 134,
+          "e": 140
+        },
+        {
+          "w": "volume",
+          "s": 140,
+          "e": 149
+        },
+        {
+          "w": "might",
+          "s": 149,
+          "e": 157
+        },
+        {
+          "w": "be",
+          "s": 157,
+          "e": 162
+        },
+        {
+          "w": "cached",
+          "s": 162,
+          "e": 174
+        },
+        {
+          "w": "input",
+          "s": 174,
+          "e": 178
+        },
+        {
+          "w": "context,",
+          "s": 178,
+          "e": 192
+        },
+        {
+          "w": "costing",
+          "s": 200,
+          "e": 212
+        },
+        {
+          "w": "just",
+          "s": 212,
+          "e": 218
+        },
+        {
+          "w": "a",
+          "s": 218,
+          "e": 221
+        },
+        {
+          "w": "couple",
+          "s": 221,
+          "e": 227
+        },
+        {
+          "w": "of",
+          "s": 227,
+          "e": 230
+        },
+        {
+          "w": "pennies.",
+          "s": 230,
+          "e": 243
+        },
+        {
+          "w": "Meanwhile,",
+          "s": 245,
+          "e": 259
+        },
+        {
+          "w": "the",
+          "s": 266,
+          "e": 275
+        },
+        {
+          "w": "remaining",
+          "s": 275,
+          "e": 281
+        },
+        {
+          "w": "seven",
+          "s": 281,
+          "e": 290
+        },
+        {
+          "w": "percent",
+          "s": 290,
+          "e": 299
+        },
+        {
+          "w": "of",
+          "s": 299,
+          "e": 304
+        },
+        {
+          "w": "reasoning",
+          "s": 304,
+          "e": 313
+        },
+        {
+          "w": "and",
+          "s": 313,
+          "e": 318
+        },
+        {
+          "w": "output",
+          "s": 318,
+          "e": 323
+        },
+        {
+          "w": "tokens",
+          "s": 323,
+          "e": 335
+        },
+        {
+          "w": "can",
+          "s": 335,
+          "e": 341
+        },
+        {
+          "w": "eat",
+          "s": 341,
+          "e": 345
+        },
+        {
+          "w": "seventy-five",
+          "s": 345,
+          "e": 352
+        },
+        {
+          "w": "percent",
+          "s": 352,
+          "e": 356
+        },
+        {
+          "w": "of",
+          "s": 368,
+          "e": 376
+        },
+        {
+          "w": "your",
+          "s": 376,
+          "e": 378
+        },
+        {
+          "w": "total",
+          "s": 378,
+          "e": 384
+        },
+        {
+          "w": "bill.",
+          "s": 384,
+          "e": 390
+        }
+      ]
+    },
+    {
+      "paragraph": 18,
+      "chapterId": "06-optimizations",
+      "startFrame": 8622,
+      "durationInFrames": 655,
+      "leadFrames": 9,
+      "voiceFrames": 634,
+      "audioFile": "voiceover/018.without-clever-engineering.mp3",
+      "timingSource": "whisper",
+      "text": "Without clever engineering, output tokens would cost twenty or fifty times more. Labs fight the memory wall by shrinking what crosses the HBM bus. Quantization trims weights down to eight or four bits. Grouped-Query Attention, or GQA, and Multi-Head Latent Attention, or MLA, compress the KV cache. And Mixture of Experts, or MoE, activates only a fraction of weights per token.",
+      "words": [
+        {
+          "w": "Without",
+          "s": 9,
+          "e": 19
+        },
+        {
+          "w": "clever",
+          "s": 19,
+          "e": 28
+        },
+        {
+          "w": "engineering,",
+          "s": 28,
+          "e": 39
+        },
+        {
+          "w": "output",
+          "s": 50,
+          "e": 57
+        },
+        {
+          "w": "tokens",
+          "s": 57,
+          "e": 68
+        },
+        {
+          "w": "would",
+          "s": 68,
+          "e": 76
+        },
+        {
+          "w": "cost",
+          "s": 76,
+          "e": 82
+        },
+        {
+          "w": "twenty",
+          "s": 82,
+          "e": 92
+        },
+        {
+          "w": "or",
+          "s": 92,
+          "e": 98
+        },
+        {
+          "w": "fifty",
+          "s": 98,
+          "e": 104
+        },
+        {
+          "w": "times",
+          "s": 104,
+          "e": 112
+        },
+        {
+          "w": "more.",
+          "s": 112,
+          "e": 124
+        },
+        {
+          "w": "Labs",
+          "s": 133,
+          "e": 149
+        },
+        {
+          "w": "fight",
+          "s": 149,
+          "e": 157
+        },
+        {
+          "w": "the",
+          "s": 157,
+          "e": 162
+        },
+        {
+          "w": "memory",
+          "s": 162,
+          "e": 168
+        },
+        {
+          "w": "wall",
+          "s": 168,
+          "e": 176
+        },
+        {
+          "w": "by",
+          "s": 176,
+          "e": 182
+        },
+        {
+          "w": "shrinking",
+          "s": 182,
+          "e": 190
+        },
+        {
+          "w": "what",
+          "s": 190,
+          "e": 198
+        },
+        {
+          "w": "crosses",
+          "s": 198,
+          "e": 208
+        },
+        {
+          "w": "the",
+          "s": 208,
+          "e": 213
+        },
+        {
+          "w": "HBM",
+          "s": 213,
+          "e": 224
+        },
+        {
+          "w": "bus.",
+          "s": 224,
+          "e": 230
+        },
+        {
+          "w": "Quantization",
+          "s": 241,
+          "e": 256
+        },
+        {
+          "w": "trims",
+          "s": 256,
+          "e": 274
+        },
+        {
+          "w": "weights",
+          "s": 274,
+          "e": 277
+        },
+        {
+          "w": "down",
+          "s": 277,
+          "e": 284
+        },
+        {
+          "w": "to",
+          "s": 284,
+          "e": 289
+        },
+        {
+          "w": "eight",
+          "s": 289,
+          "e": 292
+        },
+        {
+          "w": "or",
+          "s": 292,
+          "e": 295
+        },
+        {
+          "w": "four",
+          "s": 295,
+          "e": 299
+        },
+        {
+          "w": "bits.",
+          "s": 299,
+          "e": 307
+        },
+        {
+          "w": "Grouped-Query",
+          "s": 316,
+          "e": 343
+        },
+        {
+          "w": "Attention,",
+          "s": 343,
+          "e": 349
+        },
+        {
+          "w": "or",
+          "s": 359,
+          "e": 367
+        },
+        {
+          "w": "GQA,",
+          "s": 367,
+          "e": 387
+        },
+        {
+          "w": "and",
+          "s": 391,
+          "e": 401
+        },
+        {
+          "w": "Multi-Head",
+          "s": 401,
+          "e": 415
+        },
+        {
+          "w": "Latent",
+          "s": 415,
+          "e": 425
+        },
+        {
+          "w": "Attention,",
+          "s": 425,
+          "e": 431
+        },
+        {
+          "w": "or",
+          "s": 440,
+          "e": 447
+        },
+        {
+          "w": "MLA,",
+          "s": 447,
+          "e": 458
+        },
+        {
+          "w": "compress",
+          "s": 462,
+          "e": 469
+        },
+        {
+          "w": "the",
+          "s": 469,
+          "e": 478
+        },
+        {
+          "w": "KV",
+          "s": 478,
+          "e": 486
+        },
+        {
+          "w": "cache.",
+          "s": 486,
+          "e": 493
+        },
+        {
+          "w": "And",
+          "s": 501,
+          "e": 513
+        },
+        {
+          "w": "Mixture",
+          "s": 513,
+          "e": 524
+        },
+        {
+          "w": "of",
+          "s": 524,
+          "e": 528
+        },
+        {
+          "w": "Experts,",
+          "s": 528,
+          "e": 545
+        },
+        {
+          "w": "or",
+          "s": 545,
+          "e": 551
+        },
+        {
+          "w": "MoE,",
+          "s": 551,
+          "e": 564
+        },
+        {
+          "w": "activates",
+          "s": 571,
+          "e": 584
+        },
+        {
+          "w": "only",
+          "s": 584,
+          "e": 596
+        },
+        {
+          "w": "a",
+          "s": 596,
+          "e": 600
+        },
+        {
+          "w": "fraction",
+          "s": 600,
+          "e": 607
+        },
+        {
+          "w": "of",
+          "s": 607,
+          "e": 613
+        },
+        {
+          "w": "weights",
+          "s": 613,
+          "e": 617
+        },
+        {
+          "w": "per",
+          "s": 617,
+          "e": 623
+        },
+        {
+          "w": "token.",
+          "s": 623,
+          "e": 631
+        }
+      ]
+    },
+    {
+      "paragraph": 19,
+      "chapterId": "06-optimizations",
+      "startFrame": 9277,
+      "durationInFrames": 493,
+      "leadFrames": 9,
+      "voiceFrames": 472,
+      "audioFile": "voiceover/019.another-breakthrough-is.mp3",
+      "timingSource": "whisper",
+      "text": "Another breakthrough is speculative decoding, which bends autoregression. A tiny, blazing-fast draft model guesses four or five tokens ahead, and the giant model verifies all of them at once in a single parallel pass. When the guesses match, you get several output tokens for the bandwidth cost of one.",
+      "words": [
+        {
+          "w": "Another",
+          "s": 9,
+          "e": 20
+        },
+        {
+          "w": "breakthrough",
+          "s": 20,
+          "e": 31
+        },
+        {
+          "w": "is",
+          "s": 31,
+          "e": 44
+        },
+        {
+          "w": "speculative",
+          "s": 44,
+          "e": 55
+        },
+        {
+          "w": "decoding,",
+          "s": 55,
+          "e": 73
+        },
+        {
+          "w": "which",
+          "s": 76,
+          "e": 83
+        },
+        {
+          "w": "bends",
+          "s": 83,
+          "e": 90
+        },
+        {
+          "w": "autoregression.",
+          "s": 90,
+          "e": 108
+        },
+        {
+          "w": "A",
+          "s": 118,
+          "e": 133
+        },
+        {
+          "w": "tiny,",
+          "s": 133,
+          "e": 142
+        },
+        {
+          "w": "blazing-fast",
+          "s": 146,
+          "e": 167
+        },
+        {
+          "w": "draft",
+          "s": 167,
+          "e": 176
+        },
+        {
+          "w": "model",
+          "s": 176,
+          "e": 185
+        },
+        {
+          "w": "guesses",
+          "s": 185,
+          "e": 197
+        },
+        {
+          "w": "four",
+          "s": 197,
+          "e": 204
+        },
+        {
+          "w": "or",
+          "s": 204,
+          "e": 210
+        },
+        {
+          "w": "five",
+          "s": 210,
+          "e": 214
+        },
+        {
+          "w": "tokens",
+          "s": 214,
+          "e": 224
+        },
+        {
+          "w": "ahead,",
+          "s": 224,
+          "e": 232
+        },
+        {
+          "w": "and",
+          "s": 238,
+          "e": 248
+        },
+        {
+          "w": "the",
+          "s": 248,
+          "e": 250
+        },
+        {
+          "w": "giant",
+          "s": 250,
+          "e": 256
+        },
+        {
+          "w": "model",
+          "s": 256,
+          "e": 264
+        },
+        {
+          "w": "verifies",
+          "s": 264,
+          "e": 281
+        },
+        {
+          "w": "all",
+          "s": 281,
+          "e": 287
+        },
+        {
+          "w": "of",
+          "s": 287,
+          "e": 291
+        },
+        {
+          "w": "them",
+          "s": 291,
+          "e": 294
+        },
+        {
+          "w": "at",
+          "s": 294,
+          "e": 299
+        },
+        {
+          "w": "once",
+          "s": 299,
+          "e": 307
+        },
+        {
+          "w": "in",
+          "s": 307,
+          "e": 310
+        },
+        {
+          "w": "a",
+          "s": 310,
+          "e": 312
+        },
+        {
+          "w": "single",
+          "s": 312,
+          "e": 320
+        },
+        {
+          "w": "parallel",
+          "s": 322,
+          "e": 331
+        },
+        {
+          "w": "pass.",
+          "s": 331,
+          "e": 341
+        },
+        {
+          "w": "When",
+          "s": 356,
+          "e": 371
+        },
+        {
+          "w": "the",
+          "s": 371,
+          "e": 374
+        },
+        {
+          "w": "guesses",
+          "s": 374,
+          "e": 381
+        },
+        {
+          "w": "match,",
+          "s": 381,
+          "e": 390
+        },
+        {
+          "w": "you",
+          "s": 397,
+          "e": 400
+        },
+        {
+          "w": "get",
+          "s": 400,
+          "e": 404
+        },
+        {
+          "w": "several",
+          "s": 404,
+          "e": 413
+        },
+        {
+          "w": "output",
+          "s": 413,
+          "e": 421
+        },
+        {
+          "w": "tokens",
+          "s": 421,
+          "e": 433
+        },
+        {
+          "w": "for",
+          "s": 433,
+          "e": 440
+        },
+        {
+          "w": "the",
+          "s": 440,
+          "e": 443
+        },
+        {
+          "w": "bandwidth",
+          "s": 443,
+          "e": 451
+        },
+        {
+          "w": "cost",
+          "s": 451,
+          "e": 459
+        },
+        {
+          "w": "of",
+          "s": 459,
+          "e": 465
+        },
+        {
+          "w": "one.",
+          "s": 465,
+          "e": 470
+        }
+      ]
+    },
+    {
+      "paragraph": 20,
+      "chapterId": "06-optimizations",
+      "startFrame": 9770,
+      "durationInFrames": 570,
+      "leadFrames": 9,
+      "voiceFrames": 549,
+      "audioFile": "voiceover/020.at-the-serving.mp3",
+      "timingSource": "whisper",
+      "text": "At the serving layer, PagedAttention manages KV cache memory like virtual memory pages, eliminating VRAM fragmentation so more users fit per GPU. Modern clusters also use prefill-decode disaggregation, separating compute-heavy prefill GPUs from memory-heavy decode GPUs so long prompts never stall active users streaming responses.",
+      "words": [
+        {
+          "w": "At",
+          "s": 9,
+          "e": 18
+        },
+        {
+          "w": "the",
+          "s": 18,
+          "e": 20
+        },
+        {
+          "w": "serving",
+          "s": 20,
+          "e": 29
+        },
+        {
+          "w": "layer,",
+          "s": 29,
+          "e": 34
+        },
+        {
+          "w": "PagedAttention",
+          "s": 40,
+          "e": 60
+        },
+        {
+          "w": "manages",
+          "s": 60,
+          "e": 70
+        },
+        {
+          "w": "KV",
+          "s": 70,
+          "e": 81
+        },
+        {
+          "w": "cache",
+          "s": 81,
+          "e": 89
+        },
+        {
+          "w": "memory",
+          "s": 89,
+          "e": 99
+        },
+        {
+          "w": "like",
+          "s": 99,
+          "e": 109
+        },
+        {
+          "w": "virtual",
+          "s": 109,
+          "e": 118
+        },
+        {
+          "w": "memory",
+          "s": 118,
+          "e": 126
+        },
+        {
+          "w": "pages,",
+          "s": 126,
+          "e": 137
+        },
+        {
+          "w": "eliminating",
+          "s": 146,
+          "e": 158
+        },
+        {
+          "w": "VRAM",
+          "s": 158,
+          "e": 176
+        },
+        {
+          "w": "fragmentation",
+          "s": 176,
+          "e": 190
+        },
+        {
+          "w": "so",
+          "s": 190,
+          "e": 202
+        },
+        {
+          "w": "more",
+          "s": 202,
+          "e": 208
+        },
+        {
+          "w": "users",
+          "s": 208,
+          "e": 217
+        },
+        {
+          "w": "fit",
+          "s": 217,
+          "e": 225
+        },
+        {
+          "w": "per",
+          "s": 225,
+          "e": 230
+        },
+        {
+          "w": "GPU.",
+          "s": 230,
+          "e": 239
+        },
+        {
+          "w": "Modern",
+          "s": 250,
+          "e": 266
+        },
+        {
+          "w": "clusters",
+          "s": 266,
+          "e": 276
+        },
+        {
+          "w": "also",
+          "s": 276,
+          "e": 286
+        },
+        {
+          "w": "use",
+          "s": 286,
+          "e": 294
+        },
+        {
+          "w": "prefill-decode",
+          "s": 294,
+          "e": 317
+        },
+        {
+          "w": "disaggregation,",
+          "s": 317,
+          "e": 343
+        },
+        {
+          "w": "separating",
+          "s": 343,
+          "e": 356
+        },
+        {
+          "w": "compute-heavy",
+          "s": 356,
+          "e": 378
+        },
+        {
+          "w": "prefill",
+          "s": 378,
+          "e": 390
+        },
+        {
+          "w": "GPUs",
+          "s": 390,
+          "e": 409
+        },
+        {
+          "w": "from",
+          "s": 409,
+          "e": 412
+        },
+        {
+          "w": "memory-heavy",
+          "s": 412,
+          "e": 436
+        },
+        {
+          "w": "decode",
+          "s": 436,
+          "e": 448
+        },
+        {
+          "w": "GPUs",
+          "s": 448,
+          "e": 464
+        },
+        {
+          "w": "so",
+          "s": 464,
+          "e": 466
+        },
+        {
+          "w": "long",
+          "s": 466,
+          "e": 475
+        },
+        {
+          "w": "prompts",
+          "s": 475,
+          "e": 484
+        },
+        {
+          "w": "never",
+          "s": 484,
+          "e": 491
+        },
+        {
+          "w": "stall",
+          "s": 491,
+          "e": 502
+        },
+        {
+          "w": "active",
+          "s": 502,
+          "e": 508
+        },
+        {
+          "w": "users",
+          "s": 508,
+          "e": 518
+        },
+        {
+          "w": "streaming",
+          "s": 518,
+          "e": 525
+        },
+        {
+          "w": "responses.",
+          "s": 525,
+          "e": 539
+        }
+      ]
+    },
+    {
+      "paragraph": 21,
+      "chapterId": "07-developer-takeaways",
+      "startFrame": 10358,
+      "durationInFrames": 517,
+      "leadFrames": 9,
+      "voiceFrames": 496,
+      "audioFile": "voiceover/021.understanding-this-hardware.mp3",
+      "timingSource": "whisper",
+      "text": "Understanding this hardware physics immediately improves how you build AI apps. Because input is cheap and cacheable while output is slow and expensive, shift work from output to input. Provide rich context upfront and ask for concise outputs: request a twelve-line unified diff instead of rewriting an entire four-hundred-line file.",
+      "words": [
+        {
+          "w": "Understanding",
+          "s": 9,
+          "e": 28
+        },
+        {
+          "w": "this",
+          "s": 28,
+          "e": 34
+        },
+        {
+          "w": "hardware",
+          "s": 34,
+          "e": 41
+        },
+        {
+          "w": "physics",
+          "s": 41,
+          "e": 50
+        },
+        {
+          "w": "immediately",
+          "s": 50,
+          "e": 64
+        },
+        {
+          "w": "improves",
+          "s": 64,
+          "e": 80
+        },
+        {
+          "w": "how",
+          "s": 80,
+          "e": 87
+        },
+        {
+          "w": "you",
+          "s": 87,
+          "e": 91
+        },
+        {
+          "w": "build",
+          "s": 91,
+          "e": 100
+        },
+        {
+          "w": "AI",
+          "s": 100,
+          "e": 109
+        },
+        {
+          "w": "apps.",
+          "s": 109,
+          "e": 121
+        },
+        {
+          "w": "Because",
+          "s": 133,
+          "e": 147
+        },
+        {
+          "w": "input",
+          "s": 147,
+          "e": 155
+        },
+        {
+          "w": "is",
+          "s": 155,
+          "e": 161
+        },
+        {
+          "w": "cheap",
+          "s": 161,
+          "e": 169
+        },
+        {
+          "w": "and",
+          "s": 169,
+          "e": 173
+        },
+        {
+          "w": "cacheable",
+          "s": 173,
+          "e": 187
+        },
+        {
+          "w": "while",
+          "s": 191,
+          "e": 200
+        },
+        {
+          "w": "output",
+          "s": 200,
+          "e": 209
+        },
+        {
+          "w": "is",
+          "s": 209,
+          "e": 212
+        },
+        {
+          "w": "slow",
+          "s": 212,
+          "e": 218
+        },
+        {
+          "w": "and",
+          "s": 218,
+          "e": 221
+        },
+        {
+          "w": "expensive,",
+          "s": 221,
+          "e": 230
+        },
+        {
+          "w": "shift",
+          "s": 241,
+          "e": 250
+        },
+        {
+          "w": "work",
+          "s": 250,
+          "e": 256
+        },
+        {
+          "w": "from",
+          "s": 256,
+          "e": 260
+        },
+        {
+          "w": "output",
+          "s": 260,
+          "e": 267
+        },
+        {
+          "w": "to",
+          "s": 267,
+          "e": 272
+        },
+        {
+          "w": "input.",
+          "s": 272,
+          "e": 278
+        },
+        {
+          "w": "Provide",
+          "s": 289,
+          "e": 304
+        },
+        {
+          "w": "rich",
+          "s": 304,
+          "e": 308
+        },
+        {
+          "w": "context",
+          "s": 308,
+          "e": 319
+        },
+        {
+          "w": "upfront",
+          "s": 319,
+          "e": 330
+        },
+        {
+          "w": "and",
+          "s": 330,
+          "e": 342
+        },
+        {
+          "w": "ask",
+          "s": 342,
+          "e": 347
+        },
+        {
+          "w": "for",
+          "s": 347,
+          "e": 351
+        },
+        {
+          "w": "concise",
+          "s": 351,
+          "e": 358
+        },
+        {
+          "w": "outputs:",
+          "s": 358,
+          "e": 368
+        },
+        {
+          "w": "request",
+          "s": 377,
+          "e": 391
+        },
+        {
+          "w": "a",
+          "s": 391,
+          "e": 394
+        },
+        {
+          "w": "twelve-line",
+          "s": 394,
+          "e": 409
+        },
+        {
+          "w": "unified",
+          "s": 409,
+          "e": 416
+        },
+        {
+          "w": "diff",
+          "s": 416,
+          "e": 427
+        },
+        {
+          "w": "instead",
+          "s": 427,
+          "e": 433
+        },
+        {
+          "w": "of",
+          "s": 433,
+          "e": 440
+        },
+        {
+          "w": "rewriting",
+          "s": 440,
+          "e": 449
+        },
+        {
+          "w": "an",
+          "s": 449,
+          "e": 454
+        },
+        {
+          "w": "entire",
+          "s": 454,
+          "e": 460
+        },
+        {
+          "w": "four-hundred-line",
+          "s": 460,
+          "e": 480
+        },
+        {
+          "w": "file.",
+          "s": 480,
+          "e": 486
+        }
+      ]
+    },
+    {
+      "paragraph": 22,
+      "chapterId": "07-developer-takeaways",
+      "startFrame": 10875,
+      "durationInFrames": 503,
+      "leadFrames": 9,
+      "voiceFrames": 482,
+      "audioFile": "voiceover/022.second-protect-your.mp3",
+      "timingSource": "whisper",
+      "text": "Second, protect your prompt cache prefix. Keep static instructions, tools, and docs at the very top of your prompt. Never put a dynamic timestamp at byte zero, or you will bust the cache on every request. And route simple, verbose tasks to smaller models, saving heavy reasoning budgets for genuinely hard steps.",
+      "words": [
+        {
+          "w": "Second,",
+          "s": 9,
+          "e": 23
+        },
+        {
+          "w": "protect",
+          "s": 29,
+          "e": 45
+        },
+        {
+          "w": "your",
+          "s": 45,
+          "e": 55
+        },
+        {
+          "w": "prompt",
+          "s": 55,
+          "e": 62
+        },
+        {
+          "w": "cache",
+          "s": 62,
+          "e": 70
+        },
+        {
+          "w": "prefix.",
+          "s": 70,
+          "e": 80
+        },
+        {
+          "w": "Keep",
+          "s": 94,
+          "e": 108
+        },
+        {
+          "w": "static",
+          "s": 108,
+          "e": 117
+        },
+        {
+          "w": "instructions,",
+          "s": 117,
+          "e": 128
+        },
+        {
+          "w": "tools,",
+          "s": 139,
+          "e": 147
+        },
+        {
+          "w": "and",
+          "s": 151,
+          "e": 154
+        },
+        {
+          "w": "docs",
+          "s": 154,
+          "e": 160
+        },
+        {
+          "w": "at",
+          "s": 160,
+          "e": 165
+        },
+        {
+          "w": "the",
+          "s": 165,
+          "e": 167
+        },
+        {
+          "w": "very",
+          "s": 166,
+          "e": 172
+        },
+        {
+          "w": "top",
+          "s": 172,
+          "e": 179
+        },
+        {
+          "w": "of",
+          "s": 179,
+          "e": 184
+        },
+        {
+          "w": "your",
+          "s": 184,
+          "e": 186
+        },
+        {
+          "w": "prompt.",
+          "s": 185,
+          "e": 194
+        },
+        {
+          "w": "Never",
+          "s": 199,
+          "e": 212
+        },
+        {
+          "w": "put",
+          "s": 212,
+          "e": 218
+        },
+        {
+          "w": "a",
+          "s": 218,
+          "e": 222
+        },
+        {
+          "w": "dynamic",
+          "s": 222,
+          "e": 230
+        },
+        {
+          "w": "timestamp",
+          "s": 230,
+          "e": 248
+        },
+        {
+          "w": "at",
+          "s": 248,
+          "e": 252
+        },
+        {
+          "w": "byte",
+          "s": 252,
+          "e": 257
+        },
+        {
+          "w": "zero,",
+          "s": 257,
+          "e": 264
+        },
+        {
+          "w": "or",
+          "s": 268,
+          "e": 275
+        },
+        {
+          "w": "you",
+          "s": 275,
+          "e": 277
+        },
+        {
+          "w": "will",
+          "s": 277,
+          "e": 280
+        },
+        {
+          "w": "bust",
+          "s": 280,
+          "e": 287
+        },
+        {
+          "w": "the",
+          "s": 287,
+          "e": 291
+        },
+        {
+          "w": "cache",
+          "s": 291,
+          "e": 296
+        },
+        {
+          "w": "on",
+          "s": 296,
+          "e": 303
+        },
+        {
+          "w": "every",
+          "s": 303,
+          "e": 309
+        },
+        {
+          "w": "request.",
+          "s": 309,
+          "e": 319
+        },
+        {
+          "w": "And",
+          "s": 327,
+          "e": 338
+        },
+        {
+          "w": "route",
+          "s": 338,
+          "e": 343
+        },
+        {
+          "w": "simple,",
+          "s": 343,
+          "e": 353
+        },
+        {
+          "w": "verbose",
+          "s": 355,
+          "e": 366
+        },
+        {
+          "w": "tasks",
+          "s": 366,
+          "e": 371
+        },
+        {
+          "w": "to",
+          "s": 371,
+          "e": 382
+        },
+        {
+          "w": "smaller",
+          "s": 382,
+          "e": 389
+        },
+        {
+          "w": "models,",
+          "s": 389,
+          "e": 399
+        },
+        {
+          "w": "saving",
+          "s": 404,
+          "e": 413
+        },
+        {
+          "w": "heavy",
+          "s": 413,
+          "e": 422
+        },
+        {
+          "w": "reasoning",
+          "s": 422,
+          "e": 431
+        },
+        {
+          "w": "budgets",
+          "s": 431,
+          "e": 440
+        },
+        {
+          "w": "for",
+          "s": 440,
+          "e": 448
+        },
+        {
+          "w": "genuinely",
+          "s": 448,
+          "e": 456
+        },
+        {
+          "w": "hard",
+          "s": 456,
+          "e": 465
+        },
+        {
+          "w": "steps.",
+          "s": 465,
+          "e": 474
+        }
+      ]
+    },
+    {
+      "paragraph": 23,
+      "chapterId": "07-developer-takeaways",
+      "startFrame": 11378,
+      "durationInFrames": 464,
+      "leadFrames": 9,
+      "voiceFrames": 443,
+      "audioFile": "voiceover/023.combine-those-three.mp3",
+      "timingSource": "whisper",
+      "text": "Combine those three habits: keep outputs tight, keep prefixes static for cache hits, and route easy work to smaller models. In production apps, those changes routinely slash API spend by fifty to eighty percent while making responses feel noticeably faster to your users.",
+      "words": [
+        {
+          "w": "Combine",
+          "s": 9,
+          "e": 24
+        },
+        {
+          "w": "those",
+          "s": 24,
+          "e": 27
+        },
+        {
+          "w": "three",
+          "s": 27,
+          "e": 33
+        },
+        {
+          "w": "habits:",
+          "s": 33,
+          "e": 43
+        },
+        {
+          "w": "keep",
+          "s": 51,
+          "e": 61
+        },
+        {
+          "w": "outputs",
+          "s": 61,
+          "e": 72
+        },
+        {
+          "w": "tight,",
+          "s": 72,
+          "e": 83
+        },
+        {
+          "w": "keep",
+          "s": 89,
+          "e": 98
+        },
+        {
+          "w": "prefixes",
+          "s": 98,
+          "e": 115
+        },
+        {
+          "w": "static",
+          "s": 115,
+          "e": 124
+        },
+        {
+          "w": "for",
+          "s": 124,
+          "e": 131
+        },
+        {
+          "w": "cache",
+          "s": 131,
+          "e": 137
+        },
+        {
+          "w": "hits,",
+          "s": 137,
+          "e": 146
+        },
+        {
+          "w": "and",
+          "s": 151,
+          "e": 161
+        },
+        {
+          "w": "route",
+          "s": 161,
+          "e": 167
+        },
+        {
+          "w": "easy",
+          "s": 167,
+          "e": 175
+        },
+        {
+          "w": "work",
+          "s": 175,
+          "e": 183
+        },
+        {
+          "w": "to",
+          "s": 183,
+          "e": 188
+        },
+        {
+          "w": "smaller",
+          "s": 188,
+          "e": 196
+        },
+        {
+          "w": "models.",
+          "s": 196,
+          "e": 208
+        },
+        {
+          "w": "In",
+          "s": 216,
+          "e": 233
+        },
+        {
+          "w": "production",
+          "s": 233,
+          "e": 241
+        },
+        {
+          "w": "apps,",
+          "s": 241,
+          "e": 250
+        },
+        {
+          "w": "those",
+          "s": 256,
+          "e": 260
+        },
+        {
+          "w": "changes",
+          "s": 260,
+          "e": 269
+        },
+        {
+          "w": "routinely",
+          "s": 269,
+          "e": 284
+        },
+        {
+          "w": "slash",
+          "s": 284,
+          "e": 294
+        },
+        {
+          "w": "API",
+          "s": 294,
+          "e": 307
+        },
+        {
+          "w": "spend",
+          "s": 307,
+          "e": 319
+        },
+        {
+          "w": "by",
+          "s": 319,
+          "e": 326
+        },
+        {
+          "w": "fifty",
+          "s": 326,
+          "e": 334
+        },
+        {
+          "w": "to",
+          "s": 334,
+          "e": 338
+        },
+        {
+          "w": "eighty",
+          "s": 338,
+          "e": 341
+        },
+        {
+          "w": "percent",
+          "s": 341,
+          "e": 344
+        },
+        {
+          "w": "while",
+          "s": 350,
+          "e": 365
+        },
+        {
+          "w": "making",
+          "s": 365,
+          "e": 373
+        },
+        {
+          "w": "responses",
+          "s": 373,
+          "e": 383
+        },
+        {
+          "w": "feel",
+          "s": 383,
+          "e": 395
+        },
+        {
+          "w": "noticeably",
+          "s": 395,
+          "e": 411
+        },
+        {
+          "w": "faster",
+          "s": 411,
+          "e": 419
+        },
+        {
+          "w": "to",
+          "s": 419,
+          "e": 427
+        },
+        {
+          "w": "your",
+          "s": 427,
+          "e": 430
+        },
+        {
+          "w": "users.",
+          "s": 430,
+          "e": 438
+        }
+      ]
+    },
+    {
+      "paragraph": 24,
+      "chapterId": "08-outro",
+      "startFrame": 11860,
+      "durationInFrames": 617,
+      "leadFrames": 9,
+      "voiceFrames": 596,
+      "audioFile": "voiceover/024.if-you-remember.mp3",
+      "timingSource": "whisper",
+      "text": "If you remember one mental model from this video, remember this: reading tokens is parallel math, bounded by compute; writing tokens is serial memory traffic, bounded by bandwidth. Next time you see a five-times output price on an API page, you are not seeing markup. You are seeing the physics of streaming gigabytes across silicon just to pick the next word.",
+      "words": [
+        {
+          "w": "If",
+          "s": 9,
+          "e": 17
+        },
+        {
+          "w": "you",
+          "s": 17,
+          "e": 20
+        },
+        {
+          "w": "remember",
+          "s": 20,
+          "e": 28
+        },
+        {
+          "w": "one",
+          "s": 28,
+          "e": 37
+        },
+        {
+          "w": "mental",
+          "s": 37,
+          "e": 46
+        },
+        {
+          "w": "model",
+          "s": 46,
+          "e": 55
+        },
+        {
+          "w": "from",
+          "s": 55,
+          "e": 62
+        },
+        {
+          "w": "this",
+          "s": 62,
+          "e": 67
+        },
+        {
+          "w": "video,",
+          "s": 67,
+          "e": 76
+        },
+        {
+          "w": "remember",
+          "s": 83,
+          "e": 94
+        },
+        {
+          "w": "this:",
+          "s": 94,
+          "e": 103
+        },
+        {
+          "w": "reading",
+          "s": 114,
+          "e": 130
+        },
+        {
+          "w": "tokens",
+          "s": 130,
+          "e": 140
+        },
+        {
+          "w": "is",
+          "s": 140,
+          "e": 149
+        },
+        {
+          "w": "parallel",
+          "s": 149,
+          "e": 160
+        },
+        {
+          "w": "math,",
+          "s": 160,
+          "e": 170
+        },
+        {
+          "w": "bounded",
+          "s": 178,
+          "e": 189
+        },
+        {
+          "w": "by",
+          "s": 189,
+          "e": 196
+        },
+        {
+          "w": "compute;",
+          "s": 196,
+          "e": 205
+        },
+        {
+          "w": "writing",
+          "s": 214,
+          "e": 227
+        },
+        {
+          "w": "tokens",
+          "s": 227,
+          "e": 239
+        },
+        {
+          "w": "is",
+          "s": 239,
+          "e": 247
+        },
+        {
+          "w": "serial",
+          "s": 247,
+          "e": 254
+        },
+        {
+          "w": "memory",
+          "s": 254,
+          "e": 262
+        },
+        {
+          "w": "traffic,",
+          "s": 262,
+          "e": 273
+        },
+        {
+          "w": "bounded",
+          "s": 280,
+          "e": 291
+        },
+        {
+          "w": "by",
+          "s": 291,
+          "e": 297
+        },
+        {
+          "w": "bandwidth.",
+          "s": 297,
+          "e": 307
+        },
+        {
+          "w": "Next",
+          "s": 322,
+          "e": 338
+        },
+        {
+          "w": "time",
+          "s": 338,
+          "e": 344
+        },
+        {
+          "w": "you",
+          "s": 344,
+          "e": 348
+        },
+        {
+          "w": "see",
+          "s": 348,
+          "e": 352
+        },
+        {
+          "w": "a",
+          "s": 352,
+          "e": 356
+        },
+        {
+          "w": "five-times",
+          "s": 356,
+          "e": 366
+        },
+        {
+          "w": "output",
+          "s": 366,
+          "e": 377
+        },
+        {
+          "w": "price",
+          "s": 377,
+          "e": 387
+        },
+        {
+          "w": "on",
+          "s": 387,
+          "e": 392
+        },
+        {
+          "w": "an",
+          "s": 392,
+          "e": 396
+        },
+        {
+          "w": "API",
+          "s": 396,
+          "e": 403
+        },
+        {
+          "w": "page,",
+          "s": 403,
+          "e": 415
+        },
+        {
+          "w": "you",
+          "s": 421,
+          "e": 425
+        },
+        {
+          "w": "are",
+          "s": 425,
+          "e": 428
+        },
+        {
+          "w": "not",
+          "s": 428,
+          "e": 433
+        },
+        {
+          "w": "seeing",
+          "s": 433,
+          "e": 442
+        },
+        {
+          "w": "markup.",
+          "s": 442,
+          "e": 454
+        },
+        {
+          "w": "You",
+          "s": 460,
+          "e": 475
+        },
+        {
+          "w": "are",
+          "s": 475,
+          "e": 477
+        },
+        {
+          "w": "seeing",
+          "s": 477,
+          "e": 484
+        },
+        {
+          "w": "the",
+          "s": 484,
+          "e": 489
+        },
+        {
+          "w": "physics",
+          "s": 489,
+          "e": 496
+        },
+        {
+          "w": "of",
+          "s": 496,
+          "e": 503
+        },
+        {
+          "w": "streaming",
+          "s": 503,
+          "e": 511
+        },
+        {
+          "w": "gigabytes",
+          "s": 511,
+          "e": 522
+        },
+        {
+          "w": "across",
+          "s": 522,
+          "e": 534
+        },
+        {
+          "w": "silicon",
+          "s": 534,
+          "e": 547
+        },
+        {
+          "w": "just",
+          "s": 553,
+          "e": 560
+        },
+        {
+          "w": "to",
+          "s": 560,
+          "e": 564
+        },
+        {
+          "w": "pick",
+          "s": 564,
+          "e": 569
+        },
+        {
+          "w": "the",
+          "s": 569,
+          "e": 573
+        },
+        {
+          "w": "next",
+          "s": 573,
+          "e": 577
+        },
+        {
+          "w": "word.",
+          "s": 577,
+          "e": 586
+        }
+      ]
     }
   ]
 }

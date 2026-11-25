@@ -1,0 +1,494 @@
+{
+  "audio": "004.every-llm-request.mp3",
+  "paragraph": 4,
+  "text": "Every LLM request splits into two phases. First comes prefill, where the model digests your entire prompt to emit the very first token, setting your Time to First Token. Then comes decode, where it streams the rest of the answer token by token.",
+  "transcript": "Every LLM request splits into two phases. First comes Prefill, where the model digests your entire prompt to emit the very first token, setting your time to first token. Then comes Decode, where it streams the rest of the answer token by token.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 13.88,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Every",
+      "start": 0.0,
+      "end": 0.38,
+      "match": "exact"
+    },
+    {
+      "word": "LLM",
+      "start": 0.38,
+      "end": 0.92,
+      "match": "exact"
+    },
+    {
+      "word": "request",
+      "start": 0.92,
+      "end": 1.16,
+      "match": "exact"
+    },
+    {
+      "word": "splits",
+      "start": 1.16,
+      "end": 1.66,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 1.66,
+      "end": 1.9,
+      "match": "exact"
+    },
+    {
+      "word": "two",
+      "start": 1.9,
+      "end": 2.1,
+      "match": "exact"
+    },
+    {
+      "word": "phases.",
+      "start": 2.1,
+      "end": 2.4,
+      "match": "exact"
+    },
+    {
+      "word": "First",
+      "start": 2.8,
+      "end": 3.28,
+      "match": "exact"
+    },
+    {
+      "word": "comes",
+      "start": 3.28,
+      "end": 3.64,
+      "match": "exact"
+    },
+    {
+      "word": "prefill,",
+      "start": 3.64,
+      "end": 4.14,
+      "match": "exact"
+    },
+    {
+      "word": "where",
+      "start": 4.28,
+      "end": 4.64,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 4.64,
+      "end": 4.78,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 4.78,
+      "end": 4.96,
+      "match": "exact"
+    },
+    {
+      "word": "digests",
+      "start": 4.96,
+      "end": 5.48,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 5.48,
+      "end": 5.62,
+      "match": "exact"
+    },
+    {
+      "word": "entire",
+      "start": 5.62,
+      "end": 5.84,
+      "match": "exact"
+    },
+    {
+      "word": "prompt",
+      "start": 5.84,
+      "end": 6.36,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 6.36,
+      "end": 6.58,
+      "match": "exact"
+    },
+    {
+      "word": "emit",
+      "start": 6.58,
+      "end": 6.74,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 6.74,
+      "end": 6.94,
+      "match": "exact"
+    },
+    {
+      "word": "very",
+      "start": 6.94,
+      "end": 7.1,
+      "match": "exact"
+    },
+    {
+      "word": "first",
+      "start": 7.1,
+      "end": 7.38,
+      "match": "exact"
+    },
+    {
+      "word": "token,",
+      "start": 7.38,
+      "end": 7.68,
+      "match": "exact"
+    },
+    {
+      "word": "setting",
+      "start": 7.86,
+      "end": 8.26,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 8.26,
+      "end": 8.4,
+      "match": "exact"
+    },
+    {
+      "word": "Time",
+      "start": 8.4,
+      "end": 8.6,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 8.6,
+      "end": 8.74,
+      "match": "exact"
+    },
+    {
+      "word": "First",
+      "start": 8.74,
+      "end": 8.94,
+      "match": "exact"
+    },
+    {
+      "word": "Token.",
+      "start": 8.94,
+      "end": 9.2,
+      "match": "exact"
+    },
+    {
+      "word": "Then",
+      "start": 9.58,
+      "end": 10.06,
+      "match": "exact"
+    },
+    {
+      "word": "comes",
+      "start": 10.06,
+      "end": 10.4,
+      "match": "exact"
+    },
+    {
+      "word": "decode,",
+      "start": 10.4,
+      "end": 10.9,
+      "match": "exact"
+    },
+    {
+      "word": "where",
+      "start": 11.02,
+      "end": 11.32,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 11.32,
+      "end": 11.4,
+      "match": "exact"
+    },
+    {
+      "word": "streams",
+      "start": 11.4,
+      "end": 11.64,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 11.64,
+      "end": 11.86,
+      "match": "exact"
+    },
+    {
+      "word": "rest",
+      "start": 11.86,
+      "end": 12.08,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 12.08,
+      "end": 12.26,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 12.26,
+      "end": 12.3,
+      "match": "exact"
+    },
+    {
+      "word": "answer",
+      "start": 12.3,
+      "end": 12.58,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 12.58,
+      "end": 12.9,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 12.9,
+      "end": 13.1,
+      "match": "exact"
+    },
+    {
+      "word": "token.",
+      "start": 13.1,
+      "end": 13.38,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Every",
+      "start": 0.0,
+      "end": 0.38
+    },
+    {
+      "word": "LLM",
+      "start": 0.38,
+      "end": 0.92
+    },
+    {
+      "word": "request",
+      "start": 0.92,
+      "end": 1.16
+    },
+    {
+      "word": "splits",
+      "start": 1.16,
+      "end": 1.66
+    },
+    {
+      "word": "into",
+      "start": 1.66,
+      "end": 1.9
+    },
+    {
+      "word": "two",
+      "start": 1.9,
+      "end": 2.1
+    },
+    {
+      "word": "phases.",
+      "start": 2.1,
+      "end": 2.4
+    },
+    {
+      "word": "First",
+      "start": 2.8,
+      "end": 3.28
+    },
+    {
+      "word": "comes",
+      "start": 3.28,
+      "end": 3.64
+    },
+    {
+      "word": "Prefill,",
+      "start": 3.64,
+      "end": 4.14
+    },
+    {
+      "word": "where",
+      "start": 4.28,
+      "end": 4.64
+    },
+    {
+      "word": "the",
+      "start": 4.64,
+      "end": 4.78
+    },
+    {
+      "word": "model",
+      "start": 4.78,
+      "end": 4.96
+    },
+    {
+      "word": "digests",
+      "start": 4.96,
+      "end": 5.48
+    },
+    {
+      "word": "your",
+      "start": 5.48,
+      "end": 5.62
+    },
+    {
+      "word": "entire",
+      "start": 5.62,
+      "end": 5.84
+    },
+    {
+      "word": "prompt",
+      "start": 5.84,
+      "end": 6.36
+    },
+    {
+      "word": "to",
+      "start": 6.36,
+      "end": 6.58
+    },
+    {
+      "word": "emit",
+      "start": 6.58,
+      "end": 6.74
+    },
+    {
+      "word": "the",
+      "start": 6.74,
+      "end": 6.94
+    },
+    {
+      "word": "very",
+      "start": 6.94,
+      "end": 7.1
+    },
+    {
+      "word": "first",
+      "start": 7.1,
+      "end": 7.38
+    },
+    {
+      "word": "token,",
+      "start": 7.38,
+      "end": 7.68
+    },
+    {
+      "word": "setting",
+      "start": 7.86,
+      "end": 8.26
+    },
+    {
+      "word": "your",
+      "start": 8.26,
+      "end": 8.4
+    },
+    {
+      "word": "time",
+      "start": 8.4,
+      "end": 8.6
+    },
+    {
+      "word": "to",
+      "start": 8.6,
+      "end": 8.74
+    },
+    {
+      "word": "first",
+      "start": 8.74,
+      "end": 8.94
+    },
+    {
+      "word": "token.",
+      "start": 8.94,
+      "end": 9.2
+    },
+    {
+      "word": "Then",
+      "start": 9.58,
+      "end": 10.06
+    },
+    {
+      "word": "comes",
+      "start": 10.06,
+      "end": 10.4
+    },
+    {
+      "word": "Decode,",
+      "start": 10.4,
+      "end": 10.9
+    },
+    {
+      "word": "where",
+      "start": 11.02,
+      "end": 11.32
+    },
+    {
+      "word": "it",
+      "start": 11.32,
+      "end": 11.4
+    },
+    {
+      "word": "streams",
+      "start": 11.4,
+      "end": 11.64
+    },
+    {
+      "word": "the",
+      "start": 11.64,
+      "end": 11.86
+    },
+    {
+      "word": "rest",
+      "start": 11.86,
+      "end": 12.08
+    },
+    {
+      "word": "of",
+      "start": 12.08,
+      "end": 12.26
+    },
+    {
+      "word": "the",
+      "start": 12.26,
+      "end": 12.3
+    },
+    {
+      "word": "answer",
+      "start": 12.3,
+      "end": 12.58
+    },
+    {
+      "word": "token",
+      "start": 12.58,
+      "end": 12.9
+    },
+    {
+      "word": "by",
+      "start": 12.9,
+      "end": 13.1
+    },
+    {
+      "word": "token.",
+      "start": 13.1,
+      "end": 13.38
+    }
+  ]
+}

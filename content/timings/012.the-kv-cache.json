@@ -1,0 +1,582 @@
+{
+  "audio": "012.the-kv-cache.mp3",
+  "paragraph": 12,
+  "text": "The KV cache eliminates redundant math, but adds a second tax. Every output token appends another slice to VRAM, so the cache grows linearly with length. Worse, on every decode step, the GPU must read both the model weights and that growing KV cache across the exact same HBM bandwidth pipe.",
+  "transcript": "The KV cache eliminates redundant math, but adds a second tax. Every output token appends another slice to VRAM, so the cache grows linearly with length. Worse, on every decode step, the GPU must read both the model weights and that growing KV cache across the exact same HBM bandwidth pipe.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 16.52,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.24,
+      "match": "exact"
+    },
+    {
+      "word": "KV",
+      "start": 0.24,
+      "end": 0.52,
+      "match": "exact"
+    },
+    {
+      "word": "cache",
+      "start": 0.52,
+      "end": 0.72,
+      "match": "exact"
+    },
+    {
+      "word": "eliminates",
+      "start": 0.72,
+      "end": 1.1,
+      "match": "exact"
+    },
+    {
+      "word": "redundant",
+      "start": 1.1,
+      "end": 1.58,
+      "match": "exact"
+    },
+    {
+      "word": "math,",
+      "start": 1.58,
+      "end": 1.98,
+      "match": "exact"
+    },
+    {
+      "word": "but",
+      "start": 2.18,
+      "end": 2.4,
+      "match": "exact"
+    },
+    {
+      "word": "adds",
+      "start": 2.4,
+      "end": 2.6,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 2.6,
+      "end": 2.76,
+      "match": "exact"
+    },
+    {
+      "word": "second",
+      "start": 2.76,
+      "end": 3.0,
+      "match": "exact"
+    },
+    {
+      "word": "tax.",
+      "start": 3.0,
+      "end": 3.26,
+      "match": "exact"
+    },
+    {
+      "word": "Every",
+      "start": 3.58,
+      "end": 4.12,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 4.12,
+      "end": 4.42,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 4.42,
+      "end": 4.74,
+      "match": "exact"
+    },
+    {
+      "word": "appends",
+      "start": 4.74,
+      "end": 5.14,
+      "match": "exact"
+    },
+    {
+      "word": "another",
+      "start": 5.14,
+      "end": 5.36,
+      "match": "exact"
+    },
+    {
+      "word": "slice",
+      "start": 5.36,
+      "end": 5.72,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 5.72,
+      "end": 5.94,
+      "match": "exact"
+    },
+    {
+      "word": "VRAM,",
+      "start": 5.94,
+      "end": 6.38,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 6.4,
+      "end": 6.58,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 6.58,
+      "end": 6.7,
+      "match": "exact"
+    },
+    {
+      "word": "cache",
+      "start": 6.7,
+      "end": 6.86,
+      "match": "exact"
+    },
+    {
+      "word": "grows",
+      "start": 6.86,
+      "end": 7.12,
+      "match": "exact"
+    },
+    {
+      "word": "linearly",
+      "start": 7.12,
+      "end": 7.5,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 7.5,
+      "end": 7.82,
+      "match": "exact"
+    },
+    {
+      "word": "length.",
+      "start": 7.82,
+      "end": 8.1,
+      "match": "exact"
+    },
+    {
+      "word": "Worse,",
+      "start": 8.34,
+      "end": 8.88,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 8.96,
+      "end": 9.12,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 9.12,
+      "end": 9.42,
+      "match": "exact"
+    },
+    {
+      "word": "decode",
+      "start": 9.42,
+      "end": 9.84,
+      "match": "exact"
+    },
+    {
+      "word": "step,",
+      "start": 9.84,
+      "end": 10.02,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 10.26,
+      "end": 10.48,
+      "match": "exact"
+    },
+    {
+      "word": "GPU",
+      "start": 10.48,
+      "end": 10.78,
+      "match": "exact"
+    },
+    {
+      "word": "must",
+      "start": 10.78,
+      "end": 11.08,
+      "match": "exact"
+    },
+    {
+      "word": "read",
+      "start": 11.08,
+      "end": 11.38,
+      "match": "exact"
+    },
+    {
+      "word": "both",
+      "start": 11.38,
+      "end": 11.58,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 11.58,
+      "end": 11.7,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 11.7,
+      "end": 11.92,
+      "match": "exact"
+    },
+    {
+      "word": "weights",
+      "start": 11.92,
+      "end": 12.2,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 12.2,
+      "end": 12.5,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 12.5,
+      "end": 12.72,
+      "match": "exact"
+    },
+    {
+      "word": "growing",
+      "start": 12.72,
+      "end": 13.04,
+      "match": "exact"
+    },
+    {
+      "word": "KV",
+      "start": 13.04,
+      "end": 13.48,
+      "match": "exact"
+    },
+    {
+      "word": "cache",
+      "start": 13.48,
+      "end": 13.7,
+      "match": "exact"
+    },
+    {
+      "word": "across",
+      "start": 13.7,
+      "end": 14.08,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 14.08,
+      "end": 14.28,
+      "match": "exact"
+    },
+    {
+      "word": "exact",
+      "start": 14.28,
+      "end": 14.58,
+      "match": "exact"
+    },
+    {
+      "word": "same",
+      "start": 14.58,
+      "end": 14.98,
+      "match": "exact"
+    },
+    {
+      "word": "HBM",
+      "start": 14.98,
+      "end": 15.48,
+      "match": "exact"
+    },
+    {
+      "word": "bandwidth",
+      "start": 15.48,
+      "end": 15.8,
+      "match": "exact"
+    },
+    {
+      "word": "pipe.",
+      "start": 15.8,
+      "end": 16.08,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.24
+    },
+    {
+      "word": "KV",
+      "start": 0.24,
+      "end": 0.52
+    },
+    {
+      "word": "cache",
+      "start": 0.52,
+      "end": 0.72
+    },
+    {
+      "word": "eliminates",
+      "start": 0.72,
+      "end": 1.1
+    },
+    {
+      "word": "redundant",
+      "start": 1.1,
+      "end": 1.58
+    },
+    {
+      "word": "math,",
+      "start": 1.58,
+      "end": 1.98
+    },
+    {
+      "word": "but",
+      "start": 2.18,
+      "end": 2.4
+    },
+    {
+      "word": "adds",
+      "start": 2.4,
+      "end": 2.6
+    },
+    {
+      "word": "a",
+      "start": 2.6,
+      "end": 2.76
+    },
+    {
+      "word": "second",
+      "start": 2.76,
+      "end": 3.0
+    },
+    {
+      "word": "tax.",
+      "start": 3.0,
+      "end": 3.26
+    },
+    {
+      "word": "Every",
+      "start": 3.58,
+      "end": 4.12
+    },
+    {
+      "word": "output",
+      "start": 4.12,
+      "end": 4.42
+    },
+    {
+      "word": "token",
+      "start": 4.42,
+      "end": 4.74
+    },
+    {
+      "word": "appends",
+      "start": 4.74,
+      "end": 5.14
+    },
+    {
+      "word": "another",
+      "start": 5.14,
+      "end": 5.36
+    },
+    {
+      "word": "slice",
+      "start": 5.36,
+      "end": 5.72
+    },
+    {
+      "word": "to",
+      "start": 5.72,
+      "end": 5.94
+    },
+    {
+      "word": "VRAM,",
+      "start": 5.94,
+      "end": 6.38
+    },
+    {
+      "word": "so",
+      "start": 6.4,
+      "end": 6.58
+    },
+    {
+      "word": "the",
+      "start": 6.58,
+      "end": 6.7
+    },
+    {
+      "word": "cache",
+      "start": 6.7,
+      "end": 6.86
+    },
+    {
+      "word": "grows",
+      "start": 6.86,
+      "end": 7.12
+    },
+    {
+      "word": "linearly",
+      "start": 7.12,
+      "end": 7.5
+    },
+    {
+      "word": "with",
+      "start": 7.5,
+      "end": 7.82
+    },
+    {
+      "word": "length.",
+      "start": 7.82,
+      "end": 8.1
+    },
+    {
+      "word": "Worse,",
+      "start": 8.34,
+      "end": 8.88
+    },
+    {
+      "word": "on",
+      "start": 8.96,
+      "end": 9.12
+    },
+    {
+      "word": "every",
+      "start": 9.12,
+      "end": 9.42
+    },
+    {
+      "word": "decode",
+      "start": 9.42,
+      "end": 9.84
+    },
+    {
+      "word": "step,",
+      "start": 9.84,
+      "end": 10.02
+    },
+    {
+      "word": "the",
+      "start": 10.26,
+      "end": 10.48
+    },
+    {
+      "word": "GPU",
+      "start": 10.48,
+      "end": 10.78
+    },
+    {
+      "word": "must",
+      "start": 10.78,
+      "end": 11.08
+    },
+    {
+      "word": "read",
+      "start": 11.08,
+      "end": 11.38
+    },
+    {
+      "word": "both",
+      "start": 11.38,
+      "end": 11.58
+    },
+    {
+      "word": "the",
+      "start": 11.58,
+      "end": 11.7
+    },
+    {
+      "word": "model",
+      "start": 11.7,
+      "end": 11.92
+    },
+    {
+      "word": "weights",
+      "start": 11.92,
+      "end": 12.2
+    },
+    {
+      "word": "and",
+      "start": 12.2,
+      "end": 12.5
+    },
+    {
+      "word": "that",
+      "start": 12.5,
+      "end": 12.72
+    },
+    {
+      "word": "growing",
+      "start": 12.72,
+      "end": 13.04
+    },
+    {
+      "word": "KV",
+      "start": 13.04,
+      "end": 13.48
+    },
+    {
+      "word": "cache",
+      "start": 13.48,
+      "end": 13.7
+    },
+    {
+      "word": "across",
+      "start": 13.7,
+      "end": 14.08
+    },
+    {
+      "word": "the",
+      "start": 14.08,
+      "end": 14.28
+    },
+    {
+      "word": "exact",
+      "start": 14.28,
+      "end": 14.58
+    },
+    {
+      "word": "same",
+      "start": 14.58,
+      "end": 14.98
+    },
+    {
+      "word": "HBM",
+      "start": 14.98,
+      "end": 15.48
+    },
+    {
+      "word": "bandwidth",
+      "start": 15.48,
+      "end": 15.8
+    },
+    {
+      "word": "pipe.",
+      "start": 15.8,
+      "end": 16.08
+    }
+  ]
+}

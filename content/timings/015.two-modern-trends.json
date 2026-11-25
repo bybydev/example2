@@ -1,0 +1,591 @@
+{
+  "audio": "015.two-modern-trends.mp3",
+  "paragraph": 15,
+  "text": "Two modern trends are widening this gap even further. First is prompt caching. System prompts, tool schemas, and codebase files repeat across calls, so servers reuse their precomputed KV cache and discount cached inputs up to ninety percent. Output tokens are freshly generated every time and can never be cached.",
+  "transcript": "Two modern trends are widening this gap even further. First is prompt caching. System prompts, tool schemas, and codebase files repeat across calls, so servers reuse their precomputed KB cache and discount cached inputs up to 90%. Output tokens are freshly generated every time and can never be cached.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 3
+    }
+  ],
+  "duration": 17.24,
+  "failed_words": 3,
+  "failures": [
+    {
+      "index": 28,
+      "word": "KV",
+      "match": "approx",
+      "heard": "KB",
+      "start": 10.08
+    },
+    {
+      "index": 36,
+      "word": "ninety",
+      "match": "approx",
+      "heard": "90%.",
+      "start": 12.26
+    },
+    {
+      "index": 37,
+      "word": "percent.",
+      "match": "approx",
+      "heard": "90%.",
+      "start": 12.537
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Two",
+      "start": 0.0,
+      "end": 0.28,
+      "match": "exact"
+    },
+    {
+      "word": "modern",
+      "start": 0.28,
+      "end": 0.52,
+      "match": "exact"
+    },
+    {
+      "word": "trends",
+      "start": 0.52,
+      "end": 0.84,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 0.84,
+      "end": 1.0,
+      "match": "exact"
+    },
+    {
+      "word": "widening",
+      "start": 1.0,
+      "end": 1.36,
+      "match": "exact"
+    },
+    {
+      "word": "this",
+      "start": 1.36,
+      "end": 1.48,
+      "match": "exact"
+    },
+    {
+      "word": "gap",
+      "start": 1.48,
+      "end": 1.68,
+      "match": "exact"
+    },
+    {
+      "word": "even",
+      "start": 1.68,
+      "end": 1.9,
+      "match": "exact"
+    },
+    {
+      "word": "further.",
+      "start": 1.9,
+      "end": 2.22,
+      "match": "exact"
+    },
+    {
+      "word": "First",
+      "start": 2.54,
+      "end": 3.1,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 3.1,
+      "end": 3.36,
+      "match": "exact"
+    },
+    {
+      "word": "prompt",
+      "start": 3.36,
+      "end": 3.6,
+      "match": "exact"
+    },
+    {
+      "word": "caching.",
+      "start": 3.6,
+      "end": 3.98,
+      "match": "exact"
+    },
+    {
+      "word": "System",
+      "start": 4.16,
+      "end": 4.66,
+      "match": "exact"
+    },
+    {
+      "word": "prompts,",
+      "start": 4.66,
+      "end": 4.94,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 5.2,
+      "end": 5.6,
+      "match": "exact"
+    },
+    {
+      "word": "schemas,",
+      "start": 5.6,
+      "end": 6.14,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 6.16,
+      "end": 6.3,
+      "match": "exact"
+    },
+    {
+      "word": "codebase",
+      "start": 6.3,
+      "end": 6.64,
+      "match": "exact"
+    },
+    {
+      "word": "files",
+      "start": 6.64,
+      "end": 6.92,
+      "match": "exact"
+    },
+    {
+      "word": "repeat",
+      "start": 6.92,
+      "end": 7.26,
+      "match": "exact"
+    },
+    {
+      "word": "across",
+      "start": 7.26,
+      "end": 7.54,
+      "match": "exact"
+    },
+    {
+      "word": "calls,",
+      "start": 7.54,
+      "end": 7.96,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 8.16,
+      "end": 8.56,
+      "match": "exact"
+    },
+    {
+      "word": "servers",
+      "start": 8.56,
+      "end": 8.9,
+      "match": "exact"
+    },
+    {
+      "word": "reuse",
+      "start": 8.9,
+      "end": 9.24,
+      "match": "exact"
+    },
+    {
+      "word": "their",
+      "start": 9.24,
+      "end": 9.52,
+      "match": "exact"
+    },
+    {
+      "word": "precomputed",
+      "start": 9.52,
+      "end": 10.08,
+      "match": "exact"
+    },
+    {
+      "word": "KV",
+      "start": 10.08,
+      "end": 10.3,
+      "match": "approx",
+      "heard": "KB"
+    },
+    {
+      "word": "cache",
+      "start": 10.3,
+      "end": 10.6,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 10.6,
+      "end": 10.9,
+      "match": "exact"
+    },
+    {
+      "word": "discount",
+      "start": 10.9,
+      "end": 11.18,
+      "match": "exact"
+    },
+    {
+      "word": "cached",
+      "start": 11.18,
+      "end": 11.64,
+      "match": "exact"
+    },
+    {
+      "word": "inputs",
+      "start": 11.64,
+      "end": 11.86,
+      "match": "exact"
+    },
+    {
+      "word": "up",
+      "start": 11.86,
+      "end": 12.18,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 12.18,
+      "end": 12.26,
+      "match": "exact"
+    },
+    {
+      "word": "ninety",
+      "start": 12.26,
+      "end": 12.537,
+      "match": "approx",
+      "heard": "90%."
+    },
+    {
+      "word": "percent.",
+      "start": 12.537,
+      "end": 12.86,
+      "match": "approx",
+      "heard": "90%."
+    },
+    {
+      "word": "Output",
+      "start": 13.5,
+      "end": 14.06,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 14.06,
+      "end": 14.34,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 14.34,
+      "end": 14.58,
+      "match": "exact"
+    },
+    {
+      "word": "freshly",
+      "start": 14.58,
+      "end": 14.8,
+      "match": "exact"
+    },
+    {
+      "word": "generated",
+      "start": 14.8,
+      "end": 15.22,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 15.22,
+      "end": 15.58,
+      "match": "exact"
+    },
+    {
+      "word": "time",
+      "start": 15.58,
+      "end": 15.92,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 15.92,
+      "end": 16.06,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 16.06,
+      "end": 16.16,
+      "match": "exact"
+    },
+    {
+      "word": "never",
+      "start": 16.16,
+      "end": 16.36,
+      "match": "exact"
+    },
+    {
+      "word": "be",
+      "start": 16.36,
+      "end": 16.5,
+      "match": "exact"
+    },
+    {
+      "word": "cached.",
+      "start": 16.5,
+      "end": 16.9,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Two",
+      "start": 0.0,
+      "end": 0.28
+    },
+    {
+      "word": "modern",
+      "start": 0.28,
+      "end": 0.52
+    },
+    {
+      "word": "trends",
+      "start": 0.52,
+      "end": 0.84
+    },
+    {
+      "word": "are",
+      "start": 0.84,
+      "end": 1.0
+    },
+    {
+      "word": "widening",
+      "start": 1.0,
+      "end": 1.36
+    },
+    {
+      "word": "this",
+      "start": 1.36,
+      "end": 1.48
+    },
+    {
+      "word": "gap",
+      "start": 1.48,
+      "end": 1.68
+    },
+    {
+      "word": "even",
+      "start": 1.68,
+      "end": 1.9
+    },
+    {
+      "word": "further.",
+      "start": 1.9,
+      "end": 2.22
+    },
+    {
+      "word": "First",
+      "start": 2.54,
+      "end": 3.1
+    },
+    {
+      "word": "is",
+      "start": 3.1,
+      "end": 3.36
+    },
+    {
+      "word": "prompt",
+      "start": 3.36,
+      "end": 3.6
+    },
+    {
+      "word": "caching.",
+      "start": 3.6,
+      "end": 3.98
+    },
+    {
+      "word": "System",
+      "start": 4.16,
+      "end": 4.66
+    },
+    {
+      "word": "prompts,",
+      "start": 4.66,
+      "end": 4.94
+    },
+    {
+      "word": "tool",
+      "start": 5.2,
+      "end": 5.6
+    },
+    {
+      "word": "schemas,",
+      "start": 5.6,
+      "end": 6.14
+    },
+    {
+      "word": "and",
+      "start": 6.16,
+      "end": 6.3
+    },
+    {
+      "word": "codebase",
+      "start": 6.3,
+      "end": 6.64
+    },
+    {
+      "word": "files",
+      "start": 6.64,
+      "end": 6.92
+    },
+    {
+      "word": "repeat",
+      "start": 6.92,
+      "end": 7.26
+    },
+    {
+      "word": "across",
+      "start": 7.26,
+      "end": 7.54
+    },
+    {
+      "word": "calls,",
+      "start": 7.54,
+      "end": 7.96
+    },
+    {
+      "word": "so",
+      "start": 8.16,
+      "end": 8.56
+    },
+    {
+      "word": "servers",
+      "start": 8.56,
+      "end": 8.9
+    },
+    {
+      "word": "reuse",
+      "start": 8.9,
+      "end": 9.24
+    },
+    {
+      "word": "their",
+      "start": 9.24,
+      "end": 9.52
+    },
+    {
+      "word": "precomputed",
+      "start": 9.52,
+      "end": 10.08
+    },
+    {
+      "word": "KB",
+      "start": 10.08,
+      "end": 10.3
+    },
+    {
+      "word": "cache",
+      "start": 10.3,
+      "end": 10.6
+    },
+    {
+      "word": "and",
+      "start": 10.6,
+      "end": 10.9
+    },
+    {
+      "word": "discount",
+      "start": 10.9,
+      "end": 11.18
+    },
+    {
+      "word": "cached",
+      "start": 11.18,
+      "end": 11.64
+    },
+    {
+      "word": "inputs",
+      "start": 11.64,
+      "end": 11.86
+    },
+    {
+      "word": "up",
+      "start": 11.86,
+      "end": 12.18
+    },
+    {
+      "word": "to",
+      "start": 12.18,
+      "end": 12.26
+    },
+    {
+      "word": "90%.",
+      "start": 12.26,
+      "end": 12.86
+    },
+    {
+      "word": "Output",
+      "start": 13.5,
+      "end": 14.06
+    },
+    {
+      "word": "tokens",
+      "start": 14.06,
+      "end": 14.34
+    },
+    {
+      "word": "are",
+      "start": 14.34,
+      "end": 14.58
+    },
+    {
+      "word": "freshly",
+      "start": 14.58,
+      "end": 14.8
+    },
+    {
+      "word": "generated",
+      "start": 14.8,
+      "end": 15.22
+    },
+    {
+      "word": "every",
+      "start": 15.22,
+      "end": 15.58
+    },
+    {
+      "word": "time",
+      "start": 15.58,
+      "end": 15.92
+    },
+    {
+      "word": "and",
+      "start": 15.92,
+      "end": 16.06
+    },
+    {
+      "word": "can",
+      "start": 16.06,
+      "end": 16.16
+    },
+    {
+      "word": "never",
+      "start": 16.16,
+      "end": 16.36
+    },
+    {
+      "word": "be",
+      "start": 16.36,
+      "end": 16.5
+    },
+    {
+      "word": "cached.",
+      "start": 16.5,
+      "end": 16.9
+    }
+  ]
+}

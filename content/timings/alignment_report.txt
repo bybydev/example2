@@ -1,0 +1,65 @@
+RESULT: FAILED
+Words: 1203   Failed: 53 (4.41%)   Limit: 40 total, 25% per file
+  ! total failed words 53 > limit 40
+
+001.open-any-ai.mp3: 5/48 failed   [large-v3 (5 failed) -> medium.en (7 failed)]
+    word #17 "dollars" @ 5.98s: not heard (timing estimated)
+    word #25 "dollars." @ 8.54s: not heard (timing estimated)
+    word #29 "five-times" @ 9.66s: heard "five times"
+    word #39 "thirty" @ 13.24s: heard "30"
+    word #45 "fifty" @ 15.16s: heard "50"
+002.at-first-glance.mp3: 0/46 failed   [large-v3 (0 failed)]
+003.the-answer-is.mp3: 0/44 failed   [large-v3 (0 failed)]
+004.every-llm-request.mp3: 0/43 failed   [large-v3 (0 failed)]
+005.during-prefill-your.mp3: 0/46 failed   [large-v3 (0 failed)]
+006.decode-works-the.mp3: 3/47 failed   [large-v3 (3 failed)]
+    word #32 "ninety-nine" @ 11.00s: heard "99"
+    words #45-46 (2) "one hundred." @ 14.42s: heard "100."
+007.to-see-why.mp3: 0/56 failed   [large-v3 (0 failed)]
+008.during-prefill-the.mp3: 0/50 failed   [large-v3 (0 failed)]
+009.during-decode-you.mp3: 4/61 failed   [large-v3 (4 failed)]
+    words #27-29 (3) "a hundred gigabytes," @ 8.56s: heard "100 GB,"
+    word #53 "eighteen-wheeler" @ 16.68s: heard "18 -wheeler"
+010.put-the-utilization.mp3: 8/51 failed   [large-v3 (10 failed) -> medium.en (8 failed)]
+    words #20-21 (2) "eighty percent." @ 6.14s: heard "80%."
+    words #35-37 (3) "one hundred percent" @ 10.26s: heard "100"
+    words #39-40 (2) "ninety-five percent" @ 11.06s: heard "95"
+    word #43 "GPU's" @ 11.92s: heard "GPUs"
+011.and-the-memory.mp3: 2/54 failed   [large-v3 (2 failed)]
+    word #49 "VRAM," @ 14.84s: heard "BRAM,"
+    word #52 "KV" @ 15.78s: heard "KB"
+012.the-kv-cache.mp3: 0/51 failed   [large-v3 (0 failed)]
+013.you-might-ask.mp3: 8/50 failed   [large-v3 (8 failed) -> medium.en (9 failed)]
+    words #6-7 (2) "a hundred" @ 1.74s: heard "100"
+    word #13 "read" @ 3.44s: heard "red"
+    words #15-16 (2) "a hundred" @ 3.90s: heard "100"
+    words #29-31 (3) "a hundred KV" @ 9.42s: heard "100k V"
+014.zoom-out-and.mp3: 0/49 failed   [large-v3 (0 failed)]
+015.two-modern-trends.mp3: 3/50 failed   [large-v3 (3 failed)]
+    word #28 "KV" @ 10.08s: heard "KB"
+    words #36-37 (2) "ninety percent." @ 12.26s: heard "90%."
+016.the-second-multiplier.mp3: 3/49 failed   [large-v3 (3 failed)]
+    word #18 "two-sentence" @ 5.36s: heard "two -sentence"
+    word #41 "HBM" @ 13.48s: heard "HBN"
+    word #44 "billed" @ 14.74s: heard "build"
+017.look-at-a.mp3: 6/47 failed   [large-v3 (6 failed) -> medium.en (6 failed)]
+    words #12-13 (2) "Ninety-three percent" @ 2.98s: heard "93"
+    word #20 "cached" @ 5.10s: heard "cashed"
+    word #33 "percent" @ 9.38s: not heard (timing estimated)
+    words #41-42 (2) "seventy-five percent" @ 11.20s: heard "75"
+018.without-clever-engineering.mp3: 1/61 failed   [large-v3 (1 failed)]
+    word #9 "fifty" @ 2.96s: heard "50"
+019.another-breakthrough-is.mp3: 0/49 failed   [large-v3 (0 failed)]
+020.at-the-serving.mp3: 4/45 failed   [large-v3 (4 failed)]
+    word #4 "PagedAttention" @ 1.04s: heard "Page Detention"
+    words #29-30 (2) "compute-heavy prefill" @ 11.58s: heard "compute -heavy pre -filled"
+    word #42 "users" @ 16.64s: heard "users'"
+021.understanding-this-hardware.mp3: 2/50 failed   [large-v3 (2 failed)]
+    word #40 "twelve-line" @ 12.84s: heard "12 -line"
+    word #48 "four-hundred-line" @ 15.02s: heard "400 -line"
+022.second-protect-your.mp3: 0/52 failed   [large-v3 (0 failed)]
+023.combine-those-three.mp3: 3/43 failed   [large-v3 (3 failed)]
+    word #30 "fifty" @ 10.56s: heard "50"
+    words #32-33 (2) "eighty percent" @ 10.98s: heard "80"
+024.if-you-remember.mp3: 1/61 failed   [large-v3 (1 failed)]
+    word #33 "five-times" @ 11.58s: heard "5x"

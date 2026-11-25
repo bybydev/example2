@@ -1,0 +1,527 @@
+{
+  "audio": "002.at-first-glance.mp3",
+  "paragraph": 2,
+  "text": "At first glance, that feels backwards. Input and output tokens are both just numbers flowing through the exact same Transformer neural network and the exact same weights. One token in, one token out. So why does generating a token cost five times more than reading one?",
+  "transcript": "At first glance, that feels backwards. Input and output tokens are both just numbers flowing through the exact same transformer neural network and the exact same weights. One token in, one token out. So why does generating a token cost five times more than reading one?",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 14.28,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "At",
+      "start": 0.0,
+      "end": 0.46,
+      "match": "exact"
+    },
+    {
+      "word": "first",
+      "start": 0.46,
+      "end": 0.66,
+      "match": "exact"
+    },
+    {
+      "word": "glance,",
+      "start": 0.66,
+      "end": 1.02,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 1.14,
+      "end": 1.28,
+      "match": "exact"
+    },
+    {
+      "word": "feels",
+      "start": 1.28,
+      "end": 1.48,
+      "match": "exact"
+    },
+    {
+      "word": "backwards.",
+      "start": 1.48,
+      "end": 1.9,
+      "match": "exact"
+    },
+    {
+      "word": "Input",
+      "start": 2.4,
+      "end": 2.9,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 2.9,
+      "end": 3.04,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 3.04,
+      "end": 3.26,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 3.26,
+      "end": 3.58,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 3.58,
+      "end": 3.88,
+      "match": "exact"
+    },
+    {
+      "word": "both",
+      "start": 3.88,
+      "end": 4.08,
+      "match": "exact"
+    },
+    {
+      "word": "just",
+      "start": 4.08,
+      "end": 4.3,
+      "match": "exact"
+    },
+    {
+      "word": "numbers",
+      "start": 4.3,
+      "end": 4.6,
+      "match": "exact"
+    },
+    {
+      "word": "flowing",
+      "start": 4.6,
+      "end": 4.94,
+      "match": "exact"
+    },
+    {
+      "word": "through",
+      "start": 4.94,
+      "end": 5.2,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 5.2,
+      "end": 5.34,
+      "match": "exact"
+    },
+    {
+      "word": "exact",
+      "start": 5.34,
+      "end": 5.56,
+      "match": "exact"
+    },
+    {
+      "word": "same",
+      "start": 5.56,
+      "end": 5.86,
+      "match": "exact"
+    },
+    {
+      "word": "Transformer",
+      "start": 5.86,
+      "end": 6.3,
+      "match": "exact"
+    },
+    {
+      "word": "neural",
+      "start": 6.3,
+      "end": 6.66,
+      "match": "exact"
+    },
+    {
+      "word": "network",
+      "start": 6.66,
+      "end": 7.08,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 7.08,
+      "end": 7.54,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 7.54,
+      "end": 7.62,
+      "match": "exact"
+    },
+    {
+      "word": "exact",
+      "start": 7.62,
+      "end": 7.84,
+      "match": "exact"
+    },
+    {
+      "word": "same",
+      "start": 7.84,
+      "end": 8.14,
+      "match": "exact"
+    },
+    {
+      "word": "weights.",
+      "start": 8.14,
+      "end": 8.44,
+      "match": "exact"
+    },
+    {
+      "word": "One",
+      "start": 8.64,
+      "end": 9.0,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 9.0,
+      "end": 9.34,
+      "match": "exact"
+    },
+    {
+      "word": "in,",
+      "start": 9.34,
+      "end": 9.54,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 9.62,
+      "end": 9.84,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 9.84,
+      "end": 10.12,
+      "match": "exact"
+    },
+    {
+      "word": "out.",
+      "start": 10.12,
+      "end": 10.36,
+      "match": "exact"
+    },
+    {
+      "word": "So",
+      "start": 10.5,
+      "end": 10.96,
+      "match": "exact"
+    },
+    {
+      "word": "why",
+      "start": 10.96,
+      "end": 11.1,
+      "match": "exact"
+    },
+    {
+      "word": "does",
+      "start": 11.1,
+      "end": 11.26,
+      "match": "exact"
+    },
+    {
+      "word": "generating",
+      "start": 11.26,
+      "end": 11.56,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 11.56,
+      "end": 11.76,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 11.76,
+      "end": 12.0,
+      "match": "exact"
+    },
+    {
+      "word": "cost",
+      "start": 12.0,
+      "end": 12.32,
+      "match": "exact"
+    },
+    {
+      "word": "five",
+      "start": 12.32,
+      "end": 12.64,
+      "match": "exact"
+    },
+    {
+      "word": "times",
+      "start": 12.64,
+      "end": 12.9,
+      "match": "exact"
+    },
+    {
+      "word": "more",
+      "start": 12.9,
+      "end": 13.3,
+      "match": "exact"
+    },
+    {
+      "word": "than",
+      "start": 13.3,
+      "end": 13.5,
+      "match": "exact"
+    },
+    {
+      "word": "reading",
+      "start": 13.5,
+      "end": 13.7,
+      "match": "exact"
+    },
+    {
+      "word": "one?",
+      "start": 13.7,
+      "end": 13.92,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "At",
+      "start": 0.0,
+      "end": 0.46
+    },
+    {
+      "word": "first",
+      "start": 0.46,
+      "end": 0.66
+    },
+    {
+      "word": "glance,",
+      "start": 0.66,
+      "end": 1.02
+    },
+    {
+      "word": "that",
+      "start": 1.14,
+      "end": 1.28
+    },
+    {
+      "word": "feels",
+      "start": 1.28,
+      "end": 1.48
+    },
+    {
+      "word": "backwards.",
+      "start": 1.48,
+      "end": 1.9
+    },
+    {
+      "word": "Input",
+      "start": 2.4,
+      "end": 2.9
+    },
+    {
+      "word": "and",
+      "start": 2.9,
+      "end": 3.04
+    },
+    {
+      "word": "output",
+      "start": 3.04,
+      "end": 3.26
+    },
+    {
+      "word": "tokens",
+      "start": 3.26,
+      "end": 3.58
+    },
+    {
+      "word": "are",
+      "start": 3.58,
+      "end": 3.88
+    },
+    {
+      "word": "both",
+      "start": 3.88,
+      "end": 4.08
+    },
+    {
+      "word": "just",
+      "start": 4.08,
+      "end": 4.3
+    },
+    {
+      "word": "numbers",
+      "start": 4.3,
+      "end": 4.6
+    },
+    {
+      "word": "flowing",
+      "start": 4.6,
+      "end": 4.94
+    },
+    {
+      "word": "through",
+      "start": 4.94,
+      "end": 5.2
+    },
+    {
+      "word": "the",
+      "start": 5.2,
+      "end": 5.34
+    },
+    {
+      "word": "exact",
+      "start": 5.34,
+      "end": 5.56
+    },
+    {
+      "word": "same",
+      "start": 5.56,
+      "end": 5.86
+    },
+    {
+      "word": "transformer",
+      "start": 5.86,
+      "end": 6.3
+    },
+    {
+      "word": "neural",
+      "start": 6.3,
+      "end": 6.66
+    },
+    {
+      "word": "network",
+      "start": 6.66,
+      "end": 7.08
+    },
+    {
+      "word": "and",
+      "start": 7.08,
+      "end": 7.54
+    },
+    {
+      "word": "the",
+      "start": 7.54,
+      "end": 7.62
+    },
+    {
+      "word": "exact",
+      "start": 7.62,
+      "end": 7.84
+    },
+    {
+      "word": "same",
+      "start": 7.84,
+      "end": 8.14
+    },
+    {
+      "word": "weights.",
+      "start": 8.14,
+      "end": 8.44
+    },
+    {
+      "word": "One",
+      "start": 8.64,
+      "end": 9.0
+    },
+    {
+      "word": "token",
+      "start": 9.0,
+      "end": 9.34
+    },
+    {
+      "word": "in,",
+      "start": 9.34,
+      "end": 9.54
+    },
+    {
+      "word": "one",
+      "start": 9.62,
+      "end": 9.84
+    },
+    {
+      "word": "token",
+      "start": 9.84,
+      "end": 10.12
+    },
+    {
+      "word": "out.",
+      "start": 10.12,
+      "end": 10.36
+    },
+    {
+      "word": "So",
+      "start": 10.5,
+      "end": 10.96
+    },
+    {
+      "word": "why",
+      "start": 10.96,
+      "end": 11.1
+    },
+    {
+      "word": "does",
+      "start": 11.1,
+      "end": 11.26
+    },
+    {
+      "word": "generating",
+      "start": 11.26,
+      "end": 11.56
+    },
+    {
+      "word": "a",
+      "start": 11.56,
+      "end": 11.76
+    },
+    {
+      "word": "token",
+      "start": 11.76,
+      "end": 12.0
+    },
+    {
+      "word": "cost",
+      "start": 12.0,
+      "end": 12.32
+    },
+    {
+      "word": "five",
+      "start": 12.32,
+      "end": 12.64
+    },
+    {
+      "word": "times",
+      "start": 12.64,
+      "end": 12.9
+    },
+    {
+      "word": "more",
+      "start": 12.9,
+      "end": 13.3
+    },
+    {
+      "word": "than",
+      "start": 13.3,
+      "end": 13.5
+    },
+    {
+      "word": "reading",
+      "start": 13.5,
+      "end": 13.7
+    },
+    {
+      "word": "one?",
+      "start": 13.7,
+      "end": 13.92
+    }
+  ]
+}

@@ -1,0 +1,581 @@
+{
+  "audio": "008.during-prefill-the.mp3",
+  "paragraph": 8,
+  "text": "During prefill, the GPU loads each layer's weights from HBM once and multiplies them against a huge matrix of hundreds or thousands of input tokens together. That matrix-matrix multiply, called GEMM, keeps Tensor Cores packed with work. It is like a freight train hauling a thousand containers in one trip.",
+  "transcript": "During pre-fill, the GPU loads each layer's weights from HBM once and multiplies them against a huge matrix of hundreds or thousands of input tokens together. That matrix-matrix multiply, called GEMM, keeps Tensor cores packed with work. It is like a freight train hauling a thousand containers in one trip.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 17.16,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "During",
+      "start": 0.0,
+      "end": 0.32,
+      "match": "exact"
+    },
+    {
+      "word": "prefill,",
+      "start": 0.32,
+      "end": 0.78,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.92,
+      "end": 1.14,
+      "match": "exact"
+    },
+    {
+      "word": "GPU",
+      "start": 1.14,
+      "end": 1.42,
+      "match": "exact"
+    },
+    {
+      "word": "loads",
+      "start": 1.42,
+      "end": 1.92,
+      "match": "exact"
+    },
+    {
+      "word": "each",
+      "start": 1.92,
+      "end": 2.18,
+      "match": "exact"
+    },
+    {
+      "word": "layer's",
+      "start": 2.18,
+      "end": 2.6,
+      "match": "exact"
+    },
+    {
+      "word": "weights",
+      "start": 2.6,
+      "end": 2.76,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 2.76,
+      "end": 2.96,
+      "match": "exact"
+    },
+    {
+      "word": "HBM",
+      "start": 2.96,
+      "end": 3.36,
+      "match": "exact"
+    },
+    {
+      "word": "once",
+      "start": 3.36,
+      "end": 3.7,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 3.7,
+      "end": 4.0,
+      "match": "exact"
+    },
+    {
+      "word": "multiplies",
+      "start": 4.0,
+      "end": 4.6,
+      "match": "exact"
+    },
+    {
+      "word": "them",
+      "start": 4.6,
+      "end": 4.74,
+      "match": "exact"
+    },
+    {
+      "word": "against",
+      "start": 4.74,
+      "end": 4.94,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 4.94,
+      "end": 5.16,
+      "match": "exact"
+    },
+    {
+      "word": "huge",
+      "start": 5.16,
+      "end": 5.38,
+      "match": "exact"
+    },
+    {
+      "word": "matrix",
+      "start": 5.38,
+      "end": 5.76,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 5.76,
+      "end": 6.02,
+      "match": "exact"
+    },
+    {
+      "word": "hundreds",
+      "start": 6.02,
+      "end": 6.32,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 6.32,
+      "end": 6.62,
+      "match": "exact"
+    },
+    {
+      "word": "thousands",
+      "start": 6.62,
+      "end": 7.08,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 7.08,
+      "end": 7.38,
+      "match": "exact"
+    },
+    {
+      "word": "input",
+      "start": 7.38,
+      "end": 7.56,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 7.56,
+      "end": 7.96,
+      "match": "exact"
+    },
+    {
+      "word": "together.",
+      "start": 7.96,
+      "end": 8.3,
+      "match": "exact"
+    },
+    {
+      "word": "That",
+      "start": 8.68,
+      "end": 9.24,
+      "match": "exact"
+    },
+    {
+      "word": "matrix-matrix",
+      "start": 9.24,
+      "end": 9.98,
+      "match": "exact"
+    },
+    {
+      "word": "multiply,",
+      "start": 9.98,
+      "end": 10.3,
+      "match": "exact"
+    },
+    {
+      "word": "called",
+      "start": 10.64,
+      "end": 10.92,
+      "match": "exact"
+    },
+    {
+      "word": "GEMM,",
+      "start": 10.92,
+      "end": 11.66,
+      "match": "exact"
+    },
+    {
+      "word": "keeps",
+      "start": 11.74,
+      "end": 12.2,
+      "match": "exact"
+    },
+    {
+      "word": "Tensor",
+      "start": 12.2,
+      "end": 12.48,
+      "match": "exact"
+    },
+    {
+      "word": "Cores",
+      "start": 12.48,
+      "end": 12.78,
+      "match": "exact"
+    },
+    {
+      "word": "packed",
+      "start": 12.78,
+      "end": 13.06,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 13.06,
+      "end": 13.34,
+      "match": "exact"
+    },
+    {
+      "word": "work.",
+      "start": 13.34,
+      "end": 13.58,
+      "match": "exact"
+    },
+    {
+      "word": "It",
+      "start": 13.78,
+      "end": 14.26,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 14.26,
+      "end": 14.34,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 14.34,
+      "end": 14.48,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 14.48,
+      "end": 14.58,
+      "match": "exact"
+    },
+    {
+      "word": "freight",
+      "start": 14.58,
+      "end": 14.78,
+      "match": "exact"
+    },
+    {
+      "word": "train",
+      "start": 14.78,
+      "end": 15.0,
+      "match": "exact"
+    },
+    {
+      "word": "hauling",
+      "start": 15.0,
+      "end": 15.38,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 15.38,
+      "end": 15.4,
+      "match": "exact"
+    },
+    {
+      "word": "thousand",
+      "start": 15.4,
+      "end": 15.66,
+      "match": "exact"
+    },
+    {
+      "word": "containers",
+      "start": 15.66,
+      "end": 16.26,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 16.26,
+      "end": 16.5,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 16.5,
+      "end": 16.64,
+      "match": "exact"
+    },
+    {
+      "word": "trip.",
+      "start": 16.64,
+      "end": 16.86,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "During",
+      "start": 0.0,
+      "end": 0.32
+    },
+    {
+      "word": "pre",
+      "start": 0.32,
+      "end": 0.5
+    },
+    {
+      "word": "-fill,",
+      "start": 0.5,
+      "end": 0.78
+    },
+    {
+      "word": "the",
+      "start": 0.92,
+      "end": 1.14
+    },
+    {
+      "word": "GPU",
+      "start": 1.14,
+      "end": 1.42
+    },
+    {
+      "word": "loads",
+      "start": 1.42,
+      "end": 1.92
+    },
+    {
+      "word": "each",
+      "start": 1.92,
+      "end": 2.18
+    },
+    {
+      "word": "layer's",
+      "start": 2.18,
+      "end": 2.6
+    },
+    {
+      "word": "weights",
+      "start": 2.6,
+      "end": 2.76
+    },
+    {
+      "word": "from",
+      "start": 2.76,
+      "end": 2.96
+    },
+    {
+      "word": "HBM",
+      "start": 2.96,
+      "end": 3.36
+    },
+    {
+      "word": "once",
+      "start": 3.36,
+      "end": 3.7
+    },
+    {
+      "word": "and",
+      "start": 3.7,
+      "end": 4.0
+    },
+    {
+      "word": "multiplies",
+      "start": 4.0,
+      "end": 4.6
+    },
+    {
+      "word": "them",
+      "start": 4.6,
+      "end": 4.74
+    },
+    {
+      "word": "against",
+      "start": 4.74,
+      "end": 4.94
+    },
+    {
+      "word": "a",
+      "start": 4.94,
+      "end": 5.16
+    },
+    {
+      "word": "huge",
+      "start": 5.16,
+      "end": 5.38
+    },
+    {
+      "word": "matrix",
+      "start": 5.38,
+      "end": 5.76
+    },
+    {
+      "word": "of",
+      "start": 5.76,
+      "end": 6.02
+    },
+    {
+      "word": "hundreds",
+      "start": 6.02,
+      "end": 6.32
+    },
+    {
+      "word": "or",
+      "start": 6.32,
+      "end": 6.62
+    },
+    {
+      "word": "thousands",
+      "start": 6.62,
+      "end": 7.08
+    },
+    {
+      "word": "of",
+      "start": 7.08,
+      "end": 7.38
+    },
+    {
+      "word": "input",
+      "start": 7.38,
+      "end": 7.56
+    },
+    {
+      "word": "tokens",
+      "start": 7.56,
+      "end": 7.96
+    },
+    {
+      "word": "together.",
+      "start": 7.96,
+      "end": 8.3
+    },
+    {
+      "word": "That",
+      "start": 8.68,
+      "end": 9.24
+    },
+    {
+      "word": "matrix",
+      "start": 9.24,
+      "end": 9.58
+    },
+    {
+      "word": "-matrix",
+      "start": 9.58,
+      "end": 9.98
+    },
+    {
+      "word": "multiply,",
+      "start": 9.98,
+      "end": 10.3
+    },
+    {
+      "word": "called",
+      "start": 10.64,
+      "end": 10.92
+    },
+    {
+      "word": "GEMM,",
+      "start": 10.92,
+      "end": 11.66
+    },
+    {
+      "word": "keeps",
+      "start": 11.74,
+      "end": 12.2
+    },
+    {
+      "word": "Tensor",
+      "start": 12.2,
+      "end": 12.48
+    },
+    {
+      "word": "cores",
+      "start": 12.48,
+      "end": 12.78
+    },
+    {
+      "word": "packed",
+      "start": 12.78,
+      "end": 13.06
+    },
+    {
+      "word": "with",
+      "start": 13.06,
+      "end": 13.34
+    },
+    {
+      "word": "work.",
+      "start": 13.34,
+      "end": 13.58
+    },
+    {
+      "word": "It",
+      "start": 13.78,
+      "end": 14.26
+    },
+    {
+      "word": "is",
+      "start": 14.26,
+      "end": 14.34
+    },
+    {
+      "word": "like",
+      "start": 14.34,
+      "end": 14.48
+    },
+    {
+      "word": "a",
+      "start": 14.48,
+      "end": 14.58
+    },
+    {
+      "word": "freight",
+      "start": 14.58,
+      "end": 14.78
+    },
+    {
+      "word": "train",
+      "start": 14.78,
+      "end": 15.0
+    },
+    {
+      "word": "hauling",
+      "start": 15.0,
+      "end": 15.38
+    },
+    {
+      "word": "a",
+      "start": 15.38,
+      "end": 15.4
+    },
+    {
+      "word": "thousand",
+      "start": 15.4,
+      "end": 15.66
+    },
+    {
+      "word": "containers",
+      "start": 15.66,
+      "end": 16.26
+    },
+    {
+      "word": "in",
+      "start": 16.26,
+      "end": 16.5
+    },
+    {
+      "word": "one",
+      "start": 16.5,
+      "end": 16.64
+    },
+    {
+      "word": "trip.",
+      "start": 16.64,
+      "end": 16.86
+    }
+  ]
+}

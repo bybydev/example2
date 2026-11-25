@@ -1,0 +1,575 @@
+{
+  "audio": "014.zoom-out-and.mp3",
+  "paragraph": 14,
+  "text": "Zoom out and the pricing makes total sense. Prefill borrows a GPU for a few dozen milliseconds at peak efficiency. A thousand-token decode holds a VRAM slot hostage for ten or twenty full seconds at terrible compute efficiency. Providers are not really selling tokens. They are renting you GPU-seconds.",
+  "transcript": "Zoom out and the pricing makes total sense. Pre-fill borrows a GPU for a few dozen milliseconds at peak efficiency. A thousand token decode holds a VRAM slot hostage for 10 or 20 full seconds at terrible compute efficiency. Providers are not really selling tokens. They are renting you GPU seconds.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 16.68,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Zoom",
+      "start": 0.0,
+      "end": 0.4,
+      "match": "exact"
+    },
+    {
+      "word": "out",
+      "start": 0.4,
+      "end": 0.6,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 0.6,
+      "end": 0.86,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.86,
+      "end": 0.96,
+      "match": "exact"
+    },
+    {
+      "word": "pricing",
+      "start": 0.96,
+      "end": 1.22,
+      "match": "exact"
+    },
+    {
+      "word": "makes",
+      "start": 1.22,
+      "end": 1.48,
+      "match": "exact"
+    },
+    {
+      "word": "total",
+      "start": 1.48,
+      "end": 1.7,
+      "match": "exact"
+    },
+    {
+      "word": "sense.",
+      "start": 1.7,
+      "end": 1.94,
+      "match": "exact"
+    },
+    {
+      "word": "Prefill",
+      "start": 2.38,
+      "end": 3.14,
+      "match": "exact"
+    },
+    {
+      "word": "borrows",
+      "start": 3.14,
+      "end": 3.56,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 3.56,
+      "end": 3.58,
+      "match": "exact"
+    },
+    {
+      "word": "GPU",
+      "start": 3.58,
+      "end": 3.84,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 3.84,
+      "end": 4.2,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 4.2,
+      "end": 4.34,
+      "match": "exact"
+    },
+    {
+      "word": "few",
+      "start": 4.34,
+      "end": 4.46,
+      "match": "exact"
+    },
+    {
+      "word": "dozen",
+      "start": 4.46,
+      "end": 4.7,
+      "match": "exact"
+    },
+    {
+      "word": "milliseconds",
+      "start": 4.7,
+      "end": 5.08,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 5.08,
+      "end": 5.48,
+      "match": "exact"
+    },
+    {
+      "word": "peak",
+      "start": 5.48,
+      "end": 5.62,
+      "match": "exact"
+    },
+    {
+      "word": "efficiency.",
+      "start": 5.62,
+      "end": 6.0,
+      "match": "exact"
+    },
+    {
+      "word": "A",
+      "start": 6.38,
+      "end": 6.9,
+      "match": "exact"
+    },
+    {
+      "word": "thousand-token",
+      "start": 6.9,
+      "end": 7.46,
+      "match": "exact"
+    },
+    {
+      "word": "decode",
+      "start": 7.46,
+      "end": 7.9,
+      "match": "exact"
+    },
+    {
+      "word": "holds",
+      "start": 7.9,
+      "end": 8.16,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 8.16,
+      "end": 8.3,
+      "match": "exact"
+    },
+    {
+      "word": "VRAM",
+      "start": 8.3,
+      "end": 8.64,
+      "match": "exact"
+    },
+    {
+      "word": "slot",
+      "start": 8.64,
+      "end": 8.88,
+      "match": "exact"
+    },
+    {
+      "word": "hostage",
+      "start": 8.88,
+      "end": 9.4,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 9.4,
+      "end": 9.7,
+      "match": "exact"
+    },
+    {
+      "word": "ten",
+      "start": 9.7,
+      "end": 9.92,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 9.92,
+      "end": 10.1,
+      "match": "exact"
+    },
+    {
+      "word": "twenty",
+      "start": 10.1,
+      "end": 10.38,
+      "match": "exact"
+    },
+    {
+      "word": "full",
+      "start": 10.38,
+      "end": 10.54,
+      "match": "exact"
+    },
+    {
+      "word": "seconds",
+      "start": 10.54,
+      "end": 10.92,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 10.92,
+      "end": 11.18,
+      "match": "exact"
+    },
+    {
+      "word": "terrible",
+      "start": 11.18,
+      "end": 11.46,
+      "match": "exact"
+    },
+    {
+      "word": "compute",
+      "start": 11.46,
+      "end": 11.74,
+      "match": "exact"
+    },
+    {
+      "word": "efficiency.",
+      "start": 11.74,
+      "end": 12.1,
+      "match": "exact"
+    },
+    {
+      "word": "Providers",
+      "start": 12.98,
+      "end": 13.5,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 13.5,
+      "end": 13.56,
+      "match": "exact"
+    },
+    {
+      "word": "not",
+      "start": 13.56,
+      "end": 13.7,
+      "match": "exact"
+    },
+    {
+      "word": "really",
+      "start": 13.7,
+      "end": 13.92,
+      "match": "exact"
+    },
+    {
+      "word": "selling",
+      "start": 13.92,
+      "end": 14.14,
+      "match": "exact"
+    },
+    {
+      "word": "tokens.",
+      "start": 14.14,
+      "end": 14.54,
+      "match": "exact"
+    },
+    {
+      "word": "They",
+      "start": 14.76,
+      "end": 15.04,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 15.04,
+      "end": 15.14,
+      "match": "exact"
+    },
+    {
+      "word": "renting",
+      "start": 15.14,
+      "end": 15.36,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 15.36,
+      "end": 15.56,
+      "match": "exact"
+    },
+    {
+      "word": "GPU-seconds.",
+      "start": 15.56,
+      "end": 16.2,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Zoom",
+      "start": 0.0,
+      "end": 0.4
+    },
+    {
+      "word": "out",
+      "start": 0.4,
+      "end": 0.6
+    },
+    {
+      "word": "and",
+      "start": 0.6,
+      "end": 0.86
+    },
+    {
+      "word": "the",
+      "start": 0.86,
+      "end": 0.96
+    },
+    {
+      "word": "pricing",
+      "start": 0.96,
+      "end": 1.22
+    },
+    {
+      "word": "makes",
+      "start": 1.22,
+      "end": 1.48
+    },
+    {
+      "word": "total",
+      "start": 1.48,
+      "end": 1.7
+    },
+    {
+      "word": "sense.",
+      "start": 1.7,
+      "end": 1.94
+    },
+    {
+      "word": "Pre",
+      "start": 2.38,
+      "end": 2.9
+    },
+    {
+      "word": "-fill",
+      "start": 2.9,
+      "end": 3.14
+    },
+    {
+      "word": "borrows",
+      "start": 3.14,
+      "end": 3.56
+    },
+    {
+      "word": "a",
+      "start": 3.56,
+      "end": 3.58
+    },
+    {
+      "word": "GPU",
+      "start": 3.58,
+      "end": 3.84
+    },
+    {
+      "word": "for",
+      "start": 3.84,
+      "end": 4.2
+    },
+    {
+      "word": "a",
+      "start": 4.2,
+      "end": 4.34
+    },
+    {
+      "word": "few",
+      "start": 4.34,
+      "end": 4.46
+    },
+    {
+      "word": "dozen",
+      "start": 4.46,
+      "end": 4.7
+    },
+    {
+      "word": "milliseconds",
+      "start": 4.7,
+      "end": 5.08
+    },
+    {
+      "word": "at",
+      "start": 5.08,
+      "end": 5.48
+    },
+    {
+      "word": "peak",
+      "start": 5.48,
+      "end": 5.62
+    },
+    {
+      "word": "efficiency.",
+      "start": 5.62,
+      "end": 6.0
+    },
+    {
+      "word": "A",
+      "start": 6.38,
+      "end": 6.9
+    },
+    {
+      "word": "thousand",
+      "start": 6.9,
+      "end": 7.14
+    },
+    {
+      "word": "token",
+      "start": 7.14,
+      "end": 7.46
+    },
+    {
+      "word": "decode",
+      "start": 7.46,
+      "end": 7.9
+    },
+    {
+      "word": "holds",
+      "start": 7.9,
+      "end": 8.16
+    },
+    {
+      "word": "a",
+      "start": 8.16,
+      "end": 8.3
+    },
+    {
+      "word": "VRAM",
+      "start": 8.3,
+      "end": 8.64
+    },
+    {
+      "word": "slot",
+      "start": 8.64,
+      "end": 8.88
+    },
+    {
+      "word": "hostage",
+      "start": 8.88,
+      "end": 9.4
+    },
+    {
+      "word": "for",
+      "start": 9.4,
+      "end": 9.7
+    },
+    {
+      "word": "10",
+      "start": 9.7,
+      "end": 9.92
+    },
+    {
+      "word": "or",
+      "start": 9.92,
+      "end": 10.1
+    },
+    {
+      "word": "20",
+      "start": 10.1,
+      "end": 10.38
+    },
+    {
+      "word": "full",
+      "start": 10.38,
+      "end": 10.54
+    },
+    {
+      "word": "seconds",
+      "start": 10.54,
+      "end": 10.92
+    },
+    {
+      "word": "at",
+      "start": 10.92,
+      "end": 11.18
+    },
+    {
+      "word": "terrible",
+      "start": 11.18,
+      "end": 11.46
+    },
+    {
+      "word": "compute",
+      "start": 11.46,
+      "end": 11.74
+    },
+    {
+      "word": "efficiency.",
+      "start": 11.74,
+      "end": 12.1
+    },
+    {
+      "word": "Providers",
+      "start": 12.98,
+      "end": 13.5
+    },
+    {
+      "word": "are",
+      "start": 13.5,
+      "end": 13.56
+    },
+    {
+      "word": "not",
+      "start": 13.56,
+      "end": 13.7
+    },
+    {
+      "word": "really",
+      "start": 13.7,
+      "end": 13.92
+    },
+    {
+      "word": "selling",
+      "start": 13.92,
+      "end": 14.14
+    },
+    {
+      "word": "tokens.",
+      "start": 14.14,
+      "end": 14.54
+    },
+    {
+      "word": "They",
+      "start": 14.76,
+      "end": 15.04
+    },
+    {
+      "word": "are",
+      "start": 15.04,
+      "end": 15.14
+    },
+    {
+      "word": "renting",
+      "start": 15.14,
+      "end": 15.36
+    },
+    {
+      "word": "you",
+      "start": 15.36,
+      "end": 15.56
+    },
+    {
+      "word": "GPU",
+      "start": 15.56,
+      "end": 15.86
+    },
+    {
+      "word": "seconds.",
+      "start": 15.86,
+      "end": 16.2
+    }
+  ]
+}

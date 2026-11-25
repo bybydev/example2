@@ -1,0 +1,711 @@
+{
+  "audio": "018.without-clever-engineering.mp3",
+  "paragraph": 18,
+  "text": "Without clever engineering, output tokens would cost twenty or fifty times more. Labs fight the memory wall by shrinking what crosses the HBM bus. Quantization trims weights down to eight or four bits. Grouped-Query Attention, or GQA, and Multi-Head Latent Attention, or MLA, compress the KV cache. And Mixture of Experts, or MoE, activates only a fraction of weights per token.",
+  "transcript": "Without clever engineering, output tokens would cost 20 or 50 times more. Labs fight the memory wall by shrinking what crosses the HBM bus. Quantization trims weights down to 8 or 4 bits. Grouped Query Attention, or GQA, and Multi-Head Latent Attention, or MLA, compress the KV cache. And Mixture of Experts, or MoE, activates only a fraction of weights per token.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 1
+    }
+  ],
+  "duration": 21.12,
+  "failed_words": 1,
+  "failures": [
+    {
+      "index": 9,
+      "word": "fifty",
+      "match": "approx",
+      "heard": "50",
+      "start": 2.96
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Without",
+      "start": 0.0,
+      "end": 0.34,
+      "match": "exact"
+    },
+    {
+      "word": "clever",
+      "start": 0.34,
+      "end": 0.62,
+      "match": "exact"
+    },
+    {
+      "word": "engineering,",
+      "start": 0.62,
+      "end": 1.0,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 1.36,
+      "end": 1.6,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 1.6,
+      "end": 1.96,
+      "match": "exact"
+    },
+    {
+      "word": "would",
+      "start": 1.96,
+      "end": 2.22,
+      "match": "exact"
+    },
+    {
+      "word": "cost",
+      "start": 2.22,
+      "end": 2.44,
+      "match": "exact"
+    },
+    {
+      "word": "twenty",
+      "start": 2.44,
+      "end": 2.76,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 2.76,
+      "end": 2.96,
+      "match": "exact"
+    },
+    {
+      "word": "fifty",
+      "start": 2.96,
+      "end": 3.18,
+      "match": "approx",
+      "heard": "50"
+    },
+    {
+      "word": "times",
+      "start": 3.18,
+      "end": 3.44,
+      "match": "exact"
+    },
+    {
+      "word": "more.",
+      "start": 3.44,
+      "end": 3.84,
+      "match": "exact"
+    },
+    {
+      "word": "Labs",
+      "start": 4.14,
+      "end": 4.66,
+      "match": "exact"
+    },
+    {
+      "word": "fight",
+      "start": 4.66,
+      "end": 4.94,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 4.94,
+      "end": 5.1,
+      "match": "exact"
+    },
+    {
+      "word": "memory",
+      "start": 5.1,
+      "end": 5.3,
+      "match": "exact"
+    },
+    {
+      "word": "wall",
+      "start": 5.3,
+      "end": 5.58,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 5.58,
+      "end": 5.76,
+      "match": "exact"
+    },
+    {
+      "word": "shrinking",
+      "start": 5.76,
+      "end": 6.04,
+      "match": "exact"
+    },
+    {
+      "word": "what",
+      "start": 6.04,
+      "end": 6.3,
+      "match": "exact"
+    },
+    {
+      "word": "crosses",
+      "start": 6.3,
+      "end": 6.62,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 6.62,
+      "end": 6.8,
+      "match": "exact"
+    },
+    {
+      "word": "HBM",
+      "start": 6.8,
+      "end": 7.16,
+      "match": "exact"
+    },
+    {
+      "word": "bus.",
+      "start": 7.16,
+      "end": 7.38,
+      "match": "exact"
+    },
+    {
+      "word": "Quantization",
+      "start": 7.72,
+      "end": 8.24,
+      "match": "exact"
+    },
+    {
+      "word": "trims",
+      "start": 8.24,
+      "end": 8.82,
+      "match": "exact"
+    },
+    {
+      "word": "weights",
+      "start": 8.82,
+      "end": 8.94,
+      "match": "exact"
+    },
+    {
+      "word": "down",
+      "start": 8.94,
+      "end": 9.16,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 9.16,
+      "end": 9.32,
+      "match": "exact"
+    },
+    {
+      "word": "eight",
+      "start": 9.32,
+      "end": 9.44,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 9.44,
+      "end": 9.54,
+      "match": "exact"
+    },
+    {
+      "word": "four",
+      "start": 9.54,
+      "end": 9.68,
+      "match": "exact"
+    },
+    {
+      "word": "bits.",
+      "start": 9.68,
+      "end": 9.94,
+      "match": "exact"
+    },
+    {
+      "word": "Grouped-Query",
+      "start": 10.22,
+      "end": 11.14,
+      "match": "exact"
+    },
+    {
+      "word": "Attention,",
+      "start": 11.14,
+      "end": 11.34,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 11.68,
+      "end": 11.92,
+      "match": "exact"
+    },
+    {
+      "word": "GQA,",
+      "start": 11.92,
+      "end": 12.6,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 12.72,
+      "end": 13.08,
+      "match": "exact"
+    },
+    {
+      "word": "Multi-Head",
+      "start": 13.08,
+      "end": 13.54,
+      "match": "exact"
+    },
+    {
+      "word": "Latent",
+      "start": 13.54,
+      "end": 13.86,
+      "match": "exact"
+    },
+    {
+      "word": "Attention,",
+      "start": 13.86,
+      "end": 14.06,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 14.36,
+      "end": 14.6,
+      "match": "exact"
+    },
+    {
+      "word": "MLA,",
+      "start": 14.6,
+      "end": 14.96,
+      "match": "exact"
+    },
+    {
+      "word": "compress",
+      "start": 15.1,
+      "end": 15.32,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 15.32,
+      "end": 15.62,
+      "match": "exact"
+    },
+    {
+      "word": "KV",
+      "start": 15.62,
+      "end": 15.9,
+      "match": "exact"
+    },
+    {
+      "word": "cache.",
+      "start": 15.9,
+      "end": 16.12,
+      "match": "exact"
+    },
+    {
+      "word": "And",
+      "start": 16.4,
+      "end": 16.8,
+      "match": "exact"
+    },
+    {
+      "word": "Mixture",
+      "start": 16.8,
+      "end": 17.18,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 17.18,
+      "end": 17.3,
+      "match": "exact"
+    },
+    {
+      "word": "Experts,",
+      "start": 17.3,
+      "end": 17.88,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 17.88,
+      "end": 18.08,
+      "match": "exact"
+    },
+    {
+      "word": "MoE,",
+      "start": 18.08,
+      "end": 18.5,
+      "match": "exact"
+    },
+    {
+      "word": "activates",
+      "start": 18.72,
+      "end": 19.18,
+      "match": "exact"
+    },
+    {
+      "word": "only",
+      "start": 19.18,
+      "end": 19.56,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 19.56,
+      "end": 19.7,
+      "match": "exact"
+    },
+    {
+      "word": "fraction",
+      "start": 19.7,
+      "end": 19.94,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 19.94,
+      "end": 20.14,
+      "match": "exact"
+    },
+    {
+      "word": "weights",
+      "start": 20.14,
+      "end": 20.28,
+      "match": "exact"
+    },
+    {
+      "word": "per",
+      "start": 20.28,
+      "end": 20.46,
+      "match": "exact"
+    },
+    {
+      "word": "token.",
+      "start": 20.46,
+      "end": 20.72,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Without",
+      "start": 0.0,
+      "end": 0.34
+    },
+    {
+      "word": "clever",
+      "start": 0.34,
+      "end": 0.62
+    },
+    {
+      "word": "engineering,",
+      "start": 0.62,
+      "end": 1.0
+    },
+    {
+      "word": "output",
+      "start": 1.36,
+      "end": 1.6
+    },
+    {
+      "word": "tokens",
+      "start": 1.6,
+      "end": 1.96
+    },
+    {
+      "word": "would",
+      "start": 1.96,
+      "end": 2.22
+    },
+    {
+      "word": "cost",
+      "start": 2.22,
+      "end": 2.44
+    },
+    {
+      "word": "20",
+      "start": 2.44,
+      "end": 2.76
+    },
+    {
+      "word": "or",
+      "start": 2.76,
+      "end": 2.96
+    },
+    {
+      "word": "50",
+      "start": 2.96,
+      "end": 3.18
+    },
+    {
+      "word": "times",
+      "start": 3.18,
+      "end": 3.44
+    },
+    {
+      "word": "more.",
+      "start": 3.44,
+      "end": 3.84
+    },
+    {
+      "word": "Labs",
+      "start": 4.14,
+      "end": 4.66
+    },
+    {
+      "word": "fight",
+      "start": 4.66,
+      "end": 4.94
+    },
+    {
+      "word": "the",
+      "start": 4.94,
+      "end": 5.1
+    },
+    {
+      "word": "memory",
+      "start": 5.1,
+      "end": 5.3
+    },
+    {
+      "word": "wall",
+      "start": 5.3,
+      "end": 5.58
+    },
+    {
+      "word": "by",
+      "start": 5.58,
+      "end": 5.76
+    },
+    {
+      "word": "shrinking",
+      "start": 5.76,
+      "end": 6.04
+    },
+    {
+      "word": "what",
+      "start": 6.04,
+      "end": 6.3
+    },
+    {
+      "word": "crosses",
+      "start": 6.3,
+      "end": 6.62
+    },
+    {
+      "word": "the",
+      "start": 6.62,
+      "end": 6.8
+    },
+    {
+      "word": "HBM",
+      "start": 6.8,
+      "end": 7.16
+    },
+    {
+      "word": "bus.",
+      "start": 7.16,
+      "end": 7.38
+    },
+    {
+      "word": "Quantization",
+      "start": 7.72,
+      "end": 8.24
+    },
+    {
+      "word": "trims",
+      "start": 8.24,
+      "end": 8.82
+    },
+    {
+      "word": "weights",
+      "start": 8.82,
+      "end": 8.94
+    },
+    {
+      "word": "down",
+      "start": 8.94,
+      "end": 9.16
+    },
+    {
+      "word": "to",
+      "start": 9.16,
+      "end": 9.32
+    },
+    {
+      "word": "8",
+      "start": 9.32,
+      "end": 9.44
+    },
+    {
+      "word": "or",
+      "start": 9.44,
+      "end": 9.54
+    },
+    {
+      "word": "4",
+      "start": 9.54,
+      "end": 9.68
+    },
+    {
+      "word": "bits.",
+      "start": 9.68,
+      "end": 9.94
+    },
+    {
+      "word": "Grouped",
+      "start": 10.22,
+      "end": 10.74
+    },
+    {
+      "word": "Query",
+      "start": 10.74,
+      "end": 11.14
+    },
+    {
+      "word": "Attention,",
+      "start": 11.14,
+      "end": 11.34
+    },
+    {
+      "word": "or",
+      "start": 11.68,
+      "end": 11.92
+    },
+    {
+      "word": "GQA,",
+      "start": 11.92,
+      "end": 12.6
+    },
+    {
+      "word": "and",
+      "start": 12.72,
+      "end": 13.08
+    },
+    {
+      "word": "Multi",
+      "start": 13.08,
+      "end": 13.32
+    },
+    {
+      "word": "-Head",
+      "start": 13.32,
+      "end": 13.54
+    },
+    {
+      "word": "Latent",
+      "start": 13.54,
+      "end": 13.86
+    },
+    {
+      "word": "Attention,",
+      "start": 13.86,
+      "end": 14.06
+    },
+    {
+      "word": "or",
+      "start": 14.36,
+      "end": 14.6
+    },
+    {
+      "word": "MLA,",
+      "start": 14.6,
+      "end": 14.96
+    },
+    {
+      "word": "compress",
+      "start": 15.1,
+      "end": 15.32
+    },
+    {
+      "word": "the",
+      "start": 15.32,
+      "end": 15.62
+    },
+    {
+      "word": "KV",
+      "start": 15.62,
+      "end": 15.9
+    },
+    {
+      "word": "cache.",
+      "start": 15.9,
+      "end": 16.12
+    },
+    {
+      "word": "And",
+      "start": 16.4,
+      "end": 16.8
+    },
+    {
+      "word": "Mixture",
+      "start": 16.8,
+      "end": 17.18
+    },
+    {
+      "word": "of",
+      "start": 17.18,
+      "end": 17.3
+    },
+    {
+      "word": "Experts,",
+      "start": 17.3,
+      "end": 17.88
+    },
+    {
+      "word": "or",
+      "start": 17.88,
+      "end": 18.08
+    },
+    {
+      "word": "MoE,",
+      "start": 18.08,
+      "end": 18.5
+    },
+    {
+      "word": "activates",
+      "start": 18.72,
+      "end": 19.18
+    },
+    {
+      "word": "only",
+      "start": 19.18,
+      "end": 19.56
+    },
+    {
+      "word": "a",
+      "start": 19.56,
+      "end": 19.7
+    },
+    {
+      "word": "fraction",
+      "start": 19.7,
+      "end": 19.94
+    },
+    {
+      "word": "of",
+      "start": 19.94,
+      "end": 20.14
+    },
+    {
+      "word": "weights",
+      "start": 20.14,
+      "end": 20.28
+    },
+    {
+      "word": "per",
+      "start": 20.28,
+      "end": 20.46
+    },
+    {
+      "word": "token.",
+      "start": 20.46,
+      "end": 20.72
+    }
+  ]
+}

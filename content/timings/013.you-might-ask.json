@@ -1,0 +1,630 @@
+{
+  "audio": "013.you-might-ask.mp3",
+  "paragraph": 13,
+  "text": "You might ask: why not batch a hundred users together so one weight read serves a hundred tokens at once? Continuous batching helps hugely, until two walls hit. First, a hundred KV caches quickly exhaust the VRAM memory limit. Second, huge batches increase per-token latency, making streaming feel painfully slow.",
+  "transcript": "You might ask, why not batch 100 users together so one weight red serves 100 tokens at once? Continuous batching helps hugely, until two walls hit. First, 100k V-caches quickly exhaust the VRAM memory limit. Second, huge batches increase per-token latency, making streaming feel painfully slow.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 8
+    },
+    {
+      "model": "medium.en",
+      "failed": 9
+    }
+  ],
+  "duration": 17.2,
+  "failed_words": 8,
+  "failures": [
+    {
+      "index": 6,
+      "word": "a",
+      "match": "approx",
+      "heard": "100",
+      "start": 1.74
+    },
+    {
+      "index": 7,
+      "word": "hundred",
+      "match": "approx",
+      "heard": "100",
+      "start": 1.755
+    },
+    {
+      "index": 13,
+      "word": "read",
+      "match": "approx",
+      "heard": "red",
+      "start": 3.44
+    },
+    {
+      "index": 15,
+      "word": "a",
+      "match": "approx",
+      "heard": "100",
+      "start": 3.9
+    },
+    {
+      "index": 16,
+      "word": "hundred",
+      "match": "approx",
+      "heard": "100",
+      "start": 3.933
+    },
+    {
+      "index": 29,
+      "word": "a",
+      "match": "approx",
+      "heard": "100k V",
+      "start": 9.42
+    },
+    {
+      "index": 30,
+      "word": "hundred",
+      "match": "approx",
+      "heard": "100k V",
+      "start": 9.482
+    },
+    {
+      "index": 31,
+      "word": "KV",
+      "match": "approx",
+      "heard": "100k V",
+      "start": 9.916
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "You",
+      "start": 0.0,
+      "end": 0.3,
+      "match": "exact"
+    },
+    {
+      "word": "might",
+      "start": 0.3,
+      "end": 0.42,
+      "match": "exact"
+    },
+    {
+      "word": "ask:",
+      "start": 0.42,
+      "end": 0.76,
+      "match": "exact"
+    },
+    {
+      "word": "why",
+      "start": 0.9,
+      "end": 1.22,
+      "match": "exact"
+    },
+    {
+      "word": "not",
+      "start": 1.22,
+      "end": 1.4,
+      "match": "exact"
+    },
+    {
+      "word": "batch",
+      "start": 1.4,
+      "end": 1.74,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 1.74,
+      "end": 1.755,
+      "match": "approx",
+      "heard": "100"
+    },
+    {
+      "word": "hundred",
+      "start": 1.755,
+      "end": 1.86,
+      "match": "approx",
+      "heard": "100"
+    },
+    {
+      "word": "users",
+      "start": 1.86,
+      "end": 2.3,
+      "match": "exact"
+    },
+    {
+      "word": "together",
+      "start": 2.3,
+      "end": 2.62,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 2.62,
+      "end": 2.9,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 2.9,
+      "end": 3.18,
+      "match": "exact"
+    },
+    {
+      "word": "weight",
+      "start": 3.18,
+      "end": 3.44,
+      "match": "exact"
+    },
+    {
+      "word": "read",
+      "start": 3.44,
+      "end": 3.66,
+      "match": "approx",
+      "heard": "red"
+    },
+    {
+      "word": "serves",
+      "start": 3.66,
+      "end": 3.9,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 3.9,
+      "end": 3.933,
+      "match": "approx",
+      "heard": "100"
+    },
+    {
+      "word": "hundred",
+      "start": 3.933,
+      "end": 4.16,
+      "match": "approx",
+      "heard": "100"
+    },
+    {
+      "word": "tokens",
+      "start": 4.16,
+      "end": 4.62,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 4.62,
+      "end": 4.8,
+      "match": "exact"
+    },
+    {
+      "word": "once?",
+      "start": 4.8,
+      "end": 4.98,
+      "match": "exact"
+    },
+    {
+      "word": "Continuous",
+      "start": 5.64,
+      "end": 6.2,
+      "match": "exact"
+    },
+    {
+      "word": "batching",
+      "start": 6.2,
+      "end": 6.62,
+      "match": "exact"
+    },
+    {
+      "word": "helps",
+      "start": 6.62,
+      "end": 6.74,
+      "match": "exact"
+    },
+    {
+      "word": "hugely,",
+      "start": 6.74,
+      "end": 7.16,
+      "match": "exact"
+    },
+    {
+      "word": "until",
+      "start": 7.32,
+      "end": 7.58,
+      "match": "exact"
+    },
+    {
+      "word": "two",
+      "start": 7.58,
+      "end": 7.82,
+      "match": "exact"
+    },
+    {
+      "word": "walls",
+      "start": 7.82,
+      "end": 8.04,
+      "match": "exact"
+    },
+    {
+      "word": "hit.",
+      "start": 8.04,
+      "end": 8.28,
+      "match": "exact"
+    },
+    {
+      "word": "First,",
+      "start": 8.6,
+      "end": 9.16,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 9.42,
+      "end": 9.482,
+      "match": "approx",
+      "heard": "100k V"
+    },
+    {
+      "word": "hundred",
+      "start": 9.482,
+      "end": 9.916,
+      "match": "approx",
+      "heard": "100k V"
+    },
+    {
+      "word": "KV",
+      "start": 9.916,
+      "end": 10.04,
+      "match": "approx",
+      "heard": "100k V"
+    },
+    {
+      "word": "caches",
+      "start": 10.04,
+      "end": 10.44,
+      "match": "exact"
+    },
+    {
+      "word": "quickly",
+      "start": 10.44,
+      "end": 10.7,
+      "match": "exact"
+    },
+    {
+      "word": "exhaust",
+      "start": 10.7,
+      "end": 11.08,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 11.08,
+      "end": 11.36,
+      "match": "exact"
+    },
+    {
+      "word": "VRAM",
+      "start": 11.36,
+      "end": 11.68,
+      "match": "exact"
+    },
+    {
+      "word": "memory",
+      "start": 11.68,
+      "end": 11.86,
+      "match": "exact"
+    },
+    {
+      "word": "limit.",
+      "start": 11.86,
+      "end": 12.2,
+      "match": "exact"
+    },
+    {
+      "word": "Second,",
+      "start": 12.48,
+      "end": 13.04,
+      "match": "exact"
+    },
+    {
+      "word": "huge",
+      "start": 13.26,
+      "end": 13.44,
+      "match": "exact"
+    },
+    {
+      "word": "batches",
+      "start": 13.44,
+      "end": 13.86,
+      "match": "exact"
+    },
+    {
+      "word": "increase",
+      "start": 13.86,
+      "end": 14.06,
+      "match": "exact"
+    },
+    {
+      "word": "per-token",
+      "start": 14.06,
+      "end": 14.56,
+      "match": "exact"
+    },
+    {
+      "word": "latency,",
+      "start": 14.56,
+      "end": 14.84,
+      "match": "exact"
+    },
+    {
+      "word": "making",
+      "start": 15.12,
+      "end": 15.46,
+      "match": "exact"
+    },
+    {
+      "word": "streaming",
+      "start": 15.46,
+      "end": 15.82,
+      "match": "exact"
+    },
+    {
+      "word": "feel",
+      "start": 15.82,
+      "end": 16.06,
+      "match": "exact"
+    },
+    {
+      "word": "painfully",
+      "start": 16.06,
+      "end": 16.52,
+      "match": "exact"
+    },
+    {
+      "word": "slow.",
+      "start": 16.52,
+      "end": 16.82,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "You",
+      "start": 0.0,
+      "end": 0.3
+    },
+    {
+      "word": "might",
+      "start": 0.3,
+      "end": 0.42
+    },
+    {
+      "word": "ask,",
+      "start": 0.42,
+      "end": 0.76
+    },
+    {
+      "word": "why",
+      "start": 0.9,
+      "end": 1.22
+    },
+    {
+      "word": "not",
+      "start": 1.22,
+      "end": 1.4
+    },
+    {
+      "word": "batch",
+      "start": 1.4,
+      "end": 1.74
+    },
+    {
+      "word": "100",
+      "start": 1.74,
+      "end": 1.86
+    },
+    {
+      "word": "users",
+      "start": 1.86,
+      "end": 2.3
+    },
+    {
+      "word": "together",
+      "start": 2.3,
+      "end": 2.62
+    },
+    {
+      "word": "so",
+      "start": 2.62,
+      "end": 2.9
+    },
+    {
+      "word": "one",
+      "start": 2.9,
+      "end": 3.18
+    },
+    {
+      "word": "weight",
+      "start": 3.18,
+      "end": 3.44
+    },
+    {
+      "word": "red",
+      "start": 3.44,
+      "end": 3.66
+    },
+    {
+      "word": "serves",
+      "start": 3.66,
+      "end": 3.9
+    },
+    {
+      "word": "100",
+      "start": 3.9,
+      "end": 4.16
+    },
+    {
+      "word": "tokens",
+      "start": 4.16,
+      "end": 4.62
+    },
+    {
+      "word": "at",
+      "start": 4.62,
+      "end": 4.8
+    },
+    {
+      "word": "once?",
+      "start": 4.8,
+      "end": 4.98
+    },
+    {
+      "word": "Continuous",
+      "start": 5.64,
+      "end": 6.2
+    },
+    {
+      "word": "batching",
+      "start": 6.2,
+      "end": 6.62
+    },
+    {
+      "word": "helps",
+      "start": 6.62,
+      "end": 6.74
+    },
+    {
+      "word": "hugely,",
+      "start": 6.74,
+      "end": 7.16
+    },
+    {
+      "word": "until",
+      "start": 7.32,
+      "end": 7.58
+    },
+    {
+      "word": "two",
+      "start": 7.58,
+      "end": 7.82
+    },
+    {
+      "word": "walls",
+      "start": 7.82,
+      "end": 8.04
+    },
+    {
+      "word": "hit.",
+      "start": 8.04,
+      "end": 8.28
+    },
+    {
+      "word": "First,",
+      "start": 8.6,
+      "end": 9.16
+    },
+    {
+      "word": "100k",
+      "start": 9.42,
+      "end": 9.86
+    },
+    {
+      "word": "V",
+      "start": 9.86,
+      "end": 10.04
+    },
+    {
+      "word": "-caches",
+      "start": 10.04,
+      "end": 10.44
+    },
+    {
+      "word": "quickly",
+      "start": 10.44,
+      "end": 10.7
+    },
+    {
+      "word": "exhaust",
+      "start": 10.7,
+      "end": 11.08
+    },
+    {
+      "word": "the",
+      "start": 11.08,
+      "end": 11.36
+    },
+    {
+      "word": "VRAM",
+      "start": 11.36,
+      "end": 11.68
+    },
+    {
+      "word": "memory",
+      "start": 11.68,
+      "end": 11.86
+    },
+    {
+      "word": "limit.",
+      "start": 11.86,
+      "end": 12.2
+    },
+    {
+      "word": "Second,",
+      "start": 12.48,
+      "end": 13.04
+    },
+    {
+      "word": "huge",
+      "start": 13.26,
+      "end": 13.44
+    },
+    {
+      "word": "batches",
+      "start": 13.44,
+      "end": 13.86
+    },
+    {
+      "word": "increase",
+      "start": 13.86,
+      "end": 14.06
+    },
+    {
+      "word": "per",
+      "start": 14.06,
+      "end": 14.34
+    },
+    {
+      "word": "-token",
+      "start": 14.34,
+      "end": 14.56
+    },
+    {
+      "word": "latency,",
+      "start": 14.56,
+      "end": 14.84
+    },
+    {
+      "word": "making",
+      "start": 15.12,
+      "end": 15.46
+    },
+    {
+      "word": "streaming",
+      "start": 15.46,
+      "end": 15.82
+    },
+    {
+      "word": "feel",
+      "start": 15.82,
+      "end": 16.06
+    },
+    {
+      "word": "painfully",
+      "start": 16.06,
+      "end": 16.52
+    },
+    {
+      "word": "slow.",
+      "start": 16.52,
+      "end": 16.82
+    }
+  ]
+}

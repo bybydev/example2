@@ -1,0 +1,591 @@
+{
+  "audio": "017.look-at-a.mp3",
+  "paragraph": 17,
+  "text": "Look at a typical coding agent call and the inversion is stark. Ninety-three percent of your token volume might be cached input context, costing just a couple of pennies. Meanwhile, the remaining seven percent of reasoning and output tokens can eat seventy-five percent of your total bill.",
+  "transcript": "Look at a typical coding agent call and the inversion is stark. 93% of your token volume might be cashed input context, costing just a couple of pennies. Meanwhile, the remaining 7% of reasoning and output tokens can eat 75% of your total bill.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 6
+    },
+    {
+      "model": "medium.en",
+      "failed": 6
+    }
+  ],
+  "duration": 13.08,
+  "failed_words": 6,
+  "failures": [
+    {
+      "index": 12,
+      "word": "Ninety-three",
+      "match": "approx",
+      "heard": "93",
+      "start": 2.98
+    },
+    {
+      "index": 13,
+      "word": "percent",
+      "match": "approx",
+      "heard": "93",
+      "start": 3.273
+    },
+    {
+      "index": 20,
+      "word": "cached",
+      "match": "approx",
+      "heard": "cashed",
+      "start": 5.1
+    },
+    {
+      "index": 33,
+      "word": "percent",
+      "match": "interpolated",
+      "heard": "",
+      "start": 9.38
+    },
+    {
+      "index": 41,
+      "word": "seventy-five",
+      "match": "approx",
+      "heard": "75",
+      "start": 11.2
+    },
+    {
+      "index": 42,
+      "word": "percent",
+      "match": "approx",
+      "heard": "75",
+      "start": 11.432
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Look",
+      "start": 0.0,
+      "end": 0.3,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 0.3,
+      "end": 0.42,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 0.42,
+      "end": 0.46,
+      "match": "exact"
+    },
+    {
+      "word": "typical",
+      "start": 0.46,
+      "end": 0.72,
+      "match": "exact"
+    },
+    {
+      "word": "coding",
+      "start": 0.72,
+      "end": 1.08,
+      "match": "exact"
+    },
+    {
+      "word": "agent",
+      "start": 1.08,
+      "end": 1.26,
+      "match": "exact"
+    },
+    {
+      "word": "call",
+      "start": 1.26,
+      "end": 1.58,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 1.58,
+      "end": 1.82,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 1.82,
+      "end": 1.88,
+      "match": "exact"
+    },
+    {
+      "word": "inversion",
+      "start": 1.88,
+      "end": 2.14,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 2.14,
+      "end": 2.46,
+      "match": "exact"
+    },
+    {
+      "word": "stark.",
+      "start": 2.46,
+      "end": 2.74,
+      "match": "exact"
+    },
+    {
+      "word": "Ninety-three",
+      "start": 2.98,
+      "end": 3.273,
+      "match": "approx",
+      "heard": "93"
+    },
+    {
+      "word": "percent",
+      "start": 3.273,
+      "end": 3.46,
+      "match": "approx",
+      "heard": "93"
+    },
+    {
+      "word": "of",
+      "start": 3.84,
+      "end": 4.06,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 4.06,
+      "end": 4.16,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 4.16,
+      "end": 4.38,
+      "match": "exact"
+    },
+    {
+      "word": "volume",
+      "start": 4.38,
+      "end": 4.66,
+      "match": "exact"
+    },
+    {
+      "word": "might",
+      "start": 4.66,
+      "end": 4.94,
+      "match": "exact"
+    },
+    {
+      "word": "be",
+      "start": 4.94,
+      "end": 5.1,
+      "match": "exact"
+    },
+    {
+      "word": "cached",
+      "start": 5.1,
+      "end": 5.5,
+      "match": "approx",
+      "heard": "cashed"
+    },
+    {
+      "word": "input",
+      "start": 5.5,
+      "end": 5.62,
+      "match": "exact"
+    },
+    {
+      "word": "context,",
+      "start": 5.62,
+      "end": 6.1,
+      "match": "exact"
+    },
+    {
+      "word": "costing",
+      "start": 6.36,
+      "end": 6.76,
+      "match": "exact"
+    },
+    {
+      "word": "just",
+      "start": 6.76,
+      "end": 6.96,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 6.96,
+      "end": 7.08,
+      "match": "exact"
+    },
+    {
+      "word": "couple",
+      "start": 7.08,
+      "end": 7.28,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 7.28,
+      "end": 7.38,
+      "match": "exact"
+    },
+    {
+      "word": "pennies.",
+      "start": 7.38,
+      "end": 7.8,
+      "match": "exact"
+    },
+    {
+      "word": "Meanwhile,",
+      "start": 7.86,
+      "end": 8.34,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 8.58,
+      "end": 8.86,
+      "match": "exact"
+    },
+    {
+      "word": "remaining",
+      "start": 8.86,
+      "end": 9.06,
+      "match": "exact"
+    },
+    {
+      "word": "seven",
+      "start": 9.06,
+      "end": 9.38,
+      "match": "exact"
+    },
+    {
+      "word": "percent",
+      "start": 9.38,
+      "end": 9.66,
+      "match": "interpolated",
+      "heard": ""
+    },
+    {
+      "word": "of",
+      "start": 9.66,
+      "end": 9.84,
+      "match": "exact"
+    },
+    {
+      "word": "reasoning",
+      "start": 9.84,
+      "end": 10.12,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 10.12,
+      "end": 10.3,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 10.3,
+      "end": 10.48,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 10.48,
+      "end": 10.88,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 10.88,
+      "end": 11.08,
+      "match": "exact"
+    },
+    {
+      "word": "eat",
+      "start": 11.08,
+      "end": 11.2,
+      "match": "exact"
+    },
+    {
+      "word": "seventy-five",
+      "start": 11.2,
+      "end": 11.432,
+      "match": "approx",
+      "heard": "75"
+    },
+    {
+      "word": "percent",
+      "start": 11.432,
+      "end": 11.58,
+      "match": "approx",
+      "heard": "75"
+    },
+    {
+      "word": "of",
+      "start": 11.98,
+      "end": 12.22,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 12.22,
+      "end": 12.3,
+      "match": "exact"
+    },
+    {
+      "word": "total",
+      "start": 12.3,
+      "end": 12.5,
+      "match": "exact"
+    },
+    {
+      "word": "bill.",
+      "start": 12.5,
+      "end": 12.7,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Look",
+      "start": 0.0,
+      "end": 0.3
+    },
+    {
+      "word": "at",
+      "start": 0.3,
+      "end": 0.42
+    },
+    {
+      "word": "a",
+      "start": 0.42,
+      "end": 0.46
+    },
+    {
+      "word": "typical",
+      "start": 0.46,
+      "end": 0.72
+    },
+    {
+      "word": "coding",
+      "start": 0.72,
+      "end": 1.08
+    },
+    {
+      "word": "agent",
+      "start": 1.08,
+      "end": 1.26
+    },
+    {
+      "word": "call",
+      "start": 1.26,
+      "end": 1.58
+    },
+    {
+      "word": "and",
+      "start": 1.58,
+      "end": 1.82
+    },
+    {
+      "word": "the",
+      "start": 1.82,
+      "end": 1.88
+    },
+    {
+      "word": "inversion",
+      "start": 1.88,
+      "end": 2.14
+    },
+    {
+      "word": "is",
+      "start": 2.14,
+      "end": 2.46
+    },
+    {
+      "word": "stark.",
+      "start": 2.46,
+      "end": 2.74
+    },
+    {
+      "word": "93",
+      "start": 2.98,
+      "end": 3.46
+    },
+    {
+      "word": "%",
+      "start": 3.46,
+      "end": 3.84
+    },
+    {
+      "word": "of",
+      "start": 3.84,
+      "end": 4.06
+    },
+    {
+      "word": "your",
+      "start": 4.06,
+      "end": 4.16
+    },
+    {
+      "word": "token",
+      "start": 4.16,
+      "end": 4.38
+    },
+    {
+      "word": "volume",
+      "start": 4.38,
+      "end": 4.66
+    },
+    {
+      "word": "might",
+      "start": 4.66,
+      "end": 4.94
+    },
+    {
+      "word": "be",
+      "start": 4.94,
+      "end": 5.1
+    },
+    {
+      "word": "cashed",
+      "start": 5.1,
+      "end": 5.5
+    },
+    {
+      "word": "input",
+      "start": 5.5,
+      "end": 5.62
+    },
+    {
+      "word": "context,",
+      "start": 5.62,
+      "end": 6.1
+    },
+    {
+      "word": "costing",
+      "start": 6.36,
+      "end": 6.76
+    },
+    {
+      "word": "just",
+      "start": 6.76,
+      "end": 6.96
+    },
+    {
+      "word": "a",
+      "start": 6.96,
+      "end": 7.08
+    },
+    {
+      "word": "couple",
+      "start": 7.08,
+      "end": 7.28
+    },
+    {
+      "word": "of",
+      "start": 7.28,
+      "end": 7.38
+    },
+    {
+      "word": "pennies.",
+      "start": 7.38,
+      "end": 7.8
+    },
+    {
+      "word": "Meanwhile,",
+      "start": 7.86,
+      "end": 8.34
+    },
+    {
+      "word": "the",
+      "start": 8.58,
+      "end": 8.86
+    },
+    {
+      "word": "remaining",
+      "start": 8.86,
+      "end": 9.06
+    },
+    {
+      "word": "7",
+      "start": 9.06,
+      "end": 9.38
+    },
+    {
+      "word": "%",
+      "start": 9.38,
+      "end": 9.66
+    },
+    {
+      "word": "of",
+      "start": 9.66,
+      "end": 9.84
+    },
+    {
+      "word": "reasoning",
+      "start": 9.84,
+      "end": 10.12
+    },
+    {
+      "word": "and",
+      "start": 10.12,
+      "end": 10.3
+    },
+    {
+      "word": "output",
+      "start": 10.3,
+      "end": 10.48
+    },
+    {
+      "word": "tokens",
+      "start": 10.48,
+      "end": 10.88
+    },
+    {
+      "word": "can",
+      "start": 10.88,
+      "end": 11.08
+    },
+    {
+      "word": "eat",
+      "start": 11.08,
+      "end": 11.2
+    },
+    {
+      "word": "75",
+      "start": 11.2,
+      "end": 11.58
+    },
+    {
+      "word": "%",
+      "start": 11.58,
+      "end": 11.98
+    },
+    {
+      "word": "of",
+      "start": 11.98,
+      "end": 12.22
+    },
+    {
+      "word": "your",
+      "start": 12.22,
+      "end": 12.3
+    },
+    {
+      "word": "total",
+      "start": 12.3,
+      "end": 12.5
+    },
+    {
+      "word": "bill.",
+      "start": 12.5,
+      "end": 12.7
+    }
+  ]
+}

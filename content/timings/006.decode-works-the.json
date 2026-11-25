@@ -1,0 +1,558 @@
+{
+  "audio": "006.decode-works-the.mp3",
+  "paragraph": 6,
+  "text": "Decode works the opposite way. Language models are autoregressive, meaning they only generate one token at a time. Each new word depends on the previous word, so the GPU must finish token ninety-nine and feed it back in before it can even start computing token one hundred.",
+  "transcript": "Decode works the opposite way. Language models are autoregressive, meaning they only generate one token at a time. Each new word depends on the previous word, so the GPU must finish token 99 and feed it back in before it can even start computing token 100.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 3
+    }
+  ],
+  "duration": 15.56,
+  "failed_words": 3,
+  "failures": [
+    {
+      "index": 32,
+      "word": "ninety-nine",
+      "match": "approx",
+      "heard": "99",
+      "start": 11.0
+    },
+    {
+      "index": 45,
+      "word": "one",
+      "match": "approx",
+      "heard": "100.",
+      "start": 14.42
+    },
+    {
+      "index": 46,
+      "word": "hundred.",
+      "match": "approx",
+      "heard": "100.",
+      "start": 14.46
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Decode",
+      "start": 0.0,
+      "end": 0.64,
+      "match": "exact"
+    },
+    {
+      "word": "works",
+      "start": 0.64,
+      "end": 0.88,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.88,
+      "end": 1.14,
+      "match": "exact"
+    },
+    {
+      "word": "opposite",
+      "start": 1.14,
+      "end": 1.48,
+      "match": "exact"
+    },
+    {
+      "word": "way.",
+      "start": 1.48,
+      "end": 1.76,
+      "match": "exact"
+    },
+    {
+      "word": "Language",
+      "start": 2.18,
+      "end": 2.74,
+      "match": "exact"
+    },
+    {
+      "word": "models",
+      "start": 2.74,
+      "end": 3.02,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 3.02,
+      "end": 3.38,
+      "match": "exact"
+    },
+    {
+      "word": "autoregressive,",
+      "start": 3.38,
+      "end": 4.22,
+      "match": "exact"
+    },
+    {
+      "word": "meaning",
+      "start": 4.3,
+      "end": 4.54,
+      "match": "exact"
+    },
+    {
+      "word": "they",
+      "start": 4.54,
+      "end": 4.74,
+      "match": "exact"
+    },
+    {
+      "word": "only",
+      "start": 4.74,
+      "end": 4.96,
+      "match": "exact"
+    },
+    {
+      "word": "generate",
+      "start": 4.96,
+      "end": 5.36,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 5.36,
+      "end": 5.66,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 5.66,
+      "end": 6.02,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 6.02,
+      "end": 6.22,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 6.22,
+      "end": 6.32,
+      "match": "exact"
+    },
+    {
+      "word": "time.",
+      "start": 6.32,
+      "end": 6.56,
+      "match": "exact"
+    },
+    {
+      "word": "Each",
+      "start": 6.8,
+      "end": 7.24,
+      "match": "exact"
+    },
+    {
+      "word": "new",
+      "start": 7.24,
+      "end": 7.46,
+      "match": "exact"
+    },
+    {
+      "word": "word",
+      "start": 7.46,
+      "end": 7.74,
+      "match": "exact"
+    },
+    {
+      "word": "depends",
+      "start": 7.74,
+      "end": 8.02,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 8.02,
+      "end": 8.3,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 8.3,
+      "end": 8.38,
+      "match": "exact"
+    },
+    {
+      "word": "previous",
+      "start": 8.38,
+      "end": 8.66,
+      "match": "exact"
+    },
+    {
+      "word": "word,",
+      "start": 8.66,
+      "end": 9.04,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 9.18,
+      "end": 9.56,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 9.56,
+      "end": 9.66,
+      "match": "exact"
+    },
+    {
+      "word": "GPU",
+      "start": 9.66,
+      "end": 10.02,
+      "match": "exact"
+    },
+    {
+      "word": "must",
+      "start": 10.02,
+      "end": 10.36,
+      "match": "exact"
+    },
+    {
+      "word": "finish",
+      "start": 10.36,
+      "end": 10.68,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 10.68,
+      "end": 11.0,
+      "match": "exact"
+    },
+    {
+      "word": "ninety-nine",
+      "start": 11.0,
+      "end": 11.4,
+      "match": "approx",
+      "heard": "99"
+    },
+    {
+      "word": "and",
+      "start": 11.4,
+      "end": 11.86,
+      "match": "exact"
+    },
+    {
+      "word": "feed",
+      "start": 11.86,
+      "end": 12.24,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 12.24,
+      "end": 12.4,
+      "match": "exact"
+    },
+    {
+      "word": "back",
+      "start": 12.4,
+      "end": 12.52,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 12.52,
+      "end": 12.76,
+      "match": "exact"
+    },
+    {
+      "word": "before",
+      "start": 12.76,
+      "end": 13.08,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 13.08,
+      "end": 13.26,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 13.26,
+      "end": 13.34,
+      "match": "exact"
+    },
+    {
+      "word": "even",
+      "start": 13.34,
+      "end": 13.52,
+      "match": "exact"
+    },
+    {
+      "word": "start",
+      "start": 13.52,
+      "end": 13.7,
+      "match": "exact"
+    },
+    {
+      "word": "computing",
+      "start": 13.7,
+      "end": 14.0,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 14.0,
+      "end": 14.42,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 14.42,
+      "end": 14.46,
+      "match": "approx",
+      "heard": "100."
+    },
+    {
+      "word": "hundred.",
+      "start": 14.46,
+      "end": 14.74,
+      "match": "approx",
+      "heard": "100."
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Decode",
+      "start": 0.0,
+      "end": 0.64
+    },
+    {
+      "word": "works",
+      "start": 0.64,
+      "end": 0.88
+    },
+    {
+      "word": "the",
+      "start": 0.88,
+      "end": 1.14
+    },
+    {
+      "word": "opposite",
+      "start": 1.14,
+      "end": 1.48
+    },
+    {
+      "word": "way.",
+      "start": 1.48,
+      "end": 1.76
+    },
+    {
+      "word": "Language",
+      "start": 2.18,
+      "end": 2.74
+    },
+    {
+      "word": "models",
+      "start": 2.74,
+      "end": 3.02
+    },
+    {
+      "word": "are",
+      "start": 3.02,
+      "end": 3.38
+    },
+    {
+      "word": "autoregressive,",
+      "start": 3.38,
+      "end": 4.22
+    },
+    {
+      "word": "meaning",
+      "start": 4.3,
+      "end": 4.54
+    },
+    {
+      "word": "they",
+      "start": 4.54,
+      "end": 4.74
+    },
+    {
+      "word": "only",
+      "start": 4.74,
+      "end": 4.96
+    },
+    {
+      "word": "generate",
+      "start": 4.96,
+      "end": 5.36
+    },
+    {
+      "word": "one",
+      "start": 5.36,
+      "end": 5.66
+    },
+    {
+      "word": "token",
+      "start": 5.66,
+      "end": 6.02
+    },
+    {
+      "word": "at",
+      "start": 6.02,
+      "end": 6.22
+    },
+    {
+      "word": "a",
+      "start": 6.22,
+      "end": 6.32
+    },
+    {
+      "word": "time.",
+      "start": 6.32,
+      "end": 6.56
+    },
+    {
+      "word": "Each",
+      "start": 6.8,
+      "end": 7.24
+    },
+    {
+      "word": "new",
+      "start": 7.24,
+      "end": 7.46
+    },
+    {
+      "word": "word",
+      "start": 7.46,
+      "end": 7.74
+    },
+    {
+      "word": "depends",
+      "start": 7.74,
+      "end": 8.02
+    },
+    {
+      "word": "on",
+      "start": 8.02,
+      "end": 8.3
+    },
+    {
+      "word": "the",
+      "start": 8.3,
+      "end": 8.38
+    },
+    {
+      "word": "previous",
+      "start": 8.38,
+      "end": 8.66
+    },
+    {
+      "word": "word,",
+      "start": 8.66,
+      "end": 9.04
+    },
+    {
+      "word": "so",
+      "start": 9.18,
+      "end": 9.56
+    },
+    {
+      "word": "the",
+      "start": 9.56,
+      "end": 9.66
+    },
+    {
+      "word": "GPU",
+      "start": 9.66,
+      "end": 10.02
+    },
+    {
+      "word": "must",
+      "start": 10.02,
+      "end": 10.36
+    },
+    {
+      "word": "finish",
+      "start": 10.36,
+      "end": 10.68
+    },
+    {
+      "word": "token",
+      "start": 10.68,
+      "end": 11.0
+    },
+    {
+      "word": "99",
+      "start": 11.0,
+      "end": 11.4
+    },
+    {
+      "word": "and",
+      "start": 11.4,
+      "end": 11.86
+    },
+    {
+      "word": "feed",
+      "start": 11.86,
+      "end": 12.24
+    },
+    {
+      "word": "it",
+      "start": 12.24,
+      "end": 12.4
+    },
+    {
+      "word": "back",
+      "start": 12.4,
+      "end": 12.52
+    },
+    {
+      "word": "in",
+      "start": 12.52,
+      "end": 12.76
+    },
+    {
+      "word": "before",
+      "start": 12.76,
+      "end": 13.08
+    },
+    {
+      "word": "it",
+      "start": 13.08,
+      "end": 13.26
+    },
+    {
+      "word": "can",
+      "start": 13.26,
+      "end": 13.34
+    },
+    {
+      "word": "even",
+      "start": 13.34,
+      "end": 13.52
+    },
+    {
+      "word": "start",
+      "start": 13.52,
+      "end": 13.7
+    },
+    {
+      "word": "computing",
+      "start": 13.7,
+      "end": 14.0
+    },
+    {
+      "word": "token",
+      "start": 14.0,
+      "end": 14.42
+    },
+    {
+      "word": "100.",
+      "start": 14.42,
+      "end": 14.74
+    }
+  ]
+}
