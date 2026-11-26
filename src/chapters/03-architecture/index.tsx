@@ -245,10 +245,7 @@ export const ArchitectureChapter: React.FC<ChapterComponentProps> = ({ chapter, 
             {SERVERS.map((srv, idx) => (
               <div
                 key={srv.name}
-                style={{
-                  opacity: showServers ? fadeIn(frame, serverCue + idx * 10, 14) : 0,
-                  ...slideUpStyle(frame, fps, serverCue + idx * 10, 18),
-                }}
+                style={slideUpStyle(frame, fps, serverCue + idx * 10, 18)}
               >
                 <NodeBox
                   tag="MCP SERVER"

@@ -184,8 +184,8 @@ export const HowToUseChapter: React.FC<ChapterComponentProps> = ({ chapter, clip
           {/* Right Track: Builder Path */}
           <div
             style={{
-              opacity: showBuilder ? fadeIn(frame, r24.start, 16) : 0.24,
               ...slideUpStyle(frame, fps, r24.start, 20),
+              opacity: showBuilder ? fadeIn(frame, r24.start, 16) : 0.24,
             }}
           >
             <Card

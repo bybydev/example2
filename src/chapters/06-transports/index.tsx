@@ -147,8 +147,8 @@ export const TransportsChapter: React.FC<ChapterComponentProps> = ({ chapter, cl
             {/* Right Card: Remote Streamable HTTP */}
             <div
               style={{
-                opacity: showRemote ? fadeIn(frame, cloudCue, 16) : 0.22,
                 ...slideUpStyle(frame, fps, cloudCue, 22),
+                opacity: showRemote ? fadeIn(frame, cloudCue, 16) : 0.22,
               }}
             >
               <Card
