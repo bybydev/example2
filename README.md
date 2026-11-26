@@ -1,27 +1,22 @@
 # Remotion YouTube Template
 
-Long-form YouTube video project built with Remotion, Google Colab voiceover + Whisper timings (`mycli`), AI-assisted chapter implementation, thumbnail still rendering, and GitHub Actions rendering.
+Long-form YouTube video template built with Remotion, Google Colab voiceover + Whisper timings (`mycli`), bundled fonts/SFX/music, AI-assisted chapter implementation, thumbnail still rendering, and GitHub Actions CI rendering.
 
-## Workflow
+## Quick Start
 
-1. **Write the narration script & visual plan** in `content/voiceover.md` (one paragraph per blank line) and `content/storyboard.md`.
-2. **Sync voiceover, MP3 loudnorm (-14 LUFS), Whisper timings, and timeline in one command** (shares a single Colab GPU session):
-   ```bash
-   mycli remotion sync --voice /path/to/voice.wav
-   ```
-   *(Or run individual stages with `--only normalize,timeline`, `--from timings`, or `mycli remotion timeline`.)*
-3. **Build chapter visuals & thumbnail**:
-   - Implement chapters under `src/chapters/` using `src/theme/tokens.ts`, `src/ui/Stage.tsx`, `src/ui/primitives.tsx`, and `src/ui/motion.ts` (`clipRange`, `cueFrame`, `sceneWindow`, `slideUpStyle`).
-   - Customize `src/Thumbnail.tsx` (1280×720 `<Still id="Thumbnail" />`, keeping the bottom-right corner clear for YouTube's timestamp badge).
-4. **Prepare YouTube publishing assets**:
-   - Generate `content/subtitles.srt` using `mycli` (in-video `CaptionsOverlay` is off by default in favor of a native YouTube caption track).
-   - Fill out `content/youtube-metadata.md` with title ideas, description + `content/youtube-chapters.txt` timestamps, tags, and checklist.
-5. **Check project health before pushing**:
-   ```bash
-   mycli remotion doctor
-   ```
-6. **Render on GitHub Actions** (manually dispatch `Render Remotion Video`), which renders the MP4 + `thumbnail.png` (and attaches `content/subtitles.srt` when present) as a GitHub pre-release, then pull and watch:
-   ```bash
-   mycli remotion play
-   mycli remotion download
-   ```
+Follow the step-by-step production SOP and live checklist in **[WORKFLOW.md](WORKFLOW.md)**:
+
+1. Draft & approve `content/storyboard.md` *(gate before writing narration)*
+2. Update `video.config.json` & write `content/voiceover.md`
+3. Sync audio, Whisper timings, timeline & SRT (`mycli remotion sync`)
+4. Implement chapters in `src/chapters/` + thumbnail in `src/Thumbnail.tsx`
+5. Finalize `content/youtube-metadata.md` & run `mycli remotion doctor`
+6. Commit, push, and dispatch `.github/workflows/render.yml` in GitHub Actions
+
+## Bundled Assets & Reference Docs
+
+- **Production SOP & Checklist:** [WORKFLOW.md](WORKFLOW.md)
+- **Fonts (`public/fonts/`):** `Inter`, `JetBrains Mono`, `Space Grotesk`, `Caveat` — see [public/fonts/README.md](public/fonts/README.md)
+- **Sound Effects (`public/sfx/`):** 33 royalty-free SFX mapped to typed `<Sfx />` names — see [public/sfx/README.md](public/sfx/README.md)
+- **Background Music (`public/music/`):** Looping ambient bed wired to `<BackgroundMusic />` — see [public/music/README.md](public/music/README.md)
+- **Agent Guidelines:** Architecture rules and conventions — see [AGENTS.md](AGENTS.md)

@@ -21,6 +21,8 @@ export const TOKENS = {
   fonts: {
     sans: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
     mono: '"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace',
+    display: '"Space Grotesk", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+    handwritten: "Caveat, cursive",
   },
   layout: {
     safeMarginX: 120,

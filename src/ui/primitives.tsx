@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, interpolate } from "remotion";
 import { TOKENS, TONE_STYLES } from "../theme/tokens";
 import type { SemanticTone } from "../theme/tokens";
 import type { SceneWindowState } from "./motion";
@@ -127,8 +127,9 @@ export const SectionTitle: React.FC<{
       <h2
         style={{
           margin: 0,
+          fontFamily: TOKENS.fonts.display,
           fontSize: 54,
-          fontWeight: 800,
+          fontWeight: 700,
           lineHeight: 1.12,
           letterSpacing: "-0.02em",
           color: TOKENS.colors.textPrimary,
@@ -256,6 +257,121 @@ export const MeterBar: React.FC<{
           }}
         />
       </div>
+    </div>
+  );
+};
+
+export const AnimatedNumber: React.FC<{
+  to: number;
+  from?: number;
+  progress?: number;
+  decimals?: number;
+  prefix?: string;
+  suffix?: string;
+  locale?: string;
+  tone?: SemanticTone;
+  size?: number;
+  style?: React.CSSProperties;
+}> = ({
+  to,
+  from = 0,
+  progress = 1,
+  decimals = 0,
+  prefix = "",
+  suffix = "",
+  locale = "en-US",
+  tone = "cyan",
+  size = 56,
+  style,
+}) => {
+  const clamped = Math.max(0, Math.min(1, progress));
+  const current = interpolate(clamped, [0, 1], [from, to]);
+  const formatted = current.toLocaleString(locale, {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
+
+  return (
+    <span
+      style={{
+        fontFamily: TOKENS.fonts.mono,
+        fontVariantNumeric: "tabular-nums",
+        fontSize: size,
+        fontWeight: 800,
+        lineHeight: 1.05,
+        letterSpacing: "-0.03em",
+        color: TONE_STYLES[tone].main,
+        ...style,
+      }}
+    >
+      {prefix}
+      {formatted}
+      {suffix}
+    </span>
+  );
+};
+
+export const StatCallout: React.FC<{
+  label: string;
+  value: React.ReactNode;
+  detail?: string;
+  tone?: SemanticTone;
+  glow?: boolean;
+  style?: React.CSSProperties;
+}> = ({ label, value, detail, tone = "cyan", glow = false, style }) => {
+  const t = TONE_STYLES[tone];
+  return (
+    <div
+      style={{
+        backgroundColor: TOKENS.colors.surface,
+        border: `1.5px solid ${tone === "neutral" ? TOKENS.colors.border : t.border}`,
+        borderRadius: 20,
+        padding: "22px 26px",
+        boxShadow: glow
+          ? `0 0 36px ${t.glow}, 0 18px 36px rgba(0, 0, 0, 0.35)`
+          : "0 14px 32px rgba(0, 0, 0, 0.28)",
+        display: "flex",
+        flexDirection: "column",
+        gap: 8,
+        ...style,
+      }}
+    >
+      <div
+        style={{
+          fontFamily: TOKENS.fonts.mono,
+          fontSize: 15,
+          fontWeight: 700,
+          letterSpacing: "0.08em",
+          textTransform: "uppercase",
+          color: TOKENS.colors.textSecondary,
+        }}
+      >
+        {label}
+      </div>
+      <div
+        style={{
+          fontFamily: TOKENS.fonts.mono,
+          fontVariantNumeric: "tabular-nums",
+          fontSize: 52,
+          fontWeight: 800,
+          lineHeight: 1.05,
+          letterSpacing: "-0.03em",
+          color: t.main,
+        }}
+      >
+        {value}
+      </div>
+      {detail ? (
+        <div
+          style={{
+            fontSize: 18,
+            lineHeight: 1.35,
+            color: TOKENS.colors.textSecondary,
+          }}
+        >
+          {detail}
+        </div>
+      ) : null}
     </div>
   );
 };

@@ -25,7 +25,7 @@
 
 Chapters:
 00:00 Hook
-00:05 Main Point
+00:06 Main Point
 
 Key Takeaways:
 • <Takeaway 1>

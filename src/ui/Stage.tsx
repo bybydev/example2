@@ -90,6 +90,7 @@ export const Stage: React.FC<{
               {chapterTitle ? (
                 <span
                   style={{
+                    fontFamily: TOKENS.fonts.display,
                     fontSize: 22,
                     fontWeight: 600,
                     letterSpacing: "0.06em",

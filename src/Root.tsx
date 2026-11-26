@@ -3,6 +3,9 @@ import { Composition, Still } from "remotion";
 import { Thumbnail } from "./Thumbnail";
 import { ChapterPreview, Video } from "./Video";
 import { timeline } from "./lib/timeline";
+import { loadFonts } from "./theme/fonts";
+
+loadFonts();
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -14,6 +17,7 @@ export const RemotionRoot: React.FC = () => {
         fps={timeline.fps}
         width={timeline.width}
         height={timeline.height}
+        defaultProps={{ showCaptions: false, musicVolume: 0.08 }}
       />
       <Still id="Thumbnail" component={Thumbnail} width={1280} height={720} />
       {timeline.chapters.map((chapter) => (
@@ -25,7 +29,11 @@ export const RemotionRoot: React.FC = () => {
           fps={timeline.fps}
           width={timeline.width}
           height={timeline.height}
-          defaultProps={{ chapterId: chapter.id }}
+          defaultProps={{
+            chapterId: chapter.id,
+            showCaptions: false,
+            musicVolume: 0.08,
+          }}
         />
       ))}
     </>

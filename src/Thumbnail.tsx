@@ -62,8 +62,9 @@ export const Thumbnail: React.FC = () => {
 
           <div
             style={{
+              fontFamily: TOKENS.fonts.display,
               fontSize: 84,
-              fontWeight: 900,
+              fontWeight: 700,
               lineHeight: 1.02,
               letterSpacing: "-0.04em",
               textShadow: "0 12px 36px rgba(0, 0, 0, 0.55)",
