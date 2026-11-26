@@ -1,2 +1,8 @@
-00:00 Hook
-00:05 Main Point
+00:00 The Isolated AI Problem
+00:55 Why MCP Exists: M × N vs. M + N
+02:20 Architecture: Host, Client & Server
+03:41 Tools, Resources & Prompts
+05:06 Live Trace: Inside an MCP Request
+06:19 Local vs. Remote: stdio & Streamable HTTP
+07:22 How to Start Using MCP Today
+08:19 Trade-offs, Security & The Big Picture

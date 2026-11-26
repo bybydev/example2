@@ -1,0 +1,653 @@
+{
+  "audio": "004.to-see-why.mp3",
+  "paragraph": 4,
+  "text": "To see why a shared standard matters so much, look at how AI integrations worked before MCP. Every AI application had to write custom glue code for every external service, while every tool company had to rebuild separate plugins for each AI platform—constantly juggling incompatible tool schemas, different authentication flows, and endless maintenance whenever an API changed.",
+  "transcript": "To see why a shared standard matters so much, look at how AI integrations worked before MCP. Every AI application had to write custom glue code for every external service, while every tool company had to rebuild separate plugins for each AI platform, constantly juggling incompatible tool schemas, different authentication flows, and endless maintenance whenever an API changed.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 20.76,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "To",
+      "start": 0.0,
+      "end": 0.24,
+      "match": "exact"
+    },
+    {
+      "word": "see",
+      "start": 0.24,
+      "end": 0.42,
+      "match": "exact"
+    },
+    {
+      "word": "why",
+      "start": 0.42,
+      "end": 0.58,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 0.58,
+      "end": 0.7,
+      "match": "exact"
+    },
+    {
+      "word": "shared",
+      "start": 0.7,
+      "end": 0.96,
+      "match": "exact"
+    },
+    {
+      "word": "standard",
+      "start": 0.96,
+      "end": 1.28,
+      "match": "exact"
+    },
+    {
+      "word": "matters",
+      "start": 1.28,
+      "end": 1.66,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 1.66,
+      "end": 1.88,
+      "match": "exact"
+    },
+    {
+      "word": "much,",
+      "start": 1.88,
+      "end": 2.2,
+      "match": "exact"
+    },
+    {
+      "word": "look",
+      "start": 2.3,
+      "end": 2.54,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 2.54,
+      "end": 2.66,
+      "match": "exact"
+    },
+    {
+      "word": "how",
+      "start": 2.66,
+      "end": 2.76,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 2.76,
+      "end": 3.02,
+      "match": "exact"
+    },
+    {
+      "word": "integrations",
+      "start": 3.02,
+      "end": 3.7,
+      "match": "exact"
+    },
+    {
+      "word": "worked",
+      "start": 3.7,
+      "end": 3.92,
+      "match": "exact"
+    },
+    {
+      "word": "before",
+      "start": 3.92,
+      "end": 4.28,
+      "match": "exact"
+    },
+    {
+      "word": "MCP.",
+      "start": 4.28,
+      "end": 4.88,
+      "match": "exact"
+    },
+    {
+      "word": "Every",
+      "start": 5.24,
+      "end": 5.8,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 5.8,
+      "end": 6.08,
+      "match": "exact"
+    },
+    {
+      "word": "application",
+      "start": 6.08,
+      "end": 6.48,
+      "match": "exact"
+    },
+    {
+      "word": "had",
+      "start": 6.48,
+      "end": 6.9,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 6.9,
+      "end": 7.04,
+      "match": "exact"
+    },
+    {
+      "word": "write",
+      "start": 7.04,
+      "end": 7.18,
+      "match": "exact"
+    },
+    {
+      "word": "custom",
+      "start": 7.18,
+      "end": 7.58,
+      "match": "exact"
+    },
+    {
+      "word": "glue",
+      "start": 7.58,
+      "end": 7.78,
+      "match": "exact"
+    },
+    {
+      "word": "code",
+      "start": 7.78,
+      "end": 8.02,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 8.02,
+      "end": 8.28,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 8.28,
+      "end": 8.5,
+      "match": "exact"
+    },
+    {
+      "word": "external",
+      "start": 8.5,
+      "end": 8.9,
+      "match": "exact"
+    },
+    {
+      "word": "service,",
+      "start": 8.9,
+      "end": 9.36,
+      "match": "exact"
+    },
+    {
+      "word": "while",
+      "start": 9.52,
+      "end": 9.88,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 9.88,
+      "end": 10.1,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 10.1,
+      "end": 10.34,
+      "match": "exact"
+    },
+    {
+      "word": "company",
+      "start": 10.34,
+      "end": 10.66,
+      "match": "exact"
+    },
+    {
+      "word": "had",
+      "start": 10.66,
+      "end": 10.92,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 10.92,
+      "end": 11.04,
+      "match": "exact"
+    },
+    {
+      "word": "rebuild",
+      "start": 11.04,
+      "end": 11.34,
+      "match": "exact"
+    },
+    {
+      "word": "separate",
+      "start": 11.34,
+      "end": 11.66,
+      "match": "exact"
+    },
+    {
+      "word": "plugins",
+      "start": 11.66,
+      "end": 12.04,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 12.04,
+      "end": 12.34,
+      "match": "exact"
+    },
+    {
+      "word": "each",
+      "start": 12.34,
+      "end": 12.56,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 12.56,
+      "end": 12.84,
+      "match": "exact"
+    },
+    {
+      "word": "platform—constantly",
+      "start": 12.84,
+      "end": 14.18,
+      "match": "exact"
+    },
+    {
+      "word": "juggling",
+      "start": 14.18,
+      "end": 14.7,
+      "match": "exact"
+    },
+    {
+      "word": "incompatible",
+      "start": 14.7,
+      "end": 15.46,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 15.46,
+      "end": 15.66,
+      "match": "exact"
+    },
+    {
+      "word": "schemas,",
+      "start": 15.66,
+      "end": 16.24,
+      "match": "exact"
+    },
+    {
+      "word": "different",
+      "start": 16.28,
+      "end": 16.62,
+      "match": "exact"
+    },
+    {
+      "word": "authentication",
+      "start": 16.62,
+      "end": 17.04,
+      "match": "exact"
+    },
+    {
+      "word": "flows,",
+      "start": 17.04,
+      "end": 17.58,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 17.86,
+      "end": 18.22,
+      "match": "exact"
+    },
+    {
+      "word": "endless",
+      "start": 18.22,
+      "end": 18.44,
+      "match": "exact"
+    },
+    {
+      "word": "maintenance",
+      "start": 18.44,
+      "end": 18.8,
+      "match": "exact"
+    },
+    {
+      "word": "whenever",
+      "start": 18.8,
+      "end": 19.18,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 19.18,
+      "end": 19.42,
+      "match": "exact"
+    },
+    {
+      "word": "API",
+      "start": 19.42,
+      "end": 19.66,
+      "match": "exact"
+    },
+    {
+      "word": "changed.",
+      "start": 19.66,
+      "end": 20.12,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "To",
+      "start": 0.0,
+      "end": 0.24
+    },
+    {
+      "word": "see",
+      "start": 0.24,
+      "end": 0.42
+    },
+    {
+      "word": "why",
+      "start": 0.42,
+      "end": 0.58
+    },
+    {
+      "word": "a",
+      "start": 0.58,
+      "end": 0.7
+    },
+    {
+      "word": "shared",
+      "start": 0.7,
+      "end": 0.96
+    },
+    {
+      "word": "standard",
+      "start": 0.96,
+      "end": 1.28
+    },
+    {
+      "word": "matters",
+      "start": 1.28,
+      "end": 1.66
+    },
+    {
+      "word": "so",
+      "start": 1.66,
+      "end": 1.88
+    },
+    {
+      "word": "much,",
+      "start": 1.88,
+      "end": 2.2
+    },
+    {
+      "word": "look",
+      "start": 2.3,
+      "end": 2.54
+    },
+    {
+      "word": "at",
+      "start": 2.54,
+      "end": 2.66
+    },
+    {
+      "word": "how",
+      "start": 2.66,
+      "end": 2.76
+    },
+    {
+      "word": "AI",
+      "start": 2.76,
+      "end": 3.02
+    },
+    {
+      "word": "integrations",
+      "start": 3.02,
+      "end": 3.7
+    },
+    {
+      "word": "worked",
+      "start": 3.7,
+      "end": 3.92
+    },
+    {
+      "word": "before",
+      "start": 3.92,
+      "end": 4.28
+    },
+    {
+      "word": "MCP.",
+      "start": 4.28,
+      "end": 4.88
+    },
+    {
+      "word": "Every",
+      "start": 5.24,
+      "end": 5.8
+    },
+    {
+      "word": "AI",
+      "start": 5.8,
+      "end": 6.08
+    },
+    {
+      "word": "application",
+      "start": 6.08,
+      "end": 6.48
+    },
+    {
+      "word": "had",
+      "start": 6.48,
+      "end": 6.9
+    },
+    {
+      "word": "to",
+      "start": 6.9,
+      "end": 7.04
+    },
+    {
+      "word": "write",
+      "start": 7.04,
+      "end": 7.18
+    },
+    {
+      "word": "custom",
+      "start": 7.18,
+      "end": 7.58
+    },
+    {
+      "word": "glue",
+      "start": 7.58,
+      "end": 7.78
+    },
+    {
+      "word": "code",
+      "start": 7.78,
+      "end": 8.02
+    },
+    {
+      "word": "for",
+      "start": 8.02,
+      "end": 8.28
+    },
+    {
+      "word": "every",
+      "start": 8.28,
+      "end": 8.5
+    },
+    {
+      "word": "external",
+      "start": 8.5,
+      "end": 8.9
+    },
+    {
+      "word": "service,",
+      "start": 8.9,
+      "end": 9.36
+    },
+    {
+      "word": "while",
+      "start": 9.52,
+      "end": 9.88
+    },
+    {
+      "word": "every",
+      "start": 9.88,
+      "end": 10.1
+    },
+    {
+      "word": "tool",
+      "start": 10.1,
+      "end": 10.34
+    },
+    {
+      "word": "company",
+      "start": 10.34,
+      "end": 10.66
+    },
+    {
+      "word": "had",
+      "start": 10.66,
+      "end": 10.92
+    },
+    {
+      "word": "to",
+      "start": 10.92,
+      "end": 11.04
+    },
+    {
+      "word": "rebuild",
+      "start": 11.04,
+      "end": 11.34
+    },
+    {
+      "word": "separate",
+      "start": 11.34,
+      "end": 11.66
+    },
+    {
+      "word": "plugins",
+      "start": 11.66,
+      "end": 12.04
+    },
+    {
+      "word": "for",
+      "start": 12.04,
+      "end": 12.34
+    },
+    {
+      "word": "each",
+      "start": 12.34,
+      "end": 12.56
+    },
+    {
+      "word": "AI",
+      "start": 12.56,
+      "end": 12.84
+    },
+    {
+      "word": "platform,",
+      "start": 12.84,
+      "end": 13.26
+    },
+    {
+      "word": "constantly",
+      "start": 13.58,
+      "end": 14.18
+    },
+    {
+      "word": "juggling",
+      "start": 14.18,
+      "end": 14.7
+    },
+    {
+      "word": "incompatible",
+      "start": 14.7,
+      "end": 15.46
+    },
+    {
+      "word": "tool",
+      "start": 15.46,
+      "end": 15.66
+    },
+    {
+      "word": "schemas,",
+      "start": 15.66,
+      "end": 16.24
+    },
+    {
+      "word": "different",
+      "start": 16.28,
+      "end": 16.62
+    },
+    {
+      "word": "authentication",
+      "start": 16.62,
+      "end": 17.04
+    },
+    {
+      "word": "flows,",
+      "start": 17.04,
+      "end": 17.58
+    },
+    {
+      "word": "and",
+      "start": 17.86,
+      "end": 18.22
+    },
+    {
+      "word": "endless",
+      "start": 18.22,
+      "end": 18.44
+    },
+    {
+      "word": "maintenance",
+      "start": 18.44,
+      "end": 18.8
+    },
+    {
+      "word": "whenever",
+      "start": 18.8,
+      "end": 19.18
+    },
+    {
+      "word": "an",
+      "start": 19.18,
+      "end": 19.42
+    },
+    {
+      "word": "API",
+      "start": 19.42,
+      "end": 19.66
+    },
+    {
+      "word": "changed.",
+      "start": 19.66,
+      "end": 20.12
+    }
+  ]
+}

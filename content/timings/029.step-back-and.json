@@ -1,0 +1,691 @@
+{
+  "audio": "029.step-back-and.mp3",
+  "paragraph": 29,
+  "text": "Step back and the big picture is remarkably clean. MCP takes AI out of an isolated chat box and turns it into an interoperable partner—collapsing an unmanageable web of custom integrations into one open standard built on hosts, clients, servers, tools, resources, and prompts. Instead of copy-pasting your work to AI, your AI meets you where your work already lives.",
+  "transcript": "Step back, and the big picture is remarkably clean. MCP takes AI out of an isolated chat box and turns it into an interoperable partner, collapsing an unmanageable web of custom integrations into one open standard built on hosts, clients, servers, tools, resources, and prompts. Instead of copy-pasting your work to AI, your AI meets you where your work already lives.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 20.08,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Step",
+      "start": 0.0,
+      "end": 0.34,
+      "match": "exact"
+    },
+    {
+      "word": "back",
+      "start": 0.34,
+      "end": 0.68,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 0.76,
+      "end": 1.0,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 1.0,
+      "end": 1.1,
+      "match": "exact"
+    },
+    {
+      "word": "big",
+      "start": 1.1,
+      "end": 1.24,
+      "match": "exact"
+    },
+    {
+      "word": "picture",
+      "start": 1.24,
+      "end": 1.56,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 1.56,
+      "end": 1.76,
+      "match": "exact"
+    },
+    {
+      "word": "remarkably",
+      "start": 1.76,
+      "end": 2.06,
+      "match": "exact"
+    },
+    {
+      "word": "clean.",
+      "start": 2.06,
+      "end": 2.46,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 2.98,
+      "end": 3.5,
+      "match": "exact"
+    },
+    {
+      "word": "takes",
+      "start": 3.5,
+      "end": 3.8,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 3.8,
+      "end": 4.1,
+      "match": "exact"
+    },
+    {
+      "word": "out",
+      "start": 4.1,
+      "end": 4.38,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 4.38,
+      "end": 4.52,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 4.52,
+      "end": 4.54,
+      "match": "exact"
+    },
+    {
+      "word": "isolated",
+      "start": 4.54,
+      "end": 4.9,
+      "match": "exact"
+    },
+    {
+      "word": "chat",
+      "start": 4.9,
+      "end": 5.16,
+      "match": "exact"
+    },
+    {
+      "word": "box",
+      "start": 5.16,
+      "end": 5.44,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 5.44,
+      "end": 5.78,
+      "match": "exact"
+    },
+    {
+      "word": "turns",
+      "start": 5.78,
+      "end": 6.02,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 6.02,
+      "end": 6.16,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 6.16,
+      "end": 6.42,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 6.42,
+      "end": 6.7,
+      "match": "exact"
+    },
+    {
+      "word": "interoperable",
+      "start": 6.7,
+      "end": 7.22,
+      "match": "exact"
+    },
+    {
+      "word": "partner—collapsing",
+      "start": 7.22,
+      "end": 8.24,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 8.24,
+      "end": 8.48,
+      "match": "exact"
+    },
+    {
+      "word": "unmanageable",
+      "start": 8.48,
+      "end": 9.08,
+      "match": "exact"
+    },
+    {
+      "word": "web",
+      "start": 9.08,
+      "end": 9.28,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 9.28,
+      "end": 9.54,
+      "match": "exact"
+    },
+    {
+      "word": "custom",
+      "start": 9.54,
+      "end": 9.8,
+      "match": "exact"
+    },
+    {
+      "word": "integrations",
+      "start": 9.8,
+      "end": 10.4,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 10.4,
+      "end": 10.6,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 10.6,
+      "end": 10.8,
+      "match": "exact"
+    },
+    {
+      "word": "open",
+      "start": 10.8,
+      "end": 11.08,
+      "match": "exact"
+    },
+    {
+      "word": "standard",
+      "start": 11.08,
+      "end": 11.44,
+      "match": "exact"
+    },
+    {
+      "word": "built",
+      "start": 11.44,
+      "end": 11.76,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 11.76,
+      "end": 11.96,
+      "match": "exact"
+    },
+    {
+      "word": "hosts,",
+      "start": 11.96,
+      "end": 12.26,
+      "match": "exact"
+    },
+    {
+      "word": "clients,",
+      "start": 12.48,
+      "end": 12.8,
+      "match": "exact"
+    },
+    {
+      "word": "servers,",
+      "start": 13.12,
+      "end": 13.44,
+      "match": "exact"
+    },
+    {
+      "word": "tools,",
+      "start": 13.76,
+      "end": 14.16,
+      "match": "exact"
+    },
+    {
+      "word": "resources,",
+      "start": 14.36,
+      "end": 14.78,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 14.94,
+      "end": 15.2,
+      "match": "exact"
+    },
+    {
+      "word": "prompts.",
+      "start": 15.2,
+      "end": 15.48,
+      "match": "exact"
+    },
+    {
+      "word": "Instead",
+      "start": 15.74,
+      "end": 16.26,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 16.26,
+      "end": 16.46,
+      "match": "exact"
+    },
+    {
+      "word": "copy-pasting",
+      "start": 16.46,
+      "end": 17.0,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 17.0,
+      "end": 17.18,
+      "match": "exact"
+    },
+    {
+      "word": "work",
+      "start": 17.18,
+      "end": 17.38,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 17.38,
+      "end": 17.48,
+      "match": "exact"
+    },
+    {
+      "word": "AI,",
+      "start": 17.48,
+      "end": 17.68,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 17.96,
+      "end": 18.16,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 18.16,
+      "end": 18.36,
+      "match": "exact"
+    },
+    {
+      "word": "meets",
+      "start": 18.36,
+      "end": 18.68,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 18.68,
+      "end": 18.8,
+      "match": "exact"
+    },
+    {
+      "word": "where",
+      "start": 18.8,
+      "end": 18.96,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 18.96,
+      "end": 19.08,
+      "match": "exact"
+    },
+    {
+      "word": "work",
+      "start": 19.08,
+      "end": 19.24,
+      "match": "exact"
+    },
+    {
+      "word": "already",
+      "start": 19.24,
+      "end": 19.46,
+      "match": "exact"
+    },
+    {
+      "word": "lives.",
+      "start": 19.46,
+      "end": 19.74,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Step",
+      "start": 0.0,
+      "end": 0.34
+    },
+    {
+      "word": "back,",
+      "start": 0.34,
+      "end": 0.68
+    },
+    {
+      "word": "and",
+      "start": 0.76,
+      "end": 1.0
+    },
+    {
+      "word": "the",
+      "start": 1.0,
+      "end": 1.1
+    },
+    {
+      "word": "big",
+      "start": 1.1,
+      "end": 1.24
+    },
+    {
+      "word": "picture",
+      "start": 1.24,
+      "end": 1.56
+    },
+    {
+      "word": "is",
+      "start": 1.56,
+      "end": 1.76
+    },
+    {
+      "word": "remarkably",
+      "start": 1.76,
+      "end": 2.06
+    },
+    {
+      "word": "clean.",
+      "start": 2.06,
+      "end": 2.46
+    },
+    {
+      "word": "MCP",
+      "start": 2.98,
+      "end": 3.5
+    },
+    {
+      "word": "takes",
+      "start": 3.5,
+      "end": 3.8
+    },
+    {
+      "word": "AI",
+      "start": 3.8,
+      "end": 4.1
+    },
+    {
+      "word": "out",
+      "start": 4.1,
+      "end": 4.38
+    },
+    {
+      "word": "of",
+      "start": 4.38,
+      "end": 4.52
+    },
+    {
+      "word": "an",
+      "start": 4.52,
+      "end": 4.54
+    },
+    {
+      "word": "isolated",
+      "start": 4.54,
+      "end": 4.9
+    },
+    {
+      "word": "chat",
+      "start": 4.9,
+      "end": 5.16
+    },
+    {
+      "word": "box",
+      "start": 5.16,
+      "end": 5.44
+    },
+    {
+      "word": "and",
+      "start": 5.44,
+      "end": 5.78
+    },
+    {
+      "word": "turns",
+      "start": 5.78,
+      "end": 6.02
+    },
+    {
+      "word": "it",
+      "start": 6.02,
+      "end": 6.16
+    },
+    {
+      "word": "into",
+      "start": 6.16,
+      "end": 6.42
+    },
+    {
+      "word": "an",
+      "start": 6.42,
+      "end": 6.7
+    },
+    {
+      "word": "interoperable",
+      "start": 6.7,
+      "end": 7.22
+    },
+    {
+      "word": "partner,",
+      "start": 7.22,
+      "end": 7.5
+    },
+    {
+      "word": "collapsing",
+      "start": 7.7,
+      "end": 8.24
+    },
+    {
+      "word": "an",
+      "start": 8.24,
+      "end": 8.48
+    },
+    {
+      "word": "unmanageable",
+      "start": 8.48,
+      "end": 9.08
+    },
+    {
+      "word": "web",
+      "start": 9.08,
+      "end": 9.28
+    },
+    {
+      "word": "of",
+      "start": 9.28,
+      "end": 9.54
+    },
+    {
+      "word": "custom",
+      "start": 9.54,
+      "end": 9.8
+    },
+    {
+      "word": "integrations",
+      "start": 9.8,
+      "end": 10.4
+    },
+    {
+      "word": "into",
+      "start": 10.4,
+      "end": 10.6
+    },
+    {
+      "word": "one",
+      "start": 10.6,
+      "end": 10.8
+    },
+    {
+      "word": "open",
+      "start": 10.8,
+      "end": 11.08
+    },
+    {
+      "word": "standard",
+      "start": 11.08,
+      "end": 11.44
+    },
+    {
+      "word": "built",
+      "start": 11.44,
+      "end": 11.76
+    },
+    {
+      "word": "on",
+      "start": 11.76,
+      "end": 11.96
+    },
+    {
+      "word": "hosts,",
+      "start": 11.96,
+      "end": 12.26
+    },
+    {
+      "word": "clients,",
+      "start": 12.48,
+      "end": 12.8
+    },
+    {
+      "word": "servers,",
+      "start": 13.12,
+      "end": 13.44
+    },
+    {
+      "word": "tools,",
+      "start": 13.76,
+      "end": 14.16
+    },
+    {
+      "word": "resources,",
+      "start": 14.36,
+      "end": 14.78
+    },
+    {
+      "word": "and",
+      "start": 14.94,
+      "end": 15.2
+    },
+    {
+      "word": "prompts.",
+      "start": 15.2,
+      "end": 15.48
+    },
+    {
+      "word": "Instead",
+      "start": 15.74,
+      "end": 16.26
+    },
+    {
+      "word": "of",
+      "start": 16.26,
+      "end": 16.46
+    },
+    {
+      "word": "copy",
+      "start": 16.46,
+      "end": 16.7
+    },
+    {
+      "word": "-pasting",
+      "start": 16.7,
+      "end": 17.0
+    },
+    {
+      "word": "your",
+      "start": 17.0,
+      "end": 17.18
+    },
+    {
+      "word": "work",
+      "start": 17.18,
+      "end": 17.38
+    },
+    {
+      "word": "to",
+      "start": 17.38,
+      "end": 17.48
+    },
+    {
+      "word": "AI,",
+      "start": 17.48,
+      "end": 17.68
+    },
+    {
+      "word": "your",
+      "start": 17.96,
+      "end": 18.16
+    },
+    {
+      "word": "AI",
+      "start": 18.16,
+      "end": 18.36
+    },
+    {
+      "word": "meets",
+      "start": 18.36,
+      "end": 18.68
+    },
+    {
+      "word": "you",
+      "start": 18.68,
+      "end": 18.8
+    },
+    {
+      "word": "where",
+      "start": 18.8,
+      "end": 18.96
+    },
+    {
+      "word": "your",
+      "start": 18.96,
+      "end": 19.08
+    },
+    {
+      "word": "work",
+      "start": 19.08,
+      "end": 19.24
+    },
+    {
+      "word": "already",
+      "start": 19.24,
+      "end": 19.46
+    },
+    {
+      "word": "lives.",
+      "start": 19.46,
+      "end": 19.74
+    }
+  ]
+}

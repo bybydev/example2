@@ -5,28 +5,126 @@
   "fps": 30,
   "width": 1920,
   "height": 1080,
-  "totalFrames": 360,
-  "totalSeconds": 12.0,
+  "totalFrames": 17819,
+  "totalSeconds": 593.967,
   "chapters": [
     {
       "id": "01-hook",
       "compositionId": "Chapter01Hook",
-      "title": "Hook",
+      "title": "The Isolated AI Problem",
       "startFrame": 0,
-      "durationInFrames": 168,
+      "durationInFrames": 1648,
       "startSeconds": 0.0,
-      "durationSeconds": 5.6,
-      "paragraphs": [1]
+      "durationSeconds": 54.933,
+      "paragraphs": [
+        1,
+        2,
+        3
+      ]
     },
     {
-      "id": "02-main-point",
-      "compositionId": "Chapter02MainPoint",
-      "title": "Main Point",
-      "startFrame": 168,
-      "durationInFrames": 192,
-      "startSeconds": 5.6,
-      "durationSeconds": 6.4,
-      "paragraphs": [2]
+      "id": "02-mn-problem",
+      "compositionId": "Chapter02MnProblem",
+      "title": "Why MCP Exists: M × N vs. M + N",
+      "startFrame": 1648,
+      "durationInFrames": 2542,
+      "startSeconds": 54.933,
+      "durationSeconds": 84.733,
+      "paragraphs": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "03-architecture",
+      "compositionId": "Chapter03Architecture",
+      "title": "Architecture: Host, Client & Server",
+      "startFrame": 4190,
+      "durationInFrames": 2452,
+      "startSeconds": 139.667,
+      "durationSeconds": 81.733,
+      "paragraphs": [
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "id": "04-primitives",
+      "compositionId": "Chapter04Primitives",
+      "title": "Tools, Resources & Prompts",
+      "startFrame": 6642,
+      "durationInFrames": 2537,
+      "startSeconds": 221.4,
+      "durationSeconds": 84.567,
+      "paragraphs": [
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "id": "05-walkthrough",
+      "compositionId": "Chapter05Walkthrough",
+      "title": "Live Trace: Inside an MCP Request",
+      "startFrame": 9179,
+      "durationInFrames": 2202,
+      "startSeconds": 305.967,
+      "durationSeconds": 73.4,
+      "paragraphs": [
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "id": "06-transports",
+      "compositionId": "Chapter06Transports",
+      "title": "Local vs. Remote: stdio & Streamable HTTP",
+      "startFrame": 11381,
+      "durationInFrames": 1872,
+      "startSeconds": 379.367,
+      "durationSeconds": 62.4,
+      "paragraphs": [
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "id": "07-how-to-use",
+      "compositionId": "Chapter07HowToUse",
+      "title": "How to Start Using MCP Today",
+      "startFrame": 13253,
+      "durationInFrames": 1709,
+      "startSeconds": 441.767,
+      "durationSeconds": 56.967,
+      "paragraphs": [
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "id": "08-pitfalls-and-outro",
+      "compositionId": "Chapter08PitfallsAndOutro",
+      "title": "Trade-offs, Security & The Big Picture",
+      "startFrame": 14962,
+      "durationInFrames": 2857,
+      "startSeconds": 498.733,
+      "durationSeconds": 95.233,
+      "paragraphs": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
     }
   ],
   "clips": [
@@ -34,25 +132,8921 @@
       "paragraph": 1,
       "chapterId": "01-hook",
       "startFrame": 0,
-      "durationInFrames": 150,
+      "durationInFrames": 552,
       "leadFrames": 9,
-      "voiceFrames": 129,
-      "audioFile": null,
-      "timingSource": "none",
-      "text": "Welcome to this video. Replace this hook paragraph with your real opening narration.",
-      "words": []
+      "voiceFrames": 531,
+      "audioFile": "voiceover/001.modern-ai-models.mp3",
+      "timingSource": "whisper",
+      "text": "Modern AI models are remarkably capable, yet most of the time they sit trapped inside a plain chat window. Whenever you want real help, you end up playing the human copy-paste bridge: grabbing text from Slack, pasting notes from Notion, uploading files from your laptop, and manually typing the final results back into your calendar or project tracker.",
+      "words": [
+        {
+          "w": "Modern",
+          "s": 9,
+          "e": 22
+        },
+        {
+          "w": "AI",
+          "s": 22,
+          "e": 29
+        },
+        {
+          "w": "models",
+          "s": 29,
+          "e": 37
+        },
+        {
+          "w": "are",
+          "s": 37,
+          "e": 48
+        },
+        {
+          "w": "remarkably",
+          "s": 48,
+          "e": 58
+        },
+        {
+          "w": "capable,",
+          "s": 58,
+          "e": 73
+        },
+        {
+          "w": "yet",
+          "s": 80,
+          "e": 89
+        },
+        {
+          "w": "most",
+          "s": 89,
+          "e": 95
+        },
+        {
+          "w": "of",
+          "s": 95,
+          "e": 100
+        },
+        {
+          "w": "the",
+          "s": 100,
+          "e": 102
+        },
+        {
+          "w": "time",
+          "s": 102,
+          "e": 111
+        },
+        {
+          "w": "they",
+          "s": 111,
+          "e": 117
+        },
+        {
+          "w": "sit",
+          "s": 117,
+          "e": 122
+        },
+        {
+          "w": "trapped",
+          "s": 122,
+          "e": 130
+        },
+        {
+          "w": "inside",
+          "s": 130,
+          "e": 138
+        },
+        {
+          "w": "a",
+          "s": 138,
+          "e": 144
+        },
+        {
+          "w": "plain",
+          "s": 144,
+          "e": 149
+        },
+        {
+          "w": "chat",
+          "s": 149,
+          "e": 155
+        },
+        {
+          "w": "window.",
+          "s": 155,
+          "e": 164
+        },
+        {
+          "w": "Whenever",
+          "s": 178,
+          "e": 193
+        },
+        {
+          "w": "you",
+          "s": 193,
+          "e": 199
+        },
+        {
+          "w": "want",
+          "s": 199,
+          "e": 203
+        },
+        {
+          "w": "real",
+          "s": 203,
+          "e": 209
+        },
+        {
+          "w": "help,",
+          "s": 209,
+          "e": 219
+        },
+        {
+          "w": "you",
+          "s": 223,
+          "e": 225
+        },
+        {
+          "w": "end",
+          "s": 224,
+          "e": 229
+        },
+        {
+          "w": "up",
+          "s": 229,
+          "e": 233
+        },
+        {
+          "w": "playing",
+          "s": 233,
+          "e": 239
+        },
+        {
+          "w": "the",
+          "s": 239,
+          "e": 245
+        },
+        {
+          "w": "human",
+          "s": 245,
+          "e": 252
+        },
+        {
+          "w": "copy-paste",
+          "s": 252,
+          "e": 273
+        },
+        {
+          "w": "bridge:",
+          "s": 273,
+          "e": 280
+        },
+        {
+          "w": "grabbing",
+          "s": 287,
+          "e": 298
+        },
+        {
+          "w": "text",
+          "s": 298,
+          "e": 308
+        },
+        {
+          "w": "from",
+          "s": 308,
+          "e": 314
+        },
+        {
+          "w": "Slack,",
+          "s": 314,
+          "e": 322
+        },
+        {
+          "w": "pasting",
+          "s": 328,
+          "e": 341
+        },
+        {
+          "w": "notes",
+          "s": 341,
+          "e": 346
+        },
+        {
+          "w": "from",
+          "s": 346,
+          "e": 352
+        },
+        {
+          "w": "Notion,",
+          "s": 352,
+          "e": 362
+        },
+        {
+          "w": "uploading",
+          "s": 365,
+          "e": 382
+        },
+        {
+          "w": "files",
+          "s": 382,
+          "e": 392
+        },
+        {
+          "w": "from",
+          "s": 392,
+          "e": 399
+        },
+        {
+          "w": "your",
+          "s": 399,
+          "e": 403
+        },
+        {
+          "w": "laptop,",
+          "s": 403,
+          "e": 411
+        },
+        {
+          "w": "and",
+          "s": 419,
+          "e": 427
+        },
+        {
+          "w": "manually",
+          "s": 427,
+          "e": 438
+        },
+        {
+          "w": "typing",
+          "s": 438,
+          "e": 448
+        },
+        {
+          "w": "the",
+          "s": 448,
+          "e": 455
+        },
+        {
+          "w": "final",
+          "s": 455,
+          "e": 461
+        },
+        {
+          "w": "results",
+          "s": 461,
+          "e": 473
+        },
+        {
+          "w": "back",
+          "s": 473,
+          "e": 479
+        },
+        {
+          "w": "into",
+          "s": 479,
+          "e": 485
+        },
+        {
+          "w": "your",
+          "s": 485,
+          "e": 488
+        },
+        {
+          "w": "calendar",
+          "s": 488,
+          "e": 499
+        },
+        {
+          "w": "or",
+          "s": 499,
+          "e": 506
+        },
+        {
+          "w": "project",
+          "s": 506,
+          "e": 514
+        },
+        {
+          "w": "tracker.",
+          "s": 514,
+          "e": 523
+        }
+      ]
     },
     {
       "paragraph": 2,
-      "chapterId": "02-main-point",
-      "startFrame": 168,
-      "durationInFrames": 192,
+      "chapterId": "01-hook",
+      "startFrame": 552,
+      "durationInFrames": 621,
       "leadFrames": 9,
-      "voiceFrames": 171,
-      "audioFile": null,
-      "timingSource": "none",
-      "text": "Here is the second paragraph. Split your script into one paragraph per blank line so each paragraph maps to one voiceover clip and one Whisper timing sidecar.",
-      "words": []
+      "voiceFrames": 600,
+      "audioFile": "voiceover/002.that-everyday-friction.mp3",
+      "timingSource": "whisper",
+      "text": "That everyday friction is exactly what the Model Context Protocol, or MCP, was built to solve. Originally introduced by Anthropic and now supported across Claude, ChatGPT, Cursor, VS Code, Gemini, and custom agents, MCP gives AI one universal plug—a kind of USB-C port—so any assistant can safely connect to your real tools and live data.",
+      "words": [
+        {
+          "w": "That",
+          "s": 9,
+          "e": 22
+        },
+        {
+          "w": "everyday",
+          "s": 22,
+          "e": 30
+        },
+        {
+          "w": "friction",
+          "s": 30,
+          "e": 41
+        },
+        {
+          "w": "is",
+          "s": 41,
+          "e": 50
+        },
+        {
+          "w": "exactly",
+          "s": 50,
+          "e": 59
+        },
+        {
+          "w": "what",
+          "s": 59,
+          "e": 68
+        },
+        {
+          "w": "the",
+          "s": 68,
+          "e": 71
+        },
+        {
+          "w": "Model",
+          "s": 71,
+          "e": 77
+        },
+        {
+          "w": "Context",
+          "s": 77,
+          "e": 91
+        },
+        {
+          "w": "Protocol,",
+          "s": 91,
+          "e": 98
+        },
+        {
+          "w": "or",
+          "s": 108,
+          "e": 118
+        },
+        {
+          "w": "MCP,",
+          "s": 118,
+          "e": 131
+        },
+        {
+          "w": "was",
+          "s": 137,
+          "e": 145
+        },
+        {
+          "w": "built",
+          "s": 145,
+          "e": 151
+        },
+        {
+          "w": "to",
+          "s": 151,
+          "e": 155
+        },
+        {
+          "w": "solve.",
+          "s": 155,
+          "e": 164
+        },
+        {
+          "w": "Originally",
+          "s": 171,
+          "e": 188
+        },
+        {
+          "w": "introduced",
+          "s": 188,
+          "e": 200
+        },
+        {
+          "w": "by",
+          "s": 200,
+          "e": 206
+        },
+        {
+          "w": "Anthropic",
+          "s": 206,
+          "e": 218
+        },
+        {
+          "w": "and",
+          "s": 218,
+          "e": 225
+        },
+        {
+          "w": "now",
+          "s": 225,
+          "e": 229
+        },
+        {
+          "w": "supported",
+          "s": 229,
+          "e": 239
+        },
+        {
+          "w": "across",
+          "s": 239,
+          "e": 248
+        },
+        {
+          "w": "Claude,",
+          "s": 248,
+          "e": 260
+        },
+        {
+          "w": "ChatGPT,",
+          "s": 266,
+          "e": 286
+        },
+        {
+          "w": "Cursor,",
+          "s": 290,
+          "e": 305
+        },
+        {
+          "w": "VS",
+          "s": 307,
+          "e": 315
+        },
+        {
+          "w": "Code,",
+          "s": 315,
+          "e": 323
+        },
+        {
+          "w": "Gemini,",
+          "s": 331,
+          "e": 343
+        },
+        {
+          "w": "and",
+          "s": 347,
+          "e": 356
+        },
+        {
+          "w": "custom",
+          "s": 356,
+          "e": 365
+        },
+        {
+          "w": "agents,",
+          "s": 365,
+          "e": 380
+        },
+        {
+          "w": "MCP",
+          "s": 382,
+          "e": 404
+        },
+        {
+          "w": "gives",
+          "s": 404,
+          "e": 413
+        },
+        {
+          "w": "AI",
+          "s": 413,
+          "e": 422
+        },
+        {
+          "w": "one",
+          "s": 422,
+          "e": 433
+        },
+        {
+          "w": "universal",
+          "s": 433,
+          "e": 443
+        },
+        {
+          "w": "plug—a",
+          "s": 443,
+          "e": 472
+        },
+        {
+          "w": "kind",
+          "s": 472,
+          "e": 477
+        },
+        {
+          "w": "of",
+          "s": 477,
+          "e": 481
+        },
+        {
+          "w": "USB-C",
+          "s": 481,
+          "e": 495
+        },
+        {
+          "w": "port—so",
+          "s": 495,
+          "e": 515
+        },
+        {
+          "w": "any",
+          "s": 515,
+          "e": 521
+        },
+        {
+          "w": "assistant",
+          "s": 521,
+          "e": 530
+        },
+        {
+          "w": "can",
+          "s": 530,
+          "e": 540
+        },
+        {
+          "w": "safely",
+          "s": 540,
+          "e": 549
+        },
+        {
+          "w": "connect",
+          "s": 549,
+          "e": 559
+        },
+        {
+          "w": "to",
+          "s": 559,
+          "e": 563
+        },
+        {
+          "w": "your",
+          "s": 563,
+          "e": 566
+        },
+        {
+          "w": "real",
+          "s": 566,
+          "e": 572
+        },
+        {
+          "w": "tools",
+          "s": 572,
+          "e": 581
+        },
+        {
+          "w": "and",
+          "s": 581,
+          "e": 588
+        },
+        {
+          "w": "live",
+          "s": 588,
+          "e": 593
+        },
+        {
+          "w": "data.",
+          "s": 593,
+          "e": 599
+        }
+      ]
+    },
+    {
+      "paragraph": 3,
+      "chapterId": "01-hook",
+      "startFrame": 1173,
+      "durationInFrames": 457,
+      "leadFrames": 9,
+      "voiceFrames": 436,
+      "audioFile": "voiceover/003.whether-you-use.mp3",
+      "timingSource": "whisper",
+      "text": "Whether you use AI apps every day or build software yourself, learning MCP takes about ten minutes and changes how you work with AI. In this video, we will cover why MCP exists, how it works under the hood, how you can start using it today, and the real-world security limits you need to know.",
+      "words": [
+        {
+          "w": "Whether",
+          "s": 9,
+          "e": 19
+        },
+        {
+          "w": "you",
+          "s": 19,
+          "e": 22
+        },
+        {
+          "w": "use",
+          "s": 22,
+          "e": 32
+        },
+        {
+          "w": "AI",
+          "s": 32,
+          "e": 39
+        },
+        {
+          "w": "apps",
+          "s": 39,
+          "e": 49
+        },
+        {
+          "w": "every",
+          "s": 49,
+          "e": 56
+        },
+        {
+          "w": "day",
+          "s": 56,
+          "e": 61
+        },
+        {
+          "w": "or",
+          "s": 61,
+          "e": 68
+        },
+        {
+          "w": "build",
+          "s": 68,
+          "e": 73
+        },
+        {
+          "w": "software",
+          "s": 73,
+          "e": 80
+        },
+        {
+          "w": "yourself,",
+          "s": 80,
+          "e": 89
+        },
+        {
+          "w": "learning",
+          "s": 100,
+          "e": 112
+        },
+        {
+          "w": "MCP",
+          "s": 112,
+          "e": 125
+        },
+        {
+          "w": "takes",
+          "s": 125,
+          "e": 131
+        },
+        {
+          "w": "about",
+          "s": 131,
+          "e": 140
+        },
+        {
+          "w": "ten",
+          "s": 140,
+          "e": 146
+        },
+        {
+          "w": "minutes",
+          "s": 146,
+          "e": 154
+        },
+        {
+          "w": "and",
+          "s": 154,
+          "e": 161
+        },
+        {
+          "w": "changes",
+          "s": 161,
+          "e": 170
+        },
+        {
+          "w": "how",
+          "s": 170,
+          "e": 175
+        },
+        {
+          "w": "you",
+          "s": 175,
+          "e": 178
+        },
+        {
+          "w": "work",
+          "s": 178,
+          "e": 184
+        },
+        {
+          "w": "with",
+          "s": 184,
+          "e": 188
+        },
+        {
+          "w": "AI.",
+          "s": 188,
+          "e": 194
+        },
+        {
+          "w": "In",
+          "s": 207,
+          "e": 220
+        },
+        {
+          "w": "this",
+          "s": 220,
+          "e": 224
+        },
+        {
+          "w": "video,",
+          "s": 224,
+          "e": 233
+        },
+        {
+          "w": "we",
+          "s": 236,
+          "e": 240
+        },
+        {
+          "w": "will",
+          "s": 240,
+          "e": 243
+        },
+        {
+          "w": "cover",
+          "s": 243,
+          "e": 250
+        },
+        {
+          "w": "why",
+          "s": 250,
+          "e": 257
+        },
+        {
+          "w": "MCP",
+          "s": 257,
+          "e": 271
+        },
+        {
+          "w": "exists,",
+          "s": 271,
+          "e": 279
+        },
+        {
+          "w": "how",
+          "s": 290,
+          "e": 298
+        },
+        {
+          "w": "it",
+          "s": 298,
+          "e": 303
+        },
+        {
+          "w": "works",
+          "s": 303,
+          "e": 308
+        },
+        {
+          "w": "under",
+          "s": 308,
+          "e": 312
+        },
+        {
+          "w": "the",
+          "s": 312,
+          "e": 316
+        },
+        {
+          "w": "hood,",
+          "s": 316,
+          "e": 322
+        },
+        {
+          "w": "how",
+          "s": 326,
+          "e": 333
+        },
+        {
+          "w": "you",
+          "s": 333,
+          "e": 337
+        },
+        {
+          "w": "can",
+          "s": 337,
+          "e": 339
+        },
+        {
+          "w": "start",
+          "s": 338,
+          "e": 344
+        },
+        {
+          "w": "using",
+          "s": 344,
+          "e": 350
+        },
+        {
+          "w": "it",
+          "s": 350,
+          "e": 356
+        },
+        {
+          "w": "today,",
+          "s": 356,
+          "e": 362
+        },
+        {
+          "w": "and",
+          "s": 367,
+          "e": 376
+        },
+        {
+          "w": "the",
+          "s": 376,
+          "e": 379
+        },
+        {
+          "w": "real-world",
+          "s": 379,
+          "e": 394
+        },
+        {
+          "w": "security",
+          "s": 394,
+          "e": 400
+        },
+        {
+          "w": "limits",
+          "s": 400,
+          "e": 413
+        },
+        {
+          "w": "you",
+          "s": 413,
+          "e": 420
+        },
+        {
+          "w": "need",
+          "s": 420,
+          "e": 423
+        },
+        {
+          "w": "to",
+          "s": 423,
+          "e": 427
+        },
+        {
+          "w": "know.",
+          "s": 427,
+          "e": 432
+        }
+      ]
+    },
+    {
+      "paragraph": 4,
+      "chapterId": "02-mn-problem",
+      "startFrame": 1648,
+      "durationInFrames": 644,
+      "leadFrames": 9,
+      "voiceFrames": 623,
+      "audioFile": "voiceover/004.to-see-why.mp3",
+      "timingSource": "whisper",
+      "text": "To see why a shared standard matters so much, look at how AI integrations worked before MCP. Every AI application had to write custom glue code for every external service, while every tool company had to rebuild separate plugins for each AI platform—constantly juggling incompatible tool schemas, different authentication flows, and endless maintenance whenever an API changed.",
+      "words": [
+        {
+          "w": "To",
+          "s": 9,
+          "e": 16
+        },
+        {
+          "w": "see",
+          "s": 16,
+          "e": 22
+        },
+        {
+          "w": "why",
+          "s": 22,
+          "e": 26
+        },
+        {
+          "w": "a",
+          "s": 26,
+          "e": 30
+        },
+        {
+          "w": "shared",
+          "s": 30,
+          "e": 38
+        },
+        {
+          "w": "standard",
+          "s": 38,
+          "e": 47
+        },
+        {
+          "w": "matters",
+          "s": 47,
+          "e": 59
+        },
+        {
+          "w": "so",
+          "s": 59,
+          "e": 65
+        },
+        {
+          "w": "much,",
+          "s": 65,
+          "e": 75
+        },
+        {
+          "w": "look",
+          "s": 78,
+          "e": 85
+        },
+        {
+          "w": "at",
+          "s": 85,
+          "e": 89
+        },
+        {
+          "w": "how",
+          "s": 89,
+          "e": 92
+        },
+        {
+          "w": "AI",
+          "s": 92,
+          "e": 100
+        },
+        {
+          "w": "integrations",
+          "s": 100,
+          "e": 120
+        },
+        {
+          "w": "worked",
+          "s": 120,
+          "e": 127
+        },
+        {
+          "w": "before",
+          "s": 127,
+          "e": 137
+        },
+        {
+          "w": "MCP.",
+          "s": 137,
+          "e": 155
+        },
+        {
+          "w": "Every",
+          "s": 166,
+          "e": 183
+        },
+        {
+          "w": "AI",
+          "s": 183,
+          "e": 191
+        },
+        {
+          "w": "application",
+          "s": 191,
+          "e": 203
+        },
+        {
+          "w": "had",
+          "s": 203,
+          "e": 216
+        },
+        {
+          "w": "to",
+          "s": 216,
+          "e": 220
+        },
+        {
+          "w": "write",
+          "s": 220,
+          "e": 224
+        },
+        {
+          "w": "custom",
+          "s": 224,
+          "e": 236
+        },
+        {
+          "w": "glue",
+          "s": 236,
+          "e": 242
+        },
+        {
+          "w": "code",
+          "s": 242,
+          "e": 250
+        },
+        {
+          "w": "for",
+          "s": 250,
+          "e": 257
+        },
+        {
+          "w": "every",
+          "s": 257,
+          "e": 264
+        },
+        {
+          "w": "external",
+          "s": 264,
+          "e": 276
+        },
+        {
+          "w": "service,",
+          "s": 276,
+          "e": 290
+        },
+        {
+          "w": "while",
+          "s": 295,
+          "e": 305
+        },
+        {
+          "w": "every",
+          "s": 305,
+          "e": 312
+        },
+        {
+          "w": "tool",
+          "s": 312,
+          "e": 319
+        },
+        {
+          "w": "company",
+          "s": 319,
+          "e": 329
+        },
+        {
+          "w": "had",
+          "s": 329,
+          "e": 337
+        },
+        {
+          "w": "to",
+          "s": 337,
+          "e": 340
+        },
+        {
+          "w": "rebuild",
+          "s": 340,
+          "e": 349
+        },
+        {
+          "w": "separate",
+          "s": 349,
+          "e": 359
+        },
+        {
+          "w": "plugins",
+          "s": 359,
+          "e": 370
+        },
+        {
+          "w": "for",
+          "s": 370,
+          "e": 379
+        },
+        {
+          "w": "each",
+          "s": 379,
+          "e": 386
+        },
+        {
+          "w": "AI",
+          "s": 386,
+          "e": 394
+        },
+        {
+          "w": "platform—constantly",
+          "s": 394,
+          "e": 434
+        },
+        {
+          "w": "juggling",
+          "s": 434,
+          "e": 450
+        },
+        {
+          "w": "incompatible",
+          "s": 450,
+          "e": 473
+        },
+        {
+          "w": "tool",
+          "s": 473,
+          "e": 479
+        },
+        {
+          "w": "schemas,",
+          "s": 479,
+          "e": 496
+        },
+        {
+          "w": "different",
+          "s": 497,
+          "e": 508
+        },
+        {
+          "w": "authentication",
+          "s": 508,
+          "e": 520
+        },
+        {
+          "w": "flows,",
+          "s": 520,
+          "e": 536
+        },
+        {
+          "w": "and",
+          "s": 545,
+          "e": 556
+        },
+        {
+          "w": "endless",
+          "s": 556,
+          "e": 562
+        },
+        {
+          "w": "maintenance",
+          "s": 562,
+          "e": 573
+        },
+        {
+          "w": "whenever",
+          "s": 573,
+          "e": 584
+        },
+        {
+          "w": "an",
+          "s": 584,
+          "e": 592
+        },
+        {
+          "w": "API",
+          "s": 592,
+          "e": 599
+        },
+        {
+          "w": "changed.",
+          "s": 599,
+          "e": 613
+        }
+      ]
+    },
+    {
+      "paragraph": 5,
+      "chapterId": "02-mn-problem",
+      "startFrame": 2292,
+      "durationInFrames": 566,
+      "leadFrames": 9,
+      "voiceFrames": 545,
+      "audioFile": "voiceover/005.the-math-gets.mp3",
+      "timingSource": "whisper",
+      "text": "The math gets ugly fast. Imagine five AI apps trying to connect to ten everyday tools: multiply five by ten and you already have fifty separate integrations to build and maintain. Now scale up to twenty AI apps and a hundred tools across the industry, and everyone is stuck maintaining two thousand fragile, duplicated connections.",
+      "words": [
+        {
+          "w": "The",
+          "s": 9,
+          "e": 17
+        },
+        {
+          "w": "math",
+          "s": 17,
+          "e": 22
+        },
+        {
+          "w": "gets",
+          "s": 22,
+          "e": 31
+        },
+        {
+          "w": "ugly",
+          "s": 31,
+          "e": 38
+        },
+        {
+          "w": "fast.",
+          "s": 38,
+          "e": 48
+        },
+        {
+          "w": "Imagine",
+          "s": 65,
+          "e": 82
+        },
+        {
+          "w": "five",
+          "s": 82,
+          "e": 91
+        },
+        {
+          "w": "AI",
+          "s": 91,
+          "e": 101
+        },
+        {
+          "w": "apps",
+          "s": 101,
+          "e": 111
+        },
+        {
+          "w": "trying",
+          "s": 111,
+          "e": 119
+        },
+        {
+          "w": "to",
+          "s": 119,
+          "e": 124
+        },
+        {
+          "w": "connect",
+          "s": 124,
+          "e": 130
+        },
+        {
+          "w": "to",
+          "s": 130,
+          "e": 136
+        },
+        {
+          "w": "ten",
+          "s": 136,
+          "e": 141
+        },
+        {
+          "w": "everyday",
+          "s": 141,
+          "e": 151
+        },
+        {
+          "w": "tools:",
+          "s": 151,
+          "e": 164
+        },
+        {
+          "w": "multiply",
+          "s": 169,
+          "e": 183
+        },
+        {
+          "w": "five",
+          "s": 183,
+          "e": 194
+        },
+        {
+          "w": "by",
+          "s": 194,
+          "e": 200
+        },
+        {
+          "w": "ten",
+          "s": 200,
+          "e": 207
+        },
+        {
+          "w": "and",
+          "s": 212,
+          "e": 220
+        },
+        {
+          "w": "you",
+          "s": 220,
+          "e": 223
+        },
+        {
+          "w": "already",
+          "s": 223,
+          "e": 230
+        },
+        {
+          "w": "have",
+          "s": 230,
+          "e": 237
+        },
+        {
+          "w": "fifty",
+          "s": 237,
+          "e": 245
+        },
+        {
+          "w": "separate",
+          "s": 245,
+          "e": 254
+        },
+        {
+          "w": "integrations",
+          "s": 254,
+          "e": 272
+        },
+        {
+          "w": "to",
+          "s": 272,
+          "e": 277
+        },
+        {
+          "w": "build",
+          "s": 277,
+          "e": 285
+        },
+        {
+          "w": "and",
+          "s": 285,
+          "e": 290
+        },
+        {
+          "w": "maintain.",
+          "s": 290,
+          "e": 300
+        },
+        {
+          "w": "Now",
+          "s": 316,
+          "e": 332
+        },
+        {
+          "w": "scale",
+          "s": 334,
+          "e": 341
+        },
+        {
+          "w": "up",
+          "s": 341,
+          "e": 346
+        },
+        {
+          "w": "to",
+          "s": 346,
+          "e": 349
+        },
+        {
+          "w": "twenty",
+          "s": 349,
+          "e": 355
+        },
+        {
+          "w": "AI",
+          "s": 355,
+          "e": 364
+        },
+        {
+          "w": "apps",
+          "s": 364,
+          "e": 375
+        },
+        {
+          "w": "and",
+          "s": 375,
+          "e": 380
+        },
+        {
+          "w": "a",
+          "s": 380,
+          "e": 382
+        },
+        {
+          "w": "hundred",
+          "s": 381,
+          "e": 385
+        },
+        {
+          "w": "tools",
+          "s": 385,
+          "e": 398
+        },
+        {
+          "w": "across",
+          "s": 398,
+          "e": 406
+        },
+        {
+          "w": "the",
+          "s": 406,
+          "e": 414
+        },
+        {
+          "w": "industry,",
+          "s": 414,
+          "e": 425
+        },
+        {
+          "w": "and",
+          "s": 430,
+          "e": 440
+        },
+        {
+          "w": "everyone",
+          "s": 440,
+          "e": 447
+        },
+        {
+          "w": "is",
+          "s": 447,
+          "e": 452
+        },
+        {
+          "w": "stuck",
+          "s": 452,
+          "e": 458
+        },
+        {
+          "w": "maintaining",
+          "s": 458,
+          "e": 469
+        },
+        {
+          "w": "two",
+          "s": 469,
+          "e": 478
+        },
+        {
+          "w": "thousand",
+          "s": 478,
+          "e": 490
+        },
+        {
+          "w": "fragile,",
+          "s": 490,
+          "e": 498
+        },
+        {
+          "w": "duplicated",
+          "s": 503,
+          "e": 520
+        },
+        {
+          "w": "connections.",
+          "s": 520,
+          "e": 529
+        }
+      ]
+    },
+    {
+      "paragraph": 6,
+      "chapterId": "02-mn-problem",
+      "startFrame": 2858,
+      "durationInFrames": 645,
+      "leadFrames": 9,
+      "voiceFrames": 624,
+      "audioFile": "voiceover/006.mcp-breaks-that.mp3",
+      "timingSource": "whisper",
+      "text": "MCP breaks that bottleneck by introducing one open standard in the middle. Each AI app only needs to speak MCP once, and each tool only needs to expose a single MCP server. Suddenly twenty times a hundred collapses down to twenty plus a hundred—just one hundred twenty connections, a ninety-four percent drop, just like USB-C replaced drawers of proprietary chargers.",
+      "words": [
+        {
+          "w": "MCP",
+          "s": 9,
+          "e": 26
+        },
+        {
+          "w": "breaks",
+          "s": 26,
+          "e": 35
+        },
+        {
+          "w": "that",
+          "s": 35,
+          "e": 44
+        },
+        {
+          "w": "bottleneck",
+          "s": 44,
+          "e": 62
+        },
+        {
+          "w": "by",
+          "s": 62,
+          "e": 65
+        },
+        {
+          "w": "introducing",
+          "s": 65,
+          "e": 76
+        },
+        {
+          "w": "one",
+          "s": 76,
+          "e": 87
+        },
+        {
+          "w": "open",
+          "s": 87,
+          "e": 95
+        },
+        {
+          "w": "standard",
+          "s": 95,
+          "e": 105
+        },
+        {
+          "w": "in",
+          "s": 105,
+          "e": 114
+        },
+        {
+          "w": "the",
+          "s": 114,
+          "e": 116
+        },
+        {
+          "w": "middle.",
+          "s": 116,
+          "e": 123
+        },
+        {
+          "w": "Each",
+          "s": 128,
+          "e": 144
+        },
+        {
+          "w": "AI",
+          "s": 144,
+          "e": 153
+        },
+        {
+          "w": "app",
+          "s": 153,
+          "e": 161
+        },
+        {
+          "w": "only",
+          "s": 161,
+          "e": 169
+        },
+        {
+          "w": "needs",
+          "s": 169,
+          "e": 175
+        },
+        {
+          "w": "to",
+          "s": 175,
+          "e": 179
+        },
+        {
+          "w": "speak",
+          "s": 179,
+          "e": 185
+        },
+        {
+          "w": "MCP",
+          "s": 185,
+          "e": 198
+        },
+        {
+          "w": "once,",
+          "s": 198,
+          "e": 208
+        },
+        {
+          "w": "and",
+          "s": 212,
+          "e": 226
+        },
+        {
+          "w": "each",
+          "s": 226,
+          "e": 230
+        },
+        {
+          "w": "tool",
+          "s": 230,
+          "e": 239
+        },
+        {
+          "w": "only",
+          "s": 239,
+          "e": 248
+        },
+        {
+          "w": "needs",
+          "s": 248,
+          "e": 253
+        },
+        {
+          "w": "to",
+          "s": 253,
+          "e": 257
+        },
+        {
+          "w": "expose",
+          "s": 257,
+          "e": 268
+        },
+        {
+          "w": "a",
+          "s": 268,
+          "e": 275
+        },
+        {
+          "w": "single",
+          "s": 275,
+          "e": 284
+        },
+        {
+          "w": "MCP",
+          "s": 284,
+          "e": 299
+        },
+        {
+          "w": "server.",
+          "s": 299,
+          "e": 309
+        },
+        {
+          "w": "Suddenly",
+          "s": 321,
+          "e": 339
+        },
+        {
+          "w": "twenty",
+          "s": 342,
+          "e": 348
+        },
+        {
+          "w": "times",
+          "s": 348,
+          "e": 357
+        },
+        {
+          "w": "a",
+          "s": 357,
+          "e": 359
+        },
+        {
+          "w": "hundred",
+          "s": 358,
+          "e": 364
+        },
+        {
+          "w": "collapses",
+          "s": 364,
+          "e": 379
+        },
+        {
+          "w": "down",
+          "s": 379,
+          "e": 389
+        },
+        {
+          "w": "to",
+          "s": 389,
+          "e": 394
+        },
+        {
+          "w": "twenty",
+          "s": 394,
+          "e": 401
+        },
+        {
+          "w": "plus",
+          "s": 401,
+          "e": 407
+        },
+        {
+          "w": "a",
+          "s": 407,
+          "e": 409
+        },
+        {
+          "w": "hundred—just",
+          "s": 409,
+          "e": 429
+        },
+        {
+          "w": "one",
+          "s": 429,
+          "e": 431
+        },
+        {
+          "w": "hundred",
+          "s": 430,
+          "e": 443
+        },
+        {
+          "w": "twenty",
+          "s": 443,
+          "e": 446
+        },
+        {
+          "w": "connections,",
+          "s": 446,
+          "e": 465
+        },
+        {
+          "w": "a",
+          "s": 476,
+          "e": 483
+        },
+        {
+          "w": "ninety-four",
+          "s": 483,
+          "e": 496
+        },
+        {
+          "w": "percent",
+          "s": 496,
+          "e": 504
+        },
+        {
+          "w": "drop,",
+          "s": 504,
+          "e": 517
+        },
+        {
+          "w": "just",
+          "s": 523,
+          "e": 533
+        },
+        {
+          "w": "like",
+          "s": 533,
+          "e": 538
+        },
+        {
+          "w": "USB-C",
+          "s": 538,
+          "e": 559
+        },
+        {
+          "w": "replaced",
+          "s": 559,
+          "e": 565
+        },
+        {
+          "w": "drawers",
+          "s": 565,
+          "e": 577
+        },
+        {
+          "w": "of",
+          "s": 577,
+          "e": 583
+        },
+        {
+          "w": "proprietary",
+          "s": 583,
+          "e": 590
+        },
+        {
+          "w": "chargers.",
+          "s": 590,
+          "e": 611
+        }
+      ]
+    },
+    {
+      "paragraph": 7,
+      "chapterId": "02-mn-problem",
+      "startFrame": 3503,
+      "durationInFrames": 669,
+      "leadFrames": 9,
+      "voiceFrames": 648,
+      "audioFile": "voiceover/007.here-is-a.mp3",
+      "timingSource": "whisper",
+      "text": "Here is a misconception worth clearing up right away. MCP does not replace REST APIs, databases, or local files—and AI models could already do function calling before MCP existed. Instead, MCP sits right in between as one universal adapter, standardizing how any AI host discovers available capabilities and safely runs those calls against your existing systems without bespoke glue code.",
+      "words": [
+        {
+          "w": "Here",
+          "s": 9,
+          "e": 17
+        },
+        {
+          "w": "is",
+          "s": 17,
+          "e": 22
+        },
+        {
+          "w": "a",
+          "s": 22,
+          "e": 25
+        },
+        {
+          "w": "misconception",
+          "s": 25,
+          "e": 34
+        },
+        {
+          "w": "worth",
+          "s": 34,
+          "e": 48
+        },
+        {
+          "w": "clearing",
+          "s": 48,
+          "e": 56
+        },
+        {
+          "w": "up",
+          "s": 56,
+          "e": 63
+        },
+        {
+          "w": "right",
+          "s": 63,
+          "e": 68
+        },
+        {
+          "w": "away.",
+          "s": 68,
+          "e": 74
+        },
+        {
+          "w": "MCP",
+          "s": 91,
+          "e": 108
+        },
+        {
+          "w": "does",
+          "s": 108,
+          "e": 115
+        },
+        {
+          "w": "not",
+          "s": 115,
+          "e": 122
+        },
+        {
+          "w": "replace",
+          "s": 122,
+          "e": 133
+        },
+        {
+          "w": "REST",
+          "s": 133,
+          "e": 145
+        },
+        {
+          "w": "APIs,",
+          "s": 145,
+          "e": 155
+        },
+        {
+          "w": "databases,",
+          "s": 164,
+          "e": 172
+        },
+        {
+          "w": "or",
+          "s": 179,
+          "e": 186
+        },
+        {
+          "w": "local",
+          "s": 186,
+          "e": 191
+        },
+        {
+          "w": "files—and",
+          "s": 191,
+          "e": 222
+        },
+        {
+          "w": "AI",
+          "s": 222,
+          "e": 228
+        },
+        {
+          "w": "models",
+          "s": 228,
+          "e": 239
+        },
+        {
+          "w": "could",
+          "s": 239,
+          "e": 245
+        },
+        {
+          "w": "already",
+          "s": 245,
+          "e": 252
+        },
+        {
+          "w": "do",
+          "s": 252,
+          "e": 257
+        },
+        {
+          "w": "function",
+          "s": 257,
+          "e": 266
+        },
+        {
+          "w": "calling",
+          "s": 266,
+          "e": 274
+        },
+        {
+          "w": "before",
+          "s": 274,
+          "e": 283
+        },
+        {
+          "w": "MCP",
+          "s": 283,
+          "e": 298
+        },
+        {
+          "w": "existed.",
+          "s": 298,
+          "e": 307
+        },
+        {
+          "w": "Instead,",
+          "s": 317,
+          "e": 332
+        },
+        {
+          "w": "MCP",
+          "s": 340,
+          "e": 359
+        },
+        {
+          "w": "sits",
+          "s": 359,
+          "e": 366
+        },
+        {
+          "w": "right",
+          "s": 366,
+          "e": 374
+        },
+        {
+          "w": "in",
+          "s": 374,
+          "e": 379
+        },
+        {
+          "w": "between",
+          "s": 379,
+          "e": 386
+        },
+        {
+          "w": "as",
+          "s": 386,
+          "e": 396
+        },
+        {
+          "w": "one",
+          "s": 396,
+          "e": 402
+        },
+        {
+          "w": "universal",
+          "s": 402,
+          "e": 413
+        },
+        {
+          "w": "adapter,",
+          "s": 413,
+          "e": 425
+        },
+        {
+          "w": "standardizing",
+          "s": 434,
+          "e": 456
+        },
+        {
+          "w": "how",
+          "s": 456,
+          "e": 460
+        },
+        {
+          "w": "any",
+          "s": 460,
+          "e": 467
+        },
+        {
+          "w": "AI",
+          "s": 467,
+          "e": 474
+        },
+        {
+          "w": "host",
+          "s": 474,
+          "e": 482
+        },
+        {
+          "w": "discovers",
+          "s": 482,
+          "e": 493
+        },
+        {
+          "w": "available",
+          "s": 493,
+          "e": 505
+        },
+        {
+          "w": "capabilities",
+          "s": 505,
+          "e": 523
+        },
+        {
+          "w": "and",
+          "s": 523,
+          "e": 536
+        },
+        {
+          "w": "safely",
+          "s": 536,
+          "e": 544
+        },
+        {
+          "w": "runs",
+          "s": 544,
+          "e": 552
+        },
+        {
+          "w": "those",
+          "s": 552,
+          "e": 558
+        },
+        {
+          "w": "calls",
+          "s": 558,
+          "e": 567
+        },
+        {
+          "w": "against",
+          "s": 567,
+          "e": 576
+        },
+        {
+          "w": "your",
+          "s": 576,
+          "e": 582
+        },
+        {
+          "w": "existing",
+          "s": 582,
+          "e": 589
+        },
+        {
+          "w": "systems",
+          "s": 589,
+          "e": 603
+        },
+        {
+          "w": "without",
+          "s": 603,
+          "e": 614
+        },
+        {
+          "w": "bespoke",
+          "s": 614,
+          "e": 631
+        },
+        {
+          "w": "glue",
+          "s": 631,
+          "e": 636
+        },
+        {
+          "w": "code.",
+          "s": 636,
+          "e": 643
+        }
+      ]
+    },
+    {
+      "paragraph": 8,
+      "chapterId": "03-architecture",
+      "startFrame": 4190,
+      "durationInFrames": 580,
+      "leadFrames": 9,
+      "voiceFrames": 559,
+      "audioFile": "voiceover/008.now-let-us.mp3",
+      "timingSource": "whisper",
+      "text": "Now let us open the hood and untangle the three roles people mix up most: the host, the client, and the server. Start with what you actually see on screen: the MCP host. That is the AI application you use—like Claude, ChatGPT, Cursor, or VS Code—which runs the chat interface, talks to the language model, and controls every permission prompt.",
+      "words": [
+        {
+          "w": "Now",
+          "s": 9,
+          "e": 28
+        },
+        {
+          "w": "let",
+          "s": 28,
+          "e": 31
+        },
+        {
+          "w": "us",
+          "s": 31,
+          "e": 35
+        },
+        {
+          "w": "open",
+          "s": 35,
+          "e": 41
+        },
+        {
+          "w": "the",
+          "s": 41,
+          "e": 44
+        },
+        {
+          "w": "hood",
+          "s": 44,
+          "e": 49
+        },
+        {
+          "w": "and",
+          "s": 49,
+          "e": 55
+        },
+        {
+          "w": "untangle",
+          "s": 55,
+          "e": 68
+        },
+        {
+          "w": "the",
+          "s": 68,
+          "e": 72
+        },
+        {
+          "w": "three",
+          "s": 72,
+          "e": 78
+        },
+        {
+          "w": "roles",
+          "s": 78,
+          "e": 86
+        },
+        {
+          "w": "people",
+          "s": 86,
+          "e": 96
+        },
+        {
+          "w": "mix",
+          "s": 96,
+          "e": 104
+        },
+        {
+          "w": "up",
+          "s": 104,
+          "e": 108
+        },
+        {
+          "w": "most:",
+          "s": 108,
+          "e": 116
+        },
+        {
+          "w": "the",
+          "s": 122,
+          "e": 130
+        },
+        {
+          "w": "host,",
+          "s": 130,
+          "e": 139
+        },
+        {
+          "w": "the",
+          "s": 144,
+          "e": 149
+        },
+        {
+          "w": "client,",
+          "s": 149,
+          "e": 159
+        },
+        {
+          "w": "and",
+          "s": 164,
+          "e": 170
+        },
+        {
+          "w": "the",
+          "s": 170,
+          "e": 172
+        },
+        {
+          "w": "server.",
+          "s": 172,
+          "e": 181
+        },
+        {
+          "w": "Start",
+          "s": 187,
+          "e": 200
+        },
+        {
+          "w": "with",
+          "s": 200,
+          "e": 205
+        },
+        {
+          "w": "what",
+          "s": 205,
+          "e": 208
+        },
+        {
+          "w": "you",
+          "s": 208,
+          "e": 211
+        },
+        {
+          "w": "actually",
+          "s": 211,
+          "e": 220
+        },
+        {
+          "w": "see",
+          "s": 220,
+          "e": 227
+        },
+        {
+          "w": "on",
+          "s": 227,
+          "e": 230
+        },
+        {
+          "w": "screen:",
+          "s": 230,
+          "e": 236
+        },
+        {
+          "w": "the",
+          "s": 244,
+          "e": 250
+        },
+        {
+          "w": "MCP",
+          "s": 250,
+          "e": 263
+        },
+        {
+          "w": "host.",
+          "s": 263,
+          "e": 271
+        },
+        {
+          "w": "That",
+          "s": 280,
+          "e": 293
+        },
+        {
+          "w": "is",
+          "s": 293,
+          "e": 297
+        },
+        {
+          "w": "the",
+          "s": 297,
+          "e": 301
+        },
+        {
+          "w": "AI",
+          "s": 301,
+          "e": 307
+        },
+        {
+          "w": "application",
+          "s": 307,
+          "e": 319
+        },
+        {
+          "w": "you",
+          "s": 319,
+          "e": 328
+        },
+        {
+          "w": "use—like",
+          "s": 328,
+          "e": 344
+        },
+        {
+          "w": "Claude,",
+          "s": 344,
+          "e": 358
+        },
+        {
+          "w": "ChatGPT,",
+          "s": 364,
+          "e": 386
+        },
+        {
+          "w": "Cursor,",
+          "s": 390,
+          "e": 408
+        },
+        {
+          "w": "or",
+          "s": 408,
+          "e": 412
+        },
+        {
+          "w": "VS",
+          "s": 412,
+          "e": 417
+        },
+        {
+          "w": "Code—which",
+          "s": 417,
+          "e": 441
+        },
+        {
+          "w": "runs",
+          "s": 441,
+          "e": 447
+        },
+        {
+          "w": "the",
+          "s": 447,
+          "e": 451
+        },
+        {
+          "w": "chat",
+          "s": 451,
+          "e": 456
+        },
+        {
+          "w": "interface,",
+          "s": 456,
+          "e": 466
+        },
+        {
+          "w": "talks",
+          "s": 475,
+          "e": 483
+        },
+        {
+          "w": "to",
+          "s": 483,
+          "e": 488
+        },
+        {
+          "w": "the",
+          "s": 488,
+          "e": 490
+        },
+        {
+          "w": "language",
+          "s": 490,
+          "e": 497
+        },
+        {
+          "w": "model,",
+          "s": 497,
+          "e": 505
+        },
+        {
+          "w": "and",
+          "s": 510,
+          "e": 518
+        },
+        {
+          "w": "controls",
+          "s": 518,
+          "e": 526
+        },
+        {
+          "w": "every",
+          "s": 526,
+          "e": 534
+        },
+        {
+          "w": "permission",
+          "s": 534,
+          "e": 544
+        },
+        {
+          "w": "prompt.",
+          "s": 544,
+          "e": 551
+        }
+      ]
+    },
+    {
+      "paragraph": 9,
+      "chapterId": "03-architecture",
+      "startFrame": 4770,
+      "durationInFrames": 642,
+      "leadFrames": 9,
+      "voiceFrames": 621,
+      "audioFile": "voiceover/009.hidden-inside-the.mp3",
+      "timingSource": "whisper",
+      "text": "Hidden inside the host are lightweight connectors called MCP clients. Think of a client as a dedicated translator living inside your AI app. Each client maintains a clean one-to-one connection with a single MCP server—a small, focused program whose only job is to expose one specific workspace or capability, such as your local files, Slack, or Notion.",
+      "words": [
+        {
+          "w": "Hidden",
+          "s": 9,
+          "e": 18
+        },
+        {
+          "w": "inside",
+          "s": 18,
+          "e": 26
+        },
+        {
+          "w": "the",
+          "s": 26,
+          "e": 35
+        },
+        {
+          "w": "host",
+          "s": 35,
+          "e": 41
+        },
+        {
+          "w": "are",
+          "s": 41,
+          "e": 49
+        },
+        {
+          "w": "lightweight",
+          "s": 49,
+          "e": 57
+        },
+        {
+          "w": "connectors",
+          "s": 57,
+          "e": 68
+        },
+        {
+          "w": "called",
+          "s": 68,
+          "e": 83
+        },
+        {
+          "w": "MCP",
+          "s": 83,
+          "e": 101
+        },
+        {
+          "w": "clients.",
+          "s": 101,
+          "e": 112
+        },
+        {
+          "w": "Think",
+          "s": 133,
+          "e": 142
+        },
+        {
+          "w": "of",
+          "s": 142,
+          "e": 145
+        },
+        {
+          "w": "a",
+          "s": 145,
+          "e": 148
+        },
+        {
+          "w": "client",
+          "s": 148,
+          "e": 157
+        },
+        {
+          "w": "as",
+          "s": 157,
+          "e": 161
+        },
+        {
+          "w": "a",
+          "s": 161,
+          "e": 163
+        },
+        {
+          "w": "dedicated",
+          "s": 163,
+          "e": 172
+        },
+        {
+          "w": "translator",
+          "s": 172,
+          "e": 187
+        },
+        {
+          "w": "living",
+          "s": 187,
+          "e": 200
+        },
+        {
+          "w": "inside",
+          "s": 200,
+          "e": 210
+        },
+        {
+          "w": "your",
+          "s": 210,
+          "e": 221
+        },
+        {
+          "w": "AI",
+          "s": 221,
+          "e": 227
+        },
+        {
+          "w": "app.",
+          "s": 227,
+          "e": 237
+        },
+        {
+          "w": "Each",
+          "s": 245,
+          "e": 263
+        },
+        {
+          "w": "client",
+          "s": 263,
+          "e": 273
+        },
+        {
+          "w": "maintains",
+          "s": 273,
+          "e": 286
+        },
+        {
+          "w": "a",
+          "s": 286,
+          "e": 291
+        },
+        {
+          "w": "clean",
+          "s": 291,
+          "e": 297
+        },
+        {
+          "w": "one-to-one",
+          "s": 297,
+          "e": 316
+        },
+        {
+          "w": "connection",
+          "s": 316,
+          "e": 325
+        },
+        {
+          "w": "with",
+          "s": 325,
+          "e": 344
+        },
+        {
+          "w": "a",
+          "s": 344,
+          "e": 347
+        },
+        {
+          "w": "single",
+          "s": 347,
+          "e": 356
+        },
+        {
+          "w": "MCP",
+          "s": 356,
+          "e": 370
+        },
+        {
+          "w": "server—a",
+          "s": 370,
+          "e": 399
+        },
+        {
+          "w": "small,",
+          "s": 399,
+          "e": 408
+        },
+        {
+          "w": "focused",
+          "s": 408,
+          "e": 417
+        },
+        {
+          "w": "program",
+          "s": 417,
+          "e": 428
+        },
+        {
+          "w": "whose",
+          "s": 428,
+          "e": 440
+        },
+        {
+          "w": "only",
+          "s": 440,
+          "e": 446
+        },
+        {
+          "w": "job",
+          "s": 446,
+          "e": 456
+        },
+        {
+          "w": "is",
+          "s": 456,
+          "e": 461
+        },
+        {
+          "w": "to",
+          "s": 461,
+          "e": 464
+        },
+        {
+          "w": "expose",
+          "s": 464,
+          "e": 475
+        },
+        {
+          "w": "one",
+          "s": 475,
+          "e": 484
+        },
+        {
+          "w": "specific",
+          "s": 484,
+          "e": 494
+        },
+        {
+          "w": "workspace",
+          "s": 494,
+          "e": 508
+        },
+        {
+          "w": "or",
+          "s": 508,
+          "e": 519
+        },
+        {
+          "w": "capability,",
+          "s": 519,
+          "e": 529
+        },
+        {
+          "w": "such",
+          "s": 539,
+          "e": 551
+        },
+        {
+          "w": "as",
+          "s": 551,
+          "e": 556
+        },
+        {
+          "w": "your",
+          "s": 556,
+          "e": 559
+        },
+        {
+          "w": "local",
+          "s": 559,
+          "e": 566
+        },
+        {
+          "w": "files,",
+          "s": 566,
+          "e": 575
+        },
+        {
+          "w": "Slack,",
+          "s": 583,
+          "e": 593
+        },
+        {
+          "w": "or",
+          "s": 598,
+          "e": 604
+        },
+        {
+          "w": "Notion.",
+          "s": 604,
+          "e": 614
+        }
+      ]
+    },
+    {
+      "paragraph": 10,
+      "chapterId": "03-architecture",
+      "startFrame": 5412,
+      "durationInFrames": 607,
+      "leadFrames": 9,
+      "voiceFrames": 586,
+      "audioFile": "voiceover/010.whenever-a-client.mp3",
+      "timingSource": "whisper",
+      "text": "Whenever a client connects to a server, they speak a simple, structured language called JSON-RPC two point zero—just lightweight JSON messages going back and forth. Before doing any real work, the two sides perform a quick initialize handshake, agreeing on a protocol version and announcing exactly which features each side supports so neither side ever has to guess.",
+      "words": [
+        {
+          "w": "Whenever",
+          "s": 9,
+          "e": 18
+        },
+        {
+          "w": "a",
+          "s": 18,
+          "e": 24
+        },
+        {
+          "w": "client",
+          "s": 24,
+          "e": 32
+        },
+        {
+          "w": "connects",
+          "s": 32,
+          "e": 40
+        },
+        {
+          "w": "to",
+          "s": 40,
+          "e": 46
+        },
+        {
+          "w": "a",
+          "s": 46,
+          "e": 49
+        },
+        {
+          "w": "server,",
+          "s": 49,
+          "e": 58
+        },
+        {
+          "w": "they",
+          "s": 62,
+          "e": 69
+        },
+        {
+          "w": "speak",
+          "s": 69,
+          "e": 77
+        },
+        {
+          "w": "a",
+          "s": 77,
+          "e": 80
+        },
+        {
+          "w": "simple,",
+          "s": 80,
+          "e": 89
+        },
+        {
+          "w": "structured",
+          "s": 89,
+          "e": 98
+        },
+        {
+          "w": "language",
+          "s": 98,
+          "e": 113
+        },
+        {
+          "w": "called",
+          "s": 113,
+          "e": 125
+        },
+        {
+          "w": "JSON-RPC",
+          "s": 125,
+          "e": 156
+        },
+        {
+          "w": "two",
+          "s": 156,
+          "e": 167
+        },
+        {
+          "w": "point",
+          "s": 167,
+          "e": 184
+        },
+        {
+          "w": "zero—just",
+          "s": 184,
+          "e": 200
+        },
+        {
+          "w": "lightweight",
+          "s": 200,
+          "e": 211
+        },
+        {
+          "w": "JSON",
+          "s": 211,
+          "e": 220
+        },
+        {
+          "w": "messages",
+          "s": 220,
+          "e": 234
+        },
+        {
+          "w": "going",
+          "s": 234,
+          "e": 244
+        },
+        {
+          "w": "back",
+          "s": 244,
+          "e": 252
+        },
+        {
+          "w": "and",
+          "s": 252,
+          "e": 256
+        },
+        {
+          "w": "forth.",
+          "s": 256,
+          "e": 265
+        },
+        {
+          "w": "Before",
+          "s": 272,
+          "e": 289
+        },
+        {
+          "w": "doing",
+          "s": 289,
+          "e": 295
+        },
+        {
+          "w": "any",
+          "s": 295,
+          "e": 302
+        },
+        {
+          "w": "real",
+          "s": 302,
+          "e": 308
+        },
+        {
+          "w": "work,",
+          "s": 308,
+          "e": 316
+        },
+        {
+          "w": "the",
+          "s": 322,
+          "e": 329
+        },
+        {
+          "w": "two",
+          "s": 329,
+          "e": 334
+        },
+        {
+          "w": "sides",
+          "s": 334,
+          "e": 341
+        },
+        {
+          "w": "perform",
+          "s": 341,
+          "e": 350
+        },
+        {
+          "w": "a",
+          "s": 350,
+          "e": 359
+        },
+        {
+          "w": "quick",
+          "s": 359,
+          "e": 364
+        },
+        {
+          "w": "initialize",
+          "s": 364,
+          "e": 383
+        },
+        {
+          "w": "handshake,",
+          "s": 383,
+          "e": 399
+        },
+        {
+          "w": "agreeing",
+          "s": 402,
+          "e": 415
+        },
+        {
+          "w": "on",
+          "s": 415,
+          "e": 422
+        },
+        {
+          "w": "a",
+          "s": 422,
+          "e": 424
+        },
+        {
+          "w": "protocol",
+          "s": 424,
+          "e": 432
+        },
+        {
+          "w": "version",
+          "s": 432,
+          "e": 442
+        },
+        {
+          "w": "and",
+          "s": 442,
+          "e": 455
+        },
+        {
+          "w": "announcing",
+          "s": 455,
+          "e": 464
+        },
+        {
+          "w": "exactly",
+          "s": 464,
+          "e": 475
+        },
+        {
+          "w": "which",
+          "s": 475,
+          "e": 487
+        },
+        {
+          "w": "features",
+          "s": 487,
+          "e": 498
+        },
+        {
+          "w": "each",
+          "s": 498,
+          "e": 506
+        },
+        {
+          "w": "side",
+          "s": 506,
+          "e": 513
+        },
+        {
+          "w": "supports",
+          "s": 513,
+          "e": 524
+        },
+        {
+          "w": "so",
+          "s": 524,
+          "e": 541
+        },
+        {
+          "w": "neither",
+          "s": 541,
+          "e": 547
+        },
+        {
+          "w": "side",
+          "s": 547,
+          "e": 557
+        },
+        {
+          "w": "ever",
+          "s": 557,
+          "e": 565
+        },
+        {
+          "w": "has",
+          "s": 565,
+          "e": 571
+        },
+        {
+          "w": "to",
+          "s": 571,
+          "e": 575
+        },
+        {
+          "w": "guess.",
+          "s": 575,
+          "e": 581
+        }
+      ]
+    },
+    {
+      "paragraph": 11,
+      "chapterId": "03-architecture",
+      "startFrame": 6019,
+      "durationInFrames": 605,
+      "leadFrames": 9,
+      "voiceFrames": 584,
+      "audioFile": "voiceover/011.keeping-one-dedicated.mp3",
+      "timingSource": "whisper",
+      "text": "Keeping one dedicated client per server is not an accident—it gives you clean isolation. Your Slack server never sees what your local files server is reading, and every connection carries only the permissions meant for that specific tool. Better yet, if one server crashes or goes offline mid-session, the rest of your connected workspace keeps running without missing a beat.",
+      "words": [
+        {
+          "w": "Keeping",
+          "s": 9,
+          "e": 20
+        },
+        {
+          "w": "one",
+          "s": 20,
+          "e": 27
+        },
+        {
+          "w": "dedicated",
+          "s": 27,
+          "e": 37
+        },
+        {
+          "w": "client",
+          "s": 37,
+          "e": 51
+        },
+        {
+          "w": "per",
+          "s": 51,
+          "e": 60
+        },
+        {
+          "w": "server",
+          "s": 60,
+          "e": 68
+        },
+        {
+          "w": "is",
+          "s": 68,
+          "e": 80
+        },
+        {
+          "w": "not",
+          "s": 80,
+          "e": 88
+        },
+        {
+          "w": "an",
+          "s": 88,
+          "e": 92
+        },
+        {
+          "w": "accident—it",
+          "s": 92,
+          "e": 119
+        },
+        {
+          "w": "gives",
+          "s": 119,
+          "e": 124
+        },
+        {
+          "w": "you",
+          "s": 124,
+          "e": 128
+        },
+        {
+          "w": "clean",
+          "s": 128,
+          "e": 134
+        },
+        {
+          "w": "isolation.",
+          "s": 134,
+          "e": 146
+        },
+        {
+          "w": "Your",
+          "s": 162,
+          "e": 174
+        },
+        {
+          "w": "Slack",
+          "s": 174,
+          "e": 179
+        },
+        {
+          "w": "server",
+          "s": 179,
+          "e": 188
+        },
+        {
+          "w": "never",
+          "s": 188,
+          "e": 199
+        },
+        {
+          "w": "sees",
+          "s": 199,
+          "e": 209
+        },
+        {
+          "w": "what",
+          "s": 209,
+          "e": 215
+        },
+        {
+          "w": "your",
+          "s": 215,
+          "e": 218
+        },
+        {
+          "w": "local",
+          "s": 218,
+          "e": 226
+        },
+        {
+          "w": "files",
+          "s": 226,
+          "e": 233
+        },
+        {
+          "w": "server",
+          "s": 233,
+          "e": 242
+        },
+        {
+          "w": "is",
+          "s": 242,
+          "e": 250
+        },
+        {
+          "w": "reading,",
+          "s": 250,
+          "e": 257
+        },
+        {
+          "w": "and",
+          "s": 262,
+          "e": 272
+        },
+        {
+          "w": "every",
+          "s": 272,
+          "e": 279
+        },
+        {
+          "w": "connection",
+          "s": 279,
+          "e": 289
+        },
+        {
+          "w": "carries",
+          "s": 289,
+          "e": 301
+        },
+        {
+          "w": "only",
+          "s": 301,
+          "e": 311
+        },
+        {
+          "w": "the",
+          "s": 311,
+          "e": 316
+        },
+        {
+          "w": "permissions",
+          "s": 316,
+          "e": 328
+        },
+        {
+          "w": "meant",
+          "s": 328,
+          "e": 336
+        },
+        {
+          "w": "for",
+          "s": 336,
+          "e": 341
+        },
+        {
+          "w": "that",
+          "s": 341,
+          "e": 346
+        },
+        {
+          "w": "specific",
+          "s": 346,
+          "e": 356
+        },
+        {
+          "w": "tool.",
+          "s": 356,
+          "e": 368
+        },
+        {
+          "w": "Better",
+          "s": 382,
+          "e": 397
+        },
+        {
+          "w": "yet,",
+          "s": 397,
+          "e": 404
+        },
+        {
+          "w": "if",
+          "s": 407,
+          "e": 413
+        },
+        {
+          "w": "one",
+          "s": 413,
+          "e": 418
+        },
+        {
+          "w": "server",
+          "s": 418,
+          "e": 426
+        },
+        {
+          "w": "crashes",
+          "s": 426,
+          "e": 439
+        },
+        {
+          "w": "or",
+          "s": 439,
+          "e": 446
+        },
+        {
+          "w": "goes",
+          "s": 446,
+          "e": 452
+        },
+        {
+          "w": "offline",
+          "s": 452,
+          "e": 463
+        },
+        {
+          "w": "mid-session,",
+          "s": 463,
+          "e": 482
+        },
+        {
+          "w": "the",
+          "s": 488,
+          "e": 496
+        },
+        {
+          "w": "rest",
+          "s": 496,
+          "e": 502
+        },
+        {
+          "w": "of",
+          "s": 502,
+          "e": 505
+        },
+        {
+          "w": "your",
+          "s": 505,
+          "e": 508
+        },
+        {
+          "w": "connected",
+          "s": 508,
+          "e": 516
+        },
+        {
+          "w": "workspace",
+          "s": 516,
+          "e": 526
+        },
+        {
+          "w": "keeps",
+          "s": 526,
+          "e": 538
+        },
+        {
+          "w": "running",
+          "s": 538,
+          "e": 546
+        },
+        {
+          "w": "without",
+          "s": 546,
+          "e": 555
+        },
+        {
+          "w": "missing",
+          "s": 555,
+          "e": 563
+        },
+        {
+          "w": "a",
+          "s": 563,
+          "e": 568
+        },
+        {
+          "w": "beat.",
+          "s": 568,
+          "e": 574
+        }
+      ]
+    },
+    {
+      "paragraph": 12,
+      "chapterId": "04-primitives",
+      "startFrame": 6642,
+      "durationInFrames": 626,
+      "leadFrames": 9,
+      "voiceFrames": 605,
+      "audioFile": "voiceover/012.once-connected-what.mp3",
+      "timingSource": "whisper",
+      "text": "Once connected, what can an MCP server actually offer your AI? The protocol boils everything down to three clean building blocks, organized by who is in control. First come tools—executable actions, or verbs, like searching Google Drive, scheduling a calendar event, or querying a database. Tools are model-controlled: the AI reads their descriptions and decides when to call them.",
+      "words": [
+        {
+          "w": "Once",
+          "s": 9,
+          "e": 19
+        },
+        {
+          "w": "connected,",
+          "s": 19,
+          "e": 30
+        },
+        {
+          "w": "what",
+          "s": 35,
+          "e": 44
+        },
+        {
+          "w": "can",
+          "s": 44,
+          "e": 48
+        },
+        {
+          "w": "an",
+          "s": 48,
+          "e": 53
+        },
+        {
+          "w": "MCP",
+          "s": 53,
+          "e": 63
+        },
+        {
+          "w": "server",
+          "s": 63,
+          "e": 71
+        },
+        {
+          "w": "actually",
+          "s": 71,
+          "e": 81
+        },
+        {
+          "w": "offer",
+          "s": 81,
+          "e": 91
+        },
+        {
+          "w": "your",
+          "s": 91,
+          "e": 98
+        },
+        {
+          "w": "AI?",
+          "s": 98,
+          "e": 104
+        },
+        {
+          "w": "The",
+          "s": 114,
+          "e": 131
+        },
+        {
+          "w": "protocol",
+          "s": 131,
+          "e": 139
+        },
+        {
+          "w": "boils",
+          "s": 139,
+          "e": 146
+        },
+        {
+          "w": "everything",
+          "s": 146,
+          "e": 155
+        },
+        {
+          "w": "down",
+          "s": 155,
+          "e": 164
+        },
+        {
+          "w": "to",
+          "s": 164,
+          "e": 172
+        },
+        {
+          "w": "three",
+          "s": 172,
+          "e": 179
+        },
+        {
+          "w": "clean",
+          "s": 179,
+          "e": 192
+        },
+        {
+          "w": "building",
+          "s": 192,
+          "e": 204
+        },
+        {
+          "w": "blocks,",
+          "s": 204,
+          "e": 215
+        },
+        {
+          "w": "organized",
+          "s": 220,
+          "e": 233
+        },
+        {
+          "w": "by",
+          "s": 233,
+          "e": 242
+        },
+        {
+          "w": "who",
+          "s": 242,
+          "e": 247
+        },
+        {
+          "w": "is",
+          "s": 247,
+          "e": 250
+        },
+        {
+          "w": "in",
+          "s": 250,
+          "e": 253
+        },
+        {
+          "w": "control.",
+          "s": 253,
+          "e": 262
+        },
+        {
+          "w": "First",
+          "s": 271,
+          "e": 284
+        },
+        {
+          "w": "come",
+          "s": 284,
+          "e": 291
+        },
+        {
+          "w": "tools—executable",
+          "s": 291,
+          "e": 331
+        },
+        {
+          "w": "actions,",
+          "s": 331,
+          "e": 340
+        },
+        {
+          "w": "or",
+          "s": 340,
+          "e": 351
+        },
+        {
+          "w": "verbs,",
+          "s": 351,
+          "e": 361
+        },
+        {
+          "w": "like",
+          "s": 364,
+          "e": 370
+        },
+        {
+          "w": "searching",
+          "s": 370,
+          "e": 379
+        },
+        {
+          "w": "Google",
+          "s": 379,
+          "e": 384
+        },
+        {
+          "w": "Drive,",
+          "s": 384,
+          "e": 393
+        },
+        {
+          "w": "scheduling",
+          "s": 400,
+          "e": 412
+        },
+        {
+          "w": "a",
+          "s": 412,
+          "e": 417
+        },
+        {
+          "w": "calendar",
+          "s": 417,
+          "e": 425
+        },
+        {
+          "w": "event,",
+          "s": 425,
+          "e": 433
+        },
+        {
+          "w": "or",
+          "s": 439,
+          "e": 443
+        },
+        {
+          "w": "querying",
+          "s": 443,
+          "e": 455
+        },
+        {
+          "w": "a",
+          "s": 455,
+          "e": 457
+        },
+        {
+          "w": "database.",
+          "s": 457,
+          "e": 464
+        },
+        {
+          "w": "Tools",
+          "s": 475,
+          "e": 492
+        },
+        {
+          "w": "are",
+          "s": 492,
+          "e": 499
+        },
+        {
+          "w": "model-controlled:",
+          "s": 499,
+          "e": 517
+        },
+        {
+          "w": "the",
+          "s": 524,
+          "e": 531
+        },
+        {
+          "w": "AI",
+          "s": 531,
+          "e": 538
+        },
+        {
+          "w": "reads",
+          "s": 538,
+          "e": 548
+        },
+        {
+          "w": "their",
+          "s": 548,
+          "e": 554
+        },
+        {
+          "w": "descriptions",
+          "s": 554,
+          "e": 565
+        },
+        {
+          "w": "and",
+          "s": 565,
+          "e": 574
+        },
+        {
+          "w": "decides",
+          "s": 574,
+          "e": 580
+        },
+        {
+          "w": "when",
+          "s": 580,
+          "e": 588
+        },
+        {
+          "w": "to",
+          "s": 588,
+          "e": 592
+        },
+        {
+          "w": "call",
+          "s": 592,
+          "e": 598
+        },
+        {
+          "w": "them.",
+          "s": 598,
+          "e": 602
+        }
+      ]
+    },
+    {
+      "paragraph": 13,
+      "chapterId": "04-primitives",
+      "startFrame": 7268,
+      "durationInFrames": 629,
+      "leadFrames": 9,
+      "voiceFrames": 608,
+      "audioFile": "voiceover/013.second-come-resources-structured.mp3",
+      "timingSource": "whisper",
+      "text": "Second come resources—structured, read-only data, or nouns, identified by clean addresses like a quarterly plan in Drive, your standup notes, or a database schema. You can think of resources like safe read-only GET endpoints. They are application-controlled, meaning your AI app or you can attach clean, up-to-date context to a conversation without triggering any unexpected side effects.",
+      "words": [
+        {
+          "w": "Second",
+          "s": 9,
+          "e": 20
+        },
+        {
+          "w": "come",
+          "s": 20,
+          "e": 26
+        },
+        {
+          "w": "resources—structured,",
+          "s": 26,
+          "e": 61
+        },
+        {
+          "w": "read-only",
+          "s": 61,
+          "e": 76
+        },
+        {
+          "w": "data,",
+          "s": 76,
+          "e": 85
+        },
+        {
+          "w": "or",
+          "s": 89,
+          "e": 97
+        },
+        {
+          "w": "nouns,",
+          "s": 97,
+          "e": 106
+        },
+        {
+          "w": "identified",
+          "s": 113,
+          "e": 130
+        },
+        {
+          "w": "by",
+          "s": 130,
+          "e": 138
+        },
+        {
+          "w": "clean",
+          "s": 138,
+          "e": 145
+        },
+        {
+          "w": "addresses",
+          "s": 145,
+          "e": 153
+        },
+        {
+          "w": "like",
+          "s": 153,
+          "e": 165
+        },
+        {
+          "w": "a",
+          "s": 165,
+          "e": 169
+        },
+        {
+          "w": "quarterly",
+          "s": 169,
+          "e": 176
+        },
+        {
+          "w": "plan",
+          "s": 176,
+          "e": 185
+        },
+        {
+          "w": "in",
+          "s": 185,
+          "e": 190
+        },
+        {
+          "w": "Drive,",
+          "s": 190,
+          "e": 196
+        },
+        {
+          "w": "your",
+          "s": 204,
+          "e": 209
+        },
+        {
+          "w": "standup",
+          "s": 209,
+          "e": 219
+        },
+        {
+          "w": "notes,",
+          "s": 219,
+          "e": 227
+        },
+        {
+          "w": "or",
+          "s": 232,
+          "e": 236
+        },
+        {
+          "w": "a",
+          "s": 236,
+          "e": 239
+        },
+        {
+          "w": "database",
+          "s": 239,
+          "e": 246
+        },
+        {
+          "w": "schema.",
+          "s": 246,
+          "e": 257
+        },
+        {
+          "w": "You",
+          "s": 269,
+          "e": 283
+        },
+        {
+          "w": "can",
+          "s": 283,
+          "e": 286
+        },
+        {
+          "w": "think",
+          "s": 286,
+          "e": 291
+        },
+        {
+          "w": "of",
+          "s": 291,
+          "e": 295
+        },
+        {
+          "w": "resources",
+          "s": 295,
+          "e": 304
+        },
+        {
+          "w": "like",
+          "s": 304,
+          "e": 316
+        },
+        {
+          "w": "safe",
+          "s": 316,
+          "e": 326
+        },
+        {
+          "w": "read-only",
+          "s": 326,
+          "e": 340
+        },
+        {
+          "w": "GET",
+          "s": 340,
+          "e": 348
+        },
+        {
+          "w": "endpoints.",
+          "s": 348,
+          "e": 368
+        },
+        {
+          "w": "They",
+          "s": 374,
+          "e": 386
+        },
+        {
+          "w": "are",
+          "s": 386,
+          "e": 388
+        },
+        {
+          "w": "application-controlled,",
+          "s": 388,
+          "e": 415
+        },
+        {
+          "w": "meaning",
+          "s": 421,
+          "e": 428
+        },
+        {
+          "w": "your",
+          "s": 428,
+          "e": 434
+        },
+        {
+          "w": "AI",
+          "s": 434,
+          "e": 442
+        },
+        {
+          "w": "app",
+          "s": 442,
+          "e": 453
+        },
+        {
+          "w": "or",
+          "s": 457,
+          "e": 461
+        },
+        {
+          "w": "you",
+          "s": 461,
+          "e": 464
+        },
+        {
+          "w": "can",
+          "s": 464,
+          "e": 468
+        },
+        {
+          "w": "attach",
+          "s": 468,
+          "e": 475
+        },
+        {
+          "w": "clean,",
+          "s": 475,
+          "e": 487
+        },
+        {
+          "w": "up-to-date",
+          "s": 491,
+          "e": 505
+        },
+        {
+          "w": "context",
+          "s": 505,
+          "e": 516
+        },
+        {
+          "w": "to",
+          "s": 516,
+          "e": 524
+        },
+        {
+          "w": "a",
+          "s": 524,
+          "e": 527
+        },
+        {
+          "w": "conversation",
+          "s": 527,
+          "e": 538
+        },
+        {
+          "w": "without",
+          "s": 538,
+          "e": 551
+        },
+        {
+          "w": "triggering",
+          "s": 551,
+          "e": 561
+        },
+        {
+          "w": "any",
+          "s": 561,
+          "e": 570
+        },
+        {
+          "w": "unexpected",
+          "s": 570,
+          "e": 581
+        },
+        {
+          "w": "side",
+          "s": 581,
+          "e": 593
+        },
+        {
+          "w": "effects.",
+          "s": 593,
+          "e": 600
+        }
+      ]
+    },
+    {
+      "paragraph": 14,
+      "chapterId": "04-primitives",
+      "startFrame": 7897,
+      "durationInFrames": 684,
+      "leadFrames": 9,
+      "voiceFrames": 663,
+      "audioFile": "voiceover/014.third-come-prompts-reusable.mp3",
+      "timingSource": "whisper",
+      "text": "Third come prompts—reusable workflow templates packaged right inside an MCP server. Unlike tools or resources, prompts are user-controlled. They show up in your AI app like handy slash commands—such as slash prep meeting, slash weekly brief, or slash review PR—so you can intentionally trigger a consistent, well-tested workflow with a single click instead of retyping long instructions.",
+      "words": [
+        {
+          "w": "Third",
+          "s": 9,
+          "e": 20
+        },
+        {
+          "w": "come",
+          "s": 20,
+          "e": 33
+        },
+        {
+          "w": "prompts—reusable",
+          "s": 33,
+          "e": 103
+        },
+        {
+          "w": "workflow",
+          "s": 103,
+          "e": 109
+        },
+        {
+          "w": "templates",
+          "s": 109,
+          "e": 121
+        },
+        {
+          "w": "packaged",
+          "s": 121,
+          "e": 135
+        },
+        {
+          "w": "right",
+          "s": 135,
+          "e": 146
+        },
+        {
+          "w": "inside",
+          "s": 146,
+          "e": 157
+        },
+        {
+          "w": "an",
+          "s": 157,
+          "e": 164
+        },
+        {
+          "w": "MCP",
+          "s": 164,
+          "e": 174
+        },
+        {
+          "w": "server.",
+          "s": 174,
+          "e": 182
+        },
+        {
+          "w": "Unlike",
+          "s": 192,
+          "e": 209
+        },
+        {
+          "w": "tools",
+          "s": 209,
+          "e": 220
+        },
+        {
+          "w": "or",
+          "s": 220,
+          "e": 224
+        },
+        {
+          "w": "resources,",
+          "s": 224,
+          "e": 232
+        },
+        {
+          "w": "prompts",
+          "s": 244,
+          "e": 254
+        },
+        {
+          "w": "are",
+          "s": 254,
+          "e": 260
+        },
+        {
+          "w": "user-controlled.",
+          "s": 260,
+          "e": 278
+        },
+        {
+          "w": "They",
+          "s": 285,
+          "e": 295
+        },
+        {
+          "w": "show",
+          "s": 295,
+          "e": 300
+        },
+        {
+          "w": "up",
+          "s": 300,
+          "e": 304
+        },
+        {
+          "w": "in",
+          "s": 304,
+          "e": 306
+        },
+        {
+          "w": "your",
+          "s": 306,
+          "e": 308
+        },
+        {
+          "w": "AI",
+          "s": 308,
+          "e": 314
+        },
+        {
+          "w": "app",
+          "s": 314,
+          "e": 322
+        },
+        {
+          "w": "like",
+          "s": 322,
+          "e": 328
+        },
+        {
+          "w": "handy",
+          "s": 328,
+          "e": 339
+        },
+        {
+          "w": "slash",
+          "s": 339,
+          "e": 344
+        },
+        {
+          "w": "commands—such",
+          "s": 344,
+          "e": 376
+        },
+        {
+          "w": "as",
+          "s": 376,
+          "e": 380
+        },
+        {
+          "w": "slash",
+          "s": 380,
+          "e": 385
+        },
+        {
+          "w": "prep",
+          "s": 385,
+          "e": 392
+        },
+        {
+          "w": "meeting,",
+          "s": 392,
+          "e": 401
+        },
+        {
+          "w": "slash",
+          "s": 406,
+          "e": 416
+        },
+        {
+          "w": "weekly",
+          "s": 416,
+          "e": 425
+        },
+        {
+          "w": "brief,",
+          "s": 425,
+          "e": 435
+        },
+        {
+          "w": "or",
+          "s": 440,
+          "e": 450
+        },
+        {
+          "w": "slash",
+          "s": 450,
+          "e": 458
+        },
+        {
+          "w": "review",
+          "s": 458,
+          "e": 467
+        },
+        {
+          "w": "PR—so",
+          "s": 467,
+          "e": 493
+        },
+        {
+          "w": "you",
+          "s": 493,
+          "e": 496
+        },
+        {
+          "w": "can",
+          "s": 496,
+          "e": 499
+        },
+        {
+          "w": "intentionally",
+          "s": 499,
+          "e": 509
+        },
+        {
+          "w": "trigger",
+          "s": 509,
+          "e": 521
+        },
+        {
+          "w": "a",
+          "s": 521,
+          "e": 527
+        },
+        {
+          "w": "consistent,",
+          "s": 527,
+          "e": 539
+        },
+        {
+          "w": "well-tested",
+          "s": 542,
+          "e": 560
+        },
+        {
+          "w": "workflow",
+          "s": 560,
+          "e": 569
+        },
+        {
+          "w": "with",
+          "s": 569,
+          "e": 586
+        },
+        {
+          "w": "a",
+          "s": 586,
+          "e": 589
+        },
+        {
+          "w": "single",
+          "s": 589,
+          "e": 595
+        },
+        {
+          "w": "click",
+          "s": 595,
+          "e": 604
+        },
+        {
+          "w": "instead",
+          "s": 604,
+          "e": 610
+        },
+        {
+          "w": "of",
+          "s": 610,
+          "e": 617
+        },
+        {
+          "w": "retyping",
+          "s": 617,
+          "e": 629
+        },
+        {
+          "w": "long",
+          "s": 629,
+          "e": 634
+        },
+        {
+          "w": "instructions.",
+          "s": 634,
+          "e": 647
+        }
+      ]
+    },
+    {
+      "paragraph": 15,
+      "chapterId": "04-primitives",
+      "startFrame": 8581,
+      "durationInFrames": 580,
+      "leadFrames": 9,
+      "voiceFrames": 559,
+      "audioFile": "voiceover/015.on-top-of.mp3",
+      "timingSource": "whisper",
+      "text": "On top of those big three, MCP is also bidirectional, meaning communication is not strictly one way. Your AI host can set strict folder boundaries so a server only touches approved directories. Meanwhile, a server can pause mid-task to ask you a clarifying question when details are missing, or politely ask the host's AI for help with a quick subtask.",
+      "words": [
+        {
+          "w": "On",
+          "s": 9,
+          "e": 18
+        },
+        {
+          "w": "top",
+          "s": 18,
+          "e": 22
+        },
+        {
+          "w": "of",
+          "s": 22,
+          "e": 27
+        },
+        {
+          "w": "those",
+          "s": 27,
+          "e": 31
+        },
+        {
+          "w": "big",
+          "s": 31,
+          "e": 38
+        },
+        {
+          "w": "three,",
+          "s": 38,
+          "e": 47
+        },
+        {
+          "w": "MCP",
+          "s": 52,
+          "e": 73
+        },
+        {
+          "w": "is",
+          "s": 73,
+          "e": 80
+        },
+        {
+          "w": "also",
+          "s": 80,
+          "e": 89
+        },
+        {
+          "w": "bidirectional,",
+          "s": 89,
+          "e": 110
+        },
+        {
+          "w": "meaning",
+          "s": 114,
+          "e": 122
+        },
+        {
+          "w": "communication",
+          "s": 122,
+          "e": 136
+        },
+        {
+          "w": "is",
+          "s": 136,
+          "e": 147
+        },
+        {
+          "w": "not",
+          "s": 147,
+          "e": 151
+        },
+        {
+          "w": "strictly",
+          "s": 151,
+          "e": 158
+        },
+        {
+          "w": "one",
+          "s": 158,
+          "e": 166
+        },
+        {
+          "w": "way.",
+          "s": 166,
+          "e": 173
+        },
+        {
+          "w": "Your",
+          "s": 181,
+          "e": 196
+        },
+        {
+          "w": "AI",
+          "s": 196,
+          "e": 202
+        },
+        {
+          "w": "host",
+          "s": 202,
+          "e": 211
+        },
+        {
+          "w": "can",
+          "s": 211,
+          "e": 215
+        },
+        {
+          "w": "set",
+          "s": 215,
+          "e": 221
+        },
+        {
+          "w": "strict",
+          "s": 221,
+          "e": 228
+        },
+        {
+          "w": "folder",
+          "s": 228,
+          "e": 236
+        },
+        {
+          "w": "boundaries",
+          "s": 236,
+          "e": 248
+        },
+        {
+          "w": "so",
+          "s": 248,
+          "e": 255
+        },
+        {
+          "w": "a",
+          "s": 255,
+          "e": 259
+        },
+        {
+          "w": "server",
+          "s": 259,
+          "e": 268
+        },
+        {
+          "w": "only",
+          "s": 268,
+          "e": 273
+        },
+        {
+          "w": "touches",
+          "s": 273,
+          "e": 283
+        },
+        {
+          "w": "approved",
+          "s": 283,
+          "e": 290
+        },
+        {
+          "w": "directories.",
+          "s": 290,
+          "e": 311
+        },
+        {
+          "w": "Meanwhile,",
+          "s": 317,
+          "e": 331
+        },
+        {
+          "w": "a",
+          "s": 339,
+          "e": 347
+        },
+        {
+          "w": "server",
+          "s": 347,
+          "e": 355
+        },
+        {
+          "w": "can",
+          "s": 355,
+          "e": 359
+        },
+        {
+          "w": "pause",
+          "s": 359,
+          "e": 367
+        },
+        {
+          "w": "mid-task",
+          "s": 367,
+          "e": 385
+        },
+        {
+          "w": "to",
+          "s": 385,
+          "e": 390
+        },
+        {
+          "w": "ask",
+          "s": 390,
+          "e": 395
+        },
+        {
+          "w": "you",
+          "s": 395,
+          "e": 400
+        },
+        {
+          "w": "a",
+          "s": 400,
+          "e": 403
+        },
+        {
+          "w": "clarifying",
+          "s": 403,
+          "e": 413
+        },
+        {
+          "w": "question",
+          "s": 413,
+          "e": 422
+        },
+        {
+          "w": "when",
+          "s": 422,
+          "e": 431
+        },
+        {
+          "w": "details",
+          "s": 431,
+          "e": 440
+        },
+        {
+          "w": "are",
+          "s": 440,
+          "e": 446
+        },
+        {
+          "w": "missing,",
+          "s": 446,
+          "e": 452
+        },
+        {
+          "w": "or",
+          "s": 452,
+          "e": 469
+        },
+        {
+          "w": "politely",
+          "s": 469,
+          "e": 481
+        },
+        {
+          "w": "ask",
+          "s": 481,
+          "e": 488
+        },
+        {
+          "w": "the",
+          "s": 488,
+          "e": 494
+        },
+        {
+          "w": "host's",
+          "s": 494,
+          "e": 502
+        },
+        {
+          "w": "AI",
+          "s": 502,
+          "e": 507
+        },
+        {
+          "w": "for",
+          "s": 507,
+          "e": 514
+        },
+        {
+          "w": "help",
+          "s": 514,
+          "e": 522
+        },
+        {
+          "w": "with",
+          "s": 522,
+          "e": 527
+        },
+        {
+          "w": "a",
+          "s": 527,
+          "e": 529
+        },
+        {
+          "w": "quick",
+          "s": 529,
+          "e": 533
+        },
+        {
+          "w": "subtask.",
+          "s": 533,
+          "e": 551
+        }
+      ]
+    },
+    {
+      "paragraph": 16,
+      "chapterId": "05-walkthrough",
+      "startFrame": 9179,
+      "durationInFrames": 536,
+      "leadFrames": 9,
+      "voiceFrames": 515,
+      "audioFile": "voiceover/016.let-us-watch.mp3",
+      "timingSource": "whisper",
+      "text": "Let us watch every piece work together in a real request. Imagine you type: find the urgent customer requests from our Slack feedback channel and draft a Monday update in Notion. Even before you press Enter, your host's clients have already queried both servers for a live tool catalog, giving the host exact names and inputs for every available action.",
+      "words": [
+        {
+          "w": "Let",
+          "s": 9,
+          "e": 19
+        },
+        {
+          "w": "us",
+          "s": 19,
+          "e": 23
+        },
+        {
+          "w": "watch",
+          "s": 23,
+          "e": 29
+        },
+        {
+          "w": "every",
+          "s": 29,
+          "e": 39
+        },
+        {
+          "w": "piece",
+          "s": 39,
+          "e": 47
+        },
+        {
+          "w": "work",
+          "s": 47,
+          "e": 55
+        },
+        {
+          "w": "together",
+          "s": 55,
+          "e": 64
+        },
+        {
+          "w": "in",
+          "s": 64,
+          "e": 71
+        },
+        {
+          "w": "a",
+          "s": 71,
+          "e": 73
+        },
+        {
+          "w": "real",
+          "s": 73,
+          "e": 79
+        },
+        {
+          "w": "request.",
+          "s": 79,
+          "e": 87
+        },
+        {
+          "w": "Imagine",
+          "s": 98,
+          "e": 113
+        },
+        {
+          "w": "you",
+          "s": 113,
+          "e": 119
+        },
+        {
+          "w": "type:",
+          "s": 119,
+          "e": 125
+        },
+        {
+          "w": "find",
+          "s": 130,
+          "e": 138
+        },
+        {
+          "w": "the",
+          "s": 138,
+          "e": 142
+        },
+        {
+          "w": "urgent",
+          "s": 142,
+          "e": 148
+        },
+        {
+          "w": "customer",
+          "s": 148,
+          "e": 159
+        },
+        {
+          "w": "requests",
+          "s": 159,
+          "e": 169
+        },
+        {
+          "w": "from",
+          "s": 169,
+          "e": 179
+        },
+        {
+          "w": "our",
+          "s": 179,
+          "e": 181
+        },
+        {
+          "w": "Slack",
+          "s": 181,
+          "e": 187
+        },
+        {
+          "w": "feedback",
+          "s": 187,
+          "e": 197
+        },
+        {
+          "w": "channel",
+          "s": 197,
+          "e": 210
+        },
+        {
+          "w": "and",
+          "s": 213,
+          "e": 223
+        },
+        {
+          "w": "draft",
+          "s": 223,
+          "e": 229
+        },
+        {
+          "w": "a",
+          "s": 229,
+          "e": 233
+        },
+        {
+          "w": "Monday",
+          "s": 233,
+          "e": 239
+        },
+        {
+          "w": "update",
+          "s": 239,
+          "e": 250
+        },
+        {
+          "w": "in",
+          "s": 250,
+          "e": 254
+        },
+        {
+          "w": "Notion.",
+          "s": 254,
+          "e": 264
+        },
+        {
+          "w": "Even",
+          "s": 268,
+          "e": 282
+        },
+        {
+          "w": "before",
+          "s": 282,
+          "e": 290
+        },
+        {
+          "w": "you",
+          "s": 290,
+          "e": 295
+        },
+        {
+          "w": "press",
+          "s": 295,
+          "e": 299
+        },
+        {
+          "w": "Enter,",
+          "s": 299,
+          "e": 310
+        },
+        {
+          "w": "your",
+          "s": 317,
+          "e": 323
+        },
+        {
+          "w": "host's",
+          "s": 323,
+          "e": 332
+        },
+        {
+          "w": "clients",
+          "s": 332,
+          "e": 339
+        },
+        {
+          "w": "have",
+          "s": 339,
+          "e": 346
+        },
+        {
+          "w": "already",
+          "s": 346,
+          "e": 351
+        },
+        {
+          "w": "queried",
+          "s": 351,
+          "e": 364
+        },
+        {
+          "w": "both",
+          "s": 364,
+          "e": 368
+        },
+        {
+          "w": "servers",
+          "s": 368,
+          "e": 379
+        },
+        {
+          "w": "for",
+          "s": 379,
+          "e": 387
+        },
+        {
+          "w": "a",
+          "s": 387,
+          "e": 389
+        },
+        {
+          "w": "live",
+          "s": 389,
+          "e": 395
+        },
+        {
+          "w": "tool",
+          "s": 395,
+          "e": 401
+        },
+        {
+          "w": "catalog,",
+          "s": 401,
+          "e": 410
+        },
+        {
+          "w": "giving",
+          "s": 420,
+          "e": 430
+        },
+        {
+          "w": "the",
+          "s": 430,
+          "e": 435
+        },
+        {
+          "w": "host",
+          "s": 435,
+          "e": 440
+        },
+        {
+          "w": "exact",
+          "s": 440,
+          "e": 448
+        },
+        {
+          "w": "names",
+          "s": 448,
+          "e": 460
+        },
+        {
+          "w": "and",
+          "s": 460,
+          "e": 465
+        },
+        {
+          "w": "inputs",
+          "s": 465,
+          "e": 473
+        },
+        {
+          "w": "for",
+          "s": 473,
+          "e": 481
+        },
+        {
+          "w": "every",
+          "s": 481,
+          "e": 487
+        },
+        {
+          "w": "available",
+          "s": 487,
+          "e": 496
+        },
+        {
+          "w": "action.",
+          "s": 496,
+          "e": 508
+        }
+      ]
+    },
+    {
+      "paragraph": 17,
+      "chapterId": "05-walkthrough",
+      "startFrame": 9715,
+      "durationInFrames": 505,
+      "leadFrames": 9,
+      "voiceFrames": 484,
+      "audioFile": "voiceover/017.next-the-host.mp3",
+      "timingSource": "whisper",
+      "text": "Next, the host sends your prompt along with that tool catalog to the language model. Here is a critical detail: the language model never touches Slack or Notion directly. Instead, it reasons over your request and replies to the host with a structured decision saying: call the Slack search tool on the feedback channel, filtered for urgent customer items.",
+      "words": [
+        {
+          "w": "Next,",
+          "s": 9,
+          "e": 20
+        },
+        {
+          "w": "the",
+          "s": 26,
+          "e": 29
+        },
+        {
+          "w": "host",
+          "s": 29,
+          "e": 36
+        },
+        {
+          "w": "sends",
+          "s": 36,
+          "e": 41
+        },
+        {
+          "w": "your",
+          "s": 41,
+          "e": 47
+        },
+        {
+          "w": "prompt",
+          "s": 47,
+          "e": 56
+        },
+        {
+          "w": "along",
+          "s": 56,
+          "e": 62
+        },
+        {
+          "w": "with",
+          "s": 62,
+          "e": 68
+        },
+        {
+          "w": "that",
+          "s": 68,
+          "e": 72
+        },
+        {
+          "w": "tool",
+          "s": 72,
+          "e": 77
+        },
+        {
+          "w": "catalog",
+          "s": 77,
+          "e": 85
+        },
+        {
+          "w": "to",
+          "s": 85,
+          "e": 96
+        },
+        {
+          "w": "the",
+          "s": 96,
+          "e": 99
+        },
+        {
+          "w": "language",
+          "s": 99,
+          "e": 105
+        },
+        {
+          "w": "model.",
+          "s": 105,
+          "e": 112
+        },
+        {
+          "w": "Here",
+          "s": 117,
+          "e": 127
+        },
+        {
+          "w": "is",
+          "s": 127,
+          "e": 131
+        },
+        {
+          "w": "a",
+          "s": 131,
+          "e": 134
+        },
+        {
+          "w": "critical",
+          "s": 134,
+          "e": 140
+        },
+        {
+          "w": "detail:",
+          "s": 140,
+          "e": 150
+        },
+        {
+          "w": "the",
+          "s": 158,
+          "e": 165
+        },
+        {
+          "w": "language",
+          "s": 165,
+          "e": 172
+        },
+        {
+          "w": "model",
+          "s": 172,
+          "e": 178
+        },
+        {
+          "w": "never",
+          "s": 178,
+          "e": 187
+        },
+        {
+          "w": "touches",
+          "s": 187,
+          "e": 197
+        },
+        {
+          "w": "Slack",
+          "s": 197,
+          "e": 206
+        },
+        {
+          "w": "or",
+          "s": 206,
+          "e": 213
+        },
+        {
+          "w": "Notion",
+          "s": 213,
+          "e": 221
+        },
+        {
+          "w": "directly.",
+          "s": 221,
+          "e": 228
+        },
+        {
+          "w": "Instead,",
+          "s": 236,
+          "e": 251
+        },
+        {
+          "w": "it",
+          "s": 257,
+          "e": 261
+        },
+        {
+          "w": "reasons",
+          "s": 261,
+          "e": 269
+        },
+        {
+          "w": "over",
+          "s": 269,
+          "e": 276
+        },
+        {
+          "w": "your",
+          "s": 276,
+          "e": 281
+        },
+        {
+          "w": "request",
+          "s": 281,
+          "e": 289
+        },
+        {
+          "w": "and",
+          "s": 289,
+          "e": 298
+        },
+        {
+          "w": "replies",
+          "s": 298,
+          "e": 304
+        },
+        {
+          "w": "to",
+          "s": 304,
+          "e": 313
+        },
+        {
+          "w": "the",
+          "s": 313,
+          "e": 316
+        },
+        {
+          "w": "host",
+          "s": 316,
+          "e": 323
+        },
+        {
+          "w": "with",
+          "s": 323,
+          "e": 328
+        },
+        {
+          "w": "a",
+          "s": 328,
+          "e": 330
+        },
+        {
+          "w": "structured",
+          "s": 329,
+          "e": 339
+        },
+        {
+          "w": "decision",
+          "s": 339,
+          "e": 347
+        },
+        {
+          "w": "saying:",
+          "s": 347,
+          "e": 358
+        },
+        {
+          "w": "call",
+          "s": 364,
+          "e": 376
+        },
+        {
+          "w": "the",
+          "s": 376,
+          "e": 381
+        },
+        {
+          "w": "Slack",
+          "s": 381,
+          "e": 388
+        },
+        {
+          "w": "search",
+          "s": 388,
+          "e": 394
+        },
+        {
+          "w": "tool",
+          "s": 394,
+          "e": 403
+        },
+        {
+          "w": "on",
+          "s": 403,
+          "e": 410
+        },
+        {
+          "w": "the",
+          "s": 410,
+          "e": 413
+        },
+        {
+          "w": "feedback",
+          "s": 413,
+          "e": 420
+        },
+        {
+          "w": "channel,",
+          "s": 420,
+          "e": 430
+        },
+        {
+          "w": "filtered",
+          "s": 434,
+          "e": 448
+        },
+        {
+          "w": "for",
+          "s": 448,
+          "e": 456
+        },
+        {
+          "w": "urgent",
+          "s": 456,
+          "e": 462
+        },
+        {
+          "w": "customer",
+          "s": 462,
+          "e": 473
+        },
+        {
+          "w": "items.",
+          "s": 473,
+          "e": 481
+        }
+      ]
+    },
+    {
+      "paragraph": 18,
+      "chapterId": "05-walkthrough",
+      "startFrame": 10220,
+      "durationInFrames": 609,
+      "leadFrames": 9,
+      "voiceFrames": 588,
+      "audioFile": "voiceover/018.the-host-reads.mp3",
+      "timingSource": "whisper",
+      "text": "The host reads that decision and routes the call through its Slack client straight to the Slack MCP server. The server queries Slack's real API, gathers the matching messages, and returns three clean customer requests—CSV export, dark mode, and team SSO—as structured JSON. Your host then hands that fresh, verified data right back to the language model.",
+      "words": [
+        {
+          "w": "The",
+          "s": 9,
+          "e": 17
+        },
+        {
+          "w": "host",
+          "s": 17,
+          "e": 22
+        },
+        {
+          "w": "reads",
+          "s": 22,
+          "e": 29
+        },
+        {
+          "w": "that",
+          "s": 29,
+          "e": 36
+        },
+        {
+          "w": "decision",
+          "s": 36,
+          "e": 47
+        },
+        {
+          "w": "and",
+          "s": 47,
+          "e": 60
+        },
+        {
+          "w": "routes",
+          "s": 60,
+          "e": 66
+        },
+        {
+          "w": "the",
+          "s": 66,
+          "e": 71
+        },
+        {
+          "w": "call",
+          "s": 71,
+          "e": 77
+        },
+        {
+          "w": "through",
+          "s": 77,
+          "e": 83
+        },
+        {
+          "w": "its",
+          "s": 83,
+          "e": 88
+        },
+        {
+          "w": "Slack",
+          "s": 88,
+          "e": 94
+        },
+        {
+          "w": "client",
+          "s": 94,
+          "e": 104
+        },
+        {
+          "w": "straight",
+          "s": 104,
+          "e": 116
+        },
+        {
+          "w": "to",
+          "s": 116,
+          "e": 122
+        },
+        {
+          "w": "the",
+          "s": 122,
+          "e": 125
+        },
+        {
+          "w": "Slack",
+          "s": 125,
+          "e": 132
+        },
+        {
+          "w": "MCP",
+          "s": 132,
+          "e": 146
+        },
+        {
+          "w": "server.",
+          "s": 146,
+          "e": 155
+        },
+        {
+          "w": "The",
+          "s": 167,
+          "e": 182
+        },
+        {
+          "w": "server",
+          "s": 182,
+          "e": 188
+        },
+        {
+          "w": "queries",
+          "s": 188,
+          "e": 196
+        },
+        {
+          "w": "Slack's",
+          "s": 196,
+          "e": 211
+        },
+        {
+          "w": "real",
+          "s": 211,
+          "e": 215
+        },
+        {
+          "w": "API,",
+          "s": 215,
+          "e": 224
+        },
+        {
+          "w": "gathers",
+          "s": 233,
+          "e": 246
+        },
+        {
+          "w": "the",
+          "s": 246,
+          "e": 251
+        },
+        {
+          "w": "matching",
+          "s": 251,
+          "e": 258
+        },
+        {
+          "w": "messages,",
+          "s": 258,
+          "e": 269
+        },
+        {
+          "w": "and",
+          "s": 277,
+          "e": 286
+        },
+        {
+          "w": "returns",
+          "s": 286,
+          "e": 295
+        },
+        {
+          "w": "three",
+          "s": 295,
+          "e": 302
+        },
+        {
+          "w": "clean",
+          "s": 302,
+          "e": 312
+        },
+        {
+          "w": "customer",
+          "s": 312,
+          "e": 321
+        },
+        {
+          "w": "requests—CSV",
+          "s": 321,
+          "e": 359
+        },
+        {
+          "w": "export,",
+          "s": 359,
+          "e": 371
+        },
+        {
+          "w": "dark",
+          "s": 380,
+          "e": 389
+        },
+        {
+          "w": "mode,",
+          "s": 389,
+          "e": 395
+        },
+        {
+          "w": "and",
+          "s": 401,
+          "e": 409
+        },
+        {
+          "w": "team",
+          "s": 409,
+          "e": 414
+        },
+        {
+          "w": "SSO—as",
+          "s": 414,
+          "e": 440
+        },
+        {
+          "w": "structured",
+          "s": 440,
+          "e": 448
+        },
+        {
+          "w": "JSON.",
+          "s": 448,
+          "e": 458
+        },
+        {
+          "w": "Your",
+          "s": 471,
+          "e": 487
+        },
+        {
+          "w": "host",
+          "s": 487,
+          "e": 493
+        },
+        {
+          "w": "then",
+          "s": 493,
+          "e": 498
+        },
+        {
+          "w": "hands",
+          "s": 498,
+          "e": 507
+        },
+        {
+          "w": "that",
+          "s": 507,
+          "e": 512
+        },
+        {
+          "w": "fresh,",
+          "s": 512,
+          "e": 521
+        },
+        {
+          "w": "verified",
+          "s": 521,
+          "e": 530
+        },
+        {
+          "w": "data",
+          "s": 530,
+          "e": 544
+        },
+        {
+          "w": "right",
+          "s": 544,
+          "e": 553
+        },
+        {
+          "w": "back",
+          "s": 553,
+          "e": 558
+        },
+        {
+          "w": "to",
+          "s": 558,
+          "e": 564
+        },
+        {
+          "w": "the",
+          "s": 564,
+          "e": 566
+        },
+        {
+          "w": "language",
+          "s": 566,
+          "e": 572
+        },
+        {
+          "w": "model.",
+          "s": 572,
+          "e": 580
+        }
+      ]
+    },
+    {
+      "paragraph": 19,
+      "chapterId": "05-walkthrough",
+      "startFrame": 10829,
+      "durationInFrames": 534,
+      "leadFrames": 9,
+      "voiceFrames": 513,
+      "audioFile": "voiceover/019.now-the-model.mp3",
+      "timingSource": "whisper",
+      "text": "Now the model drafts a crisp Monday summary and asks to call Notion's create draft tool. Because creating new content changes external data, your host pauses and pops up a clear human-in-the-loop confirmation dialog. Once you click approve, the Notion MCP server creates the page, and the AI replies cleanly with a direct link to your finished draft.",
+      "words": [
+        {
+          "w": "Now",
+          "s": 9,
+          "e": 17
+        },
+        {
+          "w": "the",
+          "s": 17,
+          "e": 20
+        },
+        {
+          "w": "model",
+          "s": 20,
+          "e": 28
+        },
+        {
+          "w": "drafts",
+          "s": 28,
+          "e": 38
+        },
+        {
+          "w": "a",
+          "s": 38,
+          "e": 40
+        },
+        {
+          "w": "crisp",
+          "s": 38,
+          "e": 46
+        },
+        {
+          "w": "Monday",
+          "s": 46,
+          "e": 55
+        },
+        {
+          "w": "summary",
+          "s": 55,
+          "e": 66
+        },
+        {
+          "w": "and",
+          "s": 66,
+          "e": 75
+        },
+        {
+          "w": "asks",
+          "s": 75,
+          "e": 80
+        },
+        {
+          "w": "to",
+          "s": 80,
+          "e": 84
+        },
+        {
+          "w": "call",
+          "s": 84,
+          "e": 88
+        },
+        {
+          "w": "Notion's",
+          "s": 88,
+          "e": 100
+        },
+        {
+          "w": "create",
+          "s": 100,
+          "e": 106
+        },
+        {
+          "w": "draft",
+          "s": 106,
+          "e": 118
+        },
+        {
+          "w": "tool.",
+          "s": 118,
+          "e": 123
+        },
+        {
+          "w": "Because",
+          "s": 133,
+          "e": 146
+        },
+        {
+          "w": "creating",
+          "s": 146,
+          "e": 157
+        },
+        {
+          "w": "new",
+          "s": 157,
+          "e": 163
+        },
+        {
+          "w": "content",
+          "s": 163,
+          "e": 173
+        },
+        {
+          "w": "changes",
+          "s": 173,
+          "e": 184
+        },
+        {
+          "w": "external",
+          "s": 184,
+          "e": 193
+        },
+        {
+          "w": "data,",
+          "s": 193,
+          "e": 203
+        },
+        {
+          "w": "your",
+          "s": 208,
+          "e": 214
+        },
+        {
+          "w": "host",
+          "s": 214,
+          "e": 220
+        },
+        {
+          "w": "pauses",
+          "s": 220,
+          "e": 233
+        },
+        {
+          "w": "and",
+          "s": 233,
+          "e": 238
+        },
+        {
+          "w": "pops",
+          "s": 238,
+          "e": 244
+        },
+        {
+          "w": "up",
+          "s": 244,
+          "e": 250
+        },
+        {
+          "w": "a",
+          "s": 250,
+          "e": 253
+        },
+        {
+          "w": "clear",
+          "s": 253,
+          "e": 259
+        },
+        {
+          "w": "human-in-the-loop",
+          "s": 259,
+          "e": 281
+        },
+        {
+          "w": "confirmation",
+          "s": 281,
+          "e": 291
+        },
+        {
+          "w": "dialog.",
+          "s": 291,
+          "e": 308
+        },
+        {
+          "w": "Once",
+          "s": 318,
+          "e": 332
+        },
+        {
+          "w": "you",
+          "s": 332,
+          "e": 335
+        },
+        {
+          "w": "click",
+          "s": 335,
+          "e": 340
+        },
+        {
+          "w": "approve,",
+          "s": 340,
+          "e": 349
+        },
+        {
+          "w": "the",
+          "s": 357,
+          "e": 364
+        },
+        {
+          "w": "Notion",
+          "s": 364,
+          "e": 374
+        },
+        {
+          "w": "MCP",
+          "s": 374,
+          "e": 383
+        },
+        {
+          "w": "server",
+          "s": 383,
+          "e": 391
+        },
+        {
+          "w": "creates",
+          "s": 391,
+          "e": 403
+        },
+        {
+          "w": "the",
+          "s": 403,
+          "e": 409
+        },
+        {
+          "w": "page,",
+          "s": 409,
+          "e": 417
+        },
+        {
+          "w": "and",
+          "s": 421,
+          "e": 428
+        },
+        {
+          "w": "the",
+          "s": 428,
+          "e": 431
+        },
+        {
+          "w": "AI",
+          "s": 431,
+          "e": 438
+        },
+        {
+          "w": "replies",
+          "s": 438,
+          "e": 446
+        },
+        {
+          "w": "cleanly",
+          "s": 446,
+          "e": 463
+        },
+        {
+          "w": "with",
+          "s": 463,
+          "e": 467
+        },
+        {
+          "w": "a",
+          "s": 467,
+          "e": 469
+        },
+        {
+          "w": "direct",
+          "s": 469,
+          "e": 475
+        },
+        {
+          "w": "link",
+          "s": 475,
+          "e": 482
+        },
+        {
+          "w": "to",
+          "s": 482,
+          "e": 486
+        },
+        {
+          "w": "your",
+          "s": 486,
+          "e": 489
+        },
+        {
+          "w": "finished",
+          "s": 489,
+          "e": 496
+        },
+        {
+          "w": "draft.",
+          "s": 496,
+          "e": 503
+        }
+      ]
+    },
+    {
+      "paragraph": 20,
+      "chapterId": "06-transports",
+      "startFrame": 11381,
+      "durationInFrames": 603,
+      "leadFrames": 9,
+      "voiceFrames": 582,
+      "audioFile": "voiceover/020.where-do-mcp.mp3",
+      "timingSource": "whisper",
+      "text": "Where do MCP servers actually run? Depending on where your data lives, MCP supports two main transports. When connecting to local folders, personal notes, Git repositories, or a local database on your machine, the host launches the server as a tiny local subprocess using standard input and output—fast and completely private by default.",
+      "words": [
+        {
+          "w": "Where",
+          "s": 9,
+          "e": 19
+        },
+        {
+          "w": "do",
+          "s": 19,
+          "e": 23
+        },
+        {
+          "w": "MCP",
+          "s": 23,
+          "e": 37
+        },
+        {
+          "w": "servers",
+          "s": 37,
+          "e": 45
+        },
+        {
+          "w": "actually",
+          "s": 45,
+          "e": 58
+        },
+        {
+          "w": "run?",
+          "s": 58,
+          "e": 69
+        },
+        {
+          "w": "Depending",
+          "s": 88,
+          "e": 104
+        },
+        {
+          "w": "on",
+          "s": 104,
+          "e": 112
+        },
+        {
+          "w": "where",
+          "s": 112,
+          "e": 117
+        },
+        {
+          "w": "your",
+          "s": 117,
+          "e": 121
+        },
+        {
+          "w": "data",
+          "s": 121,
+          "e": 127
+        },
+        {
+          "w": "lives,",
+          "s": 127,
+          "e": 134
+        },
+        {
+          "w": "MCP",
+          "s": 142,
+          "e": 160
+        },
+        {
+          "w": "supports",
+          "s": 160,
+          "e": 172
+        },
+        {
+          "w": "two",
+          "s": 172,
+          "e": 182
+        },
+        {
+          "w": "main",
+          "s": 182,
+          "e": 190
+        },
+        {
+          "w": "transports.",
+          "s": 190,
+          "e": 212
+        },
+        {
+          "w": "When",
+          "s": 212,
+          "e": 224
+        },
+        {
+          "w": "connecting",
+          "s": 224,
+          "e": 232
+        },
+        {
+          "w": "to",
+          "s": 232,
+          "e": 238
+        },
+        {
+          "w": "local",
+          "s": 238,
+          "e": 244
+        },
+        {
+          "w": "folders,",
+          "s": 244,
+          "e": 257
+        },
+        {
+          "w": "personal",
+          "s": 265,
+          "e": 272
+        },
+        {
+          "w": "notes,",
+          "s": 272,
+          "e": 285
+        },
+        {
+          "w": "Git",
+          "s": 290,
+          "e": 293
+        },
+        {
+          "w": "repositories,",
+          "s": 293,
+          "e": 318
+        },
+        {
+          "w": "or",
+          "s": 320,
+          "e": 324
+        },
+        {
+          "w": "a",
+          "s": 324,
+          "e": 327
+        },
+        {
+          "w": "local",
+          "s": 327,
+          "e": 333
+        },
+        {
+          "w": "database",
+          "s": 333,
+          "e": 343
+        },
+        {
+          "w": "on",
+          "s": 343,
+          "e": 350
+        },
+        {
+          "w": "your",
+          "s": 350,
+          "e": 352
+        },
+        {
+          "w": "machine,",
+          "s": 352,
+          "e": 361
+        },
+        {
+          "w": "the",
+          "s": 370,
+          "e": 380
+        },
+        {
+          "w": "host",
+          "s": 380,
+          "e": 387
+        },
+        {
+          "w": "launches",
+          "s": 387,
+          "e": 399
+        },
+        {
+          "w": "the",
+          "s": 399,
+          "e": 403
+        },
+        {
+          "w": "server",
+          "s": 403,
+          "e": 412
+        },
+        {
+          "w": "as",
+          "s": 412,
+          "e": 418
+        },
+        {
+          "w": "a",
+          "s": 418,
+          "e": 421
+        },
+        {
+          "w": "tiny",
+          "s": 421,
+          "e": 429
+        },
+        {
+          "w": "local",
+          "s": 429,
+          "e": 437
+        },
+        {
+          "w": "subprocess",
+          "s": 437,
+          "e": 452
+        },
+        {
+          "w": "using",
+          "s": 452,
+          "e": 468
+        },
+        {
+          "w": "standard",
+          "s": 468,
+          "e": 481
+        },
+        {
+          "w": "input",
+          "s": 481,
+          "e": 490
+        },
+        {
+          "w": "and",
+          "s": 490,
+          "e": 499
+        },
+        {
+          "w": "output—fast",
+          "s": 499,
+          "e": 527
+        },
+        {
+          "w": "and",
+          "s": 527,
+          "e": 533
+        },
+        {
+          "w": "completely",
+          "s": 533,
+          "e": 541
+        },
+        {
+          "w": "private",
+          "s": 541,
+          "e": 554
+        },
+        {
+          "w": "by",
+          "s": 554,
+          "e": 562
+        },
+        {
+          "w": "default.",
+          "s": 562,
+          "e": 569
+        }
+      ]
+    },
+    {
+      "paragraph": 21,
+      "chapterId": "06-transports",
+      "startFrame": 11984,
+      "durationInFrames": 660,
+      "leadFrames": 9,
+      "voiceFrames": 639,
+      "audioFile": "voiceover/021.when-your-data.mp3",
+      "timingSource": "whisper",
+      "text": "When your data lives in cloud apps like Notion, Slack, Linear, Figma, or internal company systems, MCP uses a second transport called Streamable HTTP, which replaced the older SSE approach. Instead of running anything locally, your host connects to a normal web address, signs you in securely using OAuth two point one, and streams live updates straight over the web.",
+      "words": [
+        {
+          "w": "When",
+          "s": 9,
+          "e": 17
+        },
+        {
+          "w": "your",
+          "s": 17,
+          "e": 20
+        },
+        {
+          "w": "data",
+          "s": 20,
+          "e": 28
+        },
+        {
+          "w": "lives",
+          "s": 28,
+          "e": 34
+        },
+        {
+          "w": "in",
+          "s": 34,
+          "e": 40
+        },
+        {
+          "w": "cloud",
+          "s": 40,
+          "e": 47
+        },
+        {
+          "w": "apps",
+          "s": 47,
+          "e": 57
+        },
+        {
+          "w": "like",
+          "s": 57,
+          "e": 66
+        },
+        {
+          "w": "Notion,",
+          "s": 66,
+          "e": 82
+        },
+        {
+          "w": "Slack,",
+          "s": 83,
+          "e": 93
+        },
+        {
+          "w": "Linear,",
+          "s": 102,
+          "e": 118
+        },
+        {
+          "w": "Figma,",
+          "s": 119,
+          "e": 130
+        },
+        {
+          "w": "or",
+          "s": 133,
+          "e": 139
+        },
+        {
+          "w": "internal",
+          "s": 139,
+          "e": 147
+        },
+        {
+          "w": "company",
+          "s": 147,
+          "e": 157
+        },
+        {
+          "w": "systems,",
+          "s": 157,
+          "e": 172
+        },
+        {
+          "w": "MCP",
+          "s": 181,
+          "e": 205
+        },
+        {
+          "w": "uses",
+          "s": 205,
+          "e": 214
+        },
+        {
+          "w": "a",
+          "s": 214,
+          "e": 221
+        },
+        {
+          "w": "second",
+          "s": 221,
+          "e": 230
+        },
+        {
+          "w": "transport",
+          "s": 230,
+          "e": 242
+        },
+        {
+          "w": "called",
+          "s": 242,
+          "e": 253
+        },
+        {
+          "w": "Streamable",
+          "s": 253,
+          "e": 269
+        },
+        {
+          "w": "HTTP,",
+          "s": 269,
+          "e": 280
+        },
+        {
+          "w": "which",
+          "s": 295,
+          "e": 308
+        },
+        {
+          "w": "replaced",
+          "s": 308,
+          "e": 316
+        },
+        {
+          "w": "the",
+          "s": 316,
+          "e": 323
+        },
+        {
+          "w": "older",
+          "s": 323,
+          "e": 329
+        },
+        {
+          "w": "SSE",
+          "s": 329,
+          "e": 342
+        },
+        {
+          "w": "approach.",
+          "s": 342,
+          "e": 351
+        },
+        {
+          "w": "Instead",
+          "s": 367,
+          "e": 383
+        },
+        {
+          "w": "of",
+          "s": 383,
+          "e": 390
+        },
+        {
+          "w": "running",
+          "s": 390,
+          "e": 395
+        },
+        {
+          "w": "anything",
+          "s": 395,
+          "e": 403
+        },
+        {
+          "w": "locally,",
+          "s": 403,
+          "e": 417
+        },
+        {
+          "w": "your",
+          "s": 425,
+          "e": 434
+        },
+        {
+          "w": "host",
+          "s": 434,
+          "e": 440
+        },
+        {
+          "w": "connects",
+          "s": 440,
+          "e": 447
+        },
+        {
+          "w": "to",
+          "s": 447,
+          "e": 454
+        },
+        {
+          "w": "a",
+          "s": 454,
+          "e": 457
+        },
+        {
+          "w": "normal",
+          "s": 457,
+          "e": 464
+        },
+        {
+          "w": "web",
+          "s": 464,
+          "e": 470
+        },
+        {
+          "w": "address,",
+          "s": 470,
+          "e": 478
+        },
+        {
+          "w": "signs",
+          "s": 485,
+          "e": 496
+        },
+        {
+          "w": "you",
+          "s": 496,
+          "e": 504
+        },
+        {
+          "w": "in",
+          "s": 504,
+          "e": 507
+        },
+        {
+          "w": "securely",
+          "s": 507,
+          "e": 516
+        },
+        {
+          "w": "using",
+          "s": 516,
+          "e": 529
+        },
+        {
+          "w": "OAuth",
+          "s": 529,
+          "e": 545
+        },
+        {
+          "w": "two",
+          "s": 545,
+          "e": 548
+        },
+        {
+          "w": "point",
+          "s": 548,
+          "e": 550
+        },
+        {
+          "w": "one,",
+          "s": 548,
+          "e": 562
+        },
+        {
+          "w": "and",
+          "s": 566,
+          "e": 579
+        },
+        {
+          "w": "streams",
+          "s": 579,
+          "e": 587
+        },
+        {
+          "w": "live",
+          "s": 587,
+          "e": 595
+        },
+        {
+          "w": "updates",
+          "s": 595,
+          "e": 606
+        },
+        {
+          "w": "straight",
+          "s": 606,
+          "e": 616
+        },
+        {
+          "w": "over",
+          "s": 616,
+          "e": 623
+        },
+        {
+          "w": "the",
+          "s": 623,
+          "e": 628
+        },
+        {
+          "w": "web.",
+          "s": 628,
+          "e": 632
+        }
+      ]
+    },
+    {
+      "paragraph": 22,
+      "chapterId": "06-transports",
+      "startFrame": 12644,
+      "durationInFrames": 591,
+      "leadFrames": 9,
+      "voiceFrames": 570,
+      "audioFile": "voiceover/022.choosing-between-the.mp3",
+      "timingSource": "whisper",
+      "text": "Choosing between the two is straightforward. Reach for local standard input and output whenever you need direct, low-latency access to files sitting on your laptop with zero network traffic. Reach for remote Streamable HTTP whenever you want effortless cloud integrations with no terminal setup, or when an organization wants to host one centrally managed server for easy team sharing.",
+      "words": [
+        {
+          "w": "Choosing",
+          "s": 9,
+          "e": 23
+        },
+        {
+          "w": "between",
+          "s": 23,
+          "e": 28
+        },
+        {
+          "w": "the",
+          "s": 28,
+          "e": 34
+        },
+        {
+          "w": "two",
+          "s": 34,
+          "e": 39
+        },
+        {
+          "w": "is",
+          "s": 39,
+          "e": 45
+        },
+        {
+          "w": "straightforward.",
+          "s": 45,
+          "e": 55
+        },
+        {
+          "w": "Reach",
+          "s": 70,
+          "e": 86
+        },
+        {
+          "w": "for",
+          "s": 86,
+          "e": 91
+        },
+        {
+          "w": "local",
+          "s": 91,
+          "e": 98
+        },
+        {
+          "w": "standard",
+          "s": 98,
+          "e": 107
+        },
+        {
+          "w": "input",
+          "s": 107,
+          "e": 118
+        },
+        {
+          "w": "and",
+          "s": 118,
+          "e": 124
+        },
+        {
+          "w": "output",
+          "s": 124,
+          "e": 133
+        },
+        {
+          "w": "whenever",
+          "s": 133,
+          "e": 143
+        },
+        {
+          "w": "you",
+          "s": 143,
+          "e": 149
+        },
+        {
+          "w": "need",
+          "s": 149,
+          "e": 155
+        },
+        {
+          "w": "direct,",
+          "s": 155,
+          "e": 166
+        },
+        {
+          "w": "low-latency",
+          "s": 169,
+          "e": 187
+        },
+        {
+          "w": "access",
+          "s": 187,
+          "e": 196
+        },
+        {
+          "w": "to",
+          "s": 196,
+          "e": 207
+        },
+        {
+          "w": "files",
+          "s": 207,
+          "e": 216
+        },
+        {
+          "w": "sitting",
+          "s": 216,
+          "e": 222
+        },
+        {
+          "w": "on",
+          "s": 222,
+          "e": 226
+        },
+        {
+          "w": "your",
+          "s": 226,
+          "e": 229
+        },
+        {
+          "w": "laptop",
+          "s": 229,
+          "e": 239
+        },
+        {
+          "w": "with",
+          "s": 239,
+          "e": 248
+        },
+        {
+          "w": "zero",
+          "s": 248,
+          "e": 255
+        },
+        {
+          "w": "network",
+          "s": 255,
+          "e": 263
+        },
+        {
+          "w": "traffic.",
+          "s": 263,
+          "e": 274
+        },
+        {
+          "w": "Reach",
+          "s": 288,
+          "e": 304
+        },
+        {
+          "w": "for",
+          "s": 304,
+          "e": 309
+        },
+        {
+          "w": "remote",
+          "s": 309,
+          "e": 317
+        },
+        {
+          "w": "Streamable",
+          "s": 320,
+          "e": 332
+        },
+        {
+          "w": "HTTP",
+          "s": 332,
+          "e": 342
+        },
+        {
+          "w": "whenever",
+          "s": 342,
+          "e": 361
+        },
+        {
+          "w": "you",
+          "s": 361,
+          "e": 367
+        },
+        {
+          "w": "want",
+          "s": 367,
+          "e": 373
+        },
+        {
+          "w": "effortless",
+          "s": 373,
+          "e": 385
+        },
+        {
+          "w": "cloud",
+          "s": 385,
+          "e": 390
+        },
+        {
+          "w": "integrations",
+          "s": 390,
+          "e": 410
+        },
+        {
+          "w": "with",
+          "s": 410,
+          "e": 415
+        },
+        {
+          "w": "no",
+          "s": 415,
+          "e": 419
+        },
+        {
+          "w": "terminal",
+          "s": 419,
+          "e": 429
+        },
+        {
+          "w": "setup,",
+          "s": 429,
+          "e": 438
+        },
+        {
+          "w": "or",
+          "s": 444,
+          "e": 455
+        },
+        {
+          "w": "when",
+          "s": 455,
+          "e": 460
+        },
+        {
+          "w": "an",
+          "s": 460,
+          "e": 463
+        },
+        {
+          "w": "organization",
+          "s": 463,
+          "e": 475
+        },
+        {
+          "w": "wants",
+          "s": 475,
+          "e": 485
+        },
+        {
+          "w": "to",
+          "s": 485,
+          "e": 490
+        },
+        {
+          "w": "host",
+          "s": 490,
+          "e": 496
+        },
+        {
+          "w": "one",
+          "s": 496,
+          "e": 502
+        },
+        {
+          "w": "centrally",
+          "s": 502,
+          "e": 517
+        },
+        {
+          "w": "managed",
+          "s": 517,
+          "e": 523
+        },
+        {
+          "w": "server",
+          "s": 523,
+          "e": 534
+        },
+        {
+          "w": "for",
+          "s": 534,
+          "e": 541
+        },
+        {
+          "w": "easy",
+          "s": 541,
+          "e": 547
+        },
+        {
+          "w": "team",
+          "s": 547,
+          "e": 554
+        },
+        {
+          "w": "sharing.",
+          "s": 554,
+          "e": 562
+        }
+      ]
+    },
+    {
+      "paragraph": 23,
+      "chapterId": "07-how-to-use",
+      "startFrame": 13253,
+      "durationInFrames": 572,
+      "leadFrames": 9,
+      "voiceFrames": 551,
+      "audioFile": "voiceover/023.ready-to-try.mp3",
+      "timingSource": "whisper",
+      "text": "Ready to try MCP? There are two easy paths. First, for everyday AI users, you do not need to write a single line of code. Modern apps like Claude, ChatGPT, Notion, Cursor, and VS Code include built-in directories of remote connectors—you simply sign in like any normal app, flip a toggle on, and start prompting.",
+      "words": [
+        {
+          "w": "Ready",
+          "s": 9,
+          "e": 18
+        },
+        {
+          "w": "to",
+          "s": 18,
+          "e": 22
+        },
+        {
+          "w": "try",
+          "s": 22,
+          "e": 29
+        },
+        {
+          "w": "MCP?",
+          "s": 29,
+          "e": 41
+        },
+        {
+          "w": "There",
+          "s": 57,
+          "e": 70
+        },
+        {
+          "w": "are",
+          "s": 70,
+          "e": 73
+        },
+        {
+          "w": "two",
+          "s": 73,
+          "e": 77
+        },
+        {
+          "w": "easy",
+          "s": 77,
+          "e": 87
+        },
+        {
+          "w": "paths.",
+          "s": 87,
+          "e": 95
+        },
+        {
+          "w": "First,",
+          "s": 114,
+          "e": 127
+        },
+        {
+          "w": "for",
+          "s": 134,
+          "e": 140
+        },
+        {
+          "w": "everyday",
+          "s": 140,
+          "e": 151
+        },
+        {
+          "w": "AI",
+          "s": 151,
+          "e": 160
+        },
+        {
+          "w": "users,",
+          "s": 160,
+          "e": 170
+        },
+        {
+          "w": "you",
+          "s": 176,
+          "e": 180
+        },
+        {
+          "w": "do",
+          "s": 180,
+          "e": 183
+        },
+        {
+          "w": "not",
+          "s": 183,
+          "e": 190
+        },
+        {
+          "w": "need",
+          "s": 190,
+          "e": 195
+        },
+        {
+          "w": "to",
+          "s": 195,
+          "e": 200
+        },
+        {
+          "w": "write",
+          "s": 200,
+          "e": 205
+        },
+        {
+          "w": "a",
+          "s": 205,
+          "e": 208
+        },
+        {
+          "w": "single",
+          "s": 208,
+          "e": 215
+        },
+        {
+          "w": "line",
+          "s": 215,
+          "e": 223
+        },
+        {
+          "w": "of",
+          "s": 223,
+          "e": 226
+        },
+        {
+          "w": "code.",
+          "s": 226,
+          "e": 232
+        },
+        {
+          "w": "Modern",
+          "s": 245,
+          "e": 259
+        },
+        {
+          "w": "apps",
+          "s": 259,
+          "e": 266
+        },
+        {
+          "w": "like",
+          "s": 266,
+          "e": 273
+        },
+        {
+          "w": "Claude,",
+          "s": 273,
+          "e": 287
+        },
+        {
+          "w": "ChatGPT,",
+          "s": 288,
+          "e": 310
+        },
+        {
+          "w": "Notion,",
+          "s": 314,
+          "e": 328
+        },
+        {
+          "w": "Cursor,",
+          "s": 331,
+          "e": 347
+        },
+        {
+          "w": "and",
+          "s": 347,
+          "e": 350
+        },
+        {
+          "w": "VS",
+          "s": 350,
+          "e": 355
+        },
+        {
+          "w": "Code",
+          "s": 355,
+          "e": 364
+        },
+        {
+          "w": "include",
+          "s": 364,
+          "e": 382
+        },
+        {
+          "w": "built-in",
+          "s": 382,
+          "e": 398
+        },
+        {
+          "w": "directories",
+          "s": 398,
+          "e": 417
+        },
+        {
+          "w": "of",
+          "s": 417,
+          "e": 419
+        },
+        {
+          "w": "remote",
+          "s": 419,
+          "e": 424
+        },
+        {
+          "w": "connectors—you",
+          "s": 424,
+          "e": 452
+        },
+        {
+          "w": "simply",
+          "s": 452,
+          "e": 458
+        },
+        {
+          "w": "sign",
+          "s": 458,
+          "e": 467
+        },
+        {
+          "w": "in",
+          "s": 467,
+          "e": 473
+        },
+        {
+          "w": "like",
+          "s": 473,
+          "e": 478
+        },
+        {
+          "w": "any",
+          "s": 478,
+          "e": 483
+        },
+        {
+          "w": "normal",
+          "s": 483,
+          "e": 490
+        },
+        {
+          "w": "app,",
+          "s": 490,
+          "e": 497
+        },
+        {
+          "w": "flip",
+          "s": 502,
+          "e": 508
+        },
+        {
+          "w": "a",
+          "s": 508,
+          "e": 511
+        },
+        {
+          "w": "toggle",
+          "s": 511,
+          "e": 518
+        },
+        {
+          "w": "on,",
+          "s": 518,
+          "e": 526
+        },
+        {
+          "w": "and",
+          "s": 529,
+          "e": 533
+        },
+        {
+          "w": "start",
+          "s": 533,
+          "e": 538
+        },
+        {
+          "w": "prompting.",
+          "s": 538,
+          "e": 552
+        }
+      ]
+    },
+    {
+      "paragraph": 24,
+      "chapterId": "07-how-to-use",
+      "startFrame": 13825,
+      "durationInFrames": 582,
+      "leadFrames": 9,
+      "voiceFrames": 561,
+      "audioFile": "voiceover/024.second-for-power.mp3",
+      "timingSource": "whisper",
+      "text": "Second, for power users and developers who want local tools or custom workflows, almost every MCP host reads the same simple JSON config block—a server name pointed at a local command or remote web address. Building your own takes roughly thirty lines of Python with FastMCP or TypeScript with the official SDK.",
+      "words": [
+        {
+          "w": "Second,",
+          "s": 9,
+          "e": 23
+        },
+        {
+          "w": "for",
+          "s": 29,
+          "e": 34
+        },
+        {
+          "w": "power",
+          "s": 34,
+          "e": 42
+        },
+        {
+          "w": "users",
+          "s": 42,
+          "e": 50
+        },
+        {
+          "w": "and",
+          "s": 50,
+          "e": 59
+        },
+        {
+          "w": "developers",
+          "s": 59,
+          "e": 70
+        },
+        {
+          "w": "who",
+          "s": 70,
+          "e": 82
+        },
+        {
+          "w": "want",
+          "s": 82,
+          "e": 88
+        },
+        {
+          "w": "local",
+          "s": 88,
+          "e": 97
+        },
+        {
+          "w": "tools",
+          "s": 97,
+          "e": 108
+        },
+        {
+          "w": "or",
+          "s": 108,
+          "e": 115
+        },
+        {
+          "w": "custom",
+          "s": 115,
+          "e": 123
+        },
+        {
+          "w": "workflows,",
+          "s": 123,
+          "e": 133
+        },
+        {
+          "w": "almost",
+          "s": 146,
+          "e": 160
+        },
+        {
+          "w": "every",
+          "s": 160,
+          "e": 172
+        },
+        {
+          "w": "MCP",
+          "s": 172,
+          "e": 188
+        },
+        {
+          "w": "host",
+          "s": 188,
+          "e": 196
+        },
+        {
+          "w": "reads",
+          "s": 196,
+          "e": 206
+        },
+        {
+          "w": "the",
+          "s": 206,
+          "e": 212
+        },
+        {
+          "w": "same",
+          "s": 212,
+          "e": 220
+        },
+        {
+          "w": "simple",
+          "s": 220,
+          "e": 232
+        },
+        {
+          "w": "JSON",
+          "s": 232,
+          "e": 242
+        },
+        {
+          "w": "config",
+          "s": 242,
+          "e": 251
+        },
+        {
+          "w": "block—a",
+          "s": 251,
+          "e": 282
+        },
+        {
+          "w": "server",
+          "s": 282,
+          "e": 290
+        },
+        {
+          "w": "name",
+          "s": 290,
+          "e": 296
+        },
+        {
+          "w": "pointed",
+          "s": 296,
+          "e": 307
+        },
+        {
+          "w": "at",
+          "s": 307,
+          "e": 313
+        },
+        {
+          "w": "a",
+          "s": 313,
+          "e": 315
+        },
+        {
+          "w": "local",
+          "s": 314,
+          "e": 320
+        },
+        {
+          "w": "command",
+          "s": 320,
+          "e": 329
+        },
+        {
+          "w": "or",
+          "s": 329,
+          "e": 339
+        },
+        {
+          "w": "remote",
+          "s": 339,
+          "e": 346
+        },
+        {
+          "w": "web",
+          "s": 346,
+          "e": 352
+        },
+        {
+          "w": "address.",
+          "s": 352,
+          "e": 360
+        },
+        {
+          "w": "Building",
+          "s": 385,
+          "e": 403
+        },
+        {
+          "w": "your",
+          "s": 403,
+          "e": 408
+        },
+        {
+          "w": "own",
+          "s": 408,
+          "e": 414
+        },
+        {
+          "w": "takes",
+          "s": 414,
+          "e": 419
+        },
+        {
+          "w": "roughly",
+          "s": 419,
+          "e": 427
+        },
+        {
+          "w": "thirty",
+          "s": 427,
+          "e": 437
+        },
+        {
+          "w": "lines",
+          "s": 437,
+          "e": 446
+        },
+        {
+          "w": "of",
+          "s": 446,
+          "e": 450
+        },
+        {
+          "w": "Python",
+          "s": 450,
+          "e": 459
+        },
+        {
+          "w": "with",
+          "s": 459,
+          "e": 469
+        },
+        {
+          "w": "FastMCP",
+          "s": 469,
+          "e": 492
+        },
+        {
+          "w": "or",
+          "s": 492,
+          "e": 499
+        },
+        {
+          "w": "TypeScript",
+          "s": 499,
+          "e": 512
+        },
+        {
+          "w": "with",
+          "s": 512,
+          "e": 526
+        },
+        {
+          "w": "the",
+          "s": 526,
+          "e": 529
+        },
+        {
+          "w": "official",
+          "s": 529,
+          "e": 536
+        },
+        {
+          "w": "SDK.",
+          "s": 536,
+          "e": 548
+        }
+      ]
+    },
+    {
+      "paragraph": 25,
+      "chapterId": "07-how-to-use",
+      "startFrame": 14407,
+      "durationInFrames": 537,
+      "leadFrames": 9,
+      "voiceFrames": 516,
+      "audioFile": "voiceover/025.either-way-one.mp3",
+      "timingSource": "whisper",
+      "text": "Either way, one simple habit makes day one dramatically smoother: resist the temptation to connect fifteen servers all at once. Start with the AI host you already open every day, add just one or two trusted read-only servers like your notes or project docs, and only switch on edits or writes once you have watched the workflow behave reliably.",
+      "words": [
+        {
+          "w": "Either",
+          "s": 9,
+          "e": 20
+        },
+        {
+          "w": "way,",
+          "s": 20,
+          "e": 26
+        },
+        {
+          "w": "one",
+          "s": 30,
+          "e": 38
+        },
+        {
+          "w": "simple",
+          "s": 38,
+          "e": 48
+        },
+        {
+          "w": "habit",
+          "s": 48,
+          "e": 58
+        },
+        {
+          "w": "makes",
+          "s": 58,
+          "e": 67
+        },
+        {
+          "w": "day",
+          "s": 67,
+          "e": 73
+        },
+        {
+          "w": "one",
+          "s": 73,
+          "e": 80
+        },
+        {
+          "w": "dramatically",
+          "s": 80,
+          "e": 92
+        },
+        {
+          "w": "smoother:",
+          "s": 92,
+          "e": 107
+        },
+        {
+          "w": "resist",
+          "s": 116,
+          "e": 131
+        },
+        {
+          "w": "the",
+          "s": 131,
+          "e": 133
+        },
+        {
+          "w": "temptation",
+          "s": 133,
+          "e": 142
+        },
+        {
+          "w": "to",
+          "s": 142,
+          "e": 153
+        },
+        {
+          "w": "connect",
+          "s": 153,
+          "e": 160
+        },
+        {
+          "w": "fifteen",
+          "s": 160,
+          "e": 169
+        },
+        {
+          "w": "servers",
+          "s": 169,
+          "e": 185
+        },
+        {
+          "w": "all",
+          "s": 185,
+          "e": 193
+        },
+        {
+          "w": "at",
+          "s": 193,
+          "e": 197
+        },
+        {
+          "w": "once.",
+          "s": 197,
+          "e": 204
+        },
+        {
+          "w": "Start",
+          "s": 214,
+          "e": 228
+        },
+        {
+          "w": "with",
+          "s": 228,
+          "e": 234
+        },
+        {
+          "w": "the",
+          "s": 234,
+          "e": 237
+        },
+        {
+          "w": "AI",
+          "s": 237,
+          "e": 244
+        },
+        {
+          "w": "host",
+          "s": 244,
+          "e": 253
+        },
+        {
+          "w": "you",
+          "s": 253,
+          "e": 259
+        },
+        {
+          "w": "already",
+          "s": 259,
+          "e": 266
+        },
+        {
+          "w": "open",
+          "s": 266,
+          "e": 274
+        },
+        {
+          "w": "every",
+          "s": 274,
+          "e": 281
+        },
+        {
+          "w": "day,",
+          "s": 281,
+          "e": 288
+        },
+        {
+          "w": "add",
+          "s": 294,
+          "e": 304
+        },
+        {
+          "w": "just",
+          "s": 304,
+          "e": 310
+        },
+        {
+          "w": "one",
+          "s": 310,
+          "e": 314
+        },
+        {
+          "w": "or",
+          "s": 314,
+          "e": 319
+        },
+        {
+          "w": "two",
+          "s": 319,
+          "e": 324
+        },
+        {
+          "w": "trusted",
+          "s": 324,
+          "e": 335
+        },
+        {
+          "w": "read-only",
+          "s": 335,
+          "e": 349
+        },
+        {
+          "w": "servers",
+          "s": 349,
+          "e": 359
+        },
+        {
+          "w": "like",
+          "s": 359,
+          "e": 369
+        },
+        {
+          "w": "your",
+          "s": 369,
+          "e": 373
+        },
+        {
+          "w": "notes",
+          "s": 373,
+          "e": 380
+        },
+        {
+          "w": "or",
+          "s": 380,
+          "e": 385
+        },
+        {
+          "w": "project",
+          "s": 385,
+          "e": 394
+        },
+        {
+          "w": "docs,",
+          "s": 394,
+          "e": 403
+        },
+        {
+          "w": "and",
+          "s": 407,
+          "e": 416
+        },
+        {
+          "w": "only",
+          "s": 416,
+          "e": 424
+        },
+        {
+          "w": "switch",
+          "s": 424,
+          "e": 431
+        },
+        {
+          "w": "on",
+          "s": 431,
+          "e": 436
+        },
+        {
+          "w": "edits",
+          "s": 436,
+          "e": 444
+        },
+        {
+          "w": "or",
+          "s": 444,
+          "e": 449
+        },
+        {
+          "w": "writes",
+          "s": 449,
+          "e": 456
+        },
+        {
+          "w": "once",
+          "s": 456,
+          "e": 464
+        },
+        {
+          "w": "you",
+          "s": 464,
+          "e": 467
+        },
+        {
+          "w": "have",
+          "s": 467,
+          "e": 470
+        },
+        {
+          "w": "watched",
+          "s": 470,
+          "e": 478
+        },
+        {
+          "w": "the",
+          "s": 478,
+          "e": 483
+        },
+        {
+          "w": "workflow",
+          "s": 483,
+          "e": 490
+        },
+        {
+          "w": "behave",
+          "s": 490,
+          "e": 499
+        },
+        {
+          "w": "reliably.",
+          "s": 499,
+          "e": 509
+        }
+      ]
+    },
+    {
+      "paragraph": 26,
+      "chapterId": "08-pitfalls-and-outro",
+      "startFrame": 14962,
+      "durationInFrames": 603,
+      "leadFrames": 9,
+      "voiceFrames": 582,
+      "audioFile": "voiceover/026.before-wiring-everything.mp3",
+      "timingSource": "whisper",
+      "text": "Before wiring everything up, know three real-world trade-offs. First is context window bloat. Every connected tool sends its description along with your prompt, so wiring up a hundred tools can quietly burn thousands of tokens before you even speak—raising costs and confusing the model. Keep only focused servers enabled, or use dynamic tool search.",
+      "words": [
+        {
+          "w": "Before",
+          "s": 9,
+          "e": 19
+        },
+        {
+          "w": "wiring",
+          "s": 19,
+          "e": 29
+        },
+        {
+          "w": "everything",
+          "s": 29,
+          "e": 35
+        },
+        {
+          "w": "up,",
+          "s": 35,
+          "e": 47
+        },
+        {
+          "w": "know",
+          "s": 49,
+          "e": 59
+        },
+        {
+          "w": "three",
+          "s": 59,
+          "e": 68
+        },
+        {
+          "w": "real-world",
+          "s": 68,
+          "e": 86
+        },
+        {
+          "w": "trade-offs.",
+          "s": 86,
+          "e": 105
+        },
+        {
+          "w": "First",
+          "s": 117,
+          "e": 135
+        },
+        {
+          "w": "is",
+          "s": 135,
+          "e": 146
+        },
+        {
+          "w": "context",
+          "s": 146,
+          "e": 160
+        },
+        {
+          "w": "window",
+          "s": 160,
+          "e": 172
+        },
+        {
+          "w": "bloat.",
+          "s": 172,
+          "e": 188
+        },
+        {
+          "w": "Every",
+          "s": 190,
+          "e": 208
+        },
+        {
+          "w": "connected",
+          "s": 208,
+          "e": 217
+        },
+        {
+          "w": "tool",
+          "s": 217,
+          "e": 227
+        },
+        {
+          "w": "sends",
+          "s": 227,
+          "e": 236
+        },
+        {
+          "w": "its",
+          "s": 236,
+          "e": 243
+        },
+        {
+          "w": "description",
+          "s": 243,
+          "e": 253
+        },
+        {
+          "w": "along",
+          "s": 253,
+          "e": 263
+        },
+        {
+          "w": "with",
+          "s": 263,
+          "e": 268
+        },
+        {
+          "w": "your",
+          "s": 268,
+          "e": 272
+        },
+        {
+          "w": "prompt,",
+          "s": 272,
+          "e": 281
+        },
+        {
+          "w": "so",
+          "s": 285,
+          "e": 295
+        },
+        {
+          "w": "wiring",
+          "s": 295,
+          "e": 306
+        },
+        {
+          "w": "up",
+          "s": 306,
+          "e": 312
+        },
+        {
+          "w": "a",
+          "s": 312,
+          "e": 314
+        },
+        {
+          "w": "hundred",
+          "s": 313,
+          "e": 317
+        },
+        {
+          "w": "tools",
+          "s": 317,
+          "e": 329
+        },
+        {
+          "w": "can",
+          "s": 329,
+          "e": 338
+        },
+        {
+          "w": "quietly",
+          "s": 338,
+          "e": 346
+        },
+        {
+          "w": "burn",
+          "s": 346,
+          "e": 355
+        },
+        {
+          "w": "thousands",
+          "s": 355,
+          "e": 365
+        },
+        {
+          "w": "of",
+          "s": 365,
+          "e": 371
+        },
+        {
+          "w": "tokens",
+          "s": 371,
+          "e": 380
+        },
+        {
+          "w": "before",
+          "s": 380,
+          "e": 388
+        },
+        {
+          "w": "you",
+          "s": 388,
+          "e": 394
+        },
+        {
+          "w": "even",
+          "s": 394,
+          "e": 397
+        },
+        {
+          "w": "speak—raising",
+          "s": 397,
+          "e": 422
+        },
+        {
+          "w": "costs",
+          "s": 422,
+          "e": 436
+        },
+        {
+          "w": "and",
+          "s": 436,
+          "e": 442
+        },
+        {
+          "w": "confusing",
+          "s": 442,
+          "e": 454
+        },
+        {
+          "w": "the",
+          "s": 454,
+          "e": 458
+        },
+        {
+          "w": "model.",
+          "s": 458,
+          "e": 464
+        },
+        {
+          "w": "Keep",
+          "s": 476,
+          "e": 493
+        },
+        {
+          "w": "only",
+          "s": 493,
+          "e": 502
+        },
+        {
+          "w": "focused",
+          "s": 502,
+          "e": 511
+        },
+        {
+          "w": "servers",
+          "s": 511,
+          "e": 521
+        },
+        {
+          "w": "enabled,",
+          "s": 521,
+          "e": 531
+        },
+        {
+          "w": "or",
+          "s": 531,
+          "e": 546
+        },
+        {
+          "w": "use",
+          "s": 546,
+          "e": 553
+        },
+        {
+          "w": "dynamic",
+          "s": 553,
+          "e": 562
+        },
+        {
+          "w": "tool",
+          "s": 562,
+          "e": 571
+        },
+        {
+          "w": "search.",
+          "s": 571,
+          "e": 578
+        }
+      ]
+    },
+    {
+      "paragraph": 27,
+      "chapterId": "08-pitfalls-and-outro",
+      "startFrame": 15565,
+      "durationInFrames": 750,
+      "leadFrames": 9,
+      "voiceFrames": 729,
+      "audioFile": "voiceover/027.second-is-security.mp3",
+      "timingSource": "whisper",
+      "text": "Second is security. Letting AI act on live systems opens new attack surfaces: malicious external content can trigger prompt injection, and untrusted servers can smuggle hidden instructions inside tool descriptions—an attack called tool poisoning. Treat MCP servers exactly like browser extensions: install only from trusted sources, grant the narrowest permissions possible, and keep human approval turned on for writes.",
+      "words": [
+        {
+          "w": "Second",
+          "s": 9,
+          "e": 24
+        },
+        {
+          "w": "is",
+          "s": 24,
+          "e": 35
+        },
+        {
+          "w": "security.",
+          "s": 35,
+          "e": 51
+        },
+        {
+          "w": "Letting",
+          "s": 66,
+          "e": 86
+        },
+        {
+          "w": "AI",
+          "s": 86,
+          "e": 93
+        },
+        {
+          "w": "act",
+          "s": 93,
+          "e": 103
+        },
+        {
+          "w": "on",
+          "s": 103,
+          "e": 110
+        },
+        {
+          "w": "live",
+          "s": 110,
+          "e": 115
+        },
+        {
+          "w": "systems",
+          "s": 115,
+          "e": 128
+        },
+        {
+          "w": "opens",
+          "s": 128,
+          "e": 140
+        },
+        {
+          "w": "new",
+          "s": 140,
+          "e": 149
+        },
+        {
+          "w": "attack",
+          "s": 149,
+          "e": 156
+        },
+        {
+          "w": "surfaces:",
+          "s": 156,
+          "e": 167
+        },
+        {
+          "w": "malicious",
+          "s": 181,
+          "e": 194
+        },
+        {
+          "w": "external",
+          "s": 194,
+          "e": 207
+        },
+        {
+          "w": "content",
+          "s": 207,
+          "e": 223
+        },
+        {
+          "w": "can",
+          "s": 223,
+          "e": 232
+        },
+        {
+          "w": "trigger",
+          "s": 232,
+          "e": 238
+        },
+        {
+          "w": "prompt",
+          "s": 238,
+          "e": 248
+        },
+        {
+          "w": "injection,",
+          "s": 248,
+          "e": 257
+        },
+        {
+          "w": "and",
+          "s": 268,
+          "e": 280
+        },
+        {
+          "w": "untrusted",
+          "s": 280,
+          "e": 294
+        },
+        {
+          "w": "servers",
+          "s": 294,
+          "e": 302
+        },
+        {
+          "w": "can",
+          "s": 302,
+          "e": 312
+        },
+        {
+          "w": "smuggle",
+          "s": 312,
+          "e": 322
+        },
+        {
+          "w": "hidden",
+          "s": 322,
+          "e": 328
+        },
+        {
+          "w": "instructions",
+          "s": 328,
+          "e": 343
+        },
+        {
+          "w": "inside",
+          "s": 343,
+          "e": 357
+        },
+        {
+          "w": "tool",
+          "s": 357,
+          "e": 367
+        },
+        {
+          "w": "descriptions—an",
+          "s": 367,
+          "e": 403
+        },
+        {
+          "w": "attack",
+          "s": 403,
+          "e": 411
+        },
+        {
+          "w": "called",
+          "s": 411,
+          "e": 422
+        },
+        {
+          "w": "tool",
+          "s": 422,
+          "e": 429
+        },
+        {
+          "w": "poisoning.",
+          "s": 429,
+          "e": 440
+        },
+        {
+          "w": "Treat",
+          "s": 461,
+          "e": 472
+        },
+        {
+          "w": "MCP",
+          "s": 472,
+          "e": 485
+        },
+        {
+          "w": "servers",
+          "s": 485,
+          "e": 494
+        },
+        {
+          "w": "exactly",
+          "s": 494,
+          "e": 508
+        },
+        {
+          "w": "like",
+          "s": 508,
+          "e": 518
+        },
+        {
+          "w": "browser",
+          "s": 518,
+          "e": 524
+        },
+        {
+          "w": "extensions:",
+          "s": 524,
+          "e": 537
+        },
+        {
+          "w": "install",
+          "s": 551,
+          "e": 563
+        },
+        {
+          "w": "only",
+          "s": 563,
+          "e": 573
+        },
+        {
+          "w": "from",
+          "s": 573,
+          "e": 579
+        },
+        {
+          "w": "trusted",
+          "s": 579,
+          "e": 587
+        },
+        {
+          "w": "sources,",
+          "s": 587,
+          "e": 596
+        },
+        {
+          "w": "grant",
+          "s": 609,
+          "e": 617
+        },
+        {
+          "w": "the",
+          "s": 617,
+          "e": 623
+        },
+        {
+          "w": "narrowest",
+          "s": 623,
+          "e": 635
+        },
+        {
+          "w": "permissions",
+          "s": 635,
+          "e": 643
+        },
+        {
+          "w": "possible,",
+          "s": 643,
+          "e": 658
+        },
+        {
+          "w": "and",
+          "s": 665,
+          "e": 676
+        },
+        {
+          "w": "keep",
+          "s": 676,
+          "e": 681
+        },
+        {
+          "w": "human",
+          "s": 681,
+          "e": 689
+        },
+        {
+          "w": "approval",
+          "s": 689,
+          "e": 696
+        },
+        {
+          "w": "turned",
+          "s": 696,
+          "e": 707
+        },
+        {
+          "w": "on",
+          "s": 707,
+          "e": 713
+        },
+        {
+          "w": "for",
+          "s": 713,
+          "e": 718
+        },
+        {
+          "w": "writes.",
+          "s": 718,
+          "e": 724
+        }
+      ]
+    },
+    {
+      "paragraph": 28,
+      "chapterId": "08-pitfalls-and-outro",
+      "startFrame": 16315,
+      "durationInFrames": 536,
+      "leadFrames": 9,
+      "voiceFrames": 515,
+      "audioFile": "voiceover/028.third-know-when.mp3",
+      "timingSource": "whisper",
+      "text": "Third, know when not to use MCP. It is a powerful standard, not a magic hammer for every problem. For a one-off document paste or a fixed predictable script needing zero AI judgment, keep it simple. MCP truly shines when an AI assistant needs live, repeatable access across multiple changing tools.",
+      "words": [
+        {
+          "w": "Third,",
+          "s": 9,
+          "e": 20
+        },
+        {
+          "w": "know",
+          "s": 25,
+          "e": 37
+        },
+        {
+          "w": "when",
+          "s": 37,
+          "e": 43
+        },
+        {
+          "w": "not",
+          "s": 43,
+          "e": 50
+        },
+        {
+          "w": "to",
+          "s": 50,
+          "e": 55
+        },
+        {
+          "w": "use",
+          "s": 55,
+          "e": 60
+        },
+        {
+          "w": "MCP.",
+          "s": 60,
+          "e": 73
+        },
+        {
+          "w": "It",
+          "s": 82,
+          "e": 96
+        },
+        {
+          "w": "is",
+          "s": 96,
+          "e": 98
+        },
+        {
+          "w": "a",
+          "s": 98,
+          "e": 101
+        },
+        {
+          "w": "powerful",
+          "s": 101,
+          "e": 110
+        },
+        {
+          "w": "standard,",
+          "s": 110,
+          "e": 122
+        },
+        {
+          "w": "not",
+          "s": 127,
+          "e": 134
+        },
+        {
+          "w": "a",
+          "s": 134,
+          "e": 138
+        },
+        {
+          "w": "magic",
+          "s": 138,
+          "e": 145
+        },
+        {
+          "w": "hammer",
+          "s": 145,
+          "e": 152
+        },
+        {
+          "w": "for",
+          "s": 152,
+          "e": 158
+        },
+        {
+          "w": "every",
+          "s": 158,
+          "e": 164
+        },
+        {
+          "w": "problem.",
+          "s": 164,
+          "e": 175
+        },
+        {
+          "w": "For",
+          "s": 183,
+          "e": 197
+        },
+        {
+          "w": "a",
+          "s": 197,
+          "e": 201
+        },
+        {
+          "w": "one-off",
+          "s": 201,
+          "e": 210
+        },
+        {
+          "w": "document",
+          "s": 210,
+          "e": 218
+        },
+        {
+          "w": "paste",
+          "s": 218,
+          "e": 227
+        },
+        {
+          "w": "or",
+          "s": 227,
+          "e": 236
+        },
+        {
+          "w": "a",
+          "s": 236,
+          "e": 238
+        },
+        {
+          "w": "fixed",
+          "s": 238,
+          "e": 244
+        },
+        {
+          "w": "predictable",
+          "s": 244,
+          "e": 253
+        },
+        {
+          "w": "script",
+          "s": 253,
+          "e": 263
+        },
+        {
+          "w": "needing",
+          "s": 263,
+          "e": 271
+        },
+        {
+          "w": "zero",
+          "s": 271,
+          "e": 281
+        },
+        {
+          "w": "AI",
+          "s": 281,
+          "e": 292
+        },
+        {
+          "w": "judgment,",
+          "s": 292,
+          "e": 301
+        },
+        {
+          "w": "keep",
+          "s": 307,
+          "e": 313
+        },
+        {
+          "w": "it",
+          "s": 313,
+          "e": 317
+        },
+        {
+          "w": "simple.",
+          "s": 317,
+          "e": 325
+        },
+        {
+          "w": "MCP",
+          "s": 349,
+          "e": 363
+        },
+        {
+          "w": "truly",
+          "s": 363,
+          "e": 374
+        },
+        {
+          "w": "shines",
+          "s": 374,
+          "e": 389
+        },
+        {
+          "w": "when",
+          "s": 389,
+          "e": 396
+        },
+        {
+          "w": "an",
+          "s": 396,
+          "e": 399
+        },
+        {
+          "w": "AI",
+          "s": 399,
+          "e": 404
+        },
+        {
+          "w": "assistant",
+          "s": 404,
+          "e": 414
+        },
+        {
+          "w": "needs",
+          "s": 414,
+          "e": 424
+        },
+        {
+          "w": "live,",
+          "s": 424,
+          "e": 435
+        },
+        {
+          "w": "repeatable",
+          "s": 439,
+          "e": 455
+        },
+        {
+          "w": "access",
+          "s": 455,
+          "e": 462
+        },
+        {
+          "w": "across",
+          "s": 462,
+          "e": 476
+        },
+        {
+          "w": "multiple",
+          "s": 476,
+          "e": 488
+        },
+        {
+          "w": "changing",
+          "s": 488,
+          "e": 498
+        },
+        {
+          "w": "tools.",
+          "s": 498,
+          "e": 510
+        }
+      ]
+    },
+    {
+      "paragraph": 29,
+      "chapterId": "08-pitfalls-and-outro",
+      "startFrame": 16851,
+      "durationInFrames": 624,
+      "leadFrames": 9,
+      "voiceFrames": 603,
+      "audioFile": "voiceover/029.step-back-and.mp3",
+      "timingSource": "whisper",
+      "text": "Step back and the big picture is remarkably clean. MCP takes AI out of an isolated chat box and turns it into an interoperable partner—collapsing an unmanageable web of custom integrations into one open standard built on hosts, clients, servers, tools, resources, and prompts. Instead of copy-pasting your work to AI, your AI meets you where your work already lives.",
+      "words": [
+        {
+          "w": "Step",
+          "s": 9,
+          "e": 19
+        },
+        {
+          "w": "back",
+          "s": 19,
+          "e": 29
+        },
+        {
+          "w": "and",
+          "s": 32,
+          "e": 39
+        },
+        {
+          "w": "the",
+          "s": 39,
+          "e": 42
+        },
+        {
+          "w": "big",
+          "s": 42,
+          "e": 46
+        },
+        {
+          "w": "picture",
+          "s": 46,
+          "e": 56
+        },
+        {
+          "w": "is",
+          "s": 56,
+          "e": 62
+        },
+        {
+          "w": "remarkably",
+          "s": 62,
+          "e": 71
+        },
+        {
+          "w": "clean.",
+          "s": 71,
+          "e": 83
+        },
+        {
+          "w": "MCP",
+          "s": 98,
+          "e": 114
+        },
+        {
+          "w": "takes",
+          "s": 114,
+          "e": 123
+        },
+        {
+          "w": "AI",
+          "s": 123,
+          "e": 132
+        },
+        {
+          "w": "out",
+          "s": 132,
+          "e": 140
+        },
+        {
+          "w": "of",
+          "s": 140,
+          "e": 145
+        },
+        {
+          "w": "an",
+          "s": 145,
+          "e": 147
+        },
+        {
+          "w": "isolated",
+          "s": 145,
+          "e": 156
+        },
+        {
+          "w": "chat",
+          "s": 156,
+          "e": 164
+        },
+        {
+          "w": "box",
+          "s": 164,
+          "e": 172
+        },
+        {
+          "w": "and",
+          "s": 172,
+          "e": 182
+        },
+        {
+          "w": "turns",
+          "s": 182,
+          "e": 190
+        },
+        {
+          "w": "it",
+          "s": 190,
+          "e": 194
+        },
+        {
+          "w": "into",
+          "s": 194,
+          "e": 202
+        },
+        {
+          "w": "an",
+          "s": 202,
+          "e": 210
+        },
+        {
+          "w": "interoperable",
+          "s": 210,
+          "e": 226
+        },
+        {
+          "w": "partner—collapsing",
+          "s": 226,
+          "e": 256
+        },
+        {
+          "w": "an",
+          "s": 256,
+          "e": 263
+        },
+        {
+          "w": "unmanageable",
+          "s": 263,
+          "e": 281
+        },
+        {
+          "w": "web",
+          "s": 281,
+          "e": 287
+        },
+        {
+          "w": "of",
+          "s": 287,
+          "e": 295
+        },
+        {
+          "w": "custom",
+          "s": 295,
+          "e": 303
+        },
+        {
+          "w": "integrations",
+          "s": 303,
+          "e": 321
+        },
+        {
+          "w": "into",
+          "s": 321,
+          "e": 327
+        },
+        {
+          "w": "one",
+          "s": 327,
+          "e": 333
+        },
+        {
+          "w": "open",
+          "s": 333,
+          "e": 341
+        },
+        {
+          "w": "standard",
+          "s": 341,
+          "e": 352
+        },
+        {
+          "w": "built",
+          "s": 352,
+          "e": 362
+        },
+        {
+          "w": "on",
+          "s": 362,
+          "e": 368
+        },
+        {
+          "w": "hosts,",
+          "s": 368,
+          "e": 377
+        },
+        {
+          "w": "clients,",
+          "s": 383,
+          "e": 393
+        },
+        {
+          "w": "servers,",
+          "s": 403,
+          "e": 412
+        },
+        {
+          "w": "tools,",
+          "s": 422,
+          "e": 434
+        },
+        {
+          "w": "resources,",
+          "s": 440,
+          "e": 452
+        },
+        {
+          "w": "and",
+          "s": 457,
+          "e": 465
+        },
+        {
+          "w": "prompts.",
+          "s": 465,
+          "e": 473
+        },
+        {
+          "w": "Instead",
+          "s": 481,
+          "e": 497
+        },
+        {
+          "w": "of",
+          "s": 497,
+          "e": 503
+        },
+        {
+          "w": "copy-pasting",
+          "s": 503,
+          "e": 519
+        },
+        {
+          "w": "your",
+          "s": 519,
+          "e": 524
+        },
+        {
+          "w": "work",
+          "s": 524,
+          "e": 530
+        },
+        {
+          "w": "to",
+          "s": 530,
+          "e": 533
+        },
+        {
+          "w": "AI,",
+          "s": 533,
+          "e": 539
+        },
+        {
+          "w": "your",
+          "s": 548,
+          "e": 554
+        },
+        {
+          "w": "AI",
+          "s": 554,
+          "e": 560
+        },
+        {
+          "w": "meets",
+          "s": 560,
+          "e": 569
+        },
+        {
+          "w": "you",
+          "s": 569,
+          "e": 573
+        },
+        {
+          "w": "where",
+          "s": 573,
+          "e": 578
+        },
+        {
+          "w": "your",
+          "s": 578,
+          "e": 581
+        },
+        {
+          "w": "work",
+          "s": 581,
+          "e": 586
+        },
+        {
+          "w": "already",
+          "s": 586,
+          "e": 593
+        },
+        {
+          "w": "lives.",
+          "s": 593,
+          "e": 601
+        }
+      ]
+    },
+    {
+      "paragraph": 30,
+      "chapterId": "08-pitfalls-and-outro",
+      "startFrame": 17475,
+      "durationInFrames": 344,
+      "leadFrames": 9,
+      "voiceFrames": 323,
+      "audioFile": "voiceover/030.drop-a-comment.mp3",
+      "timingSource": "whisper",
+      "text": "Drop a comment below with the first MCP server you plan to connect—or build next. If this breakdown helped make MCP click, subscribe for more clear visual deep dives into modern AI systems, and I will see you in the next one.",
+      "words": [
+        {
+          "w": "Drop",
+          "s": 9,
+          "e": 18
+        },
+        {
+          "w": "a",
+          "s": 18,
+          "e": 22
+        },
+        {
+          "w": "comment",
+          "s": 22,
+          "e": 29
+        },
+        {
+          "w": "below",
+          "s": 29,
+          "e": 37
+        },
+        {
+          "w": "with",
+          "s": 37,
+          "e": 43
+        },
+        {
+          "w": "the",
+          "s": 43,
+          "e": 46
+        },
+        {
+          "w": "first",
+          "s": 46,
+          "e": 52
+        },
+        {
+          "w": "MCP",
+          "s": 52,
+          "e": 65
+        },
+        {
+          "w": "server",
+          "s": 65,
+          "e": 72
+        },
+        {
+          "w": "you",
+          "s": 72,
+          "e": 79
+        },
+        {
+          "w": "plan",
+          "s": 79,
+          "e": 84
+        },
+        {
+          "w": "to",
+          "s": 84,
+          "e": 89
+        },
+        {
+          "w": "connect—or",
+          "s": 89,
+          "e": 103
+        },
+        {
+          "w": "build",
+          "s": 103,
+          "e": 107
+        },
+        {
+          "w": "next.",
+          "s": 107,
+          "e": 116
+        },
+        {
+          "w": "If",
+          "s": 123,
+          "e": 134
+        },
+        {
+          "w": "this",
+          "s": 134,
+          "e": 139
+        },
+        {
+          "w": "breakdown",
+          "s": 139,
+          "e": 147
+        },
+        {
+          "w": "helped",
+          "s": 147,
+          "e": 155
+        },
+        {
+          "w": "make",
+          "s": 155,
+          "e": 161
+        },
+        {
+          "w": "MCP",
+          "s": 161,
+          "e": 175
+        },
+        {
+          "w": "click,",
+          "s": 175,
+          "e": 181
+        },
+        {
+          "w": "subscribe",
+          "s": 187,
+          "e": 201
+        },
+        {
+          "w": "for",
+          "s": 201,
+          "e": 211
+        },
+        {
+          "w": "more",
+          "s": 211,
+          "e": 215
+        },
+        {
+          "w": "clear",
+          "s": 215,
+          "e": 224
+        },
+        {
+          "w": "visual",
+          "s": 224,
+          "e": 232
+        },
+        {
+          "w": "deep",
+          "s": 232,
+          "e": 239
+        },
+        {
+          "w": "dives",
+          "s": 239,
+          "e": 251
+        },
+        {
+          "w": "into",
+          "s": 251,
+          "e": 255
+        },
+        {
+          "w": "modern",
+          "s": 255,
+          "e": 263
+        },
+        {
+          "w": "AI",
+          "s": 263,
+          "e": 271
+        },
+        {
+          "w": "systems,",
+          "s": 271,
+          "e": 284
+        },
+        {
+          "w": "and",
+          "s": 289,
+          "e": 293
+        },
+        {
+          "w": "I",
+          "s": 293,
+          "e": 296
+        },
+        {
+          "w": "will",
+          "s": 296,
+          "e": 300
+        },
+        {
+          "w": "see",
+          "s": 300,
+          "e": 304
+        },
+        {
+          "w": "you",
+          "s": 304,
+          "e": 307
+        },
+        {
+          "w": "in",
+          "s": 307,
+          "e": 310
+        },
+        {
+          "w": "the",
+          "s": 310,
+          "e": 312
+        },
+        {
+          "w": "next",
+          "s": 312,
+          "e": 317
+        },
+        {
+          "w": "one.",
+          "s": 317,
+          "e": 323
+        }
+      ]
     }
   ]
 }

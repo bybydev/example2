@@ -1,0 +1,686 @@
+{
+  "audio": "007.here-is-a.mp3",
+  "paragraph": 7,
+  "text": "Here is a misconception worth clearing up right away. MCP does not replace REST APIs, databases, or local files—and AI models could already do function calling before MCP existed. Instead, MCP sits right in between as one universal adapter, standardizing how any AI host discovers available capabilities and safely runs those calls against your existing systems without bespoke glue code.",
+  "transcript": "Here is a misconception worth clearing up right away. MCP does not replace REST APIs, databases, or local files, and AI models could already do function calling before MCP existed. Instead, MCP sits right in between as one universal adapter, standardizing how any AI host discovers available capabilities and safely runs those calls against your existing systems without bespoke glue code.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 21.6,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Here",
+      "start": 0.0,
+      "end": 0.26,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 0.26,
+      "end": 0.42,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 0.42,
+      "end": 0.52,
+      "match": "exact"
+    },
+    {
+      "word": "misconception",
+      "start": 0.52,
+      "end": 0.82,
+      "match": "exact"
+    },
+    {
+      "word": "worth",
+      "start": 0.82,
+      "end": 1.3,
+      "match": "exact"
+    },
+    {
+      "word": "clearing",
+      "start": 1.3,
+      "end": 1.56,
+      "match": "exact"
+    },
+    {
+      "word": "up",
+      "start": 1.56,
+      "end": 1.8,
+      "match": "exact"
+    },
+    {
+      "word": "right",
+      "start": 1.8,
+      "end": 1.98,
+      "match": "exact"
+    },
+    {
+      "word": "away.",
+      "start": 1.98,
+      "end": 2.18,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 2.74,
+      "end": 3.3,
+      "match": "exact"
+    },
+    {
+      "word": "does",
+      "start": 3.3,
+      "end": 3.54,
+      "match": "exact"
+    },
+    {
+      "word": "not",
+      "start": 3.54,
+      "end": 3.78,
+      "match": "exact"
+    },
+    {
+      "word": "replace",
+      "start": 3.78,
+      "end": 4.14,
+      "match": "exact"
+    },
+    {
+      "word": "REST",
+      "start": 4.14,
+      "end": 4.54,
+      "match": "exact"
+    },
+    {
+      "word": "APIs,",
+      "start": 4.54,
+      "end": 4.88,
+      "match": "exact"
+    },
+    {
+      "word": "databases,",
+      "start": 5.16,
+      "end": 5.44,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 5.66,
+      "end": 5.9,
+      "match": "exact"
+    },
+    {
+      "word": "local",
+      "start": 5.9,
+      "end": 6.06,
+      "match": "exact"
+    },
+    {
+      "word": "files—and",
+      "start": 6.06,
+      "end": 7.1,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 7.1,
+      "end": 7.3,
+      "match": "exact"
+    },
+    {
+      "word": "models",
+      "start": 7.3,
+      "end": 7.66,
+      "match": "exact"
+    },
+    {
+      "word": "could",
+      "start": 7.66,
+      "end": 7.88,
+      "match": "exact"
+    },
+    {
+      "word": "already",
+      "start": 7.88,
+      "end": 8.1,
+      "match": "exact"
+    },
+    {
+      "word": "do",
+      "start": 8.1,
+      "end": 8.28,
+      "match": "exact"
+    },
+    {
+      "word": "function",
+      "start": 8.28,
+      "end": 8.56,
+      "match": "exact"
+    },
+    {
+      "word": "calling",
+      "start": 8.56,
+      "end": 8.82,
+      "match": "exact"
+    },
+    {
+      "word": "before",
+      "start": 8.82,
+      "end": 9.12,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 9.12,
+      "end": 9.62,
+      "match": "exact"
+    },
+    {
+      "word": "existed.",
+      "start": 9.62,
+      "end": 9.94,
+      "match": "exact"
+    },
+    {
+      "word": "Instead,",
+      "start": 10.26,
+      "end": 10.78,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 11.04,
+      "end": 11.68,
+      "match": "exact"
+    },
+    {
+      "word": "sits",
+      "start": 11.68,
+      "end": 11.9,
+      "match": "exact"
+    },
+    {
+      "word": "right",
+      "start": 11.9,
+      "end": 12.18,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 12.18,
+      "end": 12.34,
+      "match": "exact"
+    },
+    {
+      "word": "between",
+      "start": 12.34,
+      "end": 12.56,
+      "match": "exact"
+    },
+    {
+      "word": "as",
+      "start": 12.56,
+      "end": 12.9,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 12.9,
+      "end": 13.1,
+      "match": "exact"
+    },
+    {
+      "word": "universal",
+      "start": 13.1,
+      "end": 13.48,
+      "match": "exact"
+    },
+    {
+      "word": "adapter,",
+      "start": 13.48,
+      "end": 13.86,
+      "match": "exact"
+    },
+    {
+      "word": "standardizing",
+      "start": 14.18,
+      "end": 14.9,
+      "match": "exact"
+    },
+    {
+      "word": "how",
+      "start": 14.9,
+      "end": 15.04,
+      "match": "exact"
+    },
+    {
+      "word": "any",
+      "start": 15.04,
+      "end": 15.26,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 15.26,
+      "end": 15.5,
+      "match": "exact"
+    },
+    {
+      "word": "host",
+      "start": 15.5,
+      "end": 15.78,
+      "match": "exact"
+    },
+    {
+      "word": "discovers",
+      "start": 15.78,
+      "end": 16.12,
+      "match": "exact"
+    },
+    {
+      "word": "available",
+      "start": 16.12,
+      "end": 16.52,
+      "match": "exact"
+    },
+    {
+      "word": "capabilities",
+      "start": 16.52,
+      "end": 17.12,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 17.12,
+      "end": 17.56,
+      "match": "exact"
+    },
+    {
+      "word": "safely",
+      "start": 17.56,
+      "end": 17.84,
+      "match": "exact"
+    },
+    {
+      "word": "runs",
+      "start": 17.84,
+      "end": 18.1,
+      "match": "exact"
+    },
+    {
+      "word": "those",
+      "start": 18.1,
+      "end": 18.3,
+      "match": "exact"
+    },
+    {
+      "word": "calls",
+      "start": 18.3,
+      "end": 18.6,
+      "match": "exact"
+    },
+    {
+      "word": "against",
+      "start": 18.6,
+      "end": 18.9,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 18.9,
+      "end": 19.1,
+      "match": "exact"
+    },
+    {
+      "word": "existing",
+      "start": 19.1,
+      "end": 19.32,
+      "match": "exact"
+    },
+    {
+      "word": "systems",
+      "start": 19.32,
+      "end": 19.8,
+      "match": "exact"
+    },
+    {
+      "word": "without",
+      "start": 19.8,
+      "end": 20.18,
+      "match": "exact"
+    },
+    {
+      "word": "bespoke",
+      "start": 20.18,
+      "end": 20.72,
+      "match": "exact"
+    },
+    {
+      "word": "glue",
+      "start": 20.72,
+      "end": 20.9,
+      "match": "exact"
+    },
+    {
+      "word": "code.",
+      "start": 20.9,
+      "end": 21.14,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Here",
+      "start": 0.0,
+      "end": 0.26
+    },
+    {
+      "word": "is",
+      "start": 0.26,
+      "end": 0.42
+    },
+    {
+      "word": "a",
+      "start": 0.42,
+      "end": 0.52
+    },
+    {
+      "word": "misconception",
+      "start": 0.52,
+      "end": 0.82
+    },
+    {
+      "word": "worth",
+      "start": 0.82,
+      "end": 1.3
+    },
+    {
+      "word": "clearing",
+      "start": 1.3,
+      "end": 1.56
+    },
+    {
+      "word": "up",
+      "start": 1.56,
+      "end": 1.8
+    },
+    {
+      "word": "right",
+      "start": 1.8,
+      "end": 1.98
+    },
+    {
+      "word": "away.",
+      "start": 1.98,
+      "end": 2.18
+    },
+    {
+      "word": "MCP",
+      "start": 2.74,
+      "end": 3.3
+    },
+    {
+      "word": "does",
+      "start": 3.3,
+      "end": 3.54
+    },
+    {
+      "word": "not",
+      "start": 3.54,
+      "end": 3.78
+    },
+    {
+      "word": "replace",
+      "start": 3.78,
+      "end": 4.14
+    },
+    {
+      "word": "REST",
+      "start": 4.14,
+      "end": 4.54
+    },
+    {
+      "word": "APIs,",
+      "start": 4.54,
+      "end": 4.88
+    },
+    {
+      "word": "databases,",
+      "start": 5.16,
+      "end": 5.44
+    },
+    {
+      "word": "or",
+      "start": 5.66,
+      "end": 5.9
+    },
+    {
+      "word": "local",
+      "start": 5.9,
+      "end": 6.06
+    },
+    {
+      "word": "files,",
+      "start": 6.06,
+      "end": 6.46
+    },
+    {
+      "word": "and",
+      "start": 6.66,
+      "end": 7.1
+    },
+    {
+      "word": "AI",
+      "start": 7.1,
+      "end": 7.3
+    },
+    {
+      "word": "models",
+      "start": 7.3,
+      "end": 7.66
+    },
+    {
+      "word": "could",
+      "start": 7.66,
+      "end": 7.88
+    },
+    {
+      "word": "already",
+      "start": 7.88,
+      "end": 8.1
+    },
+    {
+      "word": "do",
+      "start": 8.1,
+      "end": 8.28
+    },
+    {
+      "word": "function",
+      "start": 8.28,
+      "end": 8.56
+    },
+    {
+      "word": "calling",
+      "start": 8.56,
+      "end": 8.82
+    },
+    {
+      "word": "before",
+      "start": 8.82,
+      "end": 9.12
+    },
+    {
+      "word": "MCP",
+      "start": 9.12,
+      "end": 9.62
+    },
+    {
+      "word": "existed.",
+      "start": 9.62,
+      "end": 9.94
+    },
+    {
+      "word": "Instead,",
+      "start": 10.26,
+      "end": 10.78
+    },
+    {
+      "word": "MCP",
+      "start": 11.04,
+      "end": 11.68
+    },
+    {
+      "word": "sits",
+      "start": 11.68,
+      "end": 11.9
+    },
+    {
+      "word": "right",
+      "start": 11.9,
+      "end": 12.18
+    },
+    {
+      "word": "in",
+      "start": 12.18,
+      "end": 12.34
+    },
+    {
+      "word": "between",
+      "start": 12.34,
+      "end": 12.56
+    },
+    {
+      "word": "as",
+      "start": 12.56,
+      "end": 12.9
+    },
+    {
+      "word": "one",
+      "start": 12.9,
+      "end": 13.1
+    },
+    {
+      "word": "universal",
+      "start": 13.1,
+      "end": 13.48
+    },
+    {
+      "word": "adapter,",
+      "start": 13.48,
+      "end": 13.86
+    },
+    {
+      "word": "standardizing",
+      "start": 14.18,
+      "end": 14.9
+    },
+    {
+      "word": "how",
+      "start": 14.9,
+      "end": 15.04
+    },
+    {
+      "word": "any",
+      "start": 15.04,
+      "end": 15.26
+    },
+    {
+      "word": "AI",
+      "start": 15.26,
+      "end": 15.5
+    },
+    {
+      "word": "host",
+      "start": 15.5,
+      "end": 15.78
+    },
+    {
+      "word": "discovers",
+      "start": 15.78,
+      "end": 16.12
+    },
+    {
+      "word": "available",
+      "start": 16.12,
+      "end": 16.52
+    },
+    {
+      "word": "capabilities",
+      "start": 16.52,
+      "end": 17.12
+    },
+    {
+      "word": "and",
+      "start": 17.12,
+      "end": 17.56
+    },
+    {
+      "word": "safely",
+      "start": 17.56,
+      "end": 17.84
+    },
+    {
+      "word": "runs",
+      "start": 17.84,
+      "end": 18.1
+    },
+    {
+      "word": "those",
+      "start": 18.1,
+      "end": 18.3
+    },
+    {
+      "word": "calls",
+      "start": 18.3,
+      "end": 18.6
+    },
+    {
+      "word": "against",
+      "start": 18.6,
+      "end": 18.9
+    },
+    {
+      "word": "your",
+      "start": 18.9,
+      "end": 19.1
+    },
+    {
+      "word": "existing",
+      "start": 19.1,
+      "end": 19.32
+    },
+    {
+      "word": "systems",
+      "start": 19.32,
+      "end": 19.8
+    },
+    {
+      "word": "without",
+      "start": 19.8,
+      "end": 20.18
+    },
+    {
+      "word": "bespoke",
+      "start": 20.18,
+      "end": 20.72
+    },
+    {
+      "word": "glue",
+      "start": 20.72,
+      "end": 20.9
+    },
+    {
+      "word": "code.",
+      "start": 20.9,
+      "end": 21.14
+    }
+  ]
+}

@@ -1,0 +1,672 @@
+{
+  "audio": "009.hidden-inside-the.mp3",
+  "paragraph": 9,
+  "text": "Hidden inside the host are lightweight connectors called MCP clients. Think of a client as a dedicated translator living inside your AI app. Each client maintains a clean one-to-one connection with a single MCP server—a small, focused program whose only job is to expose one specific workspace or capability, such as your local files, Slack, or Notion.",
+  "transcript": "Hidden inside the host are lightweight connectors called MCP clients. Think of a client as a dedicated translator living inside your AI app. Each client maintains a clean one-to-one connection with a single MCP server, a small focus program whose only job is to expose one specific workspace or capability, such as your local files, Slack, or Notion.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 1
+    }
+  ],
+  "duration": 20.68,
+  "failed_words": 1,
+  "failures": [
+    {
+      "index": 36,
+      "word": "focused",
+      "match": "approx",
+      "heard": "focus",
+      "start": 13.3
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Hidden",
+      "start": 0.0,
+      "end": 0.3,
+      "match": "exact"
+    },
+    {
+      "word": "inside",
+      "start": 0.3,
+      "end": 0.58,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.58,
+      "end": 0.86,
+      "match": "exact"
+    },
+    {
+      "word": "host",
+      "start": 0.86,
+      "end": 1.08,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 1.08,
+      "end": 1.32,
+      "match": "exact"
+    },
+    {
+      "word": "lightweight",
+      "start": 1.32,
+      "end": 1.6,
+      "match": "exact"
+    },
+    {
+      "word": "connectors",
+      "start": 1.6,
+      "end": 1.98,
+      "match": "exact"
+    },
+    {
+      "word": "called",
+      "start": 1.98,
+      "end": 2.46,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 2.46,
+      "end": 3.08,
+      "match": "exact"
+    },
+    {
+      "word": "clients.",
+      "start": 3.08,
+      "end": 3.44,
+      "match": "exact"
+    },
+    {
+      "word": "Think",
+      "start": 4.12,
+      "end": 4.42,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 4.42,
+      "end": 4.54,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 4.54,
+      "end": 4.62,
+      "match": "exact"
+    },
+    {
+      "word": "client",
+      "start": 4.62,
+      "end": 4.92,
+      "match": "exact"
+    },
+    {
+      "word": "as",
+      "start": 4.92,
+      "end": 5.06,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 5.06,
+      "end": 5.14,
+      "match": "exact"
+    },
+    {
+      "word": "dedicated",
+      "start": 5.14,
+      "end": 5.44,
+      "match": "exact"
+    },
+    {
+      "word": "translator",
+      "start": 5.44,
+      "end": 5.94,
+      "match": "exact"
+    },
+    {
+      "word": "living",
+      "start": 5.94,
+      "end": 6.36,
+      "match": "exact"
+    },
+    {
+      "word": "inside",
+      "start": 6.36,
+      "end": 6.7,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 6.7,
+      "end": 7.06,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 7.06,
+      "end": 7.28,
+      "match": "exact"
+    },
+    {
+      "word": "app.",
+      "start": 7.28,
+      "end": 7.6,
+      "match": "exact"
+    },
+    {
+      "word": "Each",
+      "start": 7.86,
+      "end": 8.46,
+      "match": "exact"
+    },
+    {
+      "word": "client",
+      "start": 8.46,
+      "end": 8.8,
+      "match": "exact"
+    },
+    {
+      "word": "maintains",
+      "start": 8.8,
+      "end": 9.22,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 9.22,
+      "end": 9.4,
+      "match": "exact"
+    },
+    {
+      "word": "clean",
+      "start": 9.4,
+      "end": 9.6,
+      "match": "exact"
+    },
+    {
+      "word": "one-to-one",
+      "start": 9.6,
+      "end": 10.24,
+      "match": "exact"
+    },
+    {
+      "word": "connection",
+      "start": 10.24,
+      "end": 10.52,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 10.52,
+      "end": 11.18,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 11.18,
+      "end": 11.28,
+      "match": "exact"
+    },
+    {
+      "word": "single",
+      "start": 11.28,
+      "end": 11.56,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 11.56,
+      "end": 12.04,
+      "match": "exact"
+    },
+    {
+      "word": "server—a",
+      "start": 12.04,
+      "end": 13.0,
+      "match": "exact"
+    },
+    {
+      "word": "small,",
+      "start": 13.0,
+      "end": 13.3,
+      "match": "exact"
+    },
+    {
+      "word": "focused",
+      "start": 13.3,
+      "end": 13.6,
+      "match": "approx",
+      "heard": "focus"
+    },
+    {
+      "word": "program",
+      "start": 13.6,
+      "end": 13.98,
+      "match": "exact"
+    },
+    {
+      "word": "whose",
+      "start": 13.98,
+      "end": 14.38,
+      "match": "exact"
+    },
+    {
+      "word": "only",
+      "start": 14.38,
+      "end": 14.56,
+      "match": "exact"
+    },
+    {
+      "word": "job",
+      "start": 14.56,
+      "end": 14.9,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 14.9,
+      "end": 15.08,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 15.08,
+      "end": 15.16,
+      "match": "exact"
+    },
+    {
+      "word": "expose",
+      "start": 15.16,
+      "end": 15.54,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 15.54,
+      "end": 15.84,
+      "match": "exact"
+    },
+    {
+      "word": "specific",
+      "start": 15.84,
+      "end": 16.18,
+      "match": "exact"
+    },
+    {
+      "word": "workspace",
+      "start": 16.18,
+      "end": 16.64,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 16.64,
+      "end": 17.0,
+      "match": "exact"
+    },
+    {
+      "word": "capability,",
+      "start": 17.0,
+      "end": 17.32,
+      "match": "exact"
+    },
+    {
+      "word": "such",
+      "start": 17.66,
+      "end": 18.08,
+      "match": "exact"
+    },
+    {
+      "word": "as",
+      "start": 18.08,
+      "end": 18.22,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 18.22,
+      "end": 18.32,
+      "match": "exact"
+    },
+    {
+      "word": "local",
+      "start": 18.32,
+      "end": 18.58,
+      "match": "exact"
+    },
+    {
+      "word": "files,",
+      "start": 18.58,
+      "end": 18.88,
+      "match": "exact"
+    },
+    {
+      "word": "Slack,",
+      "start": 19.14,
+      "end": 19.46,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 19.64,
+      "end": 19.84,
+      "match": "exact"
+    },
+    {
+      "word": "Notion.",
+      "start": 19.84,
+      "end": 20.16,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Hidden",
+      "start": 0.0,
+      "end": 0.3
+    },
+    {
+      "word": "inside",
+      "start": 0.3,
+      "end": 0.58
+    },
+    {
+      "word": "the",
+      "start": 0.58,
+      "end": 0.86
+    },
+    {
+      "word": "host",
+      "start": 0.86,
+      "end": 1.08
+    },
+    {
+      "word": "are",
+      "start": 1.08,
+      "end": 1.32
+    },
+    {
+      "word": "lightweight",
+      "start": 1.32,
+      "end": 1.6
+    },
+    {
+      "word": "connectors",
+      "start": 1.6,
+      "end": 1.98
+    },
+    {
+      "word": "called",
+      "start": 1.98,
+      "end": 2.46
+    },
+    {
+      "word": "MCP",
+      "start": 2.46,
+      "end": 3.08
+    },
+    {
+      "word": "clients.",
+      "start": 3.08,
+      "end": 3.44
+    },
+    {
+      "word": "Think",
+      "start": 4.12,
+      "end": 4.42
+    },
+    {
+      "word": "of",
+      "start": 4.42,
+      "end": 4.54
+    },
+    {
+      "word": "a",
+      "start": 4.54,
+      "end": 4.62
+    },
+    {
+      "word": "client",
+      "start": 4.62,
+      "end": 4.92
+    },
+    {
+      "word": "as",
+      "start": 4.92,
+      "end": 5.06
+    },
+    {
+      "word": "a",
+      "start": 5.06,
+      "end": 5.14
+    },
+    {
+      "word": "dedicated",
+      "start": 5.14,
+      "end": 5.44
+    },
+    {
+      "word": "translator",
+      "start": 5.44,
+      "end": 5.94
+    },
+    {
+      "word": "living",
+      "start": 5.94,
+      "end": 6.36
+    },
+    {
+      "word": "inside",
+      "start": 6.36,
+      "end": 6.7
+    },
+    {
+      "word": "your",
+      "start": 6.7,
+      "end": 7.06
+    },
+    {
+      "word": "AI",
+      "start": 7.06,
+      "end": 7.28
+    },
+    {
+      "word": "app.",
+      "start": 7.28,
+      "end": 7.6
+    },
+    {
+      "word": "Each",
+      "start": 7.86,
+      "end": 8.46
+    },
+    {
+      "word": "client",
+      "start": 8.46,
+      "end": 8.8
+    },
+    {
+      "word": "maintains",
+      "start": 8.8,
+      "end": 9.22
+    },
+    {
+      "word": "a",
+      "start": 9.22,
+      "end": 9.4
+    },
+    {
+      "word": "clean",
+      "start": 9.4,
+      "end": 9.6
+    },
+    {
+      "word": "one",
+      "start": 9.6,
+      "end": 9.96
+    },
+    {
+      "word": "-to",
+      "start": 9.96,
+      "end": 10.12
+    },
+    {
+      "word": "-one",
+      "start": 10.12,
+      "end": 10.24
+    },
+    {
+      "word": "connection",
+      "start": 10.24,
+      "end": 10.52
+    },
+    {
+      "word": "with",
+      "start": 10.52,
+      "end": 11.18
+    },
+    {
+      "word": "a",
+      "start": 11.18,
+      "end": 11.28
+    },
+    {
+      "word": "single",
+      "start": 11.28,
+      "end": 11.56
+    },
+    {
+      "word": "MCP",
+      "start": 11.56,
+      "end": 12.04
+    },
+    {
+      "word": "server,",
+      "start": 12.04,
+      "end": 12.38
+    },
+    {
+      "word": "a",
+      "start": 12.6,
+      "end": 13.0
+    },
+    {
+      "word": "small",
+      "start": 13.0,
+      "end": 13.3
+    },
+    {
+      "word": "focus",
+      "start": 13.3,
+      "end": 13.6
+    },
+    {
+      "word": "program",
+      "start": 13.6,
+      "end": 13.98
+    },
+    {
+      "word": "whose",
+      "start": 13.98,
+      "end": 14.38
+    },
+    {
+      "word": "only",
+      "start": 14.38,
+      "end": 14.56
+    },
+    {
+      "word": "job",
+      "start": 14.56,
+      "end": 14.9
+    },
+    {
+      "word": "is",
+      "start": 14.9,
+      "end": 15.08
+    },
+    {
+      "word": "to",
+      "start": 15.08,
+      "end": 15.16
+    },
+    {
+      "word": "expose",
+      "start": 15.16,
+      "end": 15.54
+    },
+    {
+      "word": "one",
+      "start": 15.54,
+      "end": 15.84
+    },
+    {
+      "word": "specific",
+      "start": 15.84,
+      "end": 16.18
+    },
+    {
+      "word": "workspace",
+      "start": 16.18,
+      "end": 16.64
+    },
+    {
+      "word": "or",
+      "start": 16.64,
+      "end": 17.0
+    },
+    {
+      "word": "capability,",
+      "start": 17.0,
+      "end": 17.32
+    },
+    {
+      "word": "such",
+      "start": 17.66,
+      "end": 18.08
+    },
+    {
+      "word": "as",
+      "start": 18.08,
+      "end": 18.22
+    },
+    {
+      "word": "your",
+      "start": 18.22,
+      "end": 18.32
+    },
+    {
+      "word": "local",
+      "start": 18.32,
+      "end": 18.58
+    },
+    {
+      "word": "files,",
+      "start": 18.58,
+      "end": 18.88
+    },
+    {
+      "word": "Slack,",
+      "start": 19.14,
+      "end": 19.46
+    },
+    {
+      "word": "or",
+      "start": 19.64,
+      "end": 19.84
+    },
+    {
+      "word": "Notion.",
+      "start": 19.84,
+      "end": 20.16
+    }
+  ]
+}

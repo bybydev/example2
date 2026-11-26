@@ -1,0 +1,667 @@
+{
+  "audio": "018.the-host-reads.mp3",
+  "paragraph": 18,
+  "text": "The host reads that decision and routes the call through its Slack client straight to the Slack MCP server. The server queries Slack's real API, gathers the matching messages, and returns three clean customer requests—CSV export, dark mode, and team SSO—as structured JSON. Your host then hands that fresh, verified data right back to the language model.",
+  "transcript": "The host reads that decision and routes the call through its Slack client straight to the Slack MCP server. The server query Slack's real API, gathers the matching messages, and returns three clean customer requests. CSV export, dark mode, and team SSO as structured JSON. Your host then hands that fresh verified data right back to the language model.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 1
+    }
+  ],
+  "duration": 19.6,
+  "failed_words": 1,
+  "failures": [
+    {
+      "index": 21,
+      "word": "queries",
+      "match": "approx",
+      "heard": "query",
+      "start": 5.98
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.26,
+      "match": "exact"
+    },
+    {
+      "word": "host",
+      "start": 0.26,
+      "end": 0.44,
+      "match": "exact"
+    },
+    {
+      "word": "reads",
+      "start": 0.44,
+      "end": 0.66,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 0.66,
+      "end": 0.9,
+      "match": "exact"
+    },
+    {
+      "word": "decision",
+      "start": 0.9,
+      "end": 1.26,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 1.26,
+      "end": 1.7,
+      "match": "exact"
+    },
+    {
+      "word": "routes",
+      "start": 1.7,
+      "end": 1.9,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 1.9,
+      "end": 2.08,
+      "match": "exact"
+    },
+    {
+      "word": "call",
+      "start": 2.08,
+      "end": 2.28,
+      "match": "exact"
+    },
+    {
+      "word": "through",
+      "start": 2.28,
+      "end": 2.48,
+      "match": "exact"
+    },
+    {
+      "word": "its",
+      "start": 2.48,
+      "end": 2.62,
+      "match": "exact"
+    },
+    {
+      "word": "Slack",
+      "start": 2.62,
+      "end": 2.82,
+      "match": "exact"
+    },
+    {
+      "word": "client",
+      "start": 2.82,
+      "end": 3.16,
+      "match": "exact"
+    },
+    {
+      "word": "straight",
+      "start": 3.16,
+      "end": 3.56,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 3.56,
+      "end": 3.78,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 3.78,
+      "end": 3.86,
+      "match": "exact"
+    },
+    {
+      "word": "Slack",
+      "start": 3.86,
+      "end": 4.1,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 4.1,
+      "end": 4.58,
+      "match": "exact"
+    },
+    {
+      "word": "server.",
+      "start": 4.58,
+      "end": 4.86,
+      "match": "exact"
+    },
+    {
+      "word": "The",
+      "start": 5.26,
+      "end": 5.78,
+      "match": "exact"
+    },
+    {
+      "word": "server",
+      "start": 5.78,
+      "end": 5.98,
+      "match": "exact"
+    },
+    {
+      "word": "queries",
+      "start": 5.98,
+      "end": 6.22,
+      "match": "approx",
+      "heard": "query"
+    },
+    {
+      "word": "Slack's",
+      "start": 6.22,
+      "end": 6.72,
+      "match": "exact"
+    },
+    {
+      "word": "real",
+      "start": 6.72,
+      "end": 6.88,
+      "match": "exact"
+    },
+    {
+      "word": "API,",
+      "start": 6.88,
+      "end": 7.16,
+      "match": "exact"
+    },
+    {
+      "word": "gathers",
+      "start": 7.46,
+      "end": 7.9,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 7.9,
+      "end": 8.06,
+      "match": "exact"
+    },
+    {
+      "word": "matching",
+      "start": 8.06,
+      "end": 8.3,
+      "match": "exact"
+    },
+    {
+      "word": "messages,",
+      "start": 8.3,
+      "end": 8.66,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 8.92,
+      "end": 9.24,
+      "match": "exact"
+    },
+    {
+      "word": "returns",
+      "start": 9.24,
+      "end": 9.52,
+      "match": "exact"
+    },
+    {
+      "word": "three",
+      "start": 9.52,
+      "end": 9.78,
+      "match": "exact"
+    },
+    {
+      "word": "clean",
+      "start": 9.78,
+      "end": 10.1,
+      "match": "exact"
+    },
+    {
+      "word": "customer",
+      "start": 10.1,
+      "end": 10.4,
+      "match": "exact"
+    },
+    {
+      "word": "requests—CSV",
+      "start": 10.4,
+      "end": 11.66,
+      "match": "exact"
+    },
+    {
+      "word": "export,",
+      "start": 11.66,
+      "end": 12.06,
+      "match": "exact"
+    },
+    {
+      "word": "dark",
+      "start": 12.38,
+      "end": 12.68,
+      "match": "exact"
+    },
+    {
+      "word": "mode,",
+      "start": 12.68,
+      "end": 12.86,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 13.08,
+      "end": 13.32,
+      "match": "exact"
+    },
+    {
+      "word": "team",
+      "start": 13.32,
+      "end": 13.5,
+      "match": "exact"
+    },
+    {
+      "word": "SSO—as",
+      "start": 13.5,
+      "end": 14.36,
+      "match": "exact"
+    },
+    {
+      "word": "structured",
+      "start": 14.36,
+      "end": 14.62,
+      "match": "exact"
+    },
+    {
+      "word": "JSON.",
+      "start": 14.62,
+      "end": 14.98,
+      "match": "exact"
+    },
+    {
+      "word": "Your",
+      "start": 15.4,
+      "end": 15.92,
+      "match": "exact"
+    },
+    {
+      "word": "host",
+      "start": 15.92,
+      "end": 16.14,
+      "match": "exact"
+    },
+    {
+      "word": "then",
+      "start": 16.14,
+      "end": 16.3,
+      "match": "exact"
+    },
+    {
+      "word": "hands",
+      "start": 16.3,
+      "end": 16.6,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 16.6,
+      "end": 16.78,
+      "match": "exact"
+    },
+    {
+      "word": "fresh,",
+      "start": 16.78,
+      "end": 17.06,
+      "match": "exact"
+    },
+    {
+      "word": "verified",
+      "start": 17.06,
+      "end": 17.36,
+      "match": "exact"
+    },
+    {
+      "word": "data",
+      "start": 17.36,
+      "end": 17.84,
+      "match": "exact"
+    },
+    {
+      "word": "right",
+      "start": 17.84,
+      "end": 18.12,
+      "match": "exact"
+    },
+    {
+      "word": "back",
+      "start": 18.12,
+      "end": 18.3,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 18.3,
+      "end": 18.5,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 18.5,
+      "end": 18.58,
+      "match": "exact"
+    },
+    {
+      "word": "language",
+      "start": 18.58,
+      "end": 18.78,
+      "match": "exact"
+    },
+    {
+      "word": "model.",
+      "start": 18.78,
+      "end": 19.04,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.26
+    },
+    {
+      "word": "host",
+      "start": 0.26,
+      "end": 0.44
+    },
+    {
+      "word": "reads",
+      "start": 0.44,
+      "end": 0.66
+    },
+    {
+      "word": "that",
+      "start": 0.66,
+      "end": 0.9
+    },
+    {
+      "word": "decision",
+      "start": 0.9,
+      "end": 1.26
+    },
+    {
+      "word": "and",
+      "start": 1.26,
+      "end": 1.7
+    },
+    {
+      "word": "routes",
+      "start": 1.7,
+      "end": 1.9
+    },
+    {
+      "word": "the",
+      "start": 1.9,
+      "end": 2.08
+    },
+    {
+      "word": "call",
+      "start": 2.08,
+      "end": 2.28
+    },
+    {
+      "word": "through",
+      "start": 2.28,
+      "end": 2.48
+    },
+    {
+      "word": "its",
+      "start": 2.48,
+      "end": 2.62
+    },
+    {
+      "word": "Slack",
+      "start": 2.62,
+      "end": 2.82
+    },
+    {
+      "word": "client",
+      "start": 2.82,
+      "end": 3.16
+    },
+    {
+      "word": "straight",
+      "start": 3.16,
+      "end": 3.56
+    },
+    {
+      "word": "to",
+      "start": 3.56,
+      "end": 3.78
+    },
+    {
+      "word": "the",
+      "start": 3.78,
+      "end": 3.86
+    },
+    {
+      "word": "Slack",
+      "start": 3.86,
+      "end": 4.1
+    },
+    {
+      "word": "MCP",
+      "start": 4.1,
+      "end": 4.58
+    },
+    {
+      "word": "server.",
+      "start": 4.58,
+      "end": 4.86
+    },
+    {
+      "word": "The",
+      "start": 5.26,
+      "end": 5.78
+    },
+    {
+      "word": "server",
+      "start": 5.78,
+      "end": 5.98
+    },
+    {
+      "word": "query",
+      "start": 5.98,
+      "end": 6.22
+    },
+    {
+      "word": "Slack's",
+      "start": 6.22,
+      "end": 6.72
+    },
+    {
+      "word": "real",
+      "start": 6.72,
+      "end": 6.88
+    },
+    {
+      "word": "API,",
+      "start": 6.88,
+      "end": 7.16
+    },
+    {
+      "word": "gathers",
+      "start": 7.46,
+      "end": 7.9
+    },
+    {
+      "word": "the",
+      "start": 7.9,
+      "end": 8.06
+    },
+    {
+      "word": "matching",
+      "start": 8.06,
+      "end": 8.3
+    },
+    {
+      "word": "messages,",
+      "start": 8.3,
+      "end": 8.66
+    },
+    {
+      "word": "and",
+      "start": 8.92,
+      "end": 9.24
+    },
+    {
+      "word": "returns",
+      "start": 9.24,
+      "end": 9.52
+    },
+    {
+      "word": "three",
+      "start": 9.52,
+      "end": 9.78
+    },
+    {
+      "word": "clean",
+      "start": 9.78,
+      "end": 10.1
+    },
+    {
+      "word": "customer",
+      "start": 10.1,
+      "end": 10.4
+    },
+    {
+      "word": "requests.",
+      "start": 10.4,
+      "end": 10.8
+    },
+    {
+      "word": "CSV",
+      "start": 11.16,
+      "end": 11.66
+    },
+    {
+      "word": "export,",
+      "start": 11.66,
+      "end": 12.06
+    },
+    {
+      "word": "dark",
+      "start": 12.38,
+      "end": 12.68
+    },
+    {
+      "word": "mode,",
+      "start": 12.68,
+      "end": 12.86
+    },
+    {
+      "word": "and",
+      "start": 13.08,
+      "end": 13.32
+    },
+    {
+      "word": "team",
+      "start": 13.32,
+      "end": 13.5
+    },
+    {
+      "word": "SSO",
+      "start": 13.5,
+      "end": 14.1
+    },
+    {
+      "word": "as",
+      "start": 14.1,
+      "end": 14.36
+    },
+    {
+      "word": "structured",
+      "start": 14.36,
+      "end": 14.62
+    },
+    {
+      "word": "JSON.",
+      "start": 14.62,
+      "end": 14.98
+    },
+    {
+      "word": "Your",
+      "start": 15.4,
+      "end": 15.92
+    },
+    {
+      "word": "host",
+      "start": 15.92,
+      "end": 16.14
+    },
+    {
+      "word": "then",
+      "start": 16.14,
+      "end": 16.3
+    },
+    {
+      "word": "hands",
+      "start": 16.3,
+      "end": 16.6
+    },
+    {
+      "word": "that",
+      "start": 16.6,
+      "end": 16.78
+    },
+    {
+      "word": "fresh",
+      "start": 16.78,
+      "end": 17.06
+    },
+    {
+      "word": "verified",
+      "start": 17.06,
+      "end": 17.36
+    },
+    {
+      "word": "data",
+      "start": 17.36,
+      "end": 17.84
+    },
+    {
+      "word": "right",
+      "start": 17.84,
+      "end": 18.12
+    },
+    {
+      "word": "back",
+      "start": 18.12,
+      "end": 18.3
+    },
+    {
+      "word": "to",
+      "start": 18.3,
+      "end": 18.5
+    },
+    {
+      "word": "the",
+      "start": 18.5,
+      "end": 18.58
+    },
+    {
+      "word": "language",
+      "start": 18.58,
+      "end": 18.78
+    },
+    {
+      "word": "model.",
+      "start": 18.78,
+      "end": 19.04
+    }
+  ]
+}

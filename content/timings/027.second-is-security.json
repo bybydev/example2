@@ -1,0 +1,684 @@
+{
+  "audio": "027.second-is-security.mp3",
+  "paragraph": 27,
+  "text": "Second is security. Letting AI act on live systems opens new attack surfaces: malicious external content can trigger prompt injection, and untrusted servers can smuggle hidden instructions inside tool descriptions—an attack called tool poisoning. Treat MCP servers exactly like browser extensions: install only from trusted sources, grant the narrowest permissions possible, and keep human approval turned on for writes.",
+  "transcript": "Second is security. Letting AI act on live systems opens new attack surfaces, malicious external content can trigger prompt injection, and untrusted servers can smuggle hidden instructions inside tool descriptions, an attack called tool poisoning. Treat MCP servers exactly like browser extensions, install only from trusted sources, grant the narrowest permissions possible, and keep human approval turned on for rights.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 1
+    }
+  ],
+  "duration": 24.28,
+  "failed_words": 1,
+  "failures": [
+    {
+      "index": 58,
+      "word": "writes.",
+      "match": "approx",
+      "heard": "rights.",
+      "start": 23.64
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Second",
+      "start": 0.0,
+      "end": 0.5,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 0.5,
+      "end": 0.86,
+      "match": "exact"
+    },
+    {
+      "word": "security.",
+      "start": 0.86,
+      "end": 1.4,
+      "match": "exact"
+    },
+    {
+      "word": "Letting",
+      "start": 1.9,
+      "end": 2.58,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 2.58,
+      "end": 2.8,
+      "match": "exact"
+    },
+    {
+      "word": "act",
+      "start": 2.8,
+      "end": 3.14,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 3.14,
+      "end": 3.36,
+      "match": "exact"
+    },
+    {
+      "word": "live",
+      "start": 3.36,
+      "end": 3.54,
+      "match": "exact"
+    },
+    {
+      "word": "systems",
+      "start": 3.54,
+      "end": 3.96,
+      "match": "exact"
+    },
+    {
+      "word": "opens",
+      "start": 3.96,
+      "end": 4.36,
+      "match": "exact"
+    },
+    {
+      "word": "new",
+      "start": 4.36,
+      "end": 4.68,
+      "match": "exact"
+    },
+    {
+      "word": "attack",
+      "start": 4.68,
+      "end": 4.9,
+      "match": "exact"
+    },
+    {
+      "word": "surfaces:",
+      "start": 4.9,
+      "end": 5.28,
+      "match": "exact"
+    },
+    {
+      "word": "malicious",
+      "start": 5.74,
+      "end": 6.18,
+      "match": "exact"
+    },
+    {
+      "word": "external",
+      "start": 6.18,
+      "end": 6.6,
+      "match": "exact"
+    },
+    {
+      "word": "content",
+      "start": 6.6,
+      "end": 7.12,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 7.12,
+      "end": 7.42,
+      "match": "exact"
+    },
+    {
+      "word": "trigger",
+      "start": 7.42,
+      "end": 7.64,
+      "match": "exact"
+    },
+    {
+      "word": "prompt",
+      "start": 7.64,
+      "end": 7.98,
+      "match": "exact"
+    },
+    {
+      "word": "injection,",
+      "start": 7.98,
+      "end": 8.28,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 8.64,
+      "end": 9.02,
+      "match": "exact"
+    },
+    {
+      "word": "untrusted",
+      "start": 9.02,
+      "end": 9.5,
+      "match": "exact"
+    },
+    {
+      "word": "servers",
+      "start": 9.5,
+      "end": 9.78,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 9.78,
+      "end": 10.1,
+      "match": "exact"
+    },
+    {
+      "word": "smuggle",
+      "start": 10.1,
+      "end": 10.44,
+      "match": "exact"
+    },
+    {
+      "word": "hidden",
+      "start": 10.44,
+      "end": 10.64,
+      "match": "exact"
+    },
+    {
+      "word": "instructions",
+      "start": 10.64,
+      "end": 11.12,
+      "match": "exact"
+    },
+    {
+      "word": "inside",
+      "start": 11.12,
+      "end": 11.6,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 11.6,
+      "end": 11.92,
+      "match": "exact"
+    },
+    {
+      "word": "descriptions—an",
+      "start": 11.92,
+      "end": 13.12,
+      "match": "exact"
+    },
+    {
+      "word": "attack",
+      "start": 13.12,
+      "end": 13.4,
+      "match": "exact"
+    },
+    {
+      "word": "called",
+      "start": 13.4,
+      "end": 13.76,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 13.76,
+      "end": 14.0,
+      "match": "exact"
+    },
+    {
+      "word": "poisoning.",
+      "start": 14.0,
+      "end": 14.38,
+      "match": "exact"
+    },
+    {
+      "word": "Treat",
+      "start": 15.08,
+      "end": 15.42,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 15.42,
+      "end": 15.88,
+      "match": "exact"
+    },
+    {
+      "word": "servers",
+      "start": 15.88,
+      "end": 16.18,
+      "match": "exact"
+    },
+    {
+      "word": "exactly",
+      "start": 16.18,
+      "end": 16.62,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 16.62,
+      "end": 16.96,
+      "match": "exact"
+    },
+    {
+      "word": "browser",
+      "start": 16.96,
+      "end": 17.18,
+      "match": "exact"
+    },
+    {
+      "word": "extensions:",
+      "start": 17.18,
+      "end": 17.6,
+      "match": "exact"
+    },
+    {
+      "word": "install",
+      "start": 18.08,
+      "end": 18.48,
+      "match": "exact"
+    },
+    {
+      "word": "only",
+      "start": 18.48,
+      "end": 18.8,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 18.8,
+      "end": 19.0,
+      "match": "exact"
+    },
+    {
+      "word": "trusted",
+      "start": 19.0,
+      "end": 19.26,
+      "match": "exact"
+    },
+    {
+      "word": "sources,",
+      "start": 19.26,
+      "end": 19.58,
+      "match": "exact"
+    },
+    {
+      "word": "grant",
+      "start": 20.0,
+      "end": 20.28,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 20.28,
+      "end": 20.46,
+      "match": "exact"
+    },
+    {
+      "word": "narrowest",
+      "start": 20.46,
+      "end": 20.88,
+      "match": "exact"
+    },
+    {
+      "word": "permissions",
+      "start": 20.88,
+      "end": 21.14,
+      "match": "exact"
+    },
+    {
+      "word": "possible,",
+      "start": 21.14,
+      "end": 21.62,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 21.88,
+      "end": 22.22,
+      "match": "exact"
+    },
+    {
+      "word": "keep",
+      "start": 22.22,
+      "end": 22.4,
+      "match": "exact"
+    },
+    {
+      "word": "human",
+      "start": 22.4,
+      "end": 22.66,
+      "match": "exact"
+    },
+    {
+      "word": "approval",
+      "start": 22.66,
+      "end": 22.9,
+      "match": "exact"
+    },
+    {
+      "word": "turned",
+      "start": 22.9,
+      "end": 23.28,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 23.28,
+      "end": 23.46,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 23.46,
+      "end": 23.64,
+      "match": "exact"
+    },
+    {
+      "word": "writes.",
+      "start": 23.64,
+      "end": 23.82,
+      "match": "approx",
+      "heard": "rights."
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Second",
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "word": "is",
+      "start": 0.5,
+      "end": 0.86
+    },
+    {
+      "word": "security.",
+      "start": 0.86,
+      "end": 1.4
+    },
+    {
+      "word": "Letting",
+      "start": 1.9,
+      "end": 2.58
+    },
+    {
+      "word": "AI",
+      "start": 2.58,
+      "end": 2.8
+    },
+    {
+      "word": "act",
+      "start": 2.8,
+      "end": 3.14
+    },
+    {
+      "word": "on",
+      "start": 3.14,
+      "end": 3.36
+    },
+    {
+      "word": "live",
+      "start": 3.36,
+      "end": 3.54
+    },
+    {
+      "word": "systems",
+      "start": 3.54,
+      "end": 3.96
+    },
+    {
+      "word": "opens",
+      "start": 3.96,
+      "end": 4.36
+    },
+    {
+      "word": "new",
+      "start": 4.36,
+      "end": 4.68
+    },
+    {
+      "word": "attack",
+      "start": 4.68,
+      "end": 4.9
+    },
+    {
+      "word": "surfaces,",
+      "start": 4.9,
+      "end": 5.28
+    },
+    {
+      "word": "malicious",
+      "start": 5.74,
+      "end": 6.18
+    },
+    {
+      "word": "external",
+      "start": 6.18,
+      "end": 6.6
+    },
+    {
+      "word": "content",
+      "start": 6.6,
+      "end": 7.12
+    },
+    {
+      "word": "can",
+      "start": 7.12,
+      "end": 7.42
+    },
+    {
+      "word": "trigger",
+      "start": 7.42,
+      "end": 7.64
+    },
+    {
+      "word": "prompt",
+      "start": 7.64,
+      "end": 7.98
+    },
+    {
+      "word": "injection,",
+      "start": 7.98,
+      "end": 8.28
+    },
+    {
+      "word": "and",
+      "start": 8.64,
+      "end": 9.02
+    },
+    {
+      "word": "untrusted",
+      "start": 9.02,
+      "end": 9.5
+    },
+    {
+      "word": "servers",
+      "start": 9.5,
+      "end": 9.78
+    },
+    {
+      "word": "can",
+      "start": 9.78,
+      "end": 10.1
+    },
+    {
+      "word": "smuggle",
+      "start": 10.1,
+      "end": 10.44
+    },
+    {
+      "word": "hidden",
+      "start": 10.44,
+      "end": 10.64
+    },
+    {
+      "word": "instructions",
+      "start": 10.64,
+      "end": 11.12
+    },
+    {
+      "word": "inside",
+      "start": 11.12,
+      "end": 11.6
+    },
+    {
+      "word": "tool",
+      "start": 11.6,
+      "end": 11.92
+    },
+    {
+      "word": "descriptions,",
+      "start": 11.92,
+      "end": 12.36
+    },
+    {
+      "word": "an",
+      "start": 12.7,
+      "end": 13.12
+    },
+    {
+      "word": "attack",
+      "start": 13.12,
+      "end": 13.4
+    },
+    {
+      "word": "called",
+      "start": 13.4,
+      "end": 13.76
+    },
+    {
+      "word": "tool",
+      "start": 13.76,
+      "end": 14.0
+    },
+    {
+      "word": "poisoning.",
+      "start": 14.0,
+      "end": 14.38
+    },
+    {
+      "word": "Treat",
+      "start": 15.08,
+      "end": 15.42
+    },
+    {
+      "word": "MCP",
+      "start": 15.42,
+      "end": 15.88
+    },
+    {
+      "word": "servers",
+      "start": 15.88,
+      "end": 16.18
+    },
+    {
+      "word": "exactly",
+      "start": 16.18,
+      "end": 16.62
+    },
+    {
+      "word": "like",
+      "start": 16.62,
+      "end": 16.96
+    },
+    {
+      "word": "browser",
+      "start": 16.96,
+      "end": 17.18
+    },
+    {
+      "word": "extensions,",
+      "start": 17.18,
+      "end": 17.6
+    },
+    {
+      "word": "install",
+      "start": 18.08,
+      "end": 18.48
+    },
+    {
+      "word": "only",
+      "start": 18.48,
+      "end": 18.8
+    },
+    {
+      "word": "from",
+      "start": 18.8,
+      "end": 19.0
+    },
+    {
+      "word": "trusted",
+      "start": 19.0,
+      "end": 19.26
+    },
+    {
+      "word": "sources,",
+      "start": 19.26,
+      "end": 19.58
+    },
+    {
+      "word": "grant",
+      "start": 20.0,
+      "end": 20.28
+    },
+    {
+      "word": "the",
+      "start": 20.28,
+      "end": 20.46
+    },
+    {
+      "word": "narrowest",
+      "start": 20.46,
+      "end": 20.88
+    },
+    {
+      "word": "permissions",
+      "start": 20.88,
+      "end": 21.14
+    },
+    {
+      "word": "possible,",
+      "start": 21.14,
+      "end": 21.62
+    },
+    {
+      "word": "and",
+      "start": 21.88,
+      "end": 22.22
+    },
+    {
+      "word": "keep",
+      "start": 22.22,
+      "end": 22.4
+    },
+    {
+      "word": "human",
+      "start": 22.4,
+      "end": 22.66
+    },
+    {
+      "word": "approval",
+      "start": 22.66,
+      "end": 22.9
+    },
+    {
+      "word": "turned",
+      "start": 22.9,
+      "end": 23.28
+    },
+    {
+      "word": "on",
+      "start": 23.28,
+      "end": 23.46
+    },
+    {
+      "word": "for",
+      "start": 23.46,
+      "end": 23.64
+    },
+    {
+      "word": "rights.",
+      "start": 23.64,
+      "end": 23.82
+    }
+  ]
+}

@@ -1,0 +1,670 @@
+{
+  "audio": "017.next-the-host.mp3",
+  "paragraph": 17,
+  "text": "Next, the host sends your prompt along with that tool catalog to the language model. Here is a critical detail: the language model never touches Slack or Notion directly. Instead, it reasons over your request and replies to the host with a structured decision saying: call the Slack search tool on the feedback channel, filtered for urgent customer items.",
+  "transcript": "Next, the host sends your prompt along with that tool catalog to the language model. Here is a critical detail. The language model never touches Slack or Notion directly. Instead, it reasons over your request and replies to the host with a structured decision saying, call the Slack search tool on the feedback channel, filtered for urgent customer items.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 16.12,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Next,",
+      "start": 0.0,
+      "end": 0.38,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.56,
+      "end": 0.68,
+      "match": "exact"
+    },
+    {
+      "word": "host",
+      "start": 0.68,
+      "end": 0.9,
+      "match": "exact"
+    },
+    {
+      "word": "sends",
+      "start": 0.9,
+      "end": 1.08,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 1.08,
+      "end": 1.26,
+      "match": "exact"
+    },
+    {
+      "word": "prompt",
+      "start": 1.26,
+      "end": 1.56,
+      "match": "exact"
+    },
+    {
+      "word": "along",
+      "start": 1.56,
+      "end": 1.78,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 1.78,
+      "end": 1.96,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 1.96,
+      "end": 2.1,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 2.1,
+      "end": 2.26,
+      "match": "exact"
+    },
+    {
+      "word": "catalog",
+      "start": 2.26,
+      "end": 2.54,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 2.54,
+      "end": 2.9,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 2.9,
+      "end": 3.0,
+      "match": "exact"
+    },
+    {
+      "word": "language",
+      "start": 3.0,
+      "end": 3.2,
+      "match": "exact"
+    },
+    {
+      "word": "model.",
+      "start": 3.2,
+      "end": 3.42,
+      "match": "exact"
+    },
+    {
+      "word": "Here",
+      "start": 3.6,
+      "end": 3.92,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 3.92,
+      "end": 4.08,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 4.08,
+      "end": 4.18,
+      "match": "exact"
+    },
+    {
+      "word": "critical",
+      "start": 4.18,
+      "end": 4.36,
+      "match": "exact"
+    },
+    {
+      "word": "detail:",
+      "start": 4.36,
+      "end": 4.7,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 4.96,
+      "end": 5.2,
+      "match": "exact"
+    },
+    {
+      "word": "language",
+      "start": 5.2,
+      "end": 5.44,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 5.44,
+      "end": 5.64,
+      "match": "exact"
+    },
+    {
+      "word": "never",
+      "start": 5.64,
+      "end": 5.94,
+      "match": "exact"
+    },
+    {
+      "word": "touches",
+      "start": 5.94,
+      "end": 6.28,
+      "match": "exact"
+    },
+    {
+      "word": "Slack",
+      "start": 6.28,
+      "end": 6.56,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 6.56,
+      "end": 6.8,
+      "match": "exact"
+    },
+    {
+      "word": "Notion",
+      "start": 6.8,
+      "end": 7.08,
+      "match": "exact"
+    },
+    {
+      "word": "directly.",
+      "start": 7.08,
+      "end": 7.3,
+      "match": "exact"
+    },
+    {
+      "word": "Instead,",
+      "start": 7.58,
+      "end": 8.06,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 8.28,
+      "end": 8.4,
+      "match": "exact"
+    },
+    {
+      "word": "reasons",
+      "start": 8.4,
+      "end": 8.66,
+      "match": "exact"
+    },
+    {
+      "word": "over",
+      "start": 8.66,
+      "end": 8.9,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 8.9,
+      "end": 9.06,
+      "match": "exact"
+    },
+    {
+      "word": "request",
+      "start": 9.06,
+      "end": 9.32,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 9.32,
+      "end": 9.64,
+      "match": "exact"
+    },
+    {
+      "word": "replies",
+      "start": 9.64,
+      "end": 9.84,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 9.84,
+      "end": 10.14,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 10.14,
+      "end": 10.22,
+      "match": "exact"
+    },
+    {
+      "word": "host",
+      "start": 10.22,
+      "end": 10.46,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 10.46,
+      "end": 10.64,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 10.64,
+      "end": 10.68,
+      "match": "exact"
+    },
+    {
+      "word": "structured",
+      "start": 10.68,
+      "end": 11.0,
+      "match": "exact"
+    },
+    {
+      "word": "decision",
+      "start": 11.0,
+      "end": 11.26,
+      "match": "exact"
+    },
+    {
+      "word": "saying:",
+      "start": 11.26,
+      "end": 11.64,
+      "match": "exact"
+    },
+    {
+      "word": "call",
+      "start": 11.82,
+      "end": 12.22,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 12.22,
+      "end": 12.4,
+      "match": "exact"
+    },
+    {
+      "word": "Slack",
+      "start": 12.4,
+      "end": 12.62,
+      "match": "exact"
+    },
+    {
+      "word": "search",
+      "start": 12.62,
+      "end": 12.84,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 12.84,
+      "end": 13.12,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 13.12,
+      "end": 13.38,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 13.38,
+      "end": 13.46,
+      "match": "exact"
+    },
+    {
+      "word": "feedback",
+      "start": 13.46,
+      "end": 13.7,
+      "match": "exact"
+    },
+    {
+      "word": "channel,",
+      "start": 13.7,
+      "end": 14.04,
+      "match": "exact"
+    },
+    {
+      "word": "filtered",
+      "start": 14.18,
+      "end": 14.62,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 14.62,
+      "end": 14.9,
+      "match": "exact"
+    },
+    {
+      "word": "urgent",
+      "start": 14.9,
+      "end": 15.1,
+      "match": "exact"
+    },
+    {
+      "word": "customer",
+      "start": 15.1,
+      "end": 15.46,
+      "match": "exact"
+    },
+    {
+      "word": "items.",
+      "start": 15.46,
+      "end": 15.74,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Next,",
+      "start": 0.0,
+      "end": 0.38
+    },
+    {
+      "word": "the",
+      "start": 0.56,
+      "end": 0.68
+    },
+    {
+      "word": "host",
+      "start": 0.68,
+      "end": 0.9
+    },
+    {
+      "word": "sends",
+      "start": 0.9,
+      "end": 1.08
+    },
+    {
+      "word": "your",
+      "start": 1.08,
+      "end": 1.26
+    },
+    {
+      "word": "prompt",
+      "start": 1.26,
+      "end": 1.56
+    },
+    {
+      "word": "along",
+      "start": 1.56,
+      "end": 1.78
+    },
+    {
+      "word": "with",
+      "start": 1.78,
+      "end": 1.96
+    },
+    {
+      "word": "that",
+      "start": 1.96,
+      "end": 2.1
+    },
+    {
+      "word": "tool",
+      "start": 2.1,
+      "end": 2.26
+    },
+    {
+      "word": "catalog",
+      "start": 2.26,
+      "end": 2.54
+    },
+    {
+      "word": "to",
+      "start": 2.54,
+      "end": 2.9
+    },
+    {
+      "word": "the",
+      "start": 2.9,
+      "end": 3.0
+    },
+    {
+      "word": "language",
+      "start": 3.0,
+      "end": 3.2
+    },
+    {
+      "word": "model.",
+      "start": 3.2,
+      "end": 3.42
+    },
+    {
+      "word": "Here",
+      "start": 3.6,
+      "end": 3.92
+    },
+    {
+      "word": "is",
+      "start": 3.92,
+      "end": 4.08
+    },
+    {
+      "word": "a",
+      "start": 4.08,
+      "end": 4.18
+    },
+    {
+      "word": "critical",
+      "start": 4.18,
+      "end": 4.36
+    },
+    {
+      "word": "detail.",
+      "start": 4.36,
+      "end": 4.7
+    },
+    {
+      "word": "The",
+      "start": 4.96,
+      "end": 5.2
+    },
+    {
+      "word": "language",
+      "start": 5.2,
+      "end": 5.44
+    },
+    {
+      "word": "model",
+      "start": 5.44,
+      "end": 5.64
+    },
+    {
+      "word": "never",
+      "start": 5.64,
+      "end": 5.94
+    },
+    {
+      "word": "touches",
+      "start": 5.94,
+      "end": 6.28
+    },
+    {
+      "word": "Slack",
+      "start": 6.28,
+      "end": 6.56
+    },
+    {
+      "word": "or",
+      "start": 6.56,
+      "end": 6.8
+    },
+    {
+      "word": "Notion",
+      "start": 6.8,
+      "end": 7.08
+    },
+    {
+      "word": "directly.",
+      "start": 7.08,
+      "end": 7.3
+    },
+    {
+      "word": "Instead,",
+      "start": 7.58,
+      "end": 8.06
+    },
+    {
+      "word": "it",
+      "start": 8.28,
+      "end": 8.4
+    },
+    {
+      "word": "reasons",
+      "start": 8.4,
+      "end": 8.66
+    },
+    {
+      "word": "over",
+      "start": 8.66,
+      "end": 8.9
+    },
+    {
+      "word": "your",
+      "start": 8.9,
+      "end": 9.06
+    },
+    {
+      "word": "request",
+      "start": 9.06,
+      "end": 9.32
+    },
+    {
+      "word": "and",
+      "start": 9.32,
+      "end": 9.64
+    },
+    {
+      "word": "replies",
+      "start": 9.64,
+      "end": 9.84
+    },
+    {
+      "word": "to",
+      "start": 9.84,
+      "end": 10.14
+    },
+    {
+      "word": "the",
+      "start": 10.14,
+      "end": 10.22
+    },
+    {
+      "word": "host",
+      "start": 10.22,
+      "end": 10.46
+    },
+    {
+      "word": "with",
+      "start": 10.46,
+      "end": 10.64
+    },
+    {
+      "word": "a",
+      "start": 10.64,
+      "end": 10.68
+    },
+    {
+      "word": "structured",
+      "start": 10.68,
+      "end": 11.0
+    },
+    {
+      "word": "decision",
+      "start": 11.0,
+      "end": 11.26
+    },
+    {
+      "word": "saying,",
+      "start": 11.26,
+      "end": 11.64
+    },
+    {
+      "word": "call",
+      "start": 11.82,
+      "end": 12.22
+    },
+    {
+      "word": "the",
+      "start": 12.22,
+      "end": 12.4
+    },
+    {
+      "word": "Slack",
+      "start": 12.4,
+      "end": 12.62
+    },
+    {
+      "word": "search",
+      "start": 12.62,
+      "end": 12.84
+    },
+    {
+      "word": "tool",
+      "start": 12.84,
+      "end": 13.12
+    },
+    {
+      "word": "on",
+      "start": 13.12,
+      "end": 13.38
+    },
+    {
+      "word": "the",
+      "start": 13.38,
+      "end": 13.46
+    },
+    {
+      "word": "feedback",
+      "start": 13.46,
+      "end": 13.7
+    },
+    {
+      "word": "channel,",
+      "start": 13.7,
+      "end": 14.04
+    },
+    {
+      "word": "filtered",
+      "start": 14.18,
+      "end": 14.62
+    },
+    {
+      "word": "for",
+      "start": 14.62,
+      "end": 14.9
+    },
+    {
+      "word": "urgent",
+      "start": 14.9,
+      "end": 15.1
+    },
+    {
+      "word": "customer",
+      "start": 15.1,
+      "end": 15.46
+    },
+    {
+      "word": "items.",
+      "start": 15.46,
+      "end": 15.74
+    }
+  ]
+}

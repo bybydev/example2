@@ -1,0 +1,630 @@
+{
+  "audio": "005.the-math-gets.mp3",
+  "paragraph": 5,
+  "text": "The math gets ugly fast. Imagine five AI apps trying to connect to ten everyday tools: multiply five by ten and you already have fifty separate integrations to build and maintain. Now scale up to twenty AI apps and a hundred tools across the industry, and everyone is stuck maintaining two thousand fragile, duplicated connections.",
+  "transcript": "The math gets ugly fast. Imagine 5 AI apps trying to connect to 10 everyday tools, multiply 5 by 10, and you already have 50 separate integrations to build and maintain. Now, scale up to 20 AI apps and 100 tools across the industry, and everyone is stuck maintaining 2,000 fragile, duplicated connections.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 1
+    }
+  ],
+  "duration": 18.16,
+  "failed_words": 1,
+  "failures": [
+    {
+      "index": 51,
+      "word": "thousand",
+      "match": "approx",
+      "heard": ",000",
+      "start": 15.62
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.26,
+      "match": "exact"
+    },
+    {
+      "word": "math",
+      "start": 0.26,
+      "end": 0.44,
+      "match": "exact"
+    },
+    {
+      "word": "gets",
+      "start": 0.44,
+      "end": 0.72,
+      "match": "exact"
+    },
+    {
+      "word": "ugly",
+      "start": 0.72,
+      "end": 0.96,
+      "match": "exact"
+    },
+    {
+      "word": "fast.",
+      "start": 0.96,
+      "end": 1.3,
+      "match": "exact"
+    },
+    {
+      "word": "Imagine",
+      "start": 1.88,
+      "end": 2.42,
+      "match": "exact"
+    },
+    {
+      "word": "five",
+      "start": 2.42,
+      "end": 2.72,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 2.72,
+      "end": 3.06,
+      "match": "exact"
+    },
+    {
+      "word": "apps",
+      "start": 3.06,
+      "end": 3.4,
+      "match": "exact"
+    },
+    {
+      "word": "trying",
+      "start": 3.4,
+      "end": 3.66,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 3.66,
+      "end": 3.82,
+      "match": "exact"
+    },
+    {
+      "word": "connect",
+      "start": 3.82,
+      "end": 4.04,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 4.04,
+      "end": 4.22,
+      "match": "exact"
+    },
+    {
+      "word": "ten",
+      "start": 4.22,
+      "end": 4.4,
+      "match": "exact"
+    },
+    {
+      "word": "everyday",
+      "start": 4.4,
+      "end": 4.74,
+      "match": "exact"
+    },
+    {
+      "word": "tools:",
+      "start": 4.74,
+      "end": 5.16,
+      "match": "exact"
+    },
+    {
+      "word": "multiply",
+      "start": 5.34,
+      "end": 5.8,
+      "match": "exact"
+    },
+    {
+      "word": "five",
+      "start": 5.8,
+      "end": 6.18,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 6.18,
+      "end": 6.38,
+      "match": "exact"
+    },
+    {
+      "word": "ten",
+      "start": 6.38,
+      "end": 6.6,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 6.76,
+      "end": 7.04,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 7.04,
+      "end": 7.12,
+      "match": "exact"
+    },
+    {
+      "word": "already",
+      "start": 7.12,
+      "end": 7.36,
+      "match": "exact"
+    },
+    {
+      "word": "have",
+      "start": 7.36,
+      "end": 7.6,
+      "match": "exact"
+    },
+    {
+      "word": "fifty",
+      "start": 7.6,
+      "end": 7.86,
+      "match": "exact"
+    },
+    {
+      "word": "separate",
+      "start": 7.86,
+      "end": 8.18,
+      "match": "exact"
+    },
+    {
+      "word": "integrations",
+      "start": 8.18,
+      "end": 8.76,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 8.76,
+      "end": 8.92,
+      "match": "exact"
+    },
+    {
+      "word": "build",
+      "start": 8.92,
+      "end": 9.2,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 9.2,
+      "end": 9.36,
+      "match": "exact"
+    },
+    {
+      "word": "maintain.",
+      "start": 9.36,
+      "end": 9.7,
+      "match": "exact"
+    },
+    {
+      "word": "Now",
+      "start": 10.22,
+      "end": 10.76,
+      "match": "exact"
+    },
+    {
+      "word": "scale",
+      "start": 10.82,
+      "end": 11.06,
+      "match": "exact"
+    },
+    {
+      "word": "up",
+      "start": 11.06,
+      "end": 11.22,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 11.22,
+      "end": 11.34,
+      "match": "exact"
+    },
+    {
+      "word": "twenty",
+      "start": 11.34,
+      "end": 11.52,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 11.52,
+      "end": 11.84,
+      "match": "exact"
+    },
+    {
+      "word": "apps",
+      "start": 11.84,
+      "end": 12.2,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 12.2,
+      "end": 12.38,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 12.38,
+      "end": 12.398,
+      "match": "exact"
+    },
+    {
+      "word": "hundred",
+      "start": 12.398,
+      "end": 12.52,
+      "match": "exact"
+    },
+    {
+      "word": "tools",
+      "start": 12.52,
+      "end": 12.96,
+      "match": "exact"
+    },
+    {
+      "word": "across",
+      "start": 12.96,
+      "end": 13.24,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 13.24,
+      "end": 13.5,
+      "match": "exact"
+    },
+    {
+      "word": "industry,",
+      "start": 13.5,
+      "end": 13.86,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 14.02,
+      "end": 14.38,
+      "match": "exact"
+    },
+    {
+      "word": "everyone",
+      "start": 14.38,
+      "end": 14.6,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 14.6,
+      "end": 14.78,
+      "match": "exact"
+    },
+    {
+      "word": "stuck",
+      "start": 14.78,
+      "end": 14.96,
+      "match": "exact"
+    },
+    {
+      "word": "maintaining",
+      "start": 14.96,
+      "end": 15.34,
+      "match": "exact"
+    },
+    {
+      "word": "two",
+      "start": 15.34,
+      "end": 15.62,
+      "match": "exact"
+    },
+    {
+      "word": "thousand",
+      "start": 15.62,
+      "end": 16.02,
+      "match": "approx",
+      "heard": ",000"
+    },
+    {
+      "word": "fragile,",
+      "start": 16.02,
+      "end": 16.3,
+      "match": "exact"
+    },
+    {
+      "word": "duplicated",
+      "start": 16.48,
+      "end": 17.04,
+      "match": "exact"
+    },
+    {
+      "word": "connections.",
+      "start": 17.04,
+      "end": 17.32,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.26
+    },
+    {
+      "word": "math",
+      "start": 0.26,
+      "end": 0.44
+    },
+    {
+      "word": "gets",
+      "start": 0.44,
+      "end": 0.72
+    },
+    {
+      "word": "ugly",
+      "start": 0.72,
+      "end": 0.96
+    },
+    {
+      "word": "fast.",
+      "start": 0.96,
+      "end": 1.3
+    },
+    {
+      "word": "Imagine",
+      "start": 1.88,
+      "end": 2.42
+    },
+    {
+      "word": "5",
+      "start": 2.42,
+      "end": 2.72
+    },
+    {
+      "word": "AI",
+      "start": 2.72,
+      "end": 3.06
+    },
+    {
+      "word": "apps",
+      "start": 3.06,
+      "end": 3.4
+    },
+    {
+      "word": "trying",
+      "start": 3.4,
+      "end": 3.66
+    },
+    {
+      "word": "to",
+      "start": 3.66,
+      "end": 3.82
+    },
+    {
+      "word": "connect",
+      "start": 3.82,
+      "end": 4.04
+    },
+    {
+      "word": "to",
+      "start": 4.04,
+      "end": 4.22
+    },
+    {
+      "word": "10",
+      "start": 4.22,
+      "end": 4.4
+    },
+    {
+      "word": "everyday",
+      "start": 4.4,
+      "end": 4.74
+    },
+    {
+      "word": "tools,",
+      "start": 4.74,
+      "end": 5.16
+    },
+    {
+      "word": "multiply",
+      "start": 5.34,
+      "end": 5.8
+    },
+    {
+      "word": "5",
+      "start": 5.8,
+      "end": 6.18
+    },
+    {
+      "word": "by",
+      "start": 6.18,
+      "end": 6.38
+    },
+    {
+      "word": "10,",
+      "start": 6.38,
+      "end": 6.6
+    },
+    {
+      "word": "and",
+      "start": 6.76,
+      "end": 7.04
+    },
+    {
+      "word": "you",
+      "start": 7.04,
+      "end": 7.12
+    },
+    {
+      "word": "already",
+      "start": 7.12,
+      "end": 7.36
+    },
+    {
+      "word": "have",
+      "start": 7.36,
+      "end": 7.6
+    },
+    {
+      "word": "50",
+      "start": 7.6,
+      "end": 7.86
+    },
+    {
+      "word": "separate",
+      "start": 7.86,
+      "end": 8.18
+    },
+    {
+      "word": "integrations",
+      "start": 8.18,
+      "end": 8.76
+    },
+    {
+      "word": "to",
+      "start": 8.76,
+      "end": 8.92
+    },
+    {
+      "word": "build",
+      "start": 8.92,
+      "end": 9.2
+    },
+    {
+      "word": "and",
+      "start": 9.2,
+      "end": 9.36
+    },
+    {
+      "word": "maintain.",
+      "start": 9.36,
+      "end": 9.7
+    },
+    {
+      "word": "Now,",
+      "start": 10.22,
+      "end": 10.76
+    },
+    {
+      "word": "scale",
+      "start": 10.82,
+      "end": 11.06
+    },
+    {
+      "word": "up",
+      "start": 11.06,
+      "end": 11.22
+    },
+    {
+      "word": "to",
+      "start": 11.22,
+      "end": 11.34
+    },
+    {
+      "word": "20",
+      "start": 11.34,
+      "end": 11.52
+    },
+    {
+      "word": "AI",
+      "start": 11.52,
+      "end": 11.84
+    },
+    {
+      "word": "apps",
+      "start": 11.84,
+      "end": 12.2
+    },
+    {
+      "word": "and",
+      "start": 12.2,
+      "end": 12.38
+    },
+    {
+      "word": "100",
+      "start": 12.38,
+      "end": 12.52
+    },
+    {
+      "word": "tools",
+      "start": 12.52,
+      "end": 12.96
+    },
+    {
+      "word": "across",
+      "start": 12.96,
+      "end": 13.24
+    },
+    {
+      "word": "the",
+      "start": 13.24,
+      "end": 13.5
+    },
+    {
+      "word": "industry,",
+      "start": 13.5,
+      "end": 13.86
+    },
+    {
+      "word": "and",
+      "start": 14.02,
+      "end": 14.38
+    },
+    {
+      "word": "everyone",
+      "start": 14.38,
+      "end": 14.6
+    },
+    {
+      "word": "is",
+      "start": 14.6,
+      "end": 14.78
+    },
+    {
+      "word": "stuck",
+      "start": 14.78,
+      "end": 14.96
+    },
+    {
+      "word": "maintaining",
+      "start": 14.96,
+      "end": 15.34
+    },
+    {
+      "word": "2",
+      "start": 15.34,
+      "end": 15.62
+    },
+    {
+      "word": ",000",
+      "start": 15.62,
+      "end": 16.02
+    },
+    {
+      "word": "fragile,",
+      "start": 16.02,
+      "end": 16.3
+    },
+    {
+      "word": "duplicated",
+      "start": 16.48,
+      "end": 17.04
+    },
+    {
+      "word": "connections.",
+      "start": 17.04,
+      "end": 17.32
+    }
+  ]
+}

@@ -1,0 +1,587 @@
+{
+  "audio": "028.third-know-when.mp3",
+  "paragraph": 28,
+  "text": "Third, know when not to use MCP. It is a powerful standard, not a magic hammer for every problem. For a one-off document paste or a fixed predictable script needing zero AI judgment, keep it simple. MCP truly shines when an AI assistant needs live, repeatable access across multiple changing tools.",
+  "transcript": "Third, know when not to use MCP. It is a powerful standard, not a magic hammer for every problem. For a one-off document paste or a fixed predictable script needing zero AI judgment, keep it simple. MCP truly shines when an AI assistant needs live, repeatable access across multiple changing tools.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 17.16,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Third,",
+      "start": 0.0,
+      "end": 0.38,
+      "match": "exact"
+    },
+    {
+      "word": "know",
+      "start": 0.52,
+      "end": 0.94,
+      "match": "exact"
+    },
+    {
+      "word": "when",
+      "start": 0.94,
+      "end": 1.14,
+      "match": "exact"
+    },
+    {
+      "word": "not",
+      "start": 1.14,
+      "end": 1.36,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 1.36,
+      "end": 1.52,
+      "match": "exact"
+    },
+    {
+      "word": "use",
+      "start": 1.52,
+      "end": 1.7,
+      "match": "exact"
+    },
+    {
+      "word": "MCP.",
+      "start": 1.7,
+      "end": 2.12,
+      "match": "exact"
+    },
+    {
+      "word": "It",
+      "start": 2.42,
+      "end": 2.9,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 2.9,
+      "end": 2.98,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 2.98,
+      "end": 3.06,
+      "match": "exact"
+    },
+    {
+      "word": "powerful",
+      "start": 3.06,
+      "end": 3.36,
+      "match": "exact"
+    },
+    {
+      "word": "standard,",
+      "start": 3.36,
+      "end": 3.76,
+      "match": "exact"
+    },
+    {
+      "word": "not",
+      "start": 3.92,
+      "end": 4.16,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 4.16,
+      "end": 4.3,
+      "match": "exact"
+    },
+    {
+      "word": "magic",
+      "start": 4.3,
+      "end": 4.52,
+      "match": "exact"
+    },
+    {
+      "word": "hammer",
+      "start": 4.52,
+      "end": 4.76,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 4.76,
+      "end": 4.96,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 4.96,
+      "end": 5.18,
+      "match": "exact"
+    },
+    {
+      "word": "problem.",
+      "start": 5.18,
+      "end": 5.52,
+      "match": "exact"
+    },
+    {
+      "word": "For",
+      "start": 5.8,
+      "end": 6.28,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 6.28,
+      "end": 6.4,
+      "match": "exact"
+    },
+    {
+      "word": "one-off",
+      "start": 6.4,
+      "end": 6.7,
+      "match": "exact"
+    },
+    {
+      "word": "document",
+      "start": 6.7,
+      "end": 6.96,
+      "match": "exact"
+    },
+    {
+      "word": "paste",
+      "start": 6.96,
+      "end": 7.28,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 7.28,
+      "end": 7.58,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 7.58,
+      "end": 7.64,
+      "match": "exact"
+    },
+    {
+      "word": "fixed",
+      "start": 7.64,
+      "end": 7.84,
+      "match": "exact"
+    },
+    {
+      "word": "predictable",
+      "start": 7.84,
+      "end": 8.12,
+      "match": "exact"
+    },
+    {
+      "word": "script",
+      "start": 8.12,
+      "end": 8.48,
+      "match": "exact"
+    },
+    {
+      "word": "needing",
+      "start": 8.48,
+      "end": 8.74,
+      "match": "exact"
+    },
+    {
+      "word": "zero",
+      "start": 8.74,
+      "end": 9.08,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 9.08,
+      "end": 9.42,
+      "match": "exact"
+    },
+    {
+      "word": "judgment,",
+      "start": 9.42,
+      "end": 9.74,
+      "match": "exact"
+    },
+    {
+      "word": "keep",
+      "start": 9.94,
+      "end": 10.12,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 10.12,
+      "end": 10.26,
+      "match": "exact"
+    },
+    {
+      "word": "simple.",
+      "start": 10.26,
+      "end": 10.52,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 11.32,
+      "end": 11.8,
+      "match": "exact"
+    },
+    {
+      "word": "truly",
+      "start": 11.8,
+      "end": 12.18,
+      "match": "exact"
+    },
+    {
+      "word": "shines",
+      "start": 12.18,
+      "end": 12.66,
+      "match": "exact"
+    },
+    {
+      "word": "when",
+      "start": 12.66,
+      "end": 12.9,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 12.9,
+      "end": 13.0,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 13.0,
+      "end": 13.18,
+      "match": "exact"
+    },
+    {
+      "word": "assistant",
+      "start": 13.18,
+      "end": 13.5,
+      "match": "exact"
+    },
+    {
+      "word": "needs",
+      "start": 13.5,
+      "end": 13.82,
+      "match": "exact"
+    },
+    {
+      "word": "live,",
+      "start": 13.82,
+      "end": 14.2,
+      "match": "exact"
+    },
+    {
+      "word": "repeatable",
+      "start": 14.32,
+      "end": 14.86,
+      "match": "exact"
+    },
+    {
+      "word": "access",
+      "start": 14.86,
+      "end": 15.1,
+      "match": "exact"
+    },
+    {
+      "word": "across",
+      "start": 15.1,
+      "end": 15.58,
+      "match": "exact"
+    },
+    {
+      "word": "multiple",
+      "start": 15.58,
+      "end": 15.96,
+      "match": "exact"
+    },
+    {
+      "word": "changing",
+      "start": 15.96,
+      "end": 16.3,
+      "match": "exact"
+    },
+    {
+      "word": "tools.",
+      "start": 16.3,
+      "end": 16.7,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Third,",
+      "start": 0.0,
+      "end": 0.38
+    },
+    {
+      "word": "know",
+      "start": 0.52,
+      "end": 0.94
+    },
+    {
+      "word": "when",
+      "start": 0.94,
+      "end": 1.14
+    },
+    {
+      "word": "not",
+      "start": 1.14,
+      "end": 1.36
+    },
+    {
+      "word": "to",
+      "start": 1.36,
+      "end": 1.52
+    },
+    {
+      "word": "use",
+      "start": 1.52,
+      "end": 1.7
+    },
+    {
+      "word": "MCP.",
+      "start": 1.7,
+      "end": 2.12
+    },
+    {
+      "word": "It",
+      "start": 2.42,
+      "end": 2.9
+    },
+    {
+      "word": "is",
+      "start": 2.9,
+      "end": 2.98
+    },
+    {
+      "word": "a",
+      "start": 2.98,
+      "end": 3.06
+    },
+    {
+      "word": "powerful",
+      "start": 3.06,
+      "end": 3.36
+    },
+    {
+      "word": "standard,",
+      "start": 3.36,
+      "end": 3.76
+    },
+    {
+      "word": "not",
+      "start": 3.92,
+      "end": 4.16
+    },
+    {
+      "word": "a",
+      "start": 4.16,
+      "end": 4.3
+    },
+    {
+      "word": "magic",
+      "start": 4.3,
+      "end": 4.52
+    },
+    {
+      "word": "hammer",
+      "start": 4.52,
+      "end": 4.76
+    },
+    {
+      "word": "for",
+      "start": 4.76,
+      "end": 4.96
+    },
+    {
+      "word": "every",
+      "start": 4.96,
+      "end": 5.18
+    },
+    {
+      "word": "problem.",
+      "start": 5.18,
+      "end": 5.52
+    },
+    {
+      "word": "For",
+      "start": 5.8,
+      "end": 6.28
+    },
+    {
+      "word": "a",
+      "start": 6.28,
+      "end": 6.4
+    },
+    {
+      "word": "one",
+      "start": 6.4,
+      "end": 6.54
+    },
+    {
+      "word": "-off",
+      "start": 6.54,
+      "end": 6.7
+    },
+    {
+      "word": "document",
+      "start": 6.7,
+      "end": 6.96
+    },
+    {
+      "word": "paste",
+      "start": 6.96,
+      "end": 7.28
+    },
+    {
+      "word": "or",
+      "start": 7.28,
+      "end": 7.58
+    },
+    {
+      "word": "a",
+      "start": 7.58,
+      "end": 7.64
+    },
+    {
+      "word": "fixed",
+      "start": 7.64,
+      "end": 7.84
+    },
+    {
+      "word": "predictable",
+      "start": 7.84,
+      "end": 8.12
+    },
+    {
+      "word": "script",
+      "start": 8.12,
+      "end": 8.48
+    },
+    {
+      "word": "needing",
+      "start": 8.48,
+      "end": 8.74
+    },
+    {
+      "word": "zero",
+      "start": 8.74,
+      "end": 9.08
+    },
+    {
+      "word": "AI",
+      "start": 9.08,
+      "end": 9.42
+    },
+    {
+      "word": "judgment,",
+      "start": 9.42,
+      "end": 9.74
+    },
+    {
+      "word": "keep",
+      "start": 9.94,
+      "end": 10.12
+    },
+    {
+      "word": "it",
+      "start": 10.12,
+      "end": 10.26
+    },
+    {
+      "word": "simple.",
+      "start": 10.26,
+      "end": 10.52
+    },
+    {
+      "word": "MCP",
+      "start": 11.32,
+      "end": 11.8
+    },
+    {
+      "word": "truly",
+      "start": 11.8,
+      "end": 12.18
+    },
+    {
+      "word": "shines",
+      "start": 12.18,
+      "end": 12.66
+    },
+    {
+      "word": "when",
+      "start": 12.66,
+      "end": 12.9
+    },
+    {
+      "word": "an",
+      "start": 12.9,
+      "end": 13.0
+    },
+    {
+      "word": "AI",
+      "start": 13.0,
+      "end": 13.18
+    },
+    {
+      "word": "assistant",
+      "start": 13.18,
+      "end": 13.5
+    },
+    {
+      "word": "needs",
+      "start": 13.5,
+      "end": 13.82
+    },
+    {
+      "word": "live,",
+      "start": 13.82,
+      "end": 14.2
+    },
+    {
+      "word": "repeatable",
+      "start": 14.32,
+      "end": 14.86
+    },
+    {
+      "word": "access",
+      "start": 14.86,
+      "end": 15.1
+    },
+    {
+      "word": "across",
+      "start": 15.1,
+      "end": 15.58
+    },
+    {
+      "word": "multiple",
+      "start": 15.58,
+      "end": 15.96
+    },
+    {
+      "word": "changing",
+      "start": 15.96,
+      "end": 16.3
+    },
+    {
+      "word": "tools.",
+      "start": 16.3,
+      "end": 16.7
+    }
+  ]
+}

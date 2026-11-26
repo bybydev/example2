@@ -1,0 +1,685 @@
+{
+  "audio": "021.when-your-data.mp3",
+  "paragraph": 21,
+  "text": "When your data lives in cloud apps like Notion, Slack, Linear, Figma, or internal company systems, MCP uses a second transport called Streamable HTTP, which replaced the older SSE approach. Instead of running anything locally, your host connects to a normal web address, signs you in securely using OAuth two point one, and streams live updates straight over the web.",
+  "transcript": "When your data lives in cloud apps like Notion, Slack, Linear, Figma, or internal company systems, MCP uses a second transport called streamable HTTP, which replaced the older SSE approach. Instead of running anything locally, your host connects to a normal web address, signs you in securely using OAuth 2.1, and streams live updates straight over the web.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 1
+    }
+  ],
+  "duration": 21.28,
+  "failed_words": 1,
+  "failures": [
+    {
+      "index": 50,
+      "word": "point",
+      "match": "interpolated",
+      "heard": "",
+      "start": 17.96
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "When",
+      "start": 0.0,
+      "end": 0.28,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 0.28,
+      "end": 0.38,
+      "match": "exact"
+    },
+    {
+      "word": "data",
+      "start": 0.38,
+      "end": 0.62,
+      "match": "exact"
+    },
+    {
+      "word": "lives",
+      "start": 0.62,
+      "end": 0.84,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 0.84,
+      "end": 1.04,
+      "match": "exact"
+    },
+    {
+      "word": "cloud",
+      "start": 1.04,
+      "end": 1.28,
+      "match": "exact"
+    },
+    {
+      "word": "apps",
+      "start": 1.28,
+      "end": 1.6,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 1.6,
+      "end": 1.9,
+      "match": "exact"
+    },
+    {
+      "word": "Notion,",
+      "start": 1.9,
+      "end": 2.42,
+      "match": "exact"
+    },
+    {
+      "word": "Slack,",
+      "start": 2.48,
+      "end": 2.8,
+      "match": "exact"
+    },
+    {
+      "word": "Linear,",
+      "start": 3.1,
+      "end": 3.62,
+      "match": "exact"
+    },
+    {
+      "word": "Figma,",
+      "start": 3.66,
+      "end": 4.02,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 4.12,
+      "end": 4.34,
+      "match": "exact"
+    },
+    {
+      "word": "internal",
+      "start": 4.34,
+      "end": 4.6,
+      "match": "exact"
+    },
+    {
+      "word": "company",
+      "start": 4.6,
+      "end": 4.94,
+      "match": "exact"
+    },
+    {
+      "word": "systems,",
+      "start": 4.94,
+      "end": 5.44,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 5.74,
+      "end": 6.52,
+      "match": "exact"
+    },
+    {
+      "word": "uses",
+      "start": 6.52,
+      "end": 6.84,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 6.84,
+      "end": 7.08,
+      "match": "exact"
+    },
+    {
+      "word": "second",
+      "start": 7.08,
+      "end": 7.36,
+      "match": "exact"
+    },
+    {
+      "word": "transport",
+      "start": 7.36,
+      "end": 7.76,
+      "match": "exact"
+    },
+    {
+      "word": "called",
+      "start": 7.76,
+      "end": 8.12,
+      "match": "exact"
+    },
+    {
+      "word": "Streamable",
+      "start": 8.12,
+      "end": 8.66,
+      "match": "exact"
+    },
+    {
+      "word": "HTTP,",
+      "start": 8.66,
+      "end": 9.04,
+      "match": "exact"
+    },
+    {
+      "word": "which",
+      "start": 9.54,
+      "end": 9.96,
+      "match": "exact"
+    },
+    {
+      "word": "replaced",
+      "start": 9.96,
+      "end": 10.24,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 10.24,
+      "end": 10.48,
+      "match": "exact"
+    },
+    {
+      "word": "older",
+      "start": 10.48,
+      "end": 10.68,
+      "match": "exact"
+    },
+    {
+      "word": "SSE",
+      "start": 10.68,
+      "end": 11.1,
+      "match": "exact"
+    },
+    {
+      "word": "approach.",
+      "start": 11.1,
+      "end": 11.4,
+      "match": "exact"
+    },
+    {
+      "word": "Instead",
+      "start": 11.92,
+      "end": 12.48,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 12.48,
+      "end": 12.7,
+      "match": "exact"
+    },
+    {
+      "word": "running",
+      "start": 12.7,
+      "end": 12.86,
+      "match": "exact"
+    },
+    {
+      "word": "anything",
+      "start": 12.86,
+      "end": 13.14,
+      "match": "exact"
+    },
+    {
+      "word": "locally,",
+      "start": 13.14,
+      "end": 13.6,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 13.86,
+      "end": 14.16,
+      "match": "exact"
+    },
+    {
+      "word": "host",
+      "start": 14.16,
+      "end": 14.36,
+      "match": "exact"
+    },
+    {
+      "word": "connects",
+      "start": 14.36,
+      "end": 14.6,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 14.6,
+      "end": 14.82,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 14.82,
+      "end": 14.92,
+      "match": "exact"
+    },
+    {
+      "word": "normal",
+      "start": 14.92,
+      "end": 15.18,
+      "match": "exact"
+    },
+    {
+      "word": "web",
+      "start": 15.18,
+      "end": 15.36,
+      "match": "exact"
+    },
+    {
+      "word": "address,",
+      "start": 15.36,
+      "end": 15.62,
+      "match": "exact"
+    },
+    {
+      "word": "signs",
+      "start": 15.88,
+      "end": 16.24,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 16.24,
+      "end": 16.5,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 16.5,
+      "end": 16.6,
+      "match": "exact"
+    },
+    {
+      "word": "securely",
+      "start": 16.6,
+      "end": 16.9,
+      "match": "exact"
+    },
+    {
+      "word": "using",
+      "start": 16.9,
+      "end": 17.34,
+      "match": "exact"
+    },
+    {
+      "word": "OAuth",
+      "start": 17.34,
+      "end": 17.86,
+      "match": "exact"
+    },
+    {
+      "word": "two",
+      "start": 17.86,
+      "end": 17.96,
+      "match": "exact"
+    },
+    {
+      "word": "point",
+      "start": 17.96,
+      "end": 17.96,
+      "match": "interpolated",
+      "heard": ""
+    },
+    {
+      "word": "one,",
+      "start": 17.96,
+      "end": 18.42,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 18.56,
+      "end": 19.0,
+      "match": "exact"
+    },
+    {
+      "word": "streams",
+      "start": 19.0,
+      "end": 19.26,
+      "match": "exact"
+    },
+    {
+      "word": "live",
+      "start": 19.26,
+      "end": 19.54,
+      "match": "exact"
+    },
+    {
+      "word": "updates",
+      "start": 19.54,
+      "end": 19.9,
+      "match": "exact"
+    },
+    {
+      "word": "straight",
+      "start": 19.9,
+      "end": 20.22,
+      "match": "exact"
+    },
+    {
+      "word": "over",
+      "start": 20.22,
+      "end": 20.46,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 20.46,
+      "end": 20.62,
+      "match": "exact"
+    },
+    {
+      "word": "web.",
+      "start": 20.62,
+      "end": 20.78,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "When",
+      "start": 0.0,
+      "end": 0.28
+    },
+    {
+      "word": "your",
+      "start": 0.28,
+      "end": 0.38
+    },
+    {
+      "word": "data",
+      "start": 0.38,
+      "end": 0.62
+    },
+    {
+      "word": "lives",
+      "start": 0.62,
+      "end": 0.84
+    },
+    {
+      "word": "in",
+      "start": 0.84,
+      "end": 1.04
+    },
+    {
+      "word": "cloud",
+      "start": 1.04,
+      "end": 1.28
+    },
+    {
+      "word": "apps",
+      "start": 1.28,
+      "end": 1.6
+    },
+    {
+      "word": "like",
+      "start": 1.6,
+      "end": 1.9
+    },
+    {
+      "word": "Notion,",
+      "start": 1.9,
+      "end": 2.42
+    },
+    {
+      "word": "Slack,",
+      "start": 2.48,
+      "end": 2.8
+    },
+    {
+      "word": "Linear,",
+      "start": 3.1,
+      "end": 3.62
+    },
+    {
+      "word": "Figma,",
+      "start": 3.66,
+      "end": 4.02
+    },
+    {
+      "word": "or",
+      "start": 4.12,
+      "end": 4.34
+    },
+    {
+      "word": "internal",
+      "start": 4.34,
+      "end": 4.6
+    },
+    {
+      "word": "company",
+      "start": 4.6,
+      "end": 4.94
+    },
+    {
+      "word": "systems,",
+      "start": 4.94,
+      "end": 5.44
+    },
+    {
+      "word": "MCP",
+      "start": 5.74,
+      "end": 6.52
+    },
+    {
+      "word": "uses",
+      "start": 6.52,
+      "end": 6.84
+    },
+    {
+      "word": "a",
+      "start": 6.84,
+      "end": 7.08
+    },
+    {
+      "word": "second",
+      "start": 7.08,
+      "end": 7.36
+    },
+    {
+      "word": "transport",
+      "start": 7.36,
+      "end": 7.76
+    },
+    {
+      "word": "called",
+      "start": 7.76,
+      "end": 8.12
+    },
+    {
+      "word": "streamable",
+      "start": 8.12,
+      "end": 8.66
+    },
+    {
+      "word": "HTTP,",
+      "start": 8.66,
+      "end": 9.04
+    },
+    {
+      "word": "which",
+      "start": 9.54,
+      "end": 9.96
+    },
+    {
+      "word": "replaced",
+      "start": 9.96,
+      "end": 10.24
+    },
+    {
+      "word": "the",
+      "start": 10.24,
+      "end": 10.48
+    },
+    {
+      "word": "older",
+      "start": 10.48,
+      "end": 10.68
+    },
+    {
+      "word": "SSE",
+      "start": 10.68,
+      "end": 11.1
+    },
+    {
+      "word": "approach.",
+      "start": 11.1,
+      "end": 11.4
+    },
+    {
+      "word": "Instead",
+      "start": 11.92,
+      "end": 12.48
+    },
+    {
+      "word": "of",
+      "start": 12.48,
+      "end": 12.7
+    },
+    {
+      "word": "running",
+      "start": 12.7,
+      "end": 12.86
+    },
+    {
+      "word": "anything",
+      "start": 12.86,
+      "end": 13.14
+    },
+    {
+      "word": "locally,",
+      "start": 13.14,
+      "end": 13.6
+    },
+    {
+      "word": "your",
+      "start": 13.86,
+      "end": 14.16
+    },
+    {
+      "word": "host",
+      "start": 14.16,
+      "end": 14.36
+    },
+    {
+      "word": "connects",
+      "start": 14.36,
+      "end": 14.6
+    },
+    {
+      "word": "to",
+      "start": 14.6,
+      "end": 14.82
+    },
+    {
+      "word": "a",
+      "start": 14.82,
+      "end": 14.92
+    },
+    {
+      "word": "normal",
+      "start": 14.92,
+      "end": 15.18
+    },
+    {
+      "word": "web",
+      "start": 15.18,
+      "end": 15.36
+    },
+    {
+      "word": "address,",
+      "start": 15.36,
+      "end": 15.62
+    },
+    {
+      "word": "signs",
+      "start": 15.88,
+      "end": 16.24
+    },
+    {
+      "word": "you",
+      "start": 16.24,
+      "end": 16.5
+    },
+    {
+      "word": "in",
+      "start": 16.5,
+      "end": 16.6
+    },
+    {
+      "word": "securely",
+      "start": 16.6,
+      "end": 16.9
+    },
+    {
+      "word": "using",
+      "start": 16.9,
+      "end": 17.34
+    },
+    {
+      "word": "OAuth",
+      "start": 17.34,
+      "end": 17.86
+    },
+    {
+      "word": "2",
+      "start": 17.86,
+      "end": 17.96
+    },
+    {
+      "word": ".1,",
+      "start": 17.96,
+      "end": 18.42
+    },
+    {
+      "word": "and",
+      "start": 18.56,
+      "end": 19.0
+    },
+    {
+      "word": "streams",
+      "start": 19.0,
+      "end": 19.26
+    },
+    {
+      "word": "live",
+      "start": 19.26,
+      "end": 19.54
+    },
+    {
+      "word": "updates",
+      "start": 19.54,
+      "end": 19.9
+    },
+    {
+      "word": "straight",
+      "start": 19.9,
+      "end": 20.22
+    },
+    {
+      "word": "over",
+      "start": 20.22,
+      "end": 20.46
+    },
+    {
+      "word": "the",
+      "start": 20.46,
+      "end": 20.62
+    },
+    {
+      "word": "web.",
+      "start": 20.62,
+      "end": 20.78
+    }
+  ]
+}

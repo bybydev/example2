@@ -1,0 +1,488 @@
+{
+  "audio": "030.drop-a-comment.mp3",
+  "paragraph": 30,
+  "text": "Drop a comment below with the first MCP server you plan to connect—or build next. If this breakdown helped make MCP click, subscribe for more clear visual deep dives into modern AI systems, and I will see you in the next one.",
+  "transcript": "Drop a comment below with the first MCP server you plan to connect or build next. If this breakdown helped make MCP click, subscribe for more clear, visual deep dives into modern AI systems, and I will see you in the next one.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 10.76,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Drop",
+      "start": 0.0,
+      "end": 0.3,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 0.3,
+      "end": 0.42,
+      "match": "exact"
+    },
+    {
+      "word": "comment",
+      "start": 0.42,
+      "end": 0.68,
+      "match": "exact"
+    },
+    {
+      "word": "below",
+      "start": 0.68,
+      "end": 0.92,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 0.92,
+      "end": 1.14,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 1.14,
+      "end": 1.24,
+      "match": "exact"
+    },
+    {
+      "word": "first",
+      "start": 1.24,
+      "end": 1.44,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 1.44,
+      "end": 1.88,
+      "match": "exact"
+    },
+    {
+      "word": "server",
+      "start": 1.88,
+      "end": 2.1,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 2.1,
+      "end": 2.34,
+      "match": "exact"
+    },
+    {
+      "word": "plan",
+      "start": 2.34,
+      "end": 2.5,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 2.5,
+      "end": 2.68,
+      "match": "exact"
+    },
+    {
+      "word": "connect—or",
+      "start": 2.68,
+      "end": 3.14,
+      "match": "exact"
+    },
+    {
+      "word": "build",
+      "start": 3.14,
+      "end": 3.28,
+      "match": "exact"
+    },
+    {
+      "word": "next.",
+      "start": 3.28,
+      "end": 3.56,
+      "match": "exact"
+    },
+    {
+      "word": "If",
+      "start": 3.8,
+      "end": 4.18,
+      "match": "exact"
+    },
+    {
+      "word": "this",
+      "start": 4.18,
+      "end": 4.34,
+      "match": "exact"
+    },
+    {
+      "word": "breakdown",
+      "start": 4.34,
+      "end": 4.6,
+      "match": "exact"
+    },
+    {
+      "word": "helped",
+      "start": 4.6,
+      "end": 4.88,
+      "match": "exact"
+    },
+    {
+      "word": "make",
+      "start": 4.88,
+      "end": 5.06,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 5.06,
+      "end": 5.52,
+      "match": "exact"
+    },
+    {
+      "word": "click,",
+      "start": 5.52,
+      "end": 5.74,
+      "match": "exact"
+    },
+    {
+      "word": "subscribe",
+      "start": 5.92,
+      "end": 6.4,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 6.4,
+      "end": 6.74,
+      "match": "exact"
+    },
+    {
+      "word": "more",
+      "start": 6.74,
+      "end": 6.88,
+      "match": "exact"
+    },
+    {
+      "word": "clear",
+      "start": 6.88,
+      "end": 7.18,
+      "match": "exact"
+    },
+    {
+      "word": "visual",
+      "start": 7.18,
+      "end": 7.42,
+      "match": "exact"
+    },
+    {
+      "word": "deep",
+      "start": 7.42,
+      "end": 7.68,
+      "match": "exact"
+    },
+    {
+      "word": "dives",
+      "start": 7.68,
+      "end": 8.06,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 8.06,
+      "end": 8.2,
+      "match": "exact"
+    },
+    {
+      "word": "modern",
+      "start": 8.2,
+      "end": 8.48,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 8.48,
+      "end": 8.74,
+      "match": "exact"
+    },
+    {
+      "word": "systems,",
+      "start": 8.74,
+      "end": 9.18,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 9.32,
+      "end": 9.48,
+      "match": "exact"
+    },
+    {
+      "word": "I",
+      "start": 9.48,
+      "end": 9.58,
+      "match": "exact"
+    },
+    {
+      "word": "will",
+      "start": 9.58,
+      "end": 9.7,
+      "match": "exact"
+    },
+    {
+      "word": "see",
+      "start": 9.7,
+      "end": 9.84,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 9.84,
+      "end": 9.94,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 9.94,
+      "end": 10.02,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 10.02,
+      "end": 10.1,
+      "match": "exact"
+    },
+    {
+      "word": "next",
+      "start": 10.1,
+      "end": 10.28,
+      "match": "exact"
+    },
+    {
+      "word": "one.",
+      "start": 10.28,
+      "end": 10.46,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Drop",
+      "start": 0.0,
+      "end": 0.3
+    },
+    {
+      "word": "a",
+      "start": 0.3,
+      "end": 0.42
+    },
+    {
+      "word": "comment",
+      "start": 0.42,
+      "end": 0.68
+    },
+    {
+      "word": "below",
+      "start": 0.68,
+      "end": 0.92
+    },
+    {
+      "word": "with",
+      "start": 0.92,
+      "end": 1.14
+    },
+    {
+      "word": "the",
+      "start": 1.14,
+      "end": 1.24
+    },
+    {
+      "word": "first",
+      "start": 1.24,
+      "end": 1.44
+    },
+    {
+      "word": "MCP",
+      "start": 1.44,
+      "end": 1.88
+    },
+    {
+      "word": "server",
+      "start": 1.88,
+      "end": 2.1
+    },
+    {
+      "word": "you",
+      "start": 2.1,
+      "end": 2.34
+    },
+    {
+      "word": "plan",
+      "start": 2.34,
+      "end": 2.5
+    },
+    {
+      "word": "to",
+      "start": 2.5,
+      "end": 2.68
+    },
+    {
+      "word": "connect",
+      "start": 2.68,
+      "end": 2.94
+    },
+    {
+      "word": "or",
+      "start": 2.94,
+      "end": 3.14
+    },
+    {
+      "word": "build",
+      "start": 3.14,
+      "end": 3.28
+    },
+    {
+      "word": "next.",
+      "start": 3.28,
+      "end": 3.56
+    },
+    {
+      "word": "If",
+      "start": 3.8,
+      "end": 4.18
+    },
+    {
+      "word": "this",
+      "start": 4.18,
+      "end": 4.34
+    },
+    {
+      "word": "breakdown",
+      "start": 4.34,
+      "end": 4.6
+    },
+    {
+      "word": "helped",
+      "start": 4.6,
+      "end": 4.88
+    },
+    {
+      "word": "make",
+      "start": 4.88,
+      "end": 5.06
+    },
+    {
+      "word": "MCP",
+      "start": 5.06,
+      "end": 5.52
+    },
+    {
+      "word": "click,",
+      "start": 5.52,
+      "end": 5.74
+    },
+    {
+      "word": "subscribe",
+      "start": 5.92,
+      "end": 6.4
+    },
+    {
+      "word": "for",
+      "start": 6.4,
+      "end": 6.74
+    },
+    {
+      "word": "more",
+      "start": 6.74,
+      "end": 6.88
+    },
+    {
+      "word": "clear,",
+      "start": 6.88,
+      "end": 7.18
+    },
+    {
+      "word": "visual",
+      "start": 7.18,
+      "end": 7.42
+    },
+    {
+      "word": "deep",
+      "start": 7.42,
+      "end": 7.68
+    },
+    {
+      "word": "dives",
+      "start": 7.68,
+      "end": 8.06
+    },
+    {
+      "word": "into",
+      "start": 8.06,
+      "end": 8.2
+    },
+    {
+      "word": "modern",
+      "start": 8.2,
+      "end": 8.48
+    },
+    {
+      "word": "AI",
+      "start": 8.48,
+      "end": 8.74
+    },
+    {
+      "word": "systems,",
+      "start": 8.74,
+      "end": 9.18
+    },
+    {
+      "word": "and",
+      "start": 9.32,
+      "end": 9.48
+    },
+    {
+      "word": "I",
+      "start": 9.48,
+      "end": 9.58
+    },
+    {
+      "word": "will",
+      "start": 9.58,
+      "end": 9.7
+    },
+    {
+      "word": "see",
+      "start": 9.7,
+      "end": 9.84
+    },
+    {
+      "word": "you",
+      "start": 9.84,
+      "end": 9.94
+    },
+    {
+      "word": "in",
+      "start": 9.94,
+      "end": 10.02
+    },
+    {
+      "word": "the",
+      "start": 10.02,
+      "end": 10.1
+    },
+    {
+      "word": "next",
+      "start": 10.1,
+      "end": 10.28
+    },
+    {
+      "word": "one.",
+      "start": 10.28,
+      "end": 10.46
+    }
+  ]
+}

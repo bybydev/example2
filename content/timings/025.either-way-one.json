@@ -1,0 +1,675 @@
+{
+  "audio": "025.either-way-one.mp3",
+  "paragraph": 25,
+  "text": "Either way, one simple habit makes day one dramatically smoother: resist the temptation to connect fifteen servers all at once. Start with the AI host you already open every day, add just one or two trusted read-only servers like your notes or project docs, and only switch on edits or writes once you have watched the workflow behave reliably.",
+  "transcript": "Either way, one simple habit makes day one dramatically smoother. Resist the temptation to connect 15 servers all at once. Start with the AI host you already open every day. Add just one or two trusted read-only servers like your notes or project docs, and only switch on edits or writes once you have watched the workflow behave reliably.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 17.2,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Either",
+      "start": 0.0,
+      "end": 0.36,
+      "match": "exact"
+    },
+    {
+      "word": "way,",
+      "start": 0.36,
+      "end": 0.58,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 0.7,
+      "end": 0.98,
+      "match": "exact"
+    },
+    {
+      "word": "simple",
+      "start": 0.98,
+      "end": 1.3,
+      "match": "exact"
+    },
+    {
+      "word": "habit",
+      "start": 1.3,
+      "end": 1.62,
+      "match": "exact"
+    },
+    {
+      "word": "makes",
+      "start": 1.62,
+      "end": 1.94,
+      "match": "exact"
+    },
+    {
+      "word": "day",
+      "start": 1.94,
+      "end": 2.12,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 2.12,
+      "end": 2.36,
+      "match": "exact"
+    },
+    {
+      "word": "dramatically",
+      "start": 2.36,
+      "end": 2.78,
+      "match": "exact"
+    },
+    {
+      "word": "smoother:",
+      "start": 2.78,
+      "end": 3.26,
+      "match": "exact"
+    },
+    {
+      "word": "resist",
+      "start": 3.58,
+      "end": 4.06,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 4.06,
+      "end": 4.14,
+      "match": "exact"
+    },
+    {
+      "word": "temptation",
+      "start": 4.14,
+      "end": 4.42,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 4.42,
+      "end": 4.8,
+      "match": "exact"
+    },
+    {
+      "word": "connect",
+      "start": 4.8,
+      "end": 5.04,
+      "match": "exact"
+    },
+    {
+      "word": "fifteen",
+      "start": 5.04,
+      "end": 5.34,
+      "match": "exact"
+    },
+    {
+      "word": "servers",
+      "start": 5.34,
+      "end": 5.88,
+      "match": "exact"
+    },
+    {
+      "word": "all",
+      "start": 5.88,
+      "end": 6.14,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 6.14,
+      "end": 6.28,
+      "match": "exact"
+    },
+    {
+      "word": "once.",
+      "start": 6.28,
+      "end": 6.5,
+      "match": "exact"
+    },
+    {
+      "word": "Start",
+      "start": 6.82,
+      "end": 7.3,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 7.3,
+      "end": 7.5,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 7.5,
+      "end": 7.6,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 7.6,
+      "end": 7.82,
+      "match": "exact"
+    },
+    {
+      "word": "host",
+      "start": 7.82,
+      "end": 8.12,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 8.12,
+      "end": 8.34,
+      "match": "exact"
+    },
+    {
+      "word": "already",
+      "start": 8.34,
+      "end": 8.56,
+      "match": "exact"
+    },
+    {
+      "word": "open",
+      "start": 8.56,
+      "end": 8.84,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 8.84,
+      "end": 9.08,
+      "match": "exact"
+    },
+    {
+      "word": "day,",
+      "start": 9.08,
+      "end": 9.3,
+      "match": "exact"
+    },
+    {
+      "word": "add",
+      "start": 9.5,
+      "end": 9.84,
+      "match": "exact"
+    },
+    {
+      "word": "just",
+      "start": 9.84,
+      "end": 10.02,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 10.02,
+      "end": 10.16,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 10.16,
+      "end": 10.34,
+      "match": "exact"
+    },
+    {
+      "word": "two",
+      "start": 10.34,
+      "end": 10.5,
+      "match": "exact"
+    },
+    {
+      "word": "trusted",
+      "start": 10.5,
+      "end": 10.88,
+      "match": "exact"
+    },
+    {
+      "word": "read-only",
+      "start": 10.88,
+      "end": 11.32,
+      "match": "exact"
+    },
+    {
+      "word": "servers",
+      "start": 11.32,
+      "end": 11.68,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 11.68,
+      "end": 12.0,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 12.0,
+      "end": 12.12,
+      "match": "exact"
+    },
+    {
+      "word": "notes",
+      "start": 12.12,
+      "end": 12.38,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 12.38,
+      "end": 12.54,
+      "match": "exact"
+    },
+    {
+      "word": "project",
+      "start": 12.54,
+      "end": 12.84,
+      "match": "exact"
+    },
+    {
+      "word": "docs,",
+      "start": 12.84,
+      "end": 13.14,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 13.28,
+      "end": 13.58,
+      "match": "exact"
+    },
+    {
+      "word": "only",
+      "start": 13.58,
+      "end": 13.82,
+      "match": "exact"
+    },
+    {
+      "word": "switch",
+      "start": 13.82,
+      "end": 14.06,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 14.06,
+      "end": 14.22,
+      "match": "exact"
+    },
+    {
+      "word": "edits",
+      "start": 14.22,
+      "end": 14.5,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 14.5,
+      "end": 14.68,
+      "match": "exact"
+    },
+    {
+      "word": "writes",
+      "start": 14.68,
+      "end": 14.9,
+      "match": "exact"
+    },
+    {
+      "word": "once",
+      "start": 14.9,
+      "end": 15.16,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 15.16,
+      "end": 15.28,
+      "match": "exact"
+    },
+    {
+      "word": "have",
+      "start": 15.28,
+      "end": 15.38,
+      "match": "exact"
+    },
+    {
+      "word": "watched",
+      "start": 15.38,
+      "end": 15.62,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 15.62,
+      "end": 15.8,
+      "match": "exact"
+    },
+    {
+      "word": "workflow",
+      "start": 15.8,
+      "end": 16.02,
+      "match": "exact"
+    },
+    {
+      "word": "behave",
+      "start": 16.02,
+      "end": 16.34,
+      "match": "exact"
+    },
+    {
+      "word": "reliably.",
+      "start": 16.34,
+      "end": 16.68,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Either",
+      "start": 0.0,
+      "end": 0.36
+    },
+    {
+      "word": "way,",
+      "start": 0.36,
+      "end": 0.58
+    },
+    {
+      "word": "one",
+      "start": 0.7,
+      "end": 0.98
+    },
+    {
+      "word": "simple",
+      "start": 0.98,
+      "end": 1.3
+    },
+    {
+      "word": "habit",
+      "start": 1.3,
+      "end": 1.62
+    },
+    {
+      "word": "makes",
+      "start": 1.62,
+      "end": 1.94
+    },
+    {
+      "word": "day",
+      "start": 1.94,
+      "end": 2.12
+    },
+    {
+      "word": "one",
+      "start": 2.12,
+      "end": 2.36
+    },
+    {
+      "word": "dramatically",
+      "start": 2.36,
+      "end": 2.78
+    },
+    {
+      "word": "smoother.",
+      "start": 2.78,
+      "end": 3.26
+    },
+    {
+      "word": "Resist",
+      "start": 3.58,
+      "end": 4.06
+    },
+    {
+      "word": "the",
+      "start": 4.06,
+      "end": 4.14
+    },
+    {
+      "word": "temptation",
+      "start": 4.14,
+      "end": 4.42
+    },
+    {
+      "word": "to",
+      "start": 4.42,
+      "end": 4.8
+    },
+    {
+      "word": "connect",
+      "start": 4.8,
+      "end": 5.04
+    },
+    {
+      "word": "15",
+      "start": 5.04,
+      "end": 5.34
+    },
+    {
+      "word": "servers",
+      "start": 5.34,
+      "end": 5.88
+    },
+    {
+      "word": "all",
+      "start": 5.88,
+      "end": 6.14
+    },
+    {
+      "word": "at",
+      "start": 6.14,
+      "end": 6.28
+    },
+    {
+      "word": "once.",
+      "start": 6.28,
+      "end": 6.5
+    },
+    {
+      "word": "Start",
+      "start": 6.82,
+      "end": 7.3
+    },
+    {
+      "word": "with",
+      "start": 7.3,
+      "end": 7.5
+    },
+    {
+      "word": "the",
+      "start": 7.5,
+      "end": 7.6
+    },
+    {
+      "word": "AI",
+      "start": 7.6,
+      "end": 7.82
+    },
+    {
+      "word": "host",
+      "start": 7.82,
+      "end": 8.12
+    },
+    {
+      "word": "you",
+      "start": 8.12,
+      "end": 8.34
+    },
+    {
+      "word": "already",
+      "start": 8.34,
+      "end": 8.56
+    },
+    {
+      "word": "open",
+      "start": 8.56,
+      "end": 8.84
+    },
+    {
+      "word": "every",
+      "start": 8.84,
+      "end": 9.08
+    },
+    {
+      "word": "day.",
+      "start": 9.08,
+      "end": 9.3
+    },
+    {
+      "word": "Add",
+      "start": 9.5,
+      "end": 9.84
+    },
+    {
+      "word": "just",
+      "start": 9.84,
+      "end": 10.02
+    },
+    {
+      "word": "one",
+      "start": 10.02,
+      "end": 10.16
+    },
+    {
+      "word": "or",
+      "start": 10.16,
+      "end": 10.34
+    },
+    {
+      "word": "two",
+      "start": 10.34,
+      "end": 10.5
+    },
+    {
+      "word": "trusted",
+      "start": 10.5,
+      "end": 10.88
+    },
+    {
+      "word": "read",
+      "start": 10.88,
+      "end": 11.14
+    },
+    {
+      "word": "-only",
+      "start": 11.14,
+      "end": 11.32
+    },
+    {
+      "word": "servers",
+      "start": 11.32,
+      "end": 11.68
+    },
+    {
+      "word": "like",
+      "start": 11.68,
+      "end": 12.0
+    },
+    {
+      "word": "your",
+      "start": 12.0,
+      "end": 12.12
+    },
+    {
+      "word": "notes",
+      "start": 12.12,
+      "end": 12.38
+    },
+    {
+      "word": "or",
+      "start": 12.38,
+      "end": 12.54
+    },
+    {
+      "word": "project",
+      "start": 12.54,
+      "end": 12.84
+    },
+    {
+      "word": "docs,",
+      "start": 12.84,
+      "end": 13.14
+    },
+    {
+      "word": "and",
+      "start": 13.28,
+      "end": 13.58
+    },
+    {
+      "word": "only",
+      "start": 13.58,
+      "end": 13.82
+    },
+    {
+      "word": "switch",
+      "start": 13.82,
+      "end": 14.06
+    },
+    {
+      "word": "on",
+      "start": 14.06,
+      "end": 14.22
+    },
+    {
+      "word": "edits",
+      "start": 14.22,
+      "end": 14.5
+    },
+    {
+      "word": "or",
+      "start": 14.5,
+      "end": 14.68
+    },
+    {
+      "word": "writes",
+      "start": 14.68,
+      "end": 14.9
+    },
+    {
+      "word": "once",
+      "start": 14.9,
+      "end": 15.16
+    },
+    {
+      "word": "you",
+      "start": 15.16,
+      "end": 15.28
+    },
+    {
+      "word": "have",
+      "start": 15.28,
+      "end": 15.38
+    },
+    {
+      "word": "watched",
+      "start": 15.38,
+      "end": 15.62
+    },
+    {
+      "word": "the",
+      "start": 15.62,
+      "end": 15.8
+    },
+    {
+      "word": "workflow",
+      "start": 15.8,
+      "end": 16.02
+    },
+    {
+      "word": "behave",
+      "start": 16.02,
+      "end": 16.34
+    },
+    {
+      "word": "reliably.",
+      "start": 16.34,
+      "end": 16.68
+    }
+  ]
+}

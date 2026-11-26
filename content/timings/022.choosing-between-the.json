@@ -1,0 +1,675 @@
+{
+  "audio": "022.choosing-between-the.mp3",
+  "paragraph": 22,
+  "text": "Choosing between the two is straightforward. Reach for local standard input and output whenever you need direct, low-latency access to files sitting on your laptop with zero network traffic. Reach for remote Streamable HTTP whenever you want effortless cloud integrations with no terminal setup, or when an organization wants to host one centrally managed server for easy team sharing.",
+  "transcript": "Choosing between the two is straightforward. Reach for local standard input and output whenever you need direct, low-latency access to files sitting on your laptop with zero network traffic. Reach for remote, streamable HTTP whenever you want effortless cloud integrations with no terminal setup, or when an organization wants to host one centrally managed server for easy team sharing.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 19.0,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Choosing",
+      "start": 0.0,
+      "end": 0.46,
+      "match": "exact"
+    },
+    {
+      "word": "between",
+      "start": 0.46,
+      "end": 0.62,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.62,
+      "end": 0.82,
+      "match": "exact"
+    },
+    {
+      "word": "two",
+      "start": 0.82,
+      "end": 1.0,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 1.0,
+      "end": 1.2,
+      "match": "exact"
+    },
+    {
+      "word": "straightforward.",
+      "start": 1.2,
+      "end": 1.52,
+      "match": "exact"
+    },
+    {
+      "word": "Reach",
+      "start": 2.04,
+      "end": 2.56,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 2.56,
+      "end": 2.74,
+      "match": "exact"
+    },
+    {
+      "word": "local",
+      "start": 2.74,
+      "end": 2.98,
+      "match": "exact"
+    },
+    {
+      "word": "standard",
+      "start": 2.98,
+      "end": 3.26,
+      "match": "exact"
+    },
+    {
+      "word": "input",
+      "start": 3.26,
+      "end": 3.62,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 3.62,
+      "end": 3.84,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 3.84,
+      "end": 4.12,
+      "match": "exact"
+    },
+    {
+      "word": "whenever",
+      "start": 4.12,
+      "end": 4.46,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 4.46,
+      "end": 4.66,
+      "match": "exact"
+    },
+    {
+      "word": "need",
+      "start": 4.66,
+      "end": 4.86,
+      "match": "exact"
+    },
+    {
+      "word": "direct,",
+      "start": 4.86,
+      "end": 5.24,
+      "match": "exact"
+    },
+    {
+      "word": "low-latency",
+      "start": 5.34,
+      "end": 5.94,
+      "match": "exact"
+    },
+    {
+      "word": "access",
+      "start": 5.94,
+      "end": 6.22,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 6.22,
+      "end": 6.6,
+      "match": "exact"
+    },
+    {
+      "word": "files",
+      "start": 6.6,
+      "end": 6.9,
+      "match": "exact"
+    },
+    {
+      "word": "sitting",
+      "start": 6.9,
+      "end": 7.1,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 7.1,
+      "end": 7.24,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 7.24,
+      "end": 7.34,
+      "match": "exact"
+    },
+    {
+      "word": "laptop",
+      "start": 7.34,
+      "end": 7.68,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 7.68,
+      "end": 7.98,
+      "match": "exact"
+    },
+    {
+      "word": "zero",
+      "start": 7.98,
+      "end": 8.2,
+      "match": "exact"
+    },
+    {
+      "word": "network",
+      "start": 8.2,
+      "end": 8.48,
+      "match": "exact"
+    },
+    {
+      "word": "traffic.",
+      "start": 8.48,
+      "end": 8.84,
+      "match": "exact"
+    },
+    {
+      "word": "Reach",
+      "start": 9.3,
+      "end": 9.82,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 9.82,
+      "end": 10.0,
+      "match": "exact"
+    },
+    {
+      "word": "remote",
+      "start": 10.0,
+      "end": 10.26,
+      "match": "exact"
+    },
+    {
+      "word": "Streamable",
+      "start": 10.36,
+      "end": 10.76,
+      "match": "exact"
+    },
+    {
+      "word": "HTTP",
+      "start": 10.76,
+      "end": 11.1,
+      "match": "exact"
+    },
+    {
+      "word": "whenever",
+      "start": 11.1,
+      "end": 11.72,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 11.72,
+      "end": 11.94,
+      "match": "exact"
+    },
+    {
+      "word": "want",
+      "start": 11.94,
+      "end": 12.14,
+      "match": "exact"
+    },
+    {
+      "word": "effortless",
+      "start": 12.14,
+      "end": 12.54,
+      "match": "exact"
+    },
+    {
+      "word": "cloud",
+      "start": 12.54,
+      "end": 12.7,
+      "match": "exact"
+    },
+    {
+      "word": "integrations",
+      "start": 12.7,
+      "end": 13.38,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 13.38,
+      "end": 13.52,
+      "match": "exact"
+    },
+    {
+      "word": "no",
+      "start": 13.52,
+      "end": 13.66,
+      "match": "exact"
+    },
+    {
+      "word": "terminal",
+      "start": 13.66,
+      "end": 14.0,
+      "match": "exact"
+    },
+    {
+      "word": "setup,",
+      "start": 14.0,
+      "end": 14.3,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 14.5,
+      "end": 14.86,
+      "match": "exact"
+    },
+    {
+      "word": "when",
+      "start": 14.86,
+      "end": 15.02,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 15.02,
+      "end": 15.12,
+      "match": "exact"
+    },
+    {
+      "word": "organization",
+      "start": 15.12,
+      "end": 15.52,
+      "match": "exact"
+    },
+    {
+      "word": "wants",
+      "start": 15.52,
+      "end": 15.86,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 15.86,
+      "end": 16.02,
+      "match": "exact"
+    },
+    {
+      "word": "host",
+      "start": 16.02,
+      "end": 16.24,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 16.24,
+      "end": 16.44,
+      "match": "exact"
+    },
+    {
+      "word": "centrally",
+      "start": 16.44,
+      "end": 16.94,
+      "match": "exact"
+    },
+    {
+      "word": "managed",
+      "start": 16.94,
+      "end": 17.14,
+      "match": "exact"
+    },
+    {
+      "word": "server",
+      "start": 17.14,
+      "end": 17.5,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 17.5,
+      "end": 17.74,
+      "match": "exact"
+    },
+    {
+      "word": "easy",
+      "start": 17.74,
+      "end": 17.94,
+      "match": "exact"
+    },
+    {
+      "word": "team",
+      "start": 17.94,
+      "end": 18.18,
+      "match": "exact"
+    },
+    {
+      "word": "sharing.",
+      "start": 18.18,
+      "end": 18.44,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Choosing",
+      "start": 0.0,
+      "end": 0.46
+    },
+    {
+      "word": "between",
+      "start": 0.46,
+      "end": 0.62
+    },
+    {
+      "word": "the",
+      "start": 0.62,
+      "end": 0.82
+    },
+    {
+      "word": "two",
+      "start": 0.82,
+      "end": 1.0
+    },
+    {
+      "word": "is",
+      "start": 1.0,
+      "end": 1.2
+    },
+    {
+      "word": "straightforward.",
+      "start": 1.2,
+      "end": 1.52
+    },
+    {
+      "word": "Reach",
+      "start": 2.04,
+      "end": 2.56
+    },
+    {
+      "word": "for",
+      "start": 2.56,
+      "end": 2.74
+    },
+    {
+      "word": "local",
+      "start": 2.74,
+      "end": 2.98
+    },
+    {
+      "word": "standard",
+      "start": 2.98,
+      "end": 3.26
+    },
+    {
+      "word": "input",
+      "start": 3.26,
+      "end": 3.62
+    },
+    {
+      "word": "and",
+      "start": 3.62,
+      "end": 3.84
+    },
+    {
+      "word": "output",
+      "start": 3.84,
+      "end": 4.12
+    },
+    {
+      "word": "whenever",
+      "start": 4.12,
+      "end": 4.46
+    },
+    {
+      "word": "you",
+      "start": 4.46,
+      "end": 4.66
+    },
+    {
+      "word": "need",
+      "start": 4.66,
+      "end": 4.86
+    },
+    {
+      "word": "direct,",
+      "start": 4.86,
+      "end": 5.24
+    },
+    {
+      "word": "low",
+      "start": 5.34,
+      "end": 5.58
+    },
+    {
+      "word": "-latency",
+      "start": 5.58,
+      "end": 5.94
+    },
+    {
+      "word": "access",
+      "start": 5.94,
+      "end": 6.22
+    },
+    {
+      "word": "to",
+      "start": 6.22,
+      "end": 6.6
+    },
+    {
+      "word": "files",
+      "start": 6.6,
+      "end": 6.9
+    },
+    {
+      "word": "sitting",
+      "start": 6.9,
+      "end": 7.1
+    },
+    {
+      "word": "on",
+      "start": 7.1,
+      "end": 7.24
+    },
+    {
+      "word": "your",
+      "start": 7.24,
+      "end": 7.34
+    },
+    {
+      "word": "laptop",
+      "start": 7.34,
+      "end": 7.68
+    },
+    {
+      "word": "with",
+      "start": 7.68,
+      "end": 7.98
+    },
+    {
+      "word": "zero",
+      "start": 7.98,
+      "end": 8.2
+    },
+    {
+      "word": "network",
+      "start": 8.2,
+      "end": 8.48
+    },
+    {
+      "word": "traffic.",
+      "start": 8.48,
+      "end": 8.84
+    },
+    {
+      "word": "Reach",
+      "start": 9.3,
+      "end": 9.82
+    },
+    {
+      "word": "for",
+      "start": 9.82,
+      "end": 10.0
+    },
+    {
+      "word": "remote,",
+      "start": 10.0,
+      "end": 10.26
+    },
+    {
+      "word": "streamable",
+      "start": 10.36,
+      "end": 10.76
+    },
+    {
+      "word": "HTTP",
+      "start": 10.76,
+      "end": 11.1
+    },
+    {
+      "word": "whenever",
+      "start": 11.1,
+      "end": 11.72
+    },
+    {
+      "word": "you",
+      "start": 11.72,
+      "end": 11.94
+    },
+    {
+      "word": "want",
+      "start": 11.94,
+      "end": 12.14
+    },
+    {
+      "word": "effortless",
+      "start": 12.14,
+      "end": 12.54
+    },
+    {
+      "word": "cloud",
+      "start": 12.54,
+      "end": 12.7
+    },
+    {
+      "word": "integrations",
+      "start": 12.7,
+      "end": 13.38
+    },
+    {
+      "word": "with",
+      "start": 13.38,
+      "end": 13.52
+    },
+    {
+      "word": "no",
+      "start": 13.52,
+      "end": 13.66
+    },
+    {
+      "word": "terminal",
+      "start": 13.66,
+      "end": 14.0
+    },
+    {
+      "word": "setup,",
+      "start": 14.0,
+      "end": 14.3
+    },
+    {
+      "word": "or",
+      "start": 14.5,
+      "end": 14.86
+    },
+    {
+      "word": "when",
+      "start": 14.86,
+      "end": 15.02
+    },
+    {
+      "word": "an",
+      "start": 15.02,
+      "end": 15.12
+    },
+    {
+      "word": "organization",
+      "start": 15.12,
+      "end": 15.52
+    },
+    {
+      "word": "wants",
+      "start": 15.52,
+      "end": 15.86
+    },
+    {
+      "word": "to",
+      "start": 15.86,
+      "end": 16.02
+    },
+    {
+      "word": "host",
+      "start": 16.02,
+      "end": 16.24
+    },
+    {
+      "word": "one",
+      "start": 16.24,
+      "end": 16.44
+    },
+    {
+      "word": "centrally",
+      "start": 16.44,
+      "end": 16.94
+    },
+    {
+      "word": "managed",
+      "start": 16.94,
+      "end": 17.14
+    },
+    {
+      "word": "server",
+      "start": 17.14,
+      "end": 17.5
+    },
+    {
+      "word": "for",
+      "start": 17.5,
+      "end": 17.74
+    },
+    {
+      "word": "easy",
+      "start": 17.74,
+      "end": 17.94
+    },
+    {
+      "word": "team",
+      "start": 17.94,
+      "end": 18.18
+    },
+    {
+      "word": "sharing.",
+      "start": 18.18,
+      "end": 18.44
+    }
+  ]
+}

@@ -23,17 +23,43 @@
   "chapters": [
     {
       "id": "01-hook",
-      "title": "Hook",
-      "paragraphs": [
-        1
-      ]
+      "title": "The Isolated AI Problem",
+      "paragraphs": [1, 2, 3]
     },
     {
-      "id": "02-main-point",
-      "title": "Main Point",
-      "paragraphs": [
-        2
-      ]
+      "id": "02-mn-problem",
+      "title": "Why MCP Exists: M × N vs. M + N",
+      "paragraphs": [4, 5, 6, 7]
+    },
+    {
+      "id": "03-architecture",
+      "title": "Architecture: Host, Client & Server",
+      "paragraphs": [8, 9, 10, 11]
+    },
+    {
+      "id": "04-primitives",
+      "title": "Tools, Resources & Prompts",
+      "paragraphs": [12, 13, 14, 15]
+    },
+    {
+      "id": "05-walkthrough",
+      "title": "Live Trace: Inside an MCP Request",
+      "paragraphs": [16, 17, 18, 19]
+    },
+    {
+      "id": "06-transports",
+      "title": "Local vs. Remote: stdio & Streamable HTTP",
+      "paragraphs": [20, 21, 22]
+    },
+    {
+      "id": "07-how-to-use",
+      "title": "How to Start Using MCP Today",
+      "paragraphs": [23, 24, 25]
+    },
+    {
+      "id": "08-pitfalls-and-outro",
+      "title": "Trade-offs, Security & The Big Picture",
+      "paragraphs": [26, 27, 28, 29, 30]
     }
   ]
 }

@@ -1,0 +1,636 @@
+{
+  "audio": "023.ready-to-try.mp3",
+  "paragraph": 23,
+  "text": "Ready to try MCP? There are two easy paths. First, for everyday AI users, you do not need to write a single line of code. Modern apps like Claude, ChatGPT, Notion, Cursor, and VS Code include built-in directories of remote connectors—you simply sign in like any normal app, flip a toggle on, and start prompting.",
+  "transcript": "Ready to try MCP? There are two easy paths. First, for everyday AI users, you do not need to write a single line of code. Modern apps like Claude, ChatGPT, Notion, Cursor, and VS Code include built-in directories of remote connectors. You simply sign in like any normal app, flip a toggle on, and start prompting.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 18.36,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Ready",
+      "start": 0.0,
+      "end": 0.3,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 0.3,
+      "end": 0.44,
+      "match": "exact"
+    },
+    {
+      "word": "try",
+      "start": 0.44,
+      "end": 0.66,
+      "match": "exact"
+    },
+    {
+      "word": "MCP?",
+      "start": 0.66,
+      "end": 1.08,
+      "match": "exact"
+    },
+    {
+      "word": "There",
+      "start": 1.6,
+      "end": 2.04,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 2.04,
+      "end": 2.14,
+      "match": "exact"
+    },
+    {
+      "word": "two",
+      "start": 2.14,
+      "end": 2.26,
+      "match": "exact"
+    },
+    {
+      "word": "easy",
+      "start": 2.26,
+      "end": 2.6,
+      "match": "exact"
+    },
+    {
+      "word": "paths.",
+      "start": 2.6,
+      "end": 2.88,
+      "match": "exact"
+    },
+    {
+      "word": "First,",
+      "start": 3.5,
+      "end": 3.94,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 4.18,
+      "end": 4.38,
+      "match": "exact"
+    },
+    {
+      "word": "everyday",
+      "start": 4.38,
+      "end": 4.74,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 4.74,
+      "end": 5.04,
+      "match": "exact"
+    },
+    {
+      "word": "users,",
+      "start": 5.04,
+      "end": 5.38,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 5.56,
+      "end": 5.7,
+      "match": "exact"
+    },
+    {
+      "word": "do",
+      "start": 5.7,
+      "end": 5.8,
+      "match": "exact"
+    },
+    {
+      "word": "not",
+      "start": 5.8,
+      "end": 6.04,
+      "match": "exact"
+    },
+    {
+      "word": "need",
+      "start": 6.04,
+      "end": 6.2,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 6.2,
+      "end": 6.36,
+      "match": "exact"
+    },
+    {
+      "word": "write",
+      "start": 6.36,
+      "end": 6.52,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 6.52,
+      "end": 6.64,
+      "match": "exact"
+    },
+    {
+      "word": "single",
+      "start": 6.64,
+      "end": 6.86,
+      "match": "exact"
+    },
+    {
+      "word": "line",
+      "start": 6.86,
+      "end": 7.12,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 7.12,
+      "end": 7.24,
+      "match": "exact"
+    },
+    {
+      "word": "code.",
+      "start": 7.24,
+      "end": 7.44,
+      "match": "exact"
+    },
+    {
+      "word": "Modern",
+      "start": 7.88,
+      "end": 8.32,
+      "match": "exact"
+    },
+    {
+      "word": "apps",
+      "start": 8.32,
+      "end": 8.56,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 8.56,
+      "end": 8.8,
+      "match": "exact"
+    },
+    {
+      "word": "Claude,",
+      "start": 8.8,
+      "end": 9.26,
+      "match": "exact"
+    },
+    {
+      "word": "ChatGPT,",
+      "start": 9.3,
+      "end": 10.02,
+      "match": "exact"
+    },
+    {
+      "word": "Notion,",
+      "start": 10.18,
+      "end": 10.64,
+      "match": "exact"
+    },
+    {
+      "word": "Cursor,",
+      "start": 10.74,
+      "end": 11.28,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 11.28,
+      "end": 11.38,
+      "match": "exact"
+    },
+    {
+      "word": "VS",
+      "start": 11.38,
+      "end": 11.54,
+      "match": "exact"
+    },
+    {
+      "word": "Code",
+      "start": 11.54,
+      "end": 11.84,
+      "match": "exact"
+    },
+    {
+      "word": "include",
+      "start": 11.84,
+      "end": 12.44,
+      "match": "exact"
+    },
+    {
+      "word": "built-in",
+      "start": 12.44,
+      "end": 12.98,
+      "match": "exact"
+    },
+    {
+      "word": "directories",
+      "start": 12.98,
+      "end": 13.6,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 13.6,
+      "end": 13.66,
+      "match": "exact"
+    },
+    {
+      "word": "remote",
+      "start": 13.66,
+      "end": 13.82,
+      "match": "exact"
+    },
+    {
+      "word": "connectors—you",
+      "start": 13.82,
+      "end": 14.78,
+      "match": "exact"
+    },
+    {
+      "word": "simply",
+      "start": 14.78,
+      "end": 14.98,
+      "match": "exact"
+    },
+    {
+      "word": "sign",
+      "start": 14.98,
+      "end": 15.26,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 15.26,
+      "end": 15.48,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 15.48,
+      "end": 15.62,
+      "match": "exact"
+    },
+    {
+      "word": "any",
+      "start": 15.62,
+      "end": 15.8,
+      "match": "exact"
+    },
+    {
+      "word": "normal",
+      "start": 15.8,
+      "end": 16.04,
+      "match": "exact"
+    },
+    {
+      "word": "app,",
+      "start": 16.04,
+      "end": 16.28,
+      "match": "exact"
+    },
+    {
+      "word": "flip",
+      "start": 16.44,
+      "end": 16.64,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 16.64,
+      "end": 16.74,
+      "match": "exact"
+    },
+    {
+      "word": "toggle",
+      "start": 16.74,
+      "end": 16.96,
+      "match": "exact"
+    },
+    {
+      "word": "on,",
+      "start": 16.96,
+      "end": 17.22,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 17.32,
+      "end": 17.48,
+      "match": "exact"
+    },
+    {
+      "word": "start",
+      "start": 17.48,
+      "end": 17.64,
+      "match": "exact"
+    },
+    {
+      "word": "prompting.",
+      "start": 17.64,
+      "end": 18.1,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Ready",
+      "start": 0.0,
+      "end": 0.3
+    },
+    {
+      "word": "to",
+      "start": 0.3,
+      "end": 0.44
+    },
+    {
+      "word": "try",
+      "start": 0.44,
+      "end": 0.66
+    },
+    {
+      "word": "MCP?",
+      "start": 0.66,
+      "end": 1.08
+    },
+    {
+      "word": "There",
+      "start": 1.6,
+      "end": 2.04
+    },
+    {
+      "word": "are",
+      "start": 2.04,
+      "end": 2.14
+    },
+    {
+      "word": "two",
+      "start": 2.14,
+      "end": 2.26
+    },
+    {
+      "word": "easy",
+      "start": 2.26,
+      "end": 2.6
+    },
+    {
+      "word": "paths.",
+      "start": 2.6,
+      "end": 2.88
+    },
+    {
+      "word": "First,",
+      "start": 3.5,
+      "end": 3.94
+    },
+    {
+      "word": "for",
+      "start": 4.18,
+      "end": 4.38
+    },
+    {
+      "word": "everyday",
+      "start": 4.38,
+      "end": 4.74
+    },
+    {
+      "word": "AI",
+      "start": 4.74,
+      "end": 5.04
+    },
+    {
+      "word": "users,",
+      "start": 5.04,
+      "end": 5.38
+    },
+    {
+      "word": "you",
+      "start": 5.56,
+      "end": 5.7
+    },
+    {
+      "word": "do",
+      "start": 5.7,
+      "end": 5.8
+    },
+    {
+      "word": "not",
+      "start": 5.8,
+      "end": 6.04
+    },
+    {
+      "word": "need",
+      "start": 6.04,
+      "end": 6.2
+    },
+    {
+      "word": "to",
+      "start": 6.2,
+      "end": 6.36
+    },
+    {
+      "word": "write",
+      "start": 6.36,
+      "end": 6.52
+    },
+    {
+      "word": "a",
+      "start": 6.52,
+      "end": 6.64
+    },
+    {
+      "word": "single",
+      "start": 6.64,
+      "end": 6.86
+    },
+    {
+      "word": "line",
+      "start": 6.86,
+      "end": 7.12
+    },
+    {
+      "word": "of",
+      "start": 7.12,
+      "end": 7.24
+    },
+    {
+      "word": "code.",
+      "start": 7.24,
+      "end": 7.44
+    },
+    {
+      "word": "Modern",
+      "start": 7.88,
+      "end": 8.32
+    },
+    {
+      "word": "apps",
+      "start": 8.32,
+      "end": 8.56
+    },
+    {
+      "word": "like",
+      "start": 8.56,
+      "end": 8.8
+    },
+    {
+      "word": "Claude,",
+      "start": 8.8,
+      "end": 9.26
+    },
+    {
+      "word": "ChatGPT,",
+      "start": 9.3,
+      "end": 10.02
+    },
+    {
+      "word": "Notion,",
+      "start": 10.18,
+      "end": 10.64
+    },
+    {
+      "word": "Cursor,",
+      "start": 10.74,
+      "end": 11.28
+    },
+    {
+      "word": "and",
+      "start": 11.28,
+      "end": 11.38
+    },
+    {
+      "word": "VS",
+      "start": 11.38,
+      "end": 11.54
+    },
+    {
+      "word": "Code",
+      "start": 11.54,
+      "end": 11.84
+    },
+    {
+      "word": "include",
+      "start": 11.84,
+      "end": 12.44
+    },
+    {
+      "word": "built",
+      "start": 12.44,
+      "end": 12.82
+    },
+    {
+      "word": "-in",
+      "start": 12.82,
+      "end": 12.98
+    },
+    {
+      "word": "directories",
+      "start": 12.98,
+      "end": 13.6
+    },
+    {
+      "word": "of",
+      "start": 13.6,
+      "end": 13.66
+    },
+    {
+      "word": "remote",
+      "start": 13.66,
+      "end": 13.82
+    },
+    {
+      "word": "connectors.",
+      "start": 13.82,
+      "end": 14.22
+    },
+    {
+      "word": "You",
+      "start": 14.5,
+      "end": 14.78
+    },
+    {
+      "word": "simply",
+      "start": 14.78,
+      "end": 14.98
+    },
+    {
+      "word": "sign",
+      "start": 14.98,
+      "end": 15.26
+    },
+    {
+      "word": "in",
+      "start": 15.26,
+      "end": 15.48
+    },
+    {
+      "word": "like",
+      "start": 15.48,
+      "end": 15.62
+    },
+    {
+      "word": "any",
+      "start": 15.62,
+      "end": 15.8
+    },
+    {
+      "word": "normal",
+      "start": 15.8,
+      "end": 16.04
+    },
+    {
+      "word": "app,",
+      "start": 16.04,
+      "end": 16.28
+    },
+    {
+      "word": "flip",
+      "start": 16.44,
+      "end": 16.64
+    },
+    {
+      "word": "a",
+      "start": 16.64,
+      "end": 16.74
+    },
+    {
+      "word": "toggle",
+      "start": 16.74,
+      "end": 16.96
+    },
+    {
+      "word": "on,",
+      "start": 16.96,
+      "end": 17.22
+    },
+    {
+      "word": "and",
+      "start": 17.32,
+      "end": 17.48
+    },
+    {
+      "word": "start",
+      "start": 17.48,
+      "end": 17.64
+    },
+    {
+      "word": "prompting.",
+      "start": 17.64,
+      "end": 18.1
+    }
+  ]
+}

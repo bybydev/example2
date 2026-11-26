@@ -1,0 +1,664 @@
+{
+  "audio": "001.modern-ai-models.mp3",
+  "paragraph": 1,
+  "text": "Modern AI models are remarkably capable, yet most of the time they sit trapped inside a plain chat window. Whenever you want real help, you end up playing the human copy-paste bridge: grabbing text from Slack, pasting notes from Notion, uploading files from your laptop, and manually typing the final results back into your calendar or project tracker.",
+  "transcript": "Modern AI models are remarkably capable, yet most of the time they sit trapped inside a plain chat window. Whenever you want real help, you end up playing the human copy-paste bridge, grabbing text from Slack, pasting notes from Notion, uploading files from your laptop, and manually typing the final results back into your calendar or project tracker.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 17.68,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Modern",
+      "start": 0.0,
+      "end": 0.44,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 0.44,
+      "end": 0.68,
+      "match": "exact"
+    },
+    {
+      "word": "models",
+      "start": 0.68,
+      "end": 0.94,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 0.94,
+      "end": 1.3,
+      "match": "exact"
+    },
+    {
+      "word": "remarkably",
+      "start": 1.3,
+      "end": 1.64,
+      "match": "exact"
+    },
+    {
+      "word": "capable,",
+      "start": 1.64,
+      "end": 2.14,
+      "match": "exact"
+    },
+    {
+      "word": "yet",
+      "start": 2.38,
+      "end": 2.66,
+      "match": "exact"
+    },
+    {
+      "word": "most",
+      "start": 2.66,
+      "end": 2.88,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 2.88,
+      "end": 3.04,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 3.04,
+      "end": 3.1,
+      "match": "exact"
+    },
+    {
+      "word": "time",
+      "start": 3.1,
+      "end": 3.4,
+      "match": "exact"
+    },
+    {
+      "word": "they",
+      "start": 3.4,
+      "end": 3.6,
+      "match": "exact"
+    },
+    {
+      "word": "sit",
+      "start": 3.6,
+      "end": 3.76,
+      "match": "exact"
+    },
+    {
+      "word": "trapped",
+      "start": 3.76,
+      "end": 4.02,
+      "match": "exact"
+    },
+    {
+      "word": "inside",
+      "start": 4.02,
+      "end": 4.3,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 4.3,
+      "end": 4.5,
+      "match": "exact"
+    },
+    {
+      "word": "plain",
+      "start": 4.5,
+      "end": 4.66,
+      "match": "exact"
+    },
+    {
+      "word": "chat",
+      "start": 4.66,
+      "end": 4.86,
+      "match": "exact"
+    },
+    {
+      "word": "window.",
+      "start": 4.86,
+      "end": 5.16,
+      "match": "exact"
+    },
+    {
+      "word": "Whenever",
+      "start": 5.64,
+      "end": 6.12,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 6.12,
+      "end": 6.32,
+      "match": "exact"
+    },
+    {
+      "word": "want",
+      "start": 6.32,
+      "end": 6.46,
+      "match": "exact"
+    },
+    {
+      "word": "real",
+      "start": 6.46,
+      "end": 6.66,
+      "match": "exact"
+    },
+    {
+      "word": "help,",
+      "start": 6.66,
+      "end": 7.0,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 7.12,
+      "end": 7.18,
+      "match": "exact"
+    },
+    {
+      "word": "end",
+      "start": 7.18,
+      "end": 7.34,
+      "match": "exact"
+    },
+    {
+      "word": "up",
+      "start": 7.34,
+      "end": 7.48,
+      "match": "exact"
+    },
+    {
+      "word": "playing",
+      "start": 7.48,
+      "end": 7.66,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 7.66,
+      "end": 7.88,
+      "match": "exact"
+    },
+    {
+      "word": "human",
+      "start": 7.88,
+      "end": 8.1,
+      "match": "exact"
+    },
+    {
+      "word": "copy-paste",
+      "start": 8.1,
+      "end": 8.8,
+      "match": "exact"
+    },
+    {
+      "word": "bridge:",
+      "start": 8.8,
+      "end": 9.04,
+      "match": "exact"
+    },
+    {
+      "word": "grabbing",
+      "start": 9.28,
+      "end": 9.62,
+      "match": "exact"
+    },
+    {
+      "word": "text",
+      "start": 9.62,
+      "end": 9.96,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 9.96,
+      "end": 10.16,
+      "match": "exact"
+    },
+    {
+      "word": "Slack,",
+      "start": 10.16,
+      "end": 10.44,
+      "match": "exact"
+    },
+    {
+      "word": "pasting",
+      "start": 10.64,
+      "end": 11.08,
+      "match": "exact"
+    },
+    {
+      "word": "notes",
+      "start": 11.08,
+      "end": 11.22,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 11.22,
+      "end": 11.42,
+      "match": "exact"
+    },
+    {
+      "word": "Notion,",
+      "start": 11.42,
+      "end": 11.76,
+      "match": "exact"
+    },
+    {
+      "word": "uploading",
+      "start": 11.88,
+      "end": 12.42,
+      "match": "exact"
+    },
+    {
+      "word": "files",
+      "start": 12.42,
+      "end": 12.78,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 12.78,
+      "end": 13.0,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 13.0,
+      "end": 13.12,
+      "match": "exact"
+    },
+    {
+      "word": "laptop,",
+      "start": 13.12,
+      "end": 13.4,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 13.68,
+      "end": 13.94,
+      "match": "exact"
+    },
+    {
+      "word": "manually",
+      "start": 13.94,
+      "end": 14.3,
+      "match": "exact"
+    },
+    {
+      "word": "typing",
+      "start": 14.3,
+      "end": 14.64,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 14.64,
+      "end": 14.88,
+      "match": "exact"
+    },
+    {
+      "word": "final",
+      "start": 14.88,
+      "end": 15.08,
+      "match": "exact"
+    },
+    {
+      "word": "results",
+      "start": 15.08,
+      "end": 15.46,
+      "match": "exact"
+    },
+    {
+      "word": "back",
+      "start": 15.46,
+      "end": 15.68,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 15.68,
+      "end": 15.86,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 15.86,
+      "end": 15.98,
+      "match": "exact"
+    },
+    {
+      "word": "calendar",
+      "start": 15.98,
+      "end": 16.32,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 16.32,
+      "end": 16.56,
+      "match": "exact"
+    },
+    {
+      "word": "project",
+      "start": 16.56,
+      "end": 16.84,
+      "match": "exact"
+    },
+    {
+      "word": "tracker.",
+      "start": 16.84,
+      "end": 17.14,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Modern",
+      "start": 0.0,
+      "end": 0.44
+    },
+    {
+      "word": "AI",
+      "start": 0.44,
+      "end": 0.68
+    },
+    {
+      "word": "models",
+      "start": 0.68,
+      "end": 0.94
+    },
+    {
+      "word": "are",
+      "start": 0.94,
+      "end": 1.3
+    },
+    {
+      "word": "remarkably",
+      "start": 1.3,
+      "end": 1.64
+    },
+    {
+      "word": "capable,",
+      "start": 1.64,
+      "end": 2.14
+    },
+    {
+      "word": "yet",
+      "start": 2.38,
+      "end": 2.66
+    },
+    {
+      "word": "most",
+      "start": 2.66,
+      "end": 2.88
+    },
+    {
+      "word": "of",
+      "start": 2.88,
+      "end": 3.04
+    },
+    {
+      "word": "the",
+      "start": 3.04,
+      "end": 3.1
+    },
+    {
+      "word": "time",
+      "start": 3.1,
+      "end": 3.4
+    },
+    {
+      "word": "they",
+      "start": 3.4,
+      "end": 3.6
+    },
+    {
+      "word": "sit",
+      "start": 3.6,
+      "end": 3.76
+    },
+    {
+      "word": "trapped",
+      "start": 3.76,
+      "end": 4.02
+    },
+    {
+      "word": "inside",
+      "start": 4.02,
+      "end": 4.3
+    },
+    {
+      "word": "a",
+      "start": 4.3,
+      "end": 4.5
+    },
+    {
+      "word": "plain",
+      "start": 4.5,
+      "end": 4.66
+    },
+    {
+      "word": "chat",
+      "start": 4.66,
+      "end": 4.86
+    },
+    {
+      "word": "window.",
+      "start": 4.86,
+      "end": 5.16
+    },
+    {
+      "word": "Whenever",
+      "start": 5.64,
+      "end": 6.12
+    },
+    {
+      "word": "you",
+      "start": 6.12,
+      "end": 6.32
+    },
+    {
+      "word": "want",
+      "start": 6.32,
+      "end": 6.46
+    },
+    {
+      "word": "real",
+      "start": 6.46,
+      "end": 6.66
+    },
+    {
+      "word": "help,",
+      "start": 6.66,
+      "end": 7.0
+    },
+    {
+      "word": "you",
+      "start": 7.12,
+      "end": 7.18
+    },
+    {
+      "word": "end",
+      "start": 7.18,
+      "end": 7.34
+    },
+    {
+      "word": "up",
+      "start": 7.34,
+      "end": 7.48
+    },
+    {
+      "word": "playing",
+      "start": 7.48,
+      "end": 7.66
+    },
+    {
+      "word": "the",
+      "start": 7.66,
+      "end": 7.88
+    },
+    {
+      "word": "human",
+      "start": 7.88,
+      "end": 8.1
+    },
+    {
+      "word": "copy",
+      "start": 8.1,
+      "end": 8.48
+    },
+    {
+      "word": "-paste",
+      "start": 8.48,
+      "end": 8.8
+    },
+    {
+      "word": "bridge,",
+      "start": 8.8,
+      "end": 9.04
+    },
+    {
+      "word": "grabbing",
+      "start": 9.28,
+      "end": 9.62
+    },
+    {
+      "word": "text",
+      "start": 9.62,
+      "end": 9.96
+    },
+    {
+      "word": "from",
+      "start": 9.96,
+      "end": 10.16
+    },
+    {
+      "word": "Slack,",
+      "start": 10.16,
+      "end": 10.44
+    },
+    {
+      "word": "pasting",
+      "start": 10.64,
+      "end": 11.08
+    },
+    {
+      "word": "notes",
+      "start": 11.08,
+      "end": 11.22
+    },
+    {
+      "word": "from",
+      "start": 11.22,
+      "end": 11.42
+    },
+    {
+      "word": "Notion,",
+      "start": 11.42,
+      "end": 11.76
+    },
+    {
+      "word": "uploading",
+      "start": 11.88,
+      "end": 12.42
+    },
+    {
+      "word": "files",
+      "start": 12.42,
+      "end": 12.78
+    },
+    {
+      "word": "from",
+      "start": 12.78,
+      "end": 13.0
+    },
+    {
+      "word": "your",
+      "start": 13.0,
+      "end": 13.12
+    },
+    {
+      "word": "laptop,",
+      "start": 13.12,
+      "end": 13.4
+    },
+    {
+      "word": "and",
+      "start": 13.68,
+      "end": 13.94
+    },
+    {
+      "word": "manually",
+      "start": 13.94,
+      "end": 14.3
+    },
+    {
+      "word": "typing",
+      "start": 14.3,
+      "end": 14.64
+    },
+    {
+      "word": "the",
+      "start": 14.64,
+      "end": 14.88
+    },
+    {
+      "word": "final",
+      "start": 14.88,
+      "end": 15.08
+    },
+    {
+      "word": "results",
+      "start": 15.08,
+      "end": 15.46
+    },
+    {
+      "word": "back",
+      "start": 15.46,
+      "end": 15.68
+    },
+    {
+      "word": "into",
+      "start": 15.68,
+      "end": 15.86
+    },
+    {
+      "word": "your",
+      "start": 15.86,
+      "end": 15.98
+    },
+    {
+      "word": "calendar",
+      "start": 15.98,
+      "end": 16.32
+    },
+    {
+      "word": "or",
+      "start": 16.32,
+      "end": 16.56
+    },
+    {
+      "word": "project",
+      "start": 16.56,
+      "end": 16.84
+    },
+    {
+      "word": "tracker.",
+      "start": 16.84,
+      "end": 17.14
+    }
+  ]
+}

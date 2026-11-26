@@ -1,0 +1,686 @@
+{
+  "audio": "015.on-top-of.mp3",
+  "paragraph": 15,
+  "text": "On top of those big three, MCP is also bidirectional, meaning communication is not strictly one way. Your AI host can set strict folder boundaries so a server only touches approved directories. Meanwhile, a server can pause mid-task to ask you a clarifying question when details are missing, or politely ask the host's AI for help with a quick subtask.",
+  "transcript": "On top of those big three, MCP is also bidirectional, meaning communication is not strictly one-way. Your AI host can set strict folder boundaries so a server only touches approved directories. Meanwhile, a server can pause mid-task to ask you a clarifying question when details are missing or politely ask the host's AI for help with a quick subtask.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 18.6,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "On",
+      "start": 0.0,
+      "end": 0.3,
+      "match": "exact"
+    },
+    {
+      "word": "top",
+      "start": 0.3,
+      "end": 0.44,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 0.44,
+      "end": 0.6,
+      "match": "exact"
+    },
+    {
+      "word": "those",
+      "start": 0.6,
+      "end": 0.74,
+      "match": "exact"
+    },
+    {
+      "word": "big",
+      "start": 0.74,
+      "end": 0.96,
+      "match": "exact"
+    },
+    {
+      "word": "three,",
+      "start": 0.96,
+      "end": 1.26,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 1.42,
+      "end": 2.14,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 2.14,
+      "end": 2.38,
+      "match": "exact"
+    },
+    {
+      "word": "also",
+      "start": 2.38,
+      "end": 2.66,
+      "match": "exact"
+    },
+    {
+      "word": "bidirectional,",
+      "start": 2.66,
+      "end": 3.38,
+      "match": "exact"
+    },
+    {
+      "word": "meaning",
+      "start": 3.5,
+      "end": 3.76,
+      "match": "exact"
+    },
+    {
+      "word": "communication",
+      "start": 3.76,
+      "end": 4.24,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 4.24,
+      "end": 4.6,
+      "match": "exact"
+    },
+    {
+      "word": "not",
+      "start": 4.6,
+      "end": 4.72,
+      "match": "exact"
+    },
+    {
+      "word": "strictly",
+      "start": 4.72,
+      "end": 4.98,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 4.98,
+      "end": 5.24,
+      "match": "exact"
+    },
+    {
+      "word": "way.",
+      "start": 5.24,
+      "end": 5.46,
+      "match": "exact"
+    },
+    {
+      "word": "Your",
+      "start": 5.74,
+      "end": 6.22,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 6.22,
+      "end": 6.42,
+      "match": "exact"
+    },
+    {
+      "word": "host",
+      "start": 6.42,
+      "end": 6.72,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 6.72,
+      "end": 6.88,
+      "match": "exact"
+    },
+    {
+      "word": "set",
+      "start": 6.88,
+      "end": 7.06,
+      "match": "exact"
+    },
+    {
+      "word": "strict",
+      "start": 7.06,
+      "end": 7.3,
+      "match": "exact"
+    },
+    {
+      "word": "folder",
+      "start": 7.3,
+      "end": 7.58,
+      "match": "exact"
+    },
+    {
+      "word": "boundaries",
+      "start": 7.58,
+      "end": 7.98,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 7.98,
+      "end": 8.2,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 8.2,
+      "end": 8.32,
+      "match": "exact"
+    },
+    {
+      "word": "server",
+      "start": 8.32,
+      "end": 8.62,
+      "match": "exact"
+    },
+    {
+      "word": "only",
+      "start": 8.62,
+      "end": 8.8,
+      "match": "exact"
+    },
+    {
+      "word": "touches",
+      "start": 8.8,
+      "end": 9.12,
+      "match": "exact"
+    },
+    {
+      "word": "approved",
+      "start": 9.12,
+      "end": 9.38,
+      "match": "exact"
+    },
+    {
+      "word": "directories.",
+      "start": 9.38,
+      "end": 10.08,
+      "match": "exact"
+    },
+    {
+      "word": "Meanwhile,",
+      "start": 10.26,
+      "end": 10.74,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 11.0,
+      "end": 11.28,
+      "match": "exact"
+    },
+    {
+      "word": "server",
+      "start": 11.28,
+      "end": 11.52,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 11.52,
+      "end": 11.68,
+      "match": "exact"
+    },
+    {
+      "word": "pause",
+      "start": 11.68,
+      "end": 11.92,
+      "match": "exact"
+    },
+    {
+      "word": "mid-task",
+      "start": 11.92,
+      "end": 12.52,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 12.52,
+      "end": 12.7,
+      "match": "exact"
+    },
+    {
+      "word": "ask",
+      "start": 12.7,
+      "end": 12.88,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 12.88,
+      "end": 13.04,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 13.04,
+      "end": 13.12,
+      "match": "exact"
+    },
+    {
+      "word": "clarifying",
+      "start": 13.12,
+      "end": 13.48,
+      "match": "exact"
+    },
+    {
+      "word": "question",
+      "start": 13.48,
+      "end": 13.76,
+      "match": "exact"
+    },
+    {
+      "word": "when",
+      "start": 13.76,
+      "end": 14.08,
+      "match": "exact"
+    },
+    {
+      "word": "details",
+      "start": 14.08,
+      "end": 14.36,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 14.36,
+      "end": 14.56,
+      "match": "exact"
+    },
+    {
+      "word": "missing,",
+      "start": 14.56,
+      "end": 14.76,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 14.76,
+      "end": 15.34,
+      "match": "exact"
+    },
+    {
+      "word": "politely",
+      "start": 15.34,
+      "end": 15.74,
+      "match": "exact"
+    },
+    {
+      "word": "ask",
+      "start": 15.74,
+      "end": 15.98,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 15.98,
+      "end": 16.16,
+      "match": "exact"
+    },
+    {
+      "word": "host's",
+      "start": 16.16,
+      "end": 16.44,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 16.44,
+      "end": 16.6,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 16.6,
+      "end": 16.84,
+      "match": "exact"
+    },
+    {
+      "word": "help",
+      "start": 16.84,
+      "end": 17.1,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 17.1,
+      "end": 17.28,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 17.28,
+      "end": 17.34,
+      "match": "exact"
+    },
+    {
+      "word": "quick",
+      "start": 17.34,
+      "end": 17.48,
+      "match": "exact"
+    },
+    {
+      "word": "subtask.",
+      "start": 17.48,
+      "end": 18.08,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "On",
+      "start": 0.0,
+      "end": 0.3
+    },
+    {
+      "word": "top",
+      "start": 0.3,
+      "end": 0.44
+    },
+    {
+      "word": "of",
+      "start": 0.44,
+      "end": 0.6
+    },
+    {
+      "word": "those",
+      "start": 0.6,
+      "end": 0.74
+    },
+    {
+      "word": "big",
+      "start": 0.74,
+      "end": 0.96
+    },
+    {
+      "word": "three,",
+      "start": 0.96,
+      "end": 1.26
+    },
+    {
+      "word": "MCP",
+      "start": 1.42,
+      "end": 2.14
+    },
+    {
+      "word": "is",
+      "start": 2.14,
+      "end": 2.38
+    },
+    {
+      "word": "also",
+      "start": 2.38,
+      "end": 2.66
+    },
+    {
+      "word": "bidirectional,",
+      "start": 2.66,
+      "end": 3.38
+    },
+    {
+      "word": "meaning",
+      "start": 3.5,
+      "end": 3.76
+    },
+    {
+      "word": "communication",
+      "start": 3.76,
+      "end": 4.24
+    },
+    {
+      "word": "is",
+      "start": 4.24,
+      "end": 4.6
+    },
+    {
+      "word": "not",
+      "start": 4.6,
+      "end": 4.72
+    },
+    {
+      "word": "strictly",
+      "start": 4.72,
+      "end": 4.98
+    },
+    {
+      "word": "one",
+      "start": 4.98,
+      "end": 5.24
+    },
+    {
+      "word": "-way.",
+      "start": 5.24,
+      "end": 5.46
+    },
+    {
+      "word": "Your",
+      "start": 5.74,
+      "end": 6.22
+    },
+    {
+      "word": "AI",
+      "start": 6.22,
+      "end": 6.42
+    },
+    {
+      "word": "host",
+      "start": 6.42,
+      "end": 6.72
+    },
+    {
+      "word": "can",
+      "start": 6.72,
+      "end": 6.88
+    },
+    {
+      "word": "set",
+      "start": 6.88,
+      "end": 7.06
+    },
+    {
+      "word": "strict",
+      "start": 7.06,
+      "end": 7.3
+    },
+    {
+      "word": "folder",
+      "start": 7.3,
+      "end": 7.58
+    },
+    {
+      "word": "boundaries",
+      "start": 7.58,
+      "end": 7.98
+    },
+    {
+      "word": "so",
+      "start": 7.98,
+      "end": 8.2
+    },
+    {
+      "word": "a",
+      "start": 8.2,
+      "end": 8.32
+    },
+    {
+      "word": "server",
+      "start": 8.32,
+      "end": 8.62
+    },
+    {
+      "word": "only",
+      "start": 8.62,
+      "end": 8.8
+    },
+    {
+      "word": "touches",
+      "start": 8.8,
+      "end": 9.12
+    },
+    {
+      "word": "approved",
+      "start": 9.12,
+      "end": 9.38
+    },
+    {
+      "word": "directories.",
+      "start": 9.38,
+      "end": 10.08
+    },
+    {
+      "word": "Meanwhile,",
+      "start": 10.26,
+      "end": 10.74
+    },
+    {
+      "word": "a",
+      "start": 11.0,
+      "end": 11.28
+    },
+    {
+      "word": "server",
+      "start": 11.28,
+      "end": 11.52
+    },
+    {
+      "word": "can",
+      "start": 11.52,
+      "end": 11.68
+    },
+    {
+      "word": "pause",
+      "start": 11.68,
+      "end": 11.92
+    },
+    {
+      "word": "mid",
+      "start": 11.92,
+      "end": 12.18
+    },
+    {
+      "word": "-task",
+      "start": 12.18,
+      "end": 12.52
+    },
+    {
+      "word": "to",
+      "start": 12.52,
+      "end": 12.7
+    },
+    {
+      "word": "ask",
+      "start": 12.7,
+      "end": 12.88
+    },
+    {
+      "word": "you",
+      "start": 12.88,
+      "end": 13.04
+    },
+    {
+      "word": "a",
+      "start": 13.04,
+      "end": 13.12
+    },
+    {
+      "word": "clarifying",
+      "start": 13.12,
+      "end": 13.48
+    },
+    {
+      "word": "question",
+      "start": 13.48,
+      "end": 13.76
+    },
+    {
+      "word": "when",
+      "start": 13.76,
+      "end": 14.08
+    },
+    {
+      "word": "details",
+      "start": 14.08,
+      "end": 14.36
+    },
+    {
+      "word": "are",
+      "start": 14.36,
+      "end": 14.56
+    },
+    {
+      "word": "missing",
+      "start": 14.56,
+      "end": 14.76
+    },
+    {
+      "word": "or",
+      "start": 14.76,
+      "end": 15.34
+    },
+    {
+      "word": "politely",
+      "start": 15.34,
+      "end": 15.74
+    },
+    {
+      "word": "ask",
+      "start": 15.74,
+      "end": 15.98
+    },
+    {
+      "word": "the",
+      "start": 15.98,
+      "end": 16.16
+    },
+    {
+      "word": "host's",
+      "start": 16.16,
+      "end": 16.44
+    },
+    {
+      "word": "AI",
+      "start": 16.44,
+      "end": 16.6
+    },
+    {
+      "word": "for",
+      "start": 16.6,
+      "end": 16.84
+    },
+    {
+      "word": "help",
+      "start": 16.84,
+      "end": 17.1
+    },
+    {
+      "word": "with",
+      "start": 17.1,
+      "end": 17.28
+    },
+    {
+      "word": "a",
+      "start": 17.28,
+      "end": 17.34
+    },
+    {
+      "word": "quick",
+      "start": 17.34,
+      "end": 17.48
+    },
+    {
+      "word": "subtask.",
+      "start": 17.48,
+      "end": 18.08
+    }
+  ]
+}

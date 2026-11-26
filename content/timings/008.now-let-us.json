@@ -1,0 +1,708 @@
+{
+  "audio": "008.now-let-us.mp3",
+  "paragraph": 8,
+  "text": "Now let us open the hood and untangle the three roles people mix up most: the host, the client, and the server. Start with what you actually see on screen: the MCP host. That is the AI application you use—like Claude, ChatGPT, Cursor, or VS Code—which runs the chat interface, talks to the language model, and controls every permission prompt.",
+  "transcript": "Now let us open the hood and untangle the three roles people mix up most, the host, the client, and the server. Start with what you actually see on screen, the MCP host. That is the AI application you use, like Cloud, ChatGPT, Cursor, or VS Code, which runs the chat interface, talks to the language model, and controls every permission prompt.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 2
+    }
+  ],
+  "duration": 18.6,
+  "failed_words": 2,
+  "failures": [
+    {
+      "index": 39,
+      "word": "use—like",
+      "match": "approx",
+      "heard": "use, like Cloud,",
+      "start": 10.64
+    },
+    {
+      "index": 40,
+      "word": "Claude,",
+      "match": "approx",
+      "heard": "use, like Cloud,",
+      "start": 11.168
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Now",
+      "start": 0.0,
+      "end": 0.62,
+      "match": "exact"
+    },
+    {
+      "word": "let",
+      "start": 0.62,
+      "end": 0.74,
+      "match": "exact"
+    },
+    {
+      "word": "us",
+      "start": 0.74,
+      "end": 0.86,
+      "match": "exact"
+    },
+    {
+      "word": "open",
+      "start": 0.86,
+      "end": 1.06,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 1.06,
+      "end": 1.18,
+      "match": "exact"
+    },
+    {
+      "word": "hood",
+      "start": 1.18,
+      "end": 1.34,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 1.34,
+      "end": 1.52,
+      "match": "exact"
+    },
+    {
+      "word": "untangle",
+      "start": 1.52,
+      "end": 1.98,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 1.98,
+      "end": 2.1,
+      "match": "exact"
+    },
+    {
+      "word": "three",
+      "start": 2.1,
+      "end": 2.3,
+      "match": "exact"
+    },
+    {
+      "word": "roles",
+      "start": 2.3,
+      "end": 2.56,
+      "match": "exact"
+    },
+    {
+      "word": "people",
+      "start": 2.56,
+      "end": 2.9,
+      "match": "exact"
+    },
+    {
+      "word": "mix",
+      "start": 2.9,
+      "end": 3.16,
+      "match": "exact"
+    },
+    {
+      "word": "up",
+      "start": 3.16,
+      "end": 3.3,
+      "match": "exact"
+    },
+    {
+      "word": "most:",
+      "start": 3.3,
+      "end": 3.58,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 3.76,
+      "end": 4.04,
+      "match": "exact"
+    },
+    {
+      "word": "host,",
+      "start": 4.04,
+      "end": 4.34,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 4.5,
+      "end": 4.66,
+      "match": "exact"
+    },
+    {
+      "word": "client,",
+      "start": 4.66,
+      "end": 5.0,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 5.16,
+      "end": 5.36,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 5.36,
+      "end": 5.44,
+      "match": "exact"
+    },
+    {
+      "word": "server.",
+      "start": 5.44,
+      "end": 5.72,
+      "match": "exact"
+    },
+    {
+      "word": "Start",
+      "start": 5.92,
+      "end": 6.36,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 6.36,
+      "end": 6.54,
+      "match": "exact"
+    },
+    {
+      "word": "what",
+      "start": 6.54,
+      "end": 6.62,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 6.62,
+      "end": 6.72,
+      "match": "exact"
+    },
+    {
+      "word": "actually",
+      "start": 6.72,
+      "end": 7.02,
+      "match": "exact"
+    },
+    {
+      "word": "see",
+      "start": 7.02,
+      "end": 7.26,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 7.26,
+      "end": 7.36,
+      "match": "exact"
+    },
+    {
+      "word": "screen:",
+      "start": 7.36,
+      "end": 7.58,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 7.84,
+      "end": 8.02,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 8.02,
+      "end": 8.48,
+      "match": "exact"
+    },
+    {
+      "word": "host.",
+      "start": 8.48,
+      "end": 8.72,
+      "match": "exact"
+    },
+    {
+      "word": "That",
+      "start": 9.04,
+      "end": 9.48,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 9.48,
+      "end": 9.6,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 9.6,
+      "end": 9.72,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 9.72,
+      "end": 9.94,
+      "match": "exact"
+    },
+    {
+      "word": "application",
+      "start": 9.94,
+      "end": 10.32,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 10.32,
+      "end": 10.64,
+      "match": "exact"
+    },
+    {
+      "word": "use—like",
+      "start": 10.64,
+      "end": 11.168,
+      "match": "approx",
+      "heard": "use, like Cloud,"
+    },
+    {
+      "word": "Claude,",
+      "start": 11.168,
+      "end": 11.62,
+      "match": "approx",
+      "heard": "use, like Cloud,"
+    },
+    {
+      "word": "ChatGPT,",
+      "start": 11.82,
+      "end": 12.58,
+      "match": "exact"
+    },
+    {
+      "word": "Cursor,",
+      "start": 12.7,
+      "end": 13.3,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 13.3,
+      "end": 13.44,
+      "match": "exact"
+    },
+    {
+      "word": "VS",
+      "start": 13.44,
+      "end": 13.6,
+      "match": "exact"
+    },
+    {
+      "word": "Code—which",
+      "start": 13.6,
+      "end": 14.4,
+      "match": "exact"
+    },
+    {
+      "word": "runs",
+      "start": 14.4,
+      "end": 14.6,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 14.6,
+      "end": 14.72,
+      "match": "exact"
+    },
+    {
+      "word": "chat",
+      "start": 14.72,
+      "end": 14.9,
+      "match": "exact"
+    },
+    {
+      "word": "interface,",
+      "start": 14.9,
+      "end": 15.22,
+      "match": "exact"
+    },
+    {
+      "word": "talks",
+      "start": 15.54,
+      "end": 15.8,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 15.8,
+      "end": 15.96,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 15.96,
+      "end": 16.04,
+      "match": "exact"
+    },
+    {
+      "word": "language",
+      "start": 16.04,
+      "end": 16.28,
+      "match": "exact"
+    },
+    {
+      "word": "model,",
+      "start": 16.28,
+      "end": 16.54,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 16.7,
+      "end": 16.96,
+      "match": "exact"
+    },
+    {
+      "word": "controls",
+      "start": 16.96,
+      "end": 17.24,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 17.24,
+      "end": 17.5,
+      "match": "exact"
+    },
+    {
+      "word": "permission",
+      "start": 17.5,
+      "end": 17.84,
+      "match": "exact"
+    },
+    {
+      "word": "prompt.",
+      "start": 17.84,
+      "end": 18.06,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Now",
+      "start": 0.0,
+      "end": 0.62
+    },
+    {
+      "word": "let",
+      "start": 0.62,
+      "end": 0.74
+    },
+    {
+      "word": "us",
+      "start": 0.74,
+      "end": 0.86
+    },
+    {
+      "word": "open",
+      "start": 0.86,
+      "end": 1.06
+    },
+    {
+      "word": "the",
+      "start": 1.06,
+      "end": 1.18
+    },
+    {
+      "word": "hood",
+      "start": 1.18,
+      "end": 1.34
+    },
+    {
+      "word": "and",
+      "start": 1.34,
+      "end": 1.52
+    },
+    {
+      "word": "untangle",
+      "start": 1.52,
+      "end": 1.98
+    },
+    {
+      "word": "the",
+      "start": 1.98,
+      "end": 2.1
+    },
+    {
+      "word": "three",
+      "start": 2.1,
+      "end": 2.3
+    },
+    {
+      "word": "roles",
+      "start": 2.3,
+      "end": 2.56
+    },
+    {
+      "word": "people",
+      "start": 2.56,
+      "end": 2.9
+    },
+    {
+      "word": "mix",
+      "start": 2.9,
+      "end": 3.16
+    },
+    {
+      "word": "up",
+      "start": 3.16,
+      "end": 3.3
+    },
+    {
+      "word": "most,",
+      "start": 3.3,
+      "end": 3.58
+    },
+    {
+      "word": "the",
+      "start": 3.76,
+      "end": 4.04
+    },
+    {
+      "word": "host,",
+      "start": 4.04,
+      "end": 4.34
+    },
+    {
+      "word": "the",
+      "start": 4.5,
+      "end": 4.66
+    },
+    {
+      "word": "client,",
+      "start": 4.66,
+      "end": 5.0
+    },
+    {
+      "word": "and",
+      "start": 5.16,
+      "end": 5.36
+    },
+    {
+      "word": "the",
+      "start": 5.36,
+      "end": 5.44
+    },
+    {
+      "word": "server.",
+      "start": 5.44,
+      "end": 5.72
+    },
+    {
+      "word": "Start",
+      "start": 5.92,
+      "end": 6.36
+    },
+    {
+      "word": "with",
+      "start": 6.36,
+      "end": 6.54
+    },
+    {
+      "word": "what",
+      "start": 6.54,
+      "end": 6.62
+    },
+    {
+      "word": "you",
+      "start": 6.62,
+      "end": 6.72
+    },
+    {
+      "word": "actually",
+      "start": 6.72,
+      "end": 7.02
+    },
+    {
+      "word": "see",
+      "start": 7.02,
+      "end": 7.26
+    },
+    {
+      "word": "on",
+      "start": 7.26,
+      "end": 7.36
+    },
+    {
+      "word": "screen,",
+      "start": 7.36,
+      "end": 7.58
+    },
+    {
+      "word": "the",
+      "start": 7.84,
+      "end": 8.02
+    },
+    {
+      "word": "MCP",
+      "start": 8.02,
+      "end": 8.48
+    },
+    {
+      "word": "host.",
+      "start": 8.48,
+      "end": 8.72
+    },
+    {
+      "word": "That",
+      "start": 9.04,
+      "end": 9.48
+    },
+    {
+      "word": "is",
+      "start": 9.48,
+      "end": 9.6
+    },
+    {
+      "word": "the",
+      "start": 9.6,
+      "end": 9.72
+    },
+    {
+      "word": "AI",
+      "start": 9.72,
+      "end": 9.94
+    },
+    {
+      "word": "application",
+      "start": 9.94,
+      "end": 10.32
+    },
+    {
+      "word": "you",
+      "start": 10.32,
+      "end": 10.64
+    },
+    {
+      "word": "use,",
+      "start": 10.64,
+      "end": 10.96
+    },
+    {
+      "word": "like",
+      "start": 11.02,
+      "end": 11.32
+    },
+    {
+      "word": "Cloud,",
+      "start": 11.32,
+      "end": 11.62
+    },
+    {
+      "word": "ChatGPT,",
+      "start": 11.82,
+      "end": 12.58
+    },
+    {
+      "word": "Cursor,",
+      "start": 12.7,
+      "end": 13.3
+    },
+    {
+      "word": "or",
+      "start": 13.3,
+      "end": 13.44
+    },
+    {
+      "word": "VS",
+      "start": 13.44,
+      "end": 13.6
+    },
+    {
+      "word": "Code,",
+      "start": 13.6,
+      "end": 13.9
+    },
+    {
+      "word": "which",
+      "start": 14.08,
+      "end": 14.4
+    },
+    {
+      "word": "runs",
+      "start": 14.4,
+      "end": 14.6
+    },
+    {
+      "word": "the",
+      "start": 14.6,
+      "end": 14.72
+    },
+    {
+      "word": "chat",
+      "start": 14.72,
+      "end": 14.9
+    },
+    {
+      "word": "interface,",
+      "start": 14.9,
+      "end": 15.22
+    },
+    {
+      "word": "talks",
+      "start": 15.54,
+      "end": 15.8
+    },
+    {
+      "word": "to",
+      "start": 15.8,
+      "end": 15.96
+    },
+    {
+      "word": "the",
+      "start": 15.96,
+      "end": 16.04
+    },
+    {
+      "word": "language",
+      "start": 16.04,
+      "end": 16.28
+    },
+    {
+      "word": "model,",
+      "start": 16.28,
+      "end": 16.54
+    },
+    {
+      "word": "and",
+      "start": 16.7,
+      "end": 16.96
+    },
+    {
+      "word": "controls",
+      "start": 16.96,
+      "end": 17.24
+    },
+    {
+      "word": "every",
+      "start": 17.24,
+      "end": 17.5
+    },
+    {
+      "word": "permission",
+      "start": 17.5,
+      "end": 17.84
+    },
+    {
+      "word": "prompt.",
+      "start": 17.84,
+      "end": 18.06
+    }
+  ]
+}

@@ -1,0 +1,680 @@
+{
+  "audio": "012.once-connected-what.mp3",
+  "paragraph": 12,
+  "text": "Once connected, what can an MCP server actually offer your AI? The protocol boils everything down to three clean building blocks, organized by who is in control. First come tools—executable actions, or verbs, like searching Google Drive, scheduling a calendar event, or querying a database. Tools are model-controlled: the AI reads their descriptions and decides when to call them.",
+  "transcript": "Once connected, what can an MCP server actually offer your AI? The protocol boils everything down to three clean building blocks, organized by who is in control. First come tools, executable actions or verbs, like searching Google Drive, scheduling a calendar event, or querying a database. Tools are model-controlled, the AI reads their descriptions and decides when to call them.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 20.16,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Once",
+      "start": 0.0,
+      "end": 0.32,
+      "match": "exact"
+    },
+    {
+      "word": "connected,",
+      "start": 0.32,
+      "end": 0.7,
+      "match": "exact"
+    },
+    {
+      "word": "what",
+      "start": 0.88,
+      "end": 1.16,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 1.16,
+      "end": 1.3,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 1.3,
+      "end": 1.46,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 1.46,
+      "end": 1.8,
+      "match": "exact"
+    },
+    {
+      "word": "server",
+      "start": 1.8,
+      "end": 2.08,
+      "match": "exact"
+    },
+    {
+      "word": "actually",
+      "start": 2.08,
+      "end": 2.4,
+      "match": "exact"
+    },
+    {
+      "word": "offer",
+      "start": 2.4,
+      "end": 2.72,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 2.72,
+      "end": 2.96,
+      "match": "exact"
+    },
+    {
+      "word": "AI?",
+      "start": 2.96,
+      "end": 3.16,
+      "match": "exact"
+    },
+    {
+      "word": "The",
+      "start": 3.5,
+      "end": 4.06,
+      "match": "exact"
+    },
+    {
+      "word": "protocol",
+      "start": 4.06,
+      "end": 4.34,
+      "match": "exact"
+    },
+    {
+      "word": "boils",
+      "start": 4.34,
+      "end": 4.58,
+      "match": "exact"
+    },
+    {
+      "word": "everything",
+      "start": 4.58,
+      "end": 4.88,
+      "match": "exact"
+    },
+    {
+      "word": "down",
+      "start": 4.88,
+      "end": 5.18,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 5.18,
+      "end": 5.42,
+      "match": "exact"
+    },
+    {
+      "word": "three",
+      "start": 5.42,
+      "end": 5.66,
+      "match": "exact"
+    },
+    {
+      "word": "clean",
+      "start": 5.66,
+      "end": 6.1,
+      "match": "exact"
+    },
+    {
+      "word": "building",
+      "start": 6.1,
+      "end": 6.5,
+      "match": "exact"
+    },
+    {
+      "word": "blocks,",
+      "start": 6.5,
+      "end": 6.88,
+      "match": "exact"
+    },
+    {
+      "word": "organized",
+      "start": 7.04,
+      "end": 7.46,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 7.46,
+      "end": 7.78,
+      "match": "exact"
+    },
+    {
+      "word": "who",
+      "start": 7.78,
+      "end": 7.92,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 7.92,
+      "end": 8.04,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 8.04,
+      "end": 8.14,
+      "match": "exact"
+    },
+    {
+      "word": "control.",
+      "start": 8.14,
+      "end": 8.44,
+      "match": "exact"
+    },
+    {
+      "word": "First",
+      "start": 8.72,
+      "end": 9.18,
+      "match": "exact"
+    },
+    {
+      "word": "come",
+      "start": 9.18,
+      "end": 9.4,
+      "match": "exact"
+    },
+    {
+      "word": "tools—executable",
+      "start": 9.4,
+      "end": 10.72,
+      "match": "exact"
+    },
+    {
+      "word": "actions,",
+      "start": 10.72,
+      "end": 11.04,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 11.04,
+      "end": 11.4,
+      "match": "exact"
+    },
+    {
+      "word": "verbs,",
+      "start": 11.4,
+      "end": 11.72,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 11.84,
+      "end": 12.02,
+      "match": "exact"
+    },
+    {
+      "word": "searching",
+      "start": 12.02,
+      "end": 12.32,
+      "match": "exact"
+    },
+    {
+      "word": "Google",
+      "start": 12.32,
+      "end": 12.5,
+      "match": "exact"
+    },
+    {
+      "word": "Drive,",
+      "start": 12.5,
+      "end": 12.8,
+      "match": "exact"
+    },
+    {
+      "word": "scheduling",
+      "start": 13.04,
+      "end": 13.44,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 13.44,
+      "end": 13.6,
+      "match": "exact"
+    },
+    {
+      "word": "calendar",
+      "start": 13.6,
+      "end": 13.86,
+      "match": "exact"
+    },
+    {
+      "word": "event,",
+      "start": 13.86,
+      "end": 14.14,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 14.32,
+      "end": 14.48,
+      "match": "exact"
+    },
+    {
+      "word": "querying",
+      "start": 14.48,
+      "end": 14.86,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 14.86,
+      "end": 14.94,
+      "match": "exact"
+    },
+    {
+      "word": "database.",
+      "start": 14.94,
+      "end": 15.18,
+      "match": "exact"
+    },
+    {
+      "word": "Tools",
+      "start": 15.54,
+      "end": 16.1,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 16.1,
+      "end": 16.32,
+      "match": "exact"
+    },
+    {
+      "word": "model-controlled:",
+      "start": 16.32,
+      "end": 16.94,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 17.18,
+      "end": 17.4,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 17.4,
+      "end": 17.64,
+      "match": "exact"
+    },
+    {
+      "word": "reads",
+      "start": 17.64,
+      "end": 17.96,
+      "match": "exact"
+    },
+    {
+      "word": "their",
+      "start": 17.96,
+      "end": 18.16,
+      "match": "exact"
+    },
+    {
+      "word": "descriptions",
+      "start": 18.16,
+      "end": 18.54,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 18.54,
+      "end": 18.82,
+      "match": "exact"
+    },
+    {
+      "word": "decides",
+      "start": 18.82,
+      "end": 19.04,
+      "match": "exact"
+    },
+    {
+      "word": "when",
+      "start": 19.04,
+      "end": 19.3,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 19.3,
+      "end": 19.44,
+      "match": "exact"
+    },
+    {
+      "word": "call",
+      "start": 19.44,
+      "end": 19.62,
+      "match": "exact"
+    },
+    {
+      "word": "them.",
+      "start": 19.62,
+      "end": 19.78,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Once",
+      "start": 0.0,
+      "end": 0.32
+    },
+    {
+      "word": "connected,",
+      "start": 0.32,
+      "end": 0.7
+    },
+    {
+      "word": "what",
+      "start": 0.88,
+      "end": 1.16
+    },
+    {
+      "word": "can",
+      "start": 1.16,
+      "end": 1.3
+    },
+    {
+      "word": "an",
+      "start": 1.3,
+      "end": 1.46
+    },
+    {
+      "word": "MCP",
+      "start": 1.46,
+      "end": 1.8
+    },
+    {
+      "word": "server",
+      "start": 1.8,
+      "end": 2.08
+    },
+    {
+      "word": "actually",
+      "start": 2.08,
+      "end": 2.4
+    },
+    {
+      "word": "offer",
+      "start": 2.4,
+      "end": 2.72
+    },
+    {
+      "word": "your",
+      "start": 2.72,
+      "end": 2.96
+    },
+    {
+      "word": "AI?",
+      "start": 2.96,
+      "end": 3.16
+    },
+    {
+      "word": "The",
+      "start": 3.5,
+      "end": 4.06
+    },
+    {
+      "word": "protocol",
+      "start": 4.06,
+      "end": 4.34
+    },
+    {
+      "word": "boils",
+      "start": 4.34,
+      "end": 4.58
+    },
+    {
+      "word": "everything",
+      "start": 4.58,
+      "end": 4.88
+    },
+    {
+      "word": "down",
+      "start": 4.88,
+      "end": 5.18
+    },
+    {
+      "word": "to",
+      "start": 5.18,
+      "end": 5.42
+    },
+    {
+      "word": "three",
+      "start": 5.42,
+      "end": 5.66
+    },
+    {
+      "word": "clean",
+      "start": 5.66,
+      "end": 6.1
+    },
+    {
+      "word": "building",
+      "start": 6.1,
+      "end": 6.5
+    },
+    {
+      "word": "blocks,",
+      "start": 6.5,
+      "end": 6.88
+    },
+    {
+      "word": "organized",
+      "start": 7.04,
+      "end": 7.46
+    },
+    {
+      "word": "by",
+      "start": 7.46,
+      "end": 7.78
+    },
+    {
+      "word": "who",
+      "start": 7.78,
+      "end": 7.92
+    },
+    {
+      "word": "is",
+      "start": 7.92,
+      "end": 8.04
+    },
+    {
+      "word": "in",
+      "start": 8.04,
+      "end": 8.14
+    },
+    {
+      "word": "control.",
+      "start": 8.14,
+      "end": 8.44
+    },
+    {
+      "word": "First",
+      "start": 8.72,
+      "end": 9.18
+    },
+    {
+      "word": "come",
+      "start": 9.18,
+      "end": 9.4
+    },
+    {
+      "word": "tools,",
+      "start": 9.4,
+      "end": 9.72
+    },
+    {
+      "word": "executable",
+      "start": 9.9,
+      "end": 10.72
+    },
+    {
+      "word": "actions",
+      "start": 10.72,
+      "end": 11.04
+    },
+    {
+      "word": "or",
+      "start": 11.04,
+      "end": 11.4
+    },
+    {
+      "word": "verbs,",
+      "start": 11.4,
+      "end": 11.72
+    },
+    {
+      "word": "like",
+      "start": 11.84,
+      "end": 12.02
+    },
+    {
+      "word": "searching",
+      "start": 12.02,
+      "end": 12.32
+    },
+    {
+      "word": "Google",
+      "start": 12.32,
+      "end": 12.5
+    },
+    {
+      "word": "Drive,",
+      "start": 12.5,
+      "end": 12.8
+    },
+    {
+      "word": "scheduling",
+      "start": 13.04,
+      "end": 13.44
+    },
+    {
+      "word": "a",
+      "start": 13.44,
+      "end": 13.6
+    },
+    {
+      "word": "calendar",
+      "start": 13.6,
+      "end": 13.86
+    },
+    {
+      "word": "event,",
+      "start": 13.86,
+      "end": 14.14
+    },
+    {
+      "word": "or",
+      "start": 14.32,
+      "end": 14.48
+    },
+    {
+      "word": "querying",
+      "start": 14.48,
+      "end": 14.86
+    },
+    {
+      "word": "a",
+      "start": 14.86,
+      "end": 14.94
+    },
+    {
+      "word": "database.",
+      "start": 14.94,
+      "end": 15.18
+    },
+    {
+      "word": "Tools",
+      "start": 15.54,
+      "end": 16.1
+    },
+    {
+      "word": "are",
+      "start": 16.1,
+      "end": 16.32
+    },
+    {
+      "word": "model",
+      "start": 16.32,
+      "end": 16.62
+    },
+    {
+      "word": "-controlled,",
+      "start": 16.62,
+      "end": 16.94
+    },
+    {
+      "word": "the",
+      "start": 17.18,
+      "end": 17.4
+    },
+    {
+      "word": "AI",
+      "start": 17.4,
+      "end": 17.64
+    },
+    {
+      "word": "reads",
+      "start": 17.64,
+      "end": 17.96
+    },
+    {
+      "word": "their",
+      "start": 17.96,
+      "end": 18.16
+    },
+    {
+      "word": "descriptions",
+      "start": 18.16,
+      "end": 18.54
+    },
+    {
+      "word": "and",
+      "start": 18.54,
+      "end": 18.82
+    },
+    {
+      "word": "decides",
+      "start": 18.82,
+      "end": 19.04
+    },
+    {
+      "word": "when",
+      "start": 19.04,
+      "end": 19.3
+    },
+    {
+      "word": "to",
+      "start": 19.3,
+      "end": 19.44
+    },
+    {
+      "word": "call",
+      "start": 19.44,
+      "end": 19.62
+    },
+    {
+      "word": "them.",
+      "start": 19.62,
+      "end": 19.78
+    }
+  ]
+}

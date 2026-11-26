@@ -1,0 +1,46 @@
+RESULT: PASS
+Words: 1706   Failed: 15 (0.88%)   Limit: 40 total, 25% per file
+
+001.modern-ai-models.mp3: 0/58 failed   [large-v3 (0 failed)]
+002.that-everyday-friction.mp3: 1/55 failed   [large-v3 (1 failed)]
+    word #24 "Claude," @ 7.98s: heard "Cloud,"
+003.whether-you-use.mp3: 0/55 failed   [large-v3 (0 failed)]
+004.to-see-why.mp3: 0/57 failed   [large-v3 (0 failed)]
+005.the-math-gets.mp3: 1/55 failed   [large-v3 (1 failed)]
+    word #51 "thousand" @ 15.62s: heard ",000"
+006.mcp-breaks-that.mp3: 0/60 failed   [large-v3 (0 failed)]
+007.here-is-a.mp3: 0/60 failed   [large-v3 (0 failed)]
+008.now-let-us.mp3: 2/60 failed   [large-v3 (2 failed)]
+    words #39-40 (2) "use—like Claude," @ 10.64s: heard "use, like Cloud,"
+009.hidden-inside-the.mp3: 1/57 failed   [large-v3 (1 failed)]
+    word #36 "focused" @ 13.30s: heard "focus"
+010.whenever-a-client.mp3: 2/58 failed   [large-v3 (2 failed)]
+    words #16-17 (2) "point zero—just" @ 5.28s: heard ".0, just"
+011.keeping-one-dedicated.mp3: 1/60 failed   [large-v3 (1 failed)]
+    word #22 "files" @ 7.24s: heard "file"
+012.once-connected-what.mp3: 0/59 failed   [large-v3 (0 failed)]
+013.second-come-resources-structured.mp3: 1/57 failed   [large-v3 (1 failed)]
+    word #15 "in" @ 5.86s: heard "and"
+014.third-come-prompts-reusable.mp3: 0/57 failed   [large-v3 (0 failed)]
+015.on-top-of.mp3: 0/60 failed   [large-v3 (0 failed)]
+016.let-us-watch.mp3: 0/60 failed   [large-v3 (0 failed)]
+017.next-the-host.mp3: 0/59 failed   [large-v3 (0 failed)]
+018.the-host-reads.mp3: 1/57 failed   [large-v3 (1 failed)]
+    word #21 "queries" @ 5.98s: heard "query"
+019.now-the-model.mp3: 0/58 failed   [large-v3 (0 failed)]
+020.where-do-mcp.mp3: 0/53 failed   [large-v3 (0 failed)]
+021.when-your-data.mp3: 1/60 failed   [large-v3 (1 failed)]
+    word #50 "point" @ 17.96s: not heard (timing estimated)
+022.choosing-between-the.mp3: 0/59 failed   [large-v3 (0 failed)]
+023.ready-to-try.mp3: 0/55 failed   [large-v3 (0 failed)]
+024.second-for-power.mp3: 1/52 failed   [large-v3 (1 failed)]
+    word #47 "TypeScript" @ 16.34s: heard "Tidescript"
+025.either-way-one.mp3: 0/59 failed   [large-v3 (0 failed)]
+026.before-wiring-everything.mp3: 2/54 failed   [large-v3 (2 failed)]
+    word #36 "you" @ 12.62s: heard "you'll"
+    word #46 "focused" @ 16.44s: heard "focus"
+027.second-is-security.mp3: 1/59 failed   [large-v3 (1 failed)]
+    word #58 "writes." @ 23.64s: heard "rights."
+028.third-know-when.mp3: 0/51 failed   [large-v3 (0 failed)]
+029.step-back-and.mp3: 0/60 failed   [large-v3 (0 failed)]
+030.drop-a-comment.mp3: 0/42 failed   [large-v3 (0 failed)]

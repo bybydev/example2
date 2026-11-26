@@ -1,0 +1,607 @@
+{
+  "audio": "024.second-for-power.mp3",
+  "paragraph": 24,
+  "text": "Second, for power users and developers who want local tools or custom workflows, almost every MCP host reads the same simple JSON config block—a server name pointed at a local command or remote web address. Building your own takes roughly thirty lines of Python with FastMCP or TypeScript with the official SDK.",
+  "transcript": "Second, for power users and developers who want local tools or custom workflows, almost every MCP host reads the same simple JSON config block, a server name pointed at a local command or remote web address. Building your own takes roughly 30 lines of Python with FastMCP or Tidescript with the official SDK.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 1
+    }
+  ],
+  "duration": 18.68,
+  "failed_words": 1,
+  "failures": [
+    {
+      "index": 47,
+      "word": "TypeScript",
+      "match": "approx",
+      "heard": "Tidescript",
+      "start": 16.34
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Second,",
+      "start": 0.0,
+      "end": 0.48,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 0.66,
+      "end": 0.82,
+      "match": "exact"
+    },
+    {
+      "word": "power",
+      "start": 0.82,
+      "end": 1.1,
+      "match": "exact"
+    },
+    {
+      "word": "users",
+      "start": 1.1,
+      "end": 1.38,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 1.38,
+      "end": 1.66,
+      "match": "exact"
+    },
+    {
+      "word": "developers",
+      "start": 1.66,
+      "end": 2.02,
+      "match": "exact"
+    },
+    {
+      "word": "who",
+      "start": 2.02,
+      "end": 2.42,
+      "match": "exact"
+    },
+    {
+      "word": "want",
+      "start": 2.42,
+      "end": 2.62,
+      "match": "exact"
+    },
+    {
+      "word": "local",
+      "start": 2.62,
+      "end": 2.94,
+      "match": "exact"
+    },
+    {
+      "word": "tools",
+      "start": 2.94,
+      "end": 3.3,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 3.3,
+      "end": 3.52,
+      "match": "exact"
+    },
+    {
+      "word": "custom",
+      "start": 3.52,
+      "end": 3.8,
+      "match": "exact"
+    },
+    {
+      "word": "workflows,",
+      "start": 3.8,
+      "end": 4.14,
+      "match": "exact"
+    },
+    {
+      "word": "almost",
+      "start": 4.58,
+      "end": 5.04,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 5.04,
+      "end": 5.42,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 5.42,
+      "end": 5.98,
+      "match": "exact"
+    },
+    {
+      "word": "host",
+      "start": 5.98,
+      "end": 6.22,
+      "match": "exact"
+    },
+    {
+      "word": "reads",
+      "start": 6.22,
+      "end": 6.58,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 6.58,
+      "end": 6.76,
+      "match": "exact"
+    },
+    {
+      "word": "same",
+      "start": 6.76,
+      "end": 7.02,
+      "match": "exact"
+    },
+    {
+      "word": "simple",
+      "start": 7.02,
+      "end": 7.44,
+      "match": "exact"
+    },
+    {
+      "word": "JSON",
+      "start": 7.44,
+      "end": 7.76,
+      "match": "exact"
+    },
+    {
+      "word": "config",
+      "start": 7.76,
+      "end": 8.08,
+      "match": "exact"
+    },
+    {
+      "word": "block—a",
+      "start": 8.08,
+      "end": 9.1,
+      "match": "exact"
+    },
+    {
+      "word": "server",
+      "start": 9.1,
+      "end": 9.36,
+      "match": "exact"
+    },
+    {
+      "word": "name",
+      "start": 9.36,
+      "end": 9.58,
+      "match": "exact"
+    },
+    {
+      "word": "pointed",
+      "start": 9.58,
+      "end": 9.92,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 9.92,
+      "end": 10.14,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 10.14,
+      "end": 10.16,
+      "match": "exact"
+    },
+    {
+      "word": "local",
+      "start": 10.16,
+      "end": 10.38,
+      "match": "exact"
+    },
+    {
+      "word": "command",
+      "start": 10.38,
+      "end": 10.68,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 10.68,
+      "end": 11.0,
+      "match": "exact"
+    },
+    {
+      "word": "remote",
+      "start": 11.0,
+      "end": 11.24,
+      "match": "exact"
+    },
+    {
+      "word": "web",
+      "start": 11.24,
+      "end": 11.44,
+      "match": "exact"
+    },
+    {
+      "word": "address.",
+      "start": 11.44,
+      "end": 11.7,
+      "match": "exact"
+    },
+    {
+      "word": "Building",
+      "start": 12.52,
+      "end": 13.12,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 13.12,
+      "end": 13.3,
+      "match": "exact"
+    },
+    {
+      "word": "own",
+      "start": 13.3,
+      "end": 13.5,
+      "match": "exact"
+    },
+    {
+      "word": "takes",
+      "start": 13.5,
+      "end": 13.68,
+      "match": "exact"
+    },
+    {
+      "word": "roughly",
+      "start": 13.68,
+      "end": 13.92,
+      "match": "exact"
+    },
+    {
+      "word": "thirty",
+      "start": 13.92,
+      "end": 14.26,
+      "match": "exact"
+    },
+    {
+      "word": "lines",
+      "start": 14.26,
+      "end": 14.56,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 14.56,
+      "end": 14.7,
+      "match": "exact"
+    },
+    {
+      "word": "Python",
+      "start": 14.7,
+      "end": 15.0,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 15.0,
+      "end": 15.32,
+      "match": "exact"
+    },
+    {
+      "word": "FastMCP",
+      "start": 15.32,
+      "end": 16.1,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 16.1,
+      "end": 16.34,
+      "match": "exact"
+    },
+    {
+      "word": "TypeScript",
+      "start": 16.34,
+      "end": 16.78,
+      "match": "approx",
+      "heard": "Tidescript"
+    },
+    {
+      "word": "with",
+      "start": 16.78,
+      "end": 17.24,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 17.24,
+      "end": 17.34,
+      "match": "exact"
+    },
+    {
+      "word": "official",
+      "start": 17.34,
+      "end": 17.56,
+      "match": "exact"
+    },
+    {
+      "word": "SDK.",
+      "start": 17.56,
+      "end": 17.96,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Second,",
+      "start": 0.0,
+      "end": 0.48
+    },
+    {
+      "word": "for",
+      "start": 0.66,
+      "end": 0.82
+    },
+    {
+      "word": "power",
+      "start": 0.82,
+      "end": 1.1
+    },
+    {
+      "word": "users",
+      "start": 1.1,
+      "end": 1.38
+    },
+    {
+      "word": "and",
+      "start": 1.38,
+      "end": 1.66
+    },
+    {
+      "word": "developers",
+      "start": 1.66,
+      "end": 2.02
+    },
+    {
+      "word": "who",
+      "start": 2.02,
+      "end": 2.42
+    },
+    {
+      "word": "want",
+      "start": 2.42,
+      "end": 2.62
+    },
+    {
+      "word": "local",
+      "start": 2.62,
+      "end": 2.94
+    },
+    {
+      "word": "tools",
+      "start": 2.94,
+      "end": 3.3
+    },
+    {
+      "word": "or",
+      "start": 3.3,
+      "end": 3.52
+    },
+    {
+      "word": "custom",
+      "start": 3.52,
+      "end": 3.8
+    },
+    {
+      "word": "workflows,",
+      "start": 3.8,
+      "end": 4.14
+    },
+    {
+      "word": "almost",
+      "start": 4.58,
+      "end": 5.04
+    },
+    {
+      "word": "every",
+      "start": 5.04,
+      "end": 5.42
+    },
+    {
+      "word": "MCP",
+      "start": 5.42,
+      "end": 5.98
+    },
+    {
+      "word": "host",
+      "start": 5.98,
+      "end": 6.22
+    },
+    {
+      "word": "reads",
+      "start": 6.22,
+      "end": 6.58
+    },
+    {
+      "word": "the",
+      "start": 6.58,
+      "end": 6.76
+    },
+    {
+      "word": "same",
+      "start": 6.76,
+      "end": 7.02
+    },
+    {
+      "word": "simple",
+      "start": 7.02,
+      "end": 7.44
+    },
+    {
+      "word": "JSON",
+      "start": 7.44,
+      "end": 7.76
+    },
+    {
+      "word": "config",
+      "start": 7.76,
+      "end": 8.08
+    },
+    {
+      "word": "block,",
+      "start": 8.08,
+      "end": 8.46
+    },
+    {
+      "word": "a",
+      "start": 8.68,
+      "end": 9.1
+    },
+    {
+      "word": "server",
+      "start": 9.1,
+      "end": 9.36
+    },
+    {
+      "word": "name",
+      "start": 9.36,
+      "end": 9.58
+    },
+    {
+      "word": "pointed",
+      "start": 9.58,
+      "end": 9.92
+    },
+    {
+      "word": "at",
+      "start": 9.92,
+      "end": 10.14
+    },
+    {
+      "word": "a",
+      "start": 10.14,
+      "end": 10.16
+    },
+    {
+      "word": "local",
+      "start": 10.16,
+      "end": 10.38
+    },
+    {
+      "word": "command",
+      "start": 10.38,
+      "end": 10.68
+    },
+    {
+      "word": "or",
+      "start": 10.68,
+      "end": 11.0
+    },
+    {
+      "word": "remote",
+      "start": 11.0,
+      "end": 11.24
+    },
+    {
+      "word": "web",
+      "start": 11.24,
+      "end": 11.44
+    },
+    {
+      "word": "address.",
+      "start": 11.44,
+      "end": 11.7
+    },
+    {
+      "word": "Building",
+      "start": 12.52,
+      "end": 13.12
+    },
+    {
+      "word": "your",
+      "start": 13.12,
+      "end": 13.3
+    },
+    {
+      "word": "own",
+      "start": 13.3,
+      "end": 13.5
+    },
+    {
+      "word": "takes",
+      "start": 13.5,
+      "end": 13.68
+    },
+    {
+      "word": "roughly",
+      "start": 13.68,
+      "end": 13.92
+    },
+    {
+      "word": "30",
+      "start": 13.92,
+      "end": 14.26
+    },
+    {
+      "word": "lines",
+      "start": 14.26,
+      "end": 14.56
+    },
+    {
+      "word": "of",
+      "start": 14.56,
+      "end": 14.7
+    },
+    {
+      "word": "Python",
+      "start": 14.7,
+      "end": 15.0
+    },
+    {
+      "word": "with",
+      "start": 15.0,
+      "end": 15.32
+    },
+    {
+      "word": "FastMCP",
+      "start": 15.32,
+      "end": 16.1
+    },
+    {
+      "word": "or",
+      "start": 16.1,
+      "end": 16.34
+    },
+    {
+      "word": "Tidescript",
+      "start": 16.34,
+      "end": 16.78
+    },
+    {
+      "word": "with",
+      "start": 16.78,
+      "end": 17.24
+    },
+    {
+      "word": "the",
+      "start": 17.24,
+      "end": 17.34
+    },
+    {
+      "word": "official",
+      "start": 17.34,
+      "end": 17.56
+    },
+    {
+      "word": "SDK.",
+      "start": 17.56,
+      "end": 17.96
+    }
+  ]
+}

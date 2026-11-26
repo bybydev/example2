@@ -1,0 +1,609 @@
+{
+  "audio": "020.where-do-mcp.mp3",
+  "paragraph": 20,
+  "text": "Where do MCP servers actually run? Depending on where your data lives, MCP supports two main transports. When connecting to local folders, personal notes, Git repositories, or a local database on your machine, the host launches the server as a tiny local subprocess using standard input and output—fast and completely private by default.",
+  "transcript": "Where do MCP servers actually run? Depending on where your data lives, MCP supports two main transports. When connecting to local folders, personal notes, Git repositories, or a local database on your machine, the host launches the server as a tiny local subprocess using standard input and output, fast and completely private by default.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 19.4,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Where",
+      "start": 0.0,
+      "end": 0.34,
+      "match": "exact"
+    },
+    {
+      "word": "do",
+      "start": 0.34,
+      "end": 0.48,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 0.48,
+      "end": 0.94,
+      "match": "exact"
+    },
+    {
+      "word": "servers",
+      "start": 0.94,
+      "end": 1.2,
+      "match": "exact"
+    },
+    {
+      "word": "actually",
+      "start": 1.2,
+      "end": 1.62,
+      "match": "exact"
+    },
+    {
+      "word": "run?",
+      "start": 1.62,
+      "end": 2.0,
+      "match": "exact"
+    },
+    {
+      "word": "Depending",
+      "start": 2.64,
+      "end": 3.18,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 3.18,
+      "end": 3.44,
+      "match": "exact"
+    },
+    {
+      "word": "where",
+      "start": 3.44,
+      "end": 3.6,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 3.6,
+      "end": 3.74,
+      "match": "exact"
+    },
+    {
+      "word": "data",
+      "start": 3.74,
+      "end": 3.94,
+      "match": "exact"
+    },
+    {
+      "word": "lives,",
+      "start": 3.94,
+      "end": 4.16,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 4.44,
+      "end": 5.02,
+      "match": "exact"
+    },
+    {
+      "word": "supports",
+      "start": 5.02,
+      "end": 5.44,
+      "match": "exact"
+    },
+    {
+      "word": "two",
+      "start": 5.44,
+      "end": 5.76,
+      "match": "exact"
+    },
+    {
+      "word": "main",
+      "start": 5.76,
+      "end": 6.04,
+      "match": "exact"
+    },
+    {
+      "word": "transports.",
+      "start": 6.04,
+      "end": 6.76,
+      "match": "exact"
+    },
+    {
+      "word": "When",
+      "start": 6.76,
+      "end": 7.18,
+      "match": "exact"
+    },
+    {
+      "word": "connecting",
+      "start": 7.18,
+      "end": 7.44,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 7.44,
+      "end": 7.64,
+      "match": "exact"
+    },
+    {
+      "word": "local",
+      "start": 7.64,
+      "end": 7.84,
+      "match": "exact"
+    },
+    {
+      "word": "folders,",
+      "start": 7.84,
+      "end": 8.26,
+      "match": "exact"
+    },
+    {
+      "word": "personal",
+      "start": 8.52,
+      "end": 8.78,
+      "match": "exact"
+    },
+    {
+      "word": "notes,",
+      "start": 8.78,
+      "end": 9.2,
+      "match": "exact"
+    },
+    {
+      "word": "Git",
+      "start": 9.38,
+      "end": 9.46,
+      "match": "exact"
+    },
+    {
+      "word": "repositories,",
+      "start": 9.46,
+      "end": 10.3,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 10.36,
+      "end": 10.5,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 10.5,
+      "end": 10.6,
+      "match": "exact"
+    },
+    {
+      "word": "local",
+      "start": 10.6,
+      "end": 10.8,
+      "match": "exact"
+    },
+    {
+      "word": "database",
+      "start": 10.8,
+      "end": 11.12,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 11.12,
+      "end": 11.36,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 11.36,
+      "end": 11.44,
+      "match": "exact"
+    },
+    {
+      "word": "machine,",
+      "start": 11.44,
+      "end": 11.72,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 12.04,
+      "end": 12.38,
+      "match": "exact"
+    },
+    {
+      "word": "host",
+      "start": 12.38,
+      "end": 12.6,
+      "match": "exact"
+    },
+    {
+      "word": "launches",
+      "start": 12.6,
+      "end": 13.0,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 13.0,
+      "end": 13.12,
+      "match": "exact"
+    },
+    {
+      "word": "server",
+      "start": 13.12,
+      "end": 13.44,
+      "match": "exact"
+    },
+    {
+      "word": "as",
+      "start": 13.44,
+      "end": 13.62,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 13.62,
+      "end": 13.72,
+      "match": "exact"
+    },
+    {
+      "word": "tiny",
+      "start": 13.72,
+      "end": 14.0,
+      "match": "exact"
+    },
+    {
+      "word": "local",
+      "start": 14.0,
+      "end": 14.26,
+      "match": "exact"
+    },
+    {
+      "word": "subprocess",
+      "start": 14.26,
+      "end": 14.78,
+      "match": "exact"
+    },
+    {
+      "word": "using",
+      "start": 14.78,
+      "end": 15.3,
+      "match": "exact"
+    },
+    {
+      "word": "standard",
+      "start": 15.3,
+      "end": 15.72,
+      "match": "exact"
+    },
+    {
+      "word": "input",
+      "start": 15.72,
+      "end": 16.04,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 16.04,
+      "end": 16.34,
+      "match": "exact"
+    },
+    {
+      "word": "output—fast",
+      "start": 16.34,
+      "end": 17.28,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 17.28,
+      "end": 17.46,
+      "match": "exact"
+    },
+    {
+      "word": "completely",
+      "start": 17.46,
+      "end": 17.72,
+      "match": "exact"
+    },
+    {
+      "word": "private",
+      "start": 17.72,
+      "end": 18.18,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 18.18,
+      "end": 18.44,
+      "match": "exact"
+    },
+    {
+      "word": "default.",
+      "start": 18.44,
+      "end": 18.68,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Where",
+      "start": 0.0,
+      "end": 0.34
+    },
+    {
+      "word": "do",
+      "start": 0.34,
+      "end": 0.48
+    },
+    {
+      "word": "MCP",
+      "start": 0.48,
+      "end": 0.94
+    },
+    {
+      "word": "servers",
+      "start": 0.94,
+      "end": 1.2
+    },
+    {
+      "word": "actually",
+      "start": 1.2,
+      "end": 1.62
+    },
+    {
+      "word": "run?",
+      "start": 1.62,
+      "end": 2.0
+    },
+    {
+      "word": "Depending",
+      "start": 2.64,
+      "end": 3.18
+    },
+    {
+      "word": "on",
+      "start": 3.18,
+      "end": 3.44
+    },
+    {
+      "word": "where",
+      "start": 3.44,
+      "end": 3.6
+    },
+    {
+      "word": "your",
+      "start": 3.6,
+      "end": 3.74
+    },
+    {
+      "word": "data",
+      "start": 3.74,
+      "end": 3.94
+    },
+    {
+      "word": "lives,",
+      "start": 3.94,
+      "end": 4.16
+    },
+    {
+      "word": "MCP",
+      "start": 4.44,
+      "end": 5.02
+    },
+    {
+      "word": "supports",
+      "start": 5.02,
+      "end": 5.44
+    },
+    {
+      "word": "two",
+      "start": 5.44,
+      "end": 5.76
+    },
+    {
+      "word": "main",
+      "start": 5.76,
+      "end": 6.04
+    },
+    {
+      "word": "transports.",
+      "start": 6.04,
+      "end": 6.76
+    },
+    {
+      "word": "When",
+      "start": 6.76,
+      "end": 7.18
+    },
+    {
+      "word": "connecting",
+      "start": 7.18,
+      "end": 7.44
+    },
+    {
+      "word": "to",
+      "start": 7.44,
+      "end": 7.64
+    },
+    {
+      "word": "local",
+      "start": 7.64,
+      "end": 7.84
+    },
+    {
+      "word": "folders,",
+      "start": 7.84,
+      "end": 8.26
+    },
+    {
+      "word": "personal",
+      "start": 8.52,
+      "end": 8.78
+    },
+    {
+      "word": "notes,",
+      "start": 8.78,
+      "end": 9.2
+    },
+    {
+      "word": "Git",
+      "start": 9.38,
+      "end": 9.46
+    },
+    {
+      "word": "repositories,",
+      "start": 9.46,
+      "end": 10.3
+    },
+    {
+      "word": "or",
+      "start": 10.36,
+      "end": 10.5
+    },
+    {
+      "word": "a",
+      "start": 10.5,
+      "end": 10.6
+    },
+    {
+      "word": "local",
+      "start": 10.6,
+      "end": 10.8
+    },
+    {
+      "word": "database",
+      "start": 10.8,
+      "end": 11.12
+    },
+    {
+      "word": "on",
+      "start": 11.12,
+      "end": 11.36
+    },
+    {
+      "word": "your",
+      "start": 11.36,
+      "end": 11.44
+    },
+    {
+      "word": "machine,",
+      "start": 11.44,
+      "end": 11.72
+    },
+    {
+      "word": "the",
+      "start": 12.04,
+      "end": 12.38
+    },
+    {
+      "word": "host",
+      "start": 12.38,
+      "end": 12.6
+    },
+    {
+      "word": "launches",
+      "start": 12.6,
+      "end": 13.0
+    },
+    {
+      "word": "the",
+      "start": 13.0,
+      "end": 13.12
+    },
+    {
+      "word": "server",
+      "start": 13.12,
+      "end": 13.44
+    },
+    {
+      "word": "as",
+      "start": 13.44,
+      "end": 13.62
+    },
+    {
+      "word": "a",
+      "start": 13.62,
+      "end": 13.72
+    },
+    {
+      "word": "tiny",
+      "start": 13.72,
+      "end": 14.0
+    },
+    {
+      "word": "local",
+      "start": 14.0,
+      "end": 14.26
+    },
+    {
+      "word": "subprocess",
+      "start": 14.26,
+      "end": 14.78
+    },
+    {
+      "word": "using",
+      "start": 14.78,
+      "end": 15.3
+    },
+    {
+      "word": "standard",
+      "start": 15.3,
+      "end": 15.72
+    },
+    {
+      "word": "input",
+      "start": 15.72,
+      "end": 16.04
+    },
+    {
+      "word": "and",
+      "start": 16.04,
+      "end": 16.34
+    },
+    {
+      "word": "output,",
+      "start": 16.34,
+      "end": 16.64
+    },
+    {
+      "word": "fast",
+      "start": 16.84,
+      "end": 17.28
+    },
+    {
+      "word": "and",
+      "start": 17.28,
+      "end": 17.46
+    },
+    {
+      "word": "completely",
+      "start": 17.46,
+      "end": 17.72
+    },
+    {
+      "word": "private",
+      "start": 17.72,
+      "end": 18.18
+    },
+    {
+      "word": "by",
+      "start": 18.18,
+      "end": 18.44
+    },
+    {
+      "word": "default.",
+      "start": 18.44,
+      "end": 18.68
+    }
+  ]
+}

@@ -1,0 +1,681 @@
+{
+  "audio": "010.whenever-a-client.mp3",
+  "paragraph": 10,
+  "text": "Whenever a client connects to a server, they speak a simple, structured language called JSON-RPC two point zero—just lightweight JSON messages going back and forth. Before doing any real work, the two sides perform a quick initialize handshake, agreeing on a protocol version and announcing exactly which features each side supports so neither side ever has to guess.",
+  "transcript": "Whenever a client connects to a server, they speak a simple structured language called JSON RPC 2.0, just lightweight JSON messages going back and forth. Before doing any real work, the two sides perform a quick initialize handshake, agreeing on a protocol version and announcing exactly which features each side supports so neither side ever has to guess.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 2
+    }
+  ],
+  "duration": 19.52,
+  "failed_words": 2,
+  "failures": [
+    {
+      "index": 16,
+      "word": "point",
+      "match": "approx",
+      "heard": ".0, just",
+      "start": 5.28
+    },
+    {
+      "index": 17,
+      "word": "zero—just",
+      "match": "approx",
+      "heard": ".0, just",
+      "start": 5.83
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Whenever",
+      "start": 0.0,
+      "end": 0.3,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 0.3,
+      "end": 0.5,
+      "match": "exact"
+    },
+    {
+      "word": "client",
+      "start": 0.5,
+      "end": 0.76,
+      "match": "exact"
+    },
+    {
+      "word": "connects",
+      "start": 0.76,
+      "end": 1.02,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 1.02,
+      "end": 1.22,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 1.22,
+      "end": 1.32,
+      "match": "exact"
+    },
+    {
+      "word": "server,",
+      "start": 1.32,
+      "end": 1.64,
+      "match": "exact"
+    },
+    {
+      "word": "they",
+      "start": 1.78,
+      "end": 2.0,
+      "match": "exact"
+    },
+    {
+      "word": "speak",
+      "start": 2.0,
+      "end": 2.26,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 2.26,
+      "end": 2.38,
+      "match": "exact"
+    },
+    {
+      "word": "simple,",
+      "start": 2.38,
+      "end": 2.68,
+      "match": "exact"
+    },
+    {
+      "word": "structured",
+      "start": 2.68,
+      "end": 2.98,
+      "match": "exact"
+    },
+    {
+      "word": "language",
+      "start": 2.98,
+      "end": 3.48,
+      "match": "exact"
+    },
+    {
+      "word": "called",
+      "start": 3.48,
+      "end": 3.88,
+      "match": "exact"
+    },
+    {
+      "word": "JSON-RPC",
+      "start": 3.88,
+      "end": 4.9,
+      "match": "exact"
+    },
+    {
+      "word": "two",
+      "start": 4.9,
+      "end": 5.28,
+      "match": "exact"
+    },
+    {
+      "word": "point",
+      "start": 5.28,
+      "end": 5.83,
+      "match": "approx",
+      "heard": ".0, just"
+    },
+    {
+      "word": "zero—just",
+      "start": 5.83,
+      "end": 6.38,
+      "match": "approx",
+      "heard": ".0, just"
+    },
+    {
+      "word": "lightweight",
+      "start": 6.38,
+      "end": 6.72,
+      "match": "exact"
+    },
+    {
+      "word": "JSON",
+      "start": 6.72,
+      "end": 7.04,
+      "match": "exact"
+    },
+    {
+      "word": "messages",
+      "start": 7.04,
+      "end": 7.5,
+      "match": "exact"
+    },
+    {
+      "word": "going",
+      "start": 7.5,
+      "end": 7.84,
+      "match": "exact"
+    },
+    {
+      "word": "back",
+      "start": 7.84,
+      "end": 8.1,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 8.1,
+      "end": 8.24,
+      "match": "exact"
+    },
+    {
+      "word": "forth.",
+      "start": 8.24,
+      "end": 8.52,
+      "match": "exact"
+    },
+    {
+      "word": "Before",
+      "start": 8.76,
+      "end": 9.32,
+      "match": "exact"
+    },
+    {
+      "word": "doing",
+      "start": 9.32,
+      "end": 9.54,
+      "match": "exact"
+    },
+    {
+      "word": "any",
+      "start": 9.54,
+      "end": 9.78,
+      "match": "exact"
+    },
+    {
+      "word": "real",
+      "start": 9.78,
+      "end": 9.98,
+      "match": "exact"
+    },
+    {
+      "word": "work,",
+      "start": 9.98,
+      "end": 10.24,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 10.44,
+      "end": 10.66,
+      "match": "exact"
+    },
+    {
+      "word": "two",
+      "start": 10.66,
+      "end": 10.82,
+      "match": "exact"
+    },
+    {
+      "word": "sides",
+      "start": 10.82,
+      "end": 11.08,
+      "match": "exact"
+    },
+    {
+      "word": "perform",
+      "start": 11.08,
+      "end": 11.36,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 11.36,
+      "end": 11.68,
+      "match": "exact"
+    },
+    {
+      "word": "quick",
+      "start": 11.68,
+      "end": 11.84,
+      "match": "exact"
+    },
+    {
+      "word": "initialize",
+      "start": 11.84,
+      "end": 12.46,
+      "match": "exact"
+    },
+    {
+      "word": "handshake,",
+      "start": 12.46,
+      "end": 13.0,
+      "match": "exact"
+    },
+    {
+      "word": "agreeing",
+      "start": 13.1,
+      "end": 13.52,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 13.52,
+      "end": 13.78,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 13.78,
+      "end": 13.82,
+      "match": "exact"
+    },
+    {
+      "word": "protocol",
+      "start": 13.82,
+      "end": 14.1,
+      "match": "exact"
+    },
+    {
+      "word": "version",
+      "start": 14.1,
+      "end": 14.44,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 14.44,
+      "end": 14.86,
+      "match": "exact"
+    },
+    {
+      "word": "announcing",
+      "start": 14.86,
+      "end": 15.18,
+      "match": "exact"
+    },
+    {
+      "word": "exactly",
+      "start": 15.18,
+      "end": 15.54,
+      "match": "exact"
+    },
+    {
+      "word": "which",
+      "start": 15.54,
+      "end": 15.92,
+      "match": "exact"
+    },
+    {
+      "word": "features",
+      "start": 15.92,
+      "end": 16.3,
+      "match": "exact"
+    },
+    {
+      "word": "each",
+      "start": 16.3,
+      "end": 16.58,
+      "match": "exact"
+    },
+    {
+      "word": "side",
+      "start": 16.58,
+      "end": 16.8,
+      "match": "exact"
+    },
+    {
+      "word": "supports",
+      "start": 16.8,
+      "end": 17.18,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 17.18,
+      "end": 17.74,
+      "match": "exact"
+    },
+    {
+      "word": "neither",
+      "start": 17.74,
+      "end": 17.94,
+      "match": "exact"
+    },
+    {
+      "word": "side",
+      "start": 17.94,
+      "end": 18.26,
+      "match": "exact"
+    },
+    {
+      "word": "ever",
+      "start": 18.26,
+      "end": 18.54,
+      "match": "exact"
+    },
+    {
+      "word": "has",
+      "start": 18.54,
+      "end": 18.72,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 18.72,
+      "end": 18.86,
+      "match": "exact"
+    },
+    {
+      "word": "guess.",
+      "start": 18.86,
+      "end": 19.06,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Whenever",
+      "start": 0.0,
+      "end": 0.3
+    },
+    {
+      "word": "a",
+      "start": 0.3,
+      "end": 0.5
+    },
+    {
+      "word": "client",
+      "start": 0.5,
+      "end": 0.76
+    },
+    {
+      "word": "connects",
+      "start": 0.76,
+      "end": 1.02
+    },
+    {
+      "word": "to",
+      "start": 1.02,
+      "end": 1.22
+    },
+    {
+      "word": "a",
+      "start": 1.22,
+      "end": 1.32
+    },
+    {
+      "word": "server,",
+      "start": 1.32,
+      "end": 1.64
+    },
+    {
+      "word": "they",
+      "start": 1.78,
+      "end": 2.0
+    },
+    {
+      "word": "speak",
+      "start": 2.0,
+      "end": 2.26
+    },
+    {
+      "word": "a",
+      "start": 2.26,
+      "end": 2.38
+    },
+    {
+      "word": "simple",
+      "start": 2.38,
+      "end": 2.68
+    },
+    {
+      "word": "structured",
+      "start": 2.68,
+      "end": 2.98
+    },
+    {
+      "word": "language",
+      "start": 2.98,
+      "end": 3.48
+    },
+    {
+      "word": "called",
+      "start": 3.48,
+      "end": 3.88
+    },
+    {
+      "word": "JSON",
+      "start": 3.88,
+      "end": 4.26
+    },
+    {
+      "word": "RPC",
+      "start": 4.26,
+      "end": 4.9
+    },
+    {
+      "word": "2",
+      "start": 4.9,
+      "end": 5.28
+    },
+    {
+      "word": ".0,",
+      "start": 5.28,
+      "end": 5.88
+    },
+    {
+      "word": "just",
+      "start": 6.02,
+      "end": 6.38
+    },
+    {
+      "word": "lightweight",
+      "start": 6.38,
+      "end": 6.72
+    },
+    {
+      "word": "JSON",
+      "start": 6.72,
+      "end": 7.04
+    },
+    {
+      "word": "messages",
+      "start": 7.04,
+      "end": 7.5
+    },
+    {
+      "word": "going",
+      "start": 7.5,
+      "end": 7.84
+    },
+    {
+      "word": "back",
+      "start": 7.84,
+      "end": 8.1
+    },
+    {
+      "word": "and",
+      "start": 8.1,
+      "end": 8.24
+    },
+    {
+      "word": "forth.",
+      "start": 8.24,
+      "end": 8.52
+    },
+    {
+      "word": "Before",
+      "start": 8.76,
+      "end": 9.32
+    },
+    {
+      "word": "doing",
+      "start": 9.32,
+      "end": 9.54
+    },
+    {
+      "word": "any",
+      "start": 9.54,
+      "end": 9.78
+    },
+    {
+      "word": "real",
+      "start": 9.78,
+      "end": 9.98
+    },
+    {
+      "word": "work,",
+      "start": 9.98,
+      "end": 10.24
+    },
+    {
+      "word": "the",
+      "start": 10.44,
+      "end": 10.66
+    },
+    {
+      "word": "two",
+      "start": 10.66,
+      "end": 10.82
+    },
+    {
+      "word": "sides",
+      "start": 10.82,
+      "end": 11.08
+    },
+    {
+      "word": "perform",
+      "start": 11.08,
+      "end": 11.36
+    },
+    {
+      "word": "a",
+      "start": 11.36,
+      "end": 11.68
+    },
+    {
+      "word": "quick",
+      "start": 11.68,
+      "end": 11.84
+    },
+    {
+      "word": "initialize",
+      "start": 11.84,
+      "end": 12.46
+    },
+    {
+      "word": "handshake,",
+      "start": 12.46,
+      "end": 13.0
+    },
+    {
+      "word": "agreeing",
+      "start": 13.1,
+      "end": 13.52
+    },
+    {
+      "word": "on",
+      "start": 13.52,
+      "end": 13.78
+    },
+    {
+      "word": "a",
+      "start": 13.78,
+      "end": 13.82
+    },
+    {
+      "word": "protocol",
+      "start": 13.82,
+      "end": 14.1
+    },
+    {
+      "word": "version",
+      "start": 14.1,
+      "end": 14.44
+    },
+    {
+      "word": "and",
+      "start": 14.44,
+      "end": 14.86
+    },
+    {
+      "word": "announcing",
+      "start": 14.86,
+      "end": 15.18
+    },
+    {
+      "word": "exactly",
+      "start": 15.18,
+      "end": 15.54
+    },
+    {
+      "word": "which",
+      "start": 15.54,
+      "end": 15.92
+    },
+    {
+      "word": "features",
+      "start": 15.92,
+      "end": 16.3
+    },
+    {
+      "word": "each",
+      "start": 16.3,
+      "end": 16.58
+    },
+    {
+      "word": "side",
+      "start": 16.58,
+      "end": 16.8
+    },
+    {
+      "word": "supports",
+      "start": 16.8,
+      "end": 17.18
+    },
+    {
+      "word": "so",
+      "start": 17.18,
+      "end": 17.74
+    },
+    {
+      "word": "neither",
+      "start": 17.74,
+      "end": 17.94
+    },
+    {
+      "word": "side",
+      "start": 17.94,
+      "end": 18.26
+    },
+    {
+      "word": "ever",
+      "start": 18.26,
+      "end": 18.54
+    },
+    {
+      "word": "has",
+      "start": 18.54,
+      "end": 18.72
+    },
+    {
+      "word": "to",
+      "start": 18.72,
+      "end": 18.86
+    },
+    {
+      "word": "guess.",
+      "start": 18.86,
+      "end": 19.06
+    }
+  ]
+}

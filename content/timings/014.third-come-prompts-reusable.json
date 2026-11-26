@@ -1,0 +1,673 @@
+{
+  "audio": "014.third-come-prompts-reusable.mp3",
+  "paragraph": 14,
+  "text": "Third come prompts—reusable workflow templates packaged right inside an MCP server. Unlike tools or resources, prompts are user-controlled. They show up in your AI app like handy slash commands—such as slash prep meeting, slash weekly brief, or slash review PR—so you can intentionally trigger a consistent, well-tested workflow with a single click instead of retyping long instructions.",
+  "transcript": "Third come prompts. Reusable workflow templates packaged right inside an MCP server. Unlike tools or resources, prompts are user-controlled. They show up in your AI app like handy slash commands, such as slash prep meeting, slash weekly brief, or slash review PR, so you can intentionally trigger a consistent, well-tested workflow with a single click instead of retyping long instructions.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 22.08,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Third",
+      "start": 0.0,
+      "end": 0.38,
+      "match": "exact"
+    },
+    {
+      "word": "come",
+      "start": 0.38,
+      "end": 0.8,
+      "match": "exact"
+    },
+    {
+      "word": "prompts—reusable",
+      "start": 0.8,
+      "end": 3.12,
+      "match": "exact"
+    },
+    {
+      "word": "workflow",
+      "start": 3.12,
+      "end": 3.34,
+      "match": "exact"
+    },
+    {
+      "word": "templates",
+      "start": 3.34,
+      "end": 3.74,
+      "match": "exact"
+    },
+    {
+      "word": "packaged",
+      "start": 3.74,
+      "end": 4.2,
+      "match": "exact"
+    },
+    {
+      "word": "right",
+      "start": 4.2,
+      "end": 4.56,
+      "match": "exact"
+    },
+    {
+      "word": "inside",
+      "start": 4.56,
+      "end": 4.92,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 4.92,
+      "end": 5.18,
+      "match": "exact"
+    },
+    {
+      "word": "MCP",
+      "start": 5.18,
+      "end": 5.5,
+      "match": "exact"
+    },
+    {
+      "word": "server.",
+      "start": 5.5,
+      "end": 5.78,
+      "match": "exact"
+    },
+    {
+      "word": "Unlike",
+      "start": 6.1,
+      "end": 6.68,
+      "match": "exact"
+    },
+    {
+      "word": "tools",
+      "start": 6.68,
+      "end": 7.02,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 7.02,
+      "end": 7.16,
+      "match": "exact"
+    },
+    {
+      "word": "resources,",
+      "start": 7.16,
+      "end": 7.42,
+      "match": "exact"
+    },
+    {
+      "word": "prompts",
+      "start": 7.82,
+      "end": 8.16,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 8.16,
+      "end": 8.38,
+      "match": "exact"
+    },
+    {
+      "word": "user-controlled.",
+      "start": 8.38,
+      "end": 8.98,
+      "match": "exact"
+    },
+    {
+      "word": "They",
+      "start": 9.2,
+      "end": 9.52,
+      "match": "exact"
+    },
+    {
+      "word": "show",
+      "start": 9.52,
+      "end": 9.7,
+      "match": "exact"
+    },
+    {
+      "word": "up",
+      "start": 9.7,
+      "end": 9.84,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 9.84,
+      "end": 9.9,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 9.9,
+      "end": 9.98,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 9.98,
+      "end": 10.16,
+      "match": "exact"
+    },
+    {
+      "word": "app",
+      "start": 10.16,
+      "end": 10.44,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 10.44,
+      "end": 10.64,
+      "match": "exact"
+    },
+    {
+      "word": "handy",
+      "start": 10.64,
+      "end": 11.0,
+      "match": "exact"
+    },
+    {
+      "word": "slash",
+      "start": 11.0,
+      "end": 11.18,
+      "match": "exact"
+    },
+    {
+      "word": "commands—such",
+      "start": 11.18,
+      "end": 12.22,
+      "match": "exact"
+    },
+    {
+      "word": "as",
+      "start": 12.22,
+      "end": 12.38,
+      "match": "exact"
+    },
+    {
+      "word": "slash",
+      "start": 12.38,
+      "end": 12.52,
+      "match": "exact"
+    },
+    {
+      "word": "prep",
+      "start": 12.52,
+      "end": 12.78,
+      "match": "exact"
+    },
+    {
+      "word": "meeting,",
+      "start": 12.78,
+      "end": 13.08,
+      "match": "exact"
+    },
+    {
+      "word": "slash",
+      "start": 13.24,
+      "end": 13.58,
+      "match": "exact"
+    },
+    {
+      "word": "weekly",
+      "start": 13.58,
+      "end": 13.86,
+      "match": "exact"
+    },
+    {
+      "word": "brief,",
+      "start": 13.86,
+      "end": 14.2,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 14.38,
+      "end": 14.7,
+      "match": "exact"
+    },
+    {
+      "word": "slash",
+      "start": 14.7,
+      "end": 14.96,
+      "match": "exact"
+    },
+    {
+      "word": "review",
+      "start": 14.96,
+      "end": 15.28,
+      "match": "exact"
+    },
+    {
+      "word": "PR—so",
+      "start": 15.28,
+      "end": 16.12,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 16.12,
+      "end": 16.24,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 16.24,
+      "end": 16.34,
+      "match": "exact"
+    },
+    {
+      "word": "intentionally",
+      "start": 16.34,
+      "end": 16.68,
+      "match": "exact"
+    },
+    {
+      "word": "trigger",
+      "start": 16.68,
+      "end": 17.06,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 17.06,
+      "end": 17.26,
+      "match": "exact"
+    },
+    {
+      "word": "consistent,",
+      "start": 17.26,
+      "end": 17.68,
+      "match": "exact"
+    },
+    {
+      "word": "well-tested",
+      "start": 17.76,
+      "end": 18.38,
+      "match": "exact"
+    },
+    {
+      "word": "workflow",
+      "start": 18.38,
+      "end": 18.68,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 18.68,
+      "end": 19.24,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 19.24,
+      "end": 19.32,
+      "match": "exact"
+    },
+    {
+      "word": "single",
+      "start": 19.32,
+      "end": 19.52,
+      "match": "exact"
+    },
+    {
+      "word": "click",
+      "start": 19.52,
+      "end": 19.82,
+      "match": "exact"
+    },
+    {
+      "word": "instead",
+      "start": 19.82,
+      "end": 20.04,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 20.04,
+      "end": 20.28,
+      "match": "exact"
+    },
+    {
+      "word": "retyping",
+      "start": 20.28,
+      "end": 20.68,
+      "match": "exact"
+    },
+    {
+      "word": "long",
+      "start": 20.68,
+      "end": 20.82,
+      "match": "exact"
+    },
+    {
+      "word": "instructions.",
+      "start": 20.82,
+      "end": 21.26,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Third",
+      "start": 0.0,
+      "end": 0.38
+    },
+    {
+      "word": "come",
+      "start": 0.38,
+      "end": 0.8
+    },
+    {
+      "word": "prompts.",
+      "start": 0.8,
+      "end": 1.42
+    },
+    {
+      "word": "Reusable",
+      "start": 2.54,
+      "end": 3.12
+    },
+    {
+      "word": "workflow",
+      "start": 3.12,
+      "end": 3.34
+    },
+    {
+      "word": "templates",
+      "start": 3.34,
+      "end": 3.74
+    },
+    {
+      "word": "packaged",
+      "start": 3.74,
+      "end": 4.2
+    },
+    {
+      "word": "right",
+      "start": 4.2,
+      "end": 4.56
+    },
+    {
+      "word": "inside",
+      "start": 4.56,
+      "end": 4.92
+    },
+    {
+      "word": "an",
+      "start": 4.92,
+      "end": 5.18
+    },
+    {
+      "word": "MCP",
+      "start": 5.18,
+      "end": 5.5
+    },
+    {
+      "word": "server.",
+      "start": 5.5,
+      "end": 5.78
+    },
+    {
+      "word": "Unlike",
+      "start": 6.1,
+      "end": 6.68
+    },
+    {
+      "word": "tools",
+      "start": 6.68,
+      "end": 7.02
+    },
+    {
+      "word": "or",
+      "start": 7.02,
+      "end": 7.16
+    },
+    {
+      "word": "resources,",
+      "start": 7.16,
+      "end": 7.42
+    },
+    {
+      "word": "prompts",
+      "start": 7.82,
+      "end": 8.16
+    },
+    {
+      "word": "are",
+      "start": 8.16,
+      "end": 8.38
+    },
+    {
+      "word": "user",
+      "start": 8.38,
+      "end": 8.62
+    },
+    {
+      "word": "-controlled.",
+      "start": 8.62,
+      "end": 8.98
+    },
+    {
+      "word": "They",
+      "start": 9.2,
+      "end": 9.52
+    },
+    {
+      "word": "show",
+      "start": 9.52,
+      "end": 9.7
+    },
+    {
+      "word": "up",
+      "start": 9.7,
+      "end": 9.84
+    },
+    {
+      "word": "in",
+      "start": 9.84,
+      "end": 9.9
+    },
+    {
+      "word": "your",
+      "start": 9.9,
+      "end": 9.98
+    },
+    {
+      "word": "AI",
+      "start": 9.98,
+      "end": 10.16
+    },
+    {
+      "word": "app",
+      "start": 10.16,
+      "end": 10.44
+    },
+    {
+      "word": "like",
+      "start": 10.44,
+      "end": 10.64
+    },
+    {
+      "word": "handy",
+      "start": 10.64,
+      "end": 11.0
+    },
+    {
+      "word": "slash",
+      "start": 11.0,
+      "end": 11.18
+    },
+    {
+      "word": "commands,",
+      "start": 11.18,
+      "end": 11.64
+    },
+    {
+      "word": "such",
+      "start": 11.94,
+      "end": 12.22
+    },
+    {
+      "word": "as",
+      "start": 12.22,
+      "end": 12.38
+    },
+    {
+      "word": "slash",
+      "start": 12.38,
+      "end": 12.52
+    },
+    {
+      "word": "prep",
+      "start": 12.52,
+      "end": 12.78
+    },
+    {
+      "word": "meeting,",
+      "start": 12.78,
+      "end": 13.08
+    },
+    {
+      "word": "slash",
+      "start": 13.24,
+      "end": 13.58
+    },
+    {
+      "word": "weekly",
+      "start": 13.58,
+      "end": 13.86
+    },
+    {
+      "word": "brief,",
+      "start": 13.86,
+      "end": 14.2
+    },
+    {
+      "word": "or",
+      "start": 14.38,
+      "end": 14.7
+    },
+    {
+      "word": "slash",
+      "start": 14.7,
+      "end": 14.96
+    },
+    {
+      "word": "review",
+      "start": 14.96,
+      "end": 15.28
+    },
+    {
+      "word": "PR,",
+      "start": 15.28,
+      "end": 15.54
+    },
+    {
+      "word": "so",
+      "start": 15.8,
+      "end": 16.12
+    },
+    {
+      "word": "you",
+      "start": 16.12,
+      "end": 16.24
+    },
+    {
+      "word": "can",
+      "start": 16.24,
+      "end": 16.34
+    },
+    {
+      "word": "intentionally",
+      "start": 16.34,
+      "end": 16.68
+    },
+    {
+      "word": "trigger",
+      "start": 16.68,
+      "end": 17.06
+    },
+    {
+      "word": "a",
+      "start": 17.06,
+      "end": 17.26
+    },
+    {
+      "word": "consistent,",
+      "start": 17.26,
+      "end": 17.68
+    },
+    {
+      "word": "well",
+      "start": 17.76,
+      "end": 18.04
+    },
+    {
+      "word": "-tested",
+      "start": 18.04,
+      "end": 18.38
+    },
+    {
+      "word": "workflow",
+      "start": 18.38,
+      "end": 18.68
+    },
+    {
+      "word": "with",
+      "start": 18.68,
+      "end": 19.24
+    },
+    {
+      "word": "a",
+      "start": 19.24,
+      "end": 19.32
+    },
+    {
+      "word": "single",
+      "start": 19.32,
+      "end": 19.52
+    },
+    {
+      "word": "click",
+      "start": 19.52,
+      "end": 19.82
+    },
+    {
+      "word": "instead",
+      "start": 19.82,
+      "end": 20.04
+    },
+    {
+      "word": "of",
+      "start": 20.04,
+      "end": 20.28
+    },
+    {
+      "word": "retyping",
+      "start": 20.28,
+      "end": 20.68
+    },
+    {
+      "word": "long",
+      "start": 20.68,
+      "end": 20.82
+    },
+    {
+      "word": "instructions.",
+      "start": 20.82,
+      "end": 21.26
+    }
+  ]
+}
