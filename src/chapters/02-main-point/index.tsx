@@ -4,7 +4,6 @@ import { Sfx } from "../../lib/audio";
 import {
   clipRange,
   cueFrame,
-  fadeIn,
   progressBetween,
   sceneWindow,
   slideUpStyle,
@@ -191,7 +190,6 @@ export const MainPointChapter: React.FC<ChapterComponentProps> = ({ chapter, cli
         <div
           style={{
             marginTop: 22,
-            opacity: fadeIn(frame, mapsCue, 14),
             ...slideUpStyle(frame, fps, mapsCue, 16),
           }}
         >
