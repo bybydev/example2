@@ -1,0 +1,318 @@
+{
+  "audio": "002.here-is-the.mp3",
+  "paragraph": 2,
+  "text": "Here is the second paragraph. Split your script into one paragraph per blank line so each paragraph maps to one voiceover clip and one Whisper timing sidecar.",
+  "transcript": "Here is the second paragraph. Split your script into one paragraph per blank line, so each paragraph maps to one voiceover clip and one whisper timing sidecar.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 9.04,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Here",
+      "start": 0.0,
+      "end": 0.28,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 0.28,
+      "end": 0.38,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.38,
+      "end": 0.52,
+      "match": "exact"
+    },
+    {
+      "word": "second",
+      "start": 0.52,
+      "end": 0.7,
+      "match": "exact"
+    },
+    {
+      "word": "paragraph.",
+      "start": 0.7,
+      "end": 1.0,
+      "match": "exact"
+    },
+    {
+      "word": "Split",
+      "start": 1.72,
+      "end": 2.24,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 2.24,
+      "end": 2.4,
+      "match": "exact"
+    },
+    {
+      "word": "script",
+      "start": 2.4,
+      "end": 2.7,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 2.7,
+      "end": 2.88,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 2.88,
+      "end": 3.04,
+      "match": "exact"
+    },
+    {
+      "word": "paragraph",
+      "start": 3.04,
+      "end": 3.46,
+      "match": "exact"
+    },
+    {
+      "word": "per",
+      "start": 3.46,
+      "end": 3.74,
+      "match": "exact"
+    },
+    {
+      "word": "blank",
+      "start": 3.74,
+      "end": 3.98,
+      "match": "exact"
+    },
+    {
+      "word": "line",
+      "start": 3.98,
+      "end": 4.14,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 4.38,
+      "end": 4.7,
+      "match": "exact"
+    },
+    {
+      "word": "each",
+      "start": 4.7,
+      "end": 4.86,
+      "match": "exact"
+    },
+    {
+      "word": "paragraph",
+      "start": 4.86,
+      "end": 5.24,
+      "match": "exact"
+    },
+    {
+      "word": "maps",
+      "start": 5.24,
+      "end": 5.56,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 5.56,
+      "end": 5.78,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 5.78,
+      "end": 6.02,
+      "match": "exact"
+    },
+    {
+      "word": "voiceover",
+      "start": 6.02,
+      "end": 6.46,
+      "match": "exact"
+    },
+    {
+      "word": "clip",
+      "start": 6.46,
+      "end": 6.7,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 6.7,
+      "end": 7.0,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 7.0,
+      "end": 7.2,
+      "match": "exact"
+    },
+    {
+      "word": "Whisper",
+      "start": 7.2,
+      "end": 7.54,
+      "match": "exact"
+    },
+    {
+      "word": "timing",
+      "start": 7.54,
+      "end": 7.86,
+      "match": "exact"
+    },
+    {
+      "word": "sidecar.",
+      "start": 7.86,
+      "end": 8.38,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Here",
+      "start": 0.0,
+      "end": 0.28
+    },
+    {
+      "word": "is",
+      "start": 0.28,
+      "end": 0.38
+    },
+    {
+      "word": "the",
+      "start": 0.38,
+      "end": 0.52
+    },
+    {
+      "word": "second",
+      "start": 0.52,
+      "end": 0.7
+    },
+    {
+      "word": "paragraph.",
+      "start": 0.7,
+      "end": 1.0
+    },
+    {
+      "word": "Split",
+      "start": 1.72,
+      "end": 2.24
+    },
+    {
+      "word": "your",
+      "start": 2.24,
+      "end": 2.4
+    },
+    {
+      "word": "script",
+      "start": 2.4,
+      "end": 2.7
+    },
+    {
+      "word": "into",
+      "start": 2.7,
+      "end": 2.88
+    },
+    {
+      "word": "one",
+      "start": 2.88,
+      "end": 3.04
+    },
+    {
+      "word": "paragraph",
+      "start": 3.04,
+      "end": 3.46
+    },
+    {
+      "word": "per",
+      "start": 3.46,
+      "end": 3.74
+    },
+    {
+      "word": "blank",
+      "start": 3.74,
+      "end": 3.98
+    },
+    {
+      "word": "line,",
+      "start": 3.98,
+      "end": 4.14
+    },
+    {
+      "word": "so",
+      "start": 4.38,
+      "end": 4.7
+    },
+    {
+      "word": "each",
+      "start": 4.7,
+      "end": 4.86
+    },
+    {
+      "word": "paragraph",
+      "start": 4.86,
+      "end": 5.24
+    },
+    {
+      "word": "maps",
+      "start": 5.24,
+      "end": 5.56
+    },
+    {
+      "word": "to",
+      "start": 5.56,
+      "end": 5.78
+    },
+    {
+      "word": "one",
+      "start": 5.78,
+      "end": 6.02
+    },
+    {
+      "word": "voiceover",
+      "start": 6.02,
+      "end": 6.46
+    },
+    {
+      "word": "clip",
+      "start": 6.46,
+      "end": 6.7
+    },
+    {
+      "word": "and",
+      "start": 6.7,
+      "end": 7.0
+    },
+    {
+      "word": "one",
+      "start": 7.0,
+      "end": 7.2
+    },
+    {
+      "word": "whisper",
+      "start": 7.2,
+      "end": 7.54
+    },
+    {
+      "word": "timing",
+      "start": 7.54,
+      "end": 7.86
+    },
+    {
+      "word": "sidecar.",
+      "start": 7.86,
+      "end": 8.38
+    }
+  ]
+}

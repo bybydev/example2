@@ -1,0 +1,13 @@
+schemaVersion: 1
+template:
+  name: remotion-youtube-template
+  repository: https://github.com/hoangbkit/remotion-youtube-template.git
+  source: /Users/hoangbkit/Developer/remotion/remotion-youtube-template
+  ref: master
+  version: 0.2.0
+project:
+  slug: ai-agent-harnesses-explained
+  title: AI Agent Harnesses Explained
+  fps: 30
+  width: 1920
+  height: 1080
