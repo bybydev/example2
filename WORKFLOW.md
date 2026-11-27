@@ -12,7 +12,7 @@ Follow Steps 1 → 8 in order. Both human and AI can check off items (`- [x]`) a
 - [x] **Step 4:** Implement chapter visuals, diagrams & SFX (`src/chapters/`) — *AI (Human review)*
 - [x] **Step 5:** Design YouTube thumbnail (`src/Thumbnail.tsx`) — *Both*
 - [x] **Step 6:** Finalize YouTube publishing metadata (`content/youtube-metadata.md`) — *Both*
-- [ ] **Step 7:** Run preflight health check (`mycli remotion doctor`) — *Both*
+- [x] **Step 7:** Run preflight health check (`mycli remotion doctor`) — *Both*
 - [ ] **Step 8:** Commit, push, render in GitHub Actions, QA & publish — *Human*
 
 ---
@@ -111,7 +111,7 @@ Follow Steps 1 → 8 in order. Both human and AI can check off items (`- [x]`) a
 - **Input:** Completed workspace files (`video.config.json`, `content/`, `public/`, `src/`).
 - **Output:** Clean `mycli remotion doctor` health report.
 - **Pass condition:**
-  - [ ] `mycli remotion doctor` exits with 0 errors and no unresolved warnings.
+  - [x] `mycli remotion doctor` exits with 0 errors and no unresolved warnings.
 
 ### Step 8 — Commit, Push, Render in GitHub Actions, QA & Publish
 - **Owner:** Human

@@ -19,19 +19,10 @@ import {
   MeterBar,
   Pill,
   SceneBeat,
-  SectionTitle,
   StatCallout,
 } from "../../ui/primitives";
 import { Stage } from "../../ui/Stage";
-import type { StageLegendItem } from "../../ui/Stage";
 import type { ChapterComponentProps } from "../index";
-
-const LEGEND: StageLegendItem[] = [
-  { label: "HARNESS", tone: "cyan" },
-  { label: "MODEL", tone: "amber" },
-  { label: "RELIABILITY", tone: "emerald" },
-  { label: "FAILURE", tone: "rose" },
-];
 
 const LOOP_CODE: CodeLine[] = [
   { text: "while (!done && steps < MAX_STEPS) {", tone: "cyan", highlight: true },
@@ -145,7 +136,7 @@ export const CoreLoopChapter: React.FC<ChapterComponentProps> = ({ chapter, clip
   const loopCycle = frame >= repeatCue ? ((frame - repeatCue) % 120) / 120 : 0;
 
   return (
-    <Stage chapterIndex="03" chapterTitle={chapter.title} tone="cyan" legend={LEGEND}>
+    <Stage chapterIndex="03" chapterTitle={chapter.title} tone="cyan" transientHeader compactPadding>
       {/* SFX */}
       <Sfx name="typing-loop" from={thinkCue} volume={0.14} durationInFrames={65} />
       <Sfx name="pop-in" from={actCue} volume={0.26} />
@@ -167,121 +158,78 @@ export const CoreLoopChapter: React.FC<ChapterComponentProps> = ({ chapter, clip
       <Sfx name="clock-tick" from={rewriteCue} volume={0.18} durationInFrames={55} />
       <Sfx name="scale-down" from={targetedCue} volume={0.28} />
 
-      {/* BEAT 9: 15-Line Core Loop */}
+      {/* BEAT 9: Full-Canvas 15-Line Core Loop + 4-Node Cycle */}
       <SceneBeat window={w9}>
-        <SectionTitle
-          eyebrow="PILLAR 01 — LOOP & TOOLS"
-          title="The 15-Line Heart of Every Agent Harness"
-          tone="cyan"
-        />
-
-        <div style={{ display: "grid", gridTemplateColumns: "1.05fr 1fr", gap: 32, alignItems: "center" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1.02fr 0.98fr", gap: 36, alignItems: "center" }}>
           <div style={slideUpStyle(frame, fps, b9.start + 6, 20)}>
             <CodePanel
               title="harness-loop.ts"
-              badge="CORE ENGINE"
+              badge="15-LINE CORE ENGINE"
               tone="cyan"
               lines={LOOP_CODE}
               revealProgress={loopCodeReveal}
-              fontSize={19}
+              fontSize={22}
             />
           </div>
 
-          <Card tone="neutral" padding={24} style={{ position: "relative", height: 420 }}>
-            <svg width={720} height={372} viewBox="0 0 720 372" style={{ position: "absolute", left: 24, top: 24 }}>
-              <SvgLink x1={265} y1={72} x2={445} y2={72} progress={progressBetween(frame, actCue, actCue + 20)} tone="amber" arrow />
-              <SvgLink x1={575} y1={134} x2={575} y2={236} progress={progressBetween(frame, observeCue, observeCue + 20)} tone="cyan" arrow />
-              <SvgLink x1={445} y1={298} x2={265} y2={298} progress={progressBetween(frame, repeatCue, repeatCue + 20)} tone="emerald" arrow />
-              <SvgLink x1={135} y1={236} x2={135} y2={134} progress={progressBetween(frame, repeatCue + 8, repeatCue + 28)} tone="cyan" arrow />
+          <Card tone="neutral" padding={28} style={{ position: "relative", height: 560 }}>
+            <svg width={780} height={504} viewBox="0 0 780 504" style={{ position: "absolute", left: 28, top: 28 }}>
+              <SvgLink x1={290} y1={96} x2={480} y2={96} progress={progressBetween(frame, actCue, actCue + 20)} tone="amber" strokeWidth={3.5} arrow />
+              <SvgLink x1={625} y1={172} x2={625} y2={332} progress={progressBetween(frame, observeCue, observeCue + 20)} tone="cyan" strokeWidth={3.5} arrow />
+              <SvgLink x1={480} y1={408} x2={290} y2={408} progress={progressBetween(frame, repeatCue, repeatCue + 20)} tone="emerald" strokeWidth={3.5} arrow />
+              <SvgLink x1={155} y1={332} x2={155} y2={172} progress={progressBetween(frame, repeatCue + 8, repeatCue + 28)} tone="cyan" strokeWidth={3.5} arrow />
 
               {frame >= repeatCue && loopCycle < 0.25 ? (
-                <SvgPacket x1={265} y1={72} x2={445} y2={72} progress={loopCycle * 4} tone="amber" />
+                <SvgPacket x1={290} y1={96} x2={480} y2={96} progress={loopCycle * 4} tone="amber" radius={11} />
               ) : null}
               {frame >= repeatCue && loopCycle >= 0.25 && loopCycle < 0.5 ? (
-                <SvgPacket x1={575} y1={134} x2={575} y2={236} progress={(loopCycle - 0.25) * 4} tone="cyan" />
+                <SvgPacket x1={625} y1={172} x2={625} y2={332} progress={(loopCycle - 0.25) * 4} tone="cyan" radius={11} />
               ) : null}
               {frame >= repeatCue && loopCycle >= 0.5 && loopCycle < 0.75 ? (
-                <SvgPacket x1={445} y1={298} x2={265} y2={298} progress={(loopCycle - 0.5) * 4} tone="emerald" />
+                <SvgPacket x1={480} y1={408} x2={290} y2={408} progress={(loopCycle - 0.5) * 4} tone="emerald" radius={11} />
               ) : null}
               {frame >= repeatCue && loopCycle >= 0.75 ? (
-                <SvgPacket x1={135} y1={236} x2={135} y2={134} progress={(loopCycle - 0.75) * 4} tone="cyan" />
+                <SvgPacket x1={155} y1={332} x2={155} y2={172} progress={(loopCycle - 0.75) * 4} tone="cyan" radius={11} />
               ) : null}
             </svg>
 
-            <NodeBox
-              tag="STEP 1"
-              title="1. Think"
-              subtitle="LLM reasons over history"
-              tone="amber"
-              glow={frame >= thinkCue}
-              compact
-              style={{ position: "absolute", left: 32, top: 38, width: 255 }}
-            />
-            <NodeBox
-              tag="STEP 2"
-              title="2. Act"
-              subtitle="Harness runs tool call"
-              tone="cyan"
-              glow={frame >= actCue}
-              compact
-              style={{ position: "absolute", left: 472, top: 38, width: 255 }}
-            />
-            <NodeBox
-              tag="STEP 3"
-              title="3. Observe"
-              subtitle="Append output to history"
-              tone="emerald"
-              glow={frame >= observeCue}
-              compact
-              style={{ position: "absolute", left: 472, top: 262, width: 255 }}
-            />
-            <NodeBox
-              tag="STEP 4"
-              title="4. Repeat"
-              subtitle="Loop until solved or cap"
-              tone="cyan"
-              glow={frame >= repeatCue}
-              compact
-              style={{ position: "absolute", left: 32, top: 262, width: 255 }}
-            />
+            <NodeBox tag="STEP 1" title="1. Think" subtitle="LLM reasons over history" tone="amber" glow={frame >= thinkCue} style={{ position: "absolute", left: 36, top: 54, width: 278 }} />
+            <NodeBox tag="STEP 2" title="2. Act" subtitle="Harness runs tool call" tone="cyan" glow={frame >= actCue} style={{ position: "absolute", left: 514, top: 54, width: 278 }} />
+            <NodeBox tag="STEP 3" title="3. Observe" subtitle="Append real output" tone="emerald" glow={frame >= observeCue} style={{ position: "absolute", left: 514, top: 366, width: 278 }} />
+            <NodeBox tag="STEP 4" title="4. Repeat" subtitle="Loop until solved or cap" tone="cyan" glow={frame >= repeatCue} style={{ position: "absolute", left: 36, top: 366, width: 278 }} />
           </Card>
         </div>
       </SceneBeat>
 
-      {/* BEAT 10: How the Model Actually Calls a Tool */}
+      {/* BEAT 10: Full-Canvas How the Model Calls a Tool */}
       <SceneBeat window={w10}>
-        <SectionTitle
-          eyebrow="PILLAR 01 — TOOL CALLING MECHANIC"
-          title="The Model Never Runs Code — It Emits JSON"
-          tone="cyan"
-        />
-
-        {/* 3-Column Architecture Handoff */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 140px 1fr 140px 1fr", alignItems: "center", marginBottom: 24 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 160px 1fr 160px 1fr", alignItems: "center", marginBottom: 40 }}>
           <NodeBox
-            tag="TEXT IN → JSON OUT"
+            tag="ZERO DISK OR SHELL ACCESS"
             title="Language Model"
-            subtitle="Zero disk or shell access"
+            subtitle="Reads tool schemas → outputs JSON"
             tone="amber"
             glow={frame >= neverCue}
+            style={{ minHeight: 165, display: "flex", flexDirection: "column", justifyContent: "center" }}
           />
-          <svg width={140} height={90} viewBox="0 0 140 90" style={{ overflow: "visible" }}>
-            <SvgLink x1={6} y1={28} x2={134} y2={28} progress={progressBetween(frame, jsonCue, jsonCue + 24)} tone="amber" arrow />
-            <SvgPacket x1={6} y1={28} x2={134} y2={28} progress={progressBetween(frame, jsonCue + 4, jsonCue + 44)} tone="amber" label="JSON" />
-            <SvgLink x1={134} y1={64} x2={6} y2={64} progress={progressBetween(frame, resultCue, resultCue + 24)} tone="emerald" arrow />
-            <SvgPacket x1={134} y1={64} x2={6} y2={64} progress={progressBetween(frame, resultCue + 4, resultCue + 44)} tone="emerald" label="result" />
+          <svg width={160} height={110} viewBox="0 0 160 110" style={{ overflow: "visible" }}>
+            <SvgLink x1={6} y1={34} x2={154} y2={34} progress={progressBetween(frame, jsonCue, jsonCue + 24)} tone="amber" strokeWidth={3.5} arrow />
+            <SvgPacket x1={6} y1={34} x2={154} y2={34} progress={progressBetween(frame, jsonCue + 4, jsonCue + 44)} tone="amber" radius={10} label="JSON" />
+            <SvgLink x1={154} y1={78} x2={6} y2={78} progress={progressBetween(frame, resultCue, resultCue + 24)} tone="emerald" strokeWidth={3.5} arrow />
+            <SvgPacket x1={154} y1={78} x2={6} y2={78} progress={progressBetween(frame, resultCue + 4, resultCue + 44)} tone="emerald" radius={10} label="result" />
           </svg>
           <NodeBox
             tag="PARSER & EXECUTOR"
             title="Harness Runtime"
-            subtitle="Matches tool_call_id & runs tool"
+            subtitle="Matches tool_call_id & executes"
             tone="cyan"
             glow={frame >= execCue}
+            style={{ minHeight: 165, display: "flex", flexDirection: "column", justifyContent: "center" }}
           />
-          <svg width={140} height={90} viewBox="0 0 140 90" style={{ overflow: "visible" }}>
-            <SvgLink x1={6} y1={28} x2={134} y2={28} progress={progressBetween(frame, execCue, execCue + 22)} tone="cyan" arrow />
-            <SvgPacket x1={6} y1={28} x2={134} y2={28} progress={progressBetween(frame, execCue + 4, execCue + 40)} tone="cyan" label="fs.read" />
-            <SvgLink x1={134} y1={64} x2={6} y2={64} progress={progressBetween(frame, execCue + 22, execCue + 44)} tone="emerald" arrow />
+          <svg width={160} height={110} viewBox="0 0 160 110" style={{ overflow: "visible" }}>
+            <SvgLink x1={6} y1={34} x2={154} y2={34} progress={progressBetween(frame, execCue, execCue + 22)} tone="cyan" strokeWidth={3.5} arrow />
+            <SvgPacket x1={6} y1={34} x2={154} y2={34} progress={progressBetween(frame, execCue + 4, execCue + 40)} tone="cyan" radius={10} label="fs.read" />
+            <SvgLink x1={154} y1={78} x2={6} y2={78} progress={progressBetween(frame, execCue + 22, execCue + 44)} tone="emerald" strokeWidth={3.5} arrow />
           </svg>
           <NodeBox
             tag="REAL ENVIRONMENT"
@@ -289,18 +237,18 @@ export const CoreLoopChapter: React.FC<ChapterComponentProps> = ({ chapter, clip
             subtitle="Reads auth.ts from disk"
             tone="emerald"
             glow={frame >= execCue}
+            style={{ minHeight: 165, display: "flex", flexDirection: "column", justifyContent: "center" }}
           />
         </div>
 
-        {/* Paired Payloads */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 34 }}>
           <div style={slideUpStyle(frame, fps, jsonCue, 18)}>
             <CodePanel
               title="1. Model Output (Structured Tool Call)"
               badge="ID: call_9f2a"
               tone="amber"
               lines={TOOL_CALL_JSON}
-              fontSize={18}
+              fontSize={22}
             />
           </div>
           <div style={slideUpStyle(frame, fps, resultCue, 18)}>
@@ -309,55 +257,49 @@ export const CoreLoopChapter: React.FC<ChapterComponentProps> = ({ chapter, clip
               badge="PAIRED ID"
               tone="emerald"
               lines={TOOL_RESULT_JSON}
-              fontSize={18}
+              fontSize={22}
             />
           </div>
         </div>
       </SceneBeat>
 
-      {/* BEAT 11: Tool Sprawl & MCP Schema Bloat vs Orthogonal Primitives */}
+      {/* BEAT 11: Full-Canvas MCP Bloat vs Orthogonal Primitives */}
       <SceneBeat window={w11}>
-        <SectionTitle
-          eyebrow="PILLAR 01 — TOOL DESIGN"
-          title="Tool Sprawl & MCP Bloat vs. Orthogonal Primitives"
-          tone="cyan"
-        />
-
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 36, height: 700 }}>
           <div style={slideUpStyle(frame, fps, b11.start + 14, 20)}>
-            <Card tone="rose" glow={frame >= schemasCue} padding={26}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
-                <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 28, fontWeight: 700 }}>
+            <Card tone="rose" glow={frame >= schemasCue} padding={32} style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 34, fontWeight: 700 }}>
                   5 MCP Servers • 70 Schemas
                 </span>
-                <Pill tone="rose" size="sm">BLOATED</Pill>
+                <Pill tone="rose" size="md">BLOATED</Pill>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8, marginBottom: 20 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10 }}>
                 {BLOATED_TOOLS.map((t) => (
-                  <DataChip key={t} label={t} tone="rose" style={{ fontSize: 13, padding: "7px 8px" }} />
+                  <DataChip key={t} label={t} tone="rose" style={{ fontSize: 15, padding: "11px 8px" }} />
                 ))}
               </div>
               <MeterBar
-                label="Pre-Turn Prompt Overhead"
+                label="Pre-Turn Prompt Schema Overhead"
                 percent={85 * progressBetween(frame, schemasCue, schemasCue + 36)}
                 valueLabel="~25K tokens"
                 tone="amber"
-                height={20}
+                height={24}
               />
             </Card>
           </div>
 
           <div style={slideUpStyle(frame, fps, b11.start + 26, 20)}>
-            <Card tone="cyan" glow={frame >= compCue} padding={26} style={{ opacity: frame >= compCue - 20 ? 1 : 0.38 }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
-                <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 28, fontWeight: 700 }}>
+            <Card tone="cyan" glow={frame >= compCue} padding={32} style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", opacity: frame >= compCue - 20 ? 1 : 0.38 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 34, fontWeight: 700 }}>
                   6 Composable Primitives
                 </span>
-                <Pill tone="emerald" size="sm">SHARP &amp; FAST</Pill>
+                <Pill tone="emerald" size="md">SHARP &amp; FAST</Pill>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginBottom: 20 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
                 {CLEAN_PRIMITIVES.map((p) => (
-                  <DataChip key={p.label} label={p.label} sublabel={p.sub} tone="cyan" style={{ fontSize: 17, padding: "12px 10px" }} />
+                  <DataChip key={p.label} label={p.label} sublabel={p.sub} tone="cyan" style={{ fontSize: 20, padding: "22px 14px" }} />
                 ))}
               </div>
               <MeterBar
@@ -365,88 +307,76 @@ export const CoreLoopChapter: React.FC<ChapterComponentProps> = ({ chapter, clip
                 percent={94 * progressBetween(frame, compCue, compCue + 36)}
                 valueLabel="High"
                 tone="emerald"
-                height={20}
+                height={24}
               />
             </Card>
           </div>
         </div>
       </SceneBeat>
 
-      {/* BEAT 12: SWE-agent ACI & Actionable Errors (Compact vertical transform) */}
+      {/* BEAT 12: Full-Canvas SWE-agent ACI Before→After Transform */}
       <SceneBeat window={w12}>
-        <SectionTitle
-          eyebrow="PILLAR 01 — AGENT-COMPUTER INTERFACE (SWE-AGENT)"
-          title="Design Tool Errors for Recovery, Not Silence"
-          tone="cyan"
-        />
-
-        <div style={{ maxWidth: 1180, width: "100%", margin: "0 auto" }}>
+        <div style={{ maxWidth: 1320, width: "100%", margin: "0 auto" }}>
           <div style={slideUpStyle(frame, fps, b12.start + 16, 16)}>
             <CodePanel
-              title="Opaque Error (Forces Blind Retries)"
+              title="Opaque Error — Forces Blind Retries"
               badge="EXIT CODE 1"
               tone="rose"
               lines={OPAQUE_ERR}
-              fontSize={17}
+              fontSize={22}
             />
           </div>
 
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 36, height: 74 }}>
-            <svg width={80} height={74} viewBox="0 0 80 74">
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 40, height: 112 }}>
+            <svg width={90} height={112} viewBox="0 0 90 112">
               <SvgLink
-                x1={40}
-                y1={6}
-                x2={40}
-                y2={68}
+                x1={45}
+                y1={8}
+                x2={45}
+                y2={104}
                 progress={progressBetween(frame, actionCue, actionCue + 24)}
                 tone="cyan"
-                strokeWidth={3.5}
+                strokeWidth={4}
                 arrow
               />
             </svg>
             <span
               style={{
                 fontFamily: TOKENS.fonts.handwritten,
-                fontSize: 40,
+                fontSize: 50,
                 fontWeight: 700,
                 color: TOKENS.colors.accentWarm,
-                opacity: fadeIn(frame, actionCue + 12, 14),
+                opacity: fadeIn(frame, actionCue + 10, 14),
               }}
             >
-              ACI: Tools are a UI for the model!
+              SWE-agent ACI: Tools are a UI for the model!
             </span>
           </div>
 
           <div style={slideUpStyle(frame, fps, actionCue, 16)}>
             <CodePanel
-              title="Actionable Harness Error (auth.ts)"
+              title="Actionable Harness Error — auth.ts"
               badge="SELF-RECOVERABLE"
               tone="emerald"
               lines={ACTIONABLE_ERR}
-              fontSize={17}
+              fontSize={22}
             />
           </div>
         </div>
       </SceneBeat>
 
-      {/* BEAT 13: Targeted Diffs vs Full-File Rewrites */}
+      {/* BEAT 13: Full-Canvas Full Rewrite vs Targeted Diffs */}
       <SceneBeat window={w13}>
-        <SectionTitle
-          eyebrow="PILLAR 01 — EDITING ERGONOMICS"
-          title="Targeted Diffs Beat Full-File Rewrites"
-          tone="cyan"
-        />
-
-        <div style={{ display: "grid", gridTemplateColumns: "0.9fr 1.1fr", gap: 30, alignItems: "stretch" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "0.86fr 1.14fr", gap: 36, alignItems: "stretch", height: 680 }}>
           <div style={slideUpStyle(frame, fps, rewriteCue - 12, 20)}>
-            <Card tone="rose" padding={28} style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <Card tone="rose" padding={34} style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
               <div>
-                <Pill tone="rose" size="sm">FULL-FILE REWRITE</Pill>
-                <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 30, fontWeight: 700, marginTop: 10 }}>
+                <Pill tone="rose" size="md">FULL-FILE REWRITE</Pill>
+                <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 38, fontWeight: 700, marginTop: 14 }}>
                   Regenerate All 800 Lines
                 </div>
-                <p style={{ fontSize: 20, color: TOKENS.colors.textSecondary, marginTop: 8 }}>
-                  Wastes output tokens, adds seconds of latency, risks accidental deletions.
+                <p style={{ fontSize: 22, color: TOKENS.colors.textSecondary, marginTop: 12, lineHeight: 1.45 }}>
+                  Wastes output tokens, adds seconds of latency, and invites accidental deletions.
                 </p>
               </div>
               <StatCallout
@@ -458,7 +388,7 @@ export const CoreLoopChapter: React.FC<ChapterComponentProps> = ({ chapter, clip
                     progress={progressBetween(frame, rewriteCue, rewriteCue + 55)}
                     suffix=" tok"
                     tone="amber"
-                    size={46}
+                    size={54}
                   />
                 }
                 detail="For a 5-line race-condition fix"
@@ -468,23 +398,23 @@ export const CoreLoopChapter: React.FC<ChapterComponentProps> = ({ chapter, clip
           </div>
 
           <div style={slideUpStyle(frame, fps, modernCue - 8, 20)}>
-            <Card tone="emerald" glow={frame >= targetedCue} padding={28} style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 18 }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <Card tone="emerald" glow={frame >= targetedCue} padding={34} style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 22 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 16 }}>
                 <div>
-                  <Pill tone="emerald" size="sm">TARGETED PATCH • AIDER / CLAUDE CODE / CURSOR</Pill>
-                  <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 30, fontWeight: 700, marginTop: 10 }}>
-                    Search-and-Replace / Diff-Merge
+                  <Pill tone="emerald" size="md">AIDER • CLAUDE CODE • CURSOR</Pill>
+                  <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 38, fontWeight: 700, marginTop: 14 }}>
+                    Targeted Search-and-Replace / Diff-Merge
                   </div>
                 </div>
-                <DataChip label="10× FEWER TOKENS" tone="emerald" style={{ fontSize: 16 }} />
+                <DataChip label="10× FEWER TOKENS" tone="emerald" style={{ fontSize: 18, padding: "12px 16px" }} />
               </div>
 
               <CodePanel
-                title="Targeted Diff (auth.ts)"
+                title="Targeted Patch (auth.ts)"
                 badge="~120 TOKENS"
                 tone="emerald"
                 lines={PATCH_DIFF}
-                fontSize={18}
+                fontSize={22}
               />
             </Card>
           </div>

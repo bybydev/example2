@@ -20,15 +20,7 @@ import {
   SectionTitle,
 } from "../../ui/primitives";
 import { Stage } from "../../ui/Stage";
-import type { StageLegendItem } from "../../ui/Stage";
 import type { ChapterComponentProps } from "../index";
-
-const LEGEND: StageLegendItem[] = [
-  { label: "HARNESS", tone: "cyan" },
-  { label: "MODEL", tone: "amber" },
-  { label: "RELIABILITY", tone: "emerald" },
-  { label: "FAILURE", tone: "rose" },
-];
 
 const DOMAINS: {
   key: string;
@@ -122,15 +114,12 @@ export const ModelVsHarnessChapter: React.FC<ChapterComponentProps> = ({ chapter
   const w7 = sceneWindow(frame, b7.start, b7.end);
   const w8 = sceneWindow(frame, b8.start, b8.end, { keepAtEnd: true });
 
-  // Beat 5 loop animation (4-node rectangle so straight SvgLinks never overlap)
   const loopDraw = progressBetween(frame, envCue, envCue + 36);
   const loopCycle = frame >= envCue ? ((frame - envCue) % 120) / 120 : 0;
-
-  // Beat 7 perimeter link progress
   const perimLinks = progressBetween(frame, detCue, detCue + 30);
 
   return (
-    <Stage chapterIndex="02" chapterTitle={chapter.title} tone="cyan" legend={LEGEND}>
+    <Stage chapterIndex="02" chapterTitle={chapter.title} tone="cyan" transientHeader compactPadding>
       {/* SFX */}
       <Sfx name="slide" from={modelCue} volume={0.26} />
       <Sfx name="magnetic-snap" from={harnessCue} volume={0.3} />
@@ -151,223 +140,174 @@ export const ModelVsHarnessChapter: React.FC<ChapterComponentProps> = ({ chapter
       <Sfx name="click-subtle" from={opsCue} volume={0.24} />
       <Sfx name="chime-positive" from={labCue} volume={0.28} />
 
-      {/* BEAT 4: Three-Layer Stack */}
+      {/* BEAT 4: Spacious 3-Layer Stack (Clean 1-line title only) */}
       <SceneBeat window={w4}>
         <SectionTitle
-          eyebrow="ARCHITECTURAL BOUNDARIES"
-          title="Three Distinct Layers of Every AI Product"
+          title="Three Layers of Every AI Product"
           tone="cyan"
+          align="center"
+          style={{ marginBottom: 32 }}
         />
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 0, maxWidth: 1440, width: "100%", margin: "0 auto" }}>
-          {/* Top: Application */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 0, maxWidth: 1520, width: "100%", margin: "0 auto" }}>
           <div style={slideUpStyle(frame, fps, appCue, 18)}>
-            <Card tone="neutral" padding={22} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
+            <Card tone="neutral" padding={28} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
               <div>
                 <Pill tone="neutral" size="sm">LAYER 3 • APPLICATION / UX</Pill>
-                <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 30, fontWeight: 700, marginTop: 8 }}>
+                <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 34, fontWeight: 700, marginTop: 10 }}>
                   Interface &amp; Workflow Surface
                 </div>
               </div>
-              <div style={{ display: "flex", gap: 10 }}>
-                <DataChip label="Terminal CLI" tone="neutral" style={{ fontSize: 16, padding: "8px 14px" }} />
-                <DataChip label="IDE Editor Pane" tone="neutral" style={{ fontSize: 16, padding: "8px 14px" }} />
-                <DataChip label="PR / Web UI" tone="neutral" style={{ fontSize: 16, padding: "8px 14px" }} />
+              <div style={{ display: "flex", gap: 12 }}>
+                <DataChip label="Terminal CLI" tone="neutral" style={{ fontSize: 18, padding: "10px 16px" }} />
+                <DataChip label="IDE Editor Pane" tone="neutral" style={{ fontSize: 18, padding: "10px 16px" }} />
+                <DataChip label="PR / Web UI" tone="neutral" style={{ fontSize: 18, padding: "10px 16px" }} />
               </div>
             </Card>
           </div>
 
-          <div style={{ display: "flex", justifyContent: "center", height: 48 }}>
-            <svg width={260} height={48} viewBox="0 0 260 48">
-              <SvgLink x1={90} y1={4} x2={90} y2={44} progress={progressBetween(frame, appCue, appCue + 20)} tone="neutral" arrow />
-              <SvgLink x1={170} y1={44} x2={170} y2={4} progress={progressBetween(frame, appCue, appCue + 20)} tone="cyan" arrow />
+          <div style={{ display: "flex", justifyContent: "center", height: 58 }}>
+            <svg width={260} height={58} viewBox="0 0 260 58">
+              <SvgLink x1={90} y1={4} x2={90} y2={54} progress={progressBetween(frame, appCue, appCue + 20)} tone="neutral" strokeWidth={3} arrow />
+              <SvgLink x1={170} y1={54} x2={170} y2={4} progress={progressBetween(frame, appCue, appCue + 20)} tone="cyan" strokeWidth={3} arrow />
             </svg>
           </div>
 
-          {/* Middle: Harness */}
           <div style={slideUpStyle(frame, fps, harnessCue, 18)}>
-            <Card tone="cyan" glow={frame >= harnessCue} padding={26} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
+            <Card tone="cyan" glow={frame >= harnessCue} padding={32} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
               <div>
-                <Pill tone="cyan" size="sm">LAYER 2 • THE AGENT HARNESS</Pill>
-                <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 32, fontWeight: 700, marginTop: 8 }}>
+                <Pill tone="cyan" size="md">LAYER 2 • THE AGENT HARNESS</Pill>
+                <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 36, fontWeight: 700, marginTop: 10 }}>
                   Loop, Tools, Context, State &amp; Safety Gates
                 </div>
               </div>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "flex-end", maxWidth: 680 }}>
                 {["Claude Code", "Codex CLI", "Gemini CLI", "Cursor", "Windsurf Cascade"].map((h) => (
-                  <DataChip key={h} label={h} tone="cyan" style={{ fontSize: 16, padding: "8px 14px" }} />
+                  <DataChip key={h} label={h} tone="cyan" style={{ fontSize: 17, padding: "9px 15px" }} />
                 ))}
               </div>
             </Card>
           </div>
 
-          <div style={{ display: "flex", justifyContent: "center", height: 48 }}>
-            <svg width={260} height={48} viewBox="0 0 260 48">
-              <SvgLink x1={90} y1={4} x2={90} y2={44} progress={progressBetween(frame, harnessCue, harnessCue + 20)} tone="cyan" arrow />
-              <SvgLink x1={170} y1={44} x2={170} y2={4} progress={progressBetween(frame, harnessCue, harnessCue + 20)} tone="amber" arrow />
-              <SvgPacket x1={170} y1={44} x2={170} y2={4} progress={progressBetween(frame, harnessCue + 10, harnessCue + 46)} tone="amber" label="Tokens" />
+          <div style={{ display: "flex", justifyContent: "center", height: 58 }}>
+            <svg width={260} height={58} viewBox="0 0 260 58">
+              <SvgLink x1={90} y1={4} x2={90} y2={54} progress={progressBetween(frame, harnessCue, harnessCue + 20)} tone="cyan" strokeWidth={3} arrow />
+              <SvgLink x1={170} y1={54} x2={170} y2={4} progress={progressBetween(frame, harnessCue, harnessCue + 20)} tone="amber" strokeWidth={3} arrow />
+              <SvgPacket x1={170} y1={54} x2={170} y2={4} progress={progressBetween(frame, harnessCue + 10, harnessCue + 46)} tone="amber" label="Tokens" />
             </svg>
           </div>
 
-          {/* Bottom: Model */}
           <div style={slideUpStyle(frame, fps, modelCue, 18)}>
-            <Card tone="amber" glow={frame >= modelCue && frame < harnessCue} padding={22} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
+            <Card tone="amber" glow={frame >= modelCue && frame < harnessCue} padding={28} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
               <div>
                 <Pill tone="amber" size="sm">LAYER 1 • FOUNDATION MODEL</Pill>
-                <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 30, fontWeight: 700, marginTop: 8 }}>
+                <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 34, fontWeight: 700, marginTop: 10 }}>
                   Stateless Next-Token Prediction Engine
                 </div>
               </div>
-              <div style={{ display: "flex", gap: 10 }}>
-                <DataChip label="Claude" tone="amber" style={{ fontSize: 16, padding: "8px 14px" }} />
-                <DataChip label="GPT" tone="amber" style={{ fontSize: 16, padding: "8px 14px" }} />
-                <DataChip label="Gemini" tone="amber" style={{ fontSize: 16, padding: "8px 14px" }} />
+              <div style={{ display: "flex", gap: 12 }}>
+                <DataChip label="Claude" tone="amber" style={{ fontSize: 18, padding: "10px 16px" }} />
+                <DataChip label="GPT" tone="amber" style={{ fontSize: 18, padding: "10px 16px" }} />
+                <DataChip label="Gemini" tone="amber" style={{ fontSize: 18, padding: "10px 16px" }} />
               </div>
             </Card>
           </div>
         </div>
       </SceneBeat>
 
-      {/* BEAT 5: Stateless API Call vs Stateful Harness Loop */}
+      {/* BEAT 5: Full-Canvas Stateless API vs Closed Harness Loop (Zero SectionTitle chrome) */}
       <SceneBeat window={w5}>
-        <SectionTitle
-          eyebrow="SINGLE-SHOT VS. CLOSED LOOP"
-          title="Turning a Stateless API Into an Iterative Controller"
-          tone="cyan"
-        />
-
-        <div style={{ display: "grid", gridTemplateColumns: "0.85fr 1.15fr", gap: 32, alignItems: "stretch" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "0.84fr 1.16fr", gap: 36, alignItems: "stretch", height: 740 }}>
           {/* Left: Stateless Raw API */}
           <div style={slideUpStyle(frame, fps, statelessCue, 20)}>
-            <Card tone="amber" padding={28} style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <Card tone="amber" padding={34} style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
               <div>
-                <Pill tone="amber" size="sm">RAW LLM API</Pill>
-                <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 30, fontWeight: 700, marginTop: 10 }}>
+                <Pill tone="amber" size="md">RAW LLM API</Pill>
+                <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 42, fontWeight: 700, marginTop: 16 }}>
                   Stateless &amp; Blind
                 </div>
-                <p style={{ fontSize: 20, color: TOKENS.colors.textSecondary, marginTop: 8 }}>
-                  One prompt in, one text completion out — then it stops.
+                <p style={{ fontSize: 23, color: TOKENS.colors.textSecondary, marginTop: 12, lineHeight: 1.45 }}>
+                  One prompt in, one text completion out — then the interaction ends.
                 </p>
               </div>
 
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", margin: "28px 0" }}>
-                <NodeBox title="Prompt" tone="neutral" compact style={{ width: 155, textAlign: "center" }} />
-                <svg width={90} height={36} viewBox="0 0 90 36">
-                  <SvgLink x1={4} y1={18} x2={86} y2={18} progress={progressBetween(frame, statelessCue, statelessCue + 24)} tone="amber" arrow />
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", margin: "24px 0" }}>
+                <NodeBox title="Prompt" tone="neutral" style={{ width: 170, textAlign: "center" }} />
+                <svg width={95} height={40} viewBox="0 0 95 40">
+                  <SvgLink x1={4} y1={20} x2={91} y2={20} progress={progressBetween(frame, statelessCue, statelessCue + 24)} tone="amber" strokeWidth={3} arrow />
                 </svg>
-                <NodeBox title="LLM" tone="amber" compact style={{ width: 120, textAlign: "center" }} />
-                <svg width={90} height={36} viewBox="0 0 90 36">
-                  <SvgLink x1={4} y1={18} x2={86} y2={18} progress={progressBetween(frame, statelessCue + 12, statelessCue + 36)} tone="amber" arrow />
+                <NodeBox title="LLM" tone="amber" style={{ width: 135, textAlign: "center" }} />
+                <svg width={95} height={40} viewBox="0 0 95 40">
+                  <SvgLink x1={4} y1={20} x2={91} y2={20} progress={progressBetween(frame, statelessCue + 12, statelessCue + 36)} tone="amber" strokeWidth={3} arrow />
                 </svg>
-                <NodeBox title="End" tone="rose" compact style={{ width: 110, textAlign: "center" }} />
+                <NodeBox title="Stop" tone="rose" style={{ width: 125, textAlign: "center" }} />
               </div>
 
-              <Pill tone="rose" size="sm" style={{ alignSelf: "flex-start" }}>
+              <Pill tone="rose" size="md" style={{ alignSelf: "flex-start" }}>
                 NO FILES • NO TERMINAL • NO FEEDBACK
               </Pill>
             </Card>
           </div>
 
-          {/* Right: 4-node rectangle Harness Loop */}
+          {/* Right: Massive 4-node Harness Loop */}
           <div style={slideUpStyle(frame, fps, changesCue - 8, 20)}>
-            <Card tone="cyan" glow={frame >= envCue} padding={28} style={{ height: "100%" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
+            <Card tone="cyan" glow={frame >= envCue} padding={34} style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <div>
-                  <Pill tone="cyan" size="sm">AGENT HARNESS</Pill>
-                  <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 30, fontWeight: 700, marginTop: 8 }}>
-                    Live Environment Feedback Loop
+                  <Pill tone="cyan" size="md">AGENT HARNESS</Pill>
+                  <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 40, fontWeight: 700, marginTop: 12 }}>
+                    Iterative Environment Controller
                   </div>
                 </div>
-                <Pill tone="emerald" size="sm">ITERATIVE</Pill>
+                <Pill tone="emerald" size="md">CLOSED LOOP</Pill>
               </div>
 
-              <div style={{ position: "relative", width: 790, height: 340, margin: "0 auto" }}>
-                <svg width={790} height={340} viewBox="0 0 790 340" style={{ position: "absolute", inset: 0 }}>
-                  {/* Top: Model -> Action */}
-                  <SvgLink x1={270} y1={68} x2={495} y2={68} progress={loopDraw} tone="amber" arrow />
-                  {/* Right: Action -> Environment */}
-                  <SvgLink x1={630} y1={118} x2={630} y2={212} progress={loopDraw} tone="cyan" arrow />
-                  {/* Bottom: Environment -> Feedback */}
-                  <SvgLink x1={495} y1={264} x2={270} y2={264} progress={loopDraw} tone="emerald" arrow />
-                  {/* Left: Feedback -> Model */}
-                  <SvgLink x1={140} y1={212} x2={140} y2={118} progress={loopDraw} tone="cyan" arrow />
+              <div style={{ position: "relative", width: 840, height: 470, margin: "0 auto" }}>
+                <svg width={840} height={470} viewBox="0 0 840 470" style={{ position: "absolute", inset: 0 }}>
+                  <SvgLink x1={300} y1={90} x2={520} y2={90} progress={loopDraw} tone="amber" strokeWidth={3.5} arrow />
+                  <SvgLink x1={675} y1={165} x2={675} y2={305} progress={loopDraw} tone="cyan" strokeWidth={3.5} arrow />
+                  <SvgLink x1={520} y1={375} x2={300} y2={375} progress={loopDraw} tone="emerald" strokeWidth={3.5} arrow />
+                  <SvgLink x1={155} y1={305} x2={155} y2={165} progress={loopDraw} tone="cyan" strokeWidth={3.5} arrow />
 
-                  {/* Circulating packet */}
                   {frame >= envCue && loopCycle < 0.25 ? (
-                    <SvgPacket x1={270} y1={68} x2={495} y2={68} progress={loopCycle * 4} tone="amber" />
+                    <SvgPacket x1={300} y1={90} x2={520} y2={90} progress={loopCycle * 4} tone="amber" radius={11} />
                   ) : null}
                   {frame >= envCue && loopCycle >= 0.25 && loopCycle < 0.5 ? (
-                    <SvgPacket x1={630} y1={118} x2={630} y2={212} progress={(loopCycle - 0.25) * 4} tone="cyan" />
+                    <SvgPacket x1={675} y1={165} x2={675} y2={305} progress={(loopCycle - 0.25) * 4} tone="cyan" radius={11} />
                   ) : null}
                   {frame >= envCue && loopCycle >= 0.5 && loopCycle < 0.75 ? (
-                    <SvgPacket x1={495} y1={264} x2={270} y2={264} progress={(loopCycle - 0.5) * 4} tone="emerald" />
+                    <SvgPacket x1={520} y1={375} x2={300} y2={375} progress={(loopCycle - 0.5) * 4} tone="emerald" radius={11} />
                   ) : null}
                   {frame >= envCue && loopCycle >= 0.75 ? (
-                    <SvgPacket x1={140} y1={212} x2={140} y2={118} progress={(loopCycle - 0.75) * 4} tone="cyan" />
+                    <SvgPacket x1={155} y1={305} x2={155} y2={165} progress={(loopCycle - 0.75) * 4} tone="cyan" radius={11} />
                   ) : null}
                 </svg>
 
-                <NodeBox
-                  tag="1. REASON"
-                  title="Model"
-                  subtitle="Plans next step"
-                  tone="amber"
-                  compact
-                  style={{ position: "absolute", left: 10, top: 18, width: 255 }}
-                />
-                <NodeBox
-                  tag="2. PROPOSE"
-                  title="Action"
-                  subtitle="Tool call request"
-                  tone="cyan"
-                  compact
-                  style={{ position: "absolute", left: 500, top: 18, width: 260 }}
-                />
-                <NodeBox
-                  tag="3. EXECUTE"
-                  title="Environment"
-                  subtitle="Files, shell & tests"
-                  tone="emerald"
-                  glow={frame >= envCue}
-                  compact
-                  style={{ position: "absolute", left: 500, top: 218, width: 260 }}
-                />
-                <NodeBox
-                  tag="4. OBSERVE"
-                  title="Feedback"
-                  subtitle="Real stdout & exit code"
-                  tone="cyan"
-                  compact
-                  style={{ position: "absolute", left: 10, top: 218, width: 255 }}
-                />
+                <NodeBox tag="1. REASON" title="Model" subtitle="Plans next step" tone="amber" style={{ position: "absolute", left: 10, top: 24, width: 285 }} />
+                <NodeBox tag="2. PROPOSE" title="Action" subtitle="Tool call request" tone="cyan" style={{ position: "absolute", left: 530, top: 24, width: 295 }} />
+                <NodeBox tag="3. EXECUTE" title="Environment" subtitle="Real files, shell & tests" tone="emerald" glow={frame >= envCue} style={{ position: "absolute", left: 530, top: 312, width: 295 }} />
+                <NodeBox tag="4. OBSERVE" title="Feedback" subtitle="Actual output & exit code" tone="cyan" style={{ position: "absolute", left: 10, top: 312, width: 285 }} />
               </div>
             </Card>
           </div>
         </div>
       </SceneBeat>
 
-      {/* BEAT 6: Why Rigid Frameworks Break ("The Bitter Lesson") */}
+      {/* BEAT 6: Full-Canvas Rigid Frameworks vs Thin Unix Harnesses (Zero SectionTitle chrome) */}
       <SceneBeat window={w6}>
-        <SectionTitle
-          eyebrow="THE BITTER LESSON OF HARNESSES"
-          title="Why Rigid Frameworks Break When Models Improve"
-          tone="cyan"
-        />
-
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
-          {/* Left: Rigid Framework */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 36, height: 700 }}>
           <div style={slideUpStyle(frame, fps, rigidCue, 20)}>
-            <Card tone="rose" padding={28}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 18 }}>
-                <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 30, fontWeight: 700 }}>
+            <Card tone="rose" padding={34} style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 38, fontWeight: 700 }}>
                   Heavy Rigid Frameworks
                 </span>
-                <Pill tone="rose" size="sm">
-                  {frame >= breaksCue ? "BRITTLE • BREAKS" : "OVER-ENGINEERED"}
+                <Pill tone="rose" size="md">
+                  {frame >= breaksCue ? "BRITTLE • BREAKS" : "HARDCODED"}
                 </Pill>
               </div>
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
                 {[
                   { t: "Fixed Prompt Chain", s: "Hardcoded step order" },
                   { t: "Static DAG Router", s: "Second-guesses model" },
@@ -380,28 +320,27 @@ export const ModelVsHarnessChapter: React.FC<ChapterComponentProps> = ({ chapter
                     subtitle={item.s}
                     tone="rose"
                     dim={frame >= breaksCue}
-                    compact
+                    style={{ minHeight: 155, display: "flex", flexDirection: "column", justifyContent: "center" }}
                   />
                 ))}
               </div>
 
-              <div style={{ marginTop: 18, fontSize: 19, color: TOKENS.colors.accentRose, fontFamily: TOKENS.fonts.mono }}>
-                {frame >= breaksCue ? "✗ New frontier model ships → rigid scaffolding fights it" : "Hardcodes yesterday's workarounds into graph topology"}
+              <div style={{ fontSize: 21, color: TOKENS.colors.accentRose, fontFamily: TOKENS.fonts.mono }}>
+                {frame >= breaksCue ? "✗ Stronger model ships → scaffolding fights it & breaks" : "Hardcodes yesterday's workarounds into graph topology"}
               </div>
             </Card>
           </div>
 
-          {/* Right: Thin Unix-style Harness */}
           <div style={slideUpStyle(frame, fps, modernCue - 8, 20)}>
-            <Card tone="cyan" glow={frame >= minimalCue} padding={28}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 18 }}>
-                <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 30, fontWeight: 700 }}>
+            <Card tone="cyan" glow={frame >= minimalCue} padding={34} style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 38, fontWeight: 700 }}>
                   Thin Unix-Style Harnesses
                 </span>
-                <Pill tone="emerald" size="sm">MODEL-DRIVEN</Pill>
+                <Pill tone="emerald" size="md">THE BITTER LESSON</Pill>
               </div>
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
                 {[
                   { t: "Shell", s: "Composable CLI power" },
                   { t: "Files", s: "Direct read & patch" },
@@ -414,65 +353,56 @@ export const ModelVsHarnessChapter: React.FC<ChapterComponentProps> = ({ chapter
                     subtitle={item.s}
                     tone="cyan"
                     glow={frame >= minimalCue}
-                    compact
+                    style={{ minHeight: 155, display: "flex", flexDirection: "column", justifyContent: "center" }}
                   />
                 ))}
               </div>
 
-              <div style={{ marginTop: 18, display: "flex", alignItems: "center", gap: 10 }}>
-                <Pill tone="cyan" size="sm">Claude Code</Pill>
-                <Pill tone="cyan" size="sm">OpenCode</Pill>
-                <Pill tone="cyan" size="sm">Aider</Pill>
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <Pill tone="cyan" size="md">Claude Code</Pill>
+                <Pill tone="cyan" size="md">OpenCode</Pill>
+                <Pill tone="cyan" size="md">Aider</Pill>
               </div>
             </Card>
           </div>
         </div>
       </SceneBeat>
 
-      {/* BEAT 7: Core + Perimeter Division of Labor (breaks split-column streak) */}
+      {/* BEAT 7: Full-Canvas Orbital Core + Perimeter (Zero SectionTitle chrome) */}
       <SceneBeat window={w7}>
-        <SectionTitle
-          eyebrow="DIVISION OF LABOR"
-          title="What the Model Owns vs. What the Harness Owns"
-          tone="cyan"
-          align="center"
-        />
-
-        <div style={{ position: "relative", width: 1500, height: 500, margin: "0 auto" }}>
-          <svg width={1500} height={500} viewBox="0 0 1500 500" style={{ position: "absolute", inset: 0 }}>
-            <SvgLink x1={575} y1={210} x2={435} y2={135} progress={perimLinks} tone="cyan" arrow />
-            <SvgLink x1={925} y1={210} x2={1065} y2={135} progress={perimLinks} tone="cyan" arrow />
-            <SvgLink x1={575} y1={290} x2={435} y2={365} progress={perimLinks} tone="cyan" arrow />
-            <SvgLink x1={925} y1={290} x2={1065} y2={365} progress={perimLinks} tone="cyan" arrow />
+        <div style={{ position: "relative", width: 1620, height: 700, margin: "0 auto" }}>
+          <svg width={1620} height={700} viewBox="0 0 1620 700" style={{ position: "absolute", inset: 0 }}>
+            <SvgLink x1={615} y1={285} x2={470} y2={175} progress={perimLinks} tone="cyan" strokeWidth={3.5} arrow />
+            <SvgLink x1={1005} y1={285} x2={1150} y2={175} progress={perimLinks} tone="cyan" strokeWidth={3.5} arrow />
+            <SvgLink x1={615} y1={415} x2={470} y2={525} progress={perimLinks} tone="cyan" strokeWidth={3.5} arrow />
+            <SvgLink x1={1005} y1={415} x2={1150} y2={525} progress={perimLinks} tone="cyan" strokeWidth={3.5} arrow />
           </svg>
 
-          {/* Center Core: Model */}
           <div
             style={{
               position: "absolute",
-              left: 550,
-              top: 155,
-              width: 400,
+              left: 590,
+              top: 225,
+              width: 440,
               ...slideUpStyle(frame, fps, reasoningCue, 18),
             }}
           >
-            <Card tone="amber" glow padding={28} style={{ textAlign: "center" }}>
-              <Pill tone="amber" size="sm">PROBABILISTIC CORE</Pill>
-              <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 34, fontWeight: 700, marginTop: 12 }}>
+            <Card tone="amber" glow padding={34} style={{ textAlign: "center" }}>
+              <Pill tone="amber" size="md">PROBABILISTIC CORE</Pill>
+              <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 40, fontWeight: 700, marginTop: 14 }}>
                 The Model Owns
               </div>
-              <div style={{ fontSize: 21, color: TOKENS.colors.textSecondary, marginTop: 8 }}>
+              <div style={{ fontSize: 23, color: TOKENS.colors.textSecondary, marginTop: 10 }}>
                 Reasoning, judgment &amp; dynamic planning
               </div>
             </Card>
           </div>
 
-          {/* 4 Surrounding Harness Perimeter Cards */}
           {[
-            { left: 40, top: 30, tag: "HARNESS BOUNDARY", title: "Deterministic Execution", sub: "Reliable tool calls, parsing & exit codes" },
-            { left: 1040, top: 30, tag: "HARNESS BOUNDARY", title: "Context Hygiene", sub: "Caching, truncation & clean compaction" },
-            { left: 40, top: 320, tag: "HARNESS BOUNDARY", title: "Safety Perimeter", sub: "Hooks, sandboxes & approval gates" },
-            { left: 1040, top: 320, tag: "HARNESS BOUNDARY", title: "Ground-Truth Feedback", sub: "Tests, linters & deterministic signals" },
+            { left: 20, top: 48, tag: "HARNESS OWNS", title: "Deterministic Execution", sub: "Reliable tool calls, parsing & exit codes" },
+            { left: 1130, top: 48, tag: "HARNESS OWNS", title: "Context Hygiene", sub: "Caching, truncation & clean compaction" },
+            { left: 20, top: 472, tag: "HARNESS OWNS", title: "Safety Perimeter", sub: "Hooks, sandboxes & approval gates" },
+            { left: 1130, top: 472, tag: "HARNESS OWNS", title: "Ground-Truth Feedback", sub: "Tests, linters & deterministic signals" },
           ].map((card, i) => (
             <div
               key={card.title}
@@ -480,7 +410,7 @@ export const ModelVsHarnessChapter: React.FC<ChapterComponentProps> = ({ chapter
                 position: "absolute",
                 left: card.left,
                 top: card.top,
-                width: 420,
+                width: 470,
                 ...slideUpStyle(frame, fps, detCue + i * 6, 16),
               }}
             >
@@ -490,20 +420,13 @@ export const ModelVsHarnessChapter: React.FC<ChapterComponentProps> = ({ chapter
         </div>
       </SceneBeat>
 
-      {/* BEAT 8: One Harness Architecture, Many Agent Domains */}
+      {/* BEAT 8: Full-Canvas 2x2 Multi-Domain Grid (Inline centered hub pill, zero SectionTitle chrome) */}
       <SceneBeat window={w8}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
-          <SectionTitle
-            eyebrow="UNIVERSAL ARCHITECTURE"
-            title="One Harness Engine. Many Agent Domains."
-            subtitle="Swap the tools and verifiers — the underlying harness stays identical."
-            tone="cyan"
-            style={{ marginBottom: 0 }}
-          />
-          <Pill tone="cyan" size="md">SAME HARNESS ENGINE</Pill>
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 24 }}>
+          <Pill tone="cyan" size="lg">SAME HARNESS ENGINE • FOUR AGENT DOMAINS</Pill>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 22 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28 }}>
           {DOMAINS.map((d) => {
             const cueMap: Record<string, number> = {
               coding: labCue,
@@ -524,25 +447,27 @@ export const ModelVsHarnessChapter: React.FC<ChapterComponentProps> = ({ chapter
                 <Card
                   tone={isLabFocus ? "emerald" : d.tone}
                   glow={isLabFocus || (isHighlighted && d.key !== "coding")}
-                  padding={24}
-                  style={{ height: "100%" }}
+                  padding={30}
+                  style={{ height: "100%", minHeight: 280, display: "flex", flexDirection: "column", justifyContent: "space-between" }}
                 >
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
-                    <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 28, fontWeight: 700 }}>
-                      {d.title}
-                    </span>
-                    {d.badge ? (
-                      <Pill tone={isLabFocus ? "emerald" : "cyan"} size="sm">
-                        {d.badge}
-                      </Pill>
-                    ) : null}
+                  <div>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+                      <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 34, fontWeight: 700 }}>
+                        {d.title}
+                      </span>
+                      {d.badge ? (
+                        <Pill tone={isLabFocus ? "emerald" : "cyan"} size="md">
+                          {d.badge}
+                        </Pill>
+                      ) : null}
+                    </div>
+                    <div style={{ fontSize: 20, color: TOKENS.colors.textSecondary }}>
+                      {d.examples}
+                    </div>
                   </div>
-                  <div style={{ fontSize: 17, color: TOKENS.colors.textSecondary, marginBottom: 16 }}>
-                    {d.examples}
-                  </div>
-                  <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                    <DataChip label={`Tools: ${d.tools}`} tone="cyan" style={{ fontSize: 15, padding: "7px 12px" }} />
-                    <DataChip label={`Verify: ${d.verifier}`} tone="emerald" style={{ fontSize: 15, padding: "7px 12px" }} />
+                  <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginTop: 18 }}>
+                    <DataChip label={`Tools: ${d.tools}`} tone="cyan" style={{ fontSize: 17, padding: "10px 15px" }} />
+                    <DataChip label={`Verify: ${d.verifier}`} tone="emerald" style={{ fontSize: 17, padding: "10px 15px" }} />
                   </div>
                 </Card>
               </div>

@@ -23,15 +23,7 @@ import {
   StatCallout,
 } from "../../ui/primitives";
 import { Stage } from "../../ui/Stage";
-import type { StageLegendItem } from "../../ui/Stage";
 import type { ChapterComponentProps } from "../index";
-
-const LEGEND: StageLegendItem[] = [
-  { label: "HARNESS", tone: "cyan" },
-  { label: "MODEL", tone: "amber" },
-  { label: "RELIABILITY", tone: "emerald" },
-  { label: "FAILURE", tone: "rose" },
-];
 
 const TRACE_TURNS: {
   turn: string;
@@ -93,7 +85,7 @@ export const EvalsAndEvolutionChapter: React.FC<ChapterComponentProps> = ({
   const deleteProgress = progressBetween(frame, delCue, delCue + 45);
 
   return (
-    <Stage chapterIndex="08" chapterTitle={chapter.title} tone="cyan" legend={LEGEND}>
+    <Stage chapterIndex="08" chapterTitle={chapter.title} tone="cyan" transientHeader compactPadding>
       {/* SFX */}
       <Sfx name="whoosh-soft" from={trajCue} volume={0.25} />
       <Sfx name="camera-shutter" from={replayCue} volume={0.28} />
@@ -108,24 +100,24 @@ export const EvalsAndEvolutionChapter: React.FC<ChapterComponentProps> = ({
       <Sfx name="magnetic-snap" from={permCue} volume={0.3} />
       <Sfx name="pop-out" from={delCue} volume={0.28} />
 
-      {/* BEAT 31: Trajectory Observability (compact ~54px rows) */}
+      {/* BEAT 31: Full-Canvas Flight Recorder Trace Waterfall (Zero SectionTitle chrome) */}
       <SceneBeat window={w31}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 18 }}>
-          <SectionTitle
-            eyebrow="PILLAR 06 — FLIGHT RECORDER OBSERVABILITY"
-            title="Log Full Trajectories, Not Just Final Outputs"
-            tone="cyan"
-            style={{ marginBottom: 0 }}
-          />
-          <div style={{ display: "flex", gap: 10 }}>
-            <DataChip label="TTFT 0.8s" tone="cyan" style={{ fontSize: 15, padding: "8px 12px" }} />
-            <DataChip label="Cache 88%" tone="emerald" style={{ fontSize: 15, padding: "8px 12px" }} />
-            <DataChip label="Cost $0.14" tone="amber" style={{ fontSize: 15, padding: "8px 12px" }} />
+        <Card tone="cyan" padding={34}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 24 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+              <Pill tone="cyan" size="md">FLIGHT RECORDER TRACE</Pill>
+              <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 32, fontWeight: 700 }}>
+                auth.ts — 5-Turn Trajectory
+              </span>
+            </div>
+            <div style={{ display: "flex", gap: 12 }}>
+              <DataChip label="TTFT 0.8s" tone="cyan" style={{ fontSize: 17, padding: "9px 14px" }} />
+              <DataChip label="Cache 88%" tone="emerald" style={{ fontSize: 17, padding: "9px 14px" }} />
+              <DataChip label="Cost $0.14" tone="amber" style={{ fontSize: 17, padding: "9px 14px" }} />
+            </div>
           </div>
-        </div>
 
-        <Card tone="neutral" padding={24}>
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {TRACE_TURNS.map((row, idx) => {
               const barReveal = progressBetween(frame, trajCue + idx * 14, trajCue + idx * 14 + 26);
               const t = TONE_STYLES[row.tone];
@@ -134,21 +126,21 @@ export const EvalsAndEvolutionChapter: React.FC<ChapterComponentProps> = ({
                 <div
                   key={row.turn}
                   style={{
-                    height: 54,
+                    height: 76,
                     display: "grid",
-                    gridTemplateColumns: "110px 1fr 220px",
+                    gridTemplateColumns: "120px 1fr 250px",
                     alignItems: "center",
-                    gap: 16,
-                    padding: "0 14px",
-                    borderRadius: 12,
-                    backgroundColor: focused ? "rgba(251, 113, 133, 0.14)" : "rgba(255,255,255,0.03)",
+                    gap: 20,
+                    padding: "0 18px",
+                    borderRadius: 14,
+                    backgroundColor: focused ? "rgba(251, 113, 133, 0.16)" : "rgba(255,255,255,0.03)",
                     border: `1.5px solid ${focused ? TOKENS.colors.accentRose : TOKENS.colors.border}`,
                   }}
                 >
-                  <span style={{ fontFamily: TOKENS.fonts.mono, fontSize: 16, fontWeight: 700, color: TOKENS.colors.textSecondary }}>
+                  <span style={{ fontFamily: TOKENS.fonts.mono, fontSize: 19, fontWeight: 700, color: TOKENS.colors.textSecondary }}>
                     {row.turn}
                   </span>
-                  <div style={{ position: "relative", height: 32, backgroundColor: "rgba(255,255,255,0.04)", borderRadius: 8, overflow: "hidden" }}>
+                  <div style={{ position: "relative", height: 44, backgroundColor: "rgba(255,255,255,0.04)", borderRadius: 10, overflow: "hidden" }}>
                     <div
                       style={{
                         position: "absolute",
@@ -156,13 +148,13 @@ export const EvalsAndEvolutionChapter: React.FC<ChapterComponentProps> = ({
                         width: `${row.widthPct * barReveal}%`,
                         height: "100%",
                         backgroundColor: t.bg,
-                        border: `1.5px solid ${t.main}`,
-                        borderRadius: 8,
+                        border: `2px solid ${t.main}`,
+                        borderRadius: 10,
                         display: "flex",
                         alignItems: "center",
-                        paddingLeft: 10,
+                        paddingLeft: 14,
                         fontFamily: TOKENS.fonts.mono,
-                        fontSize: 14,
+                        fontSize: 17,
                         fontWeight: 700,
                         color: t.main,
                         whiteSpace: "nowrap",
@@ -172,7 +164,7 @@ export const EvalsAndEvolutionChapter: React.FC<ChapterComponentProps> = ({
                       {row.action}
                     </div>
                   </div>
-                  <span style={{ fontFamily: TOKENS.fonts.mono, fontSize: 14, color: focused ? TOKENS.colors.accentRose : TOKENS.colors.textMuted, textAlign: "right" }}>
+                  <span style={{ fontFamily: TOKENS.fonts.mono, fontSize: 16, color: focused ? TOKENS.colors.accentRose : TOKENS.colors.textMuted, textAlign: "right" }}>
                     {row.meta}
                   </span>
                 </div>
@@ -182,16 +174,15 @@ export const EvalsAndEvolutionChapter: React.FC<ChapterComponentProps> = ({
         </Card>
       </SceneBeat>
 
-      {/* BEAT 32: Measuring Harnesses with Evals (pass@k vs pass^k) */}
+      {/* BEAT 32: Spacious Evals Dashboard (Clean 1-line title only) */}
       <SceneBeat window={w32}>
         <SectionTitle
-          eyebrow="PILLAR 06 — SCIENTIFIC HARNESS EVALS"
           title="Measure Consistency (pass^k), Not Lucky Runs (pass@k)"
-          subtitle="An 80% single-run agent scores 99.2% on pass@3 — yet drops to 51.2% on pass^3."
           tone="cyan"
+          style={{ marginBottom: 32 }}
         />
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 24 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 28, marginBottom: 28 }}>
           <StatCallout
             label="Reliability (pass^3)"
             value={
@@ -201,7 +192,7 @@ export const EvalsAndEvolutionChapter: React.FC<ChapterComponentProps> = ({
                 progress={pass3Progress}
                 suffix="%"
                 tone="emerald"
-                size={52}
+                size={60}
               />
             }
             detail="Succeeds 3/3 consecutive runs"
@@ -218,7 +209,7 @@ export const EvalsAndEvolutionChapter: React.FC<ChapterComponentProps> = ({
                 decimals={2}
                 prefix="$"
                 tone="cyan"
-                size={52}
+                size={60}
               />
             }
             detail="Driven down by caching & clean diffs"
@@ -234,7 +225,7 @@ export const EvalsAndEvolutionChapter: React.FC<ChapterComponentProps> = ({
                 progress={costDrop}
                 suffix=" turns"
                 tone="amber"
-                size={48}
+                size={54}
               />
             }
             detail="Fewer retries via actionable tool errors"
@@ -242,43 +233,39 @@ export const EvalsAndEvolutionChapter: React.FC<ChapterComponentProps> = ({
           />
         </div>
 
-        <Card tone="neutral" padding={24} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-          <MeterBar label="Harness v1 — pass^3 Consistency (80% single-run)" percent={51} valueLabel="51.2%" tone="amber" height={20} />
+        <Card tone="neutral" padding={30} style={{ display: "flex", flexDirection: "column", gap: 22 }}>
+          <MeterBar label="Harness v1 — pass^3 Consistency (80% single-run → 99% pass@3, 51% pass^3)" percent={51} valueLabel="51.2%" tone="amber" height={24} />
           <MeterBar
             label="Harness v2 — pass^3 Consistency (95% single-run)"
             percent={interpolate(pass3Progress, [0, 1], [51, 86])}
             valueLabel={`${Math.round(interpolate(pass3Progress, [0, 1], [51, 86]))}%`}
             tone="emerald"
-            height={20}
+            height={24}
           />
         </Card>
       </SceneBeat>
 
-      {/* BEAT 33: Isolating Model Gains vs Harness Gains (2x2 Matrix) */}
+      {/* BEAT 33: Full-Canvas 2x2 Evaluation Matrix (Zero SectionTitle chrome) */}
       <SceneBeat window={w33}>
-        <SectionTitle
-          eyebrow="PILLAR 06 — ISOLATING VARIABLES"
-          title="Run the 2×2 Matrix: Old/New Model × Old/New Harness"
-          tone="cyan"
-        />
-
-        <Card tone="neutral" padding={28} style={{ maxWidth: 1380, width: "100%", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "220px 1fr 1fr", gap: 20, alignItems: "stretch" }}>
-            <div />
-            <div style={{ textAlign: "center", fontFamily: TOKENS.fonts.mono, fontSize: 18, fontWeight: 700, color: TOKENS.colors.accentWarm }}>
+        <Card tone="neutral" padding={36} style={{ maxWidth: 1520, width: "100%", margin: "0 auto" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "260px 1fr 1fr", gap: 26, alignItems: "stretch" }}>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <Pill tone="cyan" size="md">2×2 EVAL MATRIX</Pill>
+            </div>
+            <div style={{ textAlign: "center", fontFamily: TOKENS.fonts.mono, fontSize: 20, fontWeight: 700, color: TOKENS.colors.accentWarm, display: "flex", alignItems: "center", justifyContent: "center" }}>
               HEAVY HARNESS v1 (RIGID SCAFFOLD)
             </div>
-            <div style={{ textAlign: "center", fontFamily: TOKENS.fonts.mono, fontSize: 18, fontWeight: 700, color: TOKENS.colors.accentEmerald }}>
+            <div style={{ textAlign: "center", fontFamily: TOKENS.fonts.mono, fontSize: 20, fontWeight: 700, color: TOKENS.colors.accentEmerald, display: "flex", alignItems: "center", justifyContent: "center" }}>
               THIN HARNESS v2 (MINIMAL PRIMITIVES)
             </div>
 
-            <div style={{ display: "flex", alignItems: "center", fontFamily: TOKENS.fonts.display, fontSize: 26, fontWeight: 700, color: TOKENS.colors.textSecondary }}>
+            <div style={{ display: "flex", alignItems: "center", fontFamily: TOKENS.fonts.display, fontSize: 32, fontWeight: 700, color: TOKENS.colors.textSecondary }}>
               Last-Gen Model A
             </div>
-            <NodeBox tag="OLD BASELINE" title="64% Solved" subtitle="Rigid prompt scaffold helped rescue weak reasoning" tone="amber" />
-            <NodeBox tag="UNDER-GUIDED" title="52% Solved" subtitle="Older model struggled without guardrails" tone="neutral" dim />
+            <NodeBox tag="OLD BASELINE" title="64% Solved" subtitle="Rigid prompt scaffold helped rescue weak reasoning" tone="amber" style={{ minHeight: 200, display: "flex", flexDirection: "column", justifyContent: "center" }} />
+            <NodeBox tag="UNDER-GUIDED" title="52% Solved" subtitle="Older model struggled without guardrails" tone="neutral" dim style={{ minHeight: 200, display: "flex", flexDirection: "column", justifyContent: "center" }} />
 
-            <div style={{ display: "flex", alignItems: "center", fontFamily: TOKENS.fonts.display, fontSize: 26, fontWeight: 700, color: TOKENS.colors.textPrimary }}>
+            <div style={{ display: "flex", alignItems: "center", fontFamily: TOKENS.fonts.display, fontSize: 32, fontWeight: 700, color: TOKENS.colors.textPrimary }}>
               Frontier Model B
             </div>
             <div style={{ opacity: frame >= throtCue - 16 ? 1 : 0.38 }}>
@@ -288,6 +275,7 @@ export const EvalsAndEvolutionChapter: React.FC<ChapterComponentProps> = ({
                 subtitle="Legacy chains & routers box in stronger reasoning"
                 tone="rose"
                 glow={frame >= throtCue && frame < stripCue}
+                style={{ minHeight: 200, display: "flex", flexDirection: "column", justifyContent: "center" }}
               />
             </div>
             <div style={{ opacity: frame >= stripCue - 16 ? 1 : 0.38 }}>
@@ -297,36 +285,35 @@ export const EvalsAndEvolutionChapter: React.FC<ChapterComponentProps> = ({
                 subtitle="Removing legacy workarounds unlocks frontier capability"
                 tone="emerald"
                 glow={frame >= stripCue}
+                style={{ minHeight: 200, display: "flex", flexDirection: "column", justifyContent: "center" }}
               />
             </div>
           </div>
         </Card>
       </SceneBeat>
 
-      {/* BEAT 34: Build to Delete (Generational Timeline Gen 1 -> Gen 2 -> Gen 3) */}
+      {/* BEAT 34: Spacious Build-to-Delete Generational Timeline (Clean 1-line title only) */}
       <SceneBeat window={w34}>
         <SectionTitle
-          eyebrow="PILLAR 06 — LONG-TERM ARCHITECTURE"
-          title="The Golden Rule: Build Workarounds to Delete"
-          subtitle="Separate permanent harness infrastructure from temporary model patches."
+          title="Build Temporary Workarounds to Delete"
           tone="emerald"
+          style={{ marginBottom: 28 }}
         />
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
-          {/* Top track: Temporary workarounds shedding over generations */}
-          <Card tone="amber" padding={24}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
-              <Pill tone="rose" size="sm">TEMPORARY MODEL WORKAROUNDS — BUILD TO DELETE</Pill>
-              <span style={{ fontFamily: TOKENS.fonts.mono, fontSize: 15, color: TOKENS.colors.textSecondary }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 26 }}>
+          <Card tone="amber" padding={28}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 18 }}>
+              <Pill tone="rose" size="md">TEMPORARY MODEL WORKAROUNDS — SHED OVER GENERATIONS</Pill>
+              <span style={{ fontFamily: TOKENS.fonts.mono, fontSize: 17, color: TOKENS.colors.textSecondary }}>
                 MODEL GEN 1 → GEN 2 → GEN 3
               </span>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 22 }}>
               {[
-                { gen: "GEN 1", items: ["JSON Repair Shim", "Rigid Chain Router", "Verbose CoT Nudge"], fade: 0.22 },
-                { gen: "GEN 2", items: ["Rigid Chain Router", "Verbose CoT Nudge"], fade: 0.55 },
-                { gen: "GEN 3", items: ["All Legacy Shims Deleted ✓"], fade: 0.9 },
+                { gen: "GEN 1", items: ["JSON Repair Shim", "Rigid Chain Router", "Verbose CoT Nudge"] },
+                { gen: "GEN 2", items: ["Rigid Chain Router", "Verbose CoT Nudge"] },
+                { gen: "GEN 3", items: ["All Legacy Shims Deleted ✓"] },
               ].map((col, idx) => {
                 const lift = idx < 2 ? interpolate(deleteProgress, [0, 1], [0, -18]) : 0;
                 const op = idx < 2 ? interpolate(deleteProgress, [0, 1], [1, 0.25]) : 0.35 + 0.65 * fadeIn(frame, delCue + 6, 16);
@@ -334,24 +321,24 @@ export const EvalsAndEvolutionChapter: React.FC<ChapterComponentProps> = ({
                   <div
                     key={col.gen}
                     style={{
-                      padding: 16,
-                      borderRadius: 16,
+                      padding: 20,
+                      borderRadius: 18,
                       backgroundColor: "rgba(255,255,255,0.03)",
                       border: `1px solid ${TOKENS.colors.border}`,
                       transform: `translateY(${lift}px)`,
                       opacity: op,
                     }}
                   >
-                    <div style={{ fontFamily: TOKENS.fonts.mono, fontSize: 15, fontWeight: 700, color: idx === 2 ? TOKENS.colors.accentEmerald : TOKENS.colors.accentWarm, marginBottom: 10 }}>
+                    <div style={{ fontFamily: TOKENS.fonts.mono, fontSize: 17, fontWeight: 700, color: idx === 2 ? TOKENS.colors.accentEmerald : TOKENS.colors.accentWarm, marginBottom: 12 }}>
                       {col.gen}
                     </div>
-                    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                       {col.items.map((chip) => (
                         <DataChip
                           key={chip}
                           label={chip}
                           tone={idx === 2 ? "emerald" : "rose"}
-                          style={{ fontSize: 15, padding: "7px 10px" }}
+                          style={{ fontSize: 17, padding: "10px 12px" }}
                         />
                       ))}
                     </div>
@@ -361,20 +348,19 @@ export const EvalsAndEvolutionChapter: React.FC<ChapterComponentProps> = ({
             </div>
           </Card>
 
-          {/* Bottom track: Permanent foundation locked across all generations */}
           <div style={slideUpStyle(frame, fps, permCue - 12, 16)}>
-            <Card tone="cyan" glow={frame >= permCue} padding={26}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
-                <Pill tone="emerald" size="sm">PERMANENT HARNESS INFRASTRUCTURE — KEEP FOREVER</Pill>
-                <span style={{ fontFamily: TOKENS.fonts.mono, fontSize: 14, color: TOKENS.colors.accent }}>
+            <Card tone="cyan" glow={frame >= permCue} padding={30}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 18 }}>
+                <Pill tone="emerald" size="md">PERMANENT HARNESS INFRASTRUCTURE — KEEP FOREVER</Pill>
+                <span style={{ fontFamily: TOKENS.fonts.mono, fontSize: 16, color: TOKENS.colors.accent }}>
                   Claude Agent SDK • OpenAI Agents SDK • LangChain Deep Agents (LangGraph)
                 </span>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
-                <DataChip label="Sandboxes" sublabel="OS / container isolation" tone="emerald" />
-                <DataChip label="Deterministic Verifiers" sublabel="Tests, types & hooks" tone="emerald" />
-                <DataChip label="Prompt Caching" sublabel="Prefix & context hygiene" tone="cyan" />
-                <DataChip label="Trajectory Traces" sublabel="Replayable evals" tone="cyan" />
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 18 }}>
+                <DataChip label="Sandboxes" sublabel="OS / container isolation" tone="emerald" style={{ fontSize: 19, padding: "16px 14px" }} />
+                <DataChip label="Deterministic Verifiers" sublabel="Tests, types & hooks" tone="emerald" style={{ fontSize: 19, padding: "16px 14px" }} />
+                <DataChip label="Prompt Caching" sublabel="Prefix & context hygiene" tone="cyan" style={{ fontSize: 19, padding: "16px 14px" }} />
+                <DataChip label="Trajectory Traces" sublabel="Replayable evals" tone="cyan" style={{ fontSize: 19, padding: "16px 14px" }} />
               </div>
             </Card>
           </div>

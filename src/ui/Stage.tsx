@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { TOKENS, TONE_STYLES } from "../theme/tokens";
 import type { SemanticTone } from "../theme/tokens";
 
@@ -14,6 +14,8 @@ export const Stage: React.FC<{
   chapterTitle?: string;
   tone?: SemanticTone;
   showHeader?: boolean;
+  transientHeader?: boolean;
+  compactPadding?: boolean;
   legend?: StageLegendItem[];
   headerRight?: React.ReactNode;
 }> = ({
@@ -22,11 +24,34 @@ export const Stage: React.FC<{
   chapterTitle,
   tone = "cyan",
   showHeader = true,
+  transientHeader = false,
+  compactPadding = false,
   legend,
   headerRight,
 }) => {
+  const frame = useCurrentFrame();
   const toneStyle = TONE_STYLES[tone];
-  const hasHeader = showHeader && Boolean(chapterIndex || chapterTitle || legend?.length || headerRight);
+  const hasStaticHeader =
+    !transientHeader &&
+    showHeader &&
+    Boolean(chapterIndex || chapterTitle || legend?.length || headerRight);
+
+  // Sleek 2.5s chapter entry badge that takes 0px of layout height and fades out cleanly
+  const transientOpacity = transientHeader
+    ? Math.min(
+        interpolate(frame, [0, 12], [0, 1], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+        }),
+        interpolate(frame, [66, 86], [1, 0], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+        })
+      )
+    : 0;
+
+  const padY = compactPadding ? 54 : TOKENS.layout.safeMarginY;
+  const padX = compactPadding ? 80 : TOKENS.layout.safeMarginX;
 
   return (
     <AbsoluteFill
@@ -50,15 +75,68 @@ export const Stage: React.FC<{
         }}
       />
 
+      {/* Transient chapter badge overlay (zero layout footprint, fades out after ~2.5s) */}
+      {transientHeader && transientOpacity > 0.01 && (chapterIndex || chapterTitle) ? (
+        <div
+          style={{
+            position: "absolute",
+            top: 26,
+            left: padX,
+            zIndex: 20,
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 12,
+            padding: "7px 16px 7px 10px",
+            borderRadius: 999,
+            backgroundColor: "rgba(11, 16, 32, 0.84)",
+            border: `1px solid ${toneStyle.border}`,
+            opacity: transientOpacity,
+            transform: `translateY(${interpolate(transientOpacity, [0, 1], [-8, 0])}px)`,
+            pointerEvents: "none",
+          }}
+        >
+          {chapterIndex ? (
+            <span
+              style={{
+                fontFamily: TOKENS.fonts.mono,
+                fontSize: 15,
+                fontWeight: 800,
+                color: toneStyle.main,
+                backgroundColor: toneStyle.bg,
+                padding: "3px 10px",
+                borderRadius: 999,
+                letterSpacing: "0.08em",
+              }}
+            >
+              {chapterIndex}
+            </span>
+          ) : null}
+          {chapterTitle ? (
+            <span
+              style={{
+                fontFamily: TOKENS.fonts.display,
+                fontSize: 18,
+                fontWeight: 600,
+                letterSpacing: "0.05em",
+                textTransform: "uppercase",
+                color: TOKENS.colors.textSecondary,
+              }}
+            >
+              {chapterTitle}
+            </span>
+          ) : null}
+        </div>
+      ) : null}
+
       {/* Safe-margin content container */}
       <AbsoluteFill
         style={{
-          padding: `${TOKENS.layout.safeMarginY}px ${TOKENS.layout.safeMarginX}px`,
+          padding: `${padY}px ${padX}px`,
           display: "flex",
           flexDirection: "column",
         }}
       >
-        {hasHeader ? (
+        {hasStaticHeader ? (
           <div
             style={{
               display: "flex",

@@ -23,15 +23,7 @@ import {
   StatCallout,
 } from "../../ui/primitives";
 import { Stage } from "../../ui/Stage";
-import type { StageLegendItem } from "../../ui/Stage";
 import type { ChapterComponentProps } from "../index";
-
-const LEGEND: StageLegendItem[] = [
-  { label: "HARNESS", tone: "cyan" },
-  { label: "MODEL", tone: "amber" },
-  { label: "RELIABILITY", tone: "emerald" },
-  { label: "FAILURE", tone: "rose" },
-];
 
 const TRUNCATED_SUMMARY: CodeLine[] = [
   { text: "FAIL auth.test.ts (1 failed, 42 passed)", tone: "rose", highlight: true },
@@ -98,24 +90,20 @@ export const ContextEngineeringChapter: React.FC<ChapterComponentProps> = ({ cha
   const w18 = sceneWindow(frame, b18.start, b18.end);
   const w19 = sceneWindow(frame, b19.start, b19.end, { keepAtEnd: true });
 
-  // Beat 14 animated values
   const rotFill = progressBetween(frame, rotCue - 40, rotCue + 36);
   const signalPct = interpolate(progressBetween(frame, degradesCue, degradesCue + 40), [0, 1], [92, 34]);
 
-  // Beat 15 animated values
   const cacheDrop = progressBetween(frame, slashesCue, slashesCue + 44);
   const inputCost = interpolate(cacheDrop, [0, 1], [3.0, 0.35]);
 
-  // Beat 16 cache miss flash
   const cacheHitPct = frame >= reorderCue ? 0 : frame >= tsCue ? 12 : 91;
 
-  // Beat 19 compaction bar
   const preCompact = interpolate(progressBetween(frame, b19.start + 20, threshCue + 20), [0, 1], [35, 82]);
   const postCompact = interpolate(progressBetween(frame, compactCue, compactCue + 32), [0, 1], [82, 15]);
   const contextGauge = frame >= compactCue ? postCompact : preCompact;
 
   return (
-    <Stage chapterIndex="04" chapterTitle={chapter.title} tone="amber" legend={LEGEND}>
+    <Stage chapterIndex="04" chapterTitle={chapter.title} tone="amber" transientHeader compactPadding>
       {/* SFX */}
       <Sfx name="thud-low" from={rotCue} volume={0.28} />
       <Sfx name="scale-down" from={degradesCue} volume={0.28} />
@@ -137,53 +125,52 @@ export const ContextEngineeringChapter: React.FC<ChapterComponentProps> = ({ cha
       <Sfx name="whoosh-fast" from={compactCue} volume={0.26} />
       <Sfx name="success-ding" from={checkCue} volume={0.28} />
 
-      {/* BEAT 14: Context Is RAM & Context Rot */}
+      {/* BEAT 14: Spacious RAM Bar + Signal Meter (Clean 1-line title only) */}
       <SceneBeat window={w14}>
         <SectionTitle
-          eyebrow="PILLAR 02 — CONTEXT & CACHING"
           title="Context Is RAM — and Context Rot Is Real"
-          subtitle="Reasoning accuracy drops long before you hit the advertised 200K–1M token ceiling."
           tone="amber"
+          style={{ marginBottom: 32 }}
         />
 
-        <Card tone="neutral" padding={30} style={{ marginBottom: 24 }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
-            <span style={{ fontFamily: TOKENS.fonts.mono, fontSize: 18, color: TOKENS.colors.textSecondary }}>
+        <Card tone="neutral" padding={34} style={{ marginBottom: 28 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 18 }}>
+            <span style={{ fontFamily: TOKENS.fonts.mono, fontSize: 20, color: TOKENS.colors.textSecondary }}>
               ACTIVE CONTEXT WINDOW (WORKING MEMORY)
             </span>
-            <Pill tone={frame >= rotCue ? "rose" : "amber"} size="sm">
+            <Pill tone={frame >= rotCue ? "rose" : "amber"} size="md">
               {frame >= rotCue ? "CONTEXT ROT DETECTED" : "FILLING UP"}
             </Pill>
           </div>
 
           <div
             style={{
-              height: 68,
-              borderRadius: 16,
+              height: 88,
+              borderRadius: 18,
               backgroundColor: "rgba(255,255,255,0.05)",
               border: `1.5px solid ${TOKENS.colors.border}`,
               display: "flex",
               overflow: "hidden",
-              padding: 4,
-              gap: 4,
+              padding: 6,
+              gap: 6,
             }}
           >
-            <div style={{ width: "16%", backgroundColor: TOKENS.colors.accent, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: TOKENS.fonts.mono, fontSize: 15, fontWeight: 700, color: TOKENS.colors.background }}>
+            <div style={{ width: "16%", backgroundColor: TOKENS.colors.accent, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: TOKENS.fonts.mono, fontSize: 17, fontWeight: 700, color: TOKENS.colors.background }}>
               System + Tools
             </div>
-            <div style={{ width: "18%", backgroundColor: TOKENS.colors.accentEmerald, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: TOKENS.fonts.mono, fontSize: 15, fontWeight: 700, color: TOKENS.colors.background }}>
+            <div style={{ width: "18%", backgroundColor: TOKENS.colors.accentEmerald, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: TOKENS.fonts.mono, fontSize: 17, fontWeight: 700, color: TOKENS.colors.background }}>
               Relevant Code
             </div>
             <div
               style={{
                 width: `${Math.round(54 * rotFill)}%`,
                 backgroundColor: TOKENS.colors.accentRose,
-                borderRadius: 10,
+                borderRadius: 12,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 fontFamily: TOKENS.fonts.mono,
-                fontSize: 16,
+                fontSize: 19,
                 fontWeight: 700,
                 color: TOKENS.colors.background,
                 overflow: "hidden",
@@ -195,61 +182,55 @@ export const ContextEngineeringChapter: React.FC<ChapterComponentProps> = ({ cha
           </div>
         </Card>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1.3fr 0.7fr", gap: 26 }}>
-          <Card tone={frame >= degradesCue ? "rose" : "emerald"} glow={frame >= degradesCue} padding={28}>
+        <div style={{ display: "grid", gridTemplateColumns: "1.3fr 0.7fr", gap: 28 }}>
+          <Card tone={frame >= degradesCue ? "rose" : "emerald"} glow={frame >= degradesCue} padding={32}>
             <MeterBar
               label="Effective Signal-to-Noise Reasoning Quality"
               percent={signalPct}
               valueLabel={`${Math.round(signalPct)}%`}
               tone={frame >= degradesCue ? "rose" : "emerald"}
-              height={26}
+              height={32}
             />
           </Card>
           <StatCallout
             label="Advertised vs. Usable"
-            value="200K+"
+            value="200K–1M"
             detail="Noise buries signal well before the wall"
             tone="amber"
           />
         </div>
       </SceneBeat>
 
-      {/* BEAT 15: Prompt Caching & Prefix Stability */}
+      {/* BEAT 15: Full-Canvas KV Prompt Caching (Zero SectionTitle chrome) */}
       <SceneBeat window={w15}>
-        <SectionTitle
-          eyebrow="PILLAR 02 — CACHE ECONOMICS (MANUS & CLAUDE CODE)"
-          title="KV Prompt Caching: The Economic Superpower"
-          subtitle="Keep the prefix token-identical and append monotonically to reuse cached attention states."
-          tone="emerald"
-        />
-
-        <div style={{ display: "grid", gridTemplateColumns: "1.25fr 0.75fr", gap: 30, alignItems: "stretch" }}>
-          <Card tone="emerald" glow={frame >= cachingCue} padding={28} style={{ display: "flex", flexDirection: "column", gap: 16, justifyContent: "center" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1.22fr 0.78fr", gap: 36, alignItems: "stretch", height: 700 }}>
+          <Card tone="emerald" glow={frame >= cachingCue} padding={34} style={{ display: "flex", flexDirection: "column", gap: 20, justifyContent: "center" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 4 }}>
+              <Pill tone="emerald" size="md">KV PROMPT CACHING • MANUS &amp; CLAUDE CODE</Pill>
+              <Pill tone="cyan" size="sm">30-TURN RUN</Pill>
+            </div>
             <NodeBox
               tag="IMMUTABLE PREFIX • LOCKED"
               title="System Prompt + Tool Schemas"
               subtitle="Token-identical across all 30 turns → KV Cache HIT"
               tone="emerald"
               glow={frame >= cachingCue}
-              compact
             />
             <NodeBox
               tag="APPEND-ONLY HISTORY"
               title="Turns 1 → 29 (Cached Prefix Extension)"
               subtitle="Never mutate or delete earlier messages mid-run"
               tone="cyan"
-              compact
             />
             <NodeBox
               tag="FRESH SUFFIX"
               title="Turn 30 (New Observation Only)"
               subtitle="Only the newest tokens pay full uncached compute"
               tone="amber"
-              compact
             />
           </Card>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: 20, justifyContent: "center" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 26, justifyContent: "center" }}>
             <StatCallout
               label="Effective Input Cost / 1M"
               value={
@@ -260,32 +241,34 @@ export const ContextEngineeringChapter: React.FC<ChapterComponentProps> = ({ cha
                   decimals={2}
                   prefix="$"
                   tone={frame >= slashesCue ? "emerald" : "amber"}
-                  size={52}
+                  size={64}
                 />
               }
               detail="Up to ~90% cheaper cached reads + faster TTFT"
               tone={frame >= slashesCue ? "emerald" : "amber"}
               glow={frame >= slashesCue}
+              style={{ padding: "32px 30px" }}
             />
             <StatCallout
               label="Cache Hit Ratio"
               value="91%"
               detail="Primary production metric highlighted by Manus"
               tone="cyan"
+              style={{ padding: "32px 30px" }}
             />
           </div>
         </div>
       </SceneBeat>
 
-      {/* BEAT 16: Cache-Busting Anti-Patterns */}
+      {/* BEAT 16: Spacious Cache-Busting Anti-Patterns (Clean 1-line title only) */}
       <SceneBeat window={w16}>
         <SectionTitle
-          eyebrow="PILLAR 02 — CACHE-BUSTING BUGS"
-          title="Three Subtle Bugs That Silently Wreck Your Bill"
+          title="Three Bugs That Silently Bust Prompt Caches"
           tone="rose"
+          style={{ marginBottom: 30 }}
         />
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 24 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 20, marginBottom: 28 }}>
           <div style={slideUpStyle(frame, fps, tsCue - 10, 16)}>
             <CheckRow
               label="Live Timestamp in System Prompt"
@@ -318,43 +301,37 @@ export const ContextEngineeringChapter: React.FC<ChapterComponentProps> = ({ cha
           </div>
         </div>
 
-        <Card tone={cacheHitPct > 50 ? "emerald" : "rose"} glow={frame >= tsCue} padding={24}>
+        <Card tone={cacheHitPct > 50 ? "emerald" : "rose"} glow={frame >= tsCue} padding={28}>
           <MeterBar
             label="Live Prompt Cache Hit Rate"
             percent={cacheHitPct}
             valueLabel={cacheHitPct === 0 ? "0% — FULL RECOMPUTE" : `${cacheHitPct}%`}
             tone={cacheHitPct > 50 ? "emerald" : "rose"}
-            height={24}
+            height={28}
           />
         </Card>
       </SceneBeat>
 
-      {/* BEAT 17: Tool Output Truncation & Offloading to Disk */}
+      {/* BEAT 17: Full-Canvas Tool Output Truncation Pipeline (Zero SectionTitle chrome) */}
       <SceneBeat window={w17}>
-        <SectionTitle
-          eyebrow="PILLAR 02 — TOOL OUTPUT HYGIENE (auth.test.ts)"
-          title="Truncate Noisy Logs. Offload the Full File to Disk."
-          tone="cyan"
-        />
-
-        <div style={{ display: "grid", gridTemplateColumns: "0.9fr 90px 0.7fr 90px 1.2fr", alignItems: "center" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "0.88fr 95px 0.72fr 95px 1.25fr", alignItems: "center" }}>
           <div style={slideUpStyle(frame, fps, b17.start + 14, 18)}>
-            <Card tone="rose" glow={frame >= drownsCue && frame < truncCue} padding={24} style={{ minHeight: 340, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <Card tone="rose" glow={frame >= drownsCue && frame < truncCue} padding={30} style={{ minHeight: 460, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
               <div>
-                <Pill tone="rose" size="sm">RAW TEST STDOUT</Pill>
-                <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 32, fontWeight: 700, marginTop: 12 }}>
+                <Pill tone="rose" size="md">RAW TEST OUTPUT</Pill>
+                <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 40, fontWeight: 700, marginTop: 16 }}>
                   10,000 Lines
                 </div>
-                <p style={{ fontSize: 18, color: TOKENS.colors.textSecondary, marginTop: 8 }}>
+                <p style={{ fontSize: 21, color: TOKENS.colors.textSecondary, marginTop: 12, lineHeight: 1.45 }}>
                   Giant stack traces from auth.test.ts drown the model in noise.
                 </p>
               </div>
-              <DataChip label="~140,000 TOKENS" tone="rose" style={{ fontSize: 17 }} />
+              <DataChip label="~140,000 TOKENS" tone="rose" style={{ fontSize: 20, padding: "14px 18px" }} />
             </Card>
           </div>
 
-          <svg width={90} height={80} viewBox="0 0 90 80">
-            <SvgLink x1={6} y1={40} x2={84} y2={40} progress={progressBetween(frame, truncCue - 12, truncCue + 12)} tone="cyan" arrow />
+          <svg width={95} height={80} viewBox="0 0 95 80">
+            <SvgLink x1={6} y1={40} x2={89} y2={40} progress={progressBetween(frame, truncCue - 12, truncCue + 12)} tone="cyan" strokeWidth={3.5} arrow />
           </svg>
 
           <NodeBox
@@ -363,21 +340,22 @@ export const ContextEngineeringChapter: React.FC<ChapterComponentProps> = ({ cha
             subtitle="Head + tail filter + temp file dump"
             tone="cyan"
             glow={frame >= truncCue}
+            style={{ minHeight: 200, display: "flex", flexDirection: "column", justifyContent: "center" }}
           />
 
-          <svg width={90} height={180} viewBox="0 0 90 180">
-            <SvgLink x1={6} y1={90} x2={84} y2={48} progress={progressBetween(frame, truncCue, truncCue + 24)} tone="emerald" arrow />
-            <SvgLink x1={6} y1={90} x2={84} y2={140} progress={progressBetween(frame, diskCue, diskCue + 24)} tone="cyan" arrow />
+          <svg width={95} height={240} viewBox="0 0 95 240">
+            <SvgLink x1={6} y1={120} x2={89} y2={62} progress={progressBetween(frame, truncCue, truncCue + 24)} tone="emerald" strokeWidth={3.5} arrow />
+            <SvgLink x1={6} y1={120} x2={89} y2={184} progress={progressBetween(frame, diskCue, diskCue + 24)} tone="cyan" strokeWidth={3.5} arrow />
           </svg>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
             <div style={slideUpStyle(frame, fps, truncCue, 16)}>
               <CodePanel
                 title="Returned to Context (40 lines)"
                 badge="CLEAN SUMMARY"
                 tone="emerald"
                 lines={TRUNCATED_SUMMARY}
-                fontSize={16}
+                fontSize={19}
               />
             </div>
             <div style={slideUpStyle(frame, fps, diskCue, 14)}>
@@ -387,50 +365,42 @@ export const ContextEngineeringChapter: React.FC<ChapterComponentProps> = ({ cha
                 subtitle="Full trace saved — agent runs grep only if needed"
                 tone="cyan"
                 glow={frame >= diskCue}
-                compact
               />
             </div>
           </div>
         </div>
       </SceneBeat>
 
-      {/* BEAT 18: Progressive Disclosure & Lazy Skills */}
+      {/* BEAT 18: Full-Canvas Progressive Disclosure Tree (Zero SectionTitle chrome) */}
       <SceneBeat window={w18}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 18 }}>
-          <SectionTitle
-            eyebrow="PILLAR 02 — PROGRESSIVE DISCLOSURE"
-            title="Load Skills Lazily Without Busting the Cache"
-            tone="cyan"
-            style={{ marginBottom: 0 }}
-          />
-          <Pill tone="emerald" size="md">STATIC PREFIX LOCKED ✓</Pill>
-        </div>
-
-        <div style={{ display: "grid", gridTemplateColumns: "0.9fr 140px 1.1fr", alignItems: "center" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "0.92fr 160px 1.08fr", alignItems: "center" }}>
           <div style={slideUpStyle(frame, fps, b18.start + 14, 18)}>
-            <Card tone="cyan" glow={frame >= manifestCue} padding={26}>
-              <Pill tone="cyan" size="sm">TURN 1 • STATIC MANIFEST</Pill>
-              <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 30, fontWeight: 700, marginTop: 10 }}>
-                ~400 Tokens Up Front
+            <Card tone="cyan" glow={frame >= manifestCue} padding={34}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, marginBottom: 14 }}>
+                <Pill tone="cyan" size="md">TURN 1 • STATIC MANIFEST</Pill>
+                <Pill tone="emerald" size="sm">PREFIX LOCKED ✓</Pill>
               </div>
-              <p style={{ fontSize: 19, color: TOKENS.colors.textSecondary, marginTop: 10, lineHeight: 1.45 }}>
-                Short skill names and one-line summaries stay frozen in the prefix. Full docs append to the conversation tail only when triggered.
+              <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 38, fontWeight: 700, marginTop: 8 }}>
+                Progressive Disclosure (~400 tok)
+              </div>
+              <p style={{ fontSize: 22, color: TOKENS.colors.textSecondary, marginTop: 14, lineHeight: 1.5 }}>
+                Short skill names and one-line summaries stay frozen in the static prefix. Full docs append to the conversation tail only when triggered.
               </p>
-              <div style={{ marginTop: 16 }}>
-                <DataChip label="Appended to Tail → Cache Preserved" tone="emerald" style={{ fontSize: 15 }} />
+              <div style={{ marginTop: 24 }}>
+                <DataChip label="Appended to Tail → KV Cache Intact" tone="emerald" style={{ fontSize: 17, padding: "12px 16px" }} />
               </div>
             </Card>
           </div>
 
-          <svg width={140} height={360} viewBox="0 0 140 360" style={{ overflow: "visible" }}>
-            <SvgLink x1={8} y1={180} x2={132} y2={48} progress={progressBetween(frame, lazilyCue, lazilyCue + 24)} tone="emerald" arrow strokeWidth={3} />
-            <SvgLink x1={8} y1={180} x2={132} y2={138} progress={progressBetween(frame, manifestCue, manifestCue + 24)} tone="neutral" dashed opacity={0.35} />
-            <SvgLink x1={8} y1={180} x2={132} y2={228} progress={progressBetween(frame, manifestCue, manifestCue + 24)} tone="neutral" dashed opacity={0.35} />
-            <SvgLink x1={8} y1={180} x2={132} y2={318} progress={progressBetween(frame, manifestCue, manifestCue + 24)} tone="neutral" dashed opacity={0.35} />
-            <SvgPacket x1={8} y1={180} x2={132} y2={48} progress={progressBetween(frame, lazilyCue + 6, lazilyCue + 40)} tone="emerald" label="SKILL.md" />
+          <svg width={160} height={470} viewBox="0 0 160 470" style={{ overflow: "visible" }}>
+            <SvgLink x1={8} y1={235} x2={152} y2={62} progress={progressBetween(frame, lazilyCue, lazilyCue + 24)} tone="emerald" arrow strokeWidth={3.5} />
+            <SvgLink x1={8} y1={235} x2={152} y2={178} progress={progressBetween(frame, manifestCue, manifestCue + 24)} tone="neutral" dashed opacity={0.35} />
+            <SvgLink x1={8} y1={235} x2={152} y2={294} progress={progressBetween(frame, manifestCue, manifestCue + 24)} tone="neutral" dashed opacity={0.35} />
+            <SvgLink x1={8} y1={235} x2={152} y2={410} progress={progressBetween(frame, manifestCue, manifestCue + 24)} tone="neutral" dashed opacity={0.35} />
+            <SvgPacket x1={8} y1={235} x2={152} y2={62} progress={progressBetween(frame, lazilyCue + 6, lazilyCue + 40)} tone="emerald" radius={10} label="SKILL.md" />
           </svg>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
             {SKILLS.map((s) => {
               const active = s.active && frame >= lazilyCue;
               return (
@@ -442,7 +412,6 @@ export const ContextEngineeringChapter: React.FC<ChapterComponentProps> = ({ cha
                   tone={active ? "emerald" : "neutral"}
                   glow={active}
                   dim={!active}
-                  compact
                 />
               );
             })}
@@ -450,49 +419,48 @@ export const ContextEngineeringChapter: React.FC<ChapterComponentProps> = ({ cha
         </div>
       </SceneBeat>
 
-      {/* BEAT 19: Structured Compaction vs Naive Trimming */}
+      {/* BEAT 19: Spacious Structured Compaction (Clean 1-line title only) */}
       <SceneBeat window={w19}>
         <SectionTitle
-          eyebrow="PILLAR 02 — LONG-SESSION HYGIENE"
-          title="Structured Compaction Beats Naive FIFO Trimming"
-          subtitle="Trigger rarely near 75–85% to pay one clean cache reset instead of breaking tool_call_id pairs."
+          title="Structured Compaction Beats Naive Trimming"
           tone="cyan"
+          style={{ marginBottom: 30 }}
         />
 
-        <Card tone={contextGauge > 70 ? "amber" : "emerald"} glow padding={24} style={{ marginBottom: 24 }}>
+        <Card tone={contextGauge > 70 ? "amber" : "emerald"} glow padding={30} style={{ marginBottom: 28 }}>
           <MeterBar
-            label="Session Context Utilization"
+            label="Session Context Utilization (Trigger Rarely Near 75–85%)"
             percent={contextGauge}
             valueLabel={frame >= compactCue ? `${Math.round(contextGauge)}% — COMPACTED` : `${Math.round(contextGauge)}% — THRESHOLD`}
             tone={contextGauge > 70 ? "amber" : "emerald"}
-            height={26}
+            height={32}
           />
         </Card>
 
-        <div style={{ display: "grid", gridTemplateColumns: "0.85fr 1.15fr", gap: 28 }}>
-          <Card tone="rose" padding={24} style={{ opacity: fadeIn(frame, b19.start + 15, 16) }}>
-            <Pill tone="rose" size="sm">✗ NAIVE FRONT-TRIMMING</Pill>
-            <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 26, fontWeight: 700, marginTop: 10 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "0.85fr 1.15fr", gap: 32 }}>
+          <Card tone="rose" padding={30} style={{ opacity: fadeIn(frame, b19.start + 15, 16) }}>
+            <Pill tone="rose" size="md">✗ NAIVE FRONT-TRIMMING</Pill>
+            <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 32, fontWeight: 700, marginTop: 14 }}>
               Slices Off Oldest Messages
             </div>
-            <p style={{ fontSize: 19, color: TOKENS.colors.textSecondary, marginTop: 8, lineHeight: 1.45 }}>
-              Orphans tool_call_id / tool_result pairs and silently erases the user&apos;s original goal.
+            <p style={{ fontSize: 21, color: TOKENS.colors.textSecondary, marginTop: 10, lineHeight: 1.45 }}>
+              Orphans paired tool_call_id / tool_result messages and erases the user&apos;s original goal.
             </p>
           </Card>
 
           <div style={slideUpStyle(frame, fps, compactCue - 8, 18)}>
-            <Card tone="emerald" glow={frame >= checkCue} padding={24}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
-                <Pill tone="emerald" size="sm">✓ STRUCTURED COMPACTION CHECKPOINT</Pill>
-                <span style={{ fontFamily: TOKENS.fonts.mono, fontSize: 15, color: TOKENS.colors.accentEmerald }}>
-                  ONE CLEAN RESET
+            <Card tone="emerald" glow={frame >= checkCue} padding={30}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 18 }}>
+                <Pill tone="emerald" size="md">✓ STRUCTURED CHECKPOINT</Pill>
+                <span style={{ fontFamily: TOKENS.fonts.mono, fontSize: 16, color: TOKENS.colors.accentEmerald }}>
+                  ONE CLEAN CACHE RESET
                 </span>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-                <DataChip label="Goal & Constraints" sublabel="Preserved verbatim" tone="cyan" style={{ fontSize: 16 }} />
-                <DataChip label="Modified Files" sublabel="auth.ts, auth.test.ts" tone="emerald" style={{ fontSize: 16 }} />
-                <DataChip label="Verified Facts" sublabel="Repro race confirmed" tone="emerald" style={{ fontSize: 16 }} />
-                <DataChip label="Exact Next Step" sublabel="Add mutex + re-run" tone="amber" style={{ fontSize: 16 }} />
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+                <DataChip label="Goal & Constraints" sublabel="Preserved verbatim" tone="cyan" style={{ fontSize: 18 }} />
+                <DataChip label="Modified Files" sublabel="auth.ts, auth.test.ts" tone="emerald" style={{ fontSize: 18 }} />
+                <DataChip label="Verified Facts" sublabel="Repro race confirmed" tone="emerald" style={{ fontSize: 18 }} />
+                <DataChip label="Exact Next Step" sublabel="Add mutex + re-run" tone="amber" style={{ fontSize: 18 }} />
               </div>
             </Card>
           </div>

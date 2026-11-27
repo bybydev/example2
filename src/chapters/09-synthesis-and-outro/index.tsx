@@ -20,15 +20,7 @@ import {
   SectionTitle,
 } from "../../ui/primitives";
 import { Stage } from "../../ui/Stage";
-import type { StageLegendItem } from "../../ui/Stage";
 import type { ChapterComponentProps } from "../index";
-
-const LEGEND: StageLegendItem[] = [
-  { label: "HARNESS", tone: "cyan" },
-  { label: "MODEL", tone: "amber" },
-  { label: "RELIABILITY", tone: "emerald" },
-  { label: "FAILURE", tone: "rose" },
-];
 
 const OS_MAPPINGS: {
   agentPart: string;
@@ -80,7 +72,7 @@ export const SynthesisAndOutroChapter: React.FC<ChapterComponentProps> = ({
   const w37 = sceneWindow(frame, b37.start, b37.end, { keepAtEnd: true });
 
   return (
-    <Stage chapterIndex="09" chapterTitle={chapter.title} tone="emerald" legend={LEGEND}>
+    <Stage chapterIndex="09" chapterTitle={chapter.title} tone="emerald" transientHeader compactPadding>
       {/* SFX */}
       <Sfx name="pop-in" from={cpuCue} volume={0.28} />
       <Sfx name="pop-in" from={ramCue} volume={0.26} />
@@ -95,24 +87,23 @@ export const SynthesisAndOutroChapter: React.FC<ChapterComponentProps> = ({
 
       <Sfx name="whoosh-soft" from={bottleCue} volume={0.24} />
 
-      {/* BEAT 35: Complete 5-Part OS Mental Model */}
+      {/* BEAT 35: Spacious 5-Part OS Mental Model (Clean 1-line title + domain pills) */}
       <SceneBeat window={w35}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 18 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
           <SectionTitle
-            eyebrow="ONE MENTAL MODEL TO REMEMBER"
             title="The Agent Harness Is an Operating System"
             tone="emerald"
             style={{ marginBottom: 0 }}
           />
-          <div style={{ display: "flex", gap: 8 }}>
+          <div style={{ display: "flex", gap: 10 }}>
             {["Coding", "Browser", "Research", "Ops"].map((dom) => (
-              <Pill key={dom} tone="cyan" size="sm">{dom}</Pill>
+              <Pill key={dom} tone="cyan" size="md">{dom}</Pill>
             ))}
           </div>
         </div>
 
-        <Card tone="cyan" glow padding={26}>
-          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+        <Card tone="cyan" glow padding={30}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
             {OS_MAPPINGS.map((row, idx) => {
               const trigger = osCues[idx];
               const active = frame >= trigger;
@@ -121,25 +112,25 @@ export const SynthesisAndOutroChapter: React.FC<ChapterComponentProps> = ({
                   key={row.osPart}
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "340px 90px 210px 1fr",
+                    gridTemplateColumns: "370px 100px 230px 1fr",
                     alignItems: "center",
-                    padding: "12px 18px",
-                    borderRadius: 14,
+                    padding: "16px 22px",
+                    borderRadius: 16,
                     backgroundColor: active ? "rgba(255,255,255,0.05)" : "rgba(255,255,255,0.015)",
                     border: `1.5px solid ${active ? TOKENS.colors.borderStrong : TOKENS.colors.border}`,
                     opacity: active ? 1 : 0.4,
                   }}
                 >
-                  <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 24, fontWeight: 700, color: TOKENS.colors.textPrimary }}>
+                  <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 28, fontWeight: 700, color: TOKENS.colors.textPrimary }}>
                     {row.agentPart}
                   </span>
-                  <svg width={90} height={24} viewBox="0 0 90 24">
-                    <SvgLink x1={6} y1={12} x2={84} y2={12} progress={progressBetween(frame, trigger, trigger + 16)} tone={row.tone} arrow />
+                  <svg width={100} height={26} viewBox="0 0 100 26">
+                    <SvgLink x1={6} y1={13} x2={94} y2={13} progress={progressBetween(frame, trigger, trigger + 16)} tone={row.tone} strokeWidth={3} arrow />
                   </svg>
                   <div>
-                    <Pill tone={row.tone} size="md">{row.osPart}</Pill>
+                    <Pill tone={row.tone} size="lg">{row.osPart}</Pill>
                   </div>
-                  <span style={{ fontSize: 20, color: TOKENS.colors.textSecondary }}>
+                  <span style={{ fontSize: 22, color: TOKENS.colors.textSecondary }}>
                     {row.detail}
                   </span>
                 </div>
@@ -149,16 +140,15 @@ export const SynthesisAndOutroChapter: React.FC<ChapterComponentProps> = ({
         </Card>
       </SceneBeat>
 
-      {/* BEAT 36: Practical Builder Audit Checklist */}
+      {/* BEAT 36: Spacious Builder Audit Checklist (Clean 1-line title only) */}
       <SceneBeat window={w36}>
         <SectionTitle
-          eyebrow="BEFORE YOU SWAP MODELS AGAIN"
-          title="Audit Your Harness First"
-          subtitle="More often than not, the intelligence was already there — it just needed a better OS."
+          title="Audit Your Harness Before Swapping Models"
           tone="emerald"
+          style={{ marginBottom: 32 }}
         />
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 18, maxWidth: 1440, width: "100%", margin: "0 auto" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 22, maxWidth: 1520, width: "100%", margin: "0 auto" }}>
           <div style={slideUpStyle(frame, fps, b36.start + 10, 16)}>
             <CheckRow
               label="1. Clean Tool Ergonomics & Actionable Errors"
@@ -198,19 +188,19 @@ export const SynthesisAndOutroChapter: React.FC<ChapterComponentProps> = ({
         </div>
       </SceneBeat>
 
-      {/* BEAT 37: Outro & YouTube End-Screen Safe Zone (~20s, right/bottom reserved) */}
+      {/* BEAT 37: Outro & YouTube End-Screen Safe Zone (~18s, right/bottom reserved) */}
       <SceneBeat window={w37}>
         <div style={{ display: "grid", gridTemplateColumns: "0.95fr 1.05fr", gap: 40, alignItems: "center" }}>
           <div style={slideUpStyle(frame, fps, b37.start + 6, 18)}>
-            <Card tone="cyan" glow padding={34}>
-              <Pill tone="emerald" size="sm">AI AGENT HARNESSES EXPLAINED</Pill>
+            <Card tone="cyan" glow padding={40}>
+              <Pill tone="emerald" size="md">AI AGENT HARNESSES EXPLAINED</Pill>
               <div
                 style={{
                   fontFamily: TOKENS.fonts.display,
-                  fontSize: 44,
+                  fontSize: 50,
                   fontWeight: 800,
-                  lineHeight: 1.15,
-                  marginTop: 16,
+                  lineHeight: 1.12,
+                  marginTop: 18,
                   color: TOKENS.colors.textPrimary,
                 }}
               >
@@ -218,26 +208,26 @@ export const SynthesisAndOutroChapter: React.FC<ChapterComponentProps> = ({
               </div>
               <p
                 style={{
-                  fontSize: 22,
+                  fontSize: 24,
                   lineHeight: 1.5,
                   color: TOKENS.colors.textSecondary,
-                  margin: "16px 0 24px",
+                  margin: "18px 0 28px",
                 }}
               >
                 Which harness bottleneck has hit your team hardest? Drop it in the comments below.
               </p>
 
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 10, opacity: fadeIn(frame, bottleCue, 14) }}>
-                <DataChip label="Context Rot" tone="rose" style={{ fontSize: 16 }} />
-                <DataChip label="Tool Sprawl" tone="amber" style={{ fontSize: 16 }} />
-                <DataChip label="Sandboxing & Permissions" tone="emerald" style={{ fontSize: 16 }} />
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 12, opacity: fadeIn(frame, bottleCue, 14) }}>
+                <DataChip label="Context Rot" tone="rose" style={{ fontSize: 18 }} />
+                <DataChip label="Tool Sprawl" tone="amber" style={{ fontSize: 18 }} />
+                <DataChip label="Sandboxing & Permissions" tone="emerald" style={{ fontSize: 18 }} />
               </div>
 
               <div
                 style={{
-                  marginTop: 26,
+                  marginTop: 30,
                   fontFamily: TOKENS.fonts.handwritten,
-                  fontSize: 34,
+                  fontSize: 40,
                   fontWeight: 700,
                   color: TOKENS.colors.accent,
                 }}

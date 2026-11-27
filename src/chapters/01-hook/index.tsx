@@ -3,7 +3,8 @@ import { useCurrentFrame, useVideoConfig } from "remotion";
 import { Sfx } from "../../lib/audio";
 import { TOKENS } from "../../theme/tokens";
 import type { SemanticTone } from "../../theme/tokens";
-import { NodeBox, SvgLink } from "../../ui/diagrams";
+import { CodePanel, NodeBox, SvgLink } from "../../ui/diagrams";
+import type { CodeLine } from "../../ui/diagrams";
 import {
   clipRange,
   cueFrame,
@@ -21,15 +22,7 @@ import {
   SectionTitle,
 } from "../../ui/primitives";
 import { Stage } from "../../ui/Stage";
-import type { StageLegendItem } from "../../ui/Stage";
 import type { ChapterComponentProps } from "../index";
-
-const LEGEND: StageLegendItem[] = [
-  { label: "HARNESS", tone: "cyan" },
-  { label: "MODEL", tone: "amber" },
-  { label: "RELIABILITY", tone: "emerald" },
-  { label: "FAILURE", tone: "rose" },
-];
 
 const FAMOUS_HARNESSES = [
   "Claude Code",
@@ -39,6 +32,18 @@ const FAMOUS_HARNESSES = [
   "OpenCode",
   "Devin",
   "OpenHands",
+];
+
+const AGENT_A_LOG: CodeLine[] = [
+  { text: "> edit auth.ts -> exit code 1", tone: "rose" },
+  { text: "> retry #14 -> patch mismatch", tone: "rose" },
+  { text: "> turn 20/20 -> context rot, stuck", tone: "rose", highlight: true },
+];
+
+const AGENT_B_LOG: CodeLine[] = [
+  { text: "> read auth.ts:40-52 (scoped)", tone: "cyan" },
+  { text: "> patch single-flight lock (4 lines)", tone: "emerald" },
+  { text: "> vitest auth.test.ts -> 43/43 PASS", tone: "emerald", highlight: true },
 ];
 
 const PILLARS: {
@@ -132,7 +137,7 @@ export const HookChapter: React.FC<ChapterComponentProps> = ({ chapter, clips })
   const pillarCues = [loopCue, contextCue, memoryCue, verifyCue, delegationCue, evalsCue];
 
   return (
-    <Stage chapterIndex="01" chapterTitle={chapter.title} tone="cyan" legend={LEGEND}>
+    <Stage chapterIndex="01" chapterTitle={chapter.title} tone="cyan" transientHeader compactPadding>
       {/* Beat 1 SFX */}
       <Sfx name="pop-in" from={identicalCue} volume={0.3} />
       <Sfx name="error-buzz" from={failsCue} volume={0.28} />
@@ -150,91 +155,88 @@ export const HookChapter: React.FC<ChapterComponentProps> = ({ chapter, clips })
       <Sfx name="pop-in" from={delegationCue} volume={0.26} />
       <Sfx name="chime-positive" from={evalsCue} volume={0.25} />
 
-      {/* BEAT 1: Identical Model, Wildly Different Results */}
+      {/* BEAT 1: Full-Canvas Split Simulation (Zero SectionTitle chrome) */}
       <SceneBeat window={w1}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
-          <SectionTitle
-            eyebrow="THE HARNESS PARADOX"
-            title="Same Frontier Model. Opposite Outcomes."
-            tone="cyan"
-            style={{ marginBottom: 0 }}
-          />
-          <Pill tone="amber" size="md">
-            TASK: FIX RACE CONDITION IN auth.ts
-          </Pill>
-        </div>
-
-        {/* Top shared model node */}
         <div
           style={{
             display: "flex",
-            justifyContent: "center",
-            ...slideUpStyle(frame, fps, identicalCue, 20),
+            flexDirection: "column",
+            alignItems: "center",
+            ...slideUpStyle(frame, fps, identicalCue, 18),
           }}
         >
           <NodeBox
-            tag="IDENTICAL WEIGHTS • IDENTICAL API"
+            tag="IDENTICAL WEIGHTS • SAME TASK: FIX auth.ts RACE CONDITION"
             title="Same Frontier Language Model"
             subtitle="Zero difference in intelligence, parameters, or training data"
             tone="amber"
             glow
-            compact
-            style={{ width: 560, textAlign: "center" }}
+            style={{ width: 680, textAlign: "center" }}
           />
         </div>
 
         {/* Fork connectors */}
-        <div style={{ display: "flex", justifyContent: "center", height: 70 }}>
-          <svg width={900} height={70} viewBox="0 0 900 70" style={{ overflow: "visible" }}>
-            <SvgLink x1={450} y1={4} x2={210} y2={66} progress={link1} tone="rose" arrow />
-            <SvgLink x1={450} y1={4} x2={690} y2={66} progress={link1} tone="emerald" arrow />
+        <div style={{ display: "flex", justifyContent: "center", height: 76 }}>
+          <svg width={960} height={76} viewBox="0 0 960 76" style={{ overflow: "visible" }}>
+            <SvgLink x1={480} y1={4} x2={220} y2={72} progress={link1} tone="rose" strokeWidth={3} arrow />
+            <SvgLink x1={480} y1={4} x2={740} y2={72} progress={link1} tone="emerald" strokeWidth={3} arrow />
           </svg>
         </div>
 
-        {/* Split Agent Comparison */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
+        {/* Full-height Split Agent Comparison */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 36 }}>
           <div style={slideUpStyle(frame, fps, identicalCue + 20, 20)}>
-            <Card tone={frame >= failsCue ? "rose" : "neutral"} glow={frame >= failsCue} padding={26}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
-                <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 30, fontWeight: 700 }}>
+            <Card tone={frame >= failsCue ? "rose" : "neutral"} glow={frame >= failsCue} padding={28}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 18 }}>
+                <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 34, fontWeight: 700 }}>
                   Agent A — Weak Harness
                 </span>
-                <Pill tone={frame >= failsCue ? "rose" : "amber"} size="sm">
-                  {frame >= failsCue ? "FAILED • 20 TURNS" : "RUNNING..."}
+                <Pill tone={frame >= failsCue ? "rose" : "amber"} size="md">
+                  {frame >= failsCue ? "FAILED • TURN 20" : "RUNNING..."}
                 </Pill>
               </div>
-              <p style={{ margin: "0 0 18px", fontSize: 21, color: TOKENS.colors.textSecondary, lineHeight: 1.4 }}>
-                Burns context in a blind retry loop, opaque errors, no verification feedback.
-              </p>
+              <CodePanel
+                title="agent-a.log"
+                tone="rose"
+                lines={AGENT_A_LOG}
+                revealProgress={progressBetween(frame, identicalCue + 30, failsCue + 10)}
+                fontSize={19}
+                style={{ marginBottom: 22 }}
+              />
               <MeterBar
-                label="Benchmark Solve Rate"
+                label="SWE-bench / Terminal-Bench Solve Rate"
                 percent={failMeter}
                 valueLabel={frame >= failsCue ? `${Math.round(failMeter)}%` : "—"}
                 tone="rose"
-                height={20}
+                height={22}
               />
             </Card>
           </div>
 
           <div style={slideUpStyle(frame, fps, identicalCue + 32, 20)}>
-            <Card tone={frame >= passesCue ? "emerald" : "neutral"} glow={frame >= passesCue} padding={26}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
-                <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 30, fontWeight: 700 }}>
+            <Card tone={frame >= passesCue ? "emerald" : "neutral"} glow={frame >= passesCue} padding={28}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 18 }}>
+                <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 34, fontWeight: 700 }}>
                   Agent B — Strong Harness
                 </span>
-                <Pill tone={frame >= passesCue ? "emerald" : "cyan"} size="sm">
-                  {frame >= passesCue ? "TESTS PASSING" : "RUNNING..."}
+                <Pill tone={frame >= passesCue ? "emerald" : "cyan"} size="md">
+                  {frame >= passesCue ? "ALL TESTS PASS" : "RUNNING..."}
                 </Pill>
               </div>
-              <p style={{ margin: "0 0 18px", fontSize: 21, color: TOKENS.colors.textSecondary, lineHeight: 1.4 }}>
-                Isolates auth.ts race, applies targeted patch, verifies with deterministic tests.
-              </p>
+              <CodePanel
+                title="agent-b.log"
+                tone="emerald"
+                lines={AGENT_B_LOG}
+                revealProgress={progressBetween(frame, identicalCue + 40, passesCue + 10)}
+                fontSize={19}
+                style={{ marginBottom: 22 }}
+              />
               <MeterBar
-                label="Benchmark Solve Rate"
+                label="SWE-bench / Terminal-Bench Solve Rate"
                 percent={passMeter}
                 valueLabel={frame >= passesCue ? `${Math.round(passMeter)}%` : "—"}
                 tone="emerald"
-                height={20}
+                height={22}
               />
             </Card>
           </div>
@@ -243,46 +245,41 @@ export const HookChapter: React.FC<ChapterComponentProps> = ({ chapter, clips })
         {/* Real-world harness strip */}
         <div
           style={{
-            marginTop: 22,
+            marginTop: 26,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            gap: 12,
+            gap: 14,
             flexWrap: "wrap",
             opacity: fadeIn(frame, identicalCue + 24, 18),
           }}
         >
-          <span style={{ fontFamily: TOKENS.fonts.mono, fontSize: 15, color: TOKENS.colors.textMuted }}>
-            SWE-BENCH &amp; TERMINAL-BENCH ECOSYSTEM:
-          </span>
           {FAMOUS_HARNESSES.map((name) => (
-            <DataChip key={name} label={name} tone="cyan" style={{ padding: "6px 14px", fontSize: 16 }} />
+            <DataChip key={name} label={name} tone="cyan" style={{ padding: "8px 16px", fontSize: 17 }} />
           ))}
         </div>
       </SceneBeat>
 
-      {/* BEAT 2: The Core Thesis */}
+      {/* BEAT 2: Spacious Hero Thesis (Clean 1-line title, no eyebrow/subtitle) */}
       <SceneBeat window={w2} align="center">
-        <div style={{ width: "100%", maxWidth: 1480, textAlign: "center" }}>
+        <div style={{ width: "100%", maxWidth: 1540, textAlign: "center" }}>
           <SectionTitle
-            eyebrow="CORE THESIS"
             title="The Model Is Not the Agent"
-            subtitle="Raw intelligence is stateless — the harness turns it into reliable engineering software."
             tone="cyan"
             align="center"
+            style={{ marginBottom: 38 }}
           />
 
           <div style={slideUpStyle(frame, fps, harnessCue, 24)}>
             <Card
               tone="cyan"
               glow
-              padding={44}
+              padding={52}
               style={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                gap: 32,
-                marginTop: 12,
+                gap: 36,
               }}
             >
               <NodeBox
@@ -290,12 +287,12 @@ export const HookChapter: React.FC<ChapterComponentProps> = ({ chapter, clips })
                 title="Model"
                 subtitle="Reasoning & planning"
                 tone="amber"
-                style={{ minWidth: 280, textAlign: "center" }}
+                style={{ minWidth: 310, textAlign: "center" }}
               />
               <span
                 style={{
                   fontFamily: TOKENS.fonts.display,
-                  fontSize: 60,
+                  fontSize: 68,
                   fontWeight: 800,
                   color: TOKENS.colors.textSecondary,
                 }}
@@ -303,17 +300,17 @@ export const HookChapter: React.FC<ChapterComponentProps> = ({ chapter, clips })
                 +
               </span>
               <NodeBox
-                tag="RUNTIME SYSTEM"
+                tag="OPERATING SYSTEM"
                 title="Harness"
                 subtitle="Tools, memory, safety, tests"
                 tone="cyan"
                 glow
-                style={{ minWidth: 320, textAlign: "center" }}
+                style={{ minWidth: 350, textAlign: "center" }}
               />
               <span
                 style={{
                   fontFamily: TOKENS.fonts.display,
-                  fontSize: 60,
+                  fontSize: 68,
                   fontWeight: 800,
                   color: TOKENS.colors.textSecondary,
                 }}
@@ -326,26 +323,22 @@ export const HookChapter: React.FC<ChapterComponentProps> = ({ chapter, clips })
                 subtitle="Closed-loop software"
                 tone="emerald"
                 glow={frame >= operatingCue}
-                style={{ minWidth: 300, textAlign: "center" }}
+                style={{ minWidth: 330, textAlign: "center" }}
               />
             </Card>
           </div>
 
           <div
             style={{
-              marginTop: 34,
+              marginTop: 44,
               opacity: fadeIn(frame, operatingCue, 16),
               transform: `translateY(${(1 - fadeIn(frame, operatingCue, 16)) * 14}px)`,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 24,
             }}
           >
             <span
               style={{
                 fontFamily: TOKENS.fonts.handwritten,
-                fontSize: 48,
+                fontSize: 54,
                 fontWeight: 700,
                 color: TOKENS.colors.accentWarm,
               }}
@@ -356,16 +349,16 @@ export const HookChapter: React.FC<ChapterComponentProps> = ({ chapter, clips })
         </div>
       </SceneBeat>
 
-      {/* BEAT 3: 6-Pillar Architecture Map */}
+      {/* BEAT 3: Spacious 6-Pillar Architecture Map (Clean title, no redundant subtitle) */}
       <SceneBeat window={w3}>
         <SectionTitle
           eyebrow="ARCHITECTURE ROADMAP"
           title="6 Pillars of a Production Agent Harness"
-          subtitle="Four single-agent foundations, followed by next-level delegation and production evals."
           tone="cyan"
+          style={{ marginBottom: 30 }}
         />
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 22 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 26 }}>
           {PILLARS.map((pillar, index) => {
             const trigger = pillarCues[index];
             const active = frame >= trigger;
@@ -377,16 +370,22 @@ export const HookChapter: React.FC<ChapterComponentProps> = ({ chapter, clips })
                   tone={pillar.tone}
                   glow={active}
                   dim={!active && frame > loopCue - 15}
-                  style={{ height: "100%", minHeight: 195, display: "flex", flexDirection: "column", justifyContent: "space-between" }}
+                  style={{
+                    height: "100%",
+                    minHeight: 235,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                  }}
                 >
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 18 }}>
-                    <Pill tone={pillar.tone} size="sm">
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 22 }}>
+                    <Pill tone={pillar.tone} size="md">
                       PILLAR {pillar.num}
                     </Pill>
                     <span
                       style={{
                         fontFamily: TOKENS.fonts.mono,
-                        fontSize: 13,
+                        fontSize: 15,
                         fontWeight: 700,
                         color: active ? TOKENS.colors.textPrimary : TOKENS.colors.textMuted,
                       }}

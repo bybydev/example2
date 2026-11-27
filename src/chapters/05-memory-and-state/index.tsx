@@ -16,18 +16,9 @@ import {
   DataChip,
   Pill,
   SceneBeat,
-  SectionTitle,
 } from "../../ui/primitives";
 import { Stage } from "../../ui/Stage";
-import type { StageLegendItem } from "../../ui/Stage";
 import type { ChapterComponentProps } from "../index";
-
-const LEGEND: StageLegendItem[] = [
-  { label: "HARNESS", tone: "cyan" },
-  { label: "MODEL", tone: "amber" },
-  { label: "RELIABILITY", tone: "emerald" },
-  { label: "FAILURE", tone: "rose" },
-];
 
 export const MemoryAndStateChapter: React.FC<ChapterComponentProps> = ({ chapter, clips }) => {
   const frame = useCurrentFrame();
@@ -64,7 +55,7 @@ export const MemoryAndStateChapter: React.FC<ChapterComponentProps> = ({ chapter
   const item3Done = frame >= codingCue + 140;
 
   return (
-    <Stage chapterIndex="05" chapterTitle={chapter.title} tone="cyan" legend={LEGEND}>
+    <Stage chapterIndex="05" chapterTitle={chapter.title} tone="cyan" transientHeader compactPadding>
       {/* SFX */}
       <Sfx name="error-buzz" from={premCue} volume={0.28} />
       <Sfx name="power-down" from={loseCue} volume={0.25} durationInFrames={60} />
@@ -78,153 +69,133 @@ export const MemoryAndStateChapter: React.FC<ChapterComponentProps> = ({ chapter
       <Sfx name="tick-digital" from={codingCue + 75} volume={0.3} />
       <Sfx name="tick-digital" from={codingCue + 140} volume={0.3} />
 
-      {/* BEAT 20: Why Single-Window Agents Stall */}
+      {/* BEAT 20: Full-Canvas Single-Window Stall Trajectory (Zero SectionTitle chrome) */}
       <SceneBeat window={w20}>
-        <SectionTitle
-          eyebrow="PILLAR 03 — MEMORY & DURABLE STATE"
-          title="Why Single-Window Agents Stall on Multi-Hour Tasks"
-          tone="rose"
-        />
+        <Card tone={frame >= loseCue ? "rose" : "amber"} padding={34} style={{ marginBottom: 28 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+            <Pill tone="rose" size="md">SINGLE-WINDOW MULTI-HOUR RUN</Pill>
+            <span style={{ fontFamily: TOKENS.fonts.mono, fontSize: 16, color: TOKENS.colors.textMuted }}>
+              WHY EPHEMERAL CHAT THREADS STALL
+            </span>
+          </div>
 
-        <Card tone={frame >= loseCue ? "rose" : "amber"} padding={30}>
-          <div style={{ position: "relative", height: 310 }}>
-            <svg width={1560} height={310} viewBox="0 0 1560 310">
-              {/* Baseline axes */}
-              <line x1={60} y1={260} x2={1500} y2={260} stroke="rgba(255,255,255,0.16)" strokeWidth={2} />
-              <line x1={60} y1={30} x2={60} y2={260} stroke="rgba(255,255,255,0.16)" strokeWidth={2} />
+          <div style={{ position: "relative", height: 410 }}>
+            <svg width={1640} height={410} viewBox="0 0 1640 410">
+              <line x1={60} y1={350} x2={1580} y2={350} stroke="rgba(255,255,255,0.16)" strokeWidth={2.5} />
+              <line x1={60} y1={36} x2={60} y2={350} stroke="rgba(255,255,255,0.16)" strokeWidth={2.5} />
 
-              {/* Early progress climb */}
-              <SvgLink x1={60} y1={250} x2={520} y2={95} progress={curveProgress} tone="amber" strokeWidth={4} />
-              {/* Stall / flatline */}
-              <SvgLink x1={520} y1={95} x2={1040} y2={115} progress={progressBetween(frame, premCue - 30, premCue + 10)} tone="rose" strokeWidth={4} dashed />
-              <SvgLink x1={1040} y1={115} x2={1460} y2={165} progress={progressBetween(frame, loseCue, loseCue + 35)} tone="rose" strokeWidth={4} dashed />
+              <SvgLink x1={60} y1={340} x2={560} y2={115} progress={curveProgress} tone="amber" strokeWidth={5} />
+              <SvgLink x1={560} y1={115} x2={1100} y2={145} progress={progressBetween(frame, premCue - 30, premCue + 10)} tone="rose" strokeWidth={5} dashed />
+              <SvgLink x1={1100} y1={145} x2={1540} y2={225} progress={progressBetween(frame, loseCue, loseCue + 35)} tone="rose" strokeWidth={5} dashed />
 
-              <text x={80} y={52} fill={TOKENS.colors.textMuted} fontFamily={TOKENS.fonts.mono} fontSize={15}>
+              <text x={84} y={62} fill={TOKENS.colors.textMuted} fontFamily={TOKENS.fonts.mono} fontSize={17}>
                 TASK COMPLETION %
               </text>
-              <text x={1350} y={290} fill={TOKENS.colors.textMuted} fontFamily={TOKENS.fonts.mono} fontSize={15}>
+              <text x={1410} y={388} fill={TOKENS.colors.textMuted} fontFamily={TOKENS.fonts.mono} fontSize={17}>
                 SESSION TURNS →
               </text>
             </svg>
 
-            <div style={{ position: "absolute", left: 260, top: 38, opacity: fadeIn(frame, b20.start + 60, 16) }}>
-              <Pill tone="amber" size="sm">1. ONE-SHOT OVERREACH → CONTEXT FULL</Pill>
+            <div style={{ position: "absolute", left: 260, top: 48, opacity: fadeIn(frame, b20.start + 60, 16) }}>
+              <Pill tone="amber" size="md">1. ONE-SHOT OVERREACH → CONTEXT FULL</Pill>
             </div>
-            <div style={{ position: "absolute", left: 680, top: 34, opacity: fadeIn(frame, premCue, 14) }}>
-              <Pill tone="rose" size="md">✗ PREMATURE &quot;DONE!&quot;</Pill>
+            <div style={{ position: "absolute", left: 740, top: 44, opacity: fadeIn(frame, premCue, 14) }}>
+              <Pill tone="rose" size="lg">✗ PREMATURE &quot;DONE!&quot;</Pill>
             </div>
-            <div style={{ position: "absolute", left: 1090, top: 170, opacity: fadeIn(frame, loseCue, 16) }}>
-              <Pill tone="rose" size="sm">FORGOTTEN EDGE CASES</Pill>
+            <div style={{ position: "absolute", left: 1150, top: 235, opacity: fadeIn(frame, loseCue, 16) }}>
+              <Pill tone="rose" size="md">FORGOTTEN EDGE CASES</Pill>
             </div>
           </div>
         </Card>
 
-        <div style={{ marginTop: 22, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 22 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28 }}>
           <NodeBox
             tag="FAILURE MODE A"
             title="Context Exhausted Mid-Refactor"
             subtitle="Tries to implement everything at once until working memory overflows."
             tone="rose"
             dim={frame >= loseCue}
-            compact
           />
           <NodeBox
             tag="FAILURE MODE B"
             title="Premature Victory"
-            subtitle="Fixes the happy path and forgets remaining edge cases across 30+ turns."
+            subtitle="Fixes the happy path and loses subtle edge cases across dozens of steps."
             tone="rose"
             glow={frame >= premCue}
-            compact
           />
         </div>
       </SceneBeat>
 
-      {/* BEAT 21: Filesystem as Durable Memory */}
+      {/* BEAT 21: Full-Canvas Workspace Disk as Durable Memory (Zero SectionTitle chrome) */}
       <SceneBeat window={w21}>
-        <SectionTitle
-          eyebrow="PILLAR 03 — WORKSPACE AS MEMORY (MANUS & CODING AGENTS)"
-          title="Treat the Filesystem & Git as Durable Disk"
-          subtitle="Externalized state lets any fresh context window orient itself in seconds."
-          tone="cyan"
-        />
-
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <div style={{ width: "100%", maxWidth: 1220, ...slideUpStyle(frame, fps, diskCue, 18) }}>
-            <Card tone="cyan" glow={frame >= diskCue} padding={26}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
-                <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 30, fontWeight: 700 }}>
-                  Workspace Disk (External Memory)
+          <div style={{ width: "100%", maxWidth: 1440, ...slideUpStyle(frame, fps, diskCue, 18) }}>
+            <Card tone="cyan" glow={frame >= diskCue} padding={34}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 22 }}>
+                <span style={{ fontFamily: TOKENS.fonts.display, fontSize: 38, fontWeight: 700 }}>
+                  Workspace Disk — Durable External Memory
                 </span>
-                <Pill tone="emerald" size="sm">SURVIVES CONTEXT RESETS</Pill>
+                <Pill tone="emerald" size="md">SURVIVES CONTEXT RESETS</Pill>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 18 }}>
-                <DataChip label="todo.md" sublabel="Live goal recitation (Manus)" tone="cyan" />
-                <DataChip label="feature-list.json" sublabel="Structured JSON > Markdown" tone="emerald" />
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 22 }}>
+                <DataChip label="todo.md" sublabel="Live goal recitation (Manus)" tone="cyan" style={{ fontSize: 22, padding: "20px 18px" }} />
+                <DataChip label="feature-list.json" sublabel="Structured JSON > Markdown" tone="emerald" style={{ fontSize: 22, padding: "20px 18px" }} />
                 <DataChip
                   label="git log / commits"
                   sublabel="Clean auth.ts checkpoints"
                   tone="amber"
                   dim={frame < commitsCue}
+                  style={{ fontSize: 22, padding: "20px 18px" }}
                 />
               </div>
             </Card>
           </div>
 
-          <svg width={1200} height={84} viewBox="0 0 1200 84" style={{ overflow: "visible" }}>
-            <SvgLink x1={260} y1={4} x2={200} y2={78} progress={progressBetween(frame, diskCue + 12, diskCue + 36)} tone="cyan" arrow />
-            <SvgLink x1={600} y1={4} x2={600} y2={78} progress={progressBetween(frame, commitsCue, commitsCue + 24)} tone="cyan" arrow />
-            <SvgLink x1={940} y1={4} x2={1000} y2={78} progress={progressBetween(frame, orientCue, orientCue + 24)} tone="emerald" arrow />
-            <SvgPacket x1={940} y1={4} x2={1000} y2={78} progress={progressBetween(frame, orientCue + 4, orientCue + 36)} tone="emerald" label="State" />
+          <svg width={1360} height={124} viewBox="0 0 1360 124" style={{ overflow: "visible" }}>
+            <SvgLink x1={300} y1={6} x2={220} y2={116} progress={progressBetween(frame, diskCue + 12, diskCue + 36)} tone="cyan" strokeWidth={3.5} arrow />
+            <SvgLink x1={680} y1={6} x2={680} y2={116} progress={progressBetween(frame, commitsCue, commitsCue + 24)} tone="cyan" strokeWidth={3.5} arrow />
+            <SvgLink x1={1060} y1={6} x2={1140} y2={116} progress={progressBetween(frame, orientCue, orientCue + 24)} tone="emerald" strokeWidth={3.5} arrow />
+            <SvgPacket x1={1060} y1={6} x2={1140} y2={116} progress={progressBetween(frame, orientCue + 4, orientCue + 36)} tone="emerald" radius={10} label="State" />
           </svg>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, width: "100%", maxWidth: 1320 }}>
-            <NodeBox tag="SESSION 1" title="Fresh Context Window" subtitle="Reads specs, sets reproducer, commits" tone="cyan" compact />
-            <NodeBox tag="SESSION 2" title="Fresh Context Window" subtitle="Reads git log + JSON, implements fix" tone="cyan" glow={frame >= commitsCue} compact />
-            <NodeBox tag="SESSION 3" title="Fresh Context Window" subtitle="Orients in seconds, verifies edge cases" tone="emerald" glow={frame >= orientCue} compact />
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 28, width: "100%", maxWidth: 1480 }}>
+            <NodeBox tag="SESSION 1" title="Fresh Context Window" subtitle="Reads specs, sets reproducer, commits" tone="cyan" style={{ minHeight: 165 }} />
+            <NodeBox tag="SESSION 2" title="Fresh Context Window" subtitle="Reads git log + JSON, implements fix" tone="cyan" glow={frame >= commitsCue} style={{ minHeight: 165 }} />
+            <NodeBox tag="SESSION 3" title="Fresh Context Window" subtitle="Orients in seconds, verifies edge cases" tone="emerald" glow={frame >= orientCue} style={{ minHeight: 165 }} />
           </div>
         </div>
       </SceneBeat>
 
-      {/* BEAT 22: Initializer + Coding Agent Pattern (Anthropic) */}
+      {/* BEAT 22: Full-Canvas Initializer + Coding Agent Pipeline (Zero SectionTitle chrome) */}
       <SceneBeat window={w22}>
-        <SectionTitle
-          eyebrow="PILLAR 03 — ANTHROPIC LONG-RUNNING HARNESS PATTERN"
-          title="Two-Phase Shifts: Initializer + Coding Agent"
-          tone="cyan"
-        />
-
-        <div style={{ display: "grid", gridTemplateColumns: "0.95fr 110px 1.25fr", alignItems: "center" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "0.92fr 120px 1.28fr", alignItems: "center" }}>
           <div style={slideUpStyle(frame, fps, initCue - 12, 20)}>
-            <Card tone="cyan" glow={frame >= initCue && frame < codingCue} padding={26}>
-              <Pill tone="cyan" size="sm">PHASE 1 • RUNS ONCE</Pill>
-              <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 30, fontWeight: 700, marginTop: 10, marginBottom: 14 }}>
+            <Card tone="cyan" glow={frame >= initCue && frame < codingCue} padding={34}>
+              <Pill tone="cyan" size="md">PHASE 1 • RUNS ONCE (ANTHROPIC PATTERN)</Pill>
+              <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 38, fontWeight: 700, marginTop: 14, marginBottom: 22 }}>
                 Initializer Agent
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                <DataChip label="init.sh" sublabel="Boot & environment script" tone="cyan" style={{ alignItems: "flex-start", fontSize: 18 }} />
-                <DataChip label="feature-list.json" sublabel="Scoped verifiable checklist" tone="emerald" style={{ alignItems: "flex-start", fontSize: 18 }} />
-                <DataChip label="claude-progress.txt" sublabel="Shift handoff log + baseline commit" tone="amber" style={{ alignItems: "flex-start", fontSize: 18 }} />
+              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                <DataChip label="init.sh" sublabel="Boot & environment script" tone="cyan" style={{ alignItems: "flex-start", fontSize: 21, padding: "16px 20px" }} />
+                <DataChip label="feature-list.json" sublabel="Scoped verifiable JSON checklist" tone="emerald" style={{ alignItems: "flex-start", fontSize: 21, padding: "16px 20px" }} />
+                <DataChip label="claude-progress.txt" sublabel="Shift handoff log + baseline commit" tone="amber" style={{ alignItems: "flex-start", fontSize: 21, padding: "16px 20px" }} />
               </div>
             </Card>
           </div>
 
-          <svg width={110} height={120} viewBox="0 0 110 120" style={{ overflow: "visible" }}>
-            <SvgLink x1={6} y1={60} x2={104} y2={60} progress={progressBetween(frame, codingCue - 20, codingCue + 10)} tone="emerald" arrow strokeWidth={3} />
-            <SvgPacket x1={6} y1={60} x2={104} y2={60} progress={progressBetween(frame, codingCue - 12, codingCue + 24)} tone="emerald" label="Handoff" />
+          <svg width={120} height={120} viewBox="0 0 120 120" style={{ overflow: "visible" }}>
+            <SvgLink x1={6} y1={60} x2={114} y2={60} progress={progressBetween(frame, codingCue - 20, codingCue + 10)} tone="emerald" arrow strokeWidth={4} />
+            <SvgPacket x1={6} y1={60} x2={114} y2={60} progress={progressBetween(frame, codingCue - 12, codingCue + 24)} tone="emerald" radius={10} label="Handoff" />
           </svg>
 
           <div style={slideUpStyle(frame, fps, codingCue - 16, 20)}>
-            <Card tone="emerald" glow={frame >= codingCue} padding={26}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
-                <div>
-                  <Pill tone="emerald" size="sm">PHASE 2 • REPEATING SHIFTS</Pill>
-                  <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 30, fontWeight: 700, marginTop: 8 }}>
-                    Coding Agent Loop (1 Item / Shift)
-                  </div>
-                </div>
+            <Card tone="emerald" glow={frame >= codingCue} padding={34}>
+              <Pill tone="emerald" size="md">PHASE 2 • REPEATING FRESH SHIFTS</Pill>
+              <div style={{ fontFamily: TOKENS.fonts.display, fontSize: 38, fontWeight: 700, marginTop: 14, marginBottom: 22 }}>
+                Coding Agent Loop (1 Item / Shift)
               </div>
 
-              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                 <CheckRow
                   label="1. Reproduce auth.ts token race"
                   detail="Write failing concurrency test + commit"
