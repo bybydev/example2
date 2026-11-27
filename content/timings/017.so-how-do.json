@@ -1,0 +1,964 @@
+{
+  "audio": "017.so-how-do.mp3",
+  "paragraph": 17,
+  "text": "So how do you keep context clean without mutating past turns? Start at the tool boundary. Imagine our agent runs the authentication test suite and triggers a massive stack trace. Dumping all of that raw text straight into context instantly drowns the model in noise. Instead, a well-built harness truncates terminal output down to a crisp forty-line summary, writes the full log to a temporary file on disk, and returns the file path so the agent can grep specific error lines only when needed.",
+  "transcript": "So how do you keep context clean without mutating past turns? Start at the tool boundary. Imagine our agent runs the authentication test suite and triggers a massive stack trace. Dumping all of that raw text straight into context instantly drowns the model in noise. Instead, a well-built harness truncates terminal output down to a crisp 40-line summary, writes the full log to a temporary file on disk, and returns the file path so the agent can grab specific error lines only when needed.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 1
+    }
+  ],
+  "duration": 24.96,
+  "failed_words": 1,
+  "failures": [
+    {
+      "index": 77,
+      "word": "grep",
+      "match": "approx",
+      "heard": "grab",
+      "start": 22.76
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "So",
+      "start": 0.0,
+      "end": 0.26,
+      "match": "exact"
+    },
+    {
+      "word": "how",
+      "start": 0.26,
+      "end": 0.4,
+      "match": "exact"
+    },
+    {
+      "word": "do",
+      "start": 0.4,
+      "end": 0.5,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 0.5,
+      "end": 0.6,
+      "match": "exact"
+    },
+    {
+      "word": "keep",
+      "start": 0.6,
+      "end": 0.82,
+      "match": "exact"
+    },
+    {
+      "word": "context",
+      "start": 0.82,
+      "end": 1.2,
+      "match": "exact"
+    },
+    {
+      "word": "clean",
+      "start": 1.2,
+      "end": 1.56,
+      "match": "exact"
+    },
+    {
+      "word": "without",
+      "start": 1.56,
+      "end": 1.88,
+      "match": "exact"
+    },
+    {
+      "word": "mutating",
+      "start": 1.88,
+      "end": 2.38,
+      "match": "exact"
+    },
+    {
+      "word": "past",
+      "start": 2.38,
+      "end": 2.56,
+      "match": "exact"
+    },
+    {
+      "word": "turns?",
+      "start": 2.56,
+      "end": 2.92,
+      "match": "exact"
+    },
+    {
+      "word": "Start",
+      "start": 3.42,
+      "end": 3.9,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 3.9,
+      "end": 4.16,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 4.16,
+      "end": 4.26,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 4.26,
+      "end": 4.42,
+      "match": "exact"
+    },
+    {
+      "word": "boundary.",
+      "start": 4.42,
+      "end": 4.68,
+      "match": "exact"
+    },
+    {
+      "word": "Imagine",
+      "start": 5.14,
+      "end": 5.62,
+      "match": "exact"
+    },
+    {
+      "word": "our",
+      "start": 5.62,
+      "end": 5.82,
+      "match": "exact"
+    },
+    {
+      "word": "agent",
+      "start": 5.82,
+      "end": 6.08,
+      "match": "exact"
+    },
+    {
+      "word": "runs",
+      "start": 6.08,
+      "end": 6.3,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 6.3,
+      "end": 6.5,
+      "match": "exact"
+    },
+    {
+      "word": "authentication",
+      "start": 6.5,
+      "end": 6.86,
+      "match": "exact"
+    },
+    {
+      "word": "test",
+      "start": 6.86,
+      "end": 7.32,
+      "match": "exact"
+    },
+    {
+      "word": "suite",
+      "start": 7.32,
+      "end": 7.58,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 7.58,
+      "end": 7.8,
+      "match": "exact"
+    },
+    {
+      "word": "triggers",
+      "start": 7.8,
+      "end": 8.08,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 8.08,
+      "end": 8.26,
+      "match": "exact"
+    },
+    {
+      "word": "massive",
+      "start": 8.26,
+      "end": 8.54,
+      "match": "exact"
+    },
+    {
+      "word": "stack",
+      "start": 8.54,
+      "end": 8.86,
+      "match": "exact"
+    },
+    {
+      "word": "trace.",
+      "start": 8.86,
+      "end": 9.14,
+      "match": "exact"
+    },
+    {
+      "word": "Dumping",
+      "start": 9.56,
+      "end": 10.04,
+      "match": "exact"
+    },
+    {
+      "word": "all",
+      "start": 10.04,
+      "end": 10.26,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 10.26,
+      "end": 10.38,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 10.38,
+      "end": 10.52,
+      "match": "exact"
+    },
+    {
+      "word": "raw",
+      "start": 10.52,
+      "end": 10.7,
+      "match": "exact"
+    },
+    {
+      "word": "text",
+      "start": 10.7,
+      "end": 11.0,
+      "match": "exact"
+    },
+    {
+      "word": "straight",
+      "start": 11.0,
+      "end": 11.38,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 11.38,
+      "end": 11.6,
+      "match": "exact"
+    },
+    {
+      "word": "context",
+      "start": 11.6,
+      "end": 11.98,
+      "match": "exact"
+    },
+    {
+      "word": "instantly",
+      "start": 11.98,
+      "end": 12.4,
+      "match": "exact"
+    },
+    {
+      "word": "drowns",
+      "start": 12.4,
+      "end": 12.98,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 12.98,
+      "end": 13.0,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 13.0,
+      "end": 13.24,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 13.24,
+      "end": 13.38,
+      "match": "exact"
+    },
+    {
+      "word": "noise.",
+      "start": 13.38,
+      "end": 13.64,
+      "match": "exact"
+    },
+    {
+      "word": "Instead,",
+      "start": 13.94,
+      "end": 14.42,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 14.66,
+      "end": 14.8,
+      "match": "exact"
+    },
+    {
+      "word": "well-built",
+      "start": 14.8,
+      "end": 15.2,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 15.2,
+      "end": 15.48,
+      "match": "exact"
+    },
+    {
+      "word": "truncates",
+      "start": 15.48,
+      "end": 16.0,
+      "match": "exact"
+    },
+    {
+      "word": "terminal",
+      "start": 16.0,
+      "end": 16.26,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 16.26,
+      "end": 16.58,
+      "match": "exact"
+    },
+    {
+      "word": "down",
+      "start": 16.58,
+      "end": 16.88,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 16.88,
+      "end": 17.04,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 17.04,
+      "end": 17.16,
+      "match": "exact"
+    },
+    {
+      "word": "crisp",
+      "start": 17.16,
+      "end": 17.38,
+      "match": "exact"
+    },
+    {
+      "word": "forty-line",
+      "start": 17.38,
+      "end": 17.96,
+      "match": "exact"
+    },
+    {
+      "word": "summary,",
+      "start": 17.96,
+      "end": 18.26,
+      "match": "exact"
+    },
+    {
+      "word": "writes",
+      "start": 18.48,
+      "end": 18.78,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 18.78,
+      "end": 18.96,
+      "match": "exact"
+    },
+    {
+      "word": "full",
+      "start": 18.96,
+      "end": 19.16,
+      "match": "exact"
+    },
+    {
+      "word": "log",
+      "start": 19.16,
+      "end": 19.42,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 19.42,
+      "end": 19.6,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 19.6,
+      "end": 19.68,
+      "match": "exact"
+    },
+    {
+      "word": "temporary",
+      "start": 19.68,
+      "end": 19.94,
+      "match": "exact"
+    },
+    {
+      "word": "file",
+      "start": 19.94,
+      "end": 20.28,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 20.28,
+      "end": 20.46,
+      "match": "exact"
+    },
+    {
+      "word": "disk,",
+      "start": 20.46,
+      "end": 20.64,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 20.86,
+      "end": 21.14,
+      "match": "exact"
+    },
+    {
+      "word": "returns",
+      "start": 21.14,
+      "end": 21.36,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 21.36,
+      "end": 21.6,
+      "match": "exact"
+    },
+    {
+      "word": "file",
+      "start": 21.6,
+      "end": 21.78,
+      "match": "exact"
+    },
+    {
+      "word": "path",
+      "start": 21.78,
+      "end": 22.0,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 22.0,
+      "end": 22.24,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 22.24,
+      "end": 22.36,
+      "match": "exact"
+    },
+    {
+      "word": "agent",
+      "start": 22.36,
+      "end": 22.62,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 22.62,
+      "end": 22.76,
+      "match": "exact"
+    },
+    {
+      "word": "grep",
+      "start": 22.76,
+      "end": 22.94,
+      "match": "approx",
+      "heard": "grab"
+    },
+    {
+      "word": "specific",
+      "start": 22.94,
+      "end": 23.18,
+      "match": "exact"
+    },
+    {
+      "word": "error",
+      "start": 23.18,
+      "end": 23.58,
+      "match": "exact"
+    },
+    {
+      "word": "lines",
+      "start": 23.58,
+      "end": 23.88,
+      "match": "exact"
+    },
+    {
+      "word": "only",
+      "start": 23.88,
+      "end": 24.14,
+      "match": "exact"
+    },
+    {
+      "word": "when",
+      "start": 24.14,
+      "end": 24.36,
+      "match": "exact"
+    },
+    {
+      "word": "needed.",
+      "start": 24.36,
+      "end": 24.58,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "So",
+      "start": 0.0,
+      "end": 0.26
+    },
+    {
+      "word": "how",
+      "start": 0.26,
+      "end": 0.4
+    },
+    {
+      "word": "do",
+      "start": 0.4,
+      "end": 0.5
+    },
+    {
+      "word": "you",
+      "start": 0.5,
+      "end": 0.6
+    },
+    {
+      "word": "keep",
+      "start": 0.6,
+      "end": 0.82
+    },
+    {
+      "word": "context",
+      "start": 0.82,
+      "end": 1.2
+    },
+    {
+      "word": "clean",
+      "start": 1.2,
+      "end": 1.56
+    },
+    {
+      "word": "without",
+      "start": 1.56,
+      "end": 1.88
+    },
+    {
+      "word": "mutating",
+      "start": 1.88,
+      "end": 2.38
+    },
+    {
+      "word": "past",
+      "start": 2.38,
+      "end": 2.56
+    },
+    {
+      "word": "turns?",
+      "start": 2.56,
+      "end": 2.92
+    },
+    {
+      "word": "Start",
+      "start": 3.42,
+      "end": 3.9
+    },
+    {
+      "word": "at",
+      "start": 3.9,
+      "end": 4.16
+    },
+    {
+      "word": "the",
+      "start": 4.16,
+      "end": 4.26
+    },
+    {
+      "word": "tool",
+      "start": 4.26,
+      "end": 4.42
+    },
+    {
+      "word": "boundary.",
+      "start": 4.42,
+      "end": 4.68
+    },
+    {
+      "word": "Imagine",
+      "start": 5.14,
+      "end": 5.62
+    },
+    {
+      "word": "our",
+      "start": 5.62,
+      "end": 5.82
+    },
+    {
+      "word": "agent",
+      "start": 5.82,
+      "end": 6.08
+    },
+    {
+      "word": "runs",
+      "start": 6.08,
+      "end": 6.3
+    },
+    {
+      "word": "the",
+      "start": 6.3,
+      "end": 6.5
+    },
+    {
+      "word": "authentication",
+      "start": 6.5,
+      "end": 6.86
+    },
+    {
+      "word": "test",
+      "start": 6.86,
+      "end": 7.32
+    },
+    {
+      "word": "suite",
+      "start": 7.32,
+      "end": 7.58
+    },
+    {
+      "word": "and",
+      "start": 7.58,
+      "end": 7.8
+    },
+    {
+      "word": "triggers",
+      "start": 7.8,
+      "end": 8.08
+    },
+    {
+      "word": "a",
+      "start": 8.08,
+      "end": 8.26
+    },
+    {
+      "word": "massive",
+      "start": 8.26,
+      "end": 8.54
+    },
+    {
+      "word": "stack",
+      "start": 8.54,
+      "end": 8.86
+    },
+    {
+      "word": "trace.",
+      "start": 8.86,
+      "end": 9.14
+    },
+    {
+      "word": "Dumping",
+      "start": 9.56,
+      "end": 10.04
+    },
+    {
+      "word": "all",
+      "start": 10.04,
+      "end": 10.26
+    },
+    {
+      "word": "of",
+      "start": 10.26,
+      "end": 10.38
+    },
+    {
+      "word": "that",
+      "start": 10.38,
+      "end": 10.52
+    },
+    {
+      "word": "raw",
+      "start": 10.52,
+      "end": 10.7
+    },
+    {
+      "word": "text",
+      "start": 10.7,
+      "end": 11.0
+    },
+    {
+      "word": "straight",
+      "start": 11.0,
+      "end": 11.38
+    },
+    {
+      "word": "into",
+      "start": 11.38,
+      "end": 11.6
+    },
+    {
+      "word": "context",
+      "start": 11.6,
+      "end": 11.98
+    },
+    {
+      "word": "instantly",
+      "start": 11.98,
+      "end": 12.4
+    },
+    {
+      "word": "drowns",
+      "start": 12.4,
+      "end": 12.98
+    },
+    {
+      "word": "the",
+      "start": 12.98,
+      "end": 13.0
+    },
+    {
+      "word": "model",
+      "start": 13.0,
+      "end": 13.24
+    },
+    {
+      "word": "in",
+      "start": 13.24,
+      "end": 13.38
+    },
+    {
+      "word": "noise.",
+      "start": 13.38,
+      "end": 13.64
+    },
+    {
+      "word": "Instead,",
+      "start": 13.94,
+      "end": 14.42
+    },
+    {
+      "word": "a",
+      "start": 14.66,
+      "end": 14.8
+    },
+    {
+      "word": "well",
+      "start": 14.8,
+      "end": 15.04
+    },
+    {
+      "word": "-built",
+      "start": 15.04,
+      "end": 15.2
+    },
+    {
+      "word": "harness",
+      "start": 15.2,
+      "end": 15.48
+    },
+    {
+      "word": "truncates",
+      "start": 15.48,
+      "end": 16.0
+    },
+    {
+      "word": "terminal",
+      "start": 16.0,
+      "end": 16.26
+    },
+    {
+      "word": "output",
+      "start": 16.26,
+      "end": 16.58
+    },
+    {
+      "word": "down",
+      "start": 16.58,
+      "end": 16.88
+    },
+    {
+      "word": "to",
+      "start": 16.88,
+      "end": 17.04
+    },
+    {
+      "word": "a",
+      "start": 17.04,
+      "end": 17.16
+    },
+    {
+      "word": "crisp",
+      "start": 17.16,
+      "end": 17.38
+    },
+    {
+      "word": "40",
+      "start": 17.38,
+      "end": 17.72
+    },
+    {
+      "word": "-line",
+      "start": 17.72,
+      "end": 17.96
+    },
+    {
+      "word": "summary,",
+      "start": 17.96,
+      "end": 18.26
+    },
+    {
+      "word": "writes",
+      "start": 18.48,
+      "end": 18.78
+    },
+    {
+      "word": "the",
+      "start": 18.78,
+      "end": 18.96
+    },
+    {
+      "word": "full",
+      "start": 18.96,
+      "end": 19.16
+    },
+    {
+      "word": "log",
+      "start": 19.16,
+      "end": 19.42
+    },
+    {
+      "word": "to",
+      "start": 19.42,
+      "end": 19.6
+    },
+    {
+      "word": "a",
+      "start": 19.6,
+      "end": 19.68
+    },
+    {
+      "word": "temporary",
+      "start": 19.68,
+      "end": 19.94
+    },
+    {
+      "word": "file",
+      "start": 19.94,
+      "end": 20.28
+    },
+    {
+      "word": "on",
+      "start": 20.28,
+      "end": 20.46
+    },
+    {
+      "word": "disk,",
+      "start": 20.46,
+      "end": 20.64
+    },
+    {
+      "word": "and",
+      "start": 20.86,
+      "end": 21.14
+    },
+    {
+      "word": "returns",
+      "start": 21.14,
+      "end": 21.36
+    },
+    {
+      "word": "the",
+      "start": 21.36,
+      "end": 21.6
+    },
+    {
+      "word": "file",
+      "start": 21.6,
+      "end": 21.78
+    },
+    {
+      "word": "path",
+      "start": 21.78,
+      "end": 22.0
+    },
+    {
+      "word": "so",
+      "start": 22.0,
+      "end": 22.24
+    },
+    {
+      "word": "the",
+      "start": 22.24,
+      "end": 22.36
+    },
+    {
+      "word": "agent",
+      "start": 22.36,
+      "end": 22.62
+    },
+    {
+      "word": "can",
+      "start": 22.62,
+      "end": 22.76
+    },
+    {
+      "word": "grab",
+      "start": 22.76,
+      "end": 22.94
+    },
+    {
+      "word": "specific",
+      "start": 22.94,
+      "end": 23.18
+    },
+    {
+      "word": "error",
+      "start": 23.18,
+      "end": 23.58
+    },
+    {
+      "word": "lines",
+      "start": 23.58,
+      "end": 23.88
+    },
+    {
+      "word": "only",
+      "start": 23.88,
+      "end": 24.14
+    },
+    {
+      "word": "when",
+      "start": 24.14,
+      "end": 24.36
+    },
+    {
+      "word": "needed.",
+      "start": 24.36,
+      "end": 24.58
+    }
+  ]
+}

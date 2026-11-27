@@ -1,0 +1,1016 @@
+{
+  "audio": "030.zooming-out-to.mp3",
+  "paragraph": 30,
+  "text": "Zooming out to production deployments, this exact same core harness engine powers two major topologies today. On the left are interactive local harnesses like Claude Code, Codex CLI, Gemini CLI, Cursor, Windsurf, OpenCode, Aider, and Cline. Those are built for low-latency pairing right inside your terminal or editor. On the right are headless cloud background harnesses like Devin, Codex Cloud, GitHub Copilot, Cursor Background Agents, and OpenHands. They pull tickets from a queue, spin up fresh containers, run checks, and open pull requests while you focus elsewhere.",
+  "transcript": "Zooming out to production deployments, this exact same core harness engine powers two major topologies today. On the left are interactive local harnesses like Cloud Code, Codex CLI, Gemini CLI, Cursor, Windsurf, OpenCode, Ader, and Klein. Those are built for low-latency pairing right inside your terminal or editor. On the right are headless cloud background harnesses like Devon, Codex Cloud, GitHub Copilot, Cursor Background Agents, and OpenHands. They pull tickets from a queue, spin up fresh containers, run checks, and open pull requests while you focus elsewhere.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 4
+    }
+  ],
+  "duration": 30.28,
+  "failed_words": 4,
+  "failures": [
+    {
+      "index": 24,
+      "word": "Claude",
+      "match": "approx",
+      "heard": "Cloud",
+      "start": 8.02
+    },
+    {
+      "index": 33,
+      "word": "Aider,",
+      "match": "approx",
+      "heard": "Ader,",
+      "start": 13.22
+    },
+    {
+      "index": 35,
+      "word": "Cline.",
+      "match": "approx",
+      "heard": "Klein.",
+      "start": 13.78
+    },
+    {
+      "index": 57,
+      "word": "Devin,",
+      "match": "approx",
+      "heard": "Devon,",
+      "start": 20.44
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Zooming",
+      "start": 0.0,
+      "end": 0.4,
+      "match": "exact"
+    },
+    {
+      "word": "out",
+      "start": 0.4,
+      "end": 0.62,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 0.62,
+      "end": 0.74,
+      "match": "exact"
+    },
+    {
+      "word": "production",
+      "start": 0.74,
+      "end": 1.04,
+      "match": "exact"
+    },
+    {
+      "word": "deployments,",
+      "start": 1.04,
+      "end": 1.58,
+      "match": "exact"
+    },
+    {
+      "word": "this",
+      "start": 1.72,
+      "end": 1.92,
+      "match": "exact"
+    },
+    {
+      "word": "exact",
+      "start": 1.92,
+      "end": 2.24,
+      "match": "exact"
+    },
+    {
+      "word": "same",
+      "start": 2.24,
+      "end": 2.54,
+      "match": "exact"
+    },
+    {
+      "word": "core",
+      "start": 2.54,
+      "end": 2.82,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 2.82,
+      "end": 3.16,
+      "match": "exact"
+    },
+    {
+      "word": "engine",
+      "start": 3.16,
+      "end": 3.44,
+      "match": "exact"
+    },
+    {
+      "word": "powers",
+      "start": 3.44,
+      "end": 3.82,
+      "match": "exact"
+    },
+    {
+      "word": "two",
+      "start": 3.82,
+      "end": 4.04,
+      "match": "exact"
+    },
+    {
+      "word": "major",
+      "start": 4.04,
+      "end": 4.34,
+      "match": "exact"
+    },
+    {
+      "word": "topologies",
+      "start": 4.34,
+      "end": 4.86,
+      "match": "exact"
+    },
+    {
+      "word": "today.",
+      "start": 4.86,
+      "end": 5.18,
+      "match": "exact"
+    },
+    {
+      "word": "On",
+      "start": 5.44,
+      "end": 5.96,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 5.96,
+      "end": 6.08,
+      "match": "exact"
+    },
+    {
+      "word": "left",
+      "start": 6.08,
+      "end": 6.36,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 6.36,
+      "end": 6.5,
+      "match": "exact"
+    },
+    {
+      "word": "interactive",
+      "start": 6.5,
+      "end": 6.9,
+      "match": "exact"
+    },
+    {
+      "word": "local",
+      "start": 6.9,
+      "end": 7.2,
+      "match": "exact"
+    },
+    {
+      "word": "harnesses",
+      "start": 7.2,
+      "end": 7.84,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 7.84,
+      "end": 8.02,
+      "match": "exact"
+    },
+    {
+      "word": "Claude",
+      "start": 8.02,
+      "end": 8.26,
+      "match": "approx",
+      "heard": "Cloud"
+    },
+    {
+      "word": "Code,",
+      "start": 8.26,
+      "end": 8.48,
+      "match": "exact"
+    },
+    {
+      "word": "Codex",
+      "start": 8.94,
+      "end": 9.28,
+      "match": "exact"
+    },
+    {
+      "word": "CLI,",
+      "start": 9.28,
+      "end": 9.82,
+      "match": "exact"
+    },
+    {
+      "word": "Gemini",
+      "start": 9.86,
+      "end": 10.28,
+      "match": "exact"
+    },
+    {
+      "word": "CLI,",
+      "start": 10.28,
+      "end": 10.9,
+      "match": "exact"
+    },
+    {
+      "word": "Cursor,",
+      "start": 10.94,
+      "end": 11.52,
+      "match": "exact"
+    },
+    {
+      "word": "Windsurf,",
+      "start": 11.64,
+      "end": 12.36,
+      "match": "exact"
+    },
+    {
+      "word": "OpenCode,",
+      "start": 12.52,
+      "end": 13.08,
+      "match": "exact"
+    },
+    {
+      "word": "Aider,",
+      "start": 13.22,
+      "end": 13.56,
+      "match": "approx",
+      "heard": "Ader,"
+    },
+    {
+      "word": "and",
+      "start": 13.62,
+      "end": 13.78,
+      "match": "exact"
+    },
+    {
+      "word": "Cline.",
+      "start": 13.78,
+      "end": 13.98,
+      "match": "approx",
+      "heard": "Klein."
+    },
+    {
+      "word": "Those",
+      "start": 14.24,
+      "end": 14.78,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 14.78,
+      "end": 14.92,
+      "match": "exact"
+    },
+    {
+      "word": "built",
+      "start": 14.92,
+      "end": 15.08,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 15.08,
+      "end": 15.26,
+      "match": "exact"
+    },
+    {
+      "word": "low-latency",
+      "start": 15.26,
+      "end": 15.76,
+      "match": "exact"
+    },
+    {
+      "word": "pairing",
+      "start": 15.76,
+      "end": 16.08,
+      "match": "exact"
+    },
+    {
+      "word": "right",
+      "start": 16.08,
+      "end": 16.42,
+      "match": "exact"
+    },
+    {
+      "word": "inside",
+      "start": 16.42,
+      "end": 16.66,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 16.66,
+      "end": 16.92,
+      "match": "exact"
+    },
+    {
+      "word": "terminal",
+      "start": 16.92,
+      "end": 17.2,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 17.2,
+      "end": 17.38,
+      "match": "exact"
+    },
+    {
+      "word": "editor.",
+      "start": 17.38,
+      "end": 17.58,
+      "match": "exact"
+    },
+    {
+      "word": "On",
+      "start": 17.84,
+      "end": 18.24,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 18.24,
+      "end": 18.34,
+      "match": "exact"
+    },
+    {
+      "word": "right",
+      "start": 18.34,
+      "end": 18.58,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 18.58,
+      "end": 18.74,
+      "match": "exact"
+    },
+    {
+      "word": "headless",
+      "start": 18.74,
+      "end": 19.04,
+      "match": "exact"
+    },
+    {
+      "word": "cloud",
+      "start": 19.04,
+      "end": 19.22,
+      "match": "exact"
+    },
+    {
+      "word": "background",
+      "start": 19.22,
+      "end": 19.56,
+      "match": "exact"
+    },
+    {
+      "word": "harnesses",
+      "start": 19.56,
+      "end": 20.2,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 20.2,
+      "end": 20.44,
+      "match": "exact"
+    },
+    {
+      "word": "Devin,",
+      "start": 20.44,
+      "end": 20.78,
+      "match": "approx",
+      "heard": "Devon,"
+    },
+    {
+      "word": "Codex",
+      "start": 20.84,
+      "end": 21.28,
+      "match": "exact"
+    },
+    {
+      "word": "Cloud,",
+      "start": 21.28,
+      "end": 21.44,
+      "match": "exact"
+    },
+    {
+      "word": "GitHub",
+      "start": 21.78,
+      "end": 22.06,
+      "match": "exact"
+    },
+    {
+      "word": "Copilot,",
+      "start": 22.06,
+      "end": 22.64,
+      "match": "exact"
+    },
+    {
+      "word": "Cursor",
+      "start": 22.78,
+      "end": 23.08,
+      "match": "exact"
+    },
+    {
+      "word": "Background",
+      "start": 23.08,
+      "end": 23.26,
+      "match": "exact"
+    },
+    {
+      "word": "Agents,",
+      "start": 23.26,
+      "end": 23.8,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 23.8,
+      "end": 24.02,
+      "match": "exact"
+    },
+    {
+      "word": "OpenHands.",
+      "start": 24.02,
+      "end": 24.5,
+      "match": "exact"
+    },
+    {
+      "word": "They",
+      "start": 24.5,
+      "end": 25.06,
+      "match": "exact"
+    },
+    {
+      "word": "pull",
+      "start": 25.06,
+      "end": 25.22,
+      "match": "exact"
+    },
+    {
+      "word": "tickets",
+      "start": 25.22,
+      "end": 25.48,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 25.48,
+      "end": 25.64,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 25.64,
+      "end": 25.76,
+      "match": "exact"
+    },
+    {
+      "word": "queue,",
+      "start": 25.76,
+      "end": 25.9,
+      "match": "exact"
+    },
+    {
+      "word": "spin",
+      "start": 26.06,
+      "end": 26.38,
+      "match": "exact"
+    },
+    {
+      "word": "up",
+      "start": 26.38,
+      "end": 26.5,
+      "match": "exact"
+    },
+    {
+      "word": "fresh",
+      "start": 26.5,
+      "end": 26.68,
+      "match": "exact"
+    },
+    {
+      "word": "containers,",
+      "start": 26.68,
+      "end": 27.12,
+      "match": "exact"
+    },
+    {
+      "word": "run",
+      "start": 27.32,
+      "end": 27.56,
+      "match": "exact"
+    },
+    {
+      "word": "checks,",
+      "start": 27.56,
+      "end": 27.88,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 28.0,
+      "end": 28.12,
+      "match": "exact"
+    },
+    {
+      "word": "open",
+      "start": 28.12,
+      "end": 28.28,
+      "match": "exact"
+    },
+    {
+      "word": "pull",
+      "start": 28.28,
+      "end": 28.46,
+      "match": "exact"
+    },
+    {
+      "word": "requests",
+      "start": 28.46,
+      "end": 28.76,
+      "match": "exact"
+    },
+    {
+      "word": "while",
+      "start": 28.76,
+      "end": 29.14,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 29.14,
+      "end": 29.24,
+      "match": "exact"
+    },
+    {
+      "word": "focus",
+      "start": 29.24,
+      "end": 29.48,
+      "match": "exact"
+    },
+    {
+      "word": "elsewhere.",
+      "start": 29.48,
+      "end": 29.74,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Zooming",
+      "start": 0.0,
+      "end": 0.4
+    },
+    {
+      "word": "out",
+      "start": 0.4,
+      "end": 0.62
+    },
+    {
+      "word": "to",
+      "start": 0.62,
+      "end": 0.74
+    },
+    {
+      "word": "production",
+      "start": 0.74,
+      "end": 1.04
+    },
+    {
+      "word": "deployments,",
+      "start": 1.04,
+      "end": 1.58
+    },
+    {
+      "word": "this",
+      "start": 1.72,
+      "end": 1.92
+    },
+    {
+      "word": "exact",
+      "start": 1.92,
+      "end": 2.24
+    },
+    {
+      "word": "same",
+      "start": 2.24,
+      "end": 2.54
+    },
+    {
+      "word": "core",
+      "start": 2.54,
+      "end": 2.82
+    },
+    {
+      "word": "harness",
+      "start": 2.82,
+      "end": 3.16
+    },
+    {
+      "word": "engine",
+      "start": 3.16,
+      "end": 3.44
+    },
+    {
+      "word": "powers",
+      "start": 3.44,
+      "end": 3.82
+    },
+    {
+      "word": "two",
+      "start": 3.82,
+      "end": 4.04
+    },
+    {
+      "word": "major",
+      "start": 4.04,
+      "end": 4.34
+    },
+    {
+      "word": "topologies",
+      "start": 4.34,
+      "end": 4.86
+    },
+    {
+      "word": "today.",
+      "start": 4.86,
+      "end": 5.18
+    },
+    {
+      "word": "On",
+      "start": 5.44,
+      "end": 5.96
+    },
+    {
+      "word": "the",
+      "start": 5.96,
+      "end": 6.08
+    },
+    {
+      "word": "left",
+      "start": 6.08,
+      "end": 6.36
+    },
+    {
+      "word": "are",
+      "start": 6.36,
+      "end": 6.5
+    },
+    {
+      "word": "interactive",
+      "start": 6.5,
+      "end": 6.9
+    },
+    {
+      "word": "local",
+      "start": 6.9,
+      "end": 7.2
+    },
+    {
+      "word": "harnesses",
+      "start": 7.2,
+      "end": 7.84
+    },
+    {
+      "word": "like",
+      "start": 7.84,
+      "end": 8.02
+    },
+    {
+      "word": "Cloud",
+      "start": 8.02,
+      "end": 8.26
+    },
+    {
+      "word": "Code,",
+      "start": 8.26,
+      "end": 8.48
+    },
+    {
+      "word": "Codex",
+      "start": 8.94,
+      "end": 9.28
+    },
+    {
+      "word": "CLI,",
+      "start": 9.28,
+      "end": 9.82
+    },
+    {
+      "word": "Gemini",
+      "start": 9.86,
+      "end": 10.28
+    },
+    {
+      "word": "CLI,",
+      "start": 10.28,
+      "end": 10.9
+    },
+    {
+      "word": "Cursor,",
+      "start": 10.94,
+      "end": 11.52
+    },
+    {
+      "word": "Windsurf,",
+      "start": 11.64,
+      "end": 12.36
+    },
+    {
+      "word": "OpenCode,",
+      "start": 12.52,
+      "end": 13.08
+    },
+    {
+      "word": "Ader,",
+      "start": 13.22,
+      "end": 13.56
+    },
+    {
+      "word": "and",
+      "start": 13.62,
+      "end": 13.78
+    },
+    {
+      "word": "Klein.",
+      "start": 13.78,
+      "end": 13.98
+    },
+    {
+      "word": "Those",
+      "start": 14.24,
+      "end": 14.78
+    },
+    {
+      "word": "are",
+      "start": 14.78,
+      "end": 14.92
+    },
+    {
+      "word": "built",
+      "start": 14.92,
+      "end": 15.08
+    },
+    {
+      "word": "for",
+      "start": 15.08,
+      "end": 15.26
+    },
+    {
+      "word": "low",
+      "start": 15.26,
+      "end": 15.46
+    },
+    {
+      "word": "-latency",
+      "start": 15.46,
+      "end": 15.76
+    },
+    {
+      "word": "pairing",
+      "start": 15.76,
+      "end": 16.08
+    },
+    {
+      "word": "right",
+      "start": 16.08,
+      "end": 16.42
+    },
+    {
+      "word": "inside",
+      "start": 16.42,
+      "end": 16.66
+    },
+    {
+      "word": "your",
+      "start": 16.66,
+      "end": 16.92
+    },
+    {
+      "word": "terminal",
+      "start": 16.92,
+      "end": 17.2
+    },
+    {
+      "word": "or",
+      "start": 17.2,
+      "end": 17.38
+    },
+    {
+      "word": "editor.",
+      "start": 17.38,
+      "end": 17.58
+    },
+    {
+      "word": "On",
+      "start": 17.84,
+      "end": 18.24
+    },
+    {
+      "word": "the",
+      "start": 18.24,
+      "end": 18.34
+    },
+    {
+      "word": "right",
+      "start": 18.34,
+      "end": 18.58
+    },
+    {
+      "word": "are",
+      "start": 18.58,
+      "end": 18.74
+    },
+    {
+      "word": "headless",
+      "start": 18.74,
+      "end": 19.04
+    },
+    {
+      "word": "cloud",
+      "start": 19.04,
+      "end": 19.22
+    },
+    {
+      "word": "background",
+      "start": 19.22,
+      "end": 19.56
+    },
+    {
+      "word": "harnesses",
+      "start": 19.56,
+      "end": 20.2
+    },
+    {
+      "word": "like",
+      "start": 20.2,
+      "end": 20.44
+    },
+    {
+      "word": "Devon,",
+      "start": 20.44,
+      "end": 20.78
+    },
+    {
+      "word": "Codex",
+      "start": 20.84,
+      "end": 21.28
+    },
+    {
+      "word": "Cloud,",
+      "start": 21.28,
+      "end": 21.44
+    },
+    {
+      "word": "GitHub",
+      "start": 21.78,
+      "end": 22.06
+    },
+    {
+      "word": "Copilot,",
+      "start": 22.06,
+      "end": 22.64
+    },
+    {
+      "word": "Cursor",
+      "start": 22.78,
+      "end": 23.08
+    },
+    {
+      "word": "Background",
+      "start": 23.08,
+      "end": 23.26
+    },
+    {
+      "word": "Agents,",
+      "start": 23.26,
+      "end": 23.8
+    },
+    {
+      "word": "and",
+      "start": 23.8,
+      "end": 24.02
+    },
+    {
+      "word": "OpenHands.",
+      "start": 24.02,
+      "end": 24.5
+    },
+    {
+      "word": "They",
+      "start": 24.5,
+      "end": 25.06
+    },
+    {
+      "word": "pull",
+      "start": 25.06,
+      "end": 25.22
+    },
+    {
+      "word": "tickets",
+      "start": 25.22,
+      "end": 25.48
+    },
+    {
+      "word": "from",
+      "start": 25.48,
+      "end": 25.64
+    },
+    {
+      "word": "a",
+      "start": 25.64,
+      "end": 25.76
+    },
+    {
+      "word": "queue,",
+      "start": 25.76,
+      "end": 25.9
+    },
+    {
+      "word": "spin",
+      "start": 26.06,
+      "end": 26.38
+    },
+    {
+      "word": "up",
+      "start": 26.38,
+      "end": 26.5
+    },
+    {
+      "word": "fresh",
+      "start": 26.5,
+      "end": 26.68
+    },
+    {
+      "word": "containers,",
+      "start": 26.68,
+      "end": 27.12
+    },
+    {
+      "word": "run",
+      "start": 27.32,
+      "end": 27.56
+    },
+    {
+      "word": "checks,",
+      "start": 27.56,
+      "end": 27.88
+    },
+    {
+      "word": "and",
+      "start": 28.0,
+      "end": 28.12
+    },
+    {
+      "word": "open",
+      "start": 28.12,
+      "end": 28.28
+    },
+    {
+      "word": "pull",
+      "start": 28.28,
+      "end": 28.46
+    },
+    {
+      "word": "requests",
+      "start": 28.46,
+      "end": 28.76
+    },
+    {
+      "word": "while",
+      "start": 28.76,
+      "end": 29.14
+    },
+    {
+      "word": "you",
+      "start": 29.14,
+      "end": 29.24
+    },
+    {
+      "word": "focus",
+      "start": 29.24,
+      "end": 29.48
+    },
+    {
+      "word": "elsewhere.",
+      "start": 29.48,
+      "end": 29.74
+    }
+  ]
+}

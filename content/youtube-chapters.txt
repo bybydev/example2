@@ -1,2 +1,9 @@
-00:00 Hook
-00:06 Main Point
+00:00 The Harness Paradox
+01:26 Model vs. Harness vs. Framework
+03:53 The Agent Loop & Tool Calling
+06:16 Context Management & Cache Economics
+09:11 Memory & Durable State Across Sessions
+10:37 Verification, Permissions & Sandboxes
+13:25 Next Level: Sub-agents, Delegation & Scale
+14:59 Observability, Evals & Build-to-Delete
+17:02 The OS Mental Model & Outro

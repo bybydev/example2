@@ -1,0 +1,995 @@
+{
+  "audio": "019.eventually-on-a.mp3",
+  "paragraph": 19,
+  "text": "Eventually, on a truly long session, even clean context fills up. When usage crosses a high threshold like seventy-five or eighty percent, naive harnesses slice off the oldest messages from the front. That breaks paired tool-call IDs and tool results, and often deletes the user's original goal. Production harnesses run structured compaction instead, distilling completed work, modified files, verified facts, and exact next steps into a fresh checkpoint. You pay a one-time cache reset cleanly, drop usage back near fifteen percent, and keep moving with full clarity.",
+  "transcript": "Eventually, on a truly long session, even clean context fills up. When usage crosses a high threshold like 75 or 80%, naive harnesses slice off the oldest messages from the front. That breaks paired tool call IDs and tool results, and often deletes the user's original goal. Production harnesses run structured compaction instead, distilling completed work, modified files, verified facts, and exact next steps into a fresh checkpoint. You pay a one-time cash reset cleanly, drop usage back near 15%, and keep moving with full clarity.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 2
+    }
+  ],
+  "duration": 30.0,
+  "failed_words": 2,
+  "failures": [
+    {
+      "index": 71,
+      "word": "one-time",
+      "match": "approx",
+      "heard": "one -time cash",
+      "start": 24.54
+    },
+    {
+      "index": 72,
+      "word": "cache",
+      "match": "approx",
+      "heard": "one -time cash",
+      "start": 24.84
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Eventually,",
+      "start": 0.0,
+      "end": 0.54,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 0.68,
+      "end": 0.82,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 0.82,
+      "end": 0.92,
+      "match": "exact"
+    },
+    {
+      "word": "truly",
+      "start": 0.92,
+      "end": 1.14,
+      "match": "exact"
+    },
+    {
+      "word": "long",
+      "start": 1.14,
+      "end": 1.44,
+      "match": "exact"
+    },
+    {
+      "word": "session,",
+      "start": 1.44,
+      "end": 1.78,
+      "match": "exact"
+    },
+    {
+      "word": "even",
+      "start": 2.0,
+      "end": 2.26,
+      "match": "exact"
+    },
+    {
+      "word": "clean",
+      "start": 2.26,
+      "end": 2.54,
+      "match": "exact"
+    },
+    {
+      "word": "context",
+      "start": 2.54,
+      "end": 2.92,
+      "match": "exact"
+    },
+    {
+      "word": "fills",
+      "start": 2.92,
+      "end": 3.24,
+      "match": "exact"
+    },
+    {
+      "word": "up.",
+      "start": 3.24,
+      "end": 3.48,
+      "match": "exact"
+    },
+    {
+      "word": "When",
+      "start": 3.62,
+      "end": 4.14,
+      "match": "exact"
+    },
+    {
+      "word": "usage",
+      "start": 4.14,
+      "end": 4.4,
+      "match": "exact"
+    },
+    {
+      "word": "crosses",
+      "start": 4.4,
+      "end": 4.64,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 4.64,
+      "end": 4.92,
+      "match": "exact"
+    },
+    {
+      "word": "high",
+      "start": 4.92,
+      "end": 5.1,
+      "match": "exact"
+    },
+    {
+      "word": "threshold",
+      "start": 5.1,
+      "end": 5.48,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 5.48,
+      "end": 5.78,
+      "match": "exact"
+    },
+    {
+      "word": "seventy-five",
+      "start": 5.78,
+      "end": 6.1,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 6.1,
+      "end": 6.52,
+      "match": "exact"
+    },
+    {
+      "word": "eighty",
+      "start": 6.52,
+      "end": 6.728,
+      "match": "exact"
+    },
+    {
+      "word": "percent,",
+      "start": 6.728,
+      "end": 7.04,
+      "match": "exact"
+    },
+    {
+      "word": "naive",
+      "start": 7.04,
+      "end": 7.74,
+      "match": "exact"
+    },
+    {
+      "word": "harnesses",
+      "start": 7.74,
+      "end": 8.28,
+      "match": "exact"
+    },
+    {
+      "word": "slice",
+      "start": 8.28,
+      "end": 8.46,
+      "match": "exact"
+    },
+    {
+      "word": "off",
+      "start": 8.46,
+      "end": 8.76,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 8.76,
+      "end": 8.94,
+      "match": "exact"
+    },
+    {
+      "word": "oldest",
+      "start": 8.94,
+      "end": 9.16,
+      "match": "exact"
+    },
+    {
+      "word": "messages",
+      "start": 9.16,
+      "end": 9.56,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 9.56,
+      "end": 9.78,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 9.78,
+      "end": 9.9,
+      "match": "exact"
+    },
+    {
+      "word": "front.",
+      "start": 9.9,
+      "end": 10.12,
+      "match": "exact"
+    },
+    {
+      "word": "That",
+      "start": 10.3,
+      "end": 10.86,
+      "match": "exact"
+    },
+    {
+      "word": "breaks",
+      "start": 10.86,
+      "end": 11.14,
+      "match": "exact"
+    },
+    {
+      "word": "paired",
+      "start": 11.14,
+      "end": 11.46,
+      "match": "exact"
+    },
+    {
+      "word": "tool-call",
+      "start": 11.46,
+      "end": 11.88,
+      "match": "exact"
+    },
+    {
+      "word": "IDs",
+      "start": 11.88,
+      "end": 12.18,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 12.18,
+      "end": 12.56,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 12.56,
+      "end": 12.74,
+      "match": "exact"
+    },
+    {
+      "word": "results,",
+      "start": 12.74,
+      "end": 13.08,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 13.28,
+      "end": 13.6,
+      "match": "exact"
+    },
+    {
+      "word": "often",
+      "start": 13.6,
+      "end": 13.88,
+      "match": "exact"
+    },
+    {
+      "word": "deletes",
+      "start": 13.88,
+      "end": 14.22,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 14.22,
+      "end": 14.34,
+      "match": "exact"
+    },
+    {
+      "word": "user's",
+      "start": 14.34,
+      "end": 14.68,
+      "match": "exact"
+    },
+    {
+      "word": "original",
+      "start": 14.68,
+      "end": 14.9,
+      "match": "exact"
+    },
+    {
+      "word": "goal.",
+      "start": 14.9,
+      "end": 15.22,
+      "match": "exact"
+    },
+    {
+      "word": "Production",
+      "start": 15.68,
+      "end": 16.24,
+      "match": "exact"
+    },
+    {
+      "word": "harnesses",
+      "start": 16.24,
+      "end": 16.76,
+      "match": "exact"
+    },
+    {
+      "word": "run",
+      "start": 16.76,
+      "end": 16.9,
+      "match": "exact"
+    },
+    {
+      "word": "structured",
+      "start": 16.9,
+      "end": 17.28,
+      "match": "exact"
+    },
+    {
+      "word": "compaction",
+      "start": 17.28,
+      "end": 17.76,
+      "match": "exact"
+    },
+    {
+      "word": "instead,",
+      "start": 17.76,
+      "end": 18.04,
+      "match": "exact"
+    },
+    {
+      "word": "distilling",
+      "start": 18.3,
+      "end": 18.86,
+      "match": "exact"
+    },
+    {
+      "word": "completed",
+      "start": 18.86,
+      "end": 19.16,
+      "match": "exact"
+    },
+    {
+      "word": "work,",
+      "start": 19.16,
+      "end": 19.48,
+      "match": "exact"
+    },
+    {
+      "word": "modified",
+      "start": 19.68,
+      "end": 19.98,
+      "match": "exact"
+    },
+    {
+      "word": "files,",
+      "start": 19.98,
+      "end": 20.46,
+      "match": "exact"
+    },
+    {
+      "word": "verified",
+      "start": 20.7,
+      "end": 20.94,
+      "match": "exact"
+    },
+    {
+      "word": "facts,",
+      "start": 20.94,
+      "end": 21.38,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 21.62,
+      "end": 21.78,
+      "match": "exact"
+    },
+    {
+      "word": "exact",
+      "start": 21.78,
+      "end": 22.04,
+      "match": "exact"
+    },
+    {
+      "word": "next",
+      "start": 22.04,
+      "end": 22.3,
+      "match": "exact"
+    },
+    {
+      "word": "steps",
+      "start": 22.3,
+      "end": 22.58,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 22.58,
+      "end": 22.86,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 22.86,
+      "end": 23.0,
+      "match": "exact"
+    },
+    {
+      "word": "fresh",
+      "start": 23.0,
+      "end": 23.18,
+      "match": "exact"
+    },
+    {
+      "word": "checkpoint.",
+      "start": 23.18,
+      "end": 23.5,
+      "match": "exact"
+    },
+    {
+      "word": "You",
+      "start": 23.8,
+      "end": 24.28,
+      "match": "exact"
+    },
+    {
+      "word": "pay",
+      "start": 24.28,
+      "end": 24.4,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 24.4,
+      "end": 24.54,
+      "match": "exact"
+    },
+    {
+      "word": "one-time",
+      "start": 24.54,
+      "end": 24.84,
+      "match": "approx",
+      "heard": "one -time cash"
+    },
+    {
+      "word": "cache",
+      "start": 24.84,
+      "end": 25.14,
+      "match": "approx",
+      "heard": "one -time cash"
+    },
+    {
+      "word": "reset",
+      "start": 25.14,
+      "end": 25.44,
+      "match": "exact"
+    },
+    {
+      "word": "cleanly,",
+      "start": 25.44,
+      "end": 25.98,
+      "match": "exact"
+    },
+    {
+      "word": "drop",
+      "start": 26.06,
+      "end": 26.48,
+      "match": "exact"
+    },
+    {
+      "word": "usage",
+      "start": 26.48,
+      "end": 26.76,
+      "match": "exact"
+    },
+    {
+      "word": "back",
+      "start": 26.76,
+      "end": 27.0,
+      "match": "exact"
+    },
+    {
+      "word": "near",
+      "start": 27.0,
+      "end": 27.22,
+      "match": "exact"
+    },
+    {
+      "word": "fifteen",
+      "start": 27.22,
+      "end": 27.484,
+      "match": "exact"
+    },
+    {
+      "word": "percent,",
+      "start": 27.484,
+      "end": 27.88,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 27.88,
+      "end": 28.38,
+      "match": "exact"
+    },
+    {
+      "word": "keep",
+      "start": 28.38,
+      "end": 28.54,
+      "match": "exact"
+    },
+    {
+      "word": "moving",
+      "start": 28.54,
+      "end": 28.8,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 28.8,
+      "end": 29.0,
+      "match": "exact"
+    },
+    {
+      "word": "full",
+      "start": 29.0,
+      "end": 29.14,
+      "match": "exact"
+    },
+    {
+      "word": "clarity.",
+      "start": 29.14,
+      "end": 29.46,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Eventually,",
+      "start": 0.0,
+      "end": 0.54
+    },
+    {
+      "word": "on",
+      "start": 0.68,
+      "end": 0.82
+    },
+    {
+      "word": "a",
+      "start": 0.82,
+      "end": 0.92
+    },
+    {
+      "word": "truly",
+      "start": 0.92,
+      "end": 1.14
+    },
+    {
+      "word": "long",
+      "start": 1.14,
+      "end": 1.44
+    },
+    {
+      "word": "session,",
+      "start": 1.44,
+      "end": 1.78
+    },
+    {
+      "word": "even",
+      "start": 2.0,
+      "end": 2.26
+    },
+    {
+      "word": "clean",
+      "start": 2.26,
+      "end": 2.54
+    },
+    {
+      "word": "context",
+      "start": 2.54,
+      "end": 2.92
+    },
+    {
+      "word": "fills",
+      "start": 2.92,
+      "end": 3.24
+    },
+    {
+      "word": "up.",
+      "start": 3.24,
+      "end": 3.48
+    },
+    {
+      "word": "When",
+      "start": 3.62,
+      "end": 4.14
+    },
+    {
+      "word": "usage",
+      "start": 4.14,
+      "end": 4.4
+    },
+    {
+      "word": "crosses",
+      "start": 4.4,
+      "end": 4.64
+    },
+    {
+      "word": "a",
+      "start": 4.64,
+      "end": 4.92
+    },
+    {
+      "word": "high",
+      "start": 4.92,
+      "end": 5.1
+    },
+    {
+      "word": "threshold",
+      "start": 5.1,
+      "end": 5.48
+    },
+    {
+      "word": "like",
+      "start": 5.48,
+      "end": 5.78
+    },
+    {
+      "word": "75",
+      "start": 5.78,
+      "end": 6.1
+    },
+    {
+      "word": "or",
+      "start": 6.1,
+      "end": 6.52
+    },
+    {
+      "word": "80%,",
+      "start": 6.52,
+      "end": 7.04
+    },
+    {
+      "word": "naive",
+      "start": 7.04,
+      "end": 7.74
+    },
+    {
+      "word": "harnesses",
+      "start": 7.74,
+      "end": 8.28
+    },
+    {
+      "word": "slice",
+      "start": 8.28,
+      "end": 8.46
+    },
+    {
+      "word": "off",
+      "start": 8.46,
+      "end": 8.76
+    },
+    {
+      "word": "the",
+      "start": 8.76,
+      "end": 8.94
+    },
+    {
+      "word": "oldest",
+      "start": 8.94,
+      "end": 9.16
+    },
+    {
+      "word": "messages",
+      "start": 9.16,
+      "end": 9.56
+    },
+    {
+      "word": "from",
+      "start": 9.56,
+      "end": 9.78
+    },
+    {
+      "word": "the",
+      "start": 9.78,
+      "end": 9.9
+    },
+    {
+      "word": "front.",
+      "start": 9.9,
+      "end": 10.12
+    },
+    {
+      "word": "That",
+      "start": 10.3,
+      "end": 10.86
+    },
+    {
+      "word": "breaks",
+      "start": 10.86,
+      "end": 11.14
+    },
+    {
+      "word": "paired",
+      "start": 11.14,
+      "end": 11.46
+    },
+    {
+      "word": "tool",
+      "start": 11.46,
+      "end": 11.7
+    },
+    {
+      "word": "call",
+      "start": 11.7,
+      "end": 11.88
+    },
+    {
+      "word": "IDs",
+      "start": 11.88,
+      "end": 12.18
+    },
+    {
+      "word": "and",
+      "start": 12.18,
+      "end": 12.56
+    },
+    {
+      "word": "tool",
+      "start": 12.56,
+      "end": 12.74
+    },
+    {
+      "word": "results,",
+      "start": 12.74,
+      "end": 13.08
+    },
+    {
+      "word": "and",
+      "start": 13.28,
+      "end": 13.6
+    },
+    {
+      "word": "often",
+      "start": 13.6,
+      "end": 13.88
+    },
+    {
+      "word": "deletes",
+      "start": 13.88,
+      "end": 14.22
+    },
+    {
+      "word": "the",
+      "start": 14.22,
+      "end": 14.34
+    },
+    {
+      "word": "user's",
+      "start": 14.34,
+      "end": 14.68
+    },
+    {
+      "word": "original",
+      "start": 14.68,
+      "end": 14.9
+    },
+    {
+      "word": "goal.",
+      "start": 14.9,
+      "end": 15.22
+    },
+    {
+      "word": "Production",
+      "start": 15.68,
+      "end": 16.24
+    },
+    {
+      "word": "harnesses",
+      "start": 16.24,
+      "end": 16.76
+    },
+    {
+      "word": "run",
+      "start": 16.76,
+      "end": 16.9
+    },
+    {
+      "word": "structured",
+      "start": 16.9,
+      "end": 17.28
+    },
+    {
+      "word": "compaction",
+      "start": 17.28,
+      "end": 17.76
+    },
+    {
+      "word": "instead,",
+      "start": 17.76,
+      "end": 18.04
+    },
+    {
+      "word": "distilling",
+      "start": 18.3,
+      "end": 18.86
+    },
+    {
+      "word": "completed",
+      "start": 18.86,
+      "end": 19.16
+    },
+    {
+      "word": "work,",
+      "start": 19.16,
+      "end": 19.48
+    },
+    {
+      "word": "modified",
+      "start": 19.68,
+      "end": 19.98
+    },
+    {
+      "word": "files,",
+      "start": 19.98,
+      "end": 20.46
+    },
+    {
+      "word": "verified",
+      "start": 20.7,
+      "end": 20.94
+    },
+    {
+      "word": "facts,",
+      "start": 20.94,
+      "end": 21.38
+    },
+    {
+      "word": "and",
+      "start": 21.62,
+      "end": 21.78
+    },
+    {
+      "word": "exact",
+      "start": 21.78,
+      "end": 22.04
+    },
+    {
+      "word": "next",
+      "start": 22.04,
+      "end": 22.3
+    },
+    {
+      "word": "steps",
+      "start": 22.3,
+      "end": 22.58
+    },
+    {
+      "word": "into",
+      "start": 22.58,
+      "end": 22.86
+    },
+    {
+      "word": "a",
+      "start": 22.86,
+      "end": 23.0
+    },
+    {
+      "word": "fresh",
+      "start": 23.0,
+      "end": 23.18
+    },
+    {
+      "word": "checkpoint.",
+      "start": 23.18,
+      "end": 23.5
+    },
+    {
+      "word": "You",
+      "start": 23.8,
+      "end": 24.28
+    },
+    {
+      "word": "pay",
+      "start": 24.28,
+      "end": 24.4
+    },
+    {
+      "word": "a",
+      "start": 24.4,
+      "end": 24.54
+    },
+    {
+      "word": "one",
+      "start": 24.54,
+      "end": 24.7
+    },
+    {
+      "word": "-time",
+      "start": 24.7,
+      "end": 24.94
+    },
+    {
+      "word": "cash",
+      "start": 24.94,
+      "end": 25.14
+    },
+    {
+      "word": "reset",
+      "start": 25.14,
+      "end": 25.44
+    },
+    {
+      "word": "cleanly,",
+      "start": 25.44,
+      "end": 25.98
+    },
+    {
+      "word": "drop",
+      "start": 26.06,
+      "end": 26.48
+    },
+    {
+      "word": "usage",
+      "start": 26.48,
+      "end": 26.76
+    },
+    {
+      "word": "back",
+      "start": 26.76,
+      "end": 27.0
+    },
+    {
+      "word": "near",
+      "start": 27.0,
+      "end": 27.22
+    },
+    {
+      "word": "15%,",
+      "start": 27.22,
+      "end": 27.88
+    },
+    {
+      "word": "and",
+      "start": 27.88,
+      "end": 28.38
+    },
+    {
+      "word": "keep",
+      "start": 28.38,
+      "end": 28.54
+    },
+    {
+      "word": "moving",
+      "start": 28.54,
+      "end": 28.8
+    },
+    {
+      "word": "with",
+      "start": 28.8,
+      "end": 29.0
+    },
+    {
+      "word": "full",
+      "start": 29.0,
+      "end": 29.14
+    },
+    {
+      "word": "clarity.",
+      "start": 29.14,
+      "end": 29.46
+    }
+  ]
+}

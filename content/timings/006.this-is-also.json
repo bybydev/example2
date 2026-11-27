@@ -1,0 +1,988 @@
+{
+  "audio": "006.this-is-also.mp3",
+  "paragraph": 6,
+  "text": "This is also why a harness is very different from the heavy agent frameworks that were popular a couple of years ago. Rigid frameworks try to hardcode intelligence into fixed prompt chains, brittle multi-agent graphs, and fragile regex parsers. Every time a stronger model ships, that scaffolding gets in the way and breaks. Modern harnesses like Claude Code, OpenCode, and Aider follow the bitter lesson instead: give the model a minimal set of Unix-like primitives, shell, files, search, and verification, and let the model drive.",
+  "transcript": "This is also why a harness is very different from the heavy agent frameworks that were popular a couple of years ago. Rigid frameworks try to hard-code intelligence into fixed prompt chains, brittle multi-agent graphs, and fragile regex parsers. Every time a stronger model ships, that scaffolding gets in the way and breaks. Modern harnesses like Cloud Code, OpenCode, and ATER follow the bitter lesson instead. Give the model a minimal set of unix like primitives, shell, files, search, and verification, and let the model drive.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 2
+    }
+  ],
+  "duration": 25.84,
+  "failed_words": 2,
+  "failures": [
+    {
+      "index": 56,
+      "word": "Claude",
+      "match": "approx",
+      "heard": "Cloud",
+      "start": 16.46
+    },
+    {
+      "index": 60,
+      "word": "Aider",
+      "match": "approx",
+      "heard": "ATER",
+      "start": 17.66
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "This",
+      "start": 0.0,
+      "end": 0.28,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 0.28,
+      "end": 0.38,
+      "match": "exact"
+    },
+    {
+      "word": "also",
+      "start": 0.38,
+      "end": 0.64,
+      "match": "exact"
+    },
+    {
+      "word": "why",
+      "start": 0.64,
+      "end": 0.84,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 0.84,
+      "end": 0.96,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 0.96,
+      "end": 1.2,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 1.2,
+      "end": 1.38,
+      "match": "exact"
+    },
+    {
+      "word": "very",
+      "start": 1.38,
+      "end": 1.56,
+      "match": "exact"
+    },
+    {
+      "word": "different",
+      "start": 1.56,
+      "end": 1.94,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 1.94,
+      "end": 2.12,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 2.12,
+      "end": 2.24,
+      "match": "exact"
+    },
+    {
+      "word": "heavy",
+      "start": 2.24,
+      "end": 2.38,
+      "match": "exact"
+    },
+    {
+      "word": "agent",
+      "start": 2.38,
+      "end": 2.62,
+      "match": "exact"
+    },
+    {
+      "word": "frameworks",
+      "start": 2.62,
+      "end": 3.02,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 3.02,
+      "end": 3.2,
+      "match": "exact"
+    },
+    {
+      "word": "were",
+      "start": 3.2,
+      "end": 3.3,
+      "match": "exact"
+    },
+    {
+      "word": "popular",
+      "start": 3.3,
+      "end": 3.64,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 3.64,
+      "end": 3.84,
+      "match": "exact"
+    },
+    {
+      "word": "couple",
+      "start": 3.84,
+      "end": 4.04,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 4.04,
+      "end": 4.12,
+      "match": "exact"
+    },
+    {
+      "word": "years",
+      "start": 4.12,
+      "end": 4.26,
+      "match": "exact"
+    },
+    {
+      "word": "ago.",
+      "start": 4.26,
+      "end": 4.54,
+      "match": "exact"
+    },
+    {
+      "word": "Rigid",
+      "start": 5.14,
+      "end": 5.58,
+      "match": "exact"
+    },
+    {
+      "word": "frameworks",
+      "start": 5.58,
+      "end": 5.88,
+      "match": "exact"
+    },
+    {
+      "word": "try",
+      "start": 5.88,
+      "end": 6.16,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 6.16,
+      "end": 6.28,
+      "match": "exact"
+    },
+    {
+      "word": "hardcode",
+      "start": 6.28,
+      "end": 6.66,
+      "match": "exact"
+    },
+    {
+      "word": "intelligence",
+      "start": 6.66,
+      "end": 7.08,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 7.08,
+      "end": 7.44,
+      "match": "exact"
+    },
+    {
+      "word": "fixed",
+      "start": 7.44,
+      "end": 7.72,
+      "match": "exact"
+    },
+    {
+      "word": "prompt",
+      "start": 7.72,
+      "end": 7.94,
+      "match": "exact"
+    },
+    {
+      "word": "chains,",
+      "start": 7.94,
+      "end": 8.26,
+      "match": "exact"
+    },
+    {
+      "word": "brittle",
+      "start": 8.56,
+      "end": 8.92,
+      "match": "exact"
+    },
+    {
+      "word": "multi-agent",
+      "start": 8.92,
+      "end": 9.54,
+      "match": "exact"
+    },
+    {
+      "word": "graphs,",
+      "start": 9.54,
+      "end": 9.72,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 9.98,
+      "end": 10.08,
+      "match": "exact"
+    },
+    {
+      "word": "fragile",
+      "start": 10.08,
+      "end": 10.4,
+      "match": "exact"
+    },
+    {
+      "word": "regex",
+      "start": 10.4,
+      "end": 10.76,
+      "match": "exact"
+    },
+    {
+      "word": "parsers.",
+      "start": 10.76,
+      "end": 11.16,
+      "match": "exact"
+    },
+    {
+      "word": "Every",
+      "start": 11.52,
+      "end": 11.96,
+      "match": "exact"
+    },
+    {
+      "word": "time",
+      "start": 11.96,
+      "end": 12.18,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 12.18,
+      "end": 12.32,
+      "match": "exact"
+    },
+    {
+      "word": "stronger",
+      "start": 12.32,
+      "end": 12.5,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 12.5,
+      "end": 12.78,
+      "match": "exact"
+    },
+    {
+      "word": "ships,",
+      "start": 12.78,
+      "end": 13.06,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 13.3,
+      "end": 13.5,
+      "match": "exact"
+    },
+    {
+      "word": "scaffolding",
+      "start": 13.5,
+      "end": 14.06,
+      "match": "exact"
+    },
+    {
+      "word": "gets",
+      "start": 14.06,
+      "end": 14.14,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 14.14,
+      "end": 14.32,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 14.32,
+      "end": 14.38,
+      "match": "exact"
+    },
+    {
+      "word": "way",
+      "start": 14.38,
+      "end": 14.54,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 14.54,
+      "end": 14.64,
+      "match": "exact"
+    },
+    {
+      "word": "breaks.",
+      "start": 14.64,
+      "end": 14.84,
+      "match": "exact"
+    },
+    {
+      "word": "Modern",
+      "start": 15.48,
+      "end": 15.92,
+      "match": "exact"
+    },
+    {
+      "word": "harnesses",
+      "start": 15.92,
+      "end": 16.36,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 16.36,
+      "end": 16.46,
+      "match": "exact"
+    },
+    {
+      "word": "Claude",
+      "start": 16.46,
+      "end": 16.66,
+      "match": "approx",
+      "heard": "Cloud"
+    },
+    {
+      "word": "Code,",
+      "start": 16.66,
+      "end": 16.9,
+      "match": "exact"
+    },
+    {
+      "word": "OpenCode,",
+      "start": 17.1,
+      "end": 17.52,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 17.56,
+      "end": 17.66,
+      "match": "exact"
+    },
+    {
+      "word": "Aider",
+      "start": 17.66,
+      "end": 17.88,
+      "match": "approx",
+      "heard": "ATER"
+    },
+    {
+      "word": "follow",
+      "start": 17.88,
+      "end": 18.32,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 18.32,
+      "end": 18.52,
+      "match": "exact"
+    },
+    {
+      "word": "bitter",
+      "start": 18.52,
+      "end": 18.68,
+      "match": "exact"
+    },
+    {
+      "word": "lesson",
+      "start": 18.68,
+      "end": 18.96,
+      "match": "exact"
+    },
+    {
+      "word": "instead:",
+      "start": 18.96,
+      "end": 19.3,
+      "match": "exact"
+    },
+    {
+      "word": "give",
+      "start": 19.62,
+      "end": 20.02,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 20.02,
+      "end": 20.16,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 20.16,
+      "end": 20.4,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 20.4,
+      "end": 20.54,
+      "match": "exact"
+    },
+    {
+      "word": "minimal",
+      "start": 20.54,
+      "end": 20.74,
+      "match": "exact"
+    },
+    {
+      "word": "set",
+      "start": 20.74,
+      "end": 20.96,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 20.96,
+      "end": 21.12,
+      "match": "exact"
+    },
+    {
+      "word": "Unix-like",
+      "start": 21.12,
+      "end": 21.58,
+      "match": "exact"
+    },
+    {
+      "word": "primitives,",
+      "start": 21.58,
+      "end": 22.04,
+      "match": "exact"
+    },
+    {
+      "word": "shell,",
+      "start": 22.16,
+      "end": 22.38,
+      "match": "exact"
+    },
+    {
+      "word": "files,",
+      "start": 22.62,
+      "end": 22.82,
+      "match": "exact"
+    },
+    {
+      "word": "search,",
+      "start": 23.14,
+      "end": 23.38,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 23.5,
+      "end": 23.6,
+      "match": "exact"
+    },
+    {
+      "word": "verification,",
+      "start": 23.6,
+      "end": 23.9,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 24.24,
+      "end": 24.64,
+      "match": "exact"
+    },
+    {
+      "word": "let",
+      "start": 24.64,
+      "end": 24.8,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 24.8,
+      "end": 24.9,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 24.9,
+      "end": 25.14,
+      "match": "exact"
+    },
+    {
+      "word": "drive.",
+      "start": 25.14,
+      "end": 25.38,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "This",
+      "start": 0.0,
+      "end": 0.28
+    },
+    {
+      "word": "is",
+      "start": 0.28,
+      "end": 0.38
+    },
+    {
+      "word": "also",
+      "start": 0.38,
+      "end": 0.64
+    },
+    {
+      "word": "why",
+      "start": 0.64,
+      "end": 0.84
+    },
+    {
+      "word": "a",
+      "start": 0.84,
+      "end": 0.96
+    },
+    {
+      "word": "harness",
+      "start": 0.96,
+      "end": 1.2
+    },
+    {
+      "word": "is",
+      "start": 1.2,
+      "end": 1.38
+    },
+    {
+      "word": "very",
+      "start": 1.38,
+      "end": 1.56
+    },
+    {
+      "word": "different",
+      "start": 1.56,
+      "end": 1.94
+    },
+    {
+      "word": "from",
+      "start": 1.94,
+      "end": 2.12
+    },
+    {
+      "word": "the",
+      "start": 2.12,
+      "end": 2.24
+    },
+    {
+      "word": "heavy",
+      "start": 2.24,
+      "end": 2.38
+    },
+    {
+      "word": "agent",
+      "start": 2.38,
+      "end": 2.62
+    },
+    {
+      "word": "frameworks",
+      "start": 2.62,
+      "end": 3.02
+    },
+    {
+      "word": "that",
+      "start": 3.02,
+      "end": 3.2
+    },
+    {
+      "word": "were",
+      "start": 3.2,
+      "end": 3.3
+    },
+    {
+      "word": "popular",
+      "start": 3.3,
+      "end": 3.64
+    },
+    {
+      "word": "a",
+      "start": 3.64,
+      "end": 3.84
+    },
+    {
+      "word": "couple",
+      "start": 3.84,
+      "end": 4.04
+    },
+    {
+      "word": "of",
+      "start": 4.04,
+      "end": 4.12
+    },
+    {
+      "word": "years",
+      "start": 4.12,
+      "end": 4.26
+    },
+    {
+      "word": "ago.",
+      "start": 4.26,
+      "end": 4.54
+    },
+    {
+      "word": "Rigid",
+      "start": 5.14,
+      "end": 5.58
+    },
+    {
+      "word": "frameworks",
+      "start": 5.58,
+      "end": 5.88
+    },
+    {
+      "word": "try",
+      "start": 5.88,
+      "end": 6.16
+    },
+    {
+      "word": "to",
+      "start": 6.16,
+      "end": 6.28
+    },
+    {
+      "word": "hard",
+      "start": 6.28,
+      "end": 6.48
+    },
+    {
+      "word": "-code",
+      "start": 6.48,
+      "end": 6.66
+    },
+    {
+      "word": "intelligence",
+      "start": 6.66,
+      "end": 7.08
+    },
+    {
+      "word": "into",
+      "start": 7.08,
+      "end": 7.44
+    },
+    {
+      "word": "fixed",
+      "start": 7.44,
+      "end": 7.72
+    },
+    {
+      "word": "prompt",
+      "start": 7.72,
+      "end": 7.94
+    },
+    {
+      "word": "chains,",
+      "start": 7.94,
+      "end": 8.26
+    },
+    {
+      "word": "brittle",
+      "start": 8.56,
+      "end": 8.92
+    },
+    {
+      "word": "multi",
+      "start": 8.92,
+      "end": 9.18
+    },
+    {
+      "word": "-agent",
+      "start": 9.18,
+      "end": 9.54
+    },
+    {
+      "word": "graphs,",
+      "start": 9.54,
+      "end": 9.72
+    },
+    {
+      "word": "and",
+      "start": 9.98,
+      "end": 10.08
+    },
+    {
+      "word": "fragile",
+      "start": 10.08,
+      "end": 10.4
+    },
+    {
+      "word": "regex",
+      "start": 10.4,
+      "end": 10.76
+    },
+    {
+      "word": "parsers.",
+      "start": 10.76,
+      "end": 11.16
+    },
+    {
+      "word": "Every",
+      "start": 11.52,
+      "end": 11.96
+    },
+    {
+      "word": "time",
+      "start": 11.96,
+      "end": 12.18
+    },
+    {
+      "word": "a",
+      "start": 12.18,
+      "end": 12.32
+    },
+    {
+      "word": "stronger",
+      "start": 12.32,
+      "end": 12.5
+    },
+    {
+      "word": "model",
+      "start": 12.5,
+      "end": 12.78
+    },
+    {
+      "word": "ships,",
+      "start": 12.78,
+      "end": 13.06
+    },
+    {
+      "word": "that",
+      "start": 13.3,
+      "end": 13.5
+    },
+    {
+      "word": "scaffolding",
+      "start": 13.5,
+      "end": 14.06
+    },
+    {
+      "word": "gets",
+      "start": 14.06,
+      "end": 14.14
+    },
+    {
+      "word": "in",
+      "start": 14.14,
+      "end": 14.32
+    },
+    {
+      "word": "the",
+      "start": 14.32,
+      "end": 14.38
+    },
+    {
+      "word": "way",
+      "start": 14.38,
+      "end": 14.54
+    },
+    {
+      "word": "and",
+      "start": 14.54,
+      "end": 14.64
+    },
+    {
+      "word": "breaks.",
+      "start": 14.64,
+      "end": 14.84
+    },
+    {
+      "word": "Modern",
+      "start": 15.48,
+      "end": 15.92
+    },
+    {
+      "word": "harnesses",
+      "start": 15.92,
+      "end": 16.36
+    },
+    {
+      "word": "like",
+      "start": 16.36,
+      "end": 16.46
+    },
+    {
+      "word": "Cloud",
+      "start": 16.46,
+      "end": 16.66
+    },
+    {
+      "word": "Code,",
+      "start": 16.66,
+      "end": 16.9
+    },
+    {
+      "word": "OpenCode,",
+      "start": 17.1,
+      "end": 17.52
+    },
+    {
+      "word": "and",
+      "start": 17.56,
+      "end": 17.66
+    },
+    {
+      "word": "ATER",
+      "start": 17.66,
+      "end": 17.88
+    },
+    {
+      "word": "follow",
+      "start": 17.88,
+      "end": 18.32
+    },
+    {
+      "word": "the",
+      "start": 18.32,
+      "end": 18.52
+    },
+    {
+      "word": "bitter",
+      "start": 18.52,
+      "end": 18.68
+    },
+    {
+      "word": "lesson",
+      "start": 18.68,
+      "end": 18.96
+    },
+    {
+      "word": "instead.",
+      "start": 18.96,
+      "end": 19.3
+    },
+    {
+      "word": "Give",
+      "start": 19.62,
+      "end": 20.02
+    },
+    {
+      "word": "the",
+      "start": 20.02,
+      "end": 20.16
+    },
+    {
+      "word": "model",
+      "start": 20.16,
+      "end": 20.4
+    },
+    {
+      "word": "a",
+      "start": 20.4,
+      "end": 20.54
+    },
+    {
+      "word": "minimal",
+      "start": 20.54,
+      "end": 20.74
+    },
+    {
+      "word": "set",
+      "start": 20.74,
+      "end": 20.96
+    },
+    {
+      "word": "of",
+      "start": 20.96,
+      "end": 21.12
+    },
+    {
+      "word": "unix",
+      "start": 21.12,
+      "end": 21.4
+    },
+    {
+      "word": "like",
+      "start": 21.4,
+      "end": 21.58
+    },
+    {
+      "word": "primitives,",
+      "start": 21.58,
+      "end": 22.04
+    },
+    {
+      "word": "shell,",
+      "start": 22.16,
+      "end": 22.38
+    },
+    {
+      "word": "files,",
+      "start": 22.62,
+      "end": 22.82
+    },
+    {
+      "word": "search,",
+      "start": 23.14,
+      "end": 23.38
+    },
+    {
+      "word": "and",
+      "start": 23.5,
+      "end": 23.6
+    },
+    {
+      "word": "verification,",
+      "start": 23.6,
+      "end": 23.9
+    },
+    {
+      "word": "and",
+      "start": 24.24,
+      "end": 24.64
+    },
+    {
+      "word": "let",
+      "start": 24.64,
+      "end": 24.8
+    },
+    {
+      "word": "the",
+      "start": 24.8,
+      "end": 24.9
+    },
+    {
+      "word": "model",
+      "start": 24.9,
+      "end": 25.14
+    },
+    {
+      "word": "drive.",
+      "start": 25.14,
+      "end": 25.38
+    }
+  ]
+}

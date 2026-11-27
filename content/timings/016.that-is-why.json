@@ -1,0 +1,879 @@
+{
+  "audio": "016.that-is-why.mp3",
+  "paragraph": 16,
+  "text": "That is why tiny harness bugs can silently wreck your cloud bill. Put a live timestamp with seconds inside your system prompt, and you bust the entire prefix cache on every single turn. Dynamically reordering tool schemas between turns does the exact same damage. Mutating an earlier message in the middle of the loop invalidates every token downstream of that edit. Great harnesses keep the prefix immutable, and only append new messages to the end of the conversation.",
+  "transcript": "That is why tiny harness bugs can silently wreck your Cloud Bill. Put a live timestamp with seconds inside your system prompt, and you bust the entire prefix cache on every single turn. Dynamically reordering tool schemas between turns does the exact same damage. Mutating an earlier message in the middle of the loop invalidates every token downstream of that edit. Great harnesses keep the prefix immutable, and only append new messages to the end of the conversation.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 25.44,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "That",
+      "start": 0.0,
+      "end": 0.3,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 0.3,
+      "end": 0.42,
+      "match": "exact"
+    },
+    {
+      "word": "why",
+      "start": 0.42,
+      "end": 0.58,
+      "match": "exact"
+    },
+    {
+      "word": "tiny",
+      "start": 0.58,
+      "end": 1.08,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 1.08,
+      "end": 1.4,
+      "match": "exact"
+    },
+    {
+      "word": "bugs",
+      "start": 1.4,
+      "end": 1.64,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 1.64,
+      "end": 2.0,
+      "match": "exact"
+    },
+    {
+      "word": "silently",
+      "start": 2.0,
+      "end": 2.34,
+      "match": "exact"
+    },
+    {
+      "word": "wreck",
+      "start": 2.34,
+      "end": 2.7,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 2.7,
+      "end": 2.9,
+      "match": "exact"
+    },
+    {
+      "word": "cloud",
+      "start": 2.9,
+      "end": 3.08,
+      "match": "exact"
+    },
+    {
+      "word": "bill.",
+      "start": 3.08,
+      "end": 3.32,
+      "match": "exact"
+    },
+    {
+      "word": "Put",
+      "start": 4.44,
+      "end": 4.96,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 4.96,
+      "end": 5.08,
+      "match": "exact"
+    },
+    {
+      "word": "live",
+      "start": 5.08,
+      "end": 5.24,
+      "match": "exact"
+    },
+    {
+      "word": "timestamp",
+      "start": 5.24,
+      "end": 5.88,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 5.88,
+      "end": 6.08,
+      "match": "exact"
+    },
+    {
+      "word": "seconds",
+      "start": 6.08,
+      "end": 6.36,
+      "match": "exact"
+    },
+    {
+      "word": "inside",
+      "start": 6.36,
+      "end": 6.66,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 6.66,
+      "end": 6.9,
+      "match": "exact"
+    },
+    {
+      "word": "system",
+      "start": 6.9,
+      "end": 7.12,
+      "match": "exact"
+    },
+    {
+      "word": "prompt,",
+      "start": 7.12,
+      "end": 7.48,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 7.6,
+      "end": 7.94,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 7.94,
+      "end": 8.04,
+      "match": "exact"
+    },
+    {
+      "word": "bust",
+      "start": 8.04,
+      "end": 8.2,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 8.2,
+      "end": 8.34,
+      "match": "exact"
+    },
+    {
+      "word": "entire",
+      "start": 8.34,
+      "end": 8.54,
+      "match": "exact"
+    },
+    {
+      "word": "prefix",
+      "start": 8.54,
+      "end": 8.96,
+      "match": "exact"
+    },
+    {
+      "word": "cache",
+      "start": 8.96,
+      "end": 9.24,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 9.24,
+      "end": 9.54,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 9.54,
+      "end": 9.76,
+      "match": "exact"
+    },
+    {
+      "word": "single",
+      "start": 9.76,
+      "end": 10.0,
+      "match": "exact"
+    },
+    {
+      "word": "turn.",
+      "start": 10.0,
+      "end": 10.28,
+      "match": "exact"
+    },
+    {
+      "word": "Dynamically",
+      "start": 11.14,
+      "end": 11.66,
+      "match": "exact"
+    },
+    {
+      "word": "reordering",
+      "start": 11.66,
+      "end": 12.1,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 12.1,
+      "end": 12.26,
+      "match": "exact"
+    },
+    {
+      "word": "schemas",
+      "start": 12.26,
+      "end": 12.76,
+      "match": "exact"
+    },
+    {
+      "word": "between",
+      "start": 12.76,
+      "end": 12.94,
+      "match": "exact"
+    },
+    {
+      "word": "turns",
+      "start": 12.94,
+      "end": 13.36,
+      "match": "exact"
+    },
+    {
+      "word": "does",
+      "start": 13.36,
+      "end": 13.68,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 13.68,
+      "end": 13.84,
+      "match": "exact"
+    },
+    {
+      "word": "exact",
+      "start": 13.84,
+      "end": 14.08,
+      "match": "exact"
+    },
+    {
+      "word": "same",
+      "start": 14.08,
+      "end": 14.34,
+      "match": "exact"
+    },
+    {
+      "word": "damage.",
+      "start": 14.34,
+      "end": 14.72,
+      "match": "exact"
+    },
+    {
+      "word": "Mutating",
+      "start": 15.24,
+      "end": 15.76,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 15.76,
+      "end": 15.86,
+      "match": "exact"
+    },
+    {
+      "word": "earlier",
+      "start": 15.86,
+      "end": 16.08,
+      "match": "exact"
+    },
+    {
+      "word": "message",
+      "start": 16.08,
+      "end": 16.46,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 16.46,
+      "end": 16.72,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 16.72,
+      "end": 16.78,
+      "match": "exact"
+    },
+    {
+      "word": "middle",
+      "start": 16.78,
+      "end": 16.96,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 16.96,
+      "end": 17.1,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 17.1,
+      "end": 17.16,
+      "match": "exact"
+    },
+    {
+      "word": "loop",
+      "start": 17.16,
+      "end": 17.42,
+      "match": "exact"
+    },
+    {
+      "word": "invalidates",
+      "start": 17.42,
+      "end": 18.18,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 18.18,
+      "end": 18.34,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 18.34,
+      "end": 18.62,
+      "match": "exact"
+    },
+    {
+      "word": "downstream",
+      "start": 18.62,
+      "end": 19.0,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 19.0,
+      "end": 19.28,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 19.28,
+      "end": 19.38,
+      "match": "exact"
+    },
+    {
+      "word": "edit.",
+      "start": 19.38,
+      "end": 19.58,
+      "match": "exact"
+    },
+    {
+      "word": "Great",
+      "start": 19.86,
+      "end": 20.38,
+      "match": "exact"
+    },
+    {
+      "word": "harnesses",
+      "start": 20.38,
+      "end": 20.88,
+      "match": "exact"
+    },
+    {
+      "word": "keep",
+      "start": 20.88,
+      "end": 21.12,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 21.12,
+      "end": 21.26,
+      "match": "exact"
+    },
+    {
+      "word": "prefix",
+      "start": 21.26,
+      "end": 21.54,
+      "match": "exact"
+    },
+    {
+      "word": "immutable,",
+      "start": 21.54,
+      "end": 22.08,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 22.22,
+      "end": 22.54,
+      "match": "exact"
+    },
+    {
+      "word": "only",
+      "start": 22.54,
+      "end": 22.74,
+      "match": "exact"
+    },
+    {
+      "word": "append",
+      "start": 22.74,
+      "end": 23.0,
+      "match": "exact"
+    },
+    {
+      "word": "new",
+      "start": 23.0,
+      "end": 23.24,
+      "match": "exact"
+    },
+    {
+      "word": "messages",
+      "start": 23.24,
+      "end": 23.58,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 23.58,
+      "end": 23.84,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 23.84,
+      "end": 23.92,
+      "match": "exact"
+    },
+    {
+      "word": "end",
+      "start": 23.92,
+      "end": 24.1,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 24.1,
+      "end": 24.2,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 24.2,
+      "end": 24.28,
+      "match": "exact"
+    },
+    {
+      "word": "conversation.",
+      "start": 24.28,
+      "end": 24.6,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "That",
+      "start": 0.0,
+      "end": 0.3
+    },
+    {
+      "word": "is",
+      "start": 0.3,
+      "end": 0.42
+    },
+    {
+      "word": "why",
+      "start": 0.42,
+      "end": 0.58
+    },
+    {
+      "word": "tiny",
+      "start": 0.58,
+      "end": 1.08
+    },
+    {
+      "word": "harness",
+      "start": 1.08,
+      "end": 1.4
+    },
+    {
+      "word": "bugs",
+      "start": 1.4,
+      "end": 1.64
+    },
+    {
+      "word": "can",
+      "start": 1.64,
+      "end": 2.0
+    },
+    {
+      "word": "silently",
+      "start": 2.0,
+      "end": 2.34
+    },
+    {
+      "word": "wreck",
+      "start": 2.34,
+      "end": 2.7
+    },
+    {
+      "word": "your",
+      "start": 2.7,
+      "end": 2.9
+    },
+    {
+      "word": "Cloud",
+      "start": 2.9,
+      "end": 3.08
+    },
+    {
+      "word": "Bill.",
+      "start": 3.08,
+      "end": 3.32
+    },
+    {
+      "word": "Put",
+      "start": 4.44,
+      "end": 4.96
+    },
+    {
+      "word": "a",
+      "start": 4.96,
+      "end": 5.08
+    },
+    {
+      "word": "live",
+      "start": 5.08,
+      "end": 5.24
+    },
+    {
+      "word": "timestamp",
+      "start": 5.24,
+      "end": 5.88
+    },
+    {
+      "word": "with",
+      "start": 5.88,
+      "end": 6.08
+    },
+    {
+      "word": "seconds",
+      "start": 6.08,
+      "end": 6.36
+    },
+    {
+      "word": "inside",
+      "start": 6.36,
+      "end": 6.66
+    },
+    {
+      "word": "your",
+      "start": 6.66,
+      "end": 6.9
+    },
+    {
+      "word": "system",
+      "start": 6.9,
+      "end": 7.12
+    },
+    {
+      "word": "prompt,",
+      "start": 7.12,
+      "end": 7.48
+    },
+    {
+      "word": "and",
+      "start": 7.6,
+      "end": 7.94
+    },
+    {
+      "word": "you",
+      "start": 7.94,
+      "end": 8.04
+    },
+    {
+      "word": "bust",
+      "start": 8.04,
+      "end": 8.2
+    },
+    {
+      "word": "the",
+      "start": 8.2,
+      "end": 8.34
+    },
+    {
+      "word": "entire",
+      "start": 8.34,
+      "end": 8.54
+    },
+    {
+      "word": "prefix",
+      "start": 8.54,
+      "end": 8.96
+    },
+    {
+      "word": "cache",
+      "start": 8.96,
+      "end": 9.24
+    },
+    {
+      "word": "on",
+      "start": 9.24,
+      "end": 9.54
+    },
+    {
+      "word": "every",
+      "start": 9.54,
+      "end": 9.76
+    },
+    {
+      "word": "single",
+      "start": 9.76,
+      "end": 10.0
+    },
+    {
+      "word": "turn.",
+      "start": 10.0,
+      "end": 10.28
+    },
+    {
+      "word": "Dynamically",
+      "start": 11.14,
+      "end": 11.66
+    },
+    {
+      "word": "reordering",
+      "start": 11.66,
+      "end": 12.1
+    },
+    {
+      "word": "tool",
+      "start": 12.1,
+      "end": 12.26
+    },
+    {
+      "word": "schemas",
+      "start": 12.26,
+      "end": 12.76
+    },
+    {
+      "word": "between",
+      "start": 12.76,
+      "end": 12.94
+    },
+    {
+      "word": "turns",
+      "start": 12.94,
+      "end": 13.36
+    },
+    {
+      "word": "does",
+      "start": 13.36,
+      "end": 13.68
+    },
+    {
+      "word": "the",
+      "start": 13.68,
+      "end": 13.84
+    },
+    {
+      "word": "exact",
+      "start": 13.84,
+      "end": 14.08
+    },
+    {
+      "word": "same",
+      "start": 14.08,
+      "end": 14.34
+    },
+    {
+      "word": "damage.",
+      "start": 14.34,
+      "end": 14.72
+    },
+    {
+      "word": "Mutating",
+      "start": 15.24,
+      "end": 15.76
+    },
+    {
+      "word": "an",
+      "start": 15.76,
+      "end": 15.86
+    },
+    {
+      "word": "earlier",
+      "start": 15.86,
+      "end": 16.08
+    },
+    {
+      "word": "message",
+      "start": 16.08,
+      "end": 16.46
+    },
+    {
+      "word": "in",
+      "start": 16.46,
+      "end": 16.72
+    },
+    {
+      "word": "the",
+      "start": 16.72,
+      "end": 16.78
+    },
+    {
+      "word": "middle",
+      "start": 16.78,
+      "end": 16.96
+    },
+    {
+      "word": "of",
+      "start": 16.96,
+      "end": 17.1
+    },
+    {
+      "word": "the",
+      "start": 17.1,
+      "end": 17.16
+    },
+    {
+      "word": "loop",
+      "start": 17.16,
+      "end": 17.42
+    },
+    {
+      "word": "invalidates",
+      "start": 17.42,
+      "end": 18.18
+    },
+    {
+      "word": "every",
+      "start": 18.18,
+      "end": 18.34
+    },
+    {
+      "word": "token",
+      "start": 18.34,
+      "end": 18.62
+    },
+    {
+      "word": "downstream",
+      "start": 18.62,
+      "end": 19.0
+    },
+    {
+      "word": "of",
+      "start": 19.0,
+      "end": 19.28
+    },
+    {
+      "word": "that",
+      "start": 19.28,
+      "end": 19.38
+    },
+    {
+      "word": "edit.",
+      "start": 19.38,
+      "end": 19.58
+    },
+    {
+      "word": "Great",
+      "start": 19.86,
+      "end": 20.38
+    },
+    {
+      "word": "harnesses",
+      "start": 20.38,
+      "end": 20.88
+    },
+    {
+      "word": "keep",
+      "start": 20.88,
+      "end": 21.12
+    },
+    {
+      "word": "the",
+      "start": 21.12,
+      "end": 21.26
+    },
+    {
+      "word": "prefix",
+      "start": 21.26,
+      "end": 21.54
+    },
+    {
+      "word": "immutable,",
+      "start": 21.54,
+      "end": 22.08
+    },
+    {
+      "word": "and",
+      "start": 22.22,
+      "end": 22.54
+    },
+    {
+      "word": "only",
+      "start": 22.54,
+      "end": 22.74
+    },
+    {
+      "word": "append",
+      "start": 22.74,
+      "end": 23.0
+    },
+    {
+      "word": "new",
+      "start": 23.0,
+      "end": 23.24
+    },
+    {
+      "word": "messages",
+      "start": 23.24,
+      "end": 23.58
+    },
+    {
+      "word": "to",
+      "start": 23.58,
+      "end": 23.84
+    },
+    {
+      "word": "the",
+      "start": 23.84,
+      "end": 23.92
+    },
+    {
+      "word": "end",
+      "start": 23.92,
+      "end": 24.1
+    },
+    {
+      "word": "of",
+      "start": 24.1,
+      "end": 24.2
+    },
+    {
+      "word": "the",
+      "start": 24.2,
+      "end": 24.28
+    },
+    {
+      "word": "conversation.",
+      "start": 24.28,
+      "end": 24.6
+    }
+  ]
+}

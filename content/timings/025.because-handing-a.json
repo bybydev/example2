@@ -1,0 +1,911 @@
+{
+  "audio": "025.because-handing-a.mp3",
+  "paragraph": 25,
+  "text": "Because handing a language model a shell tool means granting arbitrary code execution, verification must pair with hard physical containment. Production harnesses like Codex, Devin, OpenHands, and GitHub Copilot Coding Agent run untrusted commands inside ephemeral Docker containers, lightweight microVMs, or OS-level sandboxes such as macOS Seatbelt and Linux bubblewrap. Those walls enforce strict writable-directory boundaries and block unauthorized network egress, ensuring that even a hallucinated shell command or prompt injection cannot wreck your host machine or exfiltrate private credentials.",
+  "transcript": "Because handing a language model a shell tool means granting arbitrary code execution, verification must pair with hard physical containment. Production harnesses like Codex, Devin, OpenHands, and GitHub Copilot, Coding Agent run untrusted commands inside ephemeral Docker containers, lightweight microVMs, or OS-level sandboxes such as macOS Seatbelt and Linux BubbleWrap. Those walls enforce strict writable directory boundaries and block unauthorized network egress, ensuring that even a hallucinated shell command or prompt injection cannot wreck your host machine or exfiltrate private credentials.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 31.6,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Because",
+      "start": 0.0,
+      "end": 0.34,
+      "match": "exact"
+    },
+    {
+      "word": "handing",
+      "start": 0.34,
+      "end": 0.6,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 0.6,
+      "end": 0.8,
+      "match": "exact"
+    },
+    {
+      "word": "language",
+      "start": 0.8,
+      "end": 1.04,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 1.04,
+      "end": 1.28,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 1.28,
+      "end": 1.46,
+      "match": "exact"
+    },
+    {
+      "word": "shell",
+      "start": 1.46,
+      "end": 1.62,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 1.62,
+      "end": 1.84,
+      "match": "exact"
+    },
+    {
+      "word": "means",
+      "start": 1.84,
+      "end": 2.46,
+      "match": "exact"
+    },
+    {
+      "word": "granting",
+      "start": 2.46,
+      "end": 2.84,
+      "match": "exact"
+    },
+    {
+      "word": "arbitrary",
+      "start": 2.84,
+      "end": 3.26,
+      "match": "exact"
+    },
+    {
+      "word": "code",
+      "start": 3.26,
+      "end": 3.6,
+      "match": "exact"
+    },
+    {
+      "word": "execution,",
+      "start": 3.6,
+      "end": 3.92,
+      "match": "exact"
+    },
+    {
+      "word": "verification",
+      "start": 4.32,
+      "end": 4.78,
+      "match": "exact"
+    },
+    {
+      "word": "must",
+      "start": 4.78,
+      "end": 5.28,
+      "match": "exact"
+    },
+    {
+      "word": "pair",
+      "start": 5.28,
+      "end": 5.54,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 5.54,
+      "end": 5.76,
+      "match": "exact"
+    },
+    {
+      "word": "hard",
+      "start": 5.76,
+      "end": 5.96,
+      "match": "exact"
+    },
+    {
+      "word": "physical",
+      "start": 5.96,
+      "end": 6.2,
+      "match": "exact"
+    },
+    {
+      "word": "containment.",
+      "start": 6.2,
+      "end": 6.64,
+      "match": "exact"
+    },
+    {
+      "word": "Production",
+      "start": 7.02,
+      "end": 7.6,
+      "match": "exact"
+    },
+    {
+      "word": "harnesses",
+      "start": 7.6,
+      "end": 8.28,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 8.28,
+      "end": 8.4,
+      "match": "exact"
+    },
+    {
+      "word": "Codex,",
+      "start": 8.4,
+      "end": 8.86,
+      "match": "exact"
+    },
+    {
+      "word": "Devin,",
+      "start": 8.98,
+      "end": 9.4,
+      "match": "exact"
+    },
+    {
+      "word": "OpenHands,",
+      "start": 9.56,
+      "end": 10.2,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 10.26,
+      "end": 10.36,
+      "match": "exact"
+    },
+    {
+      "word": "GitHub",
+      "start": 10.36,
+      "end": 10.56,
+      "match": "exact"
+    },
+    {
+      "word": "Copilot",
+      "start": 10.56,
+      "end": 11.1,
+      "match": "exact"
+    },
+    {
+      "word": "Coding",
+      "start": 11.28,
+      "end": 11.88,
+      "match": "exact"
+    },
+    {
+      "word": "Agent",
+      "start": 11.88,
+      "end": 12.12,
+      "match": "exact"
+    },
+    {
+      "word": "run",
+      "start": 12.12,
+      "end": 12.38,
+      "match": "exact"
+    },
+    {
+      "word": "untrusted",
+      "start": 12.38,
+      "end": 12.94,
+      "match": "exact"
+    },
+    {
+      "word": "commands",
+      "start": 12.94,
+      "end": 13.2,
+      "match": "exact"
+    },
+    {
+      "word": "inside",
+      "start": 13.2,
+      "end": 13.56,
+      "match": "exact"
+    },
+    {
+      "word": "ephemeral",
+      "start": 13.56,
+      "end": 14.08,
+      "match": "exact"
+    },
+    {
+      "word": "Docker",
+      "start": 14.08,
+      "end": 14.28,
+      "match": "exact"
+    },
+    {
+      "word": "containers,",
+      "start": 14.28,
+      "end": 14.68,
+      "match": "exact"
+    },
+    {
+      "word": "lightweight",
+      "start": 15.12,
+      "end": 15.5,
+      "match": "exact"
+    },
+    {
+      "word": "microVMs,",
+      "start": 15.5,
+      "end": 16.26,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 16.44,
+      "end": 16.58,
+      "match": "exact"
+    },
+    {
+      "word": "OS-level",
+      "start": 16.58,
+      "end": 17.16,
+      "match": "exact"
+    },
+    {
+      "word": "sandboxes",
+      "start": 17.16,
+      "end": 17.9,
+      "match": "exact"
+    },
+    {
+      "word": "such",
+      "start": 17.9,
+      "end": 18.0,
+      "match": "exact"
+    },
+    {
+      "word": "as",
+      "start": 18.0,
+      "end": 18.18,
+      "match": "exact"
+    },
+    {
+      "word": "macOS",
+      "start": 18.18,
+      "end": 18.52,
+      "match": "exact"
+    },
+    {
+      "word": "Seatbelt",
+      "start": 18.52,
+      "end": 19.02,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 19.02,
+      "end": 19.22,
+      "match": "exact"
+    },
+    {
+      "word": "Linux",
+      "start": 19.22,
+      "end": 19.42,
+      "match": "exact"
+    },
+    {
+      "word": "bubblewrap.",
+      "start": 19.42,
+      "end": 19.94,
+      "match": "exact"
+    },
+    {
+      "word": "Those",
+      "start": 20.42,
+      "end": 21.02,
+      "match": "exact"
+    },
+    {
+      "word": "walls",
+      "start": 21.02,
+      "end": 21.36,
+      "match": "exact"
+    },
+    {
+      "word": "enforce",
+      "start": 21.36,
+      "end": 21.68,
+      "match": "exact"
+    },
+    {
+      "word": "strict",
+      "start": 21.68,
+      "end": 22.06,
+      "match": "exact"
+    },
+    {
+      "word": "writable-directory",
+      "start": 22.06,
+      "end": 22.7,
+      "match": "exact"
+    },
+    {
+      "word": "boundaries",
+      "start": 22.7,
+      "end": 23.2,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 23.2,
+      "end": 23.5,
+      "match": "exact"
+    },
+    {
+      "word": "block",
+      "start": 23.5,
+      "end": 23.72,
+      "match": "exact"
+    },
+    {
+      "word": "unauthorized",
+      "start": 23.72,
+      "end": 24.42,
+      "match": "exact"
+    },
+    {
+      "word": "network",
+      "start": 24.42,
+      "end": 24.66,
+      "match": "exact"
+    },
+    {
+      "word": "egress,",
+      "start": 24.66,
+      "end": 25.04,
+      "match": "exact"
+    },
+    {
+      "word": "ensuring",
+      "start": 25.34,
+      "end": 25.78,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 25.78,
+      "end": 26.08,
+      "match": "exact"
+    },
+    {
+      "word": "even",
+      "start": 26.08,
+      "end": 26.26,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 26.26,
+      "end": 26.4,
+      "match": "exact"
+    },
+    {
+      "word": "hallucinated",
+      "start": 26.4,
+      "end": 26.86,
+      "match": "exact"
+    },
+    {
+      "word": "shell",
+      "start": 26.86,
+      "end": 27.1,
+      "match": "exact"
+    },
+    {
+      "word": "command",
+      "start": 27.1,
+      "end": 27.42,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 27.42,
+      "end": 27.68,
+      "match": "exact"
+    },
+    {
+      "word": "prompt",
+      "start": 27.68,
+      "end": 27.96,
+      "match": "exact"
+    },
+    {
+      "word": "injection",
+      "start": 27.96,
+      "end": 28.26,
+      "match": "exact"
+    },
+    {
+      "word": "cannot",
+      "start": 28.26,
+      "end": 28.72,
+      "match": "exact"
+    },
+    {
+      "word": "wreck",
+      "start": 28.72,
+      "end": 29.02,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 29.02,
+      "end": 29.22,
+      "match": "exact"
+    },
+    {
+      "word": "host",
+      "start": 29.22,
+      "end": 29.36,
+      "match": "exact"
+    },
+    {
+      "word": "machine",
+      "start": 29.36,
+      "end": 29.6,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 29.6,
+      "end": 29.98,
+      "match": "exact"
+    },
+    {
+      "word": "exfiltrate",
+      "start": 29.98,
+      "end": 30.46,
+      "match": "exact"
+    },
+    {
+      "word": "private",
+      "start": 30.46,
+      "end": 30.7,
+      "match": "exact"
+    },
+    {
+      "word": "credentials.",
+      "start": 30.7,
+      "end": 31.0,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Because",
+      "start": 0.0,
+      "end": 0.34
+    },
+    {
+      "word": "handing",
+      "start": 0.34,
+      "end": 0.6
+    },
+    {
+      "word": "a",
+      "start": 0.6,
+      "end": 0.8
+    },
+    {
+      "word": "language",
+      "start": 0.8,
+      "end": 1.04
+    },
+    {
+      "word": "model",
+      "start": 1.04,
+      "end": 1.28
+    },
+    {
+      "word": "a",
+      "start": 1.28,
+      "end": 1.46
+    },
+    {
+      "word": "shell",
+      "start": 1.46,
+      "end": 1.62
+    },
+    {
+      "word": "tool",
+      "start": 1.62,
+      "end": 1.84
+    },
+    {
+      "word": "means",
+      "start": 1.84,
+      "end": 2.46
+    },
+    {
+      "word": "granting",
+      "start": 2.46,
+      "end": 2.84
+    },
+    {
+      "word": "arbitrary",
+      "start": 2.84,
+      "end": 3.26
+    },
+    {
+      "word": "code",
+      "start": 3.26,
+      "end": 3.6
+    },
+    {
+      "word": "execution,",
+      "start": 3.6,
+      "end": 3.92
+    },
+    {
+      "word": "verification",
+      "start": 4.32,
+      "end": 4.78
+    },
+    {
+      "word": "must",
+      "start": 4.78,
+      "end": 5.28
+    },
+    {
+      "word": "pair",
+      "start": 5.28,
+      "end": 5.54
+    },
+    {
+      "word": "with",
+      "start": 5.54,
+      "end": 5.76
+    },
+    {
+      "word": "hard",
+      "start": 5.76,
+      "end": 5.96
+    },
+    {
+      "word": "physical",
+      "start": 5.96,
+      "end": 6.2
+    },
+    {
+      "word": "containment.",
+      "start": 6.2,
+      "end": 6.64
+    },
+    {
+      "word": "Production",
+      "start": 7.02,
+      "end": 7.6
+    },
+    {
+      "word": "harnesses",
+      "start": 7.6,
+      "end": 8.28
+    },
+    {
+      "word": "like",
+      "start": 8.28,
+      "end": 8.4
+    },
+    {
+      "word": "Codex,",
+      "start": 8.4,
+      "end": 8.86
+    },
+    {
+      "word": "Devin,",
+      "start": 8.98,
+      "end": 9.4
+    },
+    {
+      "word": "OpenHands,",
+      "start": 9.56,
+      "end": 10.2
+    },
+    {
+      "word": "and",
+      "start": 10.26,
+      "end": 10.36
+    },
+    {
+      "word": "GitHub",
+      "start": 10.36,
+      "end": 10.56
+    },
+    {
+      "word": "Copilot,",
+      "start": 10.56,
+      "end": 11.1
+    },
+    {
+      "word": "Coding",
+      "start": 11.28,
+      "end": 11.88
+    },
+    {
+      "word": "Agent",
+      "start": 11.88,
+      "end": 12.12
+    },
+    {
+      "word": "run",
+      "start": 12.12,
+      "end": 12.38
+    },
+    {
+      "word": "untrusted",
+      "start": 12.38,
+      "end": 12.94
+    },
+    {
+      "word": "commands",
+      "start": 12.94,
+      "end": 13.2
+    },
+    {
+      "word": "inside",
+      "start": 13.2,
+      "end": 13.56
+    },
+    {
+      "word": "ephemeral",
+      "start": 13.56,
+      "end": 14.08
+    },
+    {
+      "word": "Docker",
+      "start": 14.08,
+      "end": 14.28
+    },
+    {
+      "word": "containers,",
+      "start": 14.28,
+      "end": 14.68
+    },
+    {
+      "word": "lightweight",
+      "start": 15.12,
+      "end": 15.5
+    },
+    {
+      "word": "microVMs,",
+      "start": 15.5,
+      "end": 16.26
+    },
+    {
+      "word": "or",
+      "start": 16.44,
+      "end": 16.58
+    },
+    {
+      "word": "OS",
+      "start": 16.58,
+      "end": 16.94
+    },
+    {
+      "word": "-level",
+      "start": 16.94,
+      "end": 17.16
+    },
+    {
+      "word": "sandboxes",
+      "start": 17.16,
+      "end": 17.9
+    },
+    {
+      "word": "such",
+      "start": 17.9,
+      "end": 18.0
+    },
+    {
+      "word": "as",
+      "start": 18.0,
+      "end": 18.18
+    },
+    {
+      "word": "macOS",
+      "start": 18.18,
+      "end": 18.52
+    },
+    {
+      "word": "Seatbelt",
+      "start": 18.52,
+      "end": 19.02
+    },
+    {
+      "word": "and",
+      "start": 19.02,
+      "end": 19.22
+    },
+    {
+      "word": "Linux",
+      "start": 19.22,
+      "end": 19.42
+    },
+    {
+      "word": "BubbleWrap.",
+      "start": 19.42,
+      "end": 19.94
+    },
+    {
+      "word": "Those",
+      "start": 20.42,
+      "end": 21.02
+    },
+    {
+      "word": "walls",
+      "start": 21.02,
+      "end": 21.36
+    },
+    {
+      "word": "enforce",
+      "start": 21.36,
+      "end": 21.68
+    },
+    {
+      "word": "strict",
+      "start": 21.68,
+      "end": 22.06
+    },
+    {
+      "word": "writable",
+      "start": 22.06,
+      "end": 22.48
+    },
+    {
+      "word": "directory",
+      "start": 22.48,
+      "end": 22.7
+    },
+    {
+      "word": "boundaries",
+      "start": 22.7,
+      "end": 23.2
+    },
+    {
+      "word": "and",
+      "start": 23.2,
+      "end": 23.5
+    },
+    {
+      "word": "block",
+      "start": 23.5,
+      "end": 23.72
+    },
+    {
+      "word": "unauthorized",
+      "start": 23.72,
+      "end": 24.42
+    },
+    {
+      "word": "network",
+      "start": 24.42,
+      "end": 24.66
+    },
+    {
+      "word": "egress,",
+      "start": 24.66,
+      "end": 25.04
+    },
+    {
+      "word": "ensuring",
+      "start": 25.34,
+      "end": 25.78
+    },
+    {
+      "word": "that",
+      "start": 25.78,
+      "end": 26.08
+    },
+    {
+      "word": "even",
+      "start": 26.08,
+      "end": 26.26
+    },
+    {
+      "word": "a",
+      "start": 26.26,
+      "end": 26.4
+    },
+    {
+      "word": "hallucinated",
+      "start": 26.4,
+      "end": 26.86
+    },
+    {
+      "word": "shell",
+      "start": 26.86,
+      "end": 27.1
+    },
+    {
+      "word": "command",
+      "start": 27.1,
+      "end": 27.42
+    },
+    {
+      "word": "or",
+      "start": 27.42,
+      "end": 27.68
+    },
+    {
+      "word": "prompt",
+      "start": 27.68,
+      "end": 27.96
+    },
+    {
+      "word": "injection",
+      "start": 27.96,
+      "end": 28.26
+    },
+    {
+      "word": "cannot",
+      "start": 28.26,
+      "end": 28.72
+    },
+    {
+      "word": "wreck",
+      "start": 28.72,
+      "end": 29.02
+    },
+    {
+      "word": "your",
+      "start": 29.02,
+      "end": 29.22
+    },
+    {
+      "word": "host",
+      "start": 29.22,
+      "end": 29.36
+    },
+    {
+      "word": "machine",
+      "start": 29.36,
+      "end": 29.6
+    },
+    {
+      "word": "or",
+      "start": 29.6,
+      "end": 29.98
+    },
+    {
+      "word": "exfiltrate",
+      "start": 29.98,
+      "end": 30.46
+    },
+    {
+      "word": "private",
+      "start": 30.46,
+      "end": 30.7
+    },
+    {
+      "word": "credentials.",
+      "start": 30.7,
+      "end": 31.0
+    }
+  ]
+}

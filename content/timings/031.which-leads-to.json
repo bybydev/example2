@@ -1,0 +1,999 @@
+{
+  "audio": "031.which-leads-to.mp3",
+  "paragraph": 31,
+  "text": "Which leads to Pillar Six: observability, evals, and evolving your harness over time. You cannot debug a production harness by reading only its final answer. Serious teams log complete structured trajectories for every run: full prompt snapshots, tool call arguments, exit codes, wall-clock latency, cache hit ratios, and token costs. When something goes wrong, or when you want to see why a five-turn trace fixed our authentication bug in seconds instead of minutes, you can inspect and replay the exact trajectory step by step like a flight recorder.",
+  "transcript": "which leads to pillar 6, observability, evals, and evolving your harness over time. You cannot debug a production harness by reading only its final answer. Serious teams log complete structured trajectories for every run, full prompt snapshots, tool call arguments, exit codes, wall clock latency, cache hit ratios, and token costs. When something goes wrong, or when you want to see why a five-turn trace fixed our authentication bug in seconds instead of minutes, you can inspect and replay the exact trajectory step-by-step like a flight recorder.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 29.04,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Which",
+      "start": 0.0,
+      "end": 0.28,
+      "match": "exact"
+    },
+    {
+      "word": "leads",
+      "start": 0.28,
+      "end": 0.42,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 0.42,
+      "end": 0.6,
+      "match": "exact"
+    },
+    {
+      "word": "Pillar",
+      "start": 0.6,
+      "end": 0.78,
+      "match": "exact"
+    },
+    {
+      "word": "Six:",
+      "start": 0.78,
+      "end": 1.04,
+      "match": "exact"
+    },
+    {
+      "word": "observability,",
+      "start": 1.32,
+      "end": 2.08,
+      "match": "exact"
+    },
+    {
+      "word": "evals,",
+      "start": 2.36,
+      "end": 2.8,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 2.8,
+      "end": 3.08,
+      "match": "exact"
+    },
+    {
+      "word": "evolving",
+      "start": 3.08,
+      "end": 3.34,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 3.34,
+      "end": 3.66,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 3.66,
+      "end": 3.9,
+      "match": "exact"
+    },
+    {
+      "word": "over",
+      "start": 3.9,
+      "end": 4.16,
+      "match": "exact"
+    },
+    {
+      "word": "time.",
+      "start": 4.16,
+      "end": 4.42,
+      "match": "exact"
+    },
+    {
+      "word": "You",
+      "start": 4.92,
+      "end": 5.3,
+      "match": "exact"
+    },
+    {
+      "word": "cannot",
+      "start": 5.3,
+      "end": 5.54,
+      "match": "exact"
+    },
+    {
+      "word": "debug",
+      "start": 5.54,
+      "end": 5.8,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 5.8,
+      "end": 6.02,
+      "match": "exact"
+    },
+    {
+      "word": "production",
+      "start": 6.02,
+      "end": 6.28,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 6.28,
+      "end": 6.62,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 6.62,
+      "end": 6.88,
+      "match": "exact"
+    },
+    {
+      "word": "reading",
+      "start": 6.88,
+      "end": 7.1,
+      "match": "exact"
+    },
+    {
+      "word": "only",
+      "start": 7.1,
+      "end": 7.38,
+      "match": "exact"
+    },
+    {
+      "word": "its",
+      "start": 7.38,
+      "end": 7.64,
+      "match": "exact"
+    },
+    {
+      "word": "final",
+      "start": 7.64,
+      "end": 7.88,
+      "match": "exact"
+    },
+    {
+      "word": "answer.",
+      "start": 7.88,
+      "end": 8.24,
+      "match": "exact"
+    },
+    {
+      "word": "Serious",
+      "start": 8.68,
+      "end": 9.12,
+      "match": "exact"
+    },
+    {
+      "word": "teams",
+      "start": 9.12,
+      "end": 9.42,
+      "match": "exact"
+    },
+    {
+      "word": "log",
+      "start": 9.42,
+      "end": 9.72,
+      "match": "exact"
+    },
+    {
+      "word": "complete",
+      "start": 9.72,
+      "end": 10.1,
+      "match": "exact"
+    },
+    {
+      "word": "structured",
+      "start": 10.1,
+      "end": 10.44,
+      "match": "exact"
+    },
+    {
+      "word": "trajectories",
+      "start": 10.44,
+      "end": 11.2,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 11.2,
+      "end": 11.36,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 11.36,
+      "end": 11.58,
+      "match": "exact"
+    },
+    {
+      "word": "run:",
+      "start": 11.58,
+      "end": 11.92,
+      "match": "exact"
+    },
+    {
+      "word": "full",
+      "start": 12.08,
+      "end": 12.36,
+      "match": "exact"
+    },
+    {
+      "word": "prompt",
+      "start": 12.36,
+      "end": 12.68,
+      "match": "exact"
+    },
+    {
+      "word": "snapshots,",
+      "start": 12.68,
+      "end": 13.32,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 13.5,
+      "end": 13.76,
+      "match": "exact"
+    },
+    {
+      "word": "call",
+      "start": 13.76,
+      "end": 13.98,
+      "match": "exact"
+    },
+    {
+      "word": "arguments,",
+      "start": 13.98,
+      "end": 14.42,
+      "match": "exact"
+    },
+    {
+      "word": "exit",
+      "start": 14.72,
+      "end": 14.94,
+      "match": "exact"
+    },
+    {
+      "word": "codes,",
+      "start": 14.94,
+      "end": 15.28,
+      "match": "exact"
+    },
+    {
+      "word": "wall-clock",
+      "start": 15.48,
+      "end": 15.84,
+      "match": "exact"
+    },
+    {
+      "word": "latency,",
+      "start": 15.84,
+      "end": 16.2,
+      "match": "exact"
+    },
+    {
+      "word": "cache",
+      "start": 16.68,
+      "end": 16.98,
+      "match": "exact"
+    },
+    {
+      "word": "hit",
+      "start": 16.98,
+      "end": 17.2,
+      "match": "exact"
+    },
+    {
+      "word": "ratios,",
+      "start": 17.2,
+      "end": 17.56,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 17.82,
+      "end": 17.98,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 17.98,
+      "end": 18.14,
+      "match": "exact"
+    },
+    {
+      "word": "costs.",
+      "start": 18.14,
+      "end": 18.52,
+      "match": "exact"
+    },
+    {
+      "word": "When",
+      "start": 18.92,
+      "end": 19.4,
+      "match": "exact"
+    },
+    {
+      "word": "something",
+      "start": 19.4,
+      "end": 19.58,
+      "match": "exact"
+    },
+    {
+      "word": "goes",
+      "start": 19.58,
+      "end": 19.78,
+      "match": "exact"
+    },
+    {
+      "word": "wrong,",
+      "start": 19.78,
+      "end": 20.2,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 20.26,
+      "end": 20.44,
+      "match": "exact"
+    },
+    {
+      "word": "when",
+      "start": 20.44,
+      "end": 20.52,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 20.52,
+      "end": 20.62,
+      "match": "exact"
+    },
+    {
+      "word": "want",
+      "start": 20.62,
+      "end": 20.74,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 20.74,
+      "end": 20.82,
+      "match": "exact"
+    },
+    {
+      "word": "see",
+      "start": 20.82,
+      "end": 20.94,
+      "match": "exact"
+    },
+    {
+      "word": "why",
+      "start": 20.94,
+      "end": 21.1,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 21.1,
+      "end": 21.3,
+      "match": "exact"
+    },
+    {
+      "word": "five-turn",
+      "start": 21.3,
+      "end": 21.66,
+      "match": "exact"
+    },
+    {
+      "word": "trace",
+      "start": 21.66,
+      "end": 21.96,
+      "match": "exact"
+    },
+    {
+      "word": "fixed",
+      "start": 21.96,
+      "end": 22.34,
+      "match": "exact"
+    },
+    {
+      "word": "our",
+      "start": 22.34,
+      "end": 22.48,
+      "match": "exact"
+    },
+    {
+      "word": "authentication",
+      "start": 22.48,
+      "end": 22.78,
+      "match": "exact"
+    },
+    {
+      "word": "bug",
+      "start": 22.78,
+      "end": 23.24,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 23.24,
+      "end": 23.44,
+      "match": "exact"
+    },
+    {
+      "word": "seconds",
+      "start": 23.44,
+      "end": 23.72,
+      "match": "exact"
+    },
+    {
+      "word": "instead",
+      "start": 23.72,
+      "end": 24.06,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 24.06,
+      "end": 24.24,
+      "match": "exact"
+    },
+    {
+      "word": "minutes,",
+      "start": 24.24,
+      "end": 24.48,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 24.7,
+      "end": 25.04,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 25.04,
+      "end": 25.16,
+      "match": "exact"
+    },
+    {
+      "word": "inspect",
+      "start": 25.16,
+      "end": 25.46,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 25.46,
+      "end": 25.7,
+      "match": "exact"
+    },
+    {
+      "word": "replay",
+      "start": 25.7,
+      "end": 26.0,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 26.0,
+      "end": 26.3,
+      "match": "exact"
+    },
+    {
+      "word": "exact",
+      "start": 26.3,
+      "end": 26.54,
+      "match": "exact"
+    },
+    {
+      "word": "trajectory",
+      "start": 26.54,
+      "end": 26.88,
+      "match": "exact"
+    },
+    {
+      "word": "step",
+      "start": 26.88,
+      "end": 27.38,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 27.38,
+      "end": 27.56,
+      "match": "exact"
+    },
+    {
+      "word": "step",
+      "start": 27.56,
+      "end": 27.78,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 27.78,
+      "end": 28.08,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 28.08,
+      "end": 28.18,
+      "match": "exact"
+    },
+    {
+      "word": "flight",
+      "start": 28.18,
+      "end": 28.34,
+      "match": "exact"
+    },
+    {
+      "word": "recorder.",
+      "start": 28.34,
+      "end": 28.56,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "which",
+      "start": 0.0,
+      "end": 0.28
+    },
+    {
+      "word": "leads",
+      "start": 0.28,
+      "end": 0.42
+    },
+    {
+      "word": "to",
+      "start": 0.42,
+      "end": 0.6
+    },
+    {
+      "word": "pillar",
+      "start": 0.6,
+      "end": 0.78
+    },
+    {
+      "word": "6,",
+      "start": 0.78,
+      "end": 1.04
+    },
+    {
+      "word": "observability,",
+      "start": 1.32,
+      "end": 2.08
+    },
+    {
+      "word": "evals,",
+      "start": 2.36,
+      "end": 2.8
+    },
+    {
+      "word": "and",
+      "start": 2.8,
+      "end": 3.08
+    },
+    {
+      "word": "evolving",
+      "start": 3.08,
+      "end": 3.34
+    },
+    {
+      "word": "your",
+      "start": 3.34,
+      "end": 3.66
+    },
+    {
+      "word": "harness",
+      "start": 3.66,
+      "end": 3.9
+    },
+    {
+      "word": "over",
+      "start": 3.9,
+      "end": 4.16
+    },
+    {
+      "word": "time.",
+      "start": 4.16,
+      "end": 4.42
+    },
+    {
+      "word": "You",
+      "start": 4.92,
+      "end": 5.3
+    },
+    {
+      "word": "cannot",
+      "start": 5.3,
+      "end": 5.54
+    },
+    {
+      "word": "debug",
+      "start": 5.54,
+      "end": 5.8
+    },
+    {
+      "word": "a",
+      "start": 5.8,
+      "end": 6.02
+    },
+    {
+      "word": "production",
+      "start": 6.02,
+      "end": 6.28
+    },
+    {
+      "word": "harness",
+      "start": 6.28,
+      "end": 6.62
+    },
+    {
+      "word": "by",
+      "start": 6.62,
+      "end": 6.88
+    },
+    {
+      "word": "reading",
+      "start": 6.88,
+      "end": 7.1
+    },
+    {
+      "word": "only",
+      "start": 7.1,
+      "end": 7.38
+    },
+    {
+      "word": "its",
+      "start": 7.38,
+      "end": 7.64
+    },
+    {
+      "word": "final",
+      "start": 7.64,
+      "end": 7.88
+    },
+    {
+      "word": "answer.",
+      "start": 7.88,
+      "end": 8.24
+    },
+    {
+      "word": "Serious",
+      "start": 8.68,
+      "end": 9.12
+    },
+    {
+      "word": "teams",
+      "start": 9.12,
+      "end": 9.42
+    },
+    {
+      "word": "log",
+      "start": 9.42,
+      "end": 9.72
+    },
+    {
+      "word": "complete",
+      "start": 9.72,
+      "end": 10.1
+    },
+    {
+      "word": "structured",
+      "start": 10.1,
+      "end": 10.44
+    },
+    {
+      "word": "trajectories",
+      "start": 10.44,
+      "end": 11.2
+    },
+    {
+      "word": "for",
+      "start": 11.2,
+      "end": 11.36
+    },
+    {
+      "word": "every",
+      "start": 11.36,
+      "end": 11.58
+    },
+    {
+      "word": "run,",
+      "start": 11.58,
+      "end": 11.92
+    },
+    {
+      "word": "full",
+      "start": 12.08,
+      "end": 12.36
+    },
+    {
+      "word": "prompt",
+      "start": 12.36,
+      "end": 12.68
+    },
+    {
+      "word": "snapshots,",
+      "start": 12.68,
+      "end": 13.32
+    },
+    {
+      "word": "tool",
+      "start": 13.5,
+      "end": 13.76
+    },
+    {
+      "word": "call",
+      "start": 13.76,
+      "end": 13.98
+    },
+    {
+      "word": "arguments,",
+      "start": 13.98,
+      "end": 14.42
+    },
+    {
+      "word": "exit",
+      "start": 14.72,
+      "end": 14.94
+    },
+    {
+      "word": "codes,",
+      "start": 14.94,
+      "end": 15.28
+    },
+    {
+      "word": "wall",
+      "start": 15.48,
+      "end": 15.6
+    },
+    {
+      "word": "clock",
+      "start": 15.6,
+      "end": 15.84
+    },
+    {
+      "word": "latency,",
+      "start": 15.84,
+      "end": 16.2
+    },
+    {
+      "word": "cache",
+      "start": 16.68,
+      "end": 16.98
+    },
+    {
+      "word": "hit",
+      "start": 16.98,
+      "end": 17.2
+    },
+    {
+      "word": "ratios,",
+      "start": 17.2,
+      "end": 17.56
+    },
+    {
+      "word": "and",
+      "start": 17.82,
+      "end": 17.98
+    },
+    {
+      "word": "token",
+      "start": 17.98,
+      "end": 18.14
+    },
+    {
+      "word": "costs.",
+      "start": 18.14,
+      "end": 18.52
+    },
+    {
+      "word": "When",
+      "start": 18.92,
+      "end": 19.4
+    },
+    {
+      "word": "something",
+      "start": 19.4,
+      "end": 19.58
+    },
+    {
+      "word": "goes",
+      "start": 19.58,
+      "end": 19.78
+    },
+    {
+      "word": "wrong,",
+      "start": 19.78,
+      "end": 20.2
+    },
+    {
+      "word": "or",
+      "start": 20.26,
+      "end": 20.44
+    },
+    {
+      "word": "when",
+      "start": 20.44,
+      "end": 20.52
+    },
+    {
+      "word": "you",
+      "start": 20.52,
+      "end": 20.62
+    },
+    {
+      "word": "want",
+      "start": 20.62,
+      "end": 20.74
+    },
+    {
+      "word": "to",
+      "start": 20.74,
+      "end": 20.82
+    },
+    {
+      "word": "see",
+      "start": 20.82,
+      "end": 20.94
+    },
+    {
+      "word": "why",
+      "start": 20.94,
+      "end": 21.1
+    },
+    {
+      "word": "a",
+      "start": 21.1,
+      "end": 21.3
+    },
+    {
+      "word": "five",
+      "start": 21.3,
+      "end": 21.44
+    },
+    {
+      "word": "-turn",
+      "start": 21.44,
+      "end": 21.66
+    },
+    {
+      "word": "trace",
+      "start": 21.66,
+      "end": 21.96
+    },
+    {
+      "word": "fixed",
+      "start": 21.96,
+      "end": 22.34
+    },
+    {
+      "word": "our",
+      "start": 22.34,
+      "end": 22.48
+    },
+    {
+      "word": "authentication",
+      "start": 22.48,
+      "end": 22.78
+    },
+    {
+      "word": "bug",
+      "start": 22.78,
+      "end": 23.24
+    },
+    {
+      "word": "in",
+      "start": 23.24,
+      "end": 23.44
+    },
+    {
+      "word": "seconds",
+      "start": 23.44,
+      "end": 23.72
+    },
+    {
+      "word": "instead",
+      "start": 23.72,
+      "end": 24.06
+    },
+    {
+      "word": "of",
+      "start": 24.06,
+      "end": 24.24
+    },
+    {
+      "word": "minutes,",
+      "start": 24.24,
+      "end": 24.48
+    },
+    {
+      "word": "you",
+      "start": 24.7,
+      "end": 25.04
+    },
+    {
+      "word": "can",
+      "start": 25.04,
+      "end": 25.16
+    },
+    {
+      "word": "inspect",
+      "start": 25.16,
+      "end": 25.46
+    },
+    {
+      "word": "and",
+      "start": 25.46,
+      "end": 25.7
+    },
+    {
+      "word": "replay",
+      "start": 25.7,
+      "end": 26.0
+    },
+    {
+      "word": "the",
+      "start": 26.0,
+      "end": 26.3
+    },
+    {
+      "word": "exact",
+      "start": 26.3,
+      "end": 26.54
+    },
+    {
+      "word": "trajectory",
+      "start": 26.54,
+      "end": 26.88
+    },
+    {
+      "word": "step",
+      "start": 26.88,
+      "end": 27.38
+    },
+    {
+      "word": "-by",
+      "start": 27.38,
+      "end": 27.56
+    },
+    {
+      "word": "-step",
+      "start": 27.56,
+      "end": 27.78
+    },
+    {
+      "word": "like",
+      "start": 27.78,
+      "end": 28.08
+    },
+    {
+      "word": "a",
+      "start": 28.08,
+      "end": 28.18
+    },
+    {
+      "word": "flight",
+      "start": 28.18,
+      "end": 28.34
+    },
+    {
+      "word": "recorder.",
+      "start": 28.34,
+      "end": 28.56
+    }
+  ]
+}

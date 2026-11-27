@@ -1,0 +1,906 @@
+{
+  "audio": "007.that-gives-us.mp3",
+  "paragraph": 7,
+  "text": "That gives us a crisp division of labor. The model owns reasoning, judgment, and planning, the messy probabilistic work where large language models shine. Surrounding that core, the harness owns everything deterministic: executing tools reliably, keeping context hygiene tight, enforcing hard safety perimeters, and delivering ground-truth feedback from the real world. Whenever you feel tempted to solve a reliability bug by stuffing more rules into a prompt, stop and ask whether the harness should own that guarantee in code instead.",
+  "transcript": "That gives us a crisp division of labor. The model owns reasoning, judgment, and planning, the messy probabilistic work where large language models shine. Surrounding that core, the harness owns everything deterministic, executing tools reliably, keeping context hygiene tight, enforcing hard safety perimeters, and delivering ground truth feedback from the real world. Whenever you feel tempted to solve a reliability bug by stuffing more rules into a prompt, stop and ask whether the harness should own that guarantee in code instead.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 27.28,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "That",
+      "start": 0.0,
+      "end": 0.24,
+      "match": "exact"
+    },
+    {
+      "word": "gives",
+      "start": 0.24,
+      "end": 0.44,
+      "match": "exact"
+    },
+    {
+      "word": "us",
+      "start": 0.44,
+      "end": 0.64,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 0.64,
+      "end": 0.72,
+      "match": "exact"
+    },
+    {
+      "word": "crisp",
+      "start": 0.72,
+      "end": 0.96,
+      "match": "exact"
+    },
+    {
+      "word": "division",
+      "start": 0.96,
+      "end": 1.24,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 1.24,
+      "end": 1.54,
+      "match": "exact"
+    },
+    {
+      "word": "labor.",
+      "start": 1.54,
+      "end": 1.74,
+      "match": "exact"
+    },
+    {
+      "word": "The",
+      "start": 1.94,
+      "end": 2.42,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 2.42,
+      "end": 2.66,
+      "match": "exact"
+    },
+    {
+      "word": "owns",
+      "start": 2.66,
+      "end": 2.86,
+      "match": "exact"
+    },
+    {
+      "word": "reasoning,",
+      "start": 2.86,
+      "end": 3.28,
+      "match": "exact"
+    },
+    {
+      "word": "judgment,",
+      "start": 3.5,
+      "end": 3.84,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 4.0,
+      "end": 4.14,
+      "match": "exact"
+    },
+    {
+      "word": "planning,",
+      "start": 4.14,
+      "end": 4.44,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 4.58,
+      "end": 4.8,
+      "match": "exact"
+    },
+    {
+      "word": "messy",
+      "start": 4.8,
+      "end": 5.06,
+      "match": "exact"
+    },
+    {
+      "word": "probabilistic",
+      "start": 5.06,
+      "end": 5.68,
+      "match": "exact"
+    },
+    {
+      "word": "work",
+      "start": 5.68,
+      "end": 5.98,
+      "match": "exact"
+    },
+    {
+      "word": "where",
+      "start": 5.98,
+      "end": 6.2,
+      "match": "exact"
+    },
+    {
+      "word": "large",
+      "start": 6.2,
+      "end": 6.46,
+      "match": "exact"
+    },
+    {
+      "word": "language",
+      "start": 6.46,
+      "end": 6.74,
+      "match": "exact"
+    },
+    {
+      "word": "models",
+      "start": 6.74,
+      "end": 6.98,
+      "match": "exact"
+    },
+    {
+      "word": "shine.",
+      "start": 6.98,
+      "end": 7.34,
+      "match": "exact"
+    },
+    {
+      "word": "Surrounding",
+      "start": 8.1,
+      "end": 8.58,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 8.58,
+      "end": 8.66,
+      "match": "exact"
+    },
+    {
+      "word": "core,",
+      "start": 8.66,
+      "end": 8.88,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 9.14,
+      "end": 9.26,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 9.26,
+      "end": 9.5,
+      "match": "exact"
+    },
+    {
+      "word": "owns",
+      "start": 9.5,
+      "end": 9.74,
+      "match": "exact"
+    },
+    {
+      "word": "everything",
+      "start": 9.74,
+      "end": 10.2,
+      "match": "exact"
+    },
+    {
+      "word": "deterministic:",
+      "start": 10.2,
+      "end": 10.92,
+      "match": "exact"
+    },
+    {
+      "word": "executing",
+      "start": 11.08,
+      "end": 11.46,
+      "match": "exact"
+    },
+    {
+      "word": "tools",
+      "start": 11.46,
+      "end": 11.86,
+      "match": "exact"
+    },
+    {
+      "word": "reliably,",
+      "start": 11.86,
+      "end": 12.24,
+      "match": "exact"
+    },
+    {
+      "word": "keeping",
+      "start": 12.62,
+      "end": 12.98,
+      "match": "exact"
+    },
+    {
+      "word": "context",
+      "start": 12.98,
+      "end": 13.42,
+      "match": "exact"
+    },
+    {
+      "word": "hygiene",
+      "start": 13.42,
+      "end": 13.74,
+      "match": "exact"
+    },
+    {
+      "word": "tight,",
+      "start": 13.74,
+      "end": 14.18,
+      "match": "exact"
+    },
+    {
+      "word": "enforcing",
+      "start": 14.36,
+      "end": 14.98,
+      "match": "exact"
+    },
+    {
+      "word": "hard",
+      "start": 14.98,
+      "end": 15.18,
+      "match": "exact"
+    },
+    {
+      "word": "safety",
+      "start": 15.18,
+      "end": 15.48,
+      "match": "exact"
+    },
+    {
+      "word": "perimeters,",
+      "start": 15.48,
+      "end": 15.94,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 16.12,
+      "end": 16.36,
+      "match": "exact"
+    },
+    {
+      "word": "delivering",
+      "start": 16.36,
+      "end": 16.68,
+      "match": "exact"
+    },
+    {
+      "word": "ground-truth",
+      "start": 16.68,
+      "end": 17.24,
+      "match": "exact"
+    },
+    {
+      "word": "feedback",
+      "start": 17.24,
+      "end": 17.58,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 17.58,
+      "end": 17.9,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 17.9,
+      "end": 18.0,
+      "match": "exact"
+    },
+    {
+      "word": "real",
+      "start": 18.0,
+      "end": 18.16,
+      "match": "exact"
+    },
+    {
+      "word": "world.",
+      "start": 18.16,
+      "end": 18.44,
+      "match": "exact"
+    },
+    {
+      "word": "Whenever",
+      "start": 18.86,
+      "end": 19.34,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 19.34,
+      "end": 19.52,
+      "match": "exact"
+    },
+    {
+      "word": "feel",
+      "start": 19.52,
+      "end": 19.68,
+      "match": "exact"
+    },
+    {
+      "word": "tempted",
+      "start": 19.68,
+      "end": 20.04,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 20.04,
+      "end": 20.2,
+      "match": "exact"
+    },
+    {
+      "word": "solve",
+      "start": 20.2,
+      "end": 20.44,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 20.44,
+      "end": 20.58,
+      "match": "exact"
+    },
+    {
+      "word": "reliability",
+      "start": 20.58,
+      "end": 20.92,
+      "match": "exact"
+    },
+    {
+      "word": "bug",
+      "start": 20.92,
+      "end": 21.34,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 21.34,
+      "end": 21.58,
+      "match": "exact"
+    },
+    {
+      "word": "stuffing",
+      "start": 21.58,
+      "end": 21.88,
+      "match": "exact"
+    },
+    {
+      "word": "more",
+      "start": 21.88,
+      "end": 22.1,
+      "match": "exact"
+    },
+    {
+      "word": "rules",
+      "start": 22.1,
+      "end": 22.4,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 22.4,
+      "end": 22.66,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 22.66,
+      "end": 22.8,
+      "match": "exact"
+    },
+    {
+      "word": "prompt,",
+      "start": 22.8,
+      "end": 23.12,
+      "match": "exact"
+    },
+    {
+      "word": "stop",
+      "start": 23.3,
+      "end": 23.66,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 23.66,
+      "end": 23.98,
+      "match": "exact"
+    },
+    {
+      "word": "ask",
+      "start": 23.98,
+      "end": 24.36,
+      "match": "exact"
+    },
+    {
+      "word": "whether",
+      "start": 24.36,
+      "end": 24.52,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 24.52,
+      "end": 24.68,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 24.68,
+      "end": 24.9,
+      "match": "exact"
+    },
+    {
+      "word": "should",
+      "start": 24.9,
+      "end": 25.08,
+      "match": "exact"
+    },
+    {
+      "word": "own",
+      "start": 25.08,
+      "end": 25.28,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 25.28,
+      "end": 25.42,
+      "match": "exact"
+    },
+    {
+      "word": "guarantee",
+      "start": 25.42,
+      "end": 25.8,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 25.8,
+      "end": 26.02,
+      "match": "exact"
+    },
+    {
+      "word": "code",
+      "start": 26.02,
+      "end": 26.22,
+      "match": "exact"
+    },
+    {
+      "word": "instead.",
+      "start": 26.22,
+      "end": 26.58,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "That",
+      "start": 0.0,
+      "end": 0.24
+    },
+    {
+      "word": "gives",
+      "start": 0.24,
+      "end": 0.44
+    },
+    {
+      "word": "us",
+      "start": 0.44,
+      "end": 0.64
+    },
+    {
+      "word": "a",
+      "start": 0.64,
+      "end": 0.72
+    },
+    {
+      "word": "crisp",
+      "start": 0.72,
+      "end": 0.96
+    },
+    {
+      "word": "division",
+      "start": 0.96,
+      "end": 1.24
+    },
+    {
+      "word": "of",
+      "start": 1.24,
+      "end": 1.54
+    },
+    {
+      "word": "labor.",
+      "start": 1.54,
+      "end": 1.74
+    },
+    {
+      "word": "The",
+      "start": 1.94,
+      "end": 2.42
+    },
+    {
+      "word": "model",
+      "start": 2.42,
+      "end": 2.66
+    },
+    {
+      "word": "owns",
+      "start": 2.66,
+      "end": 2.86
+    },
+    {
+      "word": "reasoning,",
+      "start": 2.86,
+      "end": 3.28
+    },
+    {
+      "word": "judgment,",
+      "start": 3.5,
+      "end": 3.84
+    },
+    {
+      "word": "and",
+      "start": 4.0,
+      "end": 4.14
+    },
+    {
+      "word": "planning,",
+      "start": 4.14,
+      "end": 4.44
+    },
+    {
+      "word": "the",
+      "start": 4.58,
+      "end": 4.8
+    },
+    {
+      "word": "messy",
+      "start": 4.8,
+      "end": 5.06
+    },
+    {
+      "word": "probabilistic",
+      "start": 5.06,
+      "end": 5.68
+    },
+    {
+      "word": "work",
+      "start": 5.68,
+      "end": 5.98
+    },
+    {
+      "word": "where",
+      "start": 5.98,
+      "end": 6.2
+    },
+    {
+      "word": "large",
+      "start": 6.2,
+      "end": 6.46
+    },
+    {
+      "word": "language",
+      "start": 6.46,
+      "end": 6.74
+    },
+    {
+      "word": "models",
+      "start": 6.74,
+      "end": 6.98
+    },
+    {
+      "word": "shine.",
+      "start": 6.98,
+      "end": 7.34
+    },
+    {
+      "word": "Surrounding",
+      "start": 8.1,
+      "end": 8.58
+    },
+    {
+      "word": "that",
+      "start": 8.58,
+      "end": 8.66
+    },
+    {
+      "word": "core,",
+      "start": 8.66,
+      "end": 8.88
+    },
+    {
+      "word": "the",
+      "start": 9.14,
+      "end": 9.26
+    },
+    {
+      "word": "harness",
+      "start": 9.26,
+      "end": 9.5
+    },
+    {
+      "word": "owns",
+      "start": 9.5,
+      "end": 9.74
+    },
+    {
+      "word": "everything",
+      "start": 9.74,
+      "end": 10.2
+    },
+    {
+      "word": "deterministic,",
+      "start": 10.2,
+      "end": 10.92
+    },
+    {
+      "word": "executing",
+      "start": 11.08,
+      "end": 11.46
+    },
+    {
+      "word": "tools",
+      "start": 11.46,
+      "end": 11.86
+    },
+    {
+      "word": "reliably,",
+      "start": 11.86,
+      "end": 12.24
+    },
+    {
+      "word": "keeping",
+      "start": 12.62,
+      "end": 12.98
+    },
+    {
+      "word": "context",
+      "start": 12.98,
+      "end": 13.42
+    },
+    {
+      "word": "hygiene",
+      "start": 13.42,
+      "end": 13.74
+    },
+    {
+      "word": "tight,",
+      "start": 13.74,
+      "end": 14.18
+    },
+    {
+      "word": "enforcing",
+      "start": 14.36,
+      "end": 14.98
+    },
+    {
+      "word": "hard",
+      "start": 14.98,
+      "end": 15.18
+    },
+    {
+      "word": "safety",
+      "start": 15.18,
+      "end": 15.48
+    },
+    {
+      "word": "perimeters,",
+      "start": 15.48,
+      "end": 15.94
+    },
+    {
+      "word": "and",
+      "start": 16.12,
+      "end": 16.36
+    },
+    {
+      "word": "delivering",
+      "start": 16.36,
+      "end": 16.68
+    },
+    {
+      "word": "ground",
+      "start": 16.68,
+      "end": 17.0
+    },
+    {
+      "word": "truth",
+      "start": 17.0,
+      "end": 17.24
+    },
+    {
+      "word": "feedback",
+      "start": 17.24,
+      "end": 17.58
+    },
+    {
+      "word": "from",
+      "start": 17.58,
+      "end": 17.9
+    },
+    {
+      "word": "the",
+      "start": 17.9,
+      "end": 18.0
+    },
+    {
+      "word": "real",
+      "start": 18.0,
+      "end": 18.16
+    },
+    {
+      "word": "world.",
+      "start": 18.16,
+      "end": 18.44
+    },
+    {
+      "word": "Whenever",
+      "start": 18.86,
+      "end": 19.34
+    },
+    {
+      "word": "you",
+      "start": 19.34,
+      "end": 19.52
+    },
+    {
+      "word": "feel",
+      "start": 19.52,
+      "end": 19.68
+    },
+    {
+      "word": "tempted",
+      "start": 19.68,
+      "end": 20.04
+    },
+    {
+      "word": "to",
+      "start": 20.04,
+      "end": 20.2
+    },
+    {
+      "word": "solve",
+      "start": 20.2,
+      "end": 20.44
+    },
+    {
+      "word": "a",
+      "start": 20.44,
+      "end": 20.58
+    },
+    {
+      "word": "reliability",
+      "start": 20.58,
+      "end": 20.92
+    },
+    {
+      "word": "bug",
+      "start": 20.92,
+      "end": 21.34
+    },
+    {
+      "word": "by",
+      "start": 21.34,
+      "end": 21.58
+    },
+    {
+      "word": "stuffing",
+      "start": 21.58,
+      "end": 21.88
+    },
+    {
+      "word": "more",
+      "start": 21.88,
+      "end": 22.1
+    },
+    {
+      "word": "rules",
+      "start": 22.1,
+      "end": 22.4
+    },
+    {
+      "word": "into",
+      "start": 22.4,
+      "end": 22.66
+    },
+    {
+      "word": "a",
+      "start": 22.66,
+      "end": 22.8
+    },
+    {
+      "word": "prompt,",
+      "start": 22.8,
+      "end": 23.12
+    },
+    {
+      "word": "stop",
+      "start": 23.3,
+      "end": 23.66
+    },
+    {
+      "word": "and",
+      "start": 23.66,
+      "end": 23.98
+    },
+    {
+      "word": "ask",
+      "start": 23.98,
+      "end": 24.36
+    },
+    {
+      "word": "whether",
+      "start": 24.36,
+      "end": 24.52
+    },
+    {
+      "word": "the",
+      "start": 24.52,
+      "end": 24.68
+    },
+    {
+      "word": "harness",
+      "start": 24.68,
+      "end": 24.9
+    },
+    {
+      "word": "should",
+      "start": 24.9,
+      "end": 25.08
+    },
+    {
+      "word": "own",
+      "start": 25.08,
+      "end": 25.28
+    },
+    {
+      "word": "that",
+      "start": 25.28,
+      "end": 25.42
+    },
+    {
+      "word": "guarantee",
+      "start": 25.42,
+      "end": 25.8
+    },
+    {
+      "word": "in",
+      "start": 25.8,
+      "end": 26.02
+    },
+    {
+      "word": "code",
+      "start": 26.02,
+      "end": 26.22
+    },
+    {
+      "word": "instead.",
+      "start": 26.22,
+      "end": 26.58
+    }
+  ]
+}

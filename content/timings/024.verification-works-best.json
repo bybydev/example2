@@ -1,0 +1,1032 @@
+{
+  "audio": "024.verification-works-best.mp3",
+  "paragraph": 24,
+  "text": "Verification works best when it is enforced by code, not by prompt begging. Every builder has tried writing strict warnings in a system prompt, like never touch the environment file and always run the typechecker, only to watch the model forget twenty turns later. Harnesses like Claude Code replace prompt begging with deterministic lifecycle hooks. A pre-tool-use hook inspects every tool call before it runs and blocks secret files outright. A post-tool-use hook fires automatically after an edit, running TypeScript checks and targeted tests without relying on model willpower.",
+  "transcript": "Verification works best when it is enforced by code, not by prompt begging. Every builder has tried writing strict warnings in a system prompt, like never touch the environment file and always run the type checker, only to watch the model forget 20 turns later. Harnesses like Claude Code replace prompt begging with deterministic lifecycle hooks. A pre-tool use hook inspects every tool call before it runs and blocks secret files outright. A post-tool use hook fires automatically after an edit, it, running TypeScript checks and targeted tests without relying on model willpower.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 30.8,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [
+    "it,"
+  ],
+  "words": [
+    {
+      "word": "Verification",
+      "start": 0.0,
+      "end": 0.58,
+      "match": "exact"
+    },
+    {
+      "word": "works",
+      "start": 0.58,
+      "end": 0.94,
+      "match": "exact"
+    },
+    {
+      "word": "best",
+      "start": 0.94,
+      "end": 1.26,
+      "match": "exact"
+    },
+    {
+      "word": "when",
+      "start": 1.26,
+      "end": 1.5,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 1.5,
+      "end": 1.6,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 1.6,
+      "end": 1.72,
+      "match": "exact"
+    },
+    {
+      "word": "enforced",
+      "start": 1.72,
+      "end": 2.06,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 2.06,
+      "end": 2.34,
+      "match": "exact"
+    },
+    {
+      "word": "code,",
+      "start": 2.34,
+      "end": 2.7,
+      "match": "exact"
+    },
+    {
+      "word": "not",
+      "start": 2.86,
+      "end": 3.1,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 3.1,
+      "end": 3.28,
+      "match": "exact"
+    },
+    {
+      "word": "prompt",
+      "start": 3.28,
+      "end": 3.56,
+      "match": "exact"
+    },
+    {
+      "word": "begging.",
+      "start": 3.56,
+      "end": 3.84,
+      "match": "exact"
+    },
+    {
+      "word": "Every",
+      "start": 4.3,
+      "end": 4.82,
+      "match": "exact"
+    },
+    {
+      "word": "builder",
+      "start": 4.82,
+      "end": 5.12,
+      "match": "exact"
+    },
+    {
+      "word": "has",
+      "start": 5.12,
+      "end": 5.28,
+      "match": "exact"
+    },
+    {
+      "word": "tried",
+      "start": 5.28,
+      "end": 5.52,
+      "match": "exact"
+    },
+    {
+      "word": "writing",
+      "start": 5.52,
+      "end": 5.78,
+      "match": "exact"
+    },
+    {
+      "word": "strict",
+      "start": 5.78,
+      "end": 6.04,
+      "match": "exact"
+    },
+    {
+      "word": "warnings",
+      "start": 6.04,
+      "end": 6.48,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 6.48,
+      "end": 6.66,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 6.66,
+      "end": 6.74,
+      "match": "exact"
+    },
+    {
+      "word": "system",
+      "start": 6.74,
+      "end": 6.96,
+      "match": "exact"
+    },
+    {
+      "word": "prompt,",
+      "start": 6.96,
+      "end": 7.32,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 7.46,
+      "end": 7.78,
+      "match": "exact"
+    },
+    {
+      "word": "never",
+      "start": 7.78,
+      "end": 8.0,
+      "match": "exact"
+    },
+    {
+      "word": "touch",
+      "start": 8.0,
+      "end": 8.26,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 8.26,
+      "end": 8.42,
+      "match": "exact"
+    },
+    {
+      "word": "environment",
+      "start": 8.42,
+      "end": 8.66,
+      "match": "exact"
+    },
+    {
+      "word": "file",
+      "start": 8.66,
+      "end": 9.04,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 9.04,
+      "end": 9.34,
+      "match": "exact"
+    },
+    {
+      "word": "always",
+      "start": 9.34,
+      "end": 9.64,
+      "match": "exact"
+    },
+    {
+      "word": "run",
+      "start": 9.64,
+      "end": 9.9,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 9.9,
+      "end": 10.04,
+      "match": "exact"
+    },
+    {
+      "word": "typechecker,",
+      "start": 10.04,
+      "end": 10.58,
+      "match": "exact"
+    },
+    {
+      "word": "only",
+      "start": 10.62,
+      "end": 10.96,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 10.96,
+      "end": 11.12,
+      "match": "exact"
+    },
+    {
+      "word": "watch",
+      "start": 11.12,
+      "end": 11.32,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 11.32,
+      "end": 11.5,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 11.5,
+      "end": 11.72,
+      "match": "exact"
+    },
+    {
+      "word": "forget",
+      "start": 11.72,
+      "end": 11.94,
+      "match": "exact"
+    },
+    {
+      "word": "twenty",
+      "start": 11.94,
+      "end": 12.28,
+      "match": "exact"
+    },
+    {
+      "word": "turns",
+      "start": 12.28,
+      "end": 12.54,
+      "match": "exact"
+    },
+    {
+      "word": "later.",
+      "start": 12.54,
+      "end": 12.8,
+      "match": "exact"
+    },
+    {
+      "word": "Harnesses",
+      "start": 13.54,
+      "end": 14.06,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 14.06,
+      "end": 14.18,
+      "match": "exact"
+    },
+    {
+      "word": "Claude",
+      "start": 14.18,
+      "end": 14.48,
+      "match": "exact"
+    },
+    {
+      "word": "Code",
+      "start": 14.48,
+      "end": 14.7,
+      "match": "exact"
+    },
+    {
+      "word": "replace",
+      "start": 14.7,
+      "end": 15.02,
+      "match": "exact"
+    },
+    {
+      "word": "prompt",
+      "start": 15.02,
+      "end": 15.4,
+      "match": "exact"
+    },
+    {
+      "word": "begging",
+      "start": 15.4,
+      "end": 15.68,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 15.68,
+      "end": 15.98,
+      "match": "exact"
+    },
+    {
+      "word": "deterministic",
+      "start": 15.98,
+      "end": 16.6,
+      "match": "exact"
+    },
+    {
+      "word": "lifecycle",
+      "start": 16.6,
+      "end": 16.84,
+      "match": "exact"
+    },
+    {
+      "word": "hooks.",
+      "start": 16.84,
+      "end": 17.36,
+      "match": "exact"
+    },
+    {
+      "word": "A",
+      "start": 18.44,
+      "end": 18.96,
+      "match": "exact"
+    },
+    {
+      "word": "pre-tool-use",
+      "start": 18.96,
+      "end": 19.56,
+      "match": "exact"
+    },
+    {
+      "word": "hook",
+      "start": 19.56,
+      "end": 19.8,
+      "match": "exact"
+    },
+    {
+      "word": "inspects",
+      "start": 19.8,
+      "end": 20.34,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 20.34,
+      "end": 20.52,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 20.52,
+      "end": 20.8,
+      "match": "exact"
+    },
+    {
+      "word": "call",
+      "start": 20.8,
+      "end": 21.0,
+      "match": "exact"
+    },
+    {
+      "word": "before",
+      "start": 21.0,
+      "end": 21.24,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 21.24,
+      "end": 21.42,
+      "match": "exact"
+    },
+    {
+      "word": "runs",
+      "start": 21.42,
+      "end": 21.76,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 21.76,
+      "end": 21.88,
+      "match": "exact"
+    },
+    {
+      "word": "blocks",
+      "start": 21.88,
+      "end": 22.12,
+      "match": "exact"
+    },
+    {
+      "word": "secret",
+      "start": 22.12,
+      "end": 22.4,
+      "match": "exact"
+    },
+    {
+      "word": "files",
+      "start": 22.4,
+      "end": 22.7,
+      "match": "exact"
+    },
+    {
+      "word": "outright.",
+      "start": 22.7,
+      "end": 23.1,
+      "match": "exact"
+    },
+    {
+      "word": "A",
+      "start": 23.4,
+      "end": 23.84,
+      "match": "exact"
+    },
+    {
+      "word": "post-tool-use",
+      "start": 23.84,
+      "end": 24.52,
+      "match": "exact"
+    },
+    {
+      "word": "hook",
+      "start": 24.52,
+      "end": 24.78,
+      "match": "exact"
+    },
+    {
+      "word": "fires",
+      "start": 24.78,
+      "end": 25.12,
+      "match": "exact"
+    },
+    {
+      "word": "automatically",
+      "start": 25.12,
+      "end": 25.58,
+      "match": "exact"
+    },
+    {
+      "word": "after",
+      "start": 25.58,
+      "end": 26.08,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 26.08,
+      "end": 26.26,
+      "match": "exact"
+    },
+    {
+      "word": "edit,",
+      "start": 26.26,
+      "end": 26.44,
+      "match": "exact"
+    },
+    {
+      "word": "running",
+      "start": 26.58,
+      "end": 26.92,
+      "match": "exact"
+    },
+    {
+      "word": "TypeScript",
+      "start": 26.92,
+      "end": 27.38,
+      "match": "exact"
+    },
+    {
+      "word": "checks",
+      "start": 27.38,
+      "end": 27.66,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 27.66,
+      "end": 27.9,
+      "match": "exact"
+    },
+    {
+      "word": "targeted",
+      "start": 27.9,
+      "end": 28.22,
+      "match": "exact"
+    },
+    {
+      "word": "tests",
+      "start": 28.22,
+      "end": 28.54,
+      "match": "exact"
+    },
+    {
+      "word": "without",
+      "start": 28.54,
+      "end": 28.94,
+      "match": "exact"
+    },
+    {
+      "word": "relying",
+      "start": 28.94,
+      "end": 29.3,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 29.3,
+      "end": 29.56,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 29.56,
+      "end": 29.74,
+      "match": "exact"
+    },
+    {
+      "word": "willpower.",
+      "start": 29.74,
+      "end": 30.18,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Verification",
+      "start": 0.0,
+      "end": 0.58
+    },
+    {
+      "word": "works",
+      "start": 0.58,
+      "end": 0.94
+    },
+    {
+      "word": "best",
+      "start": 0.94,
+      "end": 1.26
+    },
+    {
+      "word": "when",
+      "start": 1.26,
+      "end": 1.5
+    },
+    {
+      "word": "it",
+      "start": 1.5,
+      "end": 1.6
+    },
+    {
+      "word": "is",
+      "start": 1.6,
+      "end": 1.72
+    },
+    {
+      "word": "enforced",
+      "start": 1.72,
+      "end": 2.06
+    },
+    {
+      "word": "by",
+      "start": 2.06,
+      "end": 2.34
+    },
+    {
+      "word": "code,",
+      "start": 2.34,
+      "end": 2.7
+    },
+    {
+      "word": "not",
+      "start": 2.86,
+      "end": 3.1
+    },
+    {
+      "word": "by",
+      "start": 3.1,
+      "end": 3.28
+    },
+    {
+      "word": "prompt",
+      "start": 3.28,
+      "end": 3.56
+    },
+    {
+      "word": "begging.",
+      "start": 3.56,
+      "end": 3.84
+    },
+    {
+      "word": "Every",
+      "start": 4.3,
+      "end": 4.82
+    },
+    {
+      "word": "builder",
+      "start": 4.82,
+      "end": 5.12
+    },
+    {
+      "word": "has",
+      "start": 5.12,
+      "end": 5.28
+    },
+    {
+      "word": "tried",
+      "start": 5.28,
+      "end": 5.52
+    },
+    {
+      "word": "writing",
+      "start": 5.52,
+      "end": 5.78
+    },
+    {
+      "word": "strict",
+      "start": 5.78,
+      "end": 6.04
+    },
+    {
+      "word": "warnings",
+      "start": 6.04,
+      "end": 6.48
+    },
+    {
+      "word": "in",
+      "start": 6.48,
+      "end": 6.66
+    },
+    {
+      "word": "a",
+      "start": 6.66,
+      "end": 6.74
+    },
+    {
+      "word": "system",
+      "start": 6.74,
+      "end": 6.96
+    },
+    {
+      "word": "prompt,",
+      "start": 6.96,
+      "end": 7.32
+    },
+    {
+      "word": "like",
+      "start": 7.46,
+      "end": 7.78
+    },
+    {
+      "word": "never",
+      "start": 7.78,
+      "end": 8.0
+    },
+    {
+      "word": "touch",
+      "start": 8.0,
+      "end": 8.26
+    },
+    {
+      "word": "the",
+      "start": 8.26,
+      "end": 8.42
+    },
+    {
+      "word": "environment",
+      "start": 8.42,
+      "end": 8.66
+    },
+    {
+      "word": "file",
+      "start": 8.66,
+      "end": 9.04
+    },
+    {
+      "word": "and",
+      "start": 9.04,
+      "end": 9.34
+    },
+    {
+      "word": "always",
+      "start": 9.34,
+      "end": 9.64
+    },
+    {
+      "word": "run",
+      "start": 9.64,
+      "end": 9.9
+    },
+    {
+      "word": "the",
+      "start": 9.9,
+      "end": 10.04
+    },
+    {
+      "word": "type",
+      "start": 10.04,
+      "end": 10.2
+    },
+    {
+      "word": "checker,",
+      "start": 10.2,
+      "end": 10.58
+    },
+    {
+      "word": "only",
+      "start": 10.62,
+      "end": 10.96
+    },
+    {
+      "word": "to",
+      "start": 10.96,
+      "end": 11.12
+    },
+    {
+      "word": "watch",
+      "start": 11.12,
+      "end": 11.32
+    },
+    {
+      "word": "the",
+      "start": 11.32,
+      "end": 11.5
+    },
+    {
+      "word": "model",
+      "start": 11.5,
+      "end": 11.72
+    },
+    {
+      "word": "forget",
+      "start": 11.72,
+      "end": 11.94
+    },
+    {
+      "word": "20",
+      "start": 11.94,
+      "end": 12.28
+    },
+    {
+      "word": "turns",
+      "start": 12.28,
+      "end": 12.54
+    },
+    {
+      "word": "later.",
+      "start": 12.54,
+      "end": 12.8
+    },
+    {
+      "word": "Harnesses",
+      "start": 13.54,
+      "end": 14.06
+    },
+    {
+      "word": "like",
+      "start": 14.06,
+      "end": 14.18
+    },
+    {
+      "word": "Claude",
+      "start": 14.18,
+      "end": 14.48
+    },
+    {
+      "word": "Code",
+      "start": 14.48,
+      "end": 14.7
+    },
+    {
+      "word": "replace",
+      "start": 14.7,
+      "end": 15.02
+    },
+    {
+      "word": "prompt",
+      "start": 15.02,
+      "end": 15.4
+    },
+    {
+      "word": "begging",
+      "start": 15.4,
+      "end": 15.68
+    },
+    {
+      "word": "with",
+      "start": 15.68,
+      "end": 15.98
+    },
+    {
+      "word": "deterministic",
+      "start": 15.98,
+      "end": 16.6
+    },
+    {
+      "word": "lifecycle",
+      "start": 16.6,
+      "end": 16.84
+    },
+    {
+      "word": "hooks.",
+      "start": 16.84,
+      "end": 17.36
+    },
+    {
+      "word": "A",
+      "start": 18.44,
+      "end": 18.96
+    },
+    {
+      "word": "pre",
+      "start": 18.96,
+      "end": 19.14
+    },
+    {
+      "word": "-tool",
+      "start": 19.14,
+      "end": 19.36
+    },
+    {
+      "word": "use",
+      "start": 19.36,
+      "end": 19.56
+    },
+    {
+      "word": "hook",
+      "start": 19.56,
+      "end": 19.8
+    },
+    {
+      "word": "inspects",
+      "start": 19.8,
+      "end": 20.34
+    },
+    {
+      "word": "every",
+      "start": 20.34,
+      "end": 20.52
+    },
+    {
+      "word": "tool",
+      "start": 20.52,
+      "end": 20.8
+    },
+    {
+      "word": "call",
+      "start": 20.8,
+      "end": 21.0
+    },
+    {
+      "word": "before",
+      "start": 21.0,
+      "end": 21.24
+    },
+    {
+      "word": "it",
+      "start": 21.24,
+      "end": 21.42
+    },
+    {
+      "word": "runs",
+      "start": 21.42,
+      "end": 21.76
+    },
+    {
+      "word": "and",
+      "start": 21.76,
+      "end": 21.88
+    },
+    {
+      "word": "blocks",
+      "start": 21.88,
+      "end": 22.12
+    },
+    {
+      "word": "secret",
+      "start": 22.12,
+      "end": 22.4
+    },
+    {
+      "word": "files",
+      "start": 22.4,
+      "end": 22.7
+    },
+    {
+      "word": "outright.",
+      "start": 22.7,
+      "end": 23.1
+    },
+    {
+      "word": "A",
+      "start": 23.4,
+      "end": 23.84
+    },
+    {
+      "word": "post",
+      "start": 23.84,
+      "end": 24.14
+    },
+    {
+      "word": "-tool",
+      "start": 24.14,
+      "end": 24.34
+    },
+    {
+      "word": "use",
+      "start": 24.34,
+      "end": 24.52
+    },
+    {
+      "word": "hook",
+      "start": 24.52,
+      "end": 24.78
+    },
+    {
+      "word": "fires",
+      "start": 24.78,
+      "end": 25.12
+    },
+    {
+      "word": "automatically",
+      "start": 25.12,
+      "end": 25.58
+    },
+    {
+      "word": "after",
+      "start": 25.58,
+      "end": 26.08
+    },
+    {
+      "word": "an",
+      "start": 26.08,
+      "end": 26.26
+    },
+    {
+      "word": "edit,",
+      "start": 26.26,
+      "end": 26.44
+    },
+    {
+      "word": "it,",
+      "start": 26.44,
+      "end": 26.58
+    },
+    {
+      "word": "running",
+      "start": 26.58,
+      "end": 26.92
+    },
+    {
+      "word": "TypeScript",
+      "start": 26.92,
+      "end": 27.38
+    },
+    {
+      "word": "checks",
+      "start": 27.38,
+      "end": 27.66
+    },
+    {
+      "word": "and",
+      "start": 27.66,
+      "end": 27.9
+    },
+    {
+      "word": "targeted",
+      "start": 27.9,
+      "end": 28.22
+    },
+    {
+      "word": "tests",
+      "start": 28.22,
+      "end": 28.54
+    },
+    {
+      "word": "without",
+      "start": 28.54,
+      "end": 28.94
+    },
+    {
+      "word": "relying",
+      "start": 28.94,
+      "end": 29.3
+    },
+    {
+      "word": "on",
+      "start": 29.3,
+      "end": 29.56
+    },
+    {
+      "word": "model",
+      "start": 29.56,
+      "end": 29.74
+    },
+    {
+      "word": "willpower.",
+      "start": 29.74,
+      "end": 30.18
+    }
+  ]
+}

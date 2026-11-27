@@ -1,0 +1,1066 @@
+{
+  "audio": "032.with-traces-in.mp3",
+  "paragraph": 32,
+  "text": "With traces in hand, benchmark harness changes like real systems engineering instead of vibes. Run a fixed suite of realistic repository tasks and separate capability ceiling from production consistency. Pass at K asks whether the agent solved a task at least once in K attempts. Pass to the K asks whether it succeeded on all K runs in a row. An eighty percent single-run agent looks great on pass at three, yet drops to fifty-one percent on pass to the third. Track that reliability curve alongside cost per solved task and median turns.",
+  "transcript": "With traces in hand, benchmark harness changes like real systems engineering instead of vibes. Run a fixed suite of realistic repository tasks and separate capability ceiling from production consistency. Pass at K asks whether the agent solved a task at least once in K attempts. Pass to the K asks whether it succeeded on all K runs in a row. An 80% single run agent looks great on pass at 3, yet drops to 51% on pass to the 3rd. Track that reliability curve alongside cost per solve task and median turns.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 2
+    }
+  ],
+  "duration": 28.84,
+  "failed_words": 2,
+  "failures": [
+    {
+      "index": 80,
+      "word": "third.",
+      "match": "approx",
+      "heard": "3rd.",
+      "start": 23.88
+    },
+    {
+      "index": 88,
+      "word": "solved",
+      "match": "approx",
+      "heard": "solve",
+      "start": 27.02
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "With",
+      "start": 0.0,
+      "end": 0.44,
+      "match": "exact"
+    },
+    {
+      "word": "traces",
+      "start": 0.44,
+      "end": 0.74,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 0.74,
+      "end": 0.92,
+      "match": "exact"
+    },
+    {
+      "word": "hand,",
+      "start": 0.92,
+      "end": 1.2,
+      "match": "exact"
+    },
+    {
+      "word": "benchmark",
+      "start": 1.34,
+      "end": 1.74,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 1.74,
+      "end": 2.12,
+      "match": "exact"
+    },
+    {
+      "word": "changes",
+      "start": 2.12,
+      "end": 2.4,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 2.4,
+      "end": 2.72,
+      "match": "exact"
+    },
+    {
+      "word": "real",
+      "start": 2.72,
+      "end": 2.92,
+      "match": "exact"
+    },
+    {
+      "word": "systems",
+      "start": 2.92,
+      "end": 3.3,
+      "match": "exact"
+    },
+    {
+      "word": "engineering",
+      "start": 3.3,
+      "end": 3.64,
+      "match": "exact"
+    },
+    {
+      "word": "instead",
+      "start": 3.64,
+      "end": 4.06,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 4.06,
+      "end": 4.28,
+      "match": "exact"
+    },
+    {
+      "word": "vibes.",
+      "start": 4.28,
+      "end": 4.5,
+      "match": "exact"
+    },
+    {
+      "word": "Run",
+      "start": 4.94,
+      "end": 5.46,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 5.46,
+      "end": 5.6,
+      "match": "exact"
+    },
+    {
+      "word": "fixed",
+      "start": 5.6,
+      "end": 5.86,
+      "match": "exact"
+    },
+    {
+      "word": "suite",
+      "start": 5.86,
+      "end": 6.18,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 6.18,
+      "end": 6.46,
+      "match": "exact"
+    },
+    {
+      "word": "realistic",
+      "start": 6.46,
+      "end": 6.76,
+      "match": "exact"
+    },
+    {
+      "word": "repository",
+      "start": 6.76,
+      "end": 7.14,
+      "match": "exact"
+    },
+    {
+      "word": "tasks",
+      "start": 7.14,
+      "end": 7.7,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 7.7,
+      "end": 8.06,
+      "match": "exact"
+    },
+    {
+      "word": "separate",
+      "start": 8.06,
+      "end": 8.38,
+      "match": "exact"
+    },
+    {
+      "word": "capability",
+      "start": 8.38,
+      "end": 8.74,
+      "match": "exact"
+    },
+    {
+      "word": "ceiling",
+      "start": 8.74,
+      "end": 9.2,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 9.2,
+      "end": 9.46,
+      "match": "exact"
+    },
+    {
+      "word": "production",
+      "start": 9.46,
+      "end": 9.76,
+      "match": "exact"
+    },
+    {
+      "word": "consistency.",
+      "start": 9.76,
+      "end": 10.26,
+      "match": "exact"
+    },
+    {
+      "word": "Pass",
+      "start": 11.26,
+      "end": 11.64,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 11.64,
+      "end": 11.8,
+      "match": "exact"
+    },
+    {
+      "word": "K",
+      "start": 11.8,
+      "end": 11.9,
+      "match": "exact"
+    },
+    {
+      "word": "asks",
+      "start": 11.9,
+      "end": 12.2,
+      "match": "exact"
+    },
+    {
+      "word": "whether",
+      "start": 12.2,
+      "end": 12.58,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 12.58,
+      "end": 12.74,
+      "match": "exact"
+    },
+    {
+      "word": "agent",
+      "start": 12.74,
+      "end": 13.0,
+      "match": "exact"
+    },
+    {
+      "word": "solved",
+      "start": 13.0,
+      "end": 13.28,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 13.28,
+      "end": 13.46,
+      "match": "exact"
+    },
+    {
+      "word": "task",
+      "start": 13.46,
+      "end": 13.72,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 13.72,
+      "end": 13.86,
+      "match": "exact"
+    },
+    {
+      "word": "least",
+      "start": 13.86,
+      "end": 13.98,
+      "match": "exact"
+    },
+    {
+      "word": "once",
+      "start": 13.98,
+      "end": 14.22,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 14.22,
+      "end": 14.44,
+      "match": "exact"
+    },
+    {
+      "word": "K",
+      "start": 14.44,
+      "end": 14.52,
+      "match": "exact"
+    },
+    {
+      "word": "attempts.",
+      "start": 14.52,
+      "end": 14.82,
+      "match": "exact"
+    },
+    {
+      "word": "Pass",
+      "start": 15.3,
+      "end": 15.66,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 15.66,
+      "end": 15.84,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 15.84,
+      "end": 15.88,
+      "match": "exact"
+    },
+    {
+      "word": "K",
+      "start": 15.88,
+      "end": 16.06,
+      "match": "exact"
+    },
+    {
+      "word": "asks",
+      "start": 16.06,
+      "end": 16.36,
+      "match": "exact"
+    },
+    {
+      "word": "whether",
+      "start": 16.36,
+      "end": 16.7,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 16.7,
+      "end": 16.84,
+      "match": "exact"
+    },
+    {
+      "word": "succeeded",
+      "start": 16.84,
+      "end": 17.14,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 17.14,
+      "end": 17.46,
+      "match": "exact"
+    },
+    {
+      "word": "all",
+      "start": 17.46,
+      "end": 17.68,
+      "match": "exact"
+    },
+    {
+      "word": "K",
+      "start": 17.68,
+      "end": 17.84,
+      "match": "exact"
+    },
+    {
+      "word": "runs",
+      "start": 17.84,
+      "end": 18.1,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 18.1,
+      "end": 18.28,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 18.28,
+      "end": 18.36,
+      "match": "exact"
+    },
+    {
+      "word": "row.",
+      "start": 18.36,
+      "end": 18.48,
+      "match": "exact"
+    },
+    {
+      "word": "An",
+      "start": 18.8,
+      "end": 19.22,
+      "match": "exact"
+    },
+    {
+      "word": "eighty",
+      "start": 19.22,
+      "end": 19.42,
+      "match": "exact"
+    },
+    {
+      "word": "percent",
+      "start": 19.42,
+      "end": 19.68,
+      "match": "exact"
+    },
+    {
+      "word": "single-run",
+      "start": 19.68,
+      "end": 20.22,
+      "match": "exact"
+    },
+    {
+      "word": "agent",
+      "start": 20.22,
+      "end": 20.42,
+      "match": "exact"
+    },
+    {
+      "word": "looks",
+      "start": 20.42,
+      "end": 20.68,
+      "match": "exact"
+    },
+    {
+      "word": "great",
+      "start": 20.68,
+      "end": 20.96,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 20.96,
+      "end": 21.12,
+      "match": "exact"
+    },
+    {
+      "word": "pass",
+      "start": 21.12,
+      "end": 21.3,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 21.3,
+      "end": 21.46,
+      "match": "exact"
+    },
+    {
+      "word": "three,",
+      "start": 21.46,
+      "end": 21.64,
+      "match": "exact"
+    },
+    {
+      "word": "yet",
+      "start": 21.78,
+      "end": 22.14,
+      "match": "exact"
+    },
+    {
+      "word": "drops",
+      "start": 22.14,
+      "end": 22.36,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 22.36,
+      "end": 22.54,
+      "match": "exact"
+    },
+    {
+      "word": "fifty-one",
+      "start": 22.54,
+      "end": 22.86,
+      "match": "exact"
+    },
+    {
+      "word": "percent",
+      "start": 22.86,
+      "end": 23.22,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 23.22,
+      "end": 23.42,
+      "match": "exact"
+    },
+    {
+      "word": "pass",
+      "start": 23.42,
+      "end": 23.64,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 23.64,
+      "end": 23.84,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 23.84,
+      "end": 23.88,
+      "match": "exact"
+    },
+    {
+      "word": "third.",
+      "start": 23.88,
+      "end": 24.22,
+      "match": "approx",
+      "heard": "3rd."
+    },
+    {
+      "word": "Track",
+      "start": 24.5,
+      "end": 25.02,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 25.02,
+      "end": 25.14,
+      "match": "exact"
+    },
+    {
+      "word": "reliability",
+      "start": 25.14,
+      "end": 25.46,
+      "match": "exact"
+    },
+    {
+      "word": "curve",
+      "start": 25.46,
+      "end": 25.92,
+      "match": "exact"
+    },
+    {
+      "word": "alongside",
+      "start": 25.92,
+      "end": 26.26,
+      "match": "exact"
+    },
+    {
+      "word": "cost",
+      "start": 26.26,
+      "end": 26.76,
+      "match": "exact"
+    },
+    {
+      "word": "per",
+      "start": 26.76,
+      "end": 27.02,
+      "match": "exact"
+    },
+    {
+      "word": "solved",
+      "start": 27.02,
+      "end": 27.26,
+      "match": "approx",
+      "heard": "solve"
+    },
+    {
+      "word": "task",
+      "start": 27.26,
+      "end": 27.5,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 27.5,
+      "end": 27.84,
+      "match": "exact"
+    },
+    {
+      "word": "median",
+      "start": 27.84,
+      "end": 28.08,
+      "match": "exact"
+    },
+    {
+      "word": "turns.",
+      "start": 28.08,
+      "end": 28.34,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "With",
+      "start": 0.0,
+      "end": 0.44
+    },
+    {
+      "word": "traces",
+      "start": 0.44,
+      "end": 0.74
+    },
+    {
+      "word": "in",
+      "start": 0.74,
+      "end": 0.92
+    },
+    {
+      "word": "hand,",
+      "start": 0.92,
+      "end": 1.2
+    },
+    {
+      "word": "benchmark",
+      "start": 1.34,
+      "end": 1.74
+    },
+    {
+      "word": "harness",
+      "start": 1.74,
+      "end": 2.12
+    },
+    {
+      "word": "changes",
+      "start": 2.12,
+      "end": 2.4
+    },
+    {
+      "word": "like",
+      "start": 2.4,
+      "end": 2.72
+    },
+    {
+      "word": "real",
+      "start": 2.72,
+      "end": 2.92
+    },
+    {
+      "word": "systems",
+      "start": 2.92,
+      "end": 3.3
+    },
+    {
+      "word": "engineering",
+      "start": 3.3,
+      "end": 3.64
+    },
+    {
+      "word": "instead",
+      "start": 3.64,
+      "end": 4.06
+    },
+    {
+      "word": "of",
+      "start": 4.06,
+      "end": 4.28
+    },
+    {
+      "word": "vibes.",
+      "start": 4.28,
+      "end": 4.5
+    },
+    {
+      "word": "Run",
+      "start": 4.94,
+      "end": 5.46
+    },
+    {
+      "word": "a",
+      "start": 5.46,
+      "end": 5.6
+    },
+    {
+      "word": "fixed",
+      "start": 5.6,
+      "end": 5.86
+    },
+    {
+      "word": "suite",
+      "start": 5.86,
+      "end": 6.18
+    },
+    {
+      "word": "of",
+      "start": 6.18,
+      "end": 6.46
+    },
+    {
+      "word": "realistic",
+      "start": 6.46,
+      "end": 6.76
+    },
+    {
+      "word": "repository",
+      "start": 6.76,
+      "end": 7.14
+    },
+    {
+      "word": "tasks",
+      "start": 7.14,
+      "end": 7.7
+    },
+    {
+      "word": "and",
+      "start": 7.7,
+      "end": 8.06
+    },
+    {
+      "word": "separate",
+      "start": 8.06,
+      "end": 8.38
+    },
+    {
+      "word": "capability",
+      "start": 8.38,
+      "end": 8.74
+    },
+    {
+      "word": "ceiling",
+      "start": 8.74,
+      "end": 9.2
+    },
+    {
+      "word": "from",
+      "start": 9.2,
+      "end": 9.46
+    },
+    {
+      "word": "production",
+      "start": 9.46,
+      "end": 9.76
+    },
+    {
+      "word": "consistency.",
+      "start": 9.76,
+      "end": 10.26
+    },
+    {
+      "word": "Pass",
+      "start": 11.26,
+      "end": 11.64
+    },
+    {
+      "word": "at",
+      "start": 11.64,
+      "end": 11.8
+    },
+    {
+      "word": "K",
+      "start": 11.8,
+      "end": 11.9
+    },
+    {
+      "word": "asks",
+      "start": 11.9,
+      "end": 12.2
+    },
+    {
+      "word": "whether",
+      "start": 12.2,
+      "end": 12.58
+    },
+    {
+      "word": "the",
+      "start": 12.58,
+      "end": 12.74
+    },
+    {
+      "word": "agent",
+      "start": 12.74,
+      "end": 13.0
+    },
+    {
+      "word": "solved",
+      "start": 13.0,
+      "end": 13.28
+    },
+    {
+      "word": "a",
+      "start": 13.28,
+      "end": 13.46
+    },
+    {
+      "word": "task",
+      "start": 13.46,
+      "end": 13.72
+    },
+    {
+      "word": "at",
+      "start": 13.72,
+      "end": 13.86
+    },
+    {
+      "word": "least",
+      "start": 13.86,
+      "end": 13.98
+    },
+    {
+      "word": "once",
+      "start": 13.98,
+      "end": 14.22
+    },
+    {
+      "word": "in",
+      "start": 14.22,
+      "end": 14.44
+    },
+    {
+      "word": "K",
+      "start": 14.44,
+      "end": 14.52
+    },
+    {
+      "word": "attempts.",
+      "start": 14.52,
+      "end": 14.82
+    },
+    {
+      "word": "Pass",
+      "start": 15.3,
+      "end": 15.66
+    },
+    {
+      "word": "to",
+      "start": 15.66,
+      "end": 15.84
+    },
+    {
+      "word": "the",
+      "start": 15.84,
+      "end": 15.88
+    },
+    {
+      "word": "K",
+      "start": 15.88,
+      "end": 16.06
+    },
+    {
+      "word": "asks",
+      "start": 16.06,
+      "end": 16.36
+    },
+    {
+      "word": "whether",
+      "start": 16.36,
+      "end": 16.7
+    },
+    {
+      "word": "it",
+      "start": 16.7,
+      "end": 16.84
+    },
+    {
+      "word": "succeeded",
+      "start": 16.84,
+      "end": 17.14
+    },
+    {
+      "word": "on",
+      "start": 17.14,
+      "end": 17.46
+    },
+    {
+      "word": "all",
+      "start": 17.46,
+      "end": 17.68
+    },
+    {
+      "word": "K",
+      "start": 17.68,
+      "end": 17.84
+    },
+    {
+      "word": "runs",
+      "start": 17.84,
+      "end": 18.1
+    },
+    {
+      "word": "in",
+      "start": 18.1,
+      "end": 18.28
+    },
+    {
+      "word": "a",
+      "start": 18.28,
+      "end": 18.36
+    },
+    {
+      "word": "row.",
+      "start": 18.36,
+      "end": 18.48
+    },
+    {
+      "word": "An",
+      "start": 18.8,
+      "end": 19.22
+    },
+    {
+      "word": "80",
+      "start": 19.22,
+      "end": 19.42
+    },
+    {
+      "word": "%",
+      "start": 19.42,
+      "end": 19.68
+    },
+    {
+      "word": "single",
+      "start": 19.68,
+      "end": 20.04
+    },
+    {
+      "word": "run",
+      "start": 20.04,
+      "end": 20.22
+    },
+    {
+      "word": "agent",
+      "start": 20.22,
+      "end": 20.42
+    },
+    {
+      "word": "looks",
+      "start": 20.42,
+      "end": 20.68
+    },
+    {
+      "word": "great",
+      "start": 20.68,
+      "end": 20.96
+    },
+    {
+      "word": "on",
+      "start": 20.96,
+      "end": 21.12
+    },
+    {
+      "word": "pass",
+      "start": 21.12,
+      "end": 21.3
+    },
+    {
+      "word": "at",
+      "start": 21.3,
+      "end": 21.46
+    },
+    {
+      "word": "3,",
+      "start": 21.46,
+      "end": 21.64
+    },
+    {
+      "word": "yet",
+      "start": 21.78,
+      "end": 22.14
+    },
+    {
+      "word": "drops",
+      "start": 22.14,
+      "end": 22.36
+    },
+    {
+      "word": "to",
+      "start": 22.36,
+      "end": 22.54
+    },
+    {
+      "word": "51",
+      "start": 22.54,
+      "end": 22.86
+    },
+    {
+      "word": "%",
+      "start": 22.86,
+      "end": 23.22
+    },
+    {
+      "word": "on",
+      "start": 23.22,
+      "end": 23.42
+    },
+    {
+      "word": "pass",
+      "start": 23.42,
+      "end": 23.64
+    },
+    {
+      "word": "to",
+      "start": 23.64,
+      "end": 23.84
+    },
+    {
+      "word": "the",
+      "start": 23.84,
+      "end": 23.88
+    },
+    {
+      "word": "3rd.",
+      "start": 23.88,
+      "end": 24.22
+    },
+    {
+      "word": "Track",
+      "start": 24.5,
+      "end": 25.02
+    },
+    {
+      "word": "that",
+      "start": 25.02,
+      "end": 25.14
+    },
+    {
+      "word": "reliability",
+      "start": 25.14,
+      "end": 25.46
+    },
+    {
+      "word": "curve",
+      "start": 25.46,
+      "end": 25.92
+    },
+    {
+      "word": "alongside",
+      "start": 25.92,
+      "end": 26.26
+    },
+    {
+      "word": "cost",
+      "start": 26.26,
+      "end": 26.76
+    },
+    {
+      "word": "per",
+      "start": 26.76,
+      "end": 27.02
+    },
+    {
+      "word": "solve",
+      "start": 27.02,
+      "end": 27.26
+    },
+    {
+      "word": "task",
+      "start": 27.26,
+      "end": 27.5
+    },
+    {
+      "word": "and",
+      "start": 27.5,
+      "end": 27.84
+    },
+    {
+      "word": "median",
+      "start": 27.84,
+      "end": 28.08
+    },
+    {
+      "word": "turns.",
+      "start": 28.08,
+      "end": 28.34
+    }
+  ]
+}

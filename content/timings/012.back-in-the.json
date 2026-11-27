@@ -1,0 +1,971 @@
+{
+  "audio": "012.back-in-the.mp3",
+  "paragraph": 12,
+  "text": "Back in the SWE-agent research paper, Princeton engineers named this discipline the Agent-Computer Interface, or ACI. Tools are not just backend APIs; tools are a user interface designed specifically for a language model. Suppose our agent tries to patch auth.ts and misses a line. A cryptic error like exit code one forces blind guessing. An actionable harness error returns the exact mismatch, prints lines forty through forty-eight for context, and hints at narrowing the edit target so the model recovers on the very next turn.",
+  "transcript": "Back in the SWE Agent Research paper, Princeton engineers named this discipline the Agent-Computer Interface, or ACI. Tools are not just backend APIs. Tools are a user interface designed specifically for a language model. Suppose our agent tries to patch auth.ts and misses a line. A cryptic error like exit code 1 forces blind guessing. An actionable harness error returns the exact mismatch, prints lines 40 through 48 for context, and hints at narrowing the edit target so the model recovers on the very next turn.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 28.72,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Back",
+      "start": 0.0,
+      "end": 0.26,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 0.26,
+      "end": 0.46,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.46,
+      "end": 0.56,
+      "match": "exact"
+    },
+    {
+      "word": "SWE-agent",
+      "start": 0.56,
+      "end": 1.38,
+      "match": "exact"
+    },
+    {
+      "word": "research",
+      "start": 1.38,
+      "end": 1.7,
+      "match": "exact"
+    },
+    {
+      "word": "paper,",
+      "start": 1.7,
+      "end": 2.02,
+      "match": "exact"
+    },
+    {
+      "word": "Princeton",
+      "start": 2.32,
+      "end": 2.72,
+      "match": "exact"
+    },
+    {
+      "word": "engineers",
+      "start": 2.72,
+      "end": 3.2,
+      "match": "exact"
+    },
+    {
+      "word": "named",
+      "start": 3.2,
+      "end": 3.66,
+      "match": "exact"
+    },
+    {
+      "word": "this",
+      "start": 3.66,
+      "end": 3.82,
+      "match": "exact"
+    },
+    {
+      "word": "discipline",
+      "start": 3.82,
+      "end": 4.14,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 4.14,
+      "end": 4.42,
+      "match": "exact"
+    },
+    {
+      "word": "Agent-Computer",
+      "start": 4.42,
+      "end": 5.3,
+      "match": "exact"
+    },
+    {
+      "word": "Interface,",
+      "start": 5.3,
+      "end": 5.9,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 5.94,
+      "end": 6.18,
+      "match": "exact"
+    },
+    {
+      "word": "ACI.",
+      "start": 6.18,
+      "end": 6.66,
+      "match": "exact"
+    },
+    {
+      "word": "Tools",
+      "start": 7.4,
+      "end": 7.92,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 7.92,
+      "end": 8.1,
+      "match": "exact"
+    },
+    {
+      "word": "not",
+      "start": 8.1,
+      "end": 8.22,
+      "match": "exact"
+    },
+    {
+      "word": "just",
+      "start": 8.22,
+      "end": 8.44,
+      "match": "exact"
+    },
+    {
+      "word": "backend",
+      "start": 8.44,
+      "end": 8.72,
+      "match": "exact"
+    },
+    {
+      "word": "APIs;",
+      "start": 8.72,
+      "end": 9.0,
+      "match": "exact"
+    },
+    {
+      "word": "tools",
+      "start": 9.44,
+      "end": 9.68,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 9.68,
+      "end": 9.9,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 9.9,
+      "end": 10.0,
+      "match": "exact"
+    },
+    {
+      "word": "user",
+      "start": 10.0,
+      "end": 10.2,
+      "match": "exact"
+    },
+    {
+      "word": "interface",
+      "start": 10.2,
+      "end": 10.52,
+      "match": "exact"
+    },
+    {
+      "word": "designed",
+      "start": 10.52,
+      "end": 10.92,
+      "match": "exact"
+    },
+    {
+      "word": "specifically",
+      "start": 10.92,
+      "end": 11.44,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 11.44,
+      "end": 11.8,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 11.8,
+      "end": 11.92,
+      "match": "exact"
+    },
+    {
+      "word": "language",
+      "start": 11.92,
+      "end": 12.14,
+      "match": "exact"
+    },
+    {
+      "word": "model.",
+      "start": 12.14,
+      "end": 12.38,
+      "match": "exact"
+    },
+    {
+      "word": "Suppose",
+      "start": 13.06,
+      "end": 13.58,
+      "match": "exact"
+    },
+    {
+      "word": "our",
+      "start": 13.58,
+      "end": 13.84,
+      "match": "exact"
+    },
+    {
+      "word": "agent",
+      "start": 13.84,
+      "end": 14.1,
+      "match": "exact"
+    },
+    {
+      "word": "tries",
+      "start": 14.1,
+      "end": 14.32,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 14.32,
+      "end": 14.52,
+      "match": "exact"
+    },
+    {
+      "word": "patch",
+      "start": 14.52,
+      "end": 14.7,
+      "match": "exact"
+    },
+    {
+      "word": "auth.ts",
+      "start": 14.7,
+      "end": 15.36,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 15.36,
+      "end": 15.66,
+      "match": "exact"
+    },
+    {
+      "word": "misses",
+      "start": 15.66,
+      "end": 15.9,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 15.9,
+      "end": 16.08,
+      "match": "exact"
+    },
+    {
+      "word": "line.",
+      "start": 16.08,
+      "end": 16.28,
+      "match": "exact"
+    },
+    {
+      "word": "A",
+      "start": 16.48,
+      "end": 17.0,
+      "match": "exact"
+    },
+    {
+      "word": "cryptic",
+      "start": 17.0,
+      "end": 17.32,
+      "match": "exact"
+    },
+    {
+      "word": "error",
+      "start": 17.32,
+      "end": 17.52,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 17.52,
+      "end": 17.78,
+      "match": "exact"
+    },
+    {
+      "word": "exit",
+      "start": 17.78,
+      "end": 18.02,
+      "match": "exact"
+    },
+    {
+      "word": "code",
+      "start": 18.02,
+      "end": 18.2,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 18.2,
+      "end": 18.4,
+      "match": "exact"
+    },
+    {
+      "word": "forces",
+      "start": 18.4,
+      "end": 18.74,
+      "match": "exact"
+    },
+    {
+      "word": "blind",
+      "start": 18.74,
+      "end": 19.02,
+      "match": "exact"
+    },
+    {
+      "word": "guessing.",
+      "start": 19.02,
+      "end": 19.3,
+      "match": "exact"
+    },
+    {
+      "word": "An",
+      "start": 19.58,
+      "end": 19.96,
+      "match": "exact"
+    },
+    {
+      "word": "actionable",
+      "start": 19.96,
+      "end": 20.32,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 20.32,
+      "end": 20.62,
+      "match": "exact"
+    },
+    {
+      "word": "error",
+      "start": 20.62,
+      "end": 20.88,
+      "match": "exact"
+    },
+    {
+      "word": "returns",
+      "start": 20.88,
+      "end": 21.2,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 21.2,
+      "end": 21.46,
+      "match": "exact"
+    },
+    {
+      "word": "exact",
+      "start": 21.46,
+      "end": 21.66,
+      "match": "exact"
+    },
+    {
+      "word": "mismatch,",
+      "start": 21.66,
+      "end": 22.26,
+      "match": "exact"
+    },
+    {
+      "word": "prints",
+      "start": 22.38,
+      "end": 22.74,
+      "match": "exact"
+    },
+    {
+      "word": "lines",
+      "start": 22.74,
+      "end": 23.0,
+      "match": "exact"
+    },
+    {
+      "word": "forty",
+      "start": 23.0,
+      "end": 23.42,
+      "match": "exact"
+    },
+    {
+      "word": "through",
+      "start": 23.42,
+      "end": 23.6,
+      "match": "exact"
+    },
+    {
+      "word": "forty-eight",
+      "start": 23.6,
+      "end": 23.9,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 23.9,
+      "end": 24.18,
+      "match": "exact"
+    },
+    {
+      "word": "context,",
+      "start": 24.18,
+      "end": 24.52,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 24.82,
+      "end": 25.14,
+      "match": "exact"
+    },
+    {
+      "word": "hints",
+      "start": 25.14,
+      "end": 25.4,
+      "match": "exact"
+    },
+    {
+      "word": "at",
+      "start": 25.4,
+      "end": 25.5,
+      "match": "exact"
+    },
+    {
+      "word": "narrowing",
+      "start": 25.5,
+      "end": 25.98,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 25.98,
+      "end": 26.04,
+      "match": "exact"
+    },
+    {
+      "word": "edit",
+      "start": 26.04,
+      "end": 26.2,
+      "match": "exact"
+    },
+    {
+      "word": "target",
+      "start": 26.2,
+      "end": 26.5,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 26.5,
+      "end": 26.72,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 26.72,
+      "end": 26.86,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 26.86,
+      "end": 27.08,
+      "match": "exact"
+    },
+    {
+      "word": "recovers",
+      "start": 27.08,
+      "end": 27.54,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 27.54,
+      "end": 27.68,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 27.68,
+      "end": 27.78,
+      "match": "exact"
+    },
+    {
+      "word": "very",
+      "start": 27.78,
+      "end": 27.94,
+      "match": "exact"
+    },
+    {
+      "word": "next",
+      "start": 27.94,
+      "end": 28.14,
+      "match": "exact"
+    },
+    {
+      "word": "turn.",
+      "start": 28.14,
+      "end": 28.4,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Back",
+      "start": 0.0,
+      "end": 0.26
+    },
+    {
+      "word": "in",
+      "start": 0.26,
+      "end": 0.46
+    },
+    {
+      "word": "the",
+      "start": 0.46,
+      "end": 0.56
+    },
+    {
+      "word": "SWE",
+      "start": 0.56,
+      "end": 1.14
+    },
+    {
+      "word": "Agent",
+      "start": 1.14,
+      "end": 1.38
+    },
+    {
+      "word": "Research",
+      "start": 1.38,
+      "end": 1.7
+    },
+    {
+      "word": "paper,",
+      "start": 1.7,
+      "end": 2.02
+    },
+    {
+      "word": "Princeton",
+      "start": 2.32,
+      "end": 2.72
+    },
+    {
+      "word": "engineers",
+      "start": 2.72,
+      "end": 3.2
+    },
+    {
+      "word": "named",
+      "start": 3.2,
+      "end": 3.66
+    },
+    {
+      "word": "this",
+      "start": 3.66,
+      "end": 3.82
+    },
+    {
+      "word": "discipline",
+      "start": 3.82,
+      "end": 4.14
+    },
+    {
+      "word": "the",
+      "start": 4.14,
+      "end": 4.42
+    },
+    {
+      "word": "Agent",
+      "start": 4.42,
+      "end": 4.78
+    },
+    {
+      "word": "-Computer",
+      "start": 4.78,
+      "end": 5.3
+    },
+    {
+      "word": "Interface,",
+      "start": 5.3,
+      "end": 5.9
+    },
+    {
+      "word": "or",
+      "start": 5.94,
+      "end": 6.18
+    },
+    {
+      "word": "ACI.",
+      "start": 6.18,
+      "end": 6.66
+    },
+    {
+      "word": "Tools",
+      "start": 7.4,
+      "end": 7.92
+    },
+    {
+      "word": "are",
+      "start": 7.92,
+      "end": 8.1
+    },
+    {
+      "word": "not",
+      "start": 8.1,
+      "end": 8.22
+    },
+    {
+      "word": "just",
+      "start": 8.22,
+      "end": 8.44
+    },
+    {
+      "word": "backend",
+      "start": 8.44,
+      "end": 8.72
+    },
+    {
+      "word": "APIs.",
+      "start": 8.72,
+      "end": 9.0
+    },
+    {
+      "word": "Tools",
+      "start": 9.44,
+      "end": 9.68
+    },
+    {
+      "word": "are",
+      "start": 9.68,
+      "end": 9.9
+    },
+    {
+      "word": "a",
+      "start": 9.9,
+      "end": 10.0
+    },
+    {
+      "word": "user",
+      "start": 10.0,
+      "end": 10.2
+    },
+    {
+      "word": "interface",
+      "start": 10.2,
+      "end": 10.52
+    },
+    {
+      "word": "designed",
+      "start": 10.52,
+      "end": 10.92
+    },
+    {
+      "word": "specifically",
+      "start": 10.92,
+      "end": 11.44
+    },
+    {
+      "word": "for",
+      "start": 11.44,
+      "end": 11.8
+    },
+    {
+      "word": "a",
+      "start": 11.8,
+      "end": 11.92
+    },
+    {
+      "word": "language",
+      "start": 11.92,
+      "end": 12.14
+    },
+    {
+      "word": "model.",
+      "start": 12.14,
+      "end": 12.38
+    },
+    {
+      "word": "Suppose",
+      "start": 13.06,
+      "end": 13.58
+    },
+    {
+      "word": "our",
+      "start": 13.58,
+      "end": 13.84
+    },
+    {
+      "word": "agent",
+      "start": 13.84,
+      "end": 14.1
+    },
+    {
+      "word": "tries",
+      "start": 14.1,
+      "end": 14.32
+    },
+    {
+      "word": "to",
+      "start": 14.32,
+      "end": 14.52
+    },
+    {
+      "word": "patch",
+      "start": 14.52,
+      "end": 14.7
+    },
+    {
+      "word": "auth",
+      "start": 14.7,
+      "end": 14.9
+    },
+    {
+      "word": ".ts",
+      "start": 14.9,
+      "end": 15.36
+    },
+    {
+      "word": "and",
+      "start": 15.36,
+      "end": 15.66
+    },
+    {
+      "word": "misses",
+      "start": 15.66,
+      "end": 15.9
+    },
+    {
+      "word": "a",
+      "start": 15.9,
+      "end": 16.08
+    },
+    {
+      "word": "line.",
+      "start": 16.08,
+      "end": 16.28
+    },
+    {
+      "word": "A",
+      "start": 16.48,
+      "end": 17.0
+    },
+    {
+      "word": "cryptic",
+      "start": 17.0,
+      "end": 17.32
+    },
+    {
+      "word": "error",
+      "start": 17.32,
+      "end": 17.52
+    },
+    {
+      "word": "like",
+      "start": 17.52,
+      "end": 17.78
+    },
+    {
+      "word": "exit",
+      "start": 17.78,
+      "end": 18.02
+    },
+    {
+      "word": "code",
+      "start": 18.02,
+      "end": 18.2
+    },
+    {
+      "word": "1",
+      "start": 18.2,
+      "end": 18.4
+    },
+    {
+      "word": "forces",
+      "start": 18.4,
+      "end": 18.74
+    },
+    {
+      "word": "blind",
+      "start": 18.74,
+      "end": 19.02
+    },
+    {
+      "word": "guessing.",
+      "start": 19.02,
+      "end": 19.3
+    },
+    {
+      "word": "An",
+      "start": 19.58,
+      "end": 19.96
+    },
+    {
+      "word": "actionable",
+      "start": 19.96,
+      "end": 20.32
+    },
+    {
+      "word": "harness",
+      "start": 20.32,
+      "end": 20.62
+    },
+    {
+      "word": "error",
+      "start": 20.62,
+      "end": 20.88
+    },
+    {
+      "word": "returns",
+      "start": 20.88,
+      "end": 21.2
+    },
+    {
+      "word": "the",
+      "start": 21.2,
+      "end": 21.46
+    },
+    {
+      "word": "exact",
+      "start": 21.46,
+      "end": 21.66
+    },
+    {
+      "word": "mismatch,",
+      "start": 21.66,
+      "end": 22.26
+    },
+    {
+      "word": "prints",
+      "start": 22.38,
+      "end": 22.74
+    },
+    {
+      "word": "lines",
+      "start": 22.74,
+      "end": 23.0
+    },
+    {
+      "word": "40",
+      "start": 23.0,
+      "end": 23.42
+    },
+    {
+      "word": "through",
+      "start": 23.42,
+      "end": 23.6
+    },
+    {
+      "word": "48",
+      "start": 23.6,
+      "end": 23.9
+    },
+    {
+      "word": "for",
+      "start": 23.9,
+      "end": 24.18
+    },
+    {
+      "word": "context,",
+      "start": 24.18,
+      "end": 24.52
+    },
+    {
+      "word": "and",
+      "start": 24.82,
+      "end": 25.14
+    },
+    {
+      "word": "hints",
+      "start": 25.14,
+      "end": 25.4
+    },
+    {
+      "word": "at",
+      "start": 25.4,
+      "end": 25.5
+    },
+    {
+      "word": "narrowing",
+      "start": 25.5,
+      "end": 25.98
+    },
+    {
+      "word": "the",
+      "start": 25.98,
+      "end": 26.04
+    },
+    {
+      "word": "edit",
+      "start": 26.04,
+      "end": 26.2
+    },
+    {
+      "word": "target",
+      "start": 26.2,
+      "end": 26.5
+    },
+    {
+      "word": "so",
+      "start": 26.5,
+      "end": 26.72
+    },
+    {
+      "word": "the",
+      "start": 26.72,
+      "end": 26.86
+    },
+    {
+      "word": "model",
+      "start": 26.86,
+      "end": 27.08
+    },
+    {
+      "word": "recovers",
+      "start": 27.08,
+      "end": 27.54
+    },
+    {
+      "word": "on",
+      "start": 27.54,
+      "end": 27.68
+    },
+    {
+      "word": "the",
+      "start": 27.68,
+      "end": 27.78
+    },
+    {
+      "word": "very",
+      "start": 27.78,
+      "end": 27.94
+    },
+    {
+      "word": "next",
+      "start": 27.94,
+      "end": 28.14
+    },
+    {
+      "word": "turn.",
+      "start": 28.14,
+      "end": 28.4
+    }
+  ]
+}

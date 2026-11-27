@@ -1,0 +1,961 @@
+{
+  "audio": "009.let-us-open.mp3",
+  "paragraph": 9,
+  "text": "Let us open the hood on Pillar One: the core agent loop. Strip away the branding, and the heart of almost every production agent is a tiny, fifteen-line loop following four simple beats: think, act, observe, and repeat. On each pass, the harness sends the current message history to the model so it can think. If the model decides to act, the harness executes the requested tool, appends the real output so the model can observe what happened, and repeats until the task is complete.",
+  "transcript": "Let us open the hood on Pillar 1, the core agent loop. Strip away the branding, and the heart of almost every production agent is a tiny, 15-line loop following four simple beats. Think, act, observe, and repeat. On each pass, the harness sends the current message history to the model so it can think. If the model decides to act, the harness executes the requested tool, appends the real output so the model can observe what happened, and repeats until the task is complete.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 23.8,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Let",
+      "start": 0.0,
+      "end": 0.28,
+      "match": "exact"
+    },
+    {
+      "word": "us",
+      "start": 0.28,
+      "end": 0.38,
+      "match": "exact"
+    },
+    {
+      "word": "open",
+      "start": 0.38,
+      "end": 0.64,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.64,
+      "end": 0.74,
+      "match": "exact"
+    },
+    {
+      "word": "hood",
+      "start": 0.74,
+      "end": 0.92,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 0.92,
+      "end": 1.06,
+      "match": "exact"
+    },
+    {
+      "word": "Pillar",
+      "start": 1.06,
+      "end": 1.34,
+      "match": "exact"
+    },
+    {
+      "word": "One:",
+      "start": 1.34,
+      "end": 1.52,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 1.68,
+      "end": 1.8,
+      "match": "exact"
+    },
+    {
+      "word": "core",
+      "start": 1.8,
+      "end": 2.02,
+      "match": "exact"
+    },
+    {
+      "word": "agent",
+      "start": 2.02,
+      "end": 2.28,
+      "match": "exact"
+    },
+    {
+      "word": "loop.",
+      "start": 2.28,
+      "end": 2.6,
+      "match": "exact"
+    },
+    {
+      "word": "Strip",
+      "start": 2.88,
+      "end": 3.32,
+      "match": "exact"
+    },
+    {
+      "word": "away",
+      "start": 3.32,
+      "end": 3.48,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 3.48,
+      "end": 3.66,
+      "match": "exact"
+    },
+    {
+      "word": "branding,",
+      "start": 3.66,
+      "end": 3.98,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 4.12,
+      "end": 4.32,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 4.32,
+      "end": 4.4,
+      "match": "exact"
+    },
+    {
+      "word": "heart",
+      "start": 4.4,
+      "end": 4.62,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 4.62,
+      "end": 4.74,
+      "match": "exact"
+    },
+    {
+      "word": "almost",
+      "start": 4.74,
+      "end": 4.9,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 4.9,
+      "end": 5.2,
+      "match": "exact"
+    },
+    {
+      "word": "production",
+      "start": 5.2,
+      "end": 5.52,
+      "match": "exact"
+    },
+    {
+      "word": "agent",
+      "start": 5.52,
+      "end": 5.88,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 5.88,
+      "end": 6.06,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 6.06,
+      "end": 6.18,
+      "match": "exact"
+    },
+    {
+      "word": "tiny,",
+      "start": 6.18,
+      "end": 6.44,
+      "match": "exact"
+    },
+    {
+      "word": "fifteen-line",
+      "start": 6.6,
+      "end": 7.34,
+      "match": "exact"
+    },
+    {
+      "word": "loop",
+      "start": 7.34,
+      "end": 7.64,
+      "match": "exact"
+    },
+    {
+      "word": "following",
+      "start": 7.64,
+      "end": 8.0,
+      "match": "exact"
+    },
+    {
+      "word": "four",
+      "start": 8.0,
+      "end": 8.28,
+      "match": "exact"
+    },
+    {
+      "word": "simple",
+      "start": 8.28,
+      "end": 8.68,
+      "match": "exact"
+    },
+    {
+      "word": "beats:",
+      "start": 8.68,
+      "end": 9.02,
+      "match": "exact"
+    },
+    {
+      "word": "think,",
+      "start": 9.24,
+      "end": 9.6,
+      "match": "exact"
+    },
+    {
+      "word": "act,",
+      "start": 9.74,
+      "end": 10.06,
+      "match": "exact"
+    },
+    {
+      "word": "observe,",
+      "start": 10.24,
+      "end": 10.6,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 10.76,
+      "end": 10.88,
+      "match": "exact"
+    },
+    {
+      "word": "repeat.",
+      "start": 10.88,
+      "end": 11.1,
+      "match": "exact"
+    },
+    {
+      "word": "On",
+      "start": 11.32,
+      "end": 11.76,
+      "match": "exact"
+    },
+    {
+      "word": "each",
+      "start": 11.76,
+      "end": 11.96,
+      "match": "exact"
+    },
+    {
+      "word": "pass,",
+      "start": 11.96,
+      "end": 12.22,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 12.42,
+      "end": 12.48,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 12.48,
+      "end": 12.72,
+      "match": "exact"
+    },
+    {
+      "word": "sends",
+      "start": 12.72,
+      "end": 12.98,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 12.98,
+      "end": 13.2,
+      "match": "exact"
+    },
+    {
+      "word": "current",
+      "start": 13.2,
+      "end": 13.44,
+      "match": "exact"
+    },
+    {
+      "word": "message",
+      "start": 13.44,
+      "end": 13.66,
+      "match": "exact"
+    },
+    {
+      "word": "history",
+      "start": 13.66,
+      "end": 14.02,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 14.02,
+      "end": 14.24,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 14.24,
+      "end": 14.34,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 14.34,
+      "end": 14.54,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 14.54,
+      "end": 14.72,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 14.72,
+      "end": 14.84,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 14.84,
+      "end": 14.92,
+      "match": "exact"
+    },
+    {
+      "word": "think.",
+      "start": 14.92,
+      "end": 15.2,
+      "match": "exact"
+    },
+    {
+      "word": "If",
+      "start": 15.56,
+      "end": 16.0,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 16.0,
+      "end": 16.12,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 16.12,
+      "end": 16.3,
+      "match": "exact"
+    },
+    {
+      "word": "decides",
+      "start": 16.3,
+      "end": 16.5,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 16.5,
+      "end": 16.82,
+      "match": "exact"
+    },
+    {
+      "word": "act,",
+      "start": 16.82,
+      "end": 17.04,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 17.22,
+      "end": 17.42,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 17.42,
+      "end": 17.62,
+      "match": "exact"
+    },
+    {
+      "word": "executes",
+      "start": 17.62,
+      "end": 18.2,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 18.2,
+      "end": 18.28,
+      "match": "exact"
+    },
+    {
+      "word": "requested",
+      "start": 18.28,
+      "end": 18.5,
+      "match": "exact"
+    },
+    {
+      "word": "tool,",
+      "start": 18.5,
+      "end": 18.92,
+      "match": "exact"
+    },
+    {
+      "word": "appends",
+      "start": 19.14,
+      "end": 19.58,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 19.58,
+      "end": 19.7,
+      "match": "exact"
+    },
+    {
+      "word": "real",
+      "start": 19.7,
+      "end": 19.86,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 19.86,
+      "end": 20.14,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 20.14,
+      "end": 20.4,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 20.4,
+      "end": 20.5,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 20.5,
+      "end": 20.74,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 20.74,
+      "end": 20.86,
+      "match": "exact"
+    },
+    {
+      "word": "observe",
+      "start": 20.86,
+      "end": 21.1,
+      "match": "exact"
+    },
+    {
+      "word": "what",
+      "start": 21.1,
+      "end": 21.26,
+      "match": "exact"
+    },
+    {
+      "word": "happened,",
+      "start": 21.26,
+      "end": 21.58,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 21.74,
+      "end": 22.04,
+      "match": "exact"
+    },
+    {
+      "word": "repeats",
+      "start": 22.04,
+      "end": 22.28,
+      "match": "exact"
+    },
+    {
+      "word": "until",
+      "start": 22.28,
+      "end": 22.6,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 22.6,
+      "end": 22.76,
+      "match": "exact"
+    },
+    {
+      "word": "task",
+      "start": 22.76,
+      "end": 22.96,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 22.96,
+      "end": 23.14,
+      "match": "exact"
+    },
+    {
+      "word": "complete.",
+      "start": 23.14,
+      "end": 23.36,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Let",
+      "start": 0.0,
+      "end": 0.28
+    },
+    {
+      "word": "us",
+      "start": 0.28,
+      "end": 0.38
+    },
+    {
+      "word": "open",
+      "start": 0.38,
+      "end": 0.64
+    },
+    {
+      "word": "the",
+      "start": 0.64,
+      "end": 0.74
+    },
+    {
+      "word": "hood",
+      "start": 0.74,
+      "end": 0.92
+    },
+    {
+      "word": "on",
+      "start": 0.92,
+      "end": 1.06
+    },
+    {
+      "word": "Pillar",
+      "start": 1.06,
+      "end": 1.34
+    },
+    {
+      "word": "1,",
+      "start": 1.34,
+      "end": 1.52
+    },
+    {
+      "word": "the",
+      "start": 1.68,
+      "end": 1.8
+    },
+    {
+      "word": "core",
+      "start": 1.8,
+      "end": 2.02
+    },
+    {
+      "word": "agent",
+      "start": 2.02,
+      "end": 2.28
+    },
+    {
+      "word": "loop.",
+      "start": 2.28,
+      "end": 2.6
+    },
+    {
+      "word": "Strip",
+      "start": 2.88,
+      "end": 3.32
+    },
+    {
+      "word": "away",
+      "start": 3.32,
+      "end": 3.48
+    },
+    {
+      "word": "the",
+      "start": 3.48,
+      "end": 3.66
+    },
+    {
+      "word": "branding,",
+      "start": 3.66,
+      "end": 3.98
+    },
+    {
+      "word": "and",
+      "start": 4.12,
+      "end": 4.32
+    },
+    {
+      "word": "the",
+      "start": 4.32,
+      "end": 4.4
+    },
+    {
+      "word": "heart",
+      "start": 4.4,
+      "end": 4.62
+    },
+    {
+      "word": "of",
+      "start": 4.62,
+      "end": 4.74
+    },
+    {
+      "word": "almost",
+      "start": 4.74,
+      "end": 4.9
+    },
+    {
+      "word": "every",
+      "start": 4.9,
+      "end": 5.2
+    },
+    {
+      "word": "production",
+      "start": 5.2,
+      "end": 5.52
+    },
+    {
+      "word": "agent",
+      "start": 5.52,
+      "end": 5.88
+    },
+    {
+      "word": "is",
+      "start": 5.88,
+      "end": 6.06
+    },
+    {
+      "word": "a",
+      "start": 6.06,
+      "end": 6.18
+    },
+    {
+      "word": "tiny,",
+      "start": 6.18,
+      "end": 6.44
+    },
+    {
+      "word": "15",
+      "start": 6.6,
+      "end": 6.92
+    },
+    {
+      "word": "-line",
+      "start": 6.92,
+      "end": 7.34
+    },
+    {
+      "word": "loop",
+      "start": 7.34,
+      "end": 7.64
+    },
+    {
+      "word": "following",
+      "start": 7.64,
+      "end": 8.0
+    },
+    {
+      "word": "four",
+      "start": 8.0,
+      "end": 8.28
+    },
+    {
+      "word": "simple",
+      "start": 8.28,
+      "end": 8.68
+    },
+    {
+      "word": "beats.",
+      "start": 8.68,
+      "end": 9.02
+    },
+    {
+      "word": "Think,",
+      "start": 9.24,
+      "end": 9.6
+    },
+    {
+      "word": "act,",
+      "start": 9.74,
+      "end": 10.06
+    },
+    {
+      "word": "observe,",
+      "start": 10.24,
+      "end": 10.6
+    },
+    {
+      "word": "and",
+      "start": 10.76,
+      "end": 10.88
+    },
+    {
+      "word": "repeat.",
+      "start": 10.88,
+      "end": 11.1
+    },
+    {
+      "word": "On",
+      "start": 11.32,
+      "end": 11.76
+    },
+    {
+      "word": "each",
+      "start": 11.76,
+      "end": 11.96
+    },
+    {
+      "word": "pass,",
+      "start": 11.96,
+      "end": 12.22
+    },
+    {
+      "word": "the",
+      "start": 12.42,
+      "end": 12.48
+    },
+    {
+      "word": "harness",
+      "start": 12.48,
+      "end": 12.72
+    },
+    {
+      "word": "sends",
+      "start": 12.72,
+      "end": 12.98
+    },
+    {
+      "word": "the",
+      "start": 12.98,
+      "end": 13.2
+    },
+    {
+      "word": "current",
+      "start": 13.2,
+      "end": 13.44
+    },
+    {
+      "word": "message",
+      "start": 13.44,
+      "end": 13.66
+    },
+    {
+      "word": "history",
+      "start": 13.66,
+      "end": 14.02
+    },
+    {
+      "word": "to",
+      "start": 14.02,
+      "end": 14.24
+    },
+    {
+      "word": "the",
+      "start": 14.24,
+      "end": 14.34
+    },
+    {
+      "word": "model",
+      "start": 14.34,
+      "end": 14.54
+    },
+    {
+      "word": "so",
+      "start": 14.54,
+      "end": 14.72
+    },
+    {
+      "word": "it",
+      "start": 14.72,
+      "end": 14.84
+    },
+    {
+      "word": "can",
+      "start": 14.84,
+      "end": 14.92
+    },
+    {
+      "word": "think.",
+      "start": 14.92,
+      "end": 15.2
+    },
+    {
+      "word": "If",
+      "start": 15.56,
+      "end": 16.0
+    },
+    {
+      "word": "the",
+      "start": 16.0,
+      "end": 16.12
+    },
+    {
+      "word": "model",
+      "start": 16.12,
+      "end": 16.3
+    },
+    {
+      "word": "decides",
+      "start": 16.3,
+      "end": 16.5
+    },
+    {
+      "word": "to",
+      "start": 16.5,
+      "end": 16.82
+    },
+    {
+      "word": "act,",
+      "start": 16.82,
+      "end": 17.04
+    },
+    {
+      "word": "the",
+      "start": 17.22,
+      "end": 17.42
+    },
+    {
+      "word": "harness",
+      "start": 17.42,
+      "end": 17.62
+    },
+    {
+      "word": "executes",
+      "start": 17.62,
+      "end": 18.2
+    },
+    {
+      "word": "the",
+      "start": 18.2,
+      "end": 18.28
+    },
+    {
+      "word": "requested",
+      "start": 18.28,
+      "end": 18.5
+    },
+    {
+      "word": "tool,",
+      "start": 18.5,
+      "end": 18.92
+    },
+    {
+      "word": "appends",
+      "start": 19.14,
+      "end": 19.58
+    },
+    {
+      "word": "the",
+      "start": 19.58,
+      "end": 19.7
+    },
+    {
+      "word": "real",
+      "start": 19.7,
+      "end": 19.86
+    },
+    {
+      "word": "output",
+      "start": 19.86,
+      "end": 20.14
+    },
+    {
+      "word": "so",
+      "start": 20.14,
+      "end": 20.4
+    },
+    {
+      "word": "the",
+      "start": 20.4,
+      "end": 20.5
+    },
+    {
+      "word": "model",
+      "start": 20.5,
+      "end": 20.74
+    },
+    {
+      "word": "can",
+      "start": 20.74,
+      "end": 20.86
+    },
+    {
+      "word": "observe",
+      "start": 20.86,
+      "end": 21.1
+    },
+    {
+      "word": "what",
+      "start": 21.1,
+      "end": 21.26
+    },
+    {
+      "word": "happened,",
+      "start": 21.26,
+      "end": 21.58
+    },
+    {
+      "word": "and",
+      "start": 21.74,
+      "end": 22.04
+    },
+    {
+      "word": "repeats",
+      "start": 22.04,
+      "end": 22.28
+    },
+    {
+      "word": "until",
+      "start": 22.28,
+      "end": 22.6
+    },
+    {
+      "word": "the",
+      "start": 22.6,
+      "end": 22.76
+    },
+    {
+      "word": "task",
+      "start": 22.76,
+      "end": 22.96
+    },
+    {
+      "word": "is",
+      "start": 22.96,
+      "end": 23.14
+    },
+    {
+      "word": "complete.",
+      "start": 23.14,
+      "end": 23.36
+    }
+  ]
+}

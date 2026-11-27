@@ -1,0 +1,959 @@
+{
+  "audio": "013.you-see-the.mp3",
+  "paragraph": 13,
+  "text": "You see the same principle in how coding harnesses edit files. Early agents asked the model to rewrite an entire eight-hundred-line source file from top to bottom just to fix a five-line race condition. That wastes output tokens, burns seconds of latency, and invites accidental deletions. Modern harnesses like Aider, Claude Code, and Cursor pair line-numbered file reads with targeted search-and-replace or diff-merge edits, cutting output tokens by an order of magnitude while making every change fast and easy to verify.",
+  "transcript": "You see the same principle in how coding harnesses edit files. Early agents asked the model to rewrite an entire 800-line source file from top to bottom just to fix a five-line race condition. That wastes output tokens, burns seconds of latency, and invites accidental deletions. Modern harnesses like AIDR, Cloud Code, and Cursor Pair line-numbered file reads with targeted search-and-replace or diff-merge edits, cutting output tokens by an order of magnitude while making every change fast and easy to verify.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 2
+    }
+  ],
+  "duration": 26.76,
+  "failed_words": 2,
+  "failures": [
+    {
+      "index": 49,
+      "word": "Aider,",
+      "match": "approx",
+      "heard": "AIDR, Cloud",
+      "start": 16.26
+    },
+    {
+      "index": 50,
+      "word": "Claude",
+      "match": "approx",
+      "heard": "AIDR, Cloud",
+      "start": 16.569
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "You",
+      "start": 0.0,
+      "end": 0.26,
+      "match": "exact"
+    },
+    {
+      "word": "see",
+      "start": 0.26,
+      "end": 0.4,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.4,
+      "end": 0.5,
+      "match": "exact"
+    },
+    {
+      "word": "same",
+      "start": 0.5,
+      "end": 0.74,
+      "match": "exact"
+    },
+    {
+      "word": "principle",
+      "start": 0.74,
+      "end": 1.12,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 1.12,
+      "end": 1.34,
+      "match": "exact"
+    },
+    {
+      "word": "how",
+      "start": 1.34,
+      "end": 1.46,
+      "match": "exact"
+    },
+    {
+      "word": "coding",
+      "start": 1.46,
+      "end": 1.78,
+      "match": "exact"
+    },
+    {
+      "word": "harnesses",
+      "start": 1.78,
+      "end": 2.32,
+      "match": "exact"
+    },
+    {
+      "word": "edit",
+      "start": 2.32,
+      "end": 2.46,
+      "match": "exact"
+    },
+    {
+      "word": "files.",
+      "start": 2.46,
+      "end": 2.72,
+      "match": "exact"
+    },
+    {
+      "word": "Early",
+      "start": 3.14,
+      "end": 3.66,
+      "match": "exact"
+    },
+    {
+      "word": "agents",
+      "start": 3.66,
+      "end": 4.06,
+      "match": "exact"
+    },
+    {
+      "word": "asked",
+      "start": 4.06,
+      "end": 4.34,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 4.34,
+      "end": 4.48,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 4.48,
+      "end": 4.66,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 4.66,
+      "end": 4.84,
+      "match": "exact"
+    },
+    {
+      "word": "rewrite",
+      "start": 4.84,
+      "end": 5.16,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 5.16,
+      "end": 5.42,
+      "match": "exact"
+    },
+    {
+      "word": "entire",
+      "start": 5.42,
+      "end": 5.7,
+      "match": "exact"
+    },
+    {
+      "word": "eight-hundred-line",
+      "start": 5.7,
+      "end": 6.42,
+      "match": "exact"
+    },
+    {
+      "word": "source",
+      "start": 6.42,
+      "end": 6.66,
+      "match": "exact"
+    },
+    {
+      "word": "file",
+      "start": 6.66,
+      "end": 6.98,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 6.98,
+      "end": 7.2,
+      "match": "exact"
+    },
+    {
+      "word": "top",
+      "start": 7.2,
+      "end": 7.42,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 7.42,
+      "end": 7.56,
+      "match": "exact"
+    },
+    {
+      "word": "bottom",
+      "start": 7.56,
+      "end": 7.86,
+      "match": "exact"
+    },
+    {
+      "word": "just",
+      "start": 7.86,
+      "end": 8.12,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 8.12,
+      "end": 8.24,
+      "match": "exact"
+    },
+    {
+      "word": "fix",
+      "start": 8.24,
+      "end": 8.46,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 8.46,
+      "end": 8.6,
+      "match": "exact"
+    },
+    {
+      "word": "five-line",
+      "start": 8.6,
+      "end": 9.04,
+      "match": "exact"
+    },
+    {
+      "word": "race",
+      "start": 9.04,
+      "end": 9.24,
+      "match": "exact"
+    },
+    {
+      "word": "condition.",
+      "start": 9.24,
+      "end": 9.52,
+      "match": "exact"
+    },
+    {
+      "word": "That",
+      "start": 10.02,
+      "end": 10.54,
+      "match": "exact"
+    },
+    {
+      "word": "wastes",
+      "start": 10.54,
+      "end": 10.84,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 10.84,
+      "end": 11.04,
+      "match": "exact"
+    },
+    {
+      "word": "tokens,",
+      "start": 11.04,
+      "end": 11.46,
+      "match": "exact"
+    },
+    {
+      "word": "burns",
+      "start": 11.7,
+      "end": 12.04,
+      "match": "exact"
+    },
+    {
+      "word": "seconds",
+      "start": 12.04,
+      "end": 12.3,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 12.3,
+      "end": 12.5,
+      "match": "exact"
+    },
+    {
+      "word": "latency,",
+      "start": 12.5,
+      "end": 12.74,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 13.04,
+      "end": 13.32,
+      "match": "exact"
+    },
+    {
+      "word": "invites",
+      "start": 13.32,
+      "end": 13.58,
+      "match": "exact"
+    },
+    {
+      "word": "accidental",
+      "start": 13.58,
+      "end": 14.02,
+      "match": "exact"
+    },
+    {
+      "word": "deletions.",
+      "start": 14.02,
+      "end": 14.62,
+      "match": "exact"
+    },
+    {
+      "word": "Modern",
+      "start": 15.08,
+      "end": 15.6,
+      "match": "exact"
+    },
+    {
+      "word": "harnesses",
+      "start": 15.6,
+      "end": 16.14,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 16.14,
+      "end": 16.26,
+      "match": "exact"
+    },
+    {
+      "word": "Aider,",
+      "start": 16.26,
+      "end": 16.569,
+      "match": "approx",
+      "heard": "AIDR, Cloud"
+    },
+    {
+      "word": "Claude",
+      "start": 16.569,
+      "end": 16.94,
+      "match": "approx",
+      "heard": "AIDR, Cloud"
+    },
+    {
+      "word": "Code,",
+      "start": 16.94,
+      "end": 17.22,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 17.4,
+      "end": 17.52,
+      "match": "exact"
+    },
+    {
+      "word": "Cursor",
+      "start": 17.52,
+      "end": 17.88,
+      "match": "exact"
+    },
+    {
+      "word": "pair",
+      "start": 17.88,
+      "end": 18.08,
+      "match": "exact"
+    },
+    {
+      "word": "line-numbered",
+      "start": 18.08,
+      "end": 18.62,
+      "match": "exact"
+    },
+    {
+      "word": "file",
+      "start": 18.62,
+      "end": 18.76,
+      "match": "exact"
+    },
+    {
+      "word": "reads",
+      "start": 18.76,
+      "end": 19.04,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 19.04,
+      "end": 19.28,
+      "match": "exact"
+    },
+    {
+      "word": "targeted",
+      "start": 19.28,
+      "end": 19.64,
+      "match": "exact"
+    },
+    {
+      "word": "search-and-replace",
+      "start": 19.64,
+      "end": 20.36,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 20.36,
+      "end": 20.58,
+      "match": "exact"
+    },
+    {
+      "word": "diff-merge",
+      "start": 20.58,
+      "end": 21.04,
+      "match": "exact"
+    },
+    {
+      "word": "edits,",
+      "start": 21.04,
+      "end": 21.26,
+      "match": "exact"
+    },
+    {
+      "word": "cutting",
+      "start": 21.52,
+      "end": 21.92,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 21.92,
+      "end": 22.2,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 22.2,
+      "end": 22.64,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 22.64,
+      "end": 22.82,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 22.82,
+      "end": 22.9,
+      "match": "exact"
+    },
+    {
+      "word": "order",
+      "start": 22.9,
+      "end": 23.1,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 23.1,
+      "end": 23.26,
+      "match": "exact"
+    },
+    {
+      "word": "magnitude",
+      "start": 23.26,
+      "end": 23.64,
+      "match": "exact"
+    },
+    {
+      "word": "while",
+      "start": 23.64,
+      "end": 24.04,
+      "match": "exact"
+    },
+    {
+      "word": "making",
+      "start": 24.04,
+      "end": 24.28,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 24.28,
+      "end": 24.56,
+      "match": "exact"
+    },
+    {
+      "word": "change",
+      "start": 24.56,
+      "end": 24.82,
+      "match": "exact"
+    },
+    {
+      "word": "fast",
+      "start": 24.82,
+      "end": 25.18,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 25.18,
+      "end": 25.38,
+      "match": "exact"
+    },
+    {
+      "word": "easy",
+      "start": 25.38,
+      "end": 25.58,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 25.58,
+      "end": 25.78,
+      "match": "exact"
+    },
+    {
+      "word": "verify.",
+      "start": 25.78,
+      "end": 26.04,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "You",
+      "start": 0.0,
+      "end": 0.26
+    },
+    {
+      "word": "see",
+      "start": 0.26,
+      "end": 0.4
+    },
+    {
+      "word": "the",
+      "start": 0.4,
+      "end": 0.5
+    },
+    {
+      "word": "same",
+      "start": 0.5,
+      "end": 0.74
+    },
+    {
+      "word": "principle",
+      "start": 0.74,
+      "end": 1.12
+    },
+    {
+      "word": "in",
+      "start": 1.12,
+      "end": 1.34
+    },
+    {
+      "word": "how",
+      "start": 1.34,
+      "end": 1.46
+    },
+    {
+      "word": "coding",
+      "start": 1.46,
+      "end": 1.78
+    },
+    {
+      "word": "harnesses",
+      "start": 1.78,
+      "end": 2.32
+    },
+    {
+      "word": "edit",
+      "start": 2.32,
+      "end": 2.46
+    },
+    {
+      "word": "files.",
+      "start": 2.46,
+      "end": 2.72
+    },
+    {
+      "word": "Early",
+      "start": 3.14,
+      "end": 3.66
+    },
+    {
+      "word": "agents",
+      "start": 3.66,
+      "end": 4.06
+    },
+    {
+      "word": "asked",
+      "start": 4.06,
+      "end": 4.34
+    },
+    {
+      "word": "the",
+      "start": 4.34,
+      "end": 4.48
+    },
+    {
+      "word": "model",
+      "start": 4.48,
+      "end": 4.66
+    },
+    {
+      "word": "to",
+      "start": 4.66,
+      "end": 4.84
+    },
+    {
+      "word": "rewrite",
+      "start": 4.84,
+      "end": 5.16
+    },
+    {
+      "word": "an",
+      "start": 5.16,
+      "end": 5.42
+    },
+    {
+      "word": "entire",
+      "start": 5.42,
+      "end": 5.7
+    },
+    {
+      "word": "800",
+      "start": 5.7,
+      "end": 6.1
+    },
+    {
+      "word": "-line",
+      "start": 6.1,
+      "end": 6.42
+    },
+    {
+      "word": "source",
+      "start": 6.42,
+      "end": 6.66
+    },
+    {
+      "word": "file",
+      "start": 6.66,
+      "end": 6.98
+    },
+    {
+      "word": "from",
+      "start": 6.98,
+      "end": 7.2
+    },
+    {
+      "word": "top",
+      "start": 7.2,
+      "end": 7.42
+    },
+    {
+      "word": "to",
+      "start": 7.42,
+      "end": 7.56
+    },
+    {
+      "word": "bottom",
+      "start": 7.56,
+      "end": 7.86
+    },
+    {
+      "word": "just",
+      "start": 7.86,
+      "end": 8.12
+    },
+    {
+      "word": "to",
+      "start": 8.12,
+      "end": 8.24
+    },
+    {
+      "word": "fix",
+      "start": 8.24,
+      "end": 8.46
+    },
+    {
+      "word": "a",
+      "start": 8.46,
+      "end": 8.6
+    },
+    {
+      "word": "five",
+      "start": 8.6,
+      "end": 8.82
+    },
+    {
+      "word": "-line",
+      "start": 8.82,
+      "end": 9.04
+    },
+    {
+      "word": "race",
+      "start": 9.04,
+      "end": 9.24
+    },
+    {
+      "word": "condition.",
+      "start": 9.24,
+      "end": 9.52
+    },
+    {
+      "word": "That",
+      "start": 10.02,
+      "end": 10.54
+    },
+    {
+      "word": "wastes",
+      "start": 10.54,
+      "end": 10.84
+    },
+    {
+      "word": "output",
+      "start": 10.84,
+      "end": 11.04
+    },
+    {
+      "word": "tokens,",
+      "start": 11.04,
+      "end": 11.46
+    },
+    {
+      "word": "burns",
+      "start": 11.7,
+      "end": 12.04
+    },
+    {
+      "word": "seconds",
+      "start": 12.04,
+      "end": 12.3
+    },
+    {
+      "word": "of",
+      "start": 12.3,
+      "end": 12.5
+    },
+    {
+      "word": "latency,",
+      "start": 12.5,
+      "end": 12.74
+    },
+    {
+      "word": "and",
+      "start": 13.04,
+      "end": 13.32
+    },
+    {
+      "word": "invites",
+      "start": 13.32,
+      "end": 13.58
+    },
+    {
+      "word": "accidental",
+      "start": 13.58,
+      "end": 14.02
+    },
+    {
+      "word": "deletions.",
+      "start": 14.02,
+      "end": 14.62
+    },
+    {
+      "word": "Modern",
+      "start": 15.08,
+      "end": 15.6
+    },
+    {
+      "word": "harnesses",
+      "start": 15.6,
+      "end": 16.14
+    },
+    {
+      "word": "like",
+      "start": 16.14,
+      "end": 16.26
+    },
+    {
+      "word": "AIDR,",
+      "start": 16.26,
+      "end": 16.58
+    },
+    {
+      "word": "Cloud",
+      "start": 16.7,
+      "end": 16.94
+    },
+    {
+      "word": "Code,",
+      "start": 16.94,
+      "end": 17.22
+    },
+    {
+      "word": "and",
+      "start": 17.4,
+      "end": 17.52
+    },
+    {
+      "word": "Cursor",
+      "start": 17.52,
+      "end": 17.88
+    },
+    {
+      "word": "Pair",
+      "start": 17.88,
+      "end": 18.08
+    },
+    {
+      "word": "line",
+      "start": 18.08,
+      "end": 18.28
+    },
+    {
+      "word": "-numbered",
+      "start": 18.28,
+      "end": 18.62
+    },
+    {
+      "word": "file",
+      "start": 18.62,
+      "end": 18.76
+    },
+    {
+      "word": "reads",
+      "start": 18.76,
+      "end": 19.04
+    },
+    {
+      "word": "with",
+      "start": 19.04,
+      "end": 19.28
+    },
+    {
+      "word": "targeted",
+      "start": 19.28,
+      "end": 19.64
+    },
+    {
+      "word": "search",
+      "start": 19.64,
+      "end": 19.92
+    },
+    {
+      "word": "-and",
+      "start": 19.92,
+      "end": 20.08
+    },
+    {
+      "word": "-replace",
+      "start": 20.08,
+      "end": 20.36
+    },
+    {
+      "word": "or",
+      "start": 20.36,
+      "end": 20.58
+    },
+    {
+      "word": "diff",
+      "start": 20.58,
+      "end": 20.76
+    },
+    {
+      "word": "-merge",
+      "start": 20.76,
+      "end": 21.04
+    },
+    {
+      "word": "edits,",
+      "start": 21.04,
+      "end": 21.26
+    },
+    {
+      "word": "cutting",
+      "start": 21.52,
+      "end": 21.92
+    },
+    {
+      "word": "output",
+      "start": 21.92,
+      "end": 22.2
+    },
+    {
+      "word": "tokens",
+      "start": 22.2,
+      "end": 22.64
+    },
+    {
+      "word": "by",
+      "start": 22.64,
+      "end": 22.82
+    },
+    {
+      "word": "an",
+      "start": 22.82,
+      "end": 22.9
+    },
+    {
+      "word": "order",
+      "start": 22.9,
+      "end": 23.1
+    },
+    {
+      "word": "of",
+      "start": 23.1,
+      "end": 23.26
+    },
+    {
+      "word": "magnitude",
+      "start": 23.26,
+      "end": 23.64
+    },
+    {
+      "word": "while",
+      "start": 23.64,
+      "end": 24.04
+    },
+    {
+      "word": "making",
+      "start": 24.04,
+      "end": 24.28
+    },
+    {
+      "word": "every",
+      "start": 24.28,
+      "end": 24.56
+    },
+    {
+      "word": "change",
+      "start": 24.56,
+      "end": 24.82
+    },
+    {
+      "word": "fast",
+      "start": 24.82,
+      "end": 25.18
+    },
+    {
+      "word": "and",
+      "start": 25.18,
+      "end": 25.38
+    },
+    {
+      "word": "easy",
+      "start": 25.38,
+      "end": 25.58
+    },
+    {
+      "word": "to",
+      "start": 25.58,
+      "end": 25.78
+    },
+    {
+      "word": "verify.",
+      "start": 25.78,
+      "end": 26.04
+    }
+  ]
+}

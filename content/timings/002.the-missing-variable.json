@@ -1,0 +1,956 @@
+{
+  "audio": "002.the-missing-variable.mp3",
+  "paragraph": 2,
+  "text": "The missing variable is the harness. An AI agent is never just a model; an agent equals the model plus the harness wrapped around it. Think of a raw language model like a brilliant CPU sitting on a desk with no operating system. It can reason about code all day, yet by itself it cannot read a file, run a test, manage working memory, or verify whether its own answer actually works. The harness is the operating system that turns raw intelligence into reliable software.",
+  "transcript": "The missing variable is the harness. An AI agent is never just a model. An agent equals the model plus the harness wrapped around it. Think of a raw language model like a brilliant CPU sitting on a desk with no operating system. It can reason about code all day, yet by itself it cannot read a file, run a test, manage working memory, or verify whether its own answer actually works. The harness is the operating system that turns raw intelligence into reliable software.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 26.28,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.24,
+      "match": "exact"
+    },
+    {
+      "word": "missing",
+      "start": 0.24,
+      "end": 0.42,
+      "match": "exact"
+    },
+    {
+      "word": "variable",
+      "start": 0.42,
+      "end": 0.78,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 0.78,
+      "end": 1.28,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 1.28,
+      "end": 1.38,
+      "match": "exact"
+    },
+    {
+      "word": "harness.",
+      "start": 1.38,
+      "end": 1.6,
+      "match": "exact"
+    },
+    {
+      "word": "An",
+      "start": 2.04,
+      "end": 2.56,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 2.56,
+      "end": 2.8,
+      "match": "exact"
+    },
+    {
+      "word": "agent",
+      "start": 2.8,
+      "end": 3.16,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 3.16,
+      "end": 3.42,
+      "match": "exact"
+    },
+    {
+      "word": "never",
+      "start": 3.42,
+      "end": 3.62,
+      "match": "exact"
+    },
+    {
+      "word": "just",
+      "start": 3.62,
+      "end": 3.9,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 3.9,
+      "end": 4.02,
+      "match": "exact"
+    },
+    {
+      "word": "model;",
+      "start": 4.02,
+      "end": 4.26,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 4.42,
+      "end": 4.84,
+      "match": "exact"
+    },
+    {
+      "word": "agent",
+      "start": 4.84,
+      "end": 5.12,
+      "match": "exact"
+    },
+    {
+      "word": "equals",
+      "start": 5.12,
+      "end": 5.42,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 5.42,
+      "end": 5.6,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 5.6,
+      "end": 5.86,
+      "match": "exact"
+    },
+    {
+      "word": "plus",
+      "start": 5.86,
+      "end": 6.22,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 6.22,
+      "end": 6.42,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 6.42,
+      "end": 6.66,
+      "match": "exact"
+    },
+    {
+      "word": "wrapped",
+      "start": 6.66,
+      "end": 6.98,
+      "match": "exact"
+    },
+    {
+      "word": "around",
+      "start": 6.98,
+      "end": 7.3,
+      "match": "exact"
+    },
+    {
+      "word": "it.",
+      "start": 7.3,
+      "end": 7.56,
+      "match": "exact"
+    },
+    {
+      "word": "Think",
+      "start": 7.92,
+      "end": 8.44,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 8.44,
+      "end": 8.6,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 8.6,
+      "end": 8.68,
+      "match": "exact"
+    },
+    {
+      "word": "raw",
+      "start": 8.68,
+      "end": 8.86,
+      "match": "exact"
+    },
+    {
+      "word": "language",
+      "start": 8.86,
+      "end": 9.2,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 9.2,
+      "end": 9.5,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 9.5,
+      "end": 9.9,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 9.9,
+      "end": 9.98,
+      "match": "exact"
+    },
+    {
+      "word": "brilliant",
+      "start": 9.98,
+      "end": 10.26,
+      "match": "exact"
+    },
+    {
+      "word": "CPU",
+      "start": 10.26,
+      "end": 10.6,
+      "match": "exact"
+    },
+    {
+      "word": "sitting",
+      "start": 10.6,
+      "end": 11.12,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 11.12,
+      "end": 11.32,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 11.32,
+      "end": 11.4,
+      "match": "exact"
+    },
+    {
+      "word": "desk",
+      "start": 11.4,
+      "end": 11.68,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 11.68,
+      "end": 11.88,
+      "match": "exact"
+    },
+    {
+      "word": "no",
+      "start": 11.88,
+      "end": 12.02,
+      "match": "exact"
+    },
+    {
+      "word": "operating",
+      "start": 12.02,
+      "end": 12.36,
+      "match": "exact"
+    },
+    {
+      "word": "system.",
+      "start": 12.36,
+      "end": 12.84,
+      "match": "exact"
+    },
+    {
+      "word": "It",
+      "start": 13.04,
+      "end": 13.52,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 13.52,
+      "end": 13.64,
+      "match": "exact"
+    },
+    {
+      "word": "reason",
+      "start": 13.64,
+      "end": 13.9,
+      "match": "exact"
+    },
+    {
+      "word": "about",
+      "start": 13.9,
+      "end": 14.08,
+      "match": "exact"
+    },
+    {
+      "word": "code",
+      "start": 14.08,
+      "end": 14.38,
+      "match": "exact"
+    },
+    {
+      "word": "all",
+      "start": 14.38,
+      "end": 14.66,
+      "match": "exact"
+    },
+    {
+      "word": "day,",
+      "start": 14.66,
+      "end": 14.94,
+      "match": "exact"
+    },
+    {
+      "word": "yet",
+      "start": 15.08,
+      "end": 15.38,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 15.38,
+      "end": 15.52,
+      "match": "exact"
+    },
+    {
+      "word": "itself",
+      "start": 15.52,
+      "end": 15.86,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 15.86,
+      "end": 16.12,
+      "match": "exact"
+    },
+    {
+      "word": "cannot",
+      "start": 16.12,
+      "end": 16.28,
+      "match": "exact"
+    },
+    {
+      "word": "read",
+      "start": 16.28,
+      "end": 16.5,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 16.5,
+      "end": 16.62,
+      "match": "exact"
+    },
+    {
+      "word": "file,",
+      "start": 16.62,
+      "end": 16.88,
+      "match": "exact"
+    },
+    {
+      "word": "run",
+      "start": 17.0,
+      "end": 17.2,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 17.2,
+      "end": 17.34,
+      "match": "exact"
+    },
+    {
+      "word": "test,",
+      "start": 17.34,
+      "end": 17.64,
+      "match": "exact"
+    },
+    {
+      "word": "manage",
+      "start": 17.78,
+      "end": 18.04,
+      "match": "exact"
+    },
+    {
+      "word": "working",
+      "start": 18.04,
+      "end": 18.3,
+      "match": "exact"
+    },
+    {
+      "word": "memory,",
+      "start": 18.3,
+      "end": 18.6,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 18.82,
+      "end": 19.02,
+      "match": "exact"
+    },
+    {
+      "word": "verify",
+      "start": 19.02,
+      "end": 19.4,
+      "match": "exact"
+    },
+    {
+      "word": "whether",
+      "start": 19.4,
+      "end": 19.72,
+      "match": "exact"
+    },
+    {
+      "word": "its",
+      "start": 19.72,
+      "end": 19.92,
+      "match": "exact"
+    },
+    {
+      "word": "own",
+      "start": 19.92,
+      "end": 20.1,
+      "match": "exact"
+    },
+    {
+      "word": "answer",
+      "start": 20.1,
+      "end": 20.46,
+      "match": "exact"
+    },
+    {
+      "word": "actually",
+      "start": 20.46,
+      "end": 20.84,
+      "match": "exact"
+    },
+    {
+      "word": "works.",
+      "start": 20.84,
+      "end": 21.16,
+      "match": "exact"
+    },
+    {
+      "word": "The",
+      "start": 21.44,
+      "end": 21.9,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 21.9,
+      "end": 22.14,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 22.14,
+      "end": 22.42,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 22.42,
+      "end": 22.52,
+      "match": "exact"
+    },
+    {
+      "word": "operating",
+      "start": 22.52,
+      "end": 22.82,
+      "match": "exact"
+    },
+    {
+      "word": "system",
+      "start": 22.82,
+      "end": 23.28,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 23.28,
+      "end": 23.48,
+      "match": "exact"
+    },
+    {
+      "word": "turns",
+      "start": 23.48,
+      "end": 23.72,
+      "match": "exact"
+    },
+    {
+      "word": "raw",
+      "start": 23.72,
+      "end": 23.92,
+      "match": "exact"
+    },
+    {
+      "word": "intelligence",
+      "start": 23.92,
+      "end": 24.42,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 24.42,
+      "end": 24.8,
+      "match": "exact"
+    },
+    {
+      "word": "reliable",
+      "start": 24.8,
+      "end": 25.04,
+      "match": "exact"
+    },
+    {
+      "word": "software.",
+      "start": 25.04,
+      "end": 25.58,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.24
+    },
+    {
+      "word": "missing",
+      "start": 0.24,
+      "end": 0.42
+    },
+    {
+      "word": "variable",
+      "start": 0.42,
+      "end": 0.78
+    },
+    {
+      "word": "is",
+      "start": 0.78,
+      "end": 1.28
+    },
+    {
+      "word": "the",
+      "start": 1.28,
+      "end": 1.38
+    },
+    {
+      "word": "harness.",
+      "start": 1.38,
+      "end": 1.6
+    },
+    {
+      "word": "An",
+      "start": 2.04,
+      "end": 2.56
+    },
+    {
+      "word": "AI",
+      "start": 2.56,
+      "end": 2.8
+    },
+    {
+      "word": "agent",
+      "start": 2.8,
+      "end": 3.16
+    },
+    {
+      "word": "is",
+      "start": 3.16,
+      "end": 3.42
+    },
+    {
+      "word": "never",
+      "start": 3.42,
+      "end": 3.62
+    },
+    {
+      "word": "just",
+      "start": 3.62,
+      "end": 3.9
+    },
+    {
+      "word": "a",
+      "start": 3.9,
+      "end": 4.02
+    },
+    {
+      "word": "model.",
+      "start": 4.02,
+      "end": 4.26
+    },
+    {
+      "word": "An",
+      "start": 4.42,
+      "end": 4.84
+    },
+    {
+      "word": "agent",
+      "start": 4.84,
+      "end": 5.12
+    },
+    {
+      "word": "equals",
+      "start": 5.12,
+      "end": 5.42
+    },
+    {
+      "word": "the",
+      "start": 5.42,
+      "end": 5.6
+    },
+    {
+      "word": "model",
+      "start": 5.6,
+      "end": 5.86
+    },
+    {
+      "word": "plus",
+      "start": 5.86,
+      "end": 6.22
+    },
+    {
+      "word": "the",
+      "start": 6.22,
+      "end": 6.42
+    },
+    {
+      "word": "harness",
+      "start": 6.42,
+      "end": 6.66
+    },
+    {
+      "word": "wrapped",
+      "start": 6.66,
+      "end": 6.98
+    },
+    {
+      "word": "around",
+      "start": 6.98,
+      "end": 7.3
+    },
+    {
+      "word": "it.",
+      "start": 7.3,
+      "end": 7.56
+    },
+    {
+      "word": "Think",
+      "start": 7.92,
+      "end": 8.44
+    },
+    {
+      "word": "of",
+      "start": 8.44,
+      "end": 8.6
+    },
+    {
+      "word": "a",
+      "start": 8.6,
+      "end": 8.68
+    },
+    {
+      "word": "raw",
+      "start": 8.68,
+      "end": 8.86
+    },
+    {
+      "word": "language",
+      "start": 8.86,
+      "end": 9.2
+    },
+    {
+      "word": "model",
+      "start": 9.2,
+      "end": 9.5
+    },
+    {
+      "word": "like",
+      "start": 9.5,
+      "end": 9.9
+    },
+    {
+      "word": "a",
+      "start": 9.9,
+      "end": 9.98
+    },
+    {
+      "word": "brilliant",
+      "start": 9.98,
+      "end": 10.26
+    },
+    {
+      "word": "CPU",
+      "start": 10.26,
+      "end": 10.6
+    },
+    {
+      "word": "sitting",
+      "start": 10.6,
+      "end": 11.12
+    },
+    {
+      "word": "on",
+      "start": 11.12,
+      "end": 11.32
+    },
+    {
+      "word": "a",
+      "start": 11.32,
+      "end": 11.4
+    },
+    {
+      "word": "desk",
+      "start": 11.4,
+      "end": 11.68
+    },
+    {
+      "word": "with",
+      "start": 11.68,
+      "end": 11.88
+    },
+    {
+      "word": "no",
+      "start": 11.88,
+      "end": 12.02
+    },
+    {
+      "word": "operating",
+      "start": 12.02,
+      "end": 12.36
+    },
+    {
+      "word": "system.",
+      "start": 12.36,
+      "end": 12.84
+    },
+    {
+      "word": "It",
+      "start": 13.04,
+      "end": 13.52
+    },
+    {
+      "word": "can",
+      "start": 13.52,
+      "end": 13.64
+    },
+    {
+      "word": "reason",
+      "start": 13.64,
+      "end": 13.9
+    },
+    {
+      "word": "about",
+      "start": 13.9,
+      "end": 14.08
+    },
+    {
+      "word": "code",
+      "start": 14.08,
+      "end": 14.38
+    },
+    {
+      "word": "all",
+      "start": 14.38,
+      "end": 14.66
+    },
+    {
+      "word": "day,",
+      "start": 14.66,
+      "end": 14.94
+    },
+    {
+      "word": "yet",
+      "start": 15.08,
+      "end": 15.38
+    },
+    {
+      "word": "by",
+      "start": 15.38,
+      "end": 15.52
+    },
+    {
+      "word": "itself",
+      "start": 15.52,
+      "end": 15.86
+    },
+    {
+      "word": "it",
+      "start": 15.86,
+      "end": 16.12
+    },
+    {
+      "word": "cannot",
+      "start": 16.12,
+      "end": 16.28
+    },
+    {
+      "word": "read",
+      "start": 16.28,
+      "end": 16.5
+    },
+    {
+      "word": "a",
+      "start": 16.5,
+      "end": 16.62
+    },
+    {
+      "word": "file,",
+      "start": 16.62,
+      "end": 16.88
+    },
+    {
+      "word": "run",
+      "start": 17.0,
+      "end": 17.2
+    },
+    {
+      "word": "a",
+      "start": 17.2,
+      "end": 17.34
+    },
+    {
+      "word": "test,",
+      "start": 17.34,
+      "end": 17.64
+    },
+    {
+      "word": "manage",
+      "start": 17.78,
+      "end": 18.04
+    },
+    {
+      "word": "working",
+      "start": 18.04,
+      "end": 18.3
+    },
+    {
+      "word": "memory,",
+      "start": 18.3,
+      "end": 18.6
+    },
+    {
+      "word": "or",
+      "start": 18.82,
+      "end": 19.02
+    },
+    {
+      "word": "verify",
+      "start": 19.02,
+      "end": 19.4
+    },
+    {
+      "word": "whether",
+      "start": 19.4,
+      "end": 19.72
+    },
+    {
+      "word": "its",
+      "start": 19.72,
+      "end": 19.92
+    },
+    {
+      "word": "own",
+      "start": 19.92,
+      "end": 20.1
+    },
+    {
+      "word": "answer",
+      "start": 20.1,
+      "end": 20.46
+    },
+    {
+      "word": "actually",
+      "start": 20.46,
+      "end": 20.84
+    },
+    {
+      "word": "works.",
+      "start": 20.84,
+      "end": 21.16
+    },
+    {
+      "word": "The",
+      "start": 21.44,
+      "end": 21.9
+    },
+    {
+      "word": "harness",
+      "start": 21.9,
+      "end": 22.14
+    },
+    {
+      "word": "is",
+      "start": 22.14,
+      "end": 22.42
+    },
+    {
+      "word": "the",
+      "start": 22.42,
+      "end": 22.52
+    },
+    {
+      "word": "operating",
+      "start": 22.52,
+      "end": 22.82
+    },
+    {
+      "word": "system",
+      "start": 22.82,
+      "end": 23.28
+    },
+    {
+      "word": "that",
+      "start": 23.28,
+      "end": 23.48
+    },
+    {
+      "word": "turns",
+      "start": 23.48,
+      "end": 23.72
+    },
+    {
+      "word": "raw",
+      "start": 23.72,
+      "end": 23.92
+    },
+    {
+      "word": "intelligence",
+      "start": 23.92,
+      "end": 24.42
+    },
+    {
+      "word": "into",
+      "start": 24.42,
+      "end": 24.8
+    },
+    {
+      "word": "reliable",
+      "start": 24.8,
+      "end": 25.04
+    },
+    {
+      "word": "software.",
+      "start": 25.04,
+      "end": 25.58
+    }
+  ]
+}

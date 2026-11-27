@@ -1,5 +1,69 @@
 RESULT: PASS
-Words: 40   Failed: 0 (0.00%)   Limit: 40 total, 25% per file
+Words: 3134   Failed: 32 (1.02%)   Limit: 40 total, 25% per file
 
-001.welcome-to-this.mp3: 0/13 failed   [large-v3 (0 failed)]
-002.here-is-the.mp3: 0/27 failed   [large-v3 (0 failed)]
+001.put-two-ai.mp3: 1/85 failed   [large-v3 (1 failed)]
+    word #39 "Claude" @ 14.28s: heard "Cloud"
+002.the-missing-variable.mp3: 0/85 failed   [large-v3 (0 failed)]
+003.in-this-video.mp3: 0/78 failed   [large-v3 (0 failed)]
+004.to-see-where.mp3: 0/81 failed   [large-v3 (0 failed)]
+005.without-a-harness.mp3: 0/82 failed   [large-v3 (0 failed)]
+006.this-is-also.mp3: 2/85 failed   [large-v3 (2 failed)]
+    word #56 "Claude" @ 16.46s: heard "Cloud"
+    word #60 "Aider" @ 17.66s: heard "ATER"
+007.that-gives-us.mp3: 0/80 failed   [large-v3 (0 failed)]
+008.before-we-dive.mp3: 2/100 failed   [large-v3 (2 failed)]
+    word #38 "Claude" @ 12.30s: heard "Cloud"
+    word #44 "Manus," @ 14.74s: heard "Monus,"
+009.let-us-open.mp3: 0/85 failed   [large-v3 (0 failed)]
+010.here-is-the.mp3: 1/90 failed   [large-v3 (1 failed)]
+    word #79 "tool" @ 27.48s: heard "to a"
+011.once-you-see.mp3: 0/84 failed   [large-v3 (0 failed)]
+012.back-in-the.mp3: 0/85 failed   [large-v3 (0 failed)]
+013.you-see-the.mp3: 2/81 failed   [large-v3 (2 failed)]
+    words #49-50 (2) "Aider, Claude" @ 16.26s: heard "AIDR, Cloud"
+014.now-move-to.mp3: 0/89 failed   [large-v3 (0 failed)]
+015.just-as-important.mp3: 1/85 failed   [large-v3 (1 failed)]
+    word #17 "Claude" @ 5.24s: heard "Cloud"
+016.that-is-why.mp3: 0/78 failed   [large-v3 (0 failed)]
+017.so-how-do.mp3: 1/84 failed   [large-v3 (1 failed)]
+    word #77 "grep" @ 22.76s: heard "grab"
+018.the-same-hygiene.mp3: 1/84 failed   [large-v3 (1 failed)]
+    word #16 "thousand" @ 5.34s: heard ",000"
+019.eventually-on-a.mp3: 2/87 failed   [large-v3 (2 failed)]
+    words #71-72 (2) "one-time cache" @ 24.54s: heard "one -time cash"
+020.that-brings-us.mp3: 0/82 failed   [large-v3 (0 failed)]
+021.the-solution-used.mp3: 0/85 failed   [large-v3 (0 failed)]
+022.anthropic-formalized-this.mp3: 0/88 failed   [large-v3 (0 failed)]
+023.now-we-arrive.mp3: 1/86 failed   [large-v3 (1 failed)]
+    word #48 "linter" @ 22.16s: heard "Linsurf"
+024.verification-works-best.mp3: 0/89 failed   [large-v3 (0 failed)]
+    extra words heard, not in script: it,
+025.because-handing-a.mp3: 0/80 failed   [large-v3 (0 failed)]
+026.hard-sandboxes-protect.mp3: 0/91 failed   [large-v3 (0 failed)]
+027.even-with-verification.mp3: 1/88 failed   [large-v3 (1 failed)]
+    word #32 "stop" @ 11.56s: heard "stock"
+028.once-you-master.mp3: 6/87 failed   [large-v3 (6 failed)]
+    word #42 "Cline," @ 15.72s: heard "Klein,"
+    words #44-45 (2) "Roo Code" @ 16.42s: heard "RueCode"
+    words #55-56 (2) "forty-file codebase" @ 20.38s: heard "40 -file code -based"
+    word #70 "grep" @ 25.28s: heard "grip"
+029.delegation-also-unlocks.mp3: 0/80 failed   [large-v3 (0 failed)]
+030.zooming-out-to.mp3: 4/87 failed   [large-v3 (4 failed)]
+    word #24 "Claude" @ 8.02s: heard "Cloud"
+    word #33 "Aider," @ 13.22s: heard "Ader,"
+    word #35 "Cline." @ 13.78s: heard "Klein."
+    word #57 "Devin," @ 20.44s: heard "Devon,"
+031.which-leads-to.mp3: 0/88 failed   [large-v3 (0 failed)]
+032.with-traces-in.mp3: 2/93 failed   [large-v3 (2 failed)]
+    word #80 "third." @ 23.88s: heard "3rd."
+    word #88 "solved" @ 27.02s: heard "solve"
+033.even-better-run.mp3: 1/84 failed   [large-v3 (1 failed)]
+    word #4 "two-by-two" @ 1.26s: heard "2x2"
+034.that-leads-to.mp3: 2/91 failed   [large-v3 (2 failed)]
+    word #47 "Claude" @ 19.24s: heard "Cloud"
+    word #58 "LangGraph," @ 24.18s: heard "Langraph,"
+035.pull-all-six.mp3: 1/88 failed   [large-v3 (1 failed)]
+    word #58 "disk" @ 21.12s: heard "disks"
+036.so-the-next.mp3: 1/82 failed   [large-v3 (1 failed)]
+    word #27 "tenth" @ 7.74s: heard "10th"
+037.if-you-are.mp3: 0/57 failed   [large-v3 (0 failed)]

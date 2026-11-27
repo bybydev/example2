@@ -1,0 +1,975 @@
+{
+  "audio": "001.put-two-ai.mp3",
+  "paragraph": 1,
+  "text": "Put two AI coding agents powered by the identical frontier language model on the exact same engineering bug: fixing a token refresh race condition in an authentication module. On real benchmarks like SWE-bench and Terminal-Bench, and across tools like Claude Code, Codex, Cursor, Gemini CLI, OpenCode, Devin, and OpenHands, you see the same striking paradox. One agent burns twenty turns in a broken retry loop and fails. The other isolates the bug, patches cleanly, and passes every test. Same weights, same intelligence, completely different outcome.",
+  "transcript": "Put two AI coding agents powered by the identical frontier language model on the exact same engineering bug, fixing a token refresh race condition in an authentication module. On real benchmarks like SWE, Bench, and Terminal, Bench, and across tools like Cloud Code, Codex, Cursor, Gemini CLI, OpenCode, Devin, and OpenHands, you see the same striking paradox. One agent burns 20 turns in a broken retry loop and fails. The other isolates the bug, patches cleanly, and passes every test. same weights same intelligence completely different outcome",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 1
+    }
+  ],
+  "duration": 32.28,
+  "failed_words": 1,
+  "failures": [
+    {
+      "index": 39,
+      "word": "Claude",
+      "match": "approx",
+      "heard": "Cloud",
+      "start": 14.28
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Put",
+      "start": 0.0,
+      "end": 0.26,
+      "match": "exact"
+    },
+    {
+      "word": "two",
+      "start": 0.26,
+      "end": 0.5,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 0.5,
+      "end": 0.86,
+      "match": "exact"
+    },
+    {
+      "word": "coding",
+      "start": 0.86,
+      "end": 1.16,
+      "match": "exact"
+    },
+    {
+      "word": "agents",
+      "start": 1.16,
+      "end": 1.58,
+      "match": "exact"
+    },
+    {
+      "word": "powered",
+      "start": 1.58,
+      "end": 1.96,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 1.96,
+      "end": 2.2,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 2.2,
+      "end": 2.3,
+      "match": "exact"
+    },
+    {
+      "word": "identical",
+      "start": 2.3,
+      "end": 2.58,
+      "match": "exact"
+    },
+    {
+      "word": "frontier",
+      "start": 2.58,
+      "end": 3.04,
+      "match": "exact"
+    },
+    {
+      "word": "language",
+      "start": 3.04,
+      "end": 3.36,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 3.36,
+      "end": 3.78,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 3.78,
+      "end": 4.02,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 4.02,
+      "end": 4.12,
+      "match": "exact"
+    },
+    {
+      "word": "exact",
+      "start": 4.12,
+      "end": 4.38,
+      "match": "exact"
+    },
+    {
+      "word": "same",
+      "start": 4.38,
+      "end": 4.7,
+      "match": "exact"
+    },
+    {
+      "word": "engineering",
+      "start": 4.7,
+      "end": 5.1,
+      "match": "exact"
+    },
+    {
+      "word": "bug:",
+      "start": 5.1,
+      "end": 5.42,
+      "match": "exact"
+    },
+    {
+      "word": "fixing",
+      "start": 5.62,
+      "end": 6.18,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 6.18,
+      "end": 6.4,
+      "match": "exact"
+    },
+    {
+      "word": "token",
+      "start": 6.4,
+      "end": 6.64,
+      "match": "exact"
+    },
+    {
+      "word": "refresh",
+      "start": 6.64,
+      "end": 6.88,
+      "match": "exact"
+    },
+    {
+      "word": "race",
+      "start": 6.88,
+      "end": 7.2,
+      "match": "exact"
+    },
+    {
+      "word": "condition",
+      "start": 7.2,
+      "end": 7.5,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 7.5,
+      "end": 7.88,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 7.88,
+      "end": 7.94,
+      "match": "exact"
+    },
+    {
+      "word": "authentication",
+      "start": 7.94,
+      "end": 8.34,
+      "match": "exact"
+    },
+    {
+      "word": "module.",
+      "start": 8.34,
+      "end": 8.86,
+      "match": "exact"
+    },
+    {
+      "word": "On",
+      "start": 9.4,
+      "end": 9.96,
+      "match": "exact"
+    },
+    {
+      "word": "real",
+      "start": 9.96,
+      "end": 10.14,
+      "match": "exact"
+    },
+    {
+      "word": "benchmarks",
+      "start": 10.14,
+      "end": 10.54,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 10.54,
+      "end": 10.9,
+      "match": "exact"
+    },
+    {
+      "word": "SWE-bench",
+      "start": 10.9,
+      "end": 11.82,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 11.9,
+      "end": 11.98,
+      "match": "exact"
+    },
+    {
+      "word": "Terminal-Bench,",
+      "start": 11.98,
+      "end": 13.32,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 13.32,
+      "end": 13.48,
+      "match": "exact"
+    },
+    {
+      "word": "across",
+      "start": 13.48,
+      "end": 13.64,
+      "match": "exact"
+    },
+    {
+      "word": "tools",
+      "start": 13.64,
+      "end": 13.98,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 13.98,
+      "end": 14.28,
+      "match": "exact"
+    },
+    {
+      "word": "Claude",
+      "start": 14.28,
+      "end": 14.46,
+      "match": "approx",
+      "heard": "Cloud"
+    },
+    {
+      "word": "Code,",
+      "start": 14.46,
+      "end": 14.72,
+      "match": "exact"
+    },
+    {
+      "word": "Codex,",
+      "start": 14.94,
+      "end": 15.56,
+      "match": "exact"
+    },
+    {
+      "word": "Cursor,",
+      "start": 15.6,
+      "end": 16.08,
+      "match": "exact"
+    },
+    {
+      "word": "Gemini",
+      "start": 16.14,
+      "end": 16.5,
+      "match": "exact"
+    },
+    {
+      "word": "CLI,",
+      "start": 16.5,
+      "end": 17.02,
+      "match": "exact"
+    },
+    {
+      "word": "OpenCode,",
+      "start": 17.14,
+      "end": 17.72,
+      "match": "exact"
+    },
+    {
+      "word": "Devin,",
+      "start": 17.86,
+      "end": 18.2,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 18.3,
+      "end": 18.42,
+      "match": "exact"
+    },
+    {
+      "word": "OpenHands,",
+      "start": 18.42,
+      "end": 18.94,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 19.06,
+      "end": 19.6,
+      "match": "exact"
+    },
+    {
+      "word": "see",
+      "start": 19.6,
+      "end": 19.74,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 19.74,
+      "end": 19.86,
+      "match": "exact"
+    },
+    {
+      "word": "same",
+      "start": 19.86,
+      "end": 20.04,
+      "match": "exact"
+    },
+    {
+      "word": "striking",
+      "start": 20.04,
+      "end": 20.36,
+      "match": "exact"
+    },
+    {
+      "word": "paradox.",
+      "start": 20.36,
+      "end": 20.72,
+      "match": "exact"
+    },
+    {
+      "word": "One",
+      "start": 21.16,
+      "end": 21.58,
+      "match": "exact"
+    },
+    {
+      "word": "agent",
+      "start": 21.58,
+      "end": 21.86,
+      "match": "exact"
+    },
+    {
+      "word": "burns",
+      "start": 21.86,
+      "end": 22.2,
+      "match": "exact"
+    },
+    {
+      "word": "twenty",
+      "start": 22.2,
+      "end": 22.54,
+      "match": "exact"
+    },
+    {
+      "word": "turns",
+      "start": 22.54,
+      "end": 22.88,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 22.88,
+      "end": 23.12,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 23.12,
+      "end": 23.16,
+      "match": "exact"
+    },
+    {
+      "word": "broken",
+      "start": 23.16,
+      "end": 23.42,
+      "match": "exact"
+    },
+    {
+      "word": "retry",
+      "start": 23.42,
+      "end": 23.84,
+      "match": "exact"
+    },
+    {
+      "word": "loop",
+      "start": 23.84,
+      "end": 24.02,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 24.02,
+      "end": 24.24,
+      "match": "exact"
+    },
+    {
+      "word": "fails.",
+      "start": 24.24,
+      "end": 24.5,
+      "match": "exact"
+    },
+    {
+      "word": "The",
+      "start": 24.74,
+      "end": 25.18,
+      "match": "exact"
+    },
+    {
+      "word": "other",
+      "start": 25.18,
+      "end": 25.4,
+      "match": "exact"
+    },
+    {
+      "word": "isolates",
+      "start": 25.4,
+      "end": 25.98,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 25.98,
+      "end": 26.1,
+      "match": "exact"
+    },
+    {
+      "word": "bug,",
+      "start": 26.1,
+      "end": 26.32,
+      "match": "exact"
+    },
+    {
+      "word": "patches",
+      "start": 26.46,
+      "end": 26.8,
+      "match": "exact"
+    },
+    {
+      "word": "cleanly,",
+      "start": 26.8,
+      "end": 27.3,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 27.32,
+      "end": 27.5,
+      "match": "exact"
+    },
+    {
+      "word": "passes",
+      "start": 27.5,
+      "end": 27.74,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 27.74,
+      "end": 28.02,
+      "match": "exact"
+    },
+    {
+      "word": "test.",
+      "start": 28.02,
+      "end": 28.3,
+      "match": "exact"
+    },
+    {
+      "word": "Same",
+      "start": 28.3,
+      "end": 29.18,
+      "match": "exact"
+    },
+    {
+      "word": "weights,",
+      "start": 29.18,
+      "end": 29.5,
+      "match": "exact"
+    },
+    {
+      "word": "same",
+      "start": 29.5,
+      "end": 30.0,
+      "match": "exact"
+    },
+    {
+      "word": "intelligence,",
+      "start": 30.0,
+      "end": 30.44,
+      "match": "exact"
+    },
+    {
+      "word": "completely",
+      "start": 30.44,
+      "end": 31.14,
+      "match": "exact"
+    },
+    {
+      "word": "different",
+      "start": 31.14,
+      "end": 31.48,
+      "match": "exact"
+    },
+    {
+      "word": "outcome.",
+      "start": 31.48,
+      "end": 31.74,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Put",
+      "start": 0.0,
+      "end": 0.26
+    },
+    {
+      "word": "two",
+      "start": 0.26,
+      "end": 0.5
+    },
+    {
+      "word": "AI",
+      "start": 0.5,
+      "end": 0.86
+    },
+    {
+      "word": "coding",
+      "start": 0.86,
+      "end": 1.16
+    },
+    {
+      "word": "agents",
+      "start": 1.16,
+      "end": 1.58
+    },
+    {
+      "word": "powered",
+      "start": 1.58,
+      "end": 1.96
+    },
+    {
+      "word": "by",
+      "start": 1.96,
+      "end": 2.2
+    },
+    {
+      "word": "the",
+      "start": 2.2,
+      "end": 2.3
+    },
+    {
+      "word": "identical",
+      "start": 2.3,
+      "end": 2.58
+    },
+    {
+      "word": "frontier",
+      "start": 2.58,
+      "end": 3.04
+    },
+    {
+      "word": "language",
+      "start": 3.04,
+      "end": 3.36
+    },
+    {
+      "word": "model",
+      "start": 3.36,
+      "end": 3.78
+    },
+    {
+      "word": "on",
+      "start": 3.78,
+      "end": 4.02
+    },
+    {
+      "word": "the",
+      "start": 4.02,
+      "end": 4.12
+    },
+    {
+      "word": "exact",
+      "start": 4.12,
+      "end": 4.38
+    },
+    {
+      "word": "same",
+      "start": 4.38,
+      "end": 4.7
+    },
+    {
+      "word": "engineering",
+      "start": 4.7,
+      "end": 5.1
+    },
+    {
+      "word": "bug,",
+      "start": 5.1,
+      "end": 5.42
+    },
+    {
+      "word": "fixing",
+      "start": 5.62,
+      "end": 6.18
+    },
+    {
+      "word": "a",
+      "start": 6.18,
+      "end": 6.4
+    },
+    {
+      "word": "token",
+      "start": 6.4,
+      "end": 6.64
+    },
+    {
+      "word": "refresh",
+      "start": 6.64,
+      "end": 6.88
+    },
+    {
+      "word": "race",
+      "start": 6.88,
+      "end": 7.2
+    },
+    {
+      "word": "condition",
+      "start": 7.2,
+      "end": 7.5
+    },
+    {
+      "word": "in",
+      "start": 7.5,
+      "end": 7.88
+    },
+    {
+      "word": "an",
+      "start": 7.88,
+      "end": 7.94
+    },
+    {
+      "word": "authentication",
+      "start": 7.94,
+      "end": 8.34
+    },
+    {
+      "word": "module.",
+      "start": 8.34,
+      "end": 8.86
+    },
+    {
+      "word": "On",
+      "start": 9.4,
+      "end": 9.96
+    },
+    {
+      "word": "real",
+      "start": 9.96,
+      "end": 10.14
+    },
+    {
+      "word": "benchmarks",
+      "start": 10.14,
+      "end": 10.54
+    },
+    {
+      "word": "like",
+      "start": 10.54,
+      "end": 10.9
+    },
+    {
+      "word": "SWE,",
+      "start": 10.9,
+      "end": 11.52
+    },
+    {
+      "word": "Bench,",
+      "start": 11.54,
+      "end": 11.82
+    },
+    {
+      "word": "and",
+      "start": 11.9,
+      "end": 11.98
+    },
+    {
+      "word": "Terminal,",
+      "start": 11.98,
+      "end": 12.36
+    },
+    {
+      "word": "Bench,",
+      "start": 12.42,
+      "end": 13.32
+    },
+    {
+      "word": "and",
+      "start": 13.32,
+      "end": 13.48
+    },
+    {
+      "word": "across",
+      "start": 13.48,
+      "end": 13.64
+    },
+    {
+      "word": "tools",
+      "start": 13.64,
+      "end": 13.98
+    },
+    {
+      "word": "like",
+      "start": 13.98,
+      "end": 14.28
+    },
+    {
+      "word": "Cloud",
+      "start": 14.28,
+      "end": 14.46
+    },
+    {
+      "word": "Code,",
+      "start": 14.46,
+      "end": 14.72
+    },
+    {
+      "word": "Codex,",
+      "start": 14.94,
+      "end": 15.56
+    },
+    {
+      "word": "Cursor,",
+      "start": 15.6,
+      "end": 16.08
+    },
+    {
+      "word": "Gemini",
+      "start": 16.14,
+      "end": 16.5
+    },
+    {
+      "word": "CLI,",
+      "start": 16.5,
+      "end": 17.02
+    },
+    {
+      "word": "OpenCode,",
+      "start": 17.14,
+      "end": 17.72
+    },
+    {
+      "word": "Devin,",
+      "start": 17.86,
+      "end": 18.2
+    },
+    {
+      "word": "and",
+      "start": 18.3,
+      "end": 18.42
+    },
+    {
+      "word": "OpenHands,",
+      "start": 18.42,
+      "end": 18.94
+    },
+    {
+      "word": "you",
+      "start": 19.06,
+      "end": 19.6
+    },
+    {
+      "word": "see",
+      "start": 19.6,
+      "end": 19.74
+    },
+    {
+      "word": "the",
+      "start": 19.74,
+      "end": 19.86
+    },
+    {
+      "word": "same",
+      "start": 19.86,
+      "end": 20.04
+    },
+    {
+      "word": "striking",
+      "start": 20.04,
+      "end": 20.36
+    },
+    {
+      "word": "paradox.",
+      "start": 20.36,
+      "end": 20.72
+    },
+    {
+      "word": "One",
+      "start": 21.16,
+      "end": 21.58
+    },
+    {
+      "word": "agent",
+      "start": 21.58,
+      "end": 21.86
+    },
+    {
+      "word": "burns",
+      "start": 21.86,
+      "end": 22.2
+    },
+    {
+      "word": "20",
+      "start": 22.2,
+      "end": 22.54
+    },
+    {
+      "word": "turns",
+      "start": 22.54,
+      "end": 22.88
+    },
+    {
+      "word": "in",
+      "start": 22.88,
+      "end": 23.12
+    },
+    {
+      "word": "a",
+      "start": 23.12,
+      "end": 23.16
+    },
+    {
+      "word": "broken",
+      "start": 23.16,
+      "end": 23.42
+    },
+    {
+      "word": "retry",
+      "start": 23.42,
+      "end": 23.84
+    },
+    {
+      "word": "loop",
+      "start": 23.84,
+      "end": 24.02
+    },
+    {
+      "word": "and",
+      "start": 24.02,
+      "end": 24.24
+    },
+    {
+      "word": "fails.",
+      "start": 24.24,
+      "end": 24.5
+    },
+    {
+      "word": "The",
+      "start": 24.74,
+      "end": 25.18
+    },
+    {
+      "word": "other",
+      "start": 25.18,
+      "end": 25.4
+    },
+    {
+      "word": "isolates",
+      "start": 25.4,
+      "end": 25.98
+    },
+    {
+      "word": "the",
+      "start": 25.98,
+      "end": 26.1
+    },
+    {
+      "word": "bug,",
+      "start": 26.1,
+      "end": 26.32
+    },
+    {
+      "word": "patches",
+      "start": 26.46,
+      "end": 26.8
+    },
+    {
+      "word": "cleanly,",
+      "start": 26.8,
+      "end": 27.3
+    },
+    {
+      "word": "and",
+      "start": 27.32,
+      "end": 27.5
+    },
+    {
+      "word": "passes",
+      "start": 27.5,
+      "end": 27.74
+    },
+    {
+      "word": "every",
+      "start": 27.74,
+      "end": 28.02
+    },
+    {
+      "word": "test.",
+      "start": 28.02,
+      "end": 28.3
+    },
+    {
+      "word": "same",
+      "start": 28.3,
+      "end": 29.18
+    },
+    {
+      "word": "weights",
+      "start": 29.18,
+      "end": 29.5
+    },
+    {
+      "word": "same",
+      "start": 29.5,
+      "end": 30.0
+    },
+    {
+      "word": "intelligence",
+      "start": 30.0,
+      "end": 30.44
+    },
+    {
+      "word": "completely",
+      "start": 30.44,
+      "end": 31.14
+    },
+    {
+      "word": "different",
+      "start": 31.14,
+      "end": 31.48
+    },
+    {
+      "word": "outcome",
+      "start": 31.48,
+      "end": 31.74
+    }
+  ]
+}

@@ -1,0 +1,998 @@
+{
+  "audio": "027.even-with-verification.mp3",
+  "paragraph": 27,
+  "text": "Even with verification and sandboxes, agents can still enter doom loops, applying the same broken patch twelve times while quietly burning through API credits. That is why every production harness includes deterministic stop conditions and loop breakers. Enforce hard caps on turn counts and dollar spend, track repeated identical test or tool failures, and trip a circuit breaker the moment the agent stops making real progress. Instead of spinning forever, the harness halts cleanly and escalates to a human with a concise diagnosis of what failed and why.",
+  "transcript": "Even with verification and sandboxes, agents can still enter doom loops, applying the same broken patch 12 times while quietly burning through API credits. That is why every production harness includes deterministic stock conditions and loop breakers. Enforce hard caps on turn counts and dollar spend, track repeated identical test or tool failures, and trip a circuit breaker the moment the agent stops making real progress. Instead of spinning forever, the harness halts cleanly and escalates to a human with a concise diagnosis of what failed and why.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 1
+    }
+  ],
+  "duration": 29.6,
+  "failed_words": 1,
+  "failures": [
+    {
+      "index": 32,
+      "word": "stop",
+      "match": "approx",
+      "heard": "stock",
+      "start": 11.56
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Even",
+      "start": 0.0,
+      "end": 0.46,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 0.46,
+      "end": 0.66,
+      "match": "exact"
+    },
+    {
+      "word": "verification",
+      "start": 0.66,
+      "end": 0.98,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 0.98,
+      "end": 1.5,
+      "match": "exact"
+    },
+    {
+      "word": "sandboxes,",
+      "start": 1.5,
+      "end": 2.24,
+      "match": "exact"
+    },
+    {
+      "word": "agents",
+      "start": 2.28,
+      "end": 2.62,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 2.62,
+      "end": 2.82,
+      "match": "exact"
+    },
+    {
+      "word": "still",
+      "start": 2.82,
+      "end": 3.1,
+      "match": "exact"
+    },
+    {
+      "word": "enter",
+      "start": 3.1,
+      "end": 3.36,
+      "match": "exact"
+    },
+    {
+      "word": "doom",
+      "start": 3.36,
+      "end": 3.58,
+      "match": "exact"
+    },
+    {
+      "word": "loops,",
+      "start": 3.58,
+      "end": 3.76,
+      "match": "exact"
+    },
+    {
+      "word": "applying",
+      "start": 3.98,
+      "end": 4.5,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 4.5,
+      "end": 4.68,
+      "match": "exact"
+    },
+    {
+      "word": "same",
+      "start": 4.68,
+      "end": 4.9,
+      "match": "exact"
+    },
+    {
+      "word": "broken",
+      "start": 4.9,
+      "end": 5.14,
+      "match": "exact"
+    },
+    {
+      "word": "patch",
+      "start": 5.14,
+      "end": 5.44,
+      "match": "exact"
+    },
+    {
+      "word": "twelve",
+      "start": 5.44,
+      "end": 5.74,
+      "match": "exact"
+    },
+    {
+      "word": "times",
+      "start": 5.74,
+      "end": 6.16,
+      "match": "exact"
+    },
+    {
+      "word": "while",
+      "start": 6.16,
+      "end": 6.44,
+      "match": "exact"
+    },
+    {
+      "word": "quietly",
+      "start": 6.44,
+      "end": 6.78,
+      "match": "exact"
+    },
+    {
+      "word": "burning",
+      "start": 6.78,
+      "end": 7.12,
+      "match": "exact"
+    },
+    {
+      "word": "through",
+      "start": 7.12,
+      "end": 7.38,
+      "match": "exact"
+    },
+    {
+      "word": "API",
+      "start": 7.38,
+      "end": 7.6,
+      "match": "exact"
+    },
+    {
+      "word": "credits.",
+      "start": 7.6,
+      "end": 8.02,
+      "match": "exact"
+    },
+    {
+      "word": "That",
+      "start": 8.64,
+      "end": 9.16,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 9.16,
+      "end": 9.3,
+      "match": "exact"
+    },
+    {
+      "word": "why",
+      "start": 9.3,
+      "end": 9.42,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 9.42,
+      "end": 9.72,
+      "match": "exact"
+    },
+    {
+      "word": "production",
+      "start": 9.72,
+      "end": 10.02,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 10.02,
+      "end": 10.36,
+      "match": "exact"
+    },
+    {
+      "word": "includes",
+      "start": 10.36,
+      "end": 10.74,
+      "match": "exact"
+    },
+    {
+      "word": "deterministic",
+      "start": 10.74,
+      "end": 11.56,
+      "match": "exact"
+    },
+    {
+      "word": "stop",
+      "start": 11.56,
+      "end": 11.8,
+      "match": "approx",
+      "heard": "stock"
+    },
+    {
+      "word": "conditions",
+      "start": 11.8,
+      "end": 12.16,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 12.16,
+      "end": 12.56,
+      "match": "exact"
+    },
+    {
+      "word": "loop",
+      "start": 12.56,
+      "end": 12.7,
+      "match": "exact"
+    },
+    {
+      "word": "breakers.",
+      "start": 12.7,
+      "end": 13.14,
+      "match": "exact"
+    },
+    {
+      "word": "Enforce",
+      "start": 13.6,
+      "end": 14.12,
+      "match": "exact"
+    },
+    {
+      "word": "hard",
+      "start": 14.12,
+      "end": 14.34,
+      "match": "exact"
+    },
+    {
+      "word": "caps",
+      "start": 14.34,
+      "end": 14.56,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 14.56,
+      "end": 14.82,
+      "match": "exact"
+    },
+    {
+      "word": "turn",
+      "start": 14.82,
+      "end": 15.02,
+      "match": "exact"
+    },
+    {
+      "word": "counts",
+      "start": 15.02,
+      "end": 15.3,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 15.3,
+      "end": 15.52,
+      "match": "exact"
+    },
+    {
+      "word": "dollar",
+      "start": 15.52,
+      "end": 15.7,
+      "match": "exact"
+    },
+    {
+      "word": "spend,",
+      "start": 15.7,
+      "end": 16.0,
+      "match": "exact"
+    },
+    {
+      "word": "track",
+      "start": 16.28,
+      "end": 16.54,
+      "match": "exact"
+    },
+    {
+      "word": "repeated",
+      "start": 16.54,
+      "end": 16.92,
+      "match": "exact"
+    },
+    {
+      "word": "identical",
+      "start": 16.92,
+      "end": 17.22,
+      "match": "exact"
+    },
+    {
+      "word": "test",
+      "start": 17.22,
+      "end": 17.68,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 17.68,
+      "end": 17.9,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 17.9,
+      "end": 18.02,
+      "match": "exact"
+    },
+    {
+      "word": "failures,",
+      "start": 18.02,
+      "end": 18.4,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 18.6,
+      "end": 18.96,
+      "match": "exact"
+    },
+    {
+      "word": "trip",
+      "start": 18.96,
+      "end": 19.12,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 19.12,
+      "end": 19.22,
+      "match": "exact"
+    },
+    {
+      "word": "circuit",
+      "start": 19.22,
+      "end": 19.42,
+      "match": "exact"
+    },
+    {
+      "word": "breaker",
+      "start": 19.42,
+      "end": 19.68,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 19.68,
+      "end": 19.9,
+      "match": "exact"
+    },
+    {
+      "word": "moment",
+      "start": 19.9,
+      "end": 20.12,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 20.12,
+      "end": 20.3,
+      "match": "exact"
+    },
+    {
+      "word": "agent",
+      "start": 20.3,
+      "end": 20.52,
+      "match": "exact"
+    },
+    {
+      "word": "stops",
+      "start": 20.52,
+      "end": 20.76,
+      "match": "exact"
+    },
+    {
+      "word": "making",
+      "start": 20.76,
+      "end": 21.02,
+      "match": "exact"
+    },
+    {
+      "word": "real",
+      "start": 21.02,
+      "end": 21.3,
+      "match": "exact"
+    },
+    {
+      "word": "progress.",
+      "start": 21.3,
+      "end": 21.66,
+      "match": "exact"
+    },
+    {
+      "word": "Instead",
+      "start": 22.5,
+      "end": 23.02,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 23.02,
+      "end": 23.26,
+      "match": "exact"
+    },
+    {
+      "word": "spinning",
+      "start": 23.26,
+      "end": 23.46,
+      "match": "exact"
+    },
+    {
+      "word": "forever,",
+      "start": 23.46,
+      "end": 23.7,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 24.02,
+      "end": 24.32,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 24.32,
+      "end": 24.52,
+      "match": "exact"
+    },
+    {
+      "word": "halts",
+      "start": 24.52,
+      "end": 24.84,
+      "match": "exact"
+    },
+    {
+      "word": "cleanly",
+      "start": 24.84,
+      "end": 25.32,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 25.32,
+      "end": 25.5,
+      "match": "exact"
+    },
+    {
+      "word": "escalates",
+      "start": 25.5,
+      "end": 25.94,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 25.94,
+      "end": 26.08,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 26.08,
+      "end": 26.2,
+      "match": "exact"
+    },
+    {
+      "word": "human",
+      "start": 26.2,
+      "end": 26.42,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 26.42,
+      "end": 26.74,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 26.74,
+      "end": 26.82,
+      "match": "exact"
+    },
+    {
+      "word": "concise",
+      "start": 26.82,
+      "end": 27.12,
+      "match": "exact"
+    },
+    {
+      "word": "diagnosis",
+      "start": 27.12,
+      "end": 27.56,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 27.56,
+      "end": 28.04,
+      "match": "exact"
+    },
+    {
+      "word": "what",
+      "start": 28.04,
+      "end": 28.18,
+      "match": "exact"
+    },
+    {
+      "word": "failed",
+      "start": 28.18,
+      "end": 28.5,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 28.5,
+      "end": 28.74,
+      "match": "exact"
+    },
+    {
+      "word": "why.",
+      "start": 28.74,
+      "end": 28.9,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Even",
+      "start": 0.0,
+      "end": 0.46
+    },
+    {
+      "word": "with",
+      "start": 0.46,
+      "end": 0.66
+    },
+    {
+      "word": "verification",
+      "start": 0.66,
+      "end": 0.98
+    },
+    {
+      "word": "and",
+      "start": 0.98,
+      "end": 1.5
+    },
+    {
+      "word": "sandboxes,",
+      "start": 1.5,
+      "end": 2.24
+    },
+    {
+      "word": "agents",
+      "start": 2.28,
+      "end": 2.62
+    },
+    {
+      "word": "can",
+      "start": 2.62,
+      "end": 2.82
+    },
+    {
+      "word": "still",
+      "start": 2.82,
+      "end": 3.1
+    },
+    {
+      "word": "enter",
+      "start": 3.1,
+      "end": 3.36
+    },
+    {
+      "word": "doom",
+      "start": 3.36,
+      "end": 3.58
+    },
+    {
+      "word": "loops,",
+      "start": 3.58,
+      "end": 3.76
+    },
+    {
+      "word": "applying",
+      "start": 3.98,
+      "end": 4.5
+    },
+    {
+      "word": "the",
+      "start": 4.5,
+      "end": 4.68
+    },
+    {
+      "word": "same",
+      "start": 4.68,
+      "end": 4.9
+    },
+    {
+      "word": "broken",
+      "start": 4.9,
+      "end": 5.14
+    },
+    {
+      "word": "patch",
+      "start": 5.14,
+      "end": 5.44
+    },
+    {
+      "word": "12",
+      "start": 5.44,
+      "end": 5.74
+    },
+    {
+      "word": "times",
+      "start": 5.74,
+      "end": 6.16
+    },
+    {
+      "word": "while",
+      "start": 6.16,
+      "end": 6.44
+    },
+    {
+      "word": "quietly",
+      "start": 6.44,
+      "end": 6.78
+    },
+    {
+      "word": "burning",
+      "start": 6.78,
+      "end": 7.12
+    },
+    {
+      "word": "through",
+      "start": 7.12,
+      "end": 7.38
+    },
+    {
+      "word": "API",
+      "start": 7.38,
+      "end": 7.6
+    },
+    {
+      "word": "credits.",
+      "start": 7.6,
+      "end": 8.02
+    },
+    {
+      "word": "That",
+      "start": 8.64,
+      "end": 9.16
+    },
+    {
+      "word": "is",
+      "start": 9.16,
+      "end": 9.3
+    },
+    {
+      "word": "why",
+      "start": 9.3,
+      "end": 9.42
+    },
+    {
+      "word": "every",
+      "start": 9.42,
+      "end": 9.72
+    },
+    {
+      "word": "production",
+      "start": 9.72,
+      "end": 10.02
+    },
+    {
+      "word": "harness",
+      "start": 10.02,
+      "end": 10.36
+    },
+    {
+      "word": "includes",
+      "start": 10.36,
+      "end": 10.74
+    },
+    {
+      "word": "deterministic",
+      "start": 10.74,
+      "end": 11.56
+    },
+    {
+      "word": "stock",
+      "start": 11.56,
+      "end": 11.8
+    },
+    {
+      "word": "conditions",
+      "start": 11.8,
+      "end": 12.16
+    },
+    {
+      "word": "and",
+      "start": 12.16,
+      "end": 12.56
+    },
+    {
+      "word": "loop",
+      "start": 12.56,
+      "end": 12.7
+    },
+    {
+      "word": "breakers.",
+      "start": 12.7,
+      "end": 13.14
+    },
+    {
+      "word": "Enforce",
+      "start": 13.6,
+      "end": 14.12
+    },
+    {
+      "word": "hard",
+      "start": 14.12,
+      "end": 14.34
+    },
+    {
+      "word": "caps",
+      "start": 14.34,
+      "end": 14.56
+    },
+    {
+      "word": "on",
+      "start": 14.56,
+      "end": 14.82
+    },
+    {
+      "word": "turn",
+      "start": 14.82,
+      "end": 15.02
+    },
+    {
+      "word": "counts",
+      "start": 15.02,
+      "end": 15.3
+    },
+    {
+      "word": "and",
+      "start": 15.3,
+      "end": 15.52
+    },
+    {
+      "word": "dollar",
+      "start": 15.52,
+      "end": 15.7
+    },
+    {
+      "word": "spend,",
+      "start": 15.7,
+      "end": 16.0
+    },
+    {
+      "word": "track",
+      "start": 16.28,
+      "end": 16.54
+    },
+    {
+      "word": "repeated",
+      "start": 16.54,
+      "end": 16.92
+    },
+    {
+      "word": "identical",
+      "start": 16.92,
+      "end": 17.22
+    },
+    {
+      "word": "test",
+      "start": 17.22,
+      "end": 17.68
+    },
+    {
+      "word": "or",
+      "start": 17.68,
+      "end": 17.9
+    },
+    {
+      "word": "tool",
+      "start": 17.9,
+      "end": 18.02
+    },
+    {
+      "word": "failures,",
+      "start": 18.02,
+      "end": 18.4
+    },
+    {
+      "word": "and",
+      "start": 18.6,
+      "end": 18.96
+    },
+    {
+      "word": "trip",
+      "start": 18.96,
+      "end": 19.12
+    },
+    {
+      "word": "a",
+      "start": 19.12,
+      "end": 19.22
+    },
+    {
+      "word": "circuit",
+      "start": 19.22,
+      "end": 19.42
+    },
+    {
+      "word": "breaker",
+      "start": 19.42,
+      "end": 19.68
+    },
+    {
+      "word": "the",
+      "start": 19.68,
+      "end": 19.9
+    },
+    {
+      "word": "moment",
+      "start": 19.9,
+      "end": 20.12
+    },
+    {
+      "word": "the",
+      "start": 20.12,
+      "end": 20.3
+    },
+    {
+      "word": "agent",
+      "start": 20.3,
+      "end": 20.52
+    },
+    {
+      "word": "stops",
+      "start": 20.52,
+      "end": 20.76
+    },
+    {
+      "word": "making",
+      "start": 20.76,
+      "end": 21.02
+    },
+    {
+      "word": "real",
+      "start": 21.02,
+      "end": 21.3
+    },
+    {
+      "word": "progress.",
+      "start": 21.3,
+      "end": 21.66
+    },
+    {
+      "word": "Instead",
+      "start": 22.5,
+      "end": 23.02
+    },
+    {
+      "word": "of",
+      "start": 23.02,
+      "end": 23.26
+    },
+    {
+      "word": "spinning",
+      "start": 23.26,
+      "end": 23.46
+    },
+    {
+      "word": "forever,",
+      "start": 23.46,
+      "end": 23.7
+    },
+    {
+      "word": "the",
+      "start": 24.02,
+      "end": 24.32
+    },
+    {
+      "word": "harness",
+      "start": 24.32,
+      "end": 24.52
+    },
+    {
+      "word": "halts",
+      "start": 24.52,
+      "end": 24.84
+    },
+    {
+      "word": "cleanly",
+      "start": 24.84,
+      "end": 25.32
+    },
+    {
+      "word": "and",
+      "start": 25.32,
+      "end": 25.5
+    },
+    {
+      "word": "escalates",
+      "start": 25.5,
+      "end": 25.94
+    },
+    {
+      "word": "to",
+      "start": 25.94,
+      "end": 26.08
+    },
+    {
+      "word": "a",
+      "start": 26.08,
+      "end": 26.2
+    },
+    {
+      "word": "human",
+      "start": 26.2,
+      "end": 26.42
+    },
+    {
+      "word": "with",
+      "start": 26.42,
+      "end": 26.74
+    },
+    {
+      "word": "a",
+      "start": 26.74,
+      "end": 26.82
+    },
+    {
+      "word": "concise",
+      "start": 26.82,
+      "end": 27.12
+    },
+    {
+      "word": "diagnosis",
+      "start": 27.12,
+      "end": 27.56
+    },
+    {
+      "word": "of",
+      "start": 27.56,
+      "end": 28.04
+    },
+    {
+      "word": "what",
+      "start": 28.04,
+      "end": 28.18
+    },
+    {
+      "word": "failed",
+      "start": 28.18,
+      "end": 28.5
+    },
+    {
+      "word": "and",
+      "start": 28.5,
+      "end": 28.74
+    },
+    {
+      "word": "why.",
+      "start": 28.74,
+      "end": 28.9
+    }
+  ]
+}

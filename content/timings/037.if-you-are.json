@@ -1,0 +1,653 @@
+{
+  "audio": "037.if-you-are.mp3",
+  "paragraph": 37,
+  "text": "If you are building with coding agents or designing your own harness right now, drop a comment below and let me know which bottleneck has hit your team the hardest: context rot, tool sprawl, or sandboxing and permissions. Subscribe for more deep dives into real-world AI systems engineering, and I will see you in the next video.",
+  "transcript": "If you are building with coding agents or designing your own harness right now, drop a comment below and let me know which bottleneck has hit your team the hardest, context rot, tool sprawl, or sandboxing and permissions. Subscribe for more deep dives into real-world AI systems engineering, and I will see you in the next video.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 17.16,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "If",
+      "start": 0.0,
+      "end": 0.32,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 0.32,
+      "end": 0.4,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 0.4,
+      "end": 0.5,
+      "match": "exact"
+    },
+    {
+      "word": "building",
+      "start": 0.5,
+      "end": 0.76,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 0.76,
+      "end": 0.94,
+      "match": "exact"
+    },
+    {
+      "word": "coding",
+      "start": 0.94,
+      "end": 1.18,
+      "match": "exact"
+    },
+    {
+      "word": "agents",
+      "start": 1.18,
+      "end": 1.52,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 1.52,
+      "end": 1.82,
+      "match": "exact"
+    },
+    {
+      "word": "designing",
+      "start": 1.82,
+      "end": 2.14,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 2.14,
+      "end": 2.36,
+      "match": "exact"
+    },
+    {
+      "word": "own",
+      "start": 2.36,
+      "end": 2.56,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 2.56,
+      "end": 2.88,
+      "match": "exact"
+    },
+    {
+      "word": "right",
+      "start": 2.88,
+      "end": 3.08,
+      "match": "exact"
+    },
+    {
+      "word": "now,",
+      "start": 3.08,
+      "end": 3.32,
+      "match": "exact"
+    },
+    {
+      "word": "drop",
+      "start": 3.5,
+      "end": 4.0,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 4.0,
+      "end": 4.12,
+      "match": "exact"
+    },
+    {
+      "word": "comment",
+      "start": 4.12,
+      "end": 4.38,
+      "match": "exact"
+    },
+    {
+      "word": "below",
+      "start": 4.38,
+      "end": 4.64,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 4.64,
+      "end": 4.94,
+      "match": "exact"
+    },
+    {
+      "word": "let",
+      "start": 4.94,
+      "end": 5.04,
+      "match": "exact"
+    },
+    {
+      "word": "me",
+      "start": 5.04,
+      "end": 5.14,
+      "match": "exact"
+    },
+    {
+      "word": "know",
+      "start": 5.14,
+      "end": 5.32,
+      "match": "exact"
+    },
+    {
+      "word": "which",
+      "start": 5.32,
+      "end": 5.52,
+      "match": "exact"
+    },
+    {
+      "word": "bottleneck",
+      "start": 5.52,
+      "end": 6.1,
+      "match": "exact"
+    },
+    {
+      "word": "has",
+      "start": 6.1,
+      "end": 6.18,
+      "match": "exact"
+    },
+    {
+      "word": "hit",
+      "start": 6.18,
+      "end": 6.34,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 6.34,
+      "end": 6.42,
+      "match": "exact"
+    },
+    {
+      "word": "team",
+      "start": 6.42,
+      "end": 6.66,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 6.66,
+      "end": 6.8,
+      "match": "exact"
+    },
+    {
+      "word": "hardest:",
+      "start": 6.8,
+      "end": 7.06,
+      "match": "exact"
+    },
+    {
+      "word": "context",
+      "start": 7.36,
+      "end": 7.94,
+      "match": "exact"
+    },
+    {
+      "word": "rot,",
+      "start": 7.94,
+      "end": 8.32,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 8.54,
+      "end": 8.86,
+      "match": "exact"
+    },
+    {
+      "word": "sprawl,",
+      "start": 8.86,
+      "end": 9.4,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 9.4,
+      "end": 9.66,
+      "match": "exact"
+    },
+    {
+      "word": "sandboxing",
+      "start": 9.66,
+      "end": 10.32,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 10.32,
+      "end": 10.36,
+      "match": "exact"
+    },
+    {
+      "word": "permissions.",
+      "start": 10.36,
+      "end": 10.62,
+      "match": "exact"
+    },
+    {
+      "word": "Subscribe",
+      "start": 11.76,
+      "end": 12.24,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 12.24,
+      "end": 12.58,
+      "match": "exact"
+    },
+    {
+      "word": "more",
+      "start": 12.58,
+      "end": 12.74,
+      "match": "exact"
+    },
+    {
+      "word": "deep",
+      "start": 12.74,
+      "end": 12.94,
+      "match": "exact"
+    },
+    {
+      "word": "dives",
+      "start": 12.94,
+      "end": 13.38,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 13.38,
+      "end": 13.52,
+      "match": "exact"
+    },
+    {
+      "word": "real-world",
+      "start": 13.52,
+      "end": 14.06,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 14.06,
+      "end": 14.28,
+      "match": "exact"
+    },
+    {
+      "word": "systems",
+      "start": 14.28,
+      "end": 14.6,
+      "match": "exact"
+    },
+    {
+      "word": "engineering,",
+      "start": 14.6,
+      "end": 15.16,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 15.32,
+      "end": 15.56,
+      "match": "exact"
+    },
+    {
+      "word": "I",
+      "start": 15.56,
+      "end": 15.64,
+      "match": "exact"
+    },
+    {
+      "word": "will",
+      "start": 15.64,
+      "end": 15.74,
+      "match": "exact"
+    },
+    {
+      "word": "see",
+      "start": 15.74,
+      "end": 15.9,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 15.9,
+      "end": 16.06,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 16.06,
+      "end": 16.22,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 16.22,
+      "end": 16.26,
+      "match": "exact"
+    },
+    {
+      "word": "next",
+      "start": 16.26,
+      "end": 16.44,
+      "match": "exact"
+    },
+    {
+      "word": "video.",
+      "start": 16.44,
+      "end": 16.74,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "If",
+      "start": 0.0,
+      "end": 0.32
+    },
+    {
+      "word": "you",
+      "start": 0.32,
+      "end": 0.4
+    },
+    {
+      "word": "are",
+      "start": 0.4,
+      "end": 0.5
+    },
+    {
+      "word": "building",
+      "start": 0.5,
+      "end": 0.76
+    },
+    {
+      "word": "with",
+      "start": 0.76,
+      "end": 0.94
+    },
+    {
+      "word": "coding",
+      "start": 0.94,
+      "end": 1.18
+    },
+    {
+      "word": "agents",
+      "start": 1.18,
+      "end": 1.52
+    },
+    {
+      "word": "or",
+      "start": 1.52,
+      "end": 1.82
+    },
+    {
+      "word": "designing",
+      "start": 1.82,
+      "end": 2.14
+    },
+    {
+      "word": "your",
+      "start": 2.14,
+      "end": 2.36
+    },
+    {
+      "word": "own",
+      "start": 2.36,
+      "end": 2.56
+    },
+    {
+      "word": "harness",
+      "start": 2.56,
+      "end": 2.88
+    },
+    {
+      "word": "right",
+      "start": 2.88,
+      "end": 3.08
+    },
+    {
+      "word": "now,",
+      "start": 3.08,
+      "end": 3.32
+    },
+    {
+      "word": "drop",
+      "start": 3.5,
+      "end": 4.0
+    },
+    {
+      "word": "a",
+      "start": 4.0,
+      "end": 4.12
+    },
+    {
+      "word": "comment",
+      "start": 4.12,
+      "end": 4.38
+    },
+    {
+      "word": "below",
+      "start": 4.38,
+      "end": 4.64
+    },
+    {
+      "word": "and",
+      "start": 4.64,
+      "end": 4.94
+    },
+    {
+      "word": "let",
+      "start": 4.94,
+      "end": 5.04
+    },
+    {
+      "word": "me",
+      "start": 5.04,
+      "end": 5.14
+    },
+    {
+      "word": "know",
+      "start": 5.14,
+      "end": 5.32
+    },
+    {
+      "word": "which",
+      "start": 5.32,
+      "end": 5.52
+    },
+    {
+      "word": "bottleneck",
+      "start": 5.52,
+      "end": 6.1
+    },
+    {
+      "word": "has",
+      "start": 6.1,
+      "end": 6.18
+    },
+    {
+      "word": "hit",
+      "start": 6.18,
+      "end": 6.34
+    },
+    {
+      "word": "your",
+      "start": 6.34,
+      "end": 6.42
+    },
+    {
+      "word": "team",
+      "start": 6.42,
+      "end": 6.66
+    },
+    {
+      "word": "the",
+      "start": 6.66,
+      "end": 6.8
+    },
+    {
+      "word": "hardest,",
+      "start": 6.8,
+      "end": 7.06
+    },
+    {
+      "word": "context",
+      "start": 7.36,
+      "end": 7.94
+    },
+    {
+      "word": "rot,",
+      "start": 7.94,
+      "end": 8.32
+    },
+    {
+      "word": "tool",
+      "start": 8.54,
+      "end": 8.86
+    },
+    {
+      "word": "sprawl,",
+      "start": 8.86,
+      "end": 9.4
+    },
+    {
+      "word": "or",
+      "start": 9.4,
+      "end": 9.66
+    },
+    {
+      "word": "sandboxing",
+      "start": 9.66,
+      "end": 10.32
+    },
+    {
+      "word": "and",
+      "start": 10.32,
+      "end": 10.36
+    },
+    {
+      "word": "permissions.",
+      "start": 10.36,
+      "end": 10.62
+    },
+    {
+      "word": "Subscribe",
+      "start": 11.76,
+      "end": 12.24
+    },
+    {
+      "word": "for",
+      "start": 12.24,
+      "end": 12.58
+    },
+    {
+      "word": "more",
+      "start": 12.58,
+      "end": 12.74
+    },
+    {
+      "word": "deep",
+      "start": 12.74,
+      "end": 12.94
+    },
+    {
+      "word": "dives",
+      "start": 12.94,
+      "end": 13.38
+    },
+    {
+      "word": "into",
+      "start": 13.38,
+      "end": 13.52
+    },
+    {
+      "word": "real",
+      "start": 13.52,
+      "end": 13.8
+    },
+    {
+      "word": "-world",
+      "start": 13.8,
+      "end": 14.06
+    },
+    {
+      "word": "AI",
+      "start": 14.06,
+      "end": 14.28
+    },
+    {
+      "word": "systems",
+      "start": 14.28,
+      "end": 14.6
+    },
+    {
+      "word": "engineering,",
+      "start": 14.6,
+      "end": 15.16
+    },
+    {
+      "word": "and",
+      "start": 15.32,
+      "end": 15.56
+    },
+    {
+      "word": "I",
+      "start": 15.56,
+      "end": 15.64
+    },
+    {
+      "word": "will",
+      "start": 15.64,
+      "end": 15.74
+    },
+    {
+      "word": "see",
+      "start": 15.74,
+      "end": 15.9
+    },
+    {
+      "word": "you",
+      "start": 15.9,
+      "end": 16.06
+    },
+    {
+      "word": "in",
+      "start": 16.06,
+      "end": 16.22
+    },
+    {
+      "word": "the",
+      "start": 16.22,
+      "end": 16.26
+    },
+    {
+      "word": "next",
+      "start": 16.26,
+      "end": 16.44
+    },
+    {
+      "word": "video.",
+      "start": 16.44,
+      "end": 16.74
+    }
+  ]
+}

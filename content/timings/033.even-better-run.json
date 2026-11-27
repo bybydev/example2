@@ -1,0 +1,954 @@
+{
+  "audio": "033.even-better-run.mp3",
+  "paragraph": 33,
+  "text": "Even better, run a two-by-two evaluation matrix comparing old and new models against old and new harnesses. This single habit prevents one of the sneakiest traps in AI engineering. A clever scaffold or strict workflow rule that rescued last year's weaker model often throttles this year's frontier model by boxing in its reasoning. Measuring both axes regularly shows whether your gains came from the model or the harness, and reveals the exact moment when stripping away old constraints unlocks a major jump in performance.",
+  "transcript": "Even better, run a 2x2 evaluation matrix comparing old and new models against old and new harnesses. This single habit prevents one of the sneakiest traps in AI engineering. A clever scaffold or strict workflow rule that rescued last year's weaker model often throttles this year's frontier model by boxing in its reasoning. Measuring both axes regularly shows whether your gains came from the model or the harness, and reveals the exact moment when stripping away old constraints unlocks a major jump in performance.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 1
+    }
+  ],
+  "duration": 25.96,
+  "failed_words": 1,
+  "failures": [
+    {
+      "index": 4,
+      "word": "two-by-two",
+      "match": "approx",
+      "heard": "2x2",
+      "start": 1.26
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Even",
+      "start": 0.0,
+      "end": 0.34,
+      "match": "exact"
+    },
+    {
+      "word": "better,",
+      "start": 0.34,
+      "end": 0.6,
+      "match": "exact"
+    },
+    {
+      "word": "run",
+      "start": 0.74,
+      "end": 1.12,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 1.12,
+      "end": 1.26,
+      "match": "exact"
+    },
+    {
+      "word": "two-by-two",
+      "start": 1.26,
+      "end": 1.66,
+      "match": "approx",
+      "heard": "2x2"
+    },
+    {
+      "word": "evaluation",
+      "start": 1.66,
+      "end": 1.92,
+      "match": "exact"
+    },
+    {
+      "word": "matrix",
+      "start": 1.92,
+      "end": 2.48,
+      "match": "exact"
+    },
+    {
+      "word": "comparing",
+      "start": 2.48,
+      "end": 2.86,
+      "match": "exact"
+    },
+    {
+      "word": "old",
+      "start": 2.86,
+      "end": 3.28,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 3.28,
+      "end": 3.44,
+      "match": "exact"
+    },
+    {
+      "word": "new",
+      "start": 3.44,
+      "end": 3.6,
+      "match": "exact"
+    },
+    {
+      "word": "models",
+      "start": 3.6,
+      "end": 3.9,
+      "match": "exact"
+    },
+    {
+      "word": "against",
+      "start": 3.9,
+      "end": 4.14,
+      "match": "exact"
+    },
+    {
+      "word": "old",
+      "start": 4.14,
+      "end": 4.44,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 4.44,
+      "end": 4.56,
+      "match": "exact"
+    },
+    {
+      "word": "new",
+      "start": 4.56,
+      "end": 4.68,
+      "match": "exact"
+    },
+    {
+      "word": "harnesses.",
+      "start": 4.68,
+      "end": 5.26,
+      "match": "exact"
+    },
+    {
+      "word": "This",
+      "start": 5.46,
+      "end": 5.98,
+      "match": "exact"
+    },
+    {
+      "word": "single",
+      "start": 5.98,
+      "end": 6.24,
+      "match": "exact"
+    },
+    {
+      "word": "habit",
+      "start": 6.24,
+      "end": 6.54,
+      "match": "exact"
+    },
+    {
+      "word": "prevents",
+      "start": 6.54,
+      "end": 6.82,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 6.82,
+      "end": 7.02,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 7.02,
+      "end": 7.14,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 7.14,
+      "end": 7.18,
+      "match": "exact"
+    },
+    {
+      "word": "sneakiest",
+      "start": 7.18,
+      "end": 7.62,
+      "match": "exact"
+    },
+    {
+      "word": "traps",
+      "start": 7.62,
+      "end": 7.88,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 7.88,
+      "end": 8.14,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 8.14,
+      "end": 8.32,
+      "match": "exact"
+    },
+    {
+      "word": "engineering.",
+      "start": 8.32,
+      "end": 8.66,
+      "match": "exact"
+    },
+    {
+      "word": "A",
+      "start": 9.36,
+      "end": 9.88,
+      "match": "exact"
+    },
+    {
+      "word": "clever",
+      "start": 9.88,
+      "end": 10.12,
+      "match": "exact"
+    },
+    {
+      "word": "scaffold",
+      "start": 10.12,
+      "end": 10.52,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 10.52,
+      "end": 10.82,
+      "match": "exact"
+    },
+    {
+      "word": "strict",
+      "start": 10.82,
+      "end": 11.0,
+      "match": "exact"
+    },
+    {
+      "word": "workflow",
+      "start": 11.0,
+      "end": 11.32,
+      "match": "exact"
+    },
+    {
+      "word": "rule",
+      "start": 11.32,
+      "end": 11.64,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 11.64,
+      "end": 11.84,
+      "match": "exact"
+    },
+    {
+      "word": "rescued",
+      "start": 11.84,
+      "end": 12.12,
+      "match": "exact"
+    },
+    {
+      "word": "last",
+      "start": 12.12,
+      "end": 12.32,
+      "match": "exact"
+    },
+    {
+      "word": "year's",
+      "start": 12.32,
+      "end": 12.68,
+      "match": "exact"
+    },
+    {
+      "word": "weaker",
+      "start": 12.68,
+      "end": 12.82,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 12.82,
+      "end": 13.14,
+      "match": "exact"
+    },
+    {
+      "word": "often",
+      "start": 13.14,
+      "end": 13.48,
+      "match": "exact"
+    },
+    {
+      "word": "throttles",
+      "start": 13.48,
+      "end": 13.94,
+      "match": "exact"
+    },
+    {
+      "word": "this",
+      "start": 13.94,
+      "end": 14.1,
+      "match": "exact"
+    },
+    {
+      "word": "year's",
+      "start": 14.1,
+      "end": 14.36,
+      "match": "exact"
+    },
+    {
+      "word": "frontier",
+      "start": 14.36,
+      "end": 14.54,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 14.54,
+      "end": 14.88,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 14.88,
+      "end": 15.18,
+      "match": "exact"
+    },
+    {
+      "word": "boxing",
+      "start": 15.18,
+      "end": 15.5,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 15.5,
+      "end": 15.68,
+      "match": "exact"
+    },
+    {
+      "word": "its",
+      "start": 15.68,
+      "end": 15.76,
+      "match": "exact"
+    },
+    {
+      "word": "reasoning.",
+      "start": 15.76,
+      "end": 16.1,
+      "match": "exact"
+    },
+    {
+      "word": "Measuring",
+      "start": 16.82,
+      "end": 17.34,
+      "match": "exact"
+    },
+    {
+      "word": "both",
+      "start": 17.34,
+      "end": 17.52,
+      "match": "exact"
+    },
+    {
+      "word": "axes",
+      "start": 17.52,
+      "end": 17.86,
+      "match": "exact"
+    },
+    {
+      "word": "regularly",
+      "start": 17.86,
+      "end": 18.28,
+      "match": "exact"
+    },
+    {
+      "word": "shows",
+      "start": 18.28,
+      "end": 18.68,
+      "match": "exact"
+    },
+    {
+      "word": "whether",
+      "start": 18.68,
+      "end": 18.98,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 18.98,
+      "end": 19.12,
+      "match": "exact"
+    },
+    {
+      "word": "gains",
+      "start": 19.12,
+      "end": 19.42,
+      "match": "exact"
+    },
+    {
+      "word": "came",
+      "start": 19.42,
+      "end": 19.6,
+      "match": "exact"
+    },
+    {
+      "word": "from",
+      "start": 19.6,
+      "end": 19.8,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 19.8,
+      "end": 19.92,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 19.92,
+      "end": 20.14,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 20.14,
+      "end": 20.32,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 20.32,
+      "end": 20.42,
+      "match": "exact"
+    },
+    {
+      "word": "harness,",
+      "start": 20.42,
+      "end": 20.72,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 20.94,
+      "end": 21.36,
+      "match": "exact"
+    },
+    {
+      "word": "reveals",
+      "start": 21.36,
+      "end": 21.6,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 21.6,
+      "end": 21.84,
+      "match": "exact"
+    },
+    {
+      "word": "exact",
+      "start": 21.84,
+      "end": 22.04,
+      "match": "exact"
+    },
+    {
+      "word": "moment",
+      "start": 22.04,
+      "end": 22.38,
+      "match": "exact"
+    },
+    {
+      "word": "when",
+      "start": 22.38,
+      "end": 22.58,
+      "match": "exact"
+    },
+    {
+      "word": "stripping",
+      "start": 22.58,
+      "end": 22.82,
+      "match": "exact"
+    },
+    {
+      "word": "away",
+      "start": 22.82,
+      "end": 23.02,
+      "match": "exact"
+    },
+    {
+      "word": "old",
+      "start": 23.02,
+      "end": 23.26,
+      "match": "exact"
+    },
+    {
+      "word": "constraints",
+      "start": 23.26,
+      "end": 23.7,
+      "match": "exact"
+    },
+    {
+      "word": "unlocks",
+      "start": 23.7,
+      "end": 24.22,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 24.22,
+      "end": 24.34,
+      "match": "exact"
+    },
+    {
+      "word": "major",
+      "start": 24.34,
+      "end": 24.52,
+      "match": "exact"
+    },
+    {
+      "word": "jump",
+      "start": 24.52,
+      "end": 24.84,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 24.84,
+      "end": 25.0,
+      "match": "exact"
+    },
+    {
+      "word": "performance.",
+      "start": 25.0,
+      "end": 25.22,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Even",
+      "start": 0.0,
+      "end": 0.34
+    },
+    {
+      "word": "better,",
+      "start": 0.34,
+      "end": 0.6
+    },
+    {
+      "word": "run",
+      "start": 0.74,
+      "end": 1.12
+    },
+    {
+      "word": "a",
+      "start": 1.12,
+      "end": 1.26
+    },
+    {
+      "word": "2x2",
+      "start": 1.26,
+      "end": 1.66
+    },
+    {
+      "word": "evaluation",
+      "start": 1.66,
+      "end": 1.92
+    },
+    {
+      "word": "matrix",
+      "start": 1.92,
+      "end": 2.48
+    },
+    {
+      "word": "comparing",
+      "start": 2.48,
+      "end": 2.86
+    },
+    {
+      "word": "old",
+      "start": 2.86,
+      "end": 3.28
+    },
+    {
+      "word": "and",
+      "start": 3.28,
+      "end": 3.44
+    },
+    {
+      "word": "new",
+      "start": 3.44,
+      "end": 3.6
+    },
+    {
+      "word": "models",
+      "start": 3.6,
+      "end": 3.9
+    },
+    {
+      "word": "against",
+      "start": 3.9,
+      "end": 4.14
+    },
+    {
+      "word": "old",
+      "start": 4.14,
+      "end": 4.44
+    },
+    {
+      "word": "and",
+      "start": 4.44,
+      "end": 4.56
+    },
+    {
+      "word": "new",
+      "start": 4.56,
+      "end": 4.68
+    },
+    {
+      "word": "harnesses.",
+      "start": 4.68,
+      "end": 5.26
+    },
+    {
+      "word": "This",
+      "start": 5.46,
+      "end": 5.98
+    },
+    {
+      "word": "single",
+      "start": 5.98,
+      "end": 6.24
+    },
+    {
+      "word": "habit",
+      "start": 6.24,
+      "end": 6.54
+    },
+    {
+      "word": "prevents",
+      "start": 6.54,
+      "end": 6.82
+    },
+    {
+      "word": "one",
+      "start": 6.82,
+      "end": 7.02
+    },
+    {
+      "word": "of",
+      "start": 7.02,
+      "end": 7.14
+    },
+    {
+      "word": "the",
+      "start": 7.14,
+      "end": 7.18
+    },
+    {
+      "word": "sneakiest",
+      "start": 7.18,
+      "end": 7.62
+    },
+    {
+      "word": "traps",
+      "start": 7.62,
+      "end": 7.88
+    },
+    {
+      "word": "in",
+      "start": 7.88,
+      "end": 8.14
+    },
+    {
+      "word": "AI",
+      "start": 8.14,
+      "end": 8.32
+    },
+    {
+      "word": "engineering.",
+      "start": 8.32,
+      "end": 8.66
+    },
+    {
+      "word": "A",
+      "start": 9.36,
+      "end": 9.88
+    },
+    {
+      "word": "clever",
+      "start": 9.88,
+      "end": 10.12
+    },
+    {
+      "word": "scaffold",
+      "start": 10.12,
+      "end": 10.52
+    },
+    {
+      "word": "or",
+      "start": 10.52,
+      "end": 10.82
+    },
+    {
+      "word": "strict",
+      "start": 10.82,
+      "end": 11.0
+    },
+    {
+      "word": "workflow",
+      "start": 11.0,
+      "end": 11.32
+    },
+    {
+      "word": "rule",
+      "start": 11.32,
+      "end": 11.64
+    },
+    {
+      "word": "that",
+      "start": 11.64,
+      "end": 11.84
+    },
+    {
+      "word": "rescued",
+      "start": 11.84,
+      "end": 12.12
+    },
+    {
+      "word": "last",
+      "start": 12.12,
+      "end": 12.32
+    },
+    {
+      "word": "year's",
+      "start": 12.32,
+      "end": 12.68
+    },
+    {
+      "word": "weaker",
+      "start": 12.68,
+      "end": 12.82
+    },
+    {
+      "word": "model",
+      "start": 12.82,
+      "end": 13.14
+    },
+    {
+      "word": "often",
+      "start": 13.14,
+      "end": 13.48
+    },
+    {
+      "word": "throttles",
+      "start": 13.48,
+      "end": 13.94
+    },
+    {
+      "word": "this",
+      "start": 13.94,
+      "end": 14.1
+    },
+    {
+      "word": "year's",
+      "start": 14.1,
+      "end": 14.36
+    },
+    {
+      "word": "frontier",
+      "start": 14.36,
+      "end": 14.54
+    },
+    {
+      "word": "model",
+      "start": 14.54,
+      "end": 14.88
+    },
+    {
+      "word": "by",
+      "start": 14.88,
+      "end": 15.18
+    },
+    {
+      "word": "boxing",
+      "start": 15.18,
+      "end": 15.5
+    },
+    {
+      "word": "in",
+      "start": 15.5,
+      "end": 15.68
+    },
+    {
+      "word": "its",
+      "start": 15.68,
+      "end": 15.76
+    },
+    {
+      "word": "reasoning.",
+      "start": 15.76,
+      "end": 16.1
+    },
+    {
+      "word": "Measuring",
+      "start": 16.82,
+      "end": 17.34
+    },
+    {
+      "word": "both",
+      "start": 17.34,
+      "end": 17.52
+    },
+    {
+      "word": "axes",
+      "start": 17.52,
+      "end": 17.86
+    },
+    {
+      "word": "regularly",
+      "start": 17.86,
+      "end": 18.28
+    },
+    {
+      "word": "shows",
+      "start": 18.28,
+      "end": 18.68
+    },
+    {
+      "word": "whether",
+      "start": 18.68,
+      "end": 18.98
+    },
+    {
+      "word": "your",
+      "start": 18.98,
+      "end": 19.12
+    },
+    {
+      "word": "gains",
+      "start": 19.12,
+      "end": 19.42
+    },
+    {
+      "word": "came",
+      "start": 19.42,
+      "end": 19.6
+    },
+    {
+      "word": "from",
+      "start": 19.6,
+      "end": 19.8
+    },
+    {
+      "word": "the",
+      "start": 19.8,
+      "end": 19.92
+    },
+    {
+      "word": "model",
+      "start": 19.92,
+      "end": 20.14
+    },
+    {
+      "word": "or",
+      "start": 20.14,
+      "end": 20.32
+    },
+    {
+      "word": "the",
+      "start": 20.32,
+      "end": 20.42
+    },
+    {
+      "word": "harness,",
+      "start": 20.42,
+      "end": 20.72
+    },
+    {
+      "word": "and",
+      "start": 20.94,
+      "end": 21.36
+    },
+    {
+      "word": "reveals",
+      "start": 21.36,
+      "end": 21.6
+    },
+    {
+      "word": "the",
+      "start": 21.6,
+      "end": 21.84
+    },
+    {
+      "word": "exact",
+      "start": 21.84,
+      "end": 22.04
+    },
+    {
+      "word": "moment",
+      "start": 22.04,
+      "end": 22.38
+    },
+    {
+      "word": "when",
+      "start": 22.38,
+      "end": 22.58
+    },
+    {
+      "word": "stripping",
+      "start": 22.58,
+      "end": 22.82
+    },
+    {
+      "word": "away",
+      "start": 22.82,
+      "end": 23.02
+    },
+    {
+      "word": "old",
+      "start": 23.02,
+      "end": 23.26
+    },
+    {
+      "word": "constraints",
+      "start": 23.26,
+      "end": 23.7
+    },
+    {
+      "word": "unlocks",
+      "start": 23.7,
+      "end": 24.22
+    },
+    {
+      "word": "a",
+      "start": 24.22,
+      "end": 24.34
+    },
+    {
+      "word": "major",
+      "start": 24.34,
+      "end": 24.52
+    },
+    {
+      "word": "jump",
+      "start": 24.52,
+      "end": 24.84
+    },
+    {
+      "word": "in",
+      "start": 24.84,
+      "end": 25.0
+    },
+    {
+      "word": "performance.",
+      "start": 25.0,
+      "end": 25.22
+    }
+  ]
+}

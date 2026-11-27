@@ -1,0 +1,923 @@
+{
+  "audio": "005.without-a-harness.mp3",
+  "paragraph": 5,
+  "text": "Without a harness, talking to a language model API is completely stateless and blind. You send one prompt, receive one completion, and the interaction ends right there. Wrap that exact same API inside a harness, and everything changes. Now the model becomes an iterative controller connected to a live environment. It proposes an action, the harness runs it against real files or terminals, feeds the actual output back in, and lets the model adapt step by step until the job is done.",
+  "transcript": "Without a harness, talking to a language model API is completely stateless and blind. You send one prompt, receive one completion, and the interaction ends right there. Wrap that exact same API inside a harness, and everything changes. Now the model becomes an iterative controller connected to a live environment. It proposes an action, the harness runs it against real files or terminals, feeds the actual output back in, and lets the model adapt step-by-step until the job is done.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 26.52,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Without",
+      "start": 0.0,
+      "end": 0.34,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 0.34,
+      "end": 0.5,
+      "match": "exact"
+    },
+    {
+      "word": "harness,",
+      "start": 0.5,
+      "end": 0.7,
+      "match": "exact"
+    },
+    {
+      "word": "talking",
+      "start": 0.96,
+      "end": 1.38,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 1.38,
+      "end": 1.56,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 1.56,
+      "end": 1.66,
+      "match": "exact"
+    },
+    {
+      "word": "language",
+      "start": 1.66,
+      "end": 1.9,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 1.9,
+      "end": 2.1,
+      "match": "exact"
+    },
+    {
+      "word": "API",
+      "start": 2.1,
+      "end": 2.44,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 2.44,
+      "end": 2.94,
+      "match": "exact"
+    },
+    {
+      "word": "completely",
+      "start": 2.94,
+      "end": 3.2,
+      "match": "exact"
+    },
+    {
+      "word": "stateless",
+      "start": 3.2,
+      "end": 3.78,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 3.78,
+      "end": 4.04,
+      "match": "exact"
+    },
+    {
+      "word": "blind.",
+      "start": 4.04,
+      "end": 4.34,
+      "match": "exact"
+    },
+    {
+      "word": "You",
+      "start": 4.7,
+      "end": 5.1,
+      "match": "exact"
+    },
+    {
+      "word": "send",
+      "start": 5.1,
+      "end": 5.26,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 5.26,
+      "end": 5.42,
+      "match": "exact"
+    },
+    {
+      "word": "prompt,",
+      "start": 5.42,
+      "end": 5.76,
+      "match": "exact"
+    },
+    {
+      "word": "receive",
+      "start": 5.92,
+      "end": 6.18,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 6.18,
+      "end": 6.4,
+      "match": "exact"
+    },
+    {
+      "word": "completion,",
+      "start": 6.4,
+      "end": 6.84,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 7.0,
+      "end": 7.24,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 7.24,
+      "end": 7.32,
+      "match": "exact"
+    },
+    {
+      "word": "interaction",
+      "start": 7.32,
+      "end": 7.64,
+      "match": "exact"
+    },
+    {
+      "word": "ends",
+      "start": 7.64,
+      "end": 8.06,
+      "match": "exact"
+    },
+    {
+      "word": "right",
+      "start": 8.06,
+      "end": 8.26,
+      "match": "exact"
+    },
+    {
+      "word": "there.",
+      "start": 8.26,
+      "end": 8.52,
+      "match": "exact"
+    },
+    {
+      "word": "Wrap",
+      "start": 9.0,
+      "end": 9.48,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 9.48,
+      "end": 9.7,
+      "match": "exact"
+    },
+    {
+      "word": "exact",
+      "start": 9.7,
+      "end": 9.96,
+      "match": "exact"
+    },
+    {
+      "word": "same",
+      "start": 9.96,
+      "end": 10.24,
+      "match": "exact"
+    },
+    {
+      "word": "API",
+      "start": 10.24,
+      "end": 10.6,
+      "match": "exact"
+    },
+    {
+      "word": "inside",
+      "start": 10.6,
+      "end": 11.16,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 11.16,
+      "end": 11.38,
+      "match": "exact"
+    },
+    {
+      "word": "harness,",
+      "start": 11.38,
+      "end": 11.64,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 11.84,
+      "end": 12.06,
+      "match": "exact"
+    },
+    {
+      "word": "everything",
+      "start": 12.06,
+      "end": 12.26,
+      "match": "exact"
+    },
+    {
+      "word": "changes.",
+      "start": 12.26,
+      "end": 12.72,
+      "match": "exact"
+    },
+    {
+      "word": "Now",
+      "start": 13.62,
+      "end": 14.1,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 14.1,
+      "end": 14.28,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 14.28,
+      "end": 14.5,
+      "match": "exact"
+    },
+    {
+      "word": "becomes",
+      "start": 14.5,
+      "end": 14.72,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 14.72,
+      "end": 14.96,
+      "match": "exact"
+    },
+    {
+      "word": "iterative",
+      "start": 14.96,
+      "end": 15.26,
+      "match": "exact"
+    },
+    {
+      "word": "controller",
+      "start": 15.26,
+      "end": 15.58,
+      "match": "exact"
+    },
+    {
+      "word": "connected",
+      "start": 15.58,
+      "end": 16.02,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 16.02,
+      "end": 16.28,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 16.28,
+      "end": 16.38,
+      "match": "exact"
+    },
+    {
+      "word": "live",
+      "start": 16.38,
+      "end": 16.54,
+      "match": "exact"
+    },
+    {
+      "word": "environment.",
+      "start": 16.54,
+      "end": 16.98,
+      "match": "exact"
+    },
+    {
+      "word": "It",
+      "start": 17.24,
+      "end": 17.56,
+      "match": "exact"
+    },
+    {
+      "word": "proposes",
+      "start": 17.56,
+      "end": 17.96,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 17.96,
+      "end": 18.08,
+      "match": "exact"
+    },
+    {
+      "word": "action,",
+      "start": 18.08,
+      "end": 18.4,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 18.56,
+      "end": 18.76,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 18.76,
+      "end": 19.02,
+      "match": "exact"
+    },
+    {
+      "word": "runs",
+      "start": 19.02,
+      "end": 19.22,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 19.22,
+      "end": 19.42,
+      "match": "exact"
+    },
+    {
+      "word": "against",
+      "start": 19.42,
+      "end": 19.6,
+      "match": "exact"
+    },
+    {
+      "word": "real",
+      "start": 19.6,
+      "end": 19.78,
+      "match": "exact"
+    },
+    {
+      "word": "files",
+      "start": 19.78,
+      "end": 20.18,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 20.18,
+      "end": 20.32,
+      "match": "exact"
+    },
+    {
+      "word": "terminals,",
+      "start": 20.32,
+      "end": 20.66,
+      "match": "exact"
+    },
+    {
+      "word": "feeds",
+      "start": 20.9,
+      "end": 21.4,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 21.4,
+      "end": 21.58,
+      "match": "exact"
+    },
+    {
+      "word": "actual",
+      "start": 21.58,
+      "end": 21.82,
+      "match": "exact"
+    },
+    {
+      "word": "output",
+      "start": 21.82,
+      "end": 22.2,
+      "match": "exact"
+    },
+    {
+      "word": "back",
+      "start": 22.2,
+      "end": 22.42,
+      "match": "exact"
+    },
+    {
+      "word": "in,",
+      "start": 22.42,
+      "end": 22.7,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 22.82,
+      "end": 23.22,
+      "match": "exact"
+    },
+    {
+      "word": "lets",
+      "start": 23.22,
+      "end": 23.38,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 23.38,
+      "end": 23.5,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 23.5,
+      "end": 23.74,
+      "match": "exact"
+    },
+    {
+      "word": "adapt",
+      "start": 23.74,
+      "end": 24.0,
+      "match": "exact"
+    },
+    {
+      "word": "step",
+      "start": 24.0,
+      "end": 24.4,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 24.4,
+      "end": 24.6,
+      "match": "exact"
+    },
+    {
+      "word": "step",
+      "start": 24.6,
+      "end": 24.82,
+      "match": "exact"
+    },
+    {
+      "word": "until",
+      "start": 24.82,
+      "end": 25.18,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 25.18,
+      "end": 25.32,
+      "match": "exact"
+    },
+    {
+      "word": "job",
+      "start": 25.32,
+      "end": 25.5,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 25.5,
+      "end": 25.64,
+      "match": "exact"
+    },
+    {
+      "word": "done.",
+      "start": 25.64,
+      "end": 25.84,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Without",
+      "start": 0.0,
+      "end": 0.34
+    },
+    {
+      "word": "a",
+      "start": 0.34,
+      "end": 0.5
+    },
+    {
+      "word": "harness,",
+      "start": 0.5,
+      "end": 0.7
+    },
+    {
+      "word": "talking",
+      "start": 0.96,
+      "end": 1.38
+    },
+    {
+      "word": "to",
+      "start": 1.38,
+      "end": 1.56
+    },
+    {
+      "word": "a",
+      "start": 1.56,
+      "end": 1.66
+    },
+    {
+      "word": "language",
+      "start": 1.66,
+      "end": 1.9
+    },
+    {
+      "word": "model",
+      "start": 1.9,
+      "end": 2.1
+    },
+    {
+      "word": "API",
+      "start": 2.1,
+      "end": 2.44
+    },
+    {
+      "word": "is",
+      "start": 2.44,
+      "end": 2.94
+    },
+    {
+      "word": "completely",
+      "start": 2.94,
+      "end": 3.2
+    },
+    {
+      "word": "stateless",
+      "start": 3.2,
+      "end": 3.78
+    },
+    {
+      "word": "and",
+      "start": 3.78,
+      "end": 4.04
+    },
+    {
+      "word": "blind.",
+      "start": 4.04,
+      "end": 4.34
+    },
+    {
+      "word": "You",
+      "start": 4.7,
+      "end": 5.1
+    },
+    {
+      "word": "send",
+      "start": 5.1,
+      "end": 5.26
+    },
+    {
+      "word": "one",
+      "start": 5.26,
+      "end": 5.42
+    },
+    {
+      "word": "prompt,",
+      "start": 5.42,
+      "end": 5.76
+    },
+    {
+      "word": "receive",
+      "start": 5.92,
+      "end": 6.18
+    },
+    {
+      "word": "one",
+      "start": 6.18,
+      "end": 6.4
+    },
+    {
+      "word": "completion,",
+      "start": 6.4,
+      "end": 6.84
+    },
+    {
+      "word": "and",
+      "start": 7.0,
+      "end": 7.24
+    },
+    {
+      "word": "the",
+      "start": 7.24,
+      "end": 7.32
+    },
+    {
+      "word": "interaction",
+      "start": 7.32,
+      "end": 7.64
+    },
+    {
+      "word": "ends",
+      "start": 7.64,
+      "end": 8.06
+    },
+    {
+      "word": "right",
+      "start": 8.06,
+      "end": 8.26
+    },
+    {
+      "word": "there.",
+      "start": 8.26,
+      "end": 8.52
+    },
+    {
+      "word": "Wrap",
+      "start": 9.0,
+      "end": 9.48
+    },
+    {
+      "word": "that",
+      "start": 9.48,
+      "end": 9.7
+    },
+    {
+      "word": "exact",
+      "start": 9.7,
+      "end": 9.96
+    },
+    {
+      "word": "same",
+      "start": 9.96,
+      "end": 10.24
+    },
+    {
+      "word": "API",
+      "start": 10.24,
+      "end": 10.6
+    },
+    {
+      "word": "inside",
+      "start": 10.6,
+      "end": 11.16
+    },
+    {
+      "word": "a",
+      "start": 11.16,
+      "end": 11.38
+    },
+    {
+      "word": "harness,",
+      "start": 11.38,
+      "end": 11.64
+    },
+    {
+      "word": "and",
+      "start": 11.84,
+      "end": 12.06
+    },
+    {
+      "word": "everything",
+      "start": 12.06,
+      "end": 12.26
+    },
+    {
+      "word": "changes.",
+      "start": 12.26,
+      "end": 12.72
+    },
+    {
+      "word": "Now",
+      "start": 13.62,
+      "end": 14.1
+    },
+    {
+      "word": "the",
+      "start": 14.1,
+      "end": 14.28
+    },
+    {
+      "word": "model",
+      "start": 14.28,
+      "end": 14.5
+    },
+    {
+      "word": "becomes",
+      "start": 14.5,
+      "end": 14.72
+    },
+    {
+      "word": "an",
+      "start": 14.72,
+      "end": 14.96
+    },
+    {
+      "word": "iterative",
+      "start": 14.96,
+      "end": 15.26
+    },
+    {
+      "word": "controller",
+      "start": 15.26,
+      "end": 15.58
+    },
+    {
+      "word": "connected",
+      "start": 15.58,
+      "end": 16.02
+    },
+    {
+      "word": "to",
+      "start": 16.02,
+      "end": 16.28
+    },
+    {
+      "word": "a",
+      "start": 16.28,
+      "end": 16.38
+    },
+    {
+      "word": "live",
+      "start": 16.38,
+      "end": 16.54
+    },
+    {
+      "word": "environment.",
+      "start": 16.54,
+      "end": 16.98
+    },
+    {
+      "word": "It",
+      "start": 17.24,
+      "end": 17.56
+    },
+    {
+      "word": "proposes",
+      "start": 17.56,
+      "end": 17.96
+    },
+    {
+      "word": "an",
+      "start": 17.96,
+      "end": 18.08
+    },
+    {
+      "word": "action,",
+      "start": 18.08,
+      "end": 18.4
+    },
+    {
+      "word": "the",
+      "start": 18.56,
+      "end": 18.76
+    },
+    {
+      "word": "harness",
+      "start": 18.76,
+      "end": 19.02
+    },
+    {
+      "word": "runs",
+      "start": 19.02,
+      "end": 19.22
+    },
+    {
+      "word": "it",
+      "start": 19.22,
+      "end": 19.42
+    },
+    {
+      "word": "against",
+      "start": 19.42,
+      "end": 19.6
+    },
+    {
+      "word": "real",
+      "start": 19.6,
+      "end": 19.78
+    },
+    {
+      "word": "files",
+      "start": 19.78,
+      "end": 20.18
+    },
+    {
+      "word": "or",
+      "start": 20.18,
+      "end": 20.32
+    },
+    {
+      "word": "terminals,",
+      "start": 20.32,
+      "end": 20.66
+    },
+    {
+      "word": "feeds",
+      "start": 20.9,
+      "end": 21.4
+    },
+    {
+      "word": "the",
+      "start": 21.4,
+      "end": 21.58
+    },
+    {
+      "word": "actual",
+      "start": 21.58,
+      "end": 21.82
+    },
+    {
+      "word": "output",
+      "start": 21.82,
+      "end": 22.2
+    },
+    {
+      "word": "back",
+      "start": 22.2,
+      "end": 22.42
+    },
+    {
+      "word": "in,",
+      "start": 22.42,
+      "end": 22.7
+    },
+    {
+      "word": "and",
+      "start": 22.82,
+      "end": 23.22
+    },
+    {
+      "word": "lets",
+      "start": 23.22,
+      "end": 23.38
+    },
+    {
+      "word": "the",
+      "start": 23.38,
+      "end": 23.5
+    },
+    {
+      "word": "model",
+      "start": 23.5,
+      "end": 23.74
+    },
+    {
+      "word": "adapt",
+      "start": 23.74,
+      "end": 24.0
+    },
+    {
+      "word": "step",
+      "start": 24.0,
+      "end": 24.4
+    },
+    {
+      "word": "-by",
+      "start": 24.4,
+      "end": 24.6
+    },
+    {
+      "word": "-step",
+      "start": 24.6,
+      "end": 24.82
+    },
+    {
+      "word": "until",
+      "start": 24.82,
+      "end": 25.18
+    },
+    {
+      "word": "the",
+      "start": 25.18,
+      "end": 25.32
+    },
+    {
+      "word": "job",
+      "start": 25.32,
+      "end": 25.5
+    },
+    {
+      "word": "is",
+      "start": 25.5,
+      "end": 25.64
+    },
+    {
+      "word": "done.",
+      "start": 25.64,
+      "end": 25.84
+    }
+  ]
+}

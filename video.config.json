@@ -23,17 +23,48 @@
   "chapters": [
     {
       "id": "01-hook",
-      "title": "Hook",
-      "paragraphs": [
-        1
-      ]
+      "title": "The Harness Paradox",
+      "paragraphs": [1, 2, 3]
     },
     {
-      "id": "02-main-point",
-      "title": "Main Point",
-      "paragraphs": [
-        2
-      ]
+      "id": "02-model-vs-harness",
+      "title": "Model vs. Harness vs. Framework",
+      "paragraphs": [4, 5, 6, 7, 8]
+    },
+    {
+      "id": "03-the-core-loop",
+      "title": "The Agent Loop & Tool Calling",
+      "paragraphs": [9, 10, 11, 12, 13]
+    },
+    {
+      "id": "04-context-engineering",
+      "title": "Context Management & Cache Economics",
+      "paragraphs": [14, 15, 16, 17, 18, 19]
+    },
+    {
+      "id": "05-memory-and-state",
+      "title": "Memory & Durable State Across Sessions",
+      "paragraphs": [20, 21, 22]
+    },
+    {
+      "id": "06-verification-and-guardrails",
+      "title": "Verification, Permissions & Sandboxes",
+      "paragraphs": [23, 24, 25, 26, 27]
+    },
+    {
+      "id": "07-next-level-subagents",
+      "title": "Next Level: Sub-agents, Delegation & Scale",
+      "paragraphs": [28, 29, 30]
+    },
+    {
+      "id": "08-evals-and-evolution",
+      "title": "Observability, Evals & Build-to-Delete",
+      "paragraphs": [31, 32, 33, 34]
+    },
+    {
+      "id": "09-synthesis-and-outro",
+      "title": "The OS Mental Model & Outro",
+      "paragraphs": [35, 36, 37]
     }
   ]
 }

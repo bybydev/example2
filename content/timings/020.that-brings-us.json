@@ -1,0 +1,943 @@
+{
+  "audio": "020.that-brings-us.mp3",
+  "paragraph": 20,
+  "text": "That brings us to Pillar Three: memory and durable state across sessions. On multi-hour engineering tasks, single-window agents tend to fail in two predictable ways. Either they try to one-shot an entire feature until context runs out halfway through a broken refactor, or they declare victory prematurely after fixing the happy path and lose track of subtle edge cases across dozens of steps. A single ephemeral chat thread is simply too fragile to hold the entire state of a long-running software project.",
+  "transcript": "That brings us to Pillar 3, Memory and Durable State across Sessions. On multi-hour engineering tasks, single window agents tend to fail in two predictable ways. Either they try to one-shot an entire feature until context runs out halfway through a broken refactor, or they declare victory prematurely after fixing the happy path and lose track of subtle edge cases across dozens of steps. A single ephemeral chat thread is simply too fragile to hold the entire state of a long-running software project.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 24.92,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "That",
+      "start": 0.0,
+      "end": 0.24,
+      "match": "exact"
+    },
+    {
+      "word": "brings",
+      "start": 0.24,
+      "end": 0.4,
+      "match": "exact"
+    },
+    {
+      "word": "us",
+      "start": 0.4,
+      "end": 0.58,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 0.58,
+      "end": 0.7,
+      "match": "exact"
+    },
+    {
+      "word": "Pillar",
+      "start": 0.7,
+      "end": 0.88,
+      "match": "exact"
+    },
+    {
+      "word": "Three:",
+      "start": 0.88,
+      "end": 1.08,
+      "match": "exact"
+    },
+    {
+      "word": "memory",
+      "start": 1.24,
+      "end": 1.66,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 1.66,
+      "end": 1.94,
+      "match": "exact"
+    },
+    {
+      "word": "durable",
+      "start": 1.94,
+      "end": 2.32,
+      "match": "exact"
+    },
+    {
+      "word": "state",
+      "start": 2.32,
+      "end": 2.5,
+      "match": "exact"
+    },
+    {
+      "word": "across",
+      "start": 2.5,
+      "end": 2.78,
+      "match": "exact"
+    },
+    {
+      "word": "sessions.",
+      "start": 2.78,
+      "end": 3.28,
+      "match": "exact"
+    },
+    {
+      "word": "On",
+      "start": 3.76,
+      "end": 4.2,
+      "match": "exact"
+    },
+    {
+      "word": "multi-hour",
+      "start": 4.2,
+      "end": 4.7,
+      "match": "exact"
+    },
+    {
+      "word": "engineering",
+      "start": 4.7,
+      "end": 4.94,
+      "match": "exact"
+    },
+    {
+      "word": "tasks,",
+      "start": 4.94,
+      "end": 5.4,
+      "match": "exact"
+    },
+    {
+      "word": "single-window",
+      "start": 5.76,
+      "end": 6.28,
+      "match": "exact"
+    },
+    {
+      "word": "agents",
+      "start": 6.28,
+      "end": 6.54,
+      "match": "exact"
+    },
+    {
+      "word": "tend",
+      "start": 6.54,
+      "end": 6.86,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 6.86,
+      "end": 6.96,
+      "match": "exact"
+    },
+    {
+      "word": "fail",
+      "start": 6.96,
+      "end": 7.18,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 7.18,
+      "end": 7.32,
+      "match": "exact"
+    },
+    {
+      "word": "two",
+      "start": 7.32,
+      "end": 7.42,
+      "match": "exact"
+    },
+    {
+      "word": "predictable",
+      "start": 7.42,
+      "end": 7.74,
+      "match": "exact"
+    },
+    {
+      "word": "ways.",
+      "start": 7.74,
+      "end": 8.08,
+      "match": "exact"
+    },
+    {
+      "word": "Either",
+      "start": 8.42,
+      "end": 8.86,
+      "match": "exact"
+    },
+    {
+      "word": "they",
+      "start": 8.86,
+      "end": 9.02,
+      "match": "exact"
+    },
+    {
+      "word": "try",
+      "start": 9.02,
+      "end": 9.18,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 9.18,
+      "end": 9.28,
+      "match": "exact"
+    },
+    {
+      "word": "one-shot",
+      "start": 9.28,
+      "end": 9.7,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 9.7,
+      "end": 9.9,
+      "match": "exact"
+    },
+    {
+      "word": "entire",
+      "start": 9.9,
+      "end": 10.1,
+      "match": "exact"
+    },
+    {
+      "word": "feature",
+      "start": 10.1,
+      "end": 10.44,
+      "match": "exact"
+    },
+    {
+      "word": "until",
+      "start": 10.44,
+      "end": 10.68,
+      "match": "exact"
+    },
+    {
+      "word": "context",
+      "start": 10.68,
+      "end": 11.06,
+      "match": "exact"
+    },
+    {
+      "word": "runs",
+      "start": 11.06,
+      "end": 11.28,
+      "match": "exact"
+    },
+    {
+      "word": "out",
+      "start": 11.28,
+      "end": 11.48,
+      "match": "exact"
+    },
+    {
+      "word": "halfway",
+      "start": 11.48,
+      "end": 11.76,
+      "match": "exact"
+    },
+    {
+      "word": "through",
+      "start": 11.76,
+      "end": 11.96,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 11.96,
+      "end": 12.08,
+      "match": "exact"
+    },
+    {
+      "word": "broken",
+      "start": 12.08,
+      "end": 12.3,
+      "match": "exact"
+    },
+    {
+      "word": "refactor,",
+      "start": 12.3,
+      "end": 12.78,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 12.88,
+      "end": 13.26,
+      "match": "exact"
+    },
+    {
+      "word": "they",
+      "start": 13.26,
+      "end": 13.36,
+      "match": "exact"
+    },
+    {
+      "word": "declare",
+      "start": 13.36,
+      "end": 13.56,
+      "match": "exact"
+    },
+    {
+      "word": "victory",
+      "start": 13.56,
+      "end": 13.88,
+      "match": "exact"
+    },
+    {
+      "word": "prematurely",
+      "start": 13.88,
+      "end": 14.64,
+      "match": "exact"
+    },
+    {
+      "word": "after",
+      "start": 14.64,
+      "end": 14.8,
+      "match": "exact"
+    },
+    {
+      "word": "fixing",
+      "start": 14.8,
+      "end": 15.08,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 15.08,
+      "end": 15.28,
+      "match": "exact"
+    },
+    {
+      "word": "happy",
+      "start": 15.28,
+      "end": 15.44,
+      "match": "exact"
+    },
+    {
+      "word": "path",
+      "start": 15.44,
+      "end": 15.72,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 15.72,
+      "end": 16.12,
+      "match": "exact"
+    },
+    {
+      "word": "lose",
+      "start": 16.12,
+      "end": 16.28,
+      "match": "exact"
+    },
+    {
+      "word": "track",
+      "start": 16.28,
+      "end": 16.46,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 16.46,
+      "end": 16.7,
+      "match": "exact"
+    },
+    {
+      "word": "subtle",
+      "start": 16.7,
+      "end": 16.9,
+      "match": "exact"
+    },
+    {
+      "word": "edge",
+      "start": 16.9,
+      "end": 17.1,
+      "match": "exact"
+    },
+    {
+      "word": "cases",
+      "start": 17.1,
+      "end": 17.38,
+      "match": "exact"
+    },
+    {
+      "word": "across",
+      "start": 17.38,
+      "end": 17.68,
+      "match": "exact"
+    },
+    {
+      "word": "dozens",
+      "start": 17.68,
+      "end": 18.08,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 18.08,
+      "end": 18.24,
+      "match": "exact"
+    },
+    {
+      "word": "steps.",
+      "start": 18.24,
+      "end": 18.44,
+      "match": "exact"
+    },
+    {
+      "word": "A",
+      "start": 19.42,
+      "end": 19.86,
+      "match": "exact"
+    },
+    {
+      "word": "single",
+      "start": 19.86,
+      "end": 20.08,
+      "match": "exact"
+    },
+    {
+      "word": "ephemeral",
+      "start": 20.08,
+      "end": 20.5,
+      "match": "exact"
+    },
+    {
+      "word": "chat",
+      "start": 20.5,
+      "end": 20.66,
+      "match": "exact"
+    },
+    {
+      "word": "thread",
+      "start": 20.66,
+      "end": 20.94,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 20.94,
+      "end": 21.16,
+      "match": "exact"
+    },
+    {
+      "word": "simply",
+      "start": 21.16,
+      "end": 21.34,
+      "match": "exact"
+    },
+    {
+      "word": "too",
+      "start": 21.34,
+      "end": 21.54,
+      "match": "exact"
+    },
+    {
+      "word": "fragile",
+      "start": 21.54,
+      "end": 21.88,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 21.88,
+      "end": 22.06,
+      "match": "exact"
+    },
+    {
+      "word": "hold",
+      "start": 22.06,
+      "end": 22.22,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 22.22,
+      "end": 22.32,
+      "match": "exact"
+    },
+    {
+      "word": "entire",
+      "start": 22.32,
+      "end": 22.52,
+      "match": "exact"
+    },
+    {
+      "word": "state",
+      "start": 22.52,
+      "end": 22.86,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 22.86,
+      "end": 23.06,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 23.06,
+      "end": 23.16,
+      "match": "exact"
+    },
+    {
+      "word": "long-running",
+      "start": 23.16,
+      "end": 23.52,
+      "match": "exact"
+    },
+    {
+      "word": "software",
+      "start": 23.52,
+      "end": 23.8,
+      "match": "exact"
+    },
+    {
+      "word": "project.",
+      "start": 23.8,
+      "end": 24.18,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "That",
+      "start": 0.0,
+      "end": 0.24
+    },
+    {
+      "word": "brings",
+      "start": 0.24,
+      "end": 0.4
+    },
+    {
+      "word": "us",
+      "start": 0.4,
+      "end": 0.58
+    },
+    {
+      "word": "to",
+      "start": 0.58,
+      "end": 0.7
+    },
+    {
+      "word": "Pillar",
+      "start": 0.7,
+      "end": 0.88
+    },
+    {
+      "word": "3,",
+      "start": 0.88,
+      "end": 1.08
+    },
+    {
+      "word": "Memory",
+      "start": 1.24,
+      "end": 1.66
+    },
+    {
+      "word": "and",
+      "start": 1.66,
+      "end": 1.94
+    },
+    {
+      "word": "Durable",
+      "start": 1.94,
+      "end": 2.32
+    },
+    {
+      "word": "State",
+      "start": 2.32,
+      "end": 2.5
+    },
+    {
+      "word": "across",
+      "start": 2.5,
+      "end": 2.78
+    },
+    {
+      "word": "Sessions.",
+      "start": 2.78,
+      "end": 3.28
+    },
+    {
+      "word": "On",
+      "start": 3.76,
+      "end": 4.2
+    },
+    {
+      "word": "multi",
+      "start": 4.2,
+      "end": 4.48
+    },
+    {
+      "word": "-hour",
+      "start": 4.48,
+      "end": 4.7
+    },
+    {
+      "word": "engineering",
+      "start": 4.7,
+      "end": 4.94
+    },
+    {
+      "word": "tasks,",
+      "start": 4.94,
+      "end": 5.4
+    },
+    {
+      "word": "single",
+      "start": 5.76,
+      "end": 6.04
+    },
+    {
+      "word": "window",
+      "start": 6.04,
+      "end": 6.28
+    },
+    {
+      "word": "agents",
+      "start": 6.28,
+      "end": 6.54
+    },
+    {
+      "word": "tend",
+      "start": 6.54,
+      "end": 6.86
+    },
+    {
+      "word": "to",
+      "start": 6.86,
+      "end": 6.96
+    },
+    {
+      "word": "fail",
+      "start": 6.96,
+      "end": 7.18
+    },
+    {
+      "word": "in",
+      "start": 7.18,
+      "end": 7.32
+    },
+    {
+      "word": "two",
+      "start": 7.32,
+      "end": 7.42
+    },
+    {
+      "word": "predictable",
+      "start": 7.42,
+      "end": 7.74
+    },
+    {
+      "word": "ways.",
+      "start": 7.74,
+      "end": 8.08
+    },
+    {
+      "word": "Either",
+      "start": 8.42,
+      "end": 8.86
+    },
+    {
+      "word": "they",
+      "start": 8.86,
+      "end": 9.02
+    },
+    {
+      "word": "try",
+      "start": 9.02,
+      "end": 9.18
+    },
+    {
+      "word": "to",
+      "start": 9.18,
+      "end": 9.28
+    },
+    {
+      "word": "one",
+      "start": 9.28,
+      "end": 9.48
+    },
+    {
+      "word": "-shot",
+      "start": 9.48,
+      "end": 9.7
+    },
+    {
+      "word": "an",
+      "start": 9.7,
+      "end": 9.9
+    },
+    {
+      "word": "entire",
+      "start": 9.9,
+      "end": 10.1
+    },
+    {
+      "word": "feature",
+      "start": 10.1,
+      "end": 10.44
+    },
+    {
+      "word": "until",
+      "start": 10.44,
+      "end": 10.68
+    },
+    {
+      "word": "context",
+      "start": 10.68,
+      "end": 11.06
+    },
+    {
+      "word": "runs",
+      "start": 11.06,
+      "end": 11.28
+    },
+    {
+      "word": "out",
+      "start": 11.28,
+      "end": 11.48
+    },
+    {
+      "word": "halfway",
+      "start": 11.48,
+      "end": 11.76
+    },
+    {
+      "word": "through",
+      "start": 11.76,
+      "end": 11.96
+    },
+    {
+      "word": "a",
+      "start": 11.96,
+      "end": 12.08
+    },
+    {
+      "word": "broken",
+      "start": 12.08,
+      "end": 12.3
+    },
+    {
+      "word": "refactor,",
+      "start": 12.3,
+      "end": 12.78
+    },
+    {
+      "word": "or",
+      "start": 12.88,
+      "end": 13.26
+    },
+    {
+      "word": "they",
+      "start": 13.26,
+      "end": 13.36
+    },
+    {
+      "word": "declare",
+      "start": 13.36,
+      "end": 13.56
+    },
+    {
+      "word": "victory",
+      "start": 13.56,
+      "end": 13.88
+    },
+    {
+      "word": "prematurely",
+      "start": 13.88,
+      "end": 14.64
+    },
+    {
+      "word": "after",
+      "start": 14.64,
+      "end": 14.8
+    },
+    {
+      "word": "fixing",
+      "start": 14.8,
+      "end": 15.08
+    },
+    {
+      "word": "the",
+      "start": 15.08,
+      "end": 15.28
+    },
+    {
+      "word": "happy",
+      "start": 15.28,
+      "end": 15.44
+    },
+    {
+      "word": "path",
+      "start": 15.44,
+      "end": 15.72
+    },
+    {
+      "word": "and",
+      "start": 15.72,
+      "end": 16.12
+    },
+    {
+      "word": "lose",
+      "start": 16.12,
+      "end": 16.28
+    },
+    {
+      "word": "track",
+      "start": 16.28,
+      "end": 16.46
+    },
+    {
+      "word": "of",
+      "start": 16.46,
+      "end": 16.7
+    },
+    {
+      "word": "subtle",
+      "start": 16.7,
+      "end": 16.9
+    },
+    {
+      "word": "edge",
+      "start": 16.9,
+      "end": 17.1
+    },
+    {
+      "word": "cases",
+      "start": 17.1,
+      "end": 17.38
+    },
+    {
+      "word": "across",
+      "start": 17.38,
+      "end": 17.68
+    },
+    {
+      "word": "dozens",
+      "start": 17.68,
+      "end": 18.08
+    },
+    {
+      "word": "of",
+      "start": 18.08,
+      "end": 18.24
+    },
+    {
+      "word": "steps.",
+      "start": 18.24,
+      "end": 18.44
+    },
+    {
+      "word": "A",
+      "start": 19.42,
+      "end": 19.86
+    },
+    {
+      "word": "single",
+      "start": 19.86,
+      "end": 20.08
+    },
+    {
+      "word": "ephemeral",
+      "start": 20.08,
+      "end": 20.5
+    },
+    {
+      "word": "chat",
+      "start": 20.5,
+      "end": 20.66
+    },
+    {
+      "word": "thread",
+      "start": 20.66,
+      "end": 20.94
+    },
+    {
+      "word": "is",
+      "start": 20.94,
+      "end": 21.16
+    },
+    {
+      "word": "simply",
+      "start": 21.16,
+      "end": 21.34
+    },
+    {
+      "word": "too",
+      "start": 21.34,
+      "end": 21.54
+    },
+    {
+      "word": "fragile",
+      "start": 21.54,
+      "end": 21.88
+    },
+    {
+      "word": "to",
+      "start": 21.88,
+      "end": 22.06
+    },
+    {
+      "word": "hold",
+      "start": 22.06,
+      "end": 22.22
+    },
+    {
+      "word": "the",
+      "start": 22.22,
+      "end": 22.32
+    },
+    {
+      "word": "entire",
+      "start": 22.32,
+      "end": 22.52
+    },
+    {
+      "word": "state",
+      "start": 22.52,
+      "end": 22.86
+    },
+    {
+      "word": "of",
+      "start": 22.86,
+      "end": 23.06
+    },
+    {
+      "word": "a",
+      "start": 23.06,
+      "end": 23.16
+    },
+    {
+      "word": "long",
+      "start": 23.16,
+      "end": 23.32
+    },
+    {
+      "word": "-running",
+      "start": 23.32,
+      "end": 23.52
+    },
+    {
+      "word": "software",
+      "start": 23.52,
+      "end": 23.8
+    },
+    {
+      "word": "project.",
+      "start": 23.8,
+      "end": 24.18
+    }
+  ]
+}

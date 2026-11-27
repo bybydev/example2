@@ -7,8 +7,8 @@ Follow Steps 1 → 8 in order. Both human and AI can check off items (`- [x]`) a
 ## Progress Checklist
 
 - [x] **Step 1:** Plan & write storyboard (`content/storyboard.md`) — *Both (AI must wait for human approval before Step 2)*
-- [ ] **Step 2:** Configure video (`video.config.json`) & write narration script (`content/voiceover.md`) — *Both*
-- [ ] **Step 3:** Sync voiceover, Whisper timings, timeline & SRT (`mycli remotion sync`) — *Both (AI must ask permission first)*
+- [x] **Step 2:** Configure video (`video.config.json`) & write narration script (`content/voiceover.md`) — *Both*
+- [x] **Step 3:** Sync voiceover, Whisper timings, timeline & SRT (`mycli remotion sync`) — *Both (AI must ask permission first)*
 - [ ] **Step 4:** Implement chapter visuals, diagrams & SFX (`src/chapters/`) — *AI (Human review)*
 - [ ] **Step 5:** Design YouTube thumbnail (`src/Thumbnail.tsx`) — *Both*
 - [ ] **Step 6:** Finalize YouTube publishing metadata (`content/youtube-metadata.md`) — *Both*
@@ -39,8 +39,8 @@ Follow Steps 1 → 8 in order. Both human and AI can check off items (`- [x]`) a
 - **Input:** Approved `content/storyboard.md` and optional custom media assets.
 - **Output:** Updated `video.config.json` and completed `content/voiceover.md` (plus optional files in `public/assets/` or `public/music/`).
 - **Pass condition:**
-  - [ ] Every chapter in `video.config.json` has a unique kebab-case `id` and contiguous 1-based `paragraphs` with no gaps or overlaps.
-  - [ ] Paragraph count in `content/voiceover.md` exactly matches the total paragraphs referenced in `video.config.json`.
+  - [x] Every chapter in `video.config.json` has a unique kebab-case `id` and contiguous 1-based `paragraphs` with no gaps or overlaps.
+  - [x] Paragraph count in `content/voiceover.md` exactly matches the total paragraphs referenced in `video.config.json`.
 
 ### Step 3 — Sync Voiceover, Whisper Timings, Timeline & SRT
 - **Owner:** Both (AI + Human) — **AI must ask the human for permission before running** *(uses a Colab GPU session)*
@@ -57,9 +57,9 @@ Follow Steps 1 → 8 in order. Both human and AI can check off items (`- [x]`) a
   - Generated timeline in `src/generated/timeline.json` *(never edit by hand)*
   - Publishing tracks `content/subtitles.srt` and `content/youtube-chapters.txt`
 - **Pass condition:**
-  - [ ] Every paragraph in `content/voiceover.md` has a non-empty MP3 and JSON sidecar.
-  - [ ] `content/timings/alignment_report.txt` reports clean alignment and `src/generated/timeline.json` has `timingSource: "whisper"` for all clips with non-zero `totalFrames`.
-  - [ ] `content/subtitles.srt` and `content/youtube-chapters.txt` are populated.
+  - [x] Every paragraph in `content/voiceover.md` has a non-empty MP3 and JSON sidecar.
+  - [x] `content/timings/alignment_report.txt` reports clean alignment and `src/generated/timeline.json` has `timingSource: "whisper"` for all clips with non-zero `totalFrames`.
+  - [x] `content/subtitles.srt` and `content/youtube-chapters.txt` are populated.
 
 ### Step 4 — Implement Chapter Visuals, Diagrams & SFX
 - **Owner:** AI (reviewed by Human)

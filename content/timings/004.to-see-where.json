@@ -1,0 +1,922 @@
+{
+  "audio": "004.to-see-where.mp3",
+  "paragraph": 4,
+  "text": "To see where the architecture begins, separate any AI product into three distinct layers. At the bottom sits the model, a stateless next-token engine like Claude, GPT, or Gemini. In the middle sits the harness: the runtime loop, tool definitions, context manager, state persistence, and safety gates that power Claude Code, Codex CLI, Gemini CLI, Cursor, and Windsurf Cascade under the hood. On top sits the application layer, the terminal, editor pane, or pull-request workflow you actually click and type inside.",
+  "transcript": "To see where the architecture begins, separate any AI product into three distinct layers. At the bottom sits the model, a stateless Next Token engine like Claude, GPT, or Gemini. In the middle sits the harness, the runtime loop, tool definitions, context manager, state persistence, and safety gates that power Claude code, Codex CLI, Gemini CLI, Cursor, and Windsurf Cascade under the hood. On top sits the application layer, the terminal, editor pane, or pull request workflow you actually click and type inside.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 29.12,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "To",
+      "start": 0.0,
+      "end": 0.22,
+      "match": "exact"
+    },
+    {
+      "word": "see",
+      "start": 0.22,
+      "end": 0.38,
+      "match": "exact"
+    },
+    {
+      "word": "where",
+      "start": 0.38,
+      "end": 0.52,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.52,
+      "end": 0.62,
+      "match": "exact"
+    },
+    {
+      "word": "architecture",
+      "start": 0.62,
+      "end": 0.98,
+      "match": "exact"
+    },
+    {
+      "word": "begins,",
+      "start": 0.98,
+      "end": 1.38,
+      "match": "exact"
+    },
+    {
+      "word": "separate",
+      "start": 1.72,
+      "end": 2.02,
+      "match": "exact"
+    },
+    {
+      "word": "any",
+      "start": 2.02,
+      "end": 2.36,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 2.36,
+      "end": 2.64,
+      "match": "exact"
+    },
+    {
+      "word": "product",
+      "start": 2.64,
+      "end": 3.02,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 3.02,
+      "end": 3.36,
+      "match": "exact"
+    },
+    {
+      "word": "three",
+      "start": 3.36,
+      "end": 3.58,
+      "match": "exact"
+    },
+    {
+      "word": "distinct",
+      "start": 3.58,
+      "end": 3.92,
+      "match": "exact"
+    },
+    {
+      "word": "layers.",
+      "start": 3.92,
+      "end": 4.3,
+      "match": "exact"
+    },
+    {
+      "word": "At",
+      "start": 4.68,
+      "end": 5.2,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 5.2,
+      "end": 5.3,
+      "match": "exact"
+    },
+    {
+      "word": "bottom",
+      "start": 5.3,
+      "end": 5.6,
+      "match": "exact"
+    },
+    {
+      "word": "sits",
+      "start": 5.6,
+      "end": 5.78,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 5.78,
+      "end": 5.98,
+      "match": "exact"
+    },
+    {
+      "word": "model,",
+      "start": 5.98,
+      "end": 6.26,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 6.38,
+      "end": 6.64,
+      "match": "exact"
+    },
+    {
+      "word": "stateless",
+      "start": 6.64,
+      "end": 7.0,
+      "match": "exact"
+    },
+    {
+      "word": "next-token",
+      "start": 7.0,
+      "end": 7.5,
+      "match": "exact"
+    },
+    {
+      "word": "engine",
+      "start": 7.5,
+      "end": 7.74,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 7.74,
+      "end": 8.04,
+      "match": "exact"
+    },
+    {
+      "word": "Claude,",
+      "start": 8.04,
+      "end": 8.42,
+      "match": "exact"
+    },
+    {
+      "word": "GPT,",
+      "start": 8.54,
+      "end": 8.98,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 9.16,
+      "end": 9.36,
+      "match": "exact"
+    },
+    {
+      "word": "Gemini.",
+      "start": 9.36,
+      "end": 9.72,
+      "match": "exact"
+    },
+    {
+      "word": "In",
+      "start": 10.04,
+      "end": 10.56,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 10.56,
+      "end": 10.7,
+      "match": "exact"
+    },
+    {
+      "word": "middle",
+      "start": 10.7,
+      "end": 10.9,
+      "match": "exact"
+    },
+    {
+      "word": "sits",
+      "start": 10.9,
+      "end": 11.1,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 11.1,
+      "end": 11.3,
+      "match": "exact"
+    },
+    {
+      "word": "harness:",
+      "start": 11.3,
+      "end": 11.52,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 11.82,
+      "end": 12.04,
+      "match": "exact"
+    },
+    {
+      "word": "runtime",
+      "start": 12.04,
+      "end": 12.3,
+      "match": "exact"
+    },
+    {
+      "word": "loop,",
+      "start": 12.3,
+      "end": 12.66,
+      "match": "exact"
+    },
+    {
+      "word": "tool",
+      "start": 12.84,
+      "end": 13.02,
+      "match": "exact"
+    },
+    {
+      "word": "definitions,",
+      "start": 13.02,
+      "end": 13.52,
+      "match": "exact"
+    },
+    {
+      "word": "context",
+      "start": 13.88,
+      "end": 14.2,
+      "match": "exact"
+    },
+    {
+      "word": "manager,",
+      "start": 14.2,
+      "end": 14.54,
+      "match": "exact"
+    },
+    {
+      "word": "state",
+      "start": 14.78,
+      "end": 14.92,
+      "match": "exact"
+    },
+    {
+      "word": "persistence,",
+      "start": 14.92,
+      "end": 15.32,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 15.68,
+      "end": 15.82,
+      "match": "exact"
+    },
+    {
+      "word": "safety",
+      "start": 15.82,
+      "end": 16.08,
+      "match": "exact"
+    },
+    {
+      "word": "gates",
+      "start": 16.08,
+      "end": 16.36,
+      "match": "exact"
+    },
+    {
+      "word": "that",
+      "start": 16.36,
+      "end": 16.58,
+      "match": "exact"
+    },
+    {
+      "word": "power",
+      "start": 16.58,
+      "end": 16.78,
+      "match": "exact"
+    },
+    {
+      "word": "Claude",
+      "start": 16.78,
+      "end": 17.12,
+      "match": "exact"
+    },
+    {
+      "word": "Code,",
+      "start": 17.12,
+      "end": 17.34,
+      "match": "exact"
+    },
+    {
+      "word": "Codex",
+      "start": 17.62,
+      "end": 18.18,
+      "match": "exact"
+    },
+    {
+      "word": "CLI,",
+      "start": 18.18,
+      "end": 18.72,
+      "match": "exact"
+    },
+    {
+      "word": "Gemini",
+      "start": 18.86,
+      "end": 19.22,
+      "match": "exact"
+    },
+    {
+      "word": "CLI,",
+      "start": 19.22,
+      "end": 19.88,
+      "match": "exact"
+    },
+    {
+      "word": "Cursor,",
+      "start": 19.96,
+      "end": 20.52,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 20.52,
+      "end": 20.74,
+      "match": "exact"
+    },
+    {
+      "word": "Windsurf",
+      "start": 20.74,
+      "end": 21.08,
+      "match": "exact"
+    },
+    {
+      "word": "Cascade",
+      "start": 21.08,
+      "end": 21.6,
+      "match": "exact"
+    },
+    {
+      "word": "under",
+      "start": 21.6,
+      "end": 21.8,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 21.8,
+      "end": 21.94,
+      "match": "exact"
+    },
+    {
+      "word": "hood.",
+      "start": 21.94,
+      "end": 22.1,
+      "match": "exact"
+    },
+    {
+      "word": "On",
+      "start": 22.32,
+      "end": 22.84,
+      "match": "exact"
+    },
+    {
+      "word": "top",
+      "start": 22.84,
+      "end": 23.08,
+      "match": "exact"
+    },
+    {
+      "word": "sits",
+      "start": 23.08,
+      "end": 23.3,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 23.3,
+      "end": 23.48,
+      "match": "exact"
+    },
+    {
+      "word": "application",
+      "start": 23.48,
+      "end": 23.76,
+      "match": "exact"
+    },
+    {
+      "word": "layer,",
+      "start": 23.76,
+      "end": 24.18,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 24.34,
+      "end": 24.54,
+      "match": "exact"
+    },
+    {
+      "word": "terminal,",
+      "start": 24.54,
+      "end": 24.88,
+      "match": "exact"
+    },
+    {
+      "word": "editor",
+      "start": 25.06,
+      "end": 25.36,
+      "match": "exact"
+    },
+    {
+      "word": "pane,",
+      "start": 25.36,
+      "end": 25.66,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 25.82,
+      "end": 26.0,
+      "match": "exact"
+    },
+    {
+      "word": "pull-request",
+      "start": 26.0,
+      "end": 26.46,
+      "match": "exact"
+    },
+    {
+      "word": "workflow",
+      "start": 26.46,
+      "end": 26.9,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 26.9,
+      "end": 27.24,
+      "match": "exact"
+    },
+    {
+      "word": "actually",
+      "start": 27.24,
+      "end": 27.54,
+      "match": "exact"
+    },
+    {
+      "word": "click",
+      "start": 27.54,
+      "end": 27.86,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 27.86,
+      "end": 28.04,
+      "match": "exact"
+    },
+    {
+      "word": "type",
+      "start": 28.04,
+      "end": 28.24,
+      "match": "exact"
+    },
+    {
+      "word": "inside.",
+      "start": 28.24,
+      "end": 28.5,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "To",
+      "start": 0.0,
+      "end": 0.22
+    },
+    {
+      "word": "see",
+      "start": 0.22,
+      "end": 0.38
+    },
+    {
+      "word": "where",
+      "start": 0.38,
+      "end": 0.52
+    },
+    {
+      "word": "the",
+      "start": 0.52,
+      "end": 0.62
+    },
+    {
+      "word": "architecture",
+      "start": 0.62,
+      "end": 0.98
+    },
+    {
+      "word": "begins,",
+      "start": 0.98,
+      "end": 1.38
+    },
+    {
+      "word": "separate",
+      "start": 1.72,
+      "end": 2.02
+    },
+    {
+      "word": "any",
+      "start": 2.02,
+      "end": 2.36
+    },
+    {
+      "word": "AI",
+      "start": 2.36,
+      "end": 2.64
+    },
+    {
+      "word": "product",
+      "start": 2.64,
+      "end": 3.02
+    },
+    {
+      "word": "into",
+      "start": 3.02,
+      "end": 3.36
+    },
+    {
+      "word": "three",
+      "start": 3.36,
+      "end": 3.58
+    },
+    {
+      "word": "distinct",
+      "start": 3.58,
+      "end": 3.92
+    },
+    {
+      "word": "layers.",
+      "start": 3.92,
+      "end": 4.3
+    },
+    {
+      "word": "At",
+      "start": 4.68,
+      "end": 5.2
+    },
+    {
+      "word": "the",
+      "start": 5.2,
+      "end": 5.3
+    },
+    {
+      "word": "bottom",
+      "start": 5.3,
+      "end": 5.6
+    },
+    {
+      "word": "sits",
+      "start": 5.6,
+      "end": 5.78
+    },
+    {
+      "word": "the",
+      "start": 5.78,
+      "end": 5.98
+    },
+    {
+      "word": "model,",
+      "start": 5.98,
+      "end": 6.26
+    },
+    {
+      "word": "a",
+      "start": 6.38,
+      "end": 6.64
+    },
+    {
+      "word": "stateless",
+      "start": 6.64,
+      "end": 7.0
+    },
+    {
+      "word": "Next",
+      "start": 7.0,
+      "end": 7.22
+    },
+    {
+      "word": "Token",
+      "start": 7.22,
+      "end": 7.5
+    },
+    {
+      "word": "engine",
+      "start": 7.5,
+      "end": 7.74
+    },
+    {
+      "word": "like",
+      "start": 7.74,
+      "end": 8.04
+    },
+    {
+      "word": "Claude,",
+      "start": 8.04,
+      "end": 8.42
+    },
+    {
+      "word": "GPT,",
+      "start": 8.54,
+      "end": 8.98
+    },
+    {
+      "word": "or",
+      "start": 9.16,
+      "end": 9.36
+    },
+    {
+      "word": "Gemini.",
+      "start": 9.36,
+      "end": 9.72
+    },
+    {
+      "word": "In",
+      "start": 10.04,
+      "end": 10.56
+    },
+    {
+      "word": "the",
+      "start": 10.56,
+      "end": 10.7
+    },
+    {
+      "word": "middle",
+      "start": 10.7,
+      "end": 10.9
+    },
+    {
+      "word": "sits",
+      "start": 10.9,
+      "end": 11.1
+    },
+    {
+      "word": "the",
+      "start": 11.1,
+      "end": 11.3
+    },
+    {
+      "word": "harness,",
+      "start": 11.3,
+      "end": 11.52
+    },
+    {
+      "word": "the",
+      "start": 11.82,
+      "end": 12.04
+    },
+    {
+      "word": "runtime",
+      "start": 12.04,
+      "end": 12.3
+    },
+    {
+      "word": "loop,",
+      "start": 12.3,
+      "end": 12.66
+    },
+    {
+      "word": "tool",
+      "start": 12.84,
+      "end": 13.02
+    },
+    {
+      "word": "definitions,",
+      "start": 13.02,
+      "end": 13.52
+    },
+    {
+      "word": "context",
+      "start": 13.88,
+      "end": 14.2
+    },
+    {
+      "word": "manager,",
+      "start": 14.2,
+      "end": 14.54
+    },
+    {
+      "word": "state",
+      "start": 14.78,
+      "end": 14.92
+    },
+    {
+      "word": "persistence,",
+      "start": 14.92,
+      "end": 15.32
+    },
+    {
+      "word": "and",
+      "start": 15.68,
+      "end": 15.82
+    },
+    {
+      "word": "safety",
+      "start": 15.82,
+      "end": 16.08
+    },
+    {
+      "word": "gates",
+      "start": 16.08,
+      "end": 16.36
+    },
+    {
+      "word": "that",
+      "start": 16.36,
+      "end": 16.58
+    },
+    {
+      "word": "power",
+      "start": 16.58,
+      "end": 16.78
+    },
+    {
+      "word": "Claude",
+      "start": 16.78,
+      "end": 17.12
+    },
+    {
+      "word": "code,",
+      "start": 17.12,
+      "end": 17.34
+    },
+    {
+      "word": "Codex",
+      "start": 17.62,
+      "end": 18.18
+    },
+    {
+      "word": "CLI,",
+      "start": 18.18,
+      "end": 18.72
+    },
+    {
+      "word": "Gemini",
+      "start": 18.86,
+      "end": 19.22
+    },
+    {
+      "word": "CLI,",
+      "start": 19.22,
+      "end": 19.88
+    },
+    {
+      "word": "Cursor,",
+      "start": 19.96,
+      "end": 20.52
+    },
+    {
+      "word": "and",
+      "start": 20.52,
+      "end": 20.74
+    },
+    {
+      "word": "Windsurf",
+      "start": 20.74,
+      "end": 21.08
+    },
+    {
+      "word": "Cascade",
+      "start": 21.08,
+      "end": 21.6
+    },
+    {
+      "word": "under",
+      "start": 21.6,
+      "end": 21.8
+    },
+    {
+      "word": "the",
+      "start": 21.8,
+      "end": 21.94
+    },
+    {
+      "word": "hood.",
+      "start": 21.94,
+      "end": 22.1
+    },
+    {
+      "word": "On",
+      "start": 22.32,
+      "end": 22.84
+    },
+    {
+      "word": "top",
+      "start": 22.84,
+      "end": 23.08
+    },
+    {
+      "word": "sits",
+      "start": 23.08,
+      "end": 23.3
+    },
+    {
+      "word": "the",
+      "start": 23.3,
+      "end": 23.48
+    },
+    {
+      "word": "application",
+      "start": 23.48,
+      "end": 23.76
+    },
+    {
+      "word": "layer,",
+      "start": 23.76,
+      "end": 24.18
+    },
+    {
+      "word": "the",
+      "start": 24.34,
+      "end": 24.54
+    },
+    {
+      "word": "terminal,",
+      "start": 24.54,
+      "end": 24.88
+    },
+    {
+      "word": "editor",
+      "start": 25.06,
+      "end": 25.36
+    },
+    {
+      "word": "pane,",
+      "start": 25.36,
+      "end": 25.66
+    },
+    {
+      "word": "or",
+      "start": 25.82,
+      "end": 26.0
+    },
+    {
+      "word": "pull",
+      "start": 26.0,
+      "end": 26.22
+    },
+    {
+      "word": "request",
+      "start": 26.22,
+      "end": 26.46
+    },
+    {
+      "word": "workflow",
+      "start": 26.46,
+      "end": 26.9
+    },
+    {
+      "word": "you",
+      "start": 26.9,
+      "end": 27.24
+    },
+    {
+      "word": "actually",
+      "start": 27.24,
+      "end": 27.54
+    },
+    {
+      "word": "click",
+      "start": 27.54,
+      "end": 27.86
+    },
+    {
+      "word": "and",
+      "start": 27.86,
+      "end": 28.04
+    },
+    {
+      "word": "type",
+      "start": 28.04,
+      "end": 28.24
+    },
+    {
+      "word": "inside.",
+      "start": 28.24,
+      "end": 28.5
+    }
+  ]
+}

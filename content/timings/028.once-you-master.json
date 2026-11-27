@@ -1,0 +1,1042 @@
+{
+  "audio": "028.once-you-master.mp3",
+  "paragraph": 28,
+  "text": "Once you master a complete single-agent harness, you are ready for Pillar Five, the next level: subagents, delegation, and scale. Despite all the hype about AI personas role-playing as executives and junior developers, the real engineering reason harnesses like Claude Code, OpenCode, Cline, and Roo Code spawn subagents is context hygiene. Suppose you delegate a forty-file codebase search to an isolated child agent. Tens of thousands of tokens of messy grep output stay sealed inside the child window, returning only a crisp summary to the parent orchestrator.",
+  "transcript": "Once you master a complete single-agent harness, you are ready for Pillar 5, the next level, subagents, delegation, and scale. Despite all the hype about AI personas role-playing as executives and junior developers, the real engineering reason harnesses like Claude Code, OpenCode, Klein, and RueCode spawn subagents is context hygiene. Suppose you delegate a 40-file code-based search to an isolated child agent. Tens of thousands of tokens of messy grip output stay sealed inside the child window, returning only a crisp summary to the parent orchestrator.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 6
+    }
+  ],
+  "duration": 30.6,
+  "failed_words": 6,
+  "failures": [
+    {
+      "index": 42,
+      "word": "Cline,",
+      "match": "approx",
+      "heard": "Klein,",
+      "start": 15.72
+    },
+    {
+      "index": 44,
+      "word": "Roo",
+      "match": "approx",
+      "heard": "RueCode",
+      "start": 16.42
+    },
+    {
+      "index": 45,
+      "word": "Code",
+      "match": "approx",
+      "heard": "RueCode",
+      "start": 16.583
+    },
+    {
+      "index": 55,
+      "word": "forty-file",
+      "match": "approx",
+      "heard": "40 -file code -based",
+      "start": 20.38
+    },
+    {
+      "index": 56,
+      "word": "codebase",
+      "match": "approx",
+      "heard": "40 -file code -based",
+      "start": 20.766
+    },
+    {
+      "index": 70,
+      "word": "grep",
+      "match": "approx",
+      "heard": "grip",
+      "start": 25.28
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Once",
+      "start": 0.0,
+      "end": 0.3,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 0.3,
+      "end": 0.44,
+      "match": "exact"
+    },
+    {
+      "word": "master",
+      "start": 0.44,
+      "end": 0.78,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 0.78,
+      "end": 0.94,
+      "match": "exact"
+    },
+    {
+      "word": "complete",
+      "start": 0.94,
+      "end": 1.12,
+      "match": "exact"
+    },
+    {
+      "word": "single-agent",
+      "start": 1.12,
+      "end": 1.9,
+      "match": "exact"
+    },
+    {
+      "word": "harness,",
+      "start": 1.9,
+      "end": 2.14,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 2.44,
+      "end": 2.6,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 2.6,
+      "end": 2.7,
+      "match": "exact"
+    },
+    {
+      "word": "ready",
+      "start": 2.7,
+      "end": 2.94,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 2.94,
+      "end": 3.14,
+      "match": "exact"
+    },
+    {
+      "word": "Pillar",
+      "start": 3.14,
+      "end": 3.34,
+      "match": "exact"
+    },
+    {
+      "word": "Five,",
+      "start": 3.34,
+      "end": 3.56,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 3.86,
+      "end": 4.04,
+      "match": "exact"
+    },
+    {
+      "word": "next",
+      "start": 4.04,
+      "end": 4.24,
+      "match": "exact"
+    },
+    {
+      "word": "level:",
+      "start": 4.24,
+      "end": 4.56,
+      "match": "exact"
+    },
+    {
+      "word": "subagents,",
+      "start": 4.72,
+      "end": 5.42,
+      "match": "exact"
+    },
+    {
+      "word": "delegation,",
+      "start": 5.48,
+      "end": 5.72,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 6.18,
+      "end": 6.4,
+      "match": "exact"
+    },
+    {
+      "word": "scale.",
+      "start": 6.4,
+      "end": 6.62,
+      "match": "exact"
+    },
+    {
+      "word": "Despite",
+      "start": 7.58,
+      "end": 8.06,
+      "match": "exact"
+    },
+    {
+      "word": "all",
+      "start": 8.06,
+      "end": 8.3,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 8.3,
+      "end": 8.48,
+      "match": "exact"
+    },
+    {
+      "word": "hype",
+      "start": 8.48,
+      "end": 8.68,
+      "match": "exact"
+    },
+    {
+      "word": "about",
+      "start": 8.68,
+      "end": 8.88,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 8.88,
+      "end": 9.14,
+      "match": "exact"
+    },
+    {
+      "word": "personas",
+      "start": 9.14,
+      "end": 9.48,
+      "match": "exact"
+    },
+    {
+      "word": "role-playing",
+      "start": 9.48,
+      "end": 10.12,
+      "match": "exact"
+    },
+    {
+      "word": "as",
+      "start": 10.12,
+      "end": 10.34,
+      "match": "exact"
+    },
+    {
+      "word": "executives",
+      "start": 10.34,
+      "end": 10.72,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 10.72,
+      "end": 11.04,
+      "match": "exact"
+    },
+    {
+      "word": "junior",
+      "start": 11.04,
+      "end": 11.24,
+      "match": "exact"
+    },
+    {
+      "word": "developers,",
+      "start": 11.24,
+      "end": 11.72,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 12.06,
+      "end": 12.38,
+      "match": "exact"
+    },
+    {
+      "word": "real",
+      "start": 12.38,
+      "end": 12.54,
+      "match": "exact"
+    },
+    {
+      "word": "engineering",
+      "start": 12.54,
+      "end": 12.92,
+      "match": "exact"
+    },
+    {
+      "word": "reason",
+      "start": 12.92,
+      "end": 13.26,
+      "match": "exact"
+    },
+    {
+      "word": "harnesses",
+      "start": 13.26,
+      "end": 13.92,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 13.92,
+      "end": 14.06,
+      "match": "exact"
+    },
+    {
+      "word": "Claude",
+      "start": 14.06,
+      "end": 14.34,
+      "match": "exact"
+    },
+    {
+      "word": "Code,",
+      "start": 14.34,
+      "end": 14.56,
+      "match": "exact"
+    },
+    {
+      "word": "OpenCode,",
+      "start": 14.88,
+      "end": 15.58,
+      "match": "exact"
+    },
+    {
+      "word": "Cline,",
+      "start": 15.72,
+      "end": 16.0,
+      "match": "approx",
+      "heard": "Klein,"
+    },
+    {
+      "word": "and",
+      "start": 16.22,
+      "end": 16.42,
+      "match": "exact"
+    },
+    {
+      "word": "Roo",
+      "start": 16.42,
+      "end": 16.583,
+      "match": "approx",
+      "heard": "RueCode"
+    },
+    {
+      "word": "Code",
+      "start": 16.583,
+      "end": 16.8,
+      "match": "approx",
+      "heard": "RueCode"
+    },
+    {
+      "word": "spawn",
+      "start": 16.8,
+      "end": 17.0,
+      "match": "exact"
+    },
+    {
+      "word": "subagents",
+      "start": 17.0,
+      "end": 17.64,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 17.64,
+      "end": 17.84,
+      "match": "exact"
+    },
+    {
+      "word": "context",
+      "start": 17.84,
+      "end": 18.16,
+      "match": "exact"
+    },
+    {
+      "word": "hygiene.",
+      "start": 18.16,
+      "end": 18.46,
+      "match": "exact"
+    },
+    {
+      "word": "Suppose",
+      "start": 19.2,
+      "end": 19.68,
+      "match": "exact"
+    },
+    {
+      "word": "you",
+      "start": 19.68,
+      "end": 19.9,
+      "match": "exact"
+    },
+    {
+      "word": "delegate",
+      "start": 19.9,
+      "end": 20.14,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 20.14,
+      "end": 20.38,
+      "match": "exact"
+    },
+    {
+      "word": "forty-file",
+      "start": 20.38,
+      "end": 20.766,
+      "match": "approx",
+      "heard": "40 -file code -based"
+    },
+    {
+      "word": "codebase",
+      "start": 20.766,
+      "end": 21.28,
+      "match": "approx",
+      "heard": "40 -file code -based"
+    },
+    {
+      "word": "search",
+      "start": 21.28,
+      "end": 21.52,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 21.52,
+      "end": 21.76,
+      "match": "exact"
+    },
+    {
+      "word": "an",
+      "start": 21.76,
+      "end": 21.86,
+      "match": "exact"
+    },
+    {
+      "word": "isolated",
+      "start": 21.86,
+      "end": 22.2,
+      "match": "exact"
+    },
+    {
+      "word": "child",
+      "start": 22.2,
+      "end": 22.46,
+      "match": "exact"
+    },
+    {
+      "word": "agent.",
+      "start": 22.46,
+      "end": 22.84,
+      "match": "exact"
+    },
+    {
+      "word": "Tens",
+      "start": 23.5,
+      "end": 24.0,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 24.0,
+      "end": 24.06,
+      "match": "exact"
+    },
+    {
+      "word": "thousands",
+      "start": 24.06,
+      "end": 24.36,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 24.36,
+      "end": 24.58,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 24.58,
+      "end": 24.86,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 24.86,
+      "end": 25.1,
+      "match": "exact"
+    },
+    {
+      "word": "messy",
+      "start": 25.1,
+      "end": 25.28,
+      "match": "exact"
+    },
+    {
+      "word": "grep",
+      "start": 25.28,
+      "end": 25.48,
+      "match": "approx",
+      "heard": "grip"
+    },
+    {
+      "word": "output",
+      "start": 25.48,
+      "end": 25.84,
+      "match": "exact"
+    },
+    {
+      "word": "stay",
+      "start": 25.84,
+      "end": 26.16,
+      "match": "exact"
+    },
+    {
+      "word": "sealed",
+      "start": 26.16,
+      "end": 26.5,
+      "match": "exact"
+    },
+    {
+      "word": "inside",
+      "start": 26.5,
+      "end": 26.74,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 26.74,
+      "end": 26.98,
+      "match": "exact"
+    },
+    {
+      "word": "child",
+      "start": 26.98,
+      "end": 27.14,
+      "match": "exact"
+    },
+    {
+      "word": "window,",
+      "start": 27.14,
+      "end": 27.42,
+      "match": "exact"
+    },
+    {
+      "word": "returning",
+      "start": 27.7,
+      "end": 28.08,
+      "match": "exact"
+    },
+    {
+      "word": "only",
+      "start": 28.08,
+      "end": 28.44,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 28.44,
+      "end": 28.62,
+      "match": "exact"
+    },
+    {
+      "word": "crisp",
+      "start": 28.62,
+      "end": 28.8,
+      "match": "exact"
+    },
+    {
+      "word": "summary",
+      "start": 28.8,
+      "end": 29.16,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 29.16,
+      "end": 29.42,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 29.42,
+      "end": 29.52,
+      "match": "exact"
+    },
+    {
+      "word": "parent",
+      "start": 29.52,
+      "end": 29.72,
+      "match": "exact"
+    },
+    {
+      "word": "orchestrator.",
+      "start": 29.72,
+      "end": 30.28,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Once",
+      "start": 0.0,
+      "end": 0.3
+    },
+    {
+      "word": "you",
+      "start": 0.3,
+      "end": 0.44
+    },
+    {
+      "word": "master",
+      "start": 0.44,
+      "end": 0.78
+    },
+    {
+      "word": "a",
+      "start": 0.78,
+      "end": 0.94
+    },
+    {
+      "word": "complete",
+      "start": 0.94,
+      "end": 1.12
+    },
+    {
+      "word": "single",
+      "start": 1.12,
+      "end": 1.54
+    },
+    {
+      "word": "-agent",
+      "start": 1.54,
+      "end": 1.9
+    },
+    {
+      "word": "harness,",
+      "start": 1.9,
+      "end": 2.14
+    },
+    {
+      "word": "you",
+      "start": 2.44,
+      "end": 2.6
+    },
+    {
+      "word": "are",
+      "start": 2.6,
+      "end": 2.7
+    },
+    {
+      "word": "ready",
+      "start": 2.7,
+      "end": 2.94
+    },
+    {
+      "word": "for",
+      "start": 2.94,
+      "end": 3.14
+    },
+    {
+      "word": "Pillar",
+      "start": 3.14,
+      "end": 3.34
+    },
+    {
+      "word": "5,",
+      "start": 3.34,
+      "end": 3.56
+    },
+    {
+      "word": "the",
+      "start": 3.86,
+      "end": 4.04
+    },
+    {
+      "word": "next",
+      "start": 4.04,
+      "end": 4.24
+    },
+    {
+      "word": "level,",
+      "start": 4.24,
+      "end": 4.56
+    },
+    {
+      "word": "subagents,",
+      "start": 4.72,
+      "end": 5.42
+    },
+    {
+      "word": "delegation,",
+      "start": 5.48,
+      "end": 5.72
+    },
+    {
+      "word": "and",
+      "start": 6.18,
+      "end": 6.4
+    },
+    {
+      "word": "scale.",
+      "start": 6.4,
+      "end": 6.62
+    },
+    {
+      "word": "Despite",
+      "start": 7.58,
+      "end": 8.06
+    },
+    {
+      "word": "all",
+      "start": 8.06,
+      "end": 8.3
+    },
+    {
+      "word": "the",
+      "start": 8.3,
+      "end": 8.48
+    },
+    {
+      "word": "hype",
+      "start": 8.48,
+      "end": 8.68
+    },
+    {
+      "word": "about",
+      "start": 8.68,
+      "end": 8.88
+    },
+    {
+      "word": "AI",
+      "start": 8.88,
+      "end": 9.14
+    },
+    {
+      "word": "personas",
+      "start": 9.14,
+      "end": 9.48
+    },
+    {
+      "word": "role",
+      "start": 9.48,
+      "end": 9.84
+    },
+    {
+      "word": "-playing",
+      "start": 9.84,
+      "end": 10.12
+    },
+    {
+      "word": "as",
+      "start": 10.12,
+      "end": 10.34
+    },
+    {
+      "word": "executives",
+      "start": 10.34,
+      "end": 10.72
+    },
+    {
+      "word": "and",
+      "start": 10.72,
+      "end": 11.04
+    },
+    {
+      "word": "junior",
+      "start": 11.04,
+      "end": 11.24
+    },
+    {
+      "word": "developers,",
+      "start": 11.24,
+      "end": 11.72
+    },
+    {
+      "word": "the",
+      "start": 12.06,
+      "end": 12.38
+    },
+    {
+      "word": "real",
+      "start": 12.38,
+      "end": 12.54
+    },
+    {
+      "word": "engineering",
+      "start": 12.54,
+      "end": 12.92
+    },
+    {
+      "word": "reason",
+      "start": 12.92,
+      "end": 13.26
+    },
+    {
+      "word": "harnesses",
+      "start": 13.26,
+      "end": 13.92
+    },
+    {
+      "word": "like",
+      "start": 13.92,
+      "end": 14.06
+    },
+    {
+      "word": "Claude",
+      "start": 14.06,
+      "end": 14.34
+    },
+    {
+      "word": "Code,",
+      "start": 14.34,
+      "end": 14.56
+    },
+    {
+      "word": "OpenCode,",
+      "start": 14.88,
+      "end": 15.58
+    },
+    {
+      "word": "Klein,",
+      "start": 15.72,
+      "end": 16.0
+    },
+    {
+      "word": "and",
+      "start": 16.22,
+      "end": 16.42
+    },
+    {
+      "word": "RueCode",
+      "start": 16.42,
+      "end": 16.8
+    },
+    {
+      "word": "spawn",
+      "start": 16.8,
+      "end": 17.0
+    },
+    {
+      "word": "subagents",
+      "start": 17.0,
+      "end": 17.64
+    },
+    {
+      "word": "is",
+      "start": 17.64,
+      "end": 17.84
+    },
+    {
+      "word": "context",
+      "start": 17.84,
+      "end": 18.16
+    },
+    {
+      "word": "hygiene.",
+      "start": 18.16,
+      "end": 18.46
+    },
+    {
+      "word": "Suppose",
+      "start": 19.2,
+      "end": 19.68
+    },
+    {
+      "word": "you",
+      "start": 19.68,
+      "end": 19.9
+    },
+    {
+      "word": "delegate",
+      "start": 19.9,
+      "end": 20.14
+    },
+    {
+      "word": "a",
+      "start": 20.14,
+      "end": 20.38
+    },
+    {
+      "word": "40",
+      "start": 20.38,
+      "end": 20.58
+    },
+    {
+      "word": "-file",
+      "start": 20.58,
+      "end": 20.82
+    },
+    {
+      "word": "code",
+      "start": 20.82,
+      "end": 21.02
+    },
+    {
+      "word": "-based",
+      "start": 21.02,
+      "end": 21.28
+    },
+    {
+      "word": "search",
+      "start": 21.28,
+      "end": 21.52
+    },
+    {
+      "word": "to",
+      "start": 21.52,
+      "end": 21.76
+    },
+    {
+      "word": "an",
+      "start": 21.76,
+      "end": 21.86
+    },
+    {
+      "word": "isolated",
+      "start": 21.86,
+      "end": 22.2
+    },
+    {
+      "word": "child",
+      "start": 22.2,
+      "end": 22.46
+    },
+    {
+      "word": "agent.",
+      "start": 22.46,
+      "end": 22.84
+    },
+    {
+      "word": "Tens",
+      "start": 23.5,
+      "end": 24.0
+    },
+    {
+      "word": "of",
+      "start": 24.0,
+      "end": 24.06
+    },
+    {
+      "word": "thousands",
+      "start": 24.06,
+      "end": 24.36
+    },
+    {
+      "word": "of",
+      "start": 24.36,
+      "end": 24.58
+    },
+    {
+      "word": "tokens",
+      "start": 24.58,
+      "end": 24.86
+    },
+    {
+      "word": "of",
+      "start": 24.86,
+      "end": 25.1
+    },
+    {
+      "word": "messy",
+      "start": 25.1,
+      "end": 25.28
+    },
+    {
+      "word": "grip",
+      "start": 25.28,
+      "end": 25.48
+    },
+    {
+      "word": "output",
+      "start": 25.48,
+      "end": 25.84
+    },
+    {
+      "word": "stay",
+      "start": 25.84,
+      "end": 26.16
+    },
+    {
+      "word": "sealed",
+      "start": 26.16,
+      "end": 26.5
+    },
+    {
+      "word": "inside",
+      "start": 26.5,
+      "end": 26.74
+    },
+    {
+      "word": "the",
+      "start": 26.74,
+      "end": 26.98
+    },
+    {
+      "word": "child",
+      "start": 26.98,
+      "end": 27.14
+    },
+    {
+      "word": "window,",
+      "start": 27.14,
+      "end": 27.42
+    },
+    {
+      "word": "returning",
+      "start": 27.7,
+      "end": 28.08
+    },
+    {
+      "word": "only",
+      "start": 28.08,
+      "end": 28.44
+    },
+    {
+      "word": "a",
+      "start": 28.44,
+      "end": 28.62
+    },
+    {
+      "word": "crisp",
+      "start": 28.62,
+      "end": 28.8
+    },
+    {
+      "word": "summary",
+      "start": 28.8,
+      "end": 29.16
+    },
+    {
+      "word": "to",
+      "start": 29.16,
+      "end": 29.42
+    },
+    {
+      "word": "the",
+      "start": 29.42,
+      "end": 29.52
+    },
+    {
+      "word": "parent",
+      "start": 29.52,
+      "end": 29.72
+    },
+    {
+      "word": "orchestrator.",
+      "start": 29.72,
+      "end": 30.28
+    }
+  ]
+}

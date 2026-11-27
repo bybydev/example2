@@ -1,0 +1,1054 @@
+{
+  "audio": "034.that-leads-to.mp3",
+  "paragraph": 34,
+  "text": "That leads to the golden rule of long-term harness maintenance. Frontier models improve every few months, so keep a clean architectural line between permanent harness infrastructure and temporary model workarounds. Sandboxes, deterministic verifiers, prompt caching, and trace logs, the core primitives exposed by builder runtimes like the Claude Agent SDK, OpenAI Agents SDK, and LangChain Deep Agents on LangGraph, stay valuable forever. Elaborate chain-of-thought nudges, rigid routers, and JSON repair shims should be modular enough to build to delete the day your evals prove the next generation no longer needs them.",
+  "transcript": "That leads to the golden rule of long-term harness maintenance. Frontier models improve every few months, so keep a clean architectural line between permanent harness infrastructure and temporary model workarounds. Sandboxes, deterministic verifiers, prompt caching, and trace logs, the core primitives exposed by builder runtimes like the Cloud Agent SDK, OpenAI Agents SDK, and Langchain Deep Agents on Langraph, stay valuable forever. Elaborate chain of thought nudges, rigid routers, and JSON repair shims should be modular enough to build to delete the day your evals prove the next generation no longer needs them.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 2
+    }
+  ],
+  "duration": 35.76,
+  "failed_words": 2,
+  "failures": [
+    {
+      "index": 47,
+      "word": "Claude",
+      "match": "approx",
+      "heard": "Cloud",
+      "start": 19.24
+    },
+    {
+      "index": 58,
+      "word": "LangGraph,",
+      "match": "approx",
+      "heard": "Langraph,",
+      "start": 24.18
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "That",
+      "start": 0.0,
+      "end": 0.54,
+      "match": "exact"
+    },
+    {
+      "word": "leads",
+      "start": 0.54,
+      "end": 0.76,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 0.76,
+      "end": 1.02,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 1.02,
+      "end": 1.12,
+      "match": "exact"
+    },
+    {
+      "word": "golden",
+      "start": 1.12,
+      "end": 1.36,
+      "match": "exact"
+    },
+    {
+      "word": "rule",
+      "start": 1.36,
+      "end": 1.62,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 1.62,
+      "end": 1.94,
+      "match": "exact"
+    },
+    {
+      "word": "long-term",
+      "start": 1.94,
+      "end": 2.38,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 2.38,
+      "end": 2.64,
+      "match": "exact"
+    },
+    {
+      "word": "maintenance.",
+      "start": 2.64,
+      "end": 2.96,
+      "match": "exact"
+    },
+    {
+      "word": "Frontier",
+      "start": 4.22,
+      "end": 4.86,
+      "match": "exact"
+    },
+    {
+      "word": "models",
+      "start": 4.86,
+      "end": 5.02,
+      "match": "exact"
+    },
+    {
+      "word": "improve",
+      "start": 5.02,
+      "end": 5.4,
+      "match": "exact"
+    },
+    {
+      "word": "every",
+      "start": 5.4,
+      "end": 5.82,
+      "match": "exact"
+    },
+    {
+      "word": "few",
+      "start": 5.82,
+      "end": 6.02,
+      "match": "exact"
+    },
+    {
+      "word": "months,",
+      "start": 6.02,
+      "end": 6.3,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 6.46,
+      "end": 6.72,
+      "match": "exact"
+    },
+    {
+      "word": "keep",
+      "start": 6.72,
+      "end": 6.86,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 6.86,
+      "end": 7.02,
+      "match": "exact"
+    },
+    {
+      "word": "clean",
+      "start": 7.02,
+      "end": 7.22,
+      "match": "exact"
+    },
+    {
+      "word": "architectural",
+      "start": 7.22,
+      "end": 7.6,
+      "match": "exact"
+    },
+    {
+      "word": "line",
+      "start": 7.6,
+      "end": 8.04,
+      "match": "exact"
+    },
+    {
+      "word": "between",
+      "start": 8.04,
+      "end": 8.38,
+      "match": "exact"
+    },
+    {
+      "word": "permanent",
+      "start": 8.38,
+      "end": 8.84,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 8.84,
+      "end": 9.12,
+      "match": "exact"
+    },
+    {
+      "word": "infrastructure",
+      "start": 9.12,
+      "end": 9.58,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 9.58,
+      "end": 10.3,
+      "match": "exact"
+    },
+    {
+      "word": "temporary",
+      "start": 10.3,
+      "end": 10.6,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 10.6,
+      "end": 10.96,
+      "match": "exact"
+    },
+    {
+      "word": "workarounds.",
+      "start": 10.96,
+      "end": 11.56,
+      "match": "exact"
+    },
+    {
+      "word": "Sandboxes,",
+      "start": 12.6,
+      "end": 13.24,
+      "match": "exact"
+    },
+    {
+      "word": "deterministic",
+      "start": 13.24,
+      "end": 13.88,
+      "match": "exact"
+    },
+    {
+      "word": "verifiers,",
+      "start": 13.88,
+      "end": 14.38,
+      "match": "exact"
+    },
+    {
+      "word": "prompt",
+      "start": 14.7,
+      "end": 15.02,
+      "match": "exact"
+    },
+    {
+      "word": "caching,",
+      "start": 15.02,
+      "end": 15.48,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 15.58,
+      "end": 15.78,
+      "match": "exact"
+    },
+    {
+      "word": "trace",
+      "start": 15.78,
+      "end": 15.94,
+      "match": "exact"
+    },
+    {
+      "word": "logs,",
+      "start": 15.94,
+      "end": 16.24,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 16.54,
+      "end": 16.84,
+      "match": "exact"
+    },
+    {
+      "word": "core",
+      "start": 16.84,
+      "end": 17.02,
+      "match": "exact"
+    },
+    {
+      "word": "primitives",
+      "start": 17.02,
+      "end": 17.4,
+      "match": "exact"
+    },
+    {
+      "word": "exposed",
+      "start": 17.4,
+      "end": 17.74,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 17.74,
+      "end": 18.08,
+      "match": "exact"
+    },
+    {
+      "word": "builder",
+      "start": 18.08,
+      "end": 18.36,
+      "match": "exact"
+    },
+    {
+      "word": "runtimes",
+      "start": 18.36,
+      "end": 18.86,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 18.86,
+      "end": 19.12,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 19.12,
+      "end": 19.24,
+      "match": "exact"
+    },
+    {
+      "word": "Claude",
+      "start": 19.24,
+      "end": 19.42,
+      "match": "approx",
+      "heard": "Cloud"
+    },
+    {
+      "word": "Agent",
+      "start": 19.42,
+      "end": 19.68,
+      "match": "exact"
+    },
+    {
+      "word": "SDK,",
+      "start": 19.68,
+      "end": 20.08,
+      "match": "exact"
+    },
+    {
+      "word": "OpenAI",
+      "start": 20.56,
+      "end": 21.26,
+      "match": "exact"
+    },
+    {
+      "word": "Agents",
+      "start": 21.26,
+      "end": 21.8,
+      "match": "exact"
+    },
+    {
+      "word": "SDK,",
+      "start": 21.8,
+      "end": 22.08,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 22.5,
+      "end": 22.92,
+      "match": "exact"
+    },
+    {
+      "word": "LangChain",
+      "start": 22.92,
+      "end": 23.28,
+      "match": "exact"
+    },
+    {
+      "word": "Deep",
+      "start": 23.28,
+      "end": 23.56,
+      "match": "exact"
+    },
+    {
+      "word": "Agents",
+      "start": 23.56,
+      "end": 24.02,
+      "match": "exact"
+    },
+    {
+      "word": "on",
+      "start": 24.02,
+      "end": 24.18,
+      "match": "exact"
+    },
+    {
+      "word": "LangGraph,",
+      "start": 24.18,
+      "end": 24.62,
+      "match": "approx",
+      "heard": "Langraph,"
+    },
+    {
+      "word": "stay",
+      "start": 24.84,
+      "end": 25.16,
+      "match": "exact"
+    },
+    {
+      "word": "valuable",
+      "start": 25.16,
+      "end": 25.48,
+      "match": "exact"
+    },
+    {
+      "word": "forever.",
+      "start": 25.48,
+      "end": 25.88,
+      "match": "exact"
+    },
+    {
+      "word": "Elaborate",
+      "start": 26.78,
+      "end": 27.26,
+      "match": "exact"
+    },
+    {
+      "word": "chain-of-thought",
+      "start": 27.26,
+      "end": 27.8,
+      "match": "exact"
+    },
+    {
+      "word": "nudges,",
+      "start": 27.8,
+      "end": 28.3,
+      "match": "exact"
+    },
+    {
+      "word": "rigid",
+      "start": 28.32,
+      "end": 28.58,
+      "match": "exact"
+    },
+    {
+      "word": "routers,",
+      "start": 28.58,
+      "end": 29.16,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 29.18,
+      "end": 29.46,
+      "match": "exact"
+    },
+    {
+      "word": "JSON",
+      "start": 29.46,
+      "end": 29.76,
+      "match": "exact"
+    },
+    {
+      "word": "repair",
+      "start": 29.76,
+      "end": 30.04,
+      "match": "exact"
+    },
+    {
+      "word": "shims",
+      "start": 30.04,
+      "end": 30.54,
+      "match": "exact"
+    },
+    {
+      "word": "should",
+      "start": 30.54,
+      "end": 30.78,
+      "match": "exact"
+    },
+    {
+      "word": "be",
+      "start": 30.78,
+      "end": 30.94,
+      "match": "exact"
+    },
+    {
+      "word": "modular",
+      "start": 30.94,
+      "end": 31.26,
+      "match": "exact"
+    },
+    {
+      "word": "enough",
+      "start": 31.26,
+      "end": 31.56,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 31.56,
+      "end": 31.78,
+      "match": "exact"
+    },
+    {
+      "word": "build",
+      "start": 31.78,
+      "end": 31.98,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 31.98,
+      "end": 32.14,
+      "match": "exact"
+    },
+    {
+      "word": "delete",
+      "start": 32.14,
+      "end": 32.38,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 32.38,
+      "end": 32.52,
+      "match": "exact"
+    },
+    {
+      "word": "day",
+      "start": 32.52,
+      "end": 32.68,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 32.68,
+      "end": 32.86,
+      "match": "exact"
+    },
+    {
+      "word": "evals",
+      "start": 32.86,
+      "end": 33.22,
+      "match": "exact"
+    },
+    {
+      "word": "prove",
+      "start": 33.22,
+      "end": 33.46,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 33.46,
+      "end": 33.72,
+      "match": "exact"
+    },
+    {
+      "word": "next",
+      "start": 33.72,
+      "end": 33.88,
+      "match": "exact"
+    },
+    {
+      "word": "generation",
+      "start": 33.88,
+      "end": 34.2,
+      "match": "exact"
+    },
+    {
+      "word": "no",
+      "start": 34.2,
+      "end": 34.58,
+      "match": "exact"
+    },
+    {
+      "word": "longer",
+      "start": 34.58,
+      "end": 34.82,
+      "match": "exact"
+    },
+    {
+      "word": "needs",
+      "start": 34.82,
+      "end": 35.08,
+      "match": "exact"
+    },
+    {
+      "word": "them.",
+      "start": 35.08,
+      "end": 35.3,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "That",
+      "start": 0.0,
+      "end": 0.54
+    },
+    {
+      "word": "leads",
+      "start": 0.54,
+      "end": 0.76
+    },
+    {
+      "word": "to",
+      "start": 0.76,
+      "end": 1.02
+    },
+    {
+      "word": "the",
+      "start": 1.02,
+      "end": 1.12
+    },
+    {
+      "word": "golden",
+      "start": 1.12,
+      "end": 1.36
+    },
+    {
+      "word": "rule",
+      "start": 1.36,
+      "end": 1.62
+    },
+    {
+      "word": "of",
+      "start": 1.62,
+      "end": 1.94
+    },
+    {
+      "word": "long",
+      "start": 1.94,
+      "end": 2.12
+    },
+    {
+      "word": "-term",
+      "start": 2.12,
+      "end": 2.38
+    },
+    {
+      "word": "harness",
+      "start": 2.38,
+      "end": 2.64
+    },
+    {
+      "word": "maintenance.",
+      "start": 2.64,
+      "end": 2.96
+    },
+    {
+      "word": "Frontier",
+      "start": 4.22,
+      "end": 4.86
+    },
+    {
+      "word": "models",
+      "start": 4.86,
+      "end": 5.02
+    },
+    {
+      "word": "improve",
+      "start": 5.02,
+      "end": 5.4
+    },
+    {
+      "word": "every",
+      "start": 5.4,
+      "end": 5.82
+    },
+    {
+      "word": "few",
+      "start": 5.82,
+      "end": 6.02
+    },
+    {
+      "word": "months,",
+      "start": 6.02,
+      "end": 6.3
+    },
+    {
+      "word": "so",
+      "start": 6.46,
+      "end": 6.72
+    },
+    {
+      "word": "keep",
+      "start": 6.72,
+      "end": 6.86
+    },
+    {
+      "word": "a",
+      "start": 6.86,
+      "end": 7.02
+    },
+    {
+      "word": "clean",
+      "start": 7.02,
+      "end": 7.22
+    },
+    {
+      "word": "architectural",
+      "start": 7.22,
+      "end": 7.6
+    },
+    {
+      "word": "line",
+      "start": 7.6,
+      "end": 8.04
+    },
+    {
+      "word": "between",
+      "start": 8.04,
+      "end": 8.38
+    },
+    {
+      "word": "permanent",
+      "start": 8.38,
+      "end": 8.84
+    },
+    {
+      "word": "harness",
+      "start": 8.84,
+      "end": 9.12
+    },
+    {
+      "word": "infrastructure",
+      "start": 9.12,
+      "end": 9.58
+    },
+    {
+      "word": "and",
+      "start": 9.58,
+      "end": 10.3
+    },
+    {
+      "word": "temporary",
+      "start": 10.3,
+      "end": 10.6
+    },
+    {
+      "word": "model",
+      "start": 10.6,
+      "end": 10.96
+    },
+    {
+      "word": "workarounds.",
+      "start": 10.96,
+      "end": 11.56
+    },
+    {
+      "word": "Sandboxes,",
+      "start": 12.6,
+      "end": 13.24
+    },
+    {
+      "word": "deterministic",
+      "start": 13.24,
+      "end": 13.88
+    },
+    {
+      "word": "verifiers,",
+      "start": 13.88,
+      "end": 14.38
+    },
+    {
+      "word": "prompt",
+      "start": 14.7,
+      "end": 15.02
+    },
+    {
+      "word": "caching,",
+      "start": 15.02,
+      "end": 15.48
+    },
+    {
+      "word": "and",
+      "start": 15.58,
+      "end": 15.78
+    },
+    {
+      "word": "trace",
+      "start": 15.78,
+      "end": 15.94
+    },
+    {
+      "word": "logs,",
+      "start": 15.94,
+      "end": 16.24
+    },
+    {
+      "word": "the",
+      "start": 16.54,
+      "end": 16.84
+    },
+    {
+      "word": "core",
+      "start": 16.84,
+      "end": 17.02
+    },
+    {
+      "word": "primitives",
+      "start": 17.02,
+      "end": 17.4
+    },
+    {
+      "word": "exposed",
+      "start": 17.4,
+      "end": 17.74
+    },
+    {
+      "word": "by",
+      "start": 17.74,
+      "end": 18.08
+    },
+    {
+      "word": "builder",
+      "start": 18.08,
+      "end": 18.36
+    },
+    {
+      "word": "runtimes",
+      "start": 18.36,
+      "end": 18.86
+    },
+    {
+      "word": "like",
+      "start": 18.86,
+      "end": 19.12
+    },
+    {
+      "word": "the",
+      "start": 19.12,
+      "end": 19.24
+    },
+    {
+      "word": "Cloud",
+      "start": 19.24,
+      "end": 19.42
+    },
+    {
+      "word": "Agent",
+      "start": 19.42,
+      "end": 19.68
+    },
+    {
+      "word": "SDK,",
+      "start": 19.68,
+      "end": 20.08
+    },
+    {
+      "word": "OpenAI",
+      "start": 20.56,
+      "end": 21.26
+    },
+    {
+      "word": "Agents",
+      "start": 21.26,
+      "end": 21.8
+    },
+    {
+      "word": "SDK,",
+      "start": 21.8,
+      "end": 22.08
+    },
+    {
+      "word": "and",
+      "start": 22.5,
+      "end": 22.92
+    },
+    {
+      "word": "Langchain",
+      "start": 22.92,
+      "end": 23.28
+    },
+    {
+      "word": "Deep",
+      "start": 23.28,
+      "end": 23.56
+    },
+    {
+      "word": "Agents",
+      "start": 23.56,
+      "end": 24.02
+    },
+    {
+      "word": "on",
+      "start": 24.02,
+      "end": 24.18
+    },
+    {
+      "word": "Langraph,",
+      "start": 24.18,
+      "end": 24.62
+    },
+    {
+      "word": "stay",
+      "start": 24.84,
+      "end": 25.16
+    },
+    {
+      "word": "valuable",
+      "start": 25.16,
+      "end": 25.48
+    },
+    {
+      "word": "forever.",
+      "start": 25.48,
+      "end": 25.88
+    },
+    {
+      "word": "Elaborate",
+      "start": 26.78,
+      "end": 27.26
+    },
+    {
+      "word": "chain",
+      "start": 27.26,
+      "end": 27.4
+    },
+    {
+      "word": "of",
+      "start": 27.4,
+      "end": 27.6
+    },
+    {
+      "word": "thought",
+      "start": 27.6,
+      "end": 27.8
+    },
+    {
+      "word": "nudges,",
+      "start": 27.8,
+      "end": 28.3
+    },
+    {
+      "word": "rigid",
+      "start": 28.32,
+      "end": 28.58
+    },
+    {
+      "word": "routers,",
+      "start": 28.58,
+      "end": 29.16
+    },
+    {
+      "word": "and",
+      "start": 29.18,
+      "end": 29.46
+    },
+    {
+      "word": "JSON",
+      "start": 29.46,
+      "end": 29.76
+    },
+    {
+      "word": "repair",
+      "start": 29.76,
+      "end": 30.04
+    },
+    {
+      "word": "shims",
+      "start": 30.04,
+      "end": 30.54
+    },
+    {
+      "word": "should",
+      "start": 30.54,
+      "end": 30.78
+    },
+    {
+      "word": "be",
+      "start": 30.78,
+      "end": 30.94
+    },
+    {
+      "word": "modular",
+      "start": 30.94,
+      "end": 31.26
+    },
+    {
+      "word": "enough",
+      "start": 31.26,
+      "end": 31.56
+    },
+    {
+      "word": "to",
+      "start": 31.56,
+      "end": 31.78
+    },
+    {
+      "word": "build",
+      "start": 31.78,
+      "end": 31.98
+    },
+    {
+      "word": "to",
+      "start": 31.98,
+      "end": 32.14
+    },
+    {
+      "word": "delete",
+      "start": 32.14,
+      "end": 32.38
+    },
+    {
+      "word": "the",
+      "start": 32.38,
+      "end": 32.52
+    },
+    {
+      "word": "day",
+      "start": 32.52,
+      "end": 32.68
+    },
+    {
+      "word": "your",
+      "start": 32.68,
+      "end": 32.86
+    },
+    {
+      "word": "evals",
+      "start": 32.86,
+      "end": 33.22
+    },
+    {
+      "word": "prove",
+      "start": 33.22,
+      "end": 33.46
+    },
+    {
+      "word": "the",
+      "start": 33.46,
+      "end": 33.72
+    },
+    {
+      "word": "next",
+      "start": 33.72,
+      "end": 33.88
+    },
+    {
+      "word": "generation",
+      "start": 33.88,
+      "end": 34.2
+    },
+    {
+      "word": "no",
+      "start": 34.2,
+      "end": 34.58
+    },
+    {
+      "word": "longer",
+      "start": 34.58,
+      "end": 34.82
+    },
+    {
+      "word": "needs",
+      "start": 34.82,
+      "end": 35.08
+    },
+    {
+      "word": "them.",
+      "start": 35.08,
+      "end": 35.3
+    }
+  ]
+}

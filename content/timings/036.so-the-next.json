@@ -1,0 +1,937 @@
+{
+  "audio": "036.so-the-next.mp3",
+  "paragraph": 36,
+  "text": "So the next time your AI agent feels unreliable, slow, or weirdly forgetful, resist the urge to immediately swap models or rewrite your system prompt for the tenth time. Audit the harness around it instead. Give the model cleaner tools with actionable errors, protect your static cache prefix, wire in closed-loop verification with deterministic hooks, and lock down a scoped sandbox with sensible human approval gates. More often than not, the intelligence was already there; it just needed a better operating system.",
+  "transcript": "So the next time your AI agent feels unreliable, slow, or weirdly forgetful, resist the urge to immediately swap models or rewrite your system prompt for the 10th time. Audit the harness around it instead. Give the model cleaner tools with actionable errors, protect your static cache prefix, wire in closed-loop verification with deterministic hooks, and lock down a scoped sandbox with sensible human approval gates. More often than not, the intelligence was already there. It just needed a better operating system.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 1
+    }
+  ],
+  "duration": 26.88,
+  "failed_words": 1,
+  "failures": [
+    {
+      "index": 27,
+      "word": "tenth",
+      "match": "approx",
+      "heard": "10th",
+      "start": 7.74
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "So",
+      "start": 0.0,
+      "end": 0.5,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 0.5,
+      "end": 0.56,
+      "match": "exact"
+    },
+    {
+      "word": "next",
+      "start": 0.56,
+      "end": 0.7,
+      "match": "exact"
+    },
+    {
+      "word": "time",
+      "start": 0.7,
+      "end": 0.96,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 0.96,
+      "end": 1.12,
+      "match": "exact"
+    },
+    {
+      "word": "AI",
+      "start": 1.12,
+      "end": 1.32,
+      "match": "exact"
+    },
+    {
+      "word": "agent",
+      "start": 1.32,
+      "end": 1.6,
+      "match": "exact"
+    },
+    {
+      "word": "feels",
+      "start": 1.6,
+      "end": 1.88,
+      "match": "exact"
+    },
+    {
+      "word": "unreliable,",
+      "start": 1.88,
+      "end": 2.56,
+      "match": "exact"
+    },
+    {
+      "word": "slow,",
+      "start": 2.66,
+      "end": 2.94,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 3.16,
+      "end": 3.34,
+      "match": "exact"
+    },
+    {
+      "word": "weirdly",
+      "start": 3.34,
+      "end": 3.58,
+      "match": "exact"
+    },
+    {
+      "word": "forgetful,",
+      "start": 3.58,
+      "end": 4.14,
+      "match": "exact"
+    },
+    {
+      "word": "resist",
+      "start": 4.24,
+      "end": 4.58,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 4.58,
+      "end": 4.78,
+      "match": "exact"
+    },
+    {
+      "word": "urge",
+      "start": 4.78,
+      "end": 4.98,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 4.98,
+      "end": 5.14,
+      "match": "exact"
+    },
+    {
+      "word": "immediately",
+      "start": 5.14,
+      "end": 5.36,
+      "match": "exact"
+    },
+    {
+      "word": "swap",
+      "start": 5.36,
+      "end": 5.76,
+      "match": "exact"
+    },
+    {
+      "word": "models",
+      "start": 5.76,
+      "end": 6.18,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 6.18,
+      "end": 6.38,
+      "match": "exact"
+    },
+    {
+      "word": "rewrite",
+      "start": 6.38,
+      "end": 6.7,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 6.7,
+      "end": 6.9,
+      "match": "exact"
+    },
+    {
+      "word": "system",
+      "start": 6.9,
+      "end": 7.2,
+      "match": "exact"
+    },
+    {
+      "word": "prompt",
+      "start": 7.2,
+      "end": 7.46,
+      "match": "exact"
+    },
+    {
+      "word": "for",
+      "start": 7.46,
+      "end": 7.68,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 7.68,
+      "end": 7.74,
+      "match": "exact"
+    },
+    {
+      "word": "tenth",
+      "start": 7.74,
+      "end": 8.06,
+      "match": "approx",
+      "heard": "10th"
+    },
+    {
+      "word": "time.",
+      "start": 8.06,
+      "end": 8.34,
+      "match": "exact"
+    },
+    {
+      "word": "Audit",
+      "start": 8.98,
+      "end": 9.5,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 9.5,
+      "end": 9.58,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 9.58,
+      "end": 9.8,
+      "match": "exact"
+    },
+    {
+      "word": "around",
+      "start": 9.8,
+      "end": 10.04,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 10.04,
+      "end": 10.2,
+      "match": "exact"
+    },
+    {
+      "word": "instead.",
+      "start": 10.2,
+      "end": 10.44,
+      "match": "exact"
+    },
+    {
+      "word": "Give",
+      "start": 10.92,
+      "end": 11.44,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 11.44,
+      "end": 11.58,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 11.58,
+      "end": 11.8,
+      "match": "exact"
+    },
+    {
+      "word": "cleaner",
+      "start": 11.8,
+      "end": 12.02,
+      "match": "exact"
+    },
+    {
+      "word": "tools",
+      "start": 12.02,
+      "end": 12.34,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 12.34,
+      "end": 12.56,
+      "match": "exact"
+    },
+    {
+      "word": "actionable",
+      "start": 12.56,
+      "end": 12.92,
+      "match": "exact"
+    },
+    {
+      "word": "errors,",
+      "start": 12.92,
+      "end": 13.26,
+      "match": "exact"
+    },
+    {
+      "word": "protect",
+      "start": 13.5,
+      "end": 13.86,
+      "match": "exact"
+    },
+    {
+      "word": "your",
+      "start": 13.86,
+      "end": 14.1,
+      "match": "exact"
+    },
+    {
+      "word": "static",
+      "start": 14.1,
+      "end": 14.34,
+      "match": "exact"
+    },
+    {
+      "word": "cache",
+      "start": 14.34,
+      "end": 14.56,
+      "match": "exact"
+    },
+    {
+      "word": "prefix,",
+      "start": 14.56,
+      "end": 14.96,
+      "match": "exact"
+    },
+    {
+      "word": "wire",
+      "start": 15.3,
+      "end": 15.6,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 15.6,
+      "end": 15.74,
+      "match": "exact"
+    },
+    {
+      "word": "closed-loop",
+      "start": 15.74,
+      "end": 16.18,
+      "match": "exact"
+    },
+    {
+      "word": "verification",
+      "start": 16.18,
+      "end": 16.6,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 16.6,
+      "end": 17.02,
+      "match": "exact"
+    },
+    {
+      "word": "deterministic",
+      "start": 17.02,
+      "end": 17.52,
+      "match": "exact"
+    },
+    {
+      "word": "hooks,",
+      "start": 17.52,
+      "end": 17.82,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 18.0,
+      "end": 18.44,
+      "match": "exact"
+    },
+    {
+      "word": "lock",
+      "start": 18.44,
+      "end": 18.6,
+      "match": "exact"
+    },
+    {
+      "word": "down",
+      "start": 18.6,
+      "end": 18.78,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 18.78,
+      "end": 18.92,
+      "match": "exact"
+    },
+    {
+      "word": "scoped",
+      "start": 18.92,
+      "end": 19.22,
+      "match": "exact"
+    },
+    {
+      "word": "sandbox",
+      "start": 19.22,
+      "end": 19.48,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 19.48,
+      "end": 19.9,
+      "match": "exact"
+    },
+    {
+      "word": "sensible",
+      "start": 19.9,
+      "end": 20.24,
+      "match": "exact"
+    },
+    {
+      "word": "human",
+      "start": 20.24,
+      "end": 20.5,
+      "match": "exact"
+    },
+    {
+      "word": "approval",
+      "start": 20.5,
+      "end": 20.78,
+      "match": "exact"
+    },
+    {
+      "word": "gates.",
+      "start": 20.78,
+      "end": 21.12,
+      "match": "exact"
+    },
+    {
+      "word": "More",
+      "start": 21.74,
+      "end": 22.26,
+      "match": "exact"
+    },
+    {
+      "word": "often",
+      "start": 22.26,
+      "end": 22.46,
+      "match": "exact"
+    },
+    {
+      "word": "than",
+      "start": 22.46,
+      "end": 22.64,
+      "match": "exact"
+    },
+    {
+      "word": "not,",
+      "start": 22.64,
+      "end": 22.86,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 22.98,
+      "end": 23.18,
+      "match": "exact"
+    },
+    {
+      "word": "intelligence",
+      "start": 23.18,
+      "end": 23.54,
+      "match": "exact"
+    },
+    {
+      "word": "was",
+      "start": 23.54,
+      "end": 23.76,
+      "match": "exact"
+    },
+    {
+      "word": "already",
+      "start": 23.76,
+      "end": 24.02,
+      "match": "exact"
+    },
+    {
+      "word": "there;",
+      "start": 24.02,
+      "end": 24.3,
+      "match": "exact"
+    },
+    {
+      "word": "it",
+      "start": 24.44,
+      "end": 24.84,
+      "match": "exact"
+    },
+    {
+      "word": "just",
+      "start": 24.84,
+      "end": 24.98,
+      "match": "exact"
+    },
+    {
+      "word": "needed",
+      "start": 24.98,
+      "end": 25.18,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 25.18,
+      "end": 25.28,
+      "match": "exact"
+    },
+    {
+      "word": "better",
+      "start": 25.28,
+      "end": 25.44,
+      "match": "exact"
+    },
+    {
+      "word": "operating",
+      "start": 25.44,
+      "end": 25.74,
+      "match": "exact"
+    },
+    {
+      "word": "system.",
+      "start": 25.74,
+      "end": 26.1,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "So",
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "word": "the",
+      "start": 0.5,
+      "end": 0.56
+    },
+    {
+      "word": "next",
+      "start": 0.56,
+      "end": 0.7
+    },
+    {
+      "word": "time",
+      "start": 0.7,
+      "end": 0.96
+    },
+    {
+      "word": "your",
+      "start": 0.96,
+      "end": 1.12
+    },
+    {
+      "word": "AI",
+      "start": 1.12,
+      "end": 1.32
+    },
+    {
+      "word": "agent",
+      "start": 1.32,
+      "end": 1.6
+    },
+    {
+      "word": "feels",
+      "start": 1.6,
+      "end": 1.88
+    },
+    {
+      "word": "unreliable,",
+      "start": 1.88,
+      "end": 2.56
+    },
+    {
+      "word": "slow,",
+      "start": 2.66,
+      "end": 2.94
+    },
+    {
+      "word": "or",
+      "start": 3.16,
+      "end": 3.34
+    },
+    {
+      "word": "weirdly",
+      "start": 3.34,
+      "end": 3.58
+    },
+    {
+      "word": "forgetful,",
+      "start": 3.58,
+      "end": 4.14
+    },
+    {
+      "word": "resist",
+      "start": 4.24,
+      "end": 4.58
+    },
+    {
+      "word": "the",
+      "start": 4.58,
+      "end": 4.78
+    },
+    {
+      "word": "urge",
+      "start": 4.78,
+      "end": 4.98
+    },
+    {
+      "word": "to",
+      "start": 4.98,
+      "end": 5.14
+    },
+    {
+      "word": "immediately",
+      "start": 5.14,
+      "end": 5.36
+    },
+    {
+      "word": "swap",
+      "start": 5.36,
+      "end": 5.76
+    },
+    {
+      "word": "models",
+      "start": 5.76,
+      "end": 6.18
+    },
+    {
+      "word": "or",
+      "start": 6.18,
+      "end": 6.38
+    },
+    {
+      "word": "rewrite",
+      "start": 6.38,
+      "end": 6.7
+    },
+    {
+      "word": "your",
+      "start": 6.7,
+      "end": 6.9
+    },
+    {
+      "word": "system",
+      "start": 6.9,
+      "end": 7.2
+    },
+    {
+      "word": "prompt",
+      "start": 7.2,
+      "end": 7.46
+    },
+    {
+      "word": "for",
+      "start": 7.46,
+      "end": 7.68
+    },
+    {
+      "word": "the",
+      "start": 7.68,
+      "end": 7.74
+    },
+    {
+      "word": "10th",
+      "start": 7.74,
+      "end": 8.06
+    },
+    {
+      "word": "time.",
+      "start": 8.06,
+      "end": 8.34
+    },
+    {
+      "word": "Audit",
+      "start": 8.98,
+      "end": 9.5
+    },
+    {
+      "word": "the",
+      "start": 9.5,
+      "end": 9.58
+    },
+    {
+      "word": "harness",
+      "start": 9.58,
+      "end": 9.8
+    },
+    {
+      "word": "around",
+      "start": 9.8,
+      "end": 10.04
+    },
+    {
+      "word": "it",
+      "start": 10.04,
+      "end": 10.2
+    },
+    {
+      "word": "instead.",
+      "start": 10.2,
+      "end": 10.44
+    },
+    {
+      "word": "Give",
+      "start": 10.92,
+      "end": 11.44
+    },
+    {
+      "word": "the",
+      "start": 11.44,
+      "end": 11.58
+    },
+    {
+      "word": "model",
+      "start": 11.58,
+      "end": 11.8
+    },
+    {
+      "word": "cleaner",
+      "start": 11.8,
+      "end": 12.02
+    },
+    {
+      "word": "tools",
+      "start": 12.02,
+      "end": 12.34
+    },
+    {
+      "word": "with",
+      "start": 12.34,
+      "end": 12.56
+    },
+    {
+      "word": "actionable",
+      "start": 12.56,
+      "end": 12.92
+    },
+    {
+      "word": "errors,",
+      "start": 12.92,
+      "end": 13.26
+    },
+    {
+      "word": "protect",
+      "start": 13.5,
+      "end": 13.86
+    },
+    {
+      "word": "your",
+      "start": 13.86,
+      "end": 14.1
+    },
+    {
+      "word": "static",
+      "start": 14.1,
+      "end": 14.34
+    },
+    {
+      "word": "cache",
+      "start": 14.34,
+      "end": 14.56
+    },
+    {
+      "word": "prefix,",
+      "start": 14.56,
+      "end": 14.96
+    },
+    {
+      "word": "wire",
+      "start": 15.3,
+      "end": 15.6
+    },
+    {
+      "word": "in",
+      "start": 15.6,
+      "end": 15.74
+    },
+    {
+      "word": "closed",
+      "start": 15.74,
+      "end": 15.92
+    },
+    {
+      "word": "-loop",
+      "start": 15.92,
+      "end": 16.18
+    },
+    {
+      "word": "verification",
+      "start": 16.18,
+      "end": 16.6
+    },
+    {
+      "word": "with",
+      "start": 16.6,
+      "end": 17.02
+    },
+    {
+      "word": "deterministic",
+      "start": 17.02,
+      "end": 17.52
+    },
+    {
+      "word": "hooks,",
+      "start": 17.52,
+      "end": 17.82
+    },
+    {
+      "word": "and",
+      "start": 18.0,
+      "end": 18.44
+    },
+    {
+      "word": "lock",
+      "start": 18.44,
+      "end": 18.6
+    },
+    {
+      "word": "down",
+      "start": 18.6,
+      "end": 18.78
+    },
+    {
+      "word": "a",
+      "start": 18.78,
+      "end": 18.92
+    },
+    {
+      "word": "scoped",
+      "start": 18.92,
+      "end": 19.22
+    },
+    {
+      "word": "sandbox",
+      "start": 19.22,
+      "end": 19.48
+    },
+    {
+      "word": "with",
+      "start": 19.48,
+      "end": 19.9
+    },
+    {
+      "word": "sensible",
+      "start": 19.9,
+      "end": 20.24
+    },
+    {
+      "word": "human",
+      "start": 20.24,
+      "end": 20.5
+    },
+    {
+      "word": "approval",
+      "start": 20.5,
+      "end": 20.78
+    },
+    {
+      "word": "gates.",
+      "start": 20.78,
+      "end": 21.12
+    },
+    {
+      "word": "More",
+      "start": 21.74,
+      "end": 22.26
+    },
+    {
+      "word": "often",
+      "start": 22.26,
+      "end": 22.46
+    },
+    {
+      "word": "than",
+      "start": 22.46,
+      "end": 22.64
+    },
+    {
+      "word": "not,",
+      "start": 22.64,
+      "end": 22.86
+    },
+    {
+      "word": "the",
+      "start": 22.98,
+      "end": 23.18
+    },
+    {
+      "word": "intelligence",
+      "start": 23.18,
+      "end": 23.54
+    },
+    {
+      "word": "was",
+      "start": 23.54,
+      "end": 23.76
+    },
+    {
+      "word": "already",
+      "start": 23.76,
+      "end": 24.02
+    },
+    {
+      "word": "there.",
+      "start": 24.02,
+      "end": 24.3
+    },
+    {
+      "word": "It",
+      "start": 24.44,
+      "end": 24.84
+    },
+    {
+      "word": "just",
+      "start": 24.84,
+      "end": 24.98
+    },
+    {
+      "word": "needed",
+      "start": 24.98,
+      "end": 25.18
+    },
+    {
+      "word": "a",
+      "start": 25.18,
+      "end": 25.28
+    },
+    {
+      "word": "better",
+      "start": 25.28,
+      "end": 25.44
+    },
+    {
+      "word": "operating",
+      "start": 25.44,
+      "end": 25.74
+    },
+    {
+      "word": "system.",
+      "start": 25.74,
+      "end": 26.1
+    }
+  ]
+}

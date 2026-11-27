@@ -1,0 +1,995 @@
+{
+  "audio": "014.now-move-to.mp3",
+  "paragraph": 14,
+  "text": "Now move to Pillar Two: context management and cache economics. Think of the context window as the agent's RAM. Even when a frontier model advertises two hundred thousand or one million tokens of capacity, reasoning quality does not stay flat all the way to the wall. As giant stack traces, stale file reads, and abandoned attempts accumulate, signal gets buried in noise, a phenomenon engineers call context rot. Performance degrades long before the window is full, so deciding what enters and stays in context is a primary harness job.",
+  "transcript": "Now move to Pillar 2, Context Management and Cache Economics. Think of the context window as the agent's RAM. Even when a frontier model advertises 200,000 or 1 million tokens of capacity, reasoning quality does not stay flat all the way to the wall. As giant stack traces, stale file reads, and abandoned attempts accumulate, signal gets buried in noise, a phenomenon engineers call context rot. Performance degrades long before the window is full, so deciding what enters and stays in context is a primary harness job.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 31.04,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "Now",
+      "start": 0.0,
+      "end": 0.32,
+      "match": "exact"
+    },
+    {
+      "word": "move",
+      "start": 0.32,
+      "end": 0.5,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 0.5,
+      "end": 0.72,
+      "match": "exact"
+    },
+    {
+      "word": "Pillar",
+      "start": 0.72,
+      "end": 0.94,
+      "match": "exact"
+    },
+    {
+      "word": "Two:",
+      "start": 0.94,
+      "end": 1.2,
+      "match": "exact"
+    },
+    {
+      "word": "context",
+      "start": 1.38,
+      "end": 1.9,
+      "match": "exact"
+    },
+    {
+      "word": "management",
+      "start": 1.9,
+      "end": 2.2,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 2.2,
+      "end": 2.54,
+      "match": "exact"
+    },
+    {
+      "word": "cache",
+      "start": 2.54,
+      "end": 2.82,
+      "match": "exact"
+    },
+    {
+      "word": "economics.",
+      "start": 2.82,
+      "end": 3.16,
+      "match": "exact"
+    },
+    {
+      "word": "Think",
+      "start": 3.86,
+      "end": 4.46,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 4.46,
+      "end": 4.56,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 4.56,
+      "end": 4.64,
+      "match": "exact"
+    },
+    {
+      "word": "context",
+      "start": 4.64,
+      "end": 4.94,
+      "match": "exact"
+    },
+    {
+      "word": "window",
+      "start": 4.94,
+      "end": 5.2,
+      "match": "exact"
+    },
+    {
+      "word": "as",
+      "start": 5.2,
+      "end": 5.6,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 5.6,
+      "end": 5.7,
+      "match": "exact"
+    },
+    {
+      "word": "agent's",
+      "start": 5.7,
+      "end": 6.14,
+      "match": "exact"
+    },
+    {
+      "word": "RAM.",
+      "start": 6.14,
+      "end": 6.3,
+      "match": "exact"
+    },
+    {
+      "word": "Even",
+      "start": 6.94,
+      "end": 7.24,
+      "match": "exact"
+    },
+    {
+      "word": "when",
+      "start": 7.24,
+      "end": 7.38,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 7.38,
+      "end": 7.48,
+      "match": "exact"
+    },
+    {
+      "word": "frontier",
+      "start": 7.48,
+      "end": 7.72,
+      "match": "exact"
+    },
+    {
+      "word": "model",
+      "start": 7.72,
+      "end": 8.02,
+      "match": "exact"
+    },
+    {
+      "word": "advertises",
+      "start": 8.02,
+      "end": 8.76,
+      "match": "exact"
+    },
+    {
+      "word": "two",
+      "start": 8.76,
+      "end": 8.822,
+      "match": "exact"
+    },
+    {
+      "word": "hundred",
+      "start": 8.822,
+      "end": 9.26,
+      "match": "exact"
+    },
+    {
+      "word": "thousand",
+      "start": 9.26,
+      "end": 9.76,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 9.76,
+      "end": 10.02,
+      "match": "exact"
+    },
+    {
+      "word": "one",
+      "start": 10.02,
+      "end": 10.18,
+      "match": "exact"
+    },
+    {
+      "word": "million",
+      "start": 10.18,
+      "end": 10.54,
+      "match": "exact"
+    },
+    {
+      "word": "tokens",
+      "start": 10.54,
+      "end": 10.86,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 10.86,
+      "end": 11.16,
+      "match": "exact"
+    },
+    {
+      "word": "capacity,",
+      "start": 11.16,
+      "end": 11.44,
+      "match": "exact"
+    },
+    {
+      "word": "reasoning",
+      "start": 11.9,
+      "end": 12.42,
+      "match": "exact"
+    },
+    {
+      "word": "quality",
+      "start": 12.42,
+      "end": 12.72,
+      "match": "exact"
+    },
+    {
+      "word": "does",
+      "start": 12.72,
+      "end": 13.06,
+      "match": "exact"
+    },
+    {
+      "word": "not",
+      "start": 13.06,
+      "end": 13.24,
+      "match": "exact"
+    },
+    {
+      "word": "stay",
+      "start": 13.24,
+      "end": 13.44,
+      "match": "exact"
+    },
+    {
+      "word": "flat",
+      "start": 13.44,
+      "end": 13.76,
+      "match": "exact"
+    },
+    {
+      "word": "all",
+      "start": 13.76,
+      "end": 14.04,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 14.04,
+      "end": 14.18,
+      "match": "exact"
+    },
+    {
+      "word": "way",
+      "start": 14.18,
+      "end": 14.3,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 14.3,
+      "end": 14.38,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 14.38,
+      "end": 14.46,
+      "match": "exact"
+    },
+    {
+      "word": "wall.",
+      "start": 14.46,
+      "end": 14.68,
+      "match": "exact"
+    },
+    {
+      "word": "As",
+      "start": 15.02,
+      "end": 15.56,
+      "match": "exact"
+    },
+    {
+      "word": "giant",
+      "start": 15.56,
+      "end": 15.86,
+      "match": "exact"
+    },
+    {
+      "word": "stack",
+      "start": 15.86,
+      "end": 16.14,
+      "match": "exact"
+    },
+    {
+      "word": "traces,",
+      "start": 16.14,
+      "end": 16.52,
+      "match": "exact"
+    },
+    {
+      "word": "stale",
+      "start": 16.88,
+      "end": 17.2,
+      "match": "exact"
+    },
+    {
+      "word": "file",
+      "start": 17.2,
+      "end": 17.42,
+      "match": "exact"
+    },
+    {
+      "word": "reads,",
+      "start": 17.42,
+      "end": 17.78,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 17.96,
+      "end": 18.22,
+      "match": "exact"
+    },
+    {
+      "word": "abandoned",
+      "start": 18.22,
+      "end": 18.6,
+      "match": "exact"
+    },
+    {
+      "word": "attempts",
+      "start": 18.6,
+      "end": 18.88,
+      "match": "exact"
+    },
+    {
+      "word": "accumulate,",
+      "start": 18.88,
+      "end": 19.22,
+      "match": "exact"
+    },
+    {
+      "word": "signal",
+      "start": 19.74,
+      "end": 20.1,
+      "match": "exact"
+    },
+    {
+      "word": "gets",
+      "start": 20.1,
+      "end": 20.3,
+      "match": "exact"
+    },
+    {
+      "word": "buried",
+      "start": 20.3,
+      "end": 20.58,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 20.58,
+      "end": 20.7,
+      "match": "exact"
+    },
+    {
+      "word": "noise,",
+      "start": 20.7,
+      "end": 20.94,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 21.16,
+      "end": 21.46,
+      "match": "exact"
+    },
+    {
+      "word": "phenomenon",
+      "start": 21.46,
+      "end": 21.76,
+      "match": "exact"
+    },
+    {
+      "word": "engineers",
+      "start": 21.76,
+      "end": 22.3,
+      "match": "exact"
+    },
+    {
+      "word": "call",
+      "start": 22.3,
+      "end": 22.74,
+      "match": "exact"
+    },
+    {
+      "word": "context",
+      "start": 22.74,
+      "end": 23.18,
+      "match": "exact"
+    },
+    {
+      "word": "rot.",
+      "start": 23.18,
+      "end": 23.54,
+      "match": "exact"
+    },
+    {
+      "word": "Performance",
+      "start": 24.32,
+      "end": 24.92,
+      "match": "exact"
+    },
+    {
+      "word": "degrades",
+      "start": 24.92,
+      "end": 25.42,
+      "match": "exact"
+    },
+    {
+      "word": "long",
+      "start": 25.42,
+      "end": 25.66,
+      "match": "exact"
+    },
+    {
+      "word": "before",
+      "start": 25.66,
+      "end": 25.9,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 25.9,
+      "end": 26.1,
+      "match": "exact"
+    },
+    {
+      "word": "window",
+      "start": 26.1,
+      "end": 26.3,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 26.3,
+      "end": 26.46,
+      "match": "exact"
+    },
+    {
+      "word": "full,",
+      "start": 26.46,
+      "end": 26.68,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 26.68,
+      "end": 27.04,
+      "match": "exact"
+    },
+    {
+      "word": "deciding",
+      "start": 27.04,
+      "end": 27.5,
+      "match": "exact"
+    },
+    {
+      "word": "what",
+      "start": 27.5,
+      "end": 27.64,
+      "match": "exact"
+    },
+    {
+      "word": "enters",
+      "start": 27.64,
+      "end": 27.96,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 27.96,
+      "end": 28.18,
+      "match": "exact"
+    },
+    {
+      "word": "stays",
+      "start": 28.18,
+      "end": 28.38,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 28.38,
+      "end": 28.54,
+      "match": "exact"
+    },
+    {
+      "word": "context",
+      "start": 28.54,
+      "end": 28.9,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 28.9,
+      "end": 29.26,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 29.26,
+      "end": 29.36,
+      "match": "exact"
+    },
+    {
+      "word": "primary",
+      "start": 29.36,
+      "end": 29.66,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 29.66,
+      "end": 30.04,
+      "match": "exact"
+    },
+    {
+      "word": "job.",
+      "start": 30.04,
+      "end": 30.32,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "Now",
+      "start": 0.0,
+      "end": 0.32
+    },
+    {
+      "word": "move",
+      "start": 0.32,
+      "end": 0.5
+    },
+    {
+      "word": "to",
+      "start": 0.5,
+      "end": 0.72
+    },
+    {
+      "word": "Pillar",
+      "start": 0.72,
+      "end": 0.94
+    },
+    {
+      "word": "2,",
+      "start": 0.94,
+      "end": 1.2
+    },
+    {
+      "word": "Context",
+      "start": 1.38,
+      "end": 1.9
+    },
+    {
+      "word": "Management",
+      "start": 1.9,
+      "end": 2.2
+    },
+    {
+      "word": "and",
+      "start": 2.2,
+      "end": 2.54
+    },
+    {
+      "word": "Cache",
+      "start": 2.54,
+      "end": 2.82
+    },
+    {
+      "word": "Economics.",
+      "start": 2.82,
+      "end": 3.16
+    },
+    {
+      "word": "Think",
+      "start": 3.86,
+      "end": 4.46
+    },
+    {
+      "word": "of",
+      "start": 4.46,
+      "end": 4.56
+    },
+    {
+      "word": "the",
+      "start": 4.56,
+      "end": 4.64
+    },
+    {
+      "word": "context",
+      "start": 4.64,
+      "end": 4.94
+    },
+    {
+      "word": "window",
+      "start": 4.94,
+      "end": 5.2
+    },
+    {
+      "word": "as",
+      "start": 5.2,
+      "end": 5.6
+    },
+    {
+      "word": "the",
+      "start": 5.6,
+      "end": 5.7
+    },
+    {
+      "word": "agent's",
+      "start": 5.7,
+      "end": 6.14
+    },
+    {
+      "word": "RAM.",
+      "start": 6.14,
+      "end": 6.3
+    },
+    {
+      "word": "Even",
+      "start": 6.94,
+      "end": 7.24
+    },
+    {
+      "word": "when",
+      "start": 7.24,
+      "end": 7.38
+    },
+    {
+      "word": "a",
+      "start": 7.38,
+      "end": 7.48
+    },
+    {
+      "word": "frontier",
+      "start": 7.48,
+      "end": 7.72
+    },
+    {
+      "word": "model",
+      "start": 7.72,
+      "end": 8.02
+    },
+    {
+      "word": "advertises",
+      "start": 8.02,
+      "end": 8.76
+    },
+    {
+      "word": "200",
+      "start": 8.76,
+      "end": 9.1
+    },
+    {
+      "word": ",000",
+      "start": 9.1,
+      "end": 9.76
+    },
+    {
+      "word": "or",
+      "start": 9.76,
+      "end": 10.02
+    },
+    {
+      "word": "1",
+      "start": 10.02,
+      "end": 10.18
+    },
+    {
+      "word": "million",
+      "start": 10.18,
+      "end": 10.54
+    },
+    {
+      "word": "tokens",
+      "start": 10.54,
+      "end": 10.86
+    },
+    {
+      "word": "of",
+      "start": 10.86,
+      "end": 11.16
+    },
+    {
+      "word": "capacity,",
+      "start": 11.16,
+      "end": 11.44
+    },
+    {
+      "word": "reasoning",
+      "start": 11.9,
+      "end": 12.42
+    },
+    {
+      "word": "quality",
+      "start": 12.42,
+      "end": 12.72
+    },
+    {
+      "word": "does",
+      "start": 12.72,
+      "end": 13.06
+    },
+    {
+      "word": "not",
+      "start": 13.06,
+      "end": 13.24
+    },
+    {
+      "word": "stay",
+      "start": 13.24,
+      "end": 13.44
+    },
+    {
+      "word": "flat",
+      "start": 13.44,
+      "end": 13.76
+    },
+    {
+      "word": "all",
+      "start": 13.76,
+      "end": 14.04
+    },
+    {
+      "word": "the",
+      "start": 14.04,
+      "end": 14.18
+    },
+    {
+      "word": "way",
+      "start": 14.18,
+      "end": 14.3
+    },
+    {
+      "word": "to",
+      "start": 14.3,
+      "end": 14.38
+    },
+    {
+      "word": "the",
+      "start": 14.38,
+      "end": 14.46
+    },
+    {
+      "word": "wall.",
+      "start": 14.46,
+      "end": 14.68
+    },
+    {
+      "word": "As",
+      "start": 15.02,
+      "end": 15.56
+    },
+    {
+      "word": "giant",
+      "start": 15.56,
+      "end": 15.86
+    },
+    {
+      "word": "stack",
+      "start": 15.86,
+      "end": 16.14
+    },
+    {
+      "word": "traces,",
+      "start": 16.14,
+      "end": 16.52
+    },
+    {
+      "word": "stale",
+      "start": 16.88,
+      "end": 17.2
+    },
+    {
+      "word": "file",
+      "start": 17.2,
+      "end": 17.42
+    },
+    {
+      "word": "reads,",
+      "start": 17.42,
+      "end": 17.78
+    },
+    {
+      "word": "and",
+      "start": 17.96,
+      "end": 18.22
+    },
+    {
+      "word": "abandoned",
+      "start": 18.22,
+      "end": 18.6
+    },
+    {
+      "word": "attempts",
+      "start": 18.6,
+      "end": 18.88
+    },
+    {
+      "word": "accumulate,",
+      "start": 18.88,
+      "end": 19.22
+    },
+    {
+      "word": "signal",
+      "start": 19.74,
+      "end": 20.1
+    },
+    {
+      "word": "gets",
+      "start": 20.1,
+      "end": 20.3
+    },
+    {
+      "word": "buried",
+      "start": 20.3,
+      "end": 20.58
+    },
+    {
+      "word": "in",
+      "start": 20.58,
+      "end": 20.7
+    },
+    {
+      "word": "noise,",
+      "start": 20.7,
+      "end": 20.94
+    },
+    {
+      "word": "a",
+      "start": 21.16,
+      "end": 21.46
+    },
+    {
+      "word": "phenomenon",
+      "start": 21.46,
+      "end": 21.76
+    },
+    {
+      "word": "engineers",
+      "start": 21.76,
+      "end": 22.3
+    },
+    {
+      "word": "call",
+      "start": 22.3,
+      "end": 22.74
+    },
+    {
+      "word": "context",
+      "start": 22.74,
+      "end": 23.18
+    },
+    {
+      "word": "rot.",
+      "start": 23.18,
+      "end": 23.54
+    },
+    {
+      "word": "Performance",
+      "start": 24.32,
+      "end": 24.92
+    },
+    {
+      "word": "degrades",
+      "start": 24.92,
+      "end": 25.42
+    },
+    {
+      "word": "long",
+      "start": 25.42,
+      "end": 25.66
+    },
+    {
+      "word": "before",
+      "start": 25.66,
+      "end": 25.9
+    },
+    {
+      "word": "the",
+      "start": 25.9,
+      "end": 26.1
+    },
+    {
+      "word": "window",
+      "start": 26.1,
+      "end": 26.3
+    },
+    {
+      "word": "is",
+      "start": 26.3,
+      "end": 26.46
+    },
+    {
+      "word": "full,",
+      "start": 26.46,
+      "end": 26.68
+    },
+    {
+      "word": "so",
+      "start": 26.68,
+      "end": 27.04
+    },
+    {
+      "word": "deciding",
+      "start": 27.04,
+      "end": 27.5
+    },
+    {
+      "word": "what",
+      "start": 27.5,
+      "end": 27.64
+    },
+    {
+      "word": "enters",
+      "start": 27.64,
+      "end": 27.96
+    },
+    {
+      "word": "and",
+      "start": 27.96,
+      "end": 28.18
+    },
+    {
+      "word": "stays",
+      "start": 28.18,
+      "end": 28.38
+    },
+    {
+      "word": "in",
+      "start": 28.38,
+      "end": 28.54
+    },
+    {
+      "word": "context",
+      "start": 28.54,
+      "end": 28.9
+    },
+    {
+      "word": "is",
+      "start": 28.9,
+      "end": 29.26
+    },
+    {
+      "word": "a",
+      "start": 29.26,
+      "end": 29.36
+    },
+    {
+      "word": "primary",
+      "start": 29.36,
+      "end": 29.66
+    },
+    {
+      "word": "harness",
+      "start": 29.66,
+      "end": 30.04
+    },
+    {
+      "word": "job.",
+      "start": 30.04,
+      "end": 30.32
+    }
+  ]
+}

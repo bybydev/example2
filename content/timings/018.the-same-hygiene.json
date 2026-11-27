@@ -1,0 +1,959 @@
+{
+  "audio": "018.the-same-hygiene.mp3",
+  "paragraph": 18,
+  "text": "The same hygiene applies to instructions and domain knowledge through progressive disclosure. Instead of stuffing twenty thousand tokens of repository guidelines, deployment checklists, and specialized docs into turn one, modern harnesses place a tiny static manifest in the prefix, just short names and one-line summaries. When the current task touches authentication, the harness loads the full auth skill file lazily into the appended message history, or invokes CLI tools via shell, keeping both the context window lean and the static prefix cache completely intact.",
+  "transcript": "The same hygiene applies to instructions and domain knowledge through progressive disclosure. Instead of stuffing 20,000 tokens of repository guidelines, deployment checklists, and specialized docs into Turn 1, modern harnesses place a tiny static manifest in the prefix, just short names and one-line summaries. When the current task touches authentication, the harness loads the full auth.skill file lazily into the appended message history, or invokes CLI tools via shell, keeping both the context window lean and the static prefix cache completely intact.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 1
+    }
+  ],
+  "duration": 29.08,
+  "failed_words": 1,
+  "failures": [
+    {
+      "index": 16,
+      "word": "thousand",
+      "match": "approx",
+      "heard": ",000",
+      "start": 5.34
+    }
+  ],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.26,
+      "match": "exact"
+    },
+    {
+      "word": "same",
+      "start": 0.26,
+      "end": 0.44,
+      "match": "exact"
+    },
+    {
+      "word": "hygiene",
+      "start": 0.44,
+      "end": 0.7,
+      "match": "exact"
+    },
+    {
+      "word": "applies",
+      "start": 0.7,
+      "end": 1.0,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 1.0,
+      "end": 1.28,
+      "match": "exact"
+    },
+    {
+      "word": "instructions",
+      "start": 1.28,
+      "end": 1.66,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 1.66,
+      "end": 2.04,
+      "match": "exact"
+    },
+    {
+      "word": "domain",
+      "start": 2.04,
+      "end": 2.3,
+      "match": "exact"
+    },
+    {
+      "word": "knowledge",
+      "start": 2.3,
+      "end": 2.72,
+      "match": "exact"
+    },
+    {
+      "word": "through",
+      "start": 2.72,
+      "end": 3.02,
+      "match": "exact"
+    },
+    {
+      "word": "progressive",
+      "start": 3.02,
+      "end": 3.3,
+      "match": "exact"
+    },
+    {
+      "word": "disclosure.",
+      "start": 3.3,
+      "end": 3.78,
+      "match": "exact"
+    },
+    {
+      "word": "Instead",
+      "start": 4.14,
+      "end": 4.62,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 4.62,
+      "end": 4.84,
+      "match": "exact"
+    },
+    {
+      "word": "stuffing",
+      "start": 4.84,
+      "end": 5.1,
+      "match": "exact"
+    },
+    {
+      "word": "twenty",
+      "start": 5.1,
+      "end": 5.34,
+      "match": "exact"
+    },
+    {
+      "word": "thousand",
+      "start": 5.34,
+      "end": 5.68,
+      "match": "approx",
+      "heard": ",000"
+    },
+    {
+      "word": "tokens",
+      "start": 5.68,
+      "end": 6.0,
+      "match": "exact"
+    },
+    {
+      "word": "of",
+      "start": 6.0,
+      "end": 6.26,
+      "match": "exact"
+    },
+    {
+      "word": "repository",
+      "start": 6.26,
+      "end": 6.6,
+      "match": "exact"
+    },
+    {
+      "word": "guidelines,",
+      "start": 6.6,
+      "end": 7.14,
+      "match": "exact"
+    },
+    {
+      "word": "deployment",
+      "start": 7.52,
+      "end": 7.78,
+      "match": "exact"
+    },
+    {
+      "word": "checklists,",
+      "start": 7.78,
+      "end": 8.38,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 8.52,
+      "end": 8.66,
+      "match": "exact"
+    },
+    {
+      "word": "specialized",
+      "start": 8.66,
+      "end": 8.96,
+      "match": "exact"
+    },
+    {
+      "word": "docs",
+      "start": 8.96,
+      "end": 9.38,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 9.38,
+      "end": 9.66,
+      "match": "exact"
+    },
+    {
+      "word": "turn",
+      "start": 9.66,
+      "end": 9.86,
+      "match": "exact"
+    },
+    {
+      "word": "one,",
+      "start": 9.86,
+      "end": 10.04,
+      "match": "exact"
+    },
+    {
+      "word": "modern",
+      "start": 10.38,
+      "end": 10.84,
+      "match": "exact"
+    },
+    {
+      "word": "harnesses",
+      "start": 10.84,
+      "end": 11.26,
+      "match": "exact"
+    },
+    {
+      "word": "place",
+      "start": 11.26,
+      "end": 11.46,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 11.46,
+      "end": 11.68,
+      "match": "exact"
+    },
+    {
+      "word": "tiny",
+      "start": 11.68,
+      "end": 11.88,
+      "match": "exact"
+    },
+    {
+      "word": "static",
+      "start": 11.88,
+      "end": 12.14,
+      "match": "exact"
+    },
+    {
+      "word": "manifest",
+      "start": 12.14,
+      "end": 12.48,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 12.48,
+      "end": 12.9,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 12.9,
+      "end": 12.96,
+      "match": "exact"
+    },
+    {
+      "word": "prefix,",
+      "start": 12.96,
+      "end": 13.2,
+      "match": "exact"
+    },
+    {
+      "word": "just",
+      "start": 13.52,
+      "end": 13.84,
+      "match": "exact"
+    },
+    {
+      "word": "short",
+      "start": 13.84,
+      "end": 14.1,
+      "match": "exact"
+    },
+    {
+      "word": "names",
+      "start": 14.1,
+      "end": 14.4,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 14.4,
+      "end": 14.64,
+      "match": "exact"
+    },
+    {
+      "word": "one-line",
+      "start": 14.64,
+      "end": 15.0,
+      "match": "exact"
+    },
+    {
+      "word": "summaries.",
+      "start": 15.0,
+      "end": 15.44,
+      "match": "exact"
+    },
+    {
+      "word": "When",
+      "start": 16.0,
+      "end": 16.56,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 16.56,
+      "end": 16.66,
+      "match": "exact"
+    },
+    {
+      "word": "current",
+      "start": 16.66,
+      "end": 16.84,
+      "match": "exact"
+    },
+    {
+      "word": "task",
+      "start": 16.84,
+      "end": 17.18,
+      "match": "exact"
+    },
+    {
+      "word": "touches",
+      "start": 17.18,
+      "end": 17.5,
+      "match": "exact"
+    },
+    {
+      "word": "authentication,",
+      "start": 17.5,
+      "end": 17.88,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 18.42,
+      "end": 18.64,
+      "match": "exact"
+    },
+    {
+      "word": "harness",
+      "start": 18.64,
+      "end": 18.86,
+      "match": "exact"
+    },
+    {
+      "word": "loads",
+      "start": 18.86,
+      "end": 19.12,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 19.12,
+      "end": 19.4,
+      "match": "exact"
+    },
+    {
+      "word": "full",
+      "start": 19.4,
+      "end": 19.6,
+      "match": "exact"
+    },
+    {
+      "word": "auth",
+      "start": 19.6,
+      "end": 19.86,
+      "match": "exact"
+    },
+    {
+      "word": "skill",
+      "start": 19.86,
+      "end": 20.16,
+      "match": "exact"
+    },
+    {
+      "word": "file",
+      "start": 20.16,
+      "end": 20.38,
+      "match": "exact"
+    },
+    {
+      "word": "lazily",
+      "start": 20.38,
+      "end": 20.94,
+      "match": "exact"
+    },
+    {
+      "word": "into",
+      "start": 20.94,
+      "end": 21.16,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 21.16,
+      "end": 21.32,
+      "match": "exact"
+    },
+    {
+      "word": "appended",
+      "start": 21.32,
+      "end": 21.58,
+      "match": "exact"
+    },
+    {
+      "word": "message",
+      "start": 21.58,
+      "end": 21.8,
+      "match": "exact"
+    },
+    {
+      "word": "history,",
+      "start": 21.8,
+      "end": 22.22,
+      "match": "exact"
+    },
+    {
+      "word": "or",
+      "start": 22.4,
+      "end": 22.74,
+      "match": "exact"
+    },
+    {
+      "word": "invokes",
+      "start": 22.74,
+      "end": 23.06,
+      "match": "exact"
+    },
+    {
+      "word": "CLI",
+      "start": 23.06,
+      "end": 23.44,
+      "match": "exact"
+    },
+    {
+      "word": "tools",
+      "start": 23.44,
+      "end": 23.62,
+      "match": "exact"
+    },
+    {
+      "word": "via",
+      "start": 23.62,
+      "end": 23.9,
+      "match": "exact"
+    },
+    {
+      "word": "shell,",
+      "start": 23.9,
+      "end": 24.08,
+      "match": "exact"
+    },
+    {
+      "word": "keeping",
+      "start": 24.38,
+      "end": 24.98,
+      "match": "exact"
+    },
+    {
+      "word": "both",
+      "start": 24.98,
+      "end": 25.22,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 25.22,
+      "end": 25.38,
+      "match": "exact"
+    },
+    {
+      "word": "context",
+      "start": 25.38,
+      "end": 25.66,
+      "match": "exact"
+    },
+    {
+      "word": "window",
+      "start": 25.66,
+      "end": 25.98,
+      "match": "exact"
+    },
+    {
+      "word": "lean",
+      "start": 25.98,
+      "end": 26.3,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 26.3,
+      "end": 26.68,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 26.68,
+      "end": 26.76,
+      "match": "exact"
+    },
+    {
+      "word": "static",
+      "start": 26.76,
+      "end": 27.0,
+      "match": "exact"
+    },
+    {
+      "word": "prefix",
+      "start": 27.0,
+      "end": 27.26,
+      "match": "exact"
+    },
+    {
+      "word": "cache",
+      "start": 27.26,
+      "end": 27.64,
+      "match": "exact"
+    },
+    {
+      "word": "completely",
+      "start": 27.64,
+      "end": 28.06,
+      "match": "exact"
+    },
+    {
+      "word": "intact.",
+      "start": 28.06,
+      "end": 28.46,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.26
+    },
+    {
+      "word": "same",
+      "start": 0.26,
+      "end": 0.44
+    },
+    {
+      "word": "hygiene",
+      "start": 0.44,
+      "end": 0.7
+    },
+    {
+      "word": "applies",
+      "start": 0.7,
+      "end": 1.0
+    },
+    {
+      "word": "to",
+      "start": 1.0,
+      "end": 1.28
+    },
+    {
+      "word": "instructions",
+      "start": 1.28,
+      "end": 1.66
+    },
+    {
+      "word": "and",
+      "start": 1.66,
+      "end": 2.04
+    },
+    {
+      "word": "domain",
+      "start": 2.04,
+      "end": 2.3
+    },
+    {
+      "word": "knowledge",
+      "start": 2.3,
+      "end": 2.72
+    },
+    {
+      "word": "through",
+      "start": 2.72,
+      "end": 3.02
+    },
+    {
+      "word": "progressive",
+      "start": 3.02,
+      "end": 3.3
+    },
+    {
+      "word": "disclosure.",
+      "start": 3.3,
+      "end": 3.78
+    },
+    {
+      "word": "Instead",
+      "start": 4.14,
+      "end": 4.62
+    },
+    {
+      "word": "of",
+      "start": 4.62,
+      "end": 4.84
+    },
+    {
+      "word": "stuffing",
+      "start": 4.84,
+      "end": 5.1
+    },
+    {
+      "word": "20",
+      "start": 5.1,
+      "end": 5.34
+    },
+    {
+      "word": ",000",
+      "start": 5.34,
+      "end": 5.68
+    },
+    {
+      "word": "tokens",
+      "start": 5.68,
+      "end": 6.0
+    },
+    {
+      "word": "of",
+      "start": 6.0,
+      "end": 6.26
+    },
+    {
+      "word": "repository",
+      "start": 6.26,
+      "end": 6.6
+    },
+    {
+      "word": "guidelines,",
+      "start": 6.6,
+      "end": 7.14
+    },
+    {
+      "word": "deployment",
+      "start": 7.52,
+      "end": 7.78
+    },
+    {
+      "word": "checklists,",
+      "start": 7.78,
+      "end": 8.38
+    },
+    {
+      "word": "and",
+      "start": 8.52,
+      "end": 8.66
+    },
+    {
+      "word": "specialized",
+      "start": 8.66,
+      "end": 8.96
+    },
+    {
+      "word": "docs",
+      "start": 8.96,
+      "end": 9.38
+    },
+    {
+      "word": "into",
+      "start": 9.38,
+      "end": 9.66
+    },
+    {
+      "word": "Turn",
+      "start": 9.66,
+      "end": 9.86
+    },
+    {
+      "word": "1,",
+      "start": 9.86,
+      "end": 10.04
+    },
+    {
+      "word": "modern",
+      "start": 10.38,
+      "end": 10.84
+    },
+    {
+      "word": "harnesses",
+      "start": 10.84,
+      "end": 11.26
+    },
+    {
+      "word": "place",
+      "start": 11.26,
+      "end": 11.46
+    },
+    {
+      "word": "a",
+      "start": 11.46,
+      "end": 11.68
+    },
+    {
+      "word": "tiny",
+      "start": 11.68,
+      "end": 11.88
+    },
+    {
+      "word": "static",
+      "start": 11.88,
+      "end": 12.14
+    },
+    {
+      "word": "manifest",
+      "start": 12.14,
+      "end": 12.48
+    },
+    {
+      "word": "in",
+      "start": 12.48,
+      "end": 12.9
+    },
+    {
+      "word": "the",
+      "start": 12.9,
+      "end": 12.96
+    },
+    {
+      "word": "prefix,",
+      "start": 12.96,
+      "end": 13.2
+    },
+    {
+      "word": "just",
+      "start": 13.52,
+      "end": 13.84
+    },
+    {
+      "word": "short",
+      "start": 13.84,
+      "end": 14.1
+    },
+    {
+      "word": "names",
+      "start": 14.1,
+      "end": 14.4
+    },
+    {
+      "word": "and",
+      "start": 14.4,
+      "end": 14.64
+    },
+    {
+      "word": "one",
+      "start": 14.64,
+      "end": 14.82
+    },
+    {
+      "word": "-line",
+      "start": 14.82,
+      "end": 15.0
+    },
+    {
+      "word": "summaries.",
+      "start": 15.0,
+      "end": 15.44
+    },
+    {
+      "word": "When",
+      "start": 16.0,
+      "end": 16.56
+    },
+    {
+      "word": "the",
+      "start": 16.56,
+      "end": 16.66
+    },
+    {
+      "word": "current",
+      "start": 16.66,
+      "end": 16.84
+    },
+    {
+      "word": "task",
+      "start": 16.84,
+      "end": 17.18
+    },
+    {
+      "word": "touches",
+      "start": 17.18,
+      "end": 17.5
+    },
+    {
+      "word": "authentication,",
+      "start": 17.5,
+      "end": 17.88
+    },
+    {
+      "word": "the",
+      "start": 18.42,
+      "end": 18.64
+    },
+    {
+      "word": "harness",
+      "start": 18.64,
+      "end": 18.86
+    },
+    {
+      "word": "loads",
+      "start": 18.86,
+      "end": 19.12
+    },
+    {
+      "word": "the",
+      "start": 19.12,
+      "end": 19.4
+    },
+    {
+      "word": "full",
+      "start": 19.4,
+      "end": 19.6
+    },
+    {
+      "word": "auth",
+      "start": 19.6,
+      "end": 19.86
+    },
+    {
+      "word": ".skill",
+      "start": 19.86,
+      "end": 20.16
+    },
+    {
+      "word": "file",
+      "start": 20.16,
+      "end": 20.38
+    },
+    {
+      "word": "lazily",
+      "start": 20.38,
+      "end": 20.94
+    },
+    {
+      "word": "into",
+      "start": 20.94,
+      "end": 21.16
+    },
+    {
+      "word": "the",
+      "start": 21.16,
+      "end": 21.32
+    },
+    {
+      "word": "appended",
+      "start": 21.32,
+      "end": 21.58
+    },
+    {
+      "word": "message",
+      "start": 21.58,
+      "end": 21.8
+    },
+    {
+      "word": "history,",
+      "start": 21.8,
+      "end": 22.22
+    },
+    {
+      "word": "or",
+      "start": 22.4,
+      "end": 22.74
+    },
+    {
+      "word": "invokes",
+      "start": 22.74,
+      "end": 23.06
+    },
+    {
+      "word": "CLI",
+      "start": 23.06,
+      "end": 23.44
+    },
+    {
+      "word": "tools",
+      "start": 23.44,
+      "end": 23.62
+    },
+    {
+      "word": "via",
+      "start": 23.62,
+      "end": 23.9
+    },
+    {
+      "word": "shell,",
+      "start": 23.9,
+      "end": 24.08
+    },
+    {
+      "word": "keeping",
+      "start": 24.38,
+      "end": 24.98
+    },
+    {
+      "word": "both",
+      "start": 24.98,
+      "end": 25.22
+    },
+    {
+      "word": "the",
+      "start": 25.22,
+      "end": 25.38
+    },
+    {
+      "word": "context",
+      "start": 25.38,
+      "end": 25.66
+    },
+    {
+      "word": "window",
+      "start": 25.66,
+      "end": 25.98
+    },
+    {
+      "word": "lean",
+      "start": 25.98,
+      "end": 26.3
+    },
+    {
+      "word": "and",
+      "start": 26.3,
+      "end": 26.68
+    },
+    {
+      "word": "the",
+      "start": 26.68,
+      "end": 26.76
+    },
+    {
+      "word": "static",
+      "start": 26.76,
+      "end": 27.0
+    },
+    {
+      "word": "prefix",
+      "start": 27.0,
+      "end": 27.26
+    },
+    {
+      "word": "cache",
+      "start": 27.26,
+      "end": 27.64
+    },
+    {
+      "word": "completely",
+      "start": 27.64,
+      "end": 28.06
+    },
+    {
+      "word": "intact.",
+      "start": 28.06,
+      "end": 28.46
+    }
+  ]
+}

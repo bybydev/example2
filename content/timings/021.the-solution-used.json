@@ -1,0 +1,961 @@
+{
+  "audio": "021.the-solution-used.mp3",
+  "paragraph": 21,
+  "text": "The solution used by harnesses like Manus and top coding agents is remarkably simple: treat the workspace disk as durable external memory. Manus popularized keeping a live todo file and continuously updating workspace artifacts so goals stay fresh in attention. Coding harnesses pair structured JSON checklists with concise progress notes, choosing JSON over freeform Markdown because models are far less likely to corrupt structured schemas. Combined with clean git commits after each milestone, any fresh session can read those files and orient itself in seconds.",
+  "transcript": "The solution used by harnesses like Manus and top coding agents is remarkably simple. Treat the workspace disk as durable external memory. Manus popularized keeping a live-to-do file and continuously updating workspace artifacts so goals stay fresh in attention. Coding harnesses pair structured JSON checklists with concise progress notes, choosing JSON over freeform markdown because models are far less likely to corrupt structured schemas. Combined with clean Git commits after each milestone, any fresh session can read those files and orient itself in seconds.",
+  "model": "large-v3",
+  "attempts": [
+    {
+      "model": "large-v3",
+      "failed": 0
+    }
+  ],
+  "duration": 30.88,
+  "failed_words": 0,
+  "failures": [],
+  "extra_heard": [],
+  "words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.52,
+      "match": "exact"
+    },
+    {
+      "word": "solution",
+      "start": 0.52,
+      "end": 0.78,
+      "match": "exact"
+    },
+    {
+      "word": "used",
+      "start": 0.78,
+      "end": 1.16,
+      "match": "exact"
+    },
+    {
+      "word": "by",
+      "start": 1.16,
+      "end": 1.42,
+      "match": "exact"
+    },
+    {
+      "word": "harnesses",
+      "start": 1.42,
+      "end": 1.94,
+      "match": "exact"
+    },
+    {
+      "word": "like",
+      "start": 1.94,
+      "end": 2.06,
+      "match": "exact"
+    },
+    {
+      "word": "Manus",
+      "start": 2.06,
+      "end": 2.44,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 2.44,
+      "end": 2.6,
+      "match": "exact"
+    },
+    {
+      "word": "top",
+      "start": 2.6,
+      "end": 2.8,
+      "match": "exact"
+    },
+    {
+      "word": "coding",
+      "start": 2.8,
+      "end": 3.04,
+      "match": "exact"
+    },
+    {
+      "word": "agents",
+      "start": 3.04,
+      "end": 3.36,
+      "match": "exact"
+    },
+    {
+      "word": "is",
+      "start": 3.36,
+      "end": 3.62,
+      "match": "exact"
+    },
+    {
+      "word": "remarkably",
+      "start": 3.62,
+      "end": 3.88,
+      "match": "exact"
+    },
+    {
+      "word": "simple:",
+      "start": 3.88,
+      "end": 4.38,
+      "match": "exact"
+    },
+    {
+      "word": "treat",
+      "start": 4.6,
+      "end": 5.04,
+      "match": "exact"
+    },
+    {
+      "word": "the",
+      "start": 5.04,
+      "end": 5.24,
+      "match": "exact"
+    },
+    {
+      "word": "workspace",
+      "start": 5.24,
+      "end": 5.52,
+      "match": "exact"
+    },
+    {
+      "word": "disk",
+      "start": 5.52,
+      "end": 5.88,
+      "match": "exact"
+    },
+    {
+      "word": "as",
+      "start": 5.88,
+      "end": 6.14,
+      "match": "exact"
+    },
+    {
+      "word": "durable",
+      "start": 6.14,
+      "end": 6.44,
+      "match": "exact"
+    },
+    {
+      "word": "external",
+      "start": 6.44,
+      "end": 6.82,
+      "match": "exact"
+    },
+    {
+      "word": "memory.",
+      "start": 6.82,
+      "end": 7.24,
+      "match": "exact"
+    },
+    {
+      "word": "Manus",
+      "start": 7.58,
+      "end": 8.14,
+      "match": "exact"
+    },
+    {
+      "word": "popularized",
+      "start": 8.14,
+      "end": 8.8,
+      "match": "exact"
+    },
+    {
+      "word": "keeping",
+      "start": 8.8,
+      "end": 9.06,
+      "match": "exact"
+    },
+    {
+      "word": "a",
+      "start": 9.06,
+      "end": 9.3,
+      "match": "exact"
+    },
+    {
+      "word": "live",
+      "start": 9.3,
+      "end": 9.5,
+      "match": "exact"
+    },
+    {
+      "word": "todo",
+      "start": 9.5,
+      "end": 9.78,
+      "match": "exact"
+    },
+    {
+      "word": "file",
+      "start": 9.78,
+      "end": 10.06,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 10.06,
+      "end": 10.28,
+      "match": "exact"
+    },
+    {
+      "word": "continuously",
+      "start": 10.28,
+      "end": 10.72,
+      "match": "exact"
+    },
+    {
+      "word": "updating",
+      "start": 10.72,
+      "end": 11.24,
+      "match": "exact"
+    },
+    {
+      "word": "workspace",
+      "start": 11.24,
+      "end": 11.68,
+      "match": "exact"
+    },
+    {
+      "word": "artifacts",
+      "start": 11.68,
+      "end": 12.12,
+      "match": "exact"
+    },
+    {
+      "word": "so",
+      "start": 12.12,
+      "end": 12.5,
+      "match": "exact"
+    },
+    {
+      "word": "goals",
+      "start": 12.5,
+      "end": 12.8,
+      "match": "exact"
+    },
+    {
+      "word": "stay",
+      "start": 12.8,
+      "end": 13.12,
+      "match": "exact"
+    },
+    {
+      "word": "fresh",
+      "start": 13.12,
+      "end": 13.38,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 13.38,
+      "end": 13.52,
+      "match": "exact"
+    },
+    {
+      "word": "attention.",
+      "start": 13.52,
+      "end": 13.7,
+      "match": "exact"
+    },
+    {
+      "word": "Coding",
+      "start": 14.42,
+      "end": 15.04,
+      "match": "exact"
+    },
+    {
+      "word": "harnesses",
+      "start": 15.04,
+      "end": 15.54,
+      "match": "exact"
+    },
+    {
+      "word": "pair",
+      "start": 15.54,
+      "end": 15.68,
+      "match": "exact"
+    },
+    {
+      "word": "structured",
+      "start": 15.68,
+      "end": 16.1,
+      "match": "exact"
+    },
+    {
+      "word": "JSON",
+      "start": 16.1,
+      "end": 16.4,
+      "match": "exact"
+    },
+    {
+      "word": "checklists",
+      "start": 16.4,
+      "end": 16.98,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 16.98,
+      "end": 17.44,
+      "match": "exact"
+    },
+    {
+      "word": "concise",
+      "start": 17.44,
+      "end": 17.76,
+      "match": "exact"
+    },
+    {
+      "word": "progress",
+      "start": 17.76,
+      "end": 18.14,
+      "match": "exact"
+    },
+    {
+      "word": "notes,",
+      "start": 18.14,
+      "end": 18.58,
+      "match": "exact"
+    },
+    {
+      "word": "choosing",
+      "start": 18.78,
+      "end": 19.24,
+      "match": "exact"
+    },
+    {
+      "word": "JSON",
+      "start": 19.24,
+      "end": 19.62,
+      "match": "exact"
+    },
+    {
+      "word": "over",
+      "start": 19.62,
+      "end": 19.94,
+      "match": "exact"
+    },
+    {
+      "word": "freeform",
+      "start": 19.94,
+      "end": 20.38,
+      "match": "exact"
+    },
+    {
+      "word": "Markdown",
+      "start": 20.38,
+      "end": 20.78,
+      "match": "exact"
+    },
+    {
+      "word": "because",
+      "start": 20.78,
+      "end": 21.08,
+      "match": "exact"
+    },
+    {
+      "word": "models",
+      "start": 21.08,
+      "end": 21.44,
+      "match": "exact"
+    },
+    {
+      "word": "are",
+      "start": 21.44,
+      "end": 21.58,
+      "match": "exact"
+    },
+    {
+      "word": "far",
+      "start": 21.58,
+      "end": 21.76,
+      "match": "exact"
+    },
+    {
+      "word": "less",
+      "start": 21.76,
+      "end": 21.96,
+      "match": "exact"
+    },
+    {
+      "word": "likely",
+      "start": 21.96,
+      "end": 22.26,
+      "match": "exact"
+    },
+    {
+      "word": "to",
+      "start": 22.26,
+      "end": 22.44,
+      "match": "exact"
+    },
+    {
+      "word": "corrupt",
+      "start": 22.44,
+      "end": 22.68,
+      "match": "exact"
+    },
+    {
+      "word": "structured",
+      "start": 22.68,
+      "end": 23.02,
+      "match": "exact"
+    },
+    {
+      "word": "schemas.",
+      "start": 23.02,
+      "end": 23.56,
+      "match": "exact"
+    },
+    {
+      "word": "Combined",
+      "start": 24.46,
+      "end": 25.08,
+      "match": "exact"
+    },
+    {
+      "word": "with",
+      "start": 25.08,
+      "end": 25.2,
+      "match": "exact"
+    },
+    {
+      "word": "clean",
+      "start": 25.2,
+      "end": 25.4,
+      "match": "exact"
+    },
+    {
+      "word": "git",
+      "start": 25.4,
+      "end": 25.66,
+      "match": "exact"
+    },
+    {
+      "word": "commits",
+      "start": 25.66,
+      "end": 25.96,
+      "match": "exact"
+    },
+    {
+      "word": "after",
+      "start": 25.96,
+      "end": 26.18,
+      "match": "exact"
+    },
+    {
+      "word": "each",
+      "start": 26.18,
+      "end": 26.44,
+      "match": "exact"
+    },
+    {
+      "word": "milestone,",
+      "start": 26.44,
+      "end": 26.8,
+      "match": "exact"
+    },
+    {
+      "word": "any",
+      "start": 26.8,
+      "end": 27.26,
+      "match": "exact"
+    },
+    {
+      "word": "fresh",
+      "start": 27.26,
+      "end": 27.7,
+      "match": "exact"
+    },
+    {
+      "word": "session",
+      "start": 27.7,
+      "end": 27.94,
+      "match": "exact"
+    },
+    {
+      "word": "can",
+      "start": 27.94,
+      "end": 28.22,
+      "match": "exact"
+    },
+    {
+      "word": "read",
+      "start": 28.22,
+      "end": 28.42,
+      "match": "exact"
+    },
+    {
+      "word": "those",
+      "start": 28.42,
+      "end": 28.62,
+      "match": "exact"
+    },
+    {
+      "word": "files",
+      "start": 28.62,
+      "end": 28.86,
+      "match": "exact"
+    },
+    {
+      "word": "and",
+      "start": 28.86,
+      "end": 29.16,
+      "match": "exact"
+    },
+    {
+      "word": "orient",
+      "start": 29.16,
+      "end": 29.4,
+      "match": "exact"
+    },
+    {
+      "word": "itself",
+      "start": 29.4,
+      "end": 29.64,
+      "match": "exact"
+    },
+    {
+      "word": "in",
+      "start": 29.64,
+      "end": 29.92,
+      "match": "exact"
+    },
+    {
+      "word": "seconds.",
+      "start": 29.92,
+      "end": 30.16,
+      "match": "exact"
+    }
+  ],
+  "whisper_words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.52
+    },
+    {
+      "word": "solution",
+      "start": 0.52,
+      "end": 0.78
+    },
+    {
+      "word": "used",
+      "start": 0.78,
+      "end": 1.16
+    },
+    {
+      "word": "by",
+      "start": 1.16,
+      "end": 1.42
+    },
+    {
+      "word": "harnesses",
+      "start": 1.42,
+      "end": 1.94
+    },
+    {
+      "word": "like",
+      "start": 1.94,
+      "end": 2.06
+    },
+    {
+      "word": "Manus",
+      "start": 2.06,
+      "end": 2.44
+    },
+    {
+      "word": "and",
+      "start": 2.44,
+      "end": 2.6
+    },
+    {
+      "word": "top",
+      "start": 2.6,
+      "end": 2.8
+    },
+    {
+      "word": "coding",
+      "start": 2.8,
+      "end": 3.04
+    },
+    {
+      "word": "agents",
+      "start": 3.04,
+      "end": 3.36
+    },
+    {
+      "word": "is",
+      "start": 3.36,
+      "end": 3.62
+    },
+    {
+      "word": "remarkably",
+      "start": 3.62,
+      "end": 3.88
+    },
+    {
+      "word": "simple.",
+      "start": 3.88,
+      "end": 4.38
+    },
+    {
+      "word": "Treat",
+      "start": 4.6,
+      "end": 5.04
+    },
+    {
+      "word": "the",
+      "start": 5.04,
+      "end": 5.24
+    },
+    {
+      "word": "workspace",
+      "start": 5.24,
+      "end": 5.52
+    },
+    {
+      "word": "disk",
+      "start": 5.52,
+      "end": 5.88
+    },
+    {
+      "word": "as",
+      "start": 5.88,
+      "end": 6.14
+    },
+    {
+      "word": "durable",
+      "start": 6.14,
+      "end": 6.44
+    },
+    {
+      "word": "external",
+      "start": 6.44,
+      "end": 6.82
+    },
+    {
+      "word": "memory.",
+      "start": 6.82,
+      "end": 7.24
+    },
+    {
+      "word": "Manus",
+      "start": 7.58,
+      "end": 8.14
+    },
+    {
+      "word": "popularized",
+      "start": 8.14,
+      "end": 8.8
+    },
+    {
+      "word": "keeping",
+      "start": 8.8,
+      "end": 9.06
+    },
+    {
+      "word": "a",
+      "start": 9.06,
+      "end": 9.3
+    },
+    {
+      "word": "live",
+      "start": 9.3,
+      "end": 9.5
+    },
+    {
+      "word": "-to",
+      "start": 9.5,
+      "end": 9.66
+    },
+    {
+      "word": "-do",
+      "start": 9.66,
+      "end": 9.78
+    },
+    {
+      "word": "file",
+      "start": 9.78,
+      "end": 10.06
+    },
+    {
+      "word": "and",
+      "start": 10.06,
+      "end": 10.28
+    },
+    {
+      "word": "continuously",
+      "start": 10.28,
+      "end": 10.72
+    },
+    {
+      "word": "updating",
+      "start": 10.72,
+      "end": 11.24
+    },
+    {
+      "word": "workspace",
+      "start": 11.24,
+      "end": 11.68
+    },
+    {
+      "word": "artifacts",
+      "start": 11.68,
+      "end": 12.12
+    },
+    {
+      "word": "so",
+      "start": 12.12,
+      "end": 12.5
+    },
+    {
+      "word": "goals",
+      "start": 12.5,
+      "end": 12.8
+    },
+    {
+      "word": "stay",
+      "start": 12.8,
+      "end": 13.12
+    },
+    {
+      "word": "fresh",
+      "start": 13.12,
+      "end": 13.38
+    },
+    {
+      "word": "in",
+      "start": 13.38,
+      "end": 13.52
+    },
+    {
+      "word": "attention.",
+      "start": 13.52,
+      "end": 13.7
+    },
+    {
+      "word": "Coding",
+      "start": 14.42,
+      "end": 15.04
+    },
+    {
+      "word": "harnesses",
+      "start": 15.04,
+      "end": 15.54
+    },
+    {
+      "word": "pair",
+      "start": 15.54,
+      "end": 15.68
+    },
+    {
+      "word": "structured",
+      "start": 15.68,
+      "end": 16.1
+    },
+    {
+      "word": "JSON",
+      "start": 16.1,
+      "end": 16.4
+    },
+    {
+      "word": "checklists",
+      "start": 16.4,
+      "end": 16.98
+    },
+    {
+      "word": "with",
+      "start": 16.98,
+      "end": 17.44
+    },
+    {
+      "word": "concise",
+      "start": 17.44,
+      "end": 17.76
+    },
+    {
+      "word": "progress",
+      "start": 17.76,
+      "end": 18.14
+    },
+    {
+      "word": "notes,",
+      "start": 18.14,
+      "end": 18.58
+    },
+    {
+      "word": "choosing",
+      "start": 18.78,
+      "end": 19.24
+    },
+    {
+      "word": "JSON",
+      "start": 19.24,
+      "end": 19.62
+    },
+    {
+      "word": "over",
+      "start": 19.62,
+      "end": 19.94
+    },
+    {
+      "word": "freeform",
+      "start": 19.94,
+      "end": 20.38
+    },
+    {
+      "word": "markdown",
+      "start": 20.38,
+      "end": 20.78
+    },
+    {
+      "word": "because",
+      "start": 20.78,
+      "end": 21.08
+    },
+    {
+      "word": "models",
+      "start": 21.08,
+      "end": 21.44
+    },
+    {
+      "word": "are",
+      "start": 21.44,
+      "end": 21.58
+    },
+    {
+      "word": "far",
+      "start": 21.58,
+      "end": 21.76
+    },
+    {
+      "word": "less",
+      "start": 21.76,
+      "end": 21.96
+    },
+    {
+      "word": "likely",
+      "start": 21.96,
+      "end": 22.26
+    },
+    {
+      "word": "to",
+      "start": 22.26,
+      "end": 22.44
+    },
+    {
+      "word": "corrupt",
+      "start": 22.44,
+      "end": 22.68
+    },
+    {
+      "word": "structured",
+      "start": 22.68,
+      "end": 23.02
+    },
+    {
+      "word": "schemas.",
+      "start": 23.02,
+      "end": 23.56
+    },
+    {
+      "word": "Combined",
+      "start": 24.46,
+      "end": 25.08
+    },
+    {
+      "word": "with",
+      "start": 25.08,
+      "end": 25.2
+    },
+    {
+      "word": "clean",
+      "start": 25.2,
+      "end": 25.4
+    },
+    {
+      "word": "Git",
+      "start": 25.4,
+      "end": 25.66
+    },
+    {
+      "word": "commits",
+      "start": 25.66,
+      "end": 25.96
+    },
+    {
+      "word": "after",
+      "start": 25.96,
+      "end": 26.18
+    },
+    {
+      "word": "each",
+      "start": 26.18,
+      "end": 26.44
+    },
+    {
+      "word": "milestone,",
+      "start": 26.44,
+      "end": 26.8
+    },
+    {
+      "word": "any",
+      "start": 26.8,
+      "end": 27.26
+    },
+    {
+      "word": "fresh",
+      "start": 27.26,
+      "end": 27.7
+    },
+    {
+      "word": "session",
+      "start": 27.7,
+      "end": 27.94
+    },
+    {
+      "word": "can",
+      "start": 27.94,
+      "end": 28.22
+    },
+    {
+      "word": "read",
+      "start": 28.22,
+      "end": 28.42
+    },
+    {
+      "word": "those",
+      "start": 28.42,
+      "end": 28.62
+    },
+    {
+      "word": "files",
+      "start": 28.62,
+      "end": 28.86
+    },
+    {
+      "word": "and",
+      "start": 28.86,
+      "end": 29.16
+    },
+    {
+      "word": "orient",
+      "start": 29.16,
+      "end": 29.4
+    },
+    {
+      "word": "itself",
+      "start": 29.4,
+      "end": 29.64
+    },
+    {
+      "word": "in",
+      "start": 29.64,
+      "end": 29.92
+    },
+    {
+      "word": "seconds.",
+      "start": 29.92,
+      "end": 30.16
+    }
+  ]
+}
