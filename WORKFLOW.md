@@ -6,7 +6,7 @@ Follow Steps 1 → 8 in order. Both human and AI can check off items (`- [x]`) a
 
 ## Progress Checklist
 
-- [ ] **Step 1:** Plan & write storyboard (`content/storyboard.md`) — *Both (AI must wait for human approval before Step 2)*
+- [x] **Step 1:** Plan & write storyboard (`content/storyboard.md`) — *Both (AI must wait for human approval before Step 2)*
 - [ ] **Step 2:** Configure video (`video.config.json`) & write narration script (`content/voiceover.md`) — *Both*
 - [ ] **Step 3:** Sync voiceover, Whisper timings, timeline & SRT (`mycli remotion sync`) — *Both (AI must ask permission first)*
 - [ ] **Step 4:** Implement chapter visuals, diagrams & SFX (`src/chapters/`) — *AI (Human review)*
@@ -27,8 +27,8 @@ Follow Steps 1 → 8 in order. Both human and AI can check off items (`- [x]`) a
 - **Input:** Video topic, research notes, target audience, and desired pacing.
 - **Output:** Approved `content/storyboard.md`.
 - **Pass condition:**
-  - [ ] Every chapter has clear goals, visual beats, and cue/SFX notes.
-  - [ ] Human explicitly approves `content/storyboard.md` to proceed to Step 2.
+  - [x] Every chapter has clear goals, visual beats, and cue/SFX notes.
+  - [x] Human explicitly approves `content/storyboard.md` to proceed to Step 2.
 
 ### Step 2 — Configure Video & Write Narration Script
 - **Owner:** Both (AI + Human)
