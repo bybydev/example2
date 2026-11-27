@@ -91,8 +91,8 @@ export const BackgroundMusic: React.FC<{
 }> = ({
   src = "music/bg-ambient.mp3",
   volume = 0.08,
-  fadeInFrames = 24,
-  fadeOutFrames = 36,
+  fadeInFrames = 8,
+  fadeOutFrames = 15,
   startFrom = 0,
   loop = true,
 }) => {

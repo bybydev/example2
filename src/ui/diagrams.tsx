@@ -103,7 +103,7 @@ export const CodePanel: React.FC<{
   tone = "cyan",
   lines,
   revealProgress = 1,
-  fontSize = 19,
+  fontSize = 21,
   style,
 }) => {
   const t = TONE_STYLES[tone];
@@ -220,7 +220,8 @@ export const CodePanel: React.FC<{
                     ? `3px solid ${lineTone.main}`
                     : "3px solid transparent",
                 color: lineTone ? lineTone.main : TOKENS.colors.textPrimary,
-                whiteSpace: "pre",
+                whiteSpace: "pre-wrap",
+                wordBreak: "break-word",
               }}
             >
               {line.text}
@@ -264,7 +265,7 @@ export const CheckRow: React.FC<{
         ...style,
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 14, minWidth: 0, flex: 1 }}>
         <div
           style={{
             width: 32,
@@ -283,11 +284,12 @@ export const CheckRow: React.FC<{
         >
           {icon}
         </div>
-        <div>
+        <div style={{ minWidth: 0 }}>
           <div
             style={{
-              fontSize: 21,
+              fontSize: 20,
               fontWeight: 700,
+              lineHeight: 1.25,
               color: TOKENS.colors.textPrimary,
             }}
           >
@@ -439,5 +441,57 @@ export const SvgPacket: React.FC<{
         </text>
       ) : null}
     </g>
+  );
+};
+
+export type VerticalFlowBranch = {
+  /** Target x coordinate (in viewBox coordinates, default width 800). */
+  toX: number;
+  tone?: SemanticTone;
+  linkProgress?: number;
+  packetProgress?: number;
+  packetLabel?: string;
+  dashed?: boolean;
+};
+
+/** Top-to-bottom animated SVG connector for vertical 9:16 flow diagrams. */
+export const VerticalFlowConnector: React.FC<{
+  height?: number;
+  width?: number;
+  fromX?: number;
+  branches: VerticalFlowBranch[];
+}> = ({ height = 104, width = 860, fromX = width / 2, branches }) => {
+  return (
+    <svg
+      width="100%"
+      viewBox={`0 0 ${width} ${height}`}
+      style={{ display: "block", overflow: "visible" }}
+    >
+      {branches.map((branch, index) => (
+        <React.Fragment key={`${branch.toX}-${index}`}>
+          <SvgLink
+            x1={fromX}
+            y1={6}
+            x2={branch.toX}
+            y2={height - 6}
+            progress={branch.linkProgress ?? 1}
+            tone={branch.tone ?? "cyan"}
+            dashed={branch.dashed}
+            arrow
+          />
+          {branch.packetProgress !== undefined ? (
+            <SvgPacket
+              x1={fromX}
+              y1={6}
+              x2={branch.toX}
+              y2={height - 6}
+              progress={branch.packetProgress}
+              tone={branch.tone ?? "cyan"}
+              label={branch.packetLabel}
+            />
+          ) : null}
+        </React.Fragment>
+      ))}
+    </svg>
   );
 };

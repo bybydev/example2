@@ -96,14 +96,27 @@ export const slideUpStyle = (
   };
 };
 
+export const popScaleStyle = (
+  frame: number,
+  fps: number,
+  start: number,
+  fromScale = 0.9
+): { opacity: number; transform: string } => {
+  const p = springAt(frame, fps, start, { damping: 16, stiffness: 210, mass: 0.7 });
+  return {
+    opacity: Math.min(1, p * 1.4),
+    transform: `scale(${interpolate(p, [0, 1], [fromScale, 1])})`,
+  };
+};
+
 export const sceneWindow = (
   frame: number,
   start: number,
   end: number,
   options?: { fadeInFrames?: number; fadeOutFrames?: number; keepAtEnd?: boolean }
 ): SceneWindowState => {
-  const fadeInFrames = Math.max(1, options?.fadeInFrames ?? 10);
-  const fadeOutFrames = Math.max(1, options?.fadeOutFrames ?? 10);
+  const fadeInFrames = Math.max(1, options?.fadeInFrames ?? 6);
+  const fadeOutFrames = Math.max(1, options?.fadeOutFrames ?? 6);
   const keepAtEnd = options?.keepAtEnd ?? false;
 
   if (frame < start - 2) {

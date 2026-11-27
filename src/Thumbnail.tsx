@@ -3,6 +3,11 @@ import { AbsoluteFill } from "remotion";
 import { timeline } from "./lib/timeline";
 import { TOKENS, TONE_STYLES } from "./theme/tokens";
 
+/**
+ * Starter 1080x1920 vertical Shorts cover still (`<Still id="Thumbnail" />`).
+ * Treat this as a blank starting point — design a bespoke cover visual for each Short
+ * while keeping focal elements centered for both 9:16 shelves and square/3:4 feed crops.
+ */
 export const Thumbnail: React.FC = () => {
   return (
     <AbsoluteFill
@@ -13,61 +18,47 @@ export const Thumbnail: React.FC = () => {
         overflow: "hidden",
       }}
     >
-      {/* Dual-tone radial lighting + subtle technical grid */}
+      {/* Dual-tone vertical radial lighting + subtle technical grid */}
       <AbsoluteFill
         style={{
           backgroundImage: `
-            radial-gradient(circle at 14% 20%, rgba(56, 189, 248, 0.28), transparent 46%),
-            radial-gradient(circle at 86% 74%, rgba(245, 158, 11, 0.30), transparent 50%),
-            radial-gradient(circle at 74% 22%, rgba(251, 113, 133, 0.18), transparent 42%),
+            radial-gradient(circle at 22% 18%, rgba(56, 189, 248, 0.30), transparent 46%),
+            radial-gradient(circle at 80% 76%, rgba(245, 158, 11, 0.30), transparent 50%),
+            radial-gradient(circle at 75% 28%, rgba(251, 113, 133, 0.18), transparent 42%),
             linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)
           `,
-          backgroundSize: "100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px",
+          backgroundSize: "100% 100%, 100% 100%, 100% 100%, 54px 54px, 54px 54px",
         }}
       />
 
-      {/* Safe-padded 1280x720 layout (keeps bottom-right clear for YouTube duration badge) */}
+      {/* Center-weighted 1080x1920 layout safe for 9:16 shelves and 3:4 / square crops */}
       <AbsoluteFill
         style={{
-          padding: "54px 62px 62px 62px",
-          display: "grid",
-          gridTemplateColumns: "1.12fr 0.88fr",
-          gap: 44,
-          alignItems: "center",
+          padding: "260px 84px 360px 84px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          gap: 56,
         }}
       >
-        {/* Left: High-contrast headline (keep to 3–5 large words for mobile readability) */}
-        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-          <div
-            style={{
-              display: "inline-flex",
-              alignSelf: "flex-start",
-              alignItems: "center",
-              gap: 10,
-              padding: "9px 20px",
-              borderRadius: 999,
-              backgroundColor: TONE_STYLES.cyan.bg,
-              border: `2px solid ${TONE_STYLES.cyan.border}`,
-              color: TOKENS.colors.accent,
-              fontFamily: TOKENS.fonts.mono,
-              fontSize: 22,
-              fontWeight: 800,
-              letterSpacing: "0.08em",
-              marginBottom: 24,
-            }}
-          >
-            DEEP DIVE
-          </div>
-
+        {/* High-contrast 3-5 word headline */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
           <div
             style={{
               fontFamily: TOKENS.fonts.display,
-              fontSize: 84,
+              fontSize: 92,
               fontWeight: 700,
               lineHeight: 1.02,
               letterSpacing: "-0.04em",
-              textShadow: "0 12px 36px rgba(0, 0, 0, 0.55)",
+              textShadow: "0 14px 40px rgba(0, 0, 0, 0.58)",
             }}
           >
             {timeline.title}
@@ -78,9 +69,9 @@ export const Thumbnail: React.FC = () => {
               marginTop: 28,
               display: "flex",
               alignItems: "center",
-              gap: 16,
+              gap: 18,
               fontFamily: TOKENS.fonts.mono,
-              fontSize: 24,
+              fontSize: 28,
               fontWeight: 700,
               color: TOKENS.colors.textSecondary,
             }}
@@ -91,22 +82,15 @@ export const Thumbnail: React.FC = () => {
           </div>
         </div>
 
-        {/* Right: Focal comparison cards (marginBottom reserves YouTube's bottom-right timestamp zone) */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 22,
-            marginBottom: 32,
-          }}
-        >
+        {/* Stacked focal comparison cards */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 26 }}>
           <div
             style={{
               backgroundColor: TOKENS.colors.surface,
               border: `2.5px solid ${TOKENS.colors.accent}`,
-              borderRadius: 24,
-              padding: "26px 28px",
-              boxShadow: `0 0 36px ${TOKENS.colors.accentGlow}, 0 20px 40px rgba(0,0,0,0.45)`,
+              borderRadius: 28,
+              padding: "30px 32px",
+              boxShadow: `0 0 40px ${TOKENS.colors.accentGlow}, 0 22px 44px rgba(0, 0, 0, 0.45)`,
             }}
           >
             <div
@@ -114,13 +98,13 @@ export const Thumbnail: React.FC = () => {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "baseline",
-                marginBottom: 14,
+                marginBottom: 18,
               }}
             >
               <span
                 style={{
                   fontFamily: TOKENS.fonts.mono,
-                  fontSize: 24,
+                  fontSize: 28,
                   fontWeight: 800,
                   color: TOKENS.colors.accent,
                 }}
@@ -130,7 +114,7 @@ export const Thumbnail: React.FC = () => {
               <span
                 style={{
                   fontFamily: TOKENS.fonts.mono,
-                  fontSize: 48,
+                  fontSize: 60,
                   fontWeight: 900,
                   color: TOKENS.colors.textPrimary,
                 }}
@@ -140,9 +124,9 @@ export const Thumbnail: React.FC = () => {
             </div>
             <div
               style={{
-                height: 22,
+                height: 26,
                 borderRadius: 999,
-                backgroundColor: "rgba(255,255,255,0.08)",
+                backgroundColor: "rgba(255, 255, 255, 0.08)",
                 overflow: "hidden",
               }}
             >
@@ -152,7 +136,7 @@ export const Thumbnail: React.FC = () => {
                   height: "100%",
                   borderRadius: 999,
                   backgroundColor: TOKENS.colors.accent,
-                  boxShadow: `0 0 18px ${TOKENS.colors.accentGlow}`,
+                  boxShadow: `0 0 20px ${TOKENS.colors.accentGlow}`,
                 }}
               />
             </div>
@@ -162,9 +146,9 @@ export const Thumbnail: React.FC = () => {
             style={{
               backgroundColor: TOKENS.colors.surface,
               border: `3px solid ${TOKENS.colors.accentRose}`,
-              borderRadius: 24,
-              padding: "26px 28px",
-              boxShadow: `0 0 44px ${TOKENS.colors.accentRoseGlow}, 0 24px 44px rgba(0,0,0,0.5)`,
+              borderRadius: 28,
+              padding: "30px 32px",
+              boxShadow: `0 0 48px ${TOKENS.colors.accentRoseGlow}, 0 26px 48px rgba(0, 0, 0, 0.5)`,
             }}
           >
             <div
@@ -172,13 +156,13 @@ export const Thumbnail: React.FC = () => {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "baseline",
-                marginBottom: 14,
+                marginBottom: 18,
               }}
             >
               <span
                 style={{
                   fontFamily: TOKENS.fonts.mono,
-                  fontSize: 24,
+                  fontSize: 28,
                   fontWeight: 800,
                   color: TOKENS.colors.accentWarm,
                 }}
@@ -188,7 +172,7 @@ export const Thumbnail: React.FC = () => {
               <span
                 style={{
                   fontFamily: TOKENS.fonts.mono,
-                  fontSize: 52,
+                  fontSize: 64,
                   fontWeight: 900,
                   color: TOKENS.colors.accentWarm,
                 }}
@@ -198,11 +182,11 @@ export const Thumbnail: React.FC = () => {
             </div>
             <div
               style={{
-                height: 22,
+                height: 26,
                 borderRadius: 999,
-                backgroundColor: "rgba(255,255,255,0.08)",
+                backgroundColor: "rgba(255, 255, 255, 0.08)",
                 overflow: "hidden",
-                marginBottom: 18,
+                marginBottom: 22,
               }}
             >
               <div
@@ -216,13 +200,13 @@ export const Thumbnail: React.FC = () => {
             </div>
             <div
               style={{
-                padding: "10px 16px",
-                borderRadius: 12,
+                padding: "12px 18px",
+                borderRadius: 14,
                 backgroundColor: TONE_STYLES.rose.bg,
                 border: `2px solid ${TOKENS.colors.accentRose}`,
                 textAlign: "center",
                 fontFamily: TOKENS.fonts.mono,
-                fontSize: 22,
+                fontSize: 24,
                 fontWeight: 900,
                 letterSpacing: "0.06em",
                 color: TOKENS.colors.accentRose,

@@ -72,7 +72,7 @@ export const Card: React.FC<{
   glow?: boolean;
   padding?: number;
   style?: React.CSSProperties;
-}> = ({ children, tone = "neutral", glow = false, padding = 32, style }) => {
+}> = ({ children, tone = "neutral", glow = false, padding = 24, style }) => {
   const t = TONE_STYLES[tone];
   return (
     <div
@@ -105,7 +105,7 @@ export const SectionTitle: React.FC<{
     <div
       style={{
         textAlign: align,
-        marginBottom: 28,
+        marginBottom: 20,
         ...style,
       }}
     >
@@ -113,12 +113,12 @@ export const SectionTitle: React.FC<{
         <div
           style={{
             fontFamily: TOKENS.fonts.mono,
-            fontSize: 20,
+            fontSize: 19,
             fontWeight: 700,
             letterSpacing: "0.1em",
             textTransform: "uppercase",
             color: t.main,
-            marginBottom: 10,
+            marginBottom: 8,
           }}
         >
           {eyebrow}
@@ -128,10 +128,10 @@ export const SectionTitle: React.FC<{
         style={{
           margin: 0,
           fontFamily: TOKENS.fonts.display,
-          fontSize: 54,
+          fontSize: 56,
           fontWeight: 700,
-          lineHeight: 1.12,
-          letterSpacing: "-0.02em",
+          lineHeight: 1.08,
+          letterSpacing: "-0.025em",
           color: TOKENS.colors.textPrimary,
         }}
       >
@@ -141,8 +141,8 @@ export const SectionTitle: React.FC<{
         <p
           style={{
             margin: "12px 0 0",
-            fontSize: 26,
-            lineHeight: 1.4,
+            fontSize: 25,
+            lineHeight: 1.38,
             color: TOKENS.colors.textSecondary,
           }}
         >
@@ -326,13 +326,14 @@ export const StatCallout: React.FC<{
         backgroundColor: TOKENS.colors.surface,
         border: `1.5px solid ${tone === "neutral" ? TOKENS.colors.border : t.border}`,
         borderRadius: 20,
-        padding: "22px 26px",
+        padding: "18px 20px",
         boxShadow: glow
           ? `0 0 36px ${t.glow}, 0 18px 36px rgba(0, 0, 0, 0.35)`
           : "0 14px 32px rgba(0, 0, 0, 0.28)",
         display: "flex",
         flexDirection: "column",
-        gap: 8,
+        gap: 6,
+        minWidth: 0,
         ...style,
       }}
     >
@@ -352,7 +353,7 @@ export const StatCallout: React.FC<{
         style={{
           fontFamily: TOKENS.fonts.mono,
           fontVariantNumeric: "tabular-nums",
-          fontSize: 52,
+          fontSize: 46,
           fontWeight: 800,
           lineHeight: 1.05,
           letterSpacing: "-0.03em",
@@ -372,6 +373,76 @@ export const StatCallout: React.FC<{
           {detail}
         </div>
       ) : null}
+    </div>
+  );
+};
+
+/** Optional closing callout pointing viewers toward YouTube Shorts' native Related Video link below. */
+export const RelatedVideoCTA: React.FC<{
+  title: string;
+  detail?: string;
+  tone?: SemanticTone;
+  style?: React.CSSProperties;
+}> = ({ title, detail, tone = "emerald", style }) => {
+  const t = TONE_STYLES[tone];
+  return (
+    <div
+      style={{
+        backgroundColor: t.bg,
+        border: `1.5px solid ${t.border}`,
+        borderRadius: 20,
+        padding: "18px 22px",
+        boxShadow: `0 0 32px ${t.glow}, 0 14px 30px rgba(0, 0, 0, 0.32)`,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: 16,
+        ...style,
+      }}
+    >
+      <div style={{ minWidth: 0 }}>
+        <div
+          style={{
+            fontFamily: TOKENS.fonts.display,
+            fontSize: 26,
+            fontWeight: 700,
+            lineHeight: 1.2,
+            color: TOKENS.colors.textPrimary,
+          }}
+        >
+          {title}
+        </div>
+        {detail ? (
+          <div
+            style={{
+              marginTop: 4,
+              fontSize: 18,
+              lineHeight: 1.35,
+              color: TOKENS.colors.textSecondary,
+            }}
+          >
+            {detail}
+          </div>
+        ) : null}
+      </div>
+      <span
+        style={{
+          width: 44,
+          height: 44,
+          borderRadius: 999,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: t.main,
+          color: TOKENS.colors.background,
+          fontFamily: TOKENS.fonts.mono,
+          fontSize: 24,
+          fontWeight: 900,
+          flexShrink: 0,
+        }}
+      >
+        ↓
+      </span>
     </div>
   );
 };

@@ -17,9 +17,14 @@ export const RemotionRoot: React.FC = () => {
         fps={timeline.fps}
         width={timeline.width}
         height={timeline.height}
-        defaultProps={{ showCaptions: false, musicVolume: 0.08 }}
+        defaultProps={{
+          showCaptions: true,
+          musicVolume: 0.08,
+          showProgress: true,
+          showSafeZoneGuide: false,
+        }}
       />
-      <Still id="Thumbnail" component={Thumbnail} width={1280} height={720} />
+      <Still id="Thumbnail" component={Thumbnail} width={1080} height={1920} />
       {timeline.chapters.map((chapter) => (
         <Composition
           key={chapter.id}
@@ -31,8 +36,10 @@ export const RemotionRoot: React.FC = () => {
           height={timeline.height}
           defaultProps={{
             chapterId: chapter.id,
-            showCaptions: false,
+            showCaptions: true,
             musicVolume: 0.08,
+            showProgress: true,
+            showSafeZoneGuide: false,
           }}
         />
       ))}

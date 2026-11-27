@@ -1,8 +1,8 @@
 {
-  "name": "remotion-youtube-template",
+  "name": "remotion-youtube-shorts-template",
   "version": "1.0.0",
   "private": true,
-  "description": "Remotion YouTube Template — long-form YouTube video built with Remotion",
+  "description": "Remotion YouTube Shorts Template — vertical 9:16 YouTube Shorts built with Remotion",
   "scripts": {
     "dev": "remotion studio src/index.ts",
     "typecheck": "tsc --noEmit",

@@ -1,21 +1,21 @@
 {
   "schemaVersion": 1,
-  "slug": "remotion-youtube-template",
-  "title": "Remotion YouTube Template",
+  "slug": "remotion-youtube-shorts-template",
+  "title": "Remotion YouTube Shorts Template",
   "fps": 30,
-  "width": 1920,
-  "height": 1080,
-  "totalFrames": 460,
-  "totalSeconds": 15.333,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 416,
+  "totalSeconds": 13.867,
   "chapters": [
     {
       "id": "01-hook",
       "compositionId": "Chapter01Hook",
       "title": "Hook",
       "startFrame": 0,
-      "durationInFrames": 167,
+      "durationInFrames": 138,
       "startSeconds": 0.0,
-      "durationSeconds": 5.567,
+      "durationSeconds": 4.6,
       "paragraphs": [
         1
       ]
@@ -24,10 +24,10 @@
       "id": "02-main-point",
       "compositionId": "Chapter02MainPoint",
       "title": "Main Point",
-      "startFrame": 167,
-      "durationInFrames": 293,
-      "startSeconds": 5.567,
-      "durationSeconds": 9.767,
+      "startFrame": 138,
+      "durationInFrames": 278,
+      "startSeconds": 4.6,
+      "durationSeconds": 9.267,
       "paragraphs": [
         2
       ]
@@ -38,8 +38,8 @@
       "paragraph": 1,
       "chapterId": "01-hook",
       "startFrame": 0,
-      "durationInFrames": 149,
-      "leadFrames": 9,
+      "durationInFrames": 134,
+      "leadFrames": 2,
       "voiceFrames": 128,
       "audioFile": "voiceover/001.welcome-to-this.mp3",
       "timingSource": "whisper",
@@ -47,77 +47,77 @@
       "words": [
         {
           "w": "Welcome",
-          "s": 9,
-          "e": 20
+          "s": 2,
+          "e": 13
         },
         {
           "w": "to",
-          "s": 20,
-          "e": 25
+          "s": 13,
+          "e": 18
         },
         {
           "w": "this",
-          "s": 25,
-          "e": 29
+          "s": 18,
+          "e": 22
         },
         {
           "w": "video.",
-          "s": 29,
-          "e": 38
+          "s": 22,
+          "e": 31
         },
         {
           "w": "Replace",
-          "s": 45,
-          "e": 61
+          "s": 38,
+          "e": 54
         },
         {
           "w": "this",
-          "s": 61,
-          "e": 65
+          "s": 54,
+          "e": 58
         },
         {
           "w": "hook",
-          "s": 65,
-          "e": 70
+          "s": 58,
+          "e": 63
         },
         {
           "w": "paragraph",
-          "s": 70,
-          "e": 78
+          "s": 63,
+          "e": 71
         },
         {
           "w": "with",
-          "s": 78,
-          "e": 92
+          "s": 71,
+          "e": 85
         },
         {
           "w": "your",
-          "s": 92,
-          "e": 96
+          "s": 85,
+          "e": 89
         },
         {
           "w": "real",
-          "s": 96,
-          "e": 102
+          "s": 89,
+          "e": 95
         },
         {
           "w": "opening",
-          "s": 102,
-          "e": 110
+          "s": 95,
+          "e": 103
         },
         {
           "w": "narration.",
-          "s": 110,
-          "e": 119
+          "s": 103,
+          "e": 112
         }
       ]
     },
     {
       "paragraph": 2,
       "chapterId": "02-main-point",
-      "startFrame": 167,
-      "durationInFrames": 293,
-      "leadFrames": 9,
+      "startFrame": 138,
+      "durationInFrames": 278,
+      "leadFrames": 2,
       "voiceFrames": 272,
       "audioFile": "voiceover/002.here-is-the.mp3",
       "timingSource": "whisper",
@@ -125,138 +125,138 @@
       "words": [
         {
           "w": "Here",
-          "s": 9,
-          "e": 17
+          "s": 2,
+          "e": 10
         },
         {
           "w": "is",
-          "s": 17,
-          "e": 20
+          "s": 10,
+          "e": 13
         },
         {
           "w": "the",
-          "s": 20,
-          "e": 25
+          "s": 13,
+          "e": 18
         },
         {
           "w": "second",
-          "s": 25,
-          "e": 30
+          "s": 18,
+          "e": 23
         },
         {
           "w": "paragraph.",
-          "s": 30,
-          "e": 39
+          "s": 23,
+          "e": 32
         },
         {
           "w": "Split",
-          "s": 61,
-          "e": 76
+          "s": 54,
+          "e": 69
         },
         {
           "w": "your",
-          "s": 76,
-          "e": 81
+          "s": 69,
+          "e": 74
         },
         {
           "w": "script",
-          "s": 81,
-          "e": 90
+          "s": 74,
+          "e": 83
         },
         {
           "w": "into",
-          "s": 90,
-          "e": 95
+          "s": 83,
+          "e": 88
         },
         {
           "w": "one",
-          "s": 95,
-          "e": 100
+          "s": 88,
+          "e": 93
         },
         {
           "w": "paragraph",
-          "s": 100,
-          "e": 113
+          "s": 93,
+          "e": 106
         },
         {
           "w": "per",
-          "s": 113,
-          "e": 121
+          "s": 106,
+          "e": 114
         },
         {
           "w": "blank",
-          "s": 121,
-          "e": 128
+          "s": 114,
+          "e": 121
         },
         {
           "w": "line",
-          "s": 128,
-          "e": 133
+          "s": 121,
+          "e": 126
         },
         {
           "w": "so",
-          "s": 140,
-          "e": 150
+          "s": 133,
+          "e": 143
         },
         {
           "w": "each",
-          "s": 150,
-          "e": 155
+          "s": 143,
+          "e": 148
         },
         {
           "w": "paragraph",
-          "s": 155,
-          "e": 166
+          "s": 148,
+          "e": 159
         },
         {
           "w": "maps",
-          "s": 166,
-          "e": 176
+          "s": 159,
+          "e": 169
         },
         {
           "w": "to",
-          "s": 176,
-          "e": 182
+          "s": 169,
+          "e": 175
         },
         {
           "w": "one",
-          "s": 182,
-          "e": 190
+          "s": 175,
+          "e": 183
         },
         {
           "w": "voiceover",
-          "s": 190,
-          "e": 203
+          "s": 183,
+          "e": 196
         },
         {
           "w": "clip",
-          "s": 203,
-          "e": 210
+          "s": 196,
+          "e": 203
         },
         {
           "w": "and",
-          "s": 210,
-          "e": 219
+          "s": 203,
+          "e": 212
         },
         {
           "w": "one",
-          "s": 219,
-          "e": 225
+          "s": 212,
+          "e": 218
         },
         {
           "w": "Whisper",
-          "s": 225,
-          "e": 235
+          "s": 218,
+          "e": 228
         },
         {
           "w": "timing",
-          "s": 235,
-          "e": 245
+          "s": 228,
+          "e": 238
         },
         {
           "w": "sidecar.",
-          "s": 245,
-          "e": 260
+          "s": 238,
+          "e": 253
         }
       ]
     }

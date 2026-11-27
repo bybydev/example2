@@ -7,113 +7,116 @@ import {
   clipRange,
   cueFrame,
   fadeIn,
+  popScaleStyle,
   progressBetween,
-  sceneWindow,
   slideUpStyle,
 } from "../../ui/motion";
 import {
   AnimatedNumber,
   Card,
   Pill,
-  SceneBeat,
-  SectionTitle,
   StatCallout,
 } from "../../ui/primitives";
 import { Stage } from "../../ui/Stage";
 import type { ChapterComponentProps } from "../index";
 
+/**
+ * Starter demo chapter (`01-hook`).
+ * NOTE FOR AI AGENTS: This is a minimal reference demo, NOT a fixed visual template.
+ * Replace this layout freely with bespoke visuals tailored to each Short's topic and storyboard.
+ * Keep frame 0 immediately legible (no fade-from-black) so it works cleanly in Shorts feeds & frame pickers.
+ */
 export const HookChapter: React.FC<ChapterComponentProps> = ({ chapter, clips }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
   const firstClip = clips[0];
   const beat = clipRange(firstClip, chapter.startFrame, 0, chapter.durationInFrames);
-  const replaceCue = cueFrame(firstClip, "Replace", 42, chapter.startFrame);
-  const hookCue = cueFrame(firstClip, "hook", 60, chapter.startFrame);
-  const narrationCue = cueFrame(firstClip, "narration", 105, chapter.startFrame);
+  const replaceCue = cueFrame(firstClip, "Replace", 36, chapter.startFrame);
+  const hookCue = cueFrame(firstClip, "hook", 54, chapter.startFrame);
+  const narrationCue = cueFrame(firstClip, "narration", 96, chapter.startFrame);
 
-  const window = sceneWindow(frame, beat.start, beat.end, { keepAtEnd: true });
-  const statsProgress = progressBetween(frame, hookCue, hookCue + 36);
-  const noteOpacity = fadeIn(frame, narrationCue, 14);
+  const statsProgress = progressBetween(frame, hookCue, hookCue + 32);
+  const noteOpacity = fadeIn(frame, narrationCue, 10);
 
   return (
-    <Stage
-      chapterIndex="01"
-      chapterTitle={chapter.title}
-      tone="cyan"
-      legend={[
-        { label: "BUNDLED FONTS", tone: "cyan" },
-        { label: "SFX + MUSIC", tone: "amber" },
-        { label: "WHISPER SYNC", tone: "emerald" },
-      ]}
-    >
+    <Stage tone="cyan">
       <Sfx name="whoosh-soft" from={beat.start} volume={0.28} />
       <Sfx name="pop-in" from={hookCue} volume={0.32} />
       <Sfx name="chime-positive" from={narrationCue} volume={0.26} />
 
-      <SceneBeat window={window}>
-        <div style={slideUpStyle(frame, fps, beat.start, 28)}>
-          <SectionTitle
-            eyebrow="Opening Hook"
-            title={timeline.title}
-            subtitle={firstClip?.text ?? "Replace this opening hook with your core premise."}
-            tone="cyan"
-          />
-        </div>
+      <div style={{ display: "flex", flexDirection: "column", gap: 26 }}>
+        {/* Frame-0 instant hero focal visual (visible immediately at opacity 1) */}
+        <h1
+          style={{
+            margin: 0,
+            fontFamily: TOKENS.fonts.display,
+            fontSize: 68,
+            fontWeight: 700,
+            lineHeight: 1.04,
+            letterSpacing: "-0.03em",
+            color: TOKENS.colors.textPrimary,
+          }}
+        >
+          {timeline.title}
+        </h1>
 
-        <div style={slideUpStyle(frame, fps, replaceCue, 22)}>
+        <div style={popScaleStyle(frame, fps, replaceCue, 0.94)}>
           <Card
             tone="cyan"
             glow
-            padding={30}
+            padding={26}
             style={{
               display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: 24,
-              opacity: fadeIn(frame, replaceCue, 12),
+              flexDirection: "column",
+              gap: 14,
             }}
           >
-            <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
               <Pill tone="cyan" size="md">
-                KEY THESIS
+                WHISPER-SYNCED
               </Pill>
-              <span style={{ fontSize: 27, fontWeight: 700, color: TOKENS.colors.textPrimary }}>
-                Anchor every visual &amp; SFX cue to speech via{" "}
-                <span style={{ fontFamily: TOKENS.fonts.mono, color: TOKENS.colors.accent }}>
-                  cueFrame()
-                </span>
+              <span
+                style={{
+                  fontFamily: TOKENS.fonts.handwritten,
+                  fontSize: 34,
+                  fontWeight: 700,
+                  color: TOKENS.colors.accentWarm,
+                  opacity: noteOpacity,
+                }}
+              >
+                synced to speech!
               </span>
             </div>
-            <span
+            <div
               style={{
-                fontFamily: TOKENS.fonts.handwritten,
-                fontSize: 34,
+                fontSize: 28,
                 fontWeight: 700,
-                color: TOKENS.colors.accentWarm,
-                opacity: noteOpacity,
-                whiteSpace: "nowrap",
+                lineHeight: 1.3,
+                color: TOKENS.colors.textPrimary,
               }}
             >
-              ← synced to Whisper!
-            </span>
+              Anchor visuals &amp; SFX directly to spoken words via{" "}
+              <span style={{ fontFamily: TOKENS.fonts.mono, color: TOKENS.colors.accent }}>
+                cueFrame()
+              </span>
+            </div>
           </Card>
         </div>
 
+        {/* 2-column vertical-friendly stats */}
         <div
           style={{
-            marginTop: 26,
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 24,
-            ...slideUpStyle(frame, fps, hookCue, 24),
-            opacity: fadeIn(frame, hookCue, 14),
+            gridTemplateColumns: "repeat(2, 1fr)",
+            gap: 20,
+            ...slideUpStyle(frame, fps, hookCue, 20),
           }}
         >
           <StatCallout
-            label="Canvas & Fonts"
-            value="1080p"
-            detail="Space Grotesk, Inter, JetBrains Mono & Caveat"
+            label="Format"
+            value="9:16"
+            detail="1080×1920 Shorts safe zones"
             tone="cyan"
             glow
           />
@@ -126,12 +129,15 @@ export const HookChapter: React.FC<ChapterComponentProps> = ({ chapter, clips })
                 progress={statsProgress}
                 suffix=" clips"
                 tone="amber"
-                size={48}
+                size={42}
               />
             }
-            detail="Typed <Sfx /> helper + ambient music bed"
+            detail="Typed <Sfx /> + ambient bed"
             tone="amber"
           />
+        </div>
+
+        <div style={slideUpStyle(frame, fps, narrationCue, 18)}>
           <StatCallout
             label="Synced Timeline"
             value={
@@ -142,15 +148,15 @@ export const HookChapter: React.FC<ChapterComponentProps> = ({ chapter, clips })
                 decimals={1}
                 suffix="s"
                 tone="emerald"
-                size={48}
+                size={46}
               />
             }
-            detail="Voiceover MP3s, word timings & YouTube SRT"
+            detail="Voiceover MP3s, kinetic captions & YouTube SRT"
             tone="emerald"
             glow={frame >= narrationCue}
           />
         </div>
-      </SceneBeat>
+      </div>
     </Stage>
   );
 };

@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "slug": "remotion-youtube-template",
-  "title": "Remotion YouTube Template",
+  "slug": "remotion-youtube-shorts-template",
+  "title": "Remotion YouTube Shorts Template",
   "fps": 30,
-  "width": 1920,
-  "height": 1080,
+  "width": 1080,
+  "height": 1920,
   "audio": {
     "format": "mp3",
     "dir": "public/voiceover",
@@ -15,10 +15,10 @@
     "bitrate": "192k"
   },
   "timing": {
-    "defaultLeadSeconds": 0.3,
-    "defaultTailSeconds": 0.4,
-    "defaultMinSeconds": 2.0,
-    "chapterGapSeconds": 0.6
+    "defaultLeadSeconds": 0.08,
+    "defaultTailSeconds": 0.12,
+    "defaultMinSeconds": 1.0,
+    "chapterGapSeconds": 0.15
   },
   "chapters": [
     {

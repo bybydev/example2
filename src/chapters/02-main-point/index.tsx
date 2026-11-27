@@ -12,29 +12,32 @@ import {
   CheckRow,
   CodePanel,
   NodeBox,
-  SvgLink,
-  SvgPacket,
+  VerticalFlowConnector,
 } from "../../ui/diagrams";
 import type { CodeLine } from "../../ui/diagrams";
 import {
   DataChip,
   MeterBar,
   SceneBeat,
-  SectionTitle,
 } from "../../ui/primitives";
 import { Stage } from "../../ui/Stage";
 import type { ChapterComponentProps } from "../index";
 
+/**
+ * Starter demo chapter (`02-main-point`).
+ * NOTE FOR AI AGENTS: This is a minimal reference demo, NOT a rigid layout mold.
+ * Notice there is NO SectionTitle / eyebrow header here — jump straight into visuals
+ * and design each Short with its own custom visual language and storytelling rhythm.
+ */
 const SCRIPT_LINES: CodeLine[] = [
   { text: "# content/voiceover.md", tone: "neutral" },
-  { text: "" },
-  { text: "Welcome to this video. Replace this", tone: "cyan", highlight: true },
-  { text: "hook paragraph with your real narration.", tone: "cyan" },
+  { text: "Welcome to this video. Replace", tone: "cyan", highlight: true },
+  { text: "this hook with real narration.", tone: "cyan" },
   { text: "" },
   { text: "← blank line splits next clip", tone: "amber" },
   { text: "" },
-  { text: "Here is the second paragraph. Split", tone: "emerald", highlight: true },
-  { text: "your script into one paragraph per line.", tone: "emerald" },
+  { text: "Here is the second paragraph.", tone: "emerald", highlight: true },
+  { text: "One paragraph = one audio clip.", tone: "emerald" },
 ];
 
 export const MainPointChapter: React.FC<ChapterComponentProps> = ({ chapter, clips }) => {
@@ -43,29 +46,20 @@ export const MainPointChapter: React.FC<ChapterComponentProps> = ({ chapter, cli
 
   const firstClip = clips[0];
   const beat = clipRange(firstClip, chapter.startFrame, 0, chapter.durationInFrames);
-  const splitCue = cueFrame(firstClip, "Split", 58, chapter.startFrame);
-  const mapsCue = cueFrame(firstClip, "maps", 160, chapter.startFrame);
-  const voiceoverCue = cueFrame(firstClip, "voiceover", 185, chapter.startFrame);
-  const whisperCue = cueFrame(firstClip, "Whisper", 220, chapter.startFrame);
+  const splitCue = cueFrame(firstClip, "Split", 50, chapter.startFrame);
+  const mapsCue = cueFrame(firstClip, "maps", 150, chapter.startFrame);
+  const voiceoverCue = cueFrame(firstClip, "voiceover", 175, chapter.startFrame);
+  const whisperCue = cueFrame(firstClip, "Whisper", 210, chapter.startFrame);
 
   const window = sceneWindow(frame, beat.start, beat.end, { keepAtEnd: true });
-  const codeReveal = progressBetween(frame, beat.start + 10, splitCue + 55);
-  const linkProgress = progressBetween(frame, mapsCue, mapsCue + 24);
-  const audioPacket = progressBetween(frame, voiceoverCue, voiceoverCue + 28);
-  const timingPacket = progressBetween(frame, whisperCue, whisperCue + 28);
-  const alignmentPercent = 100 * progressBetween(frame, whisperCue, whisperCue + 36);
+  const codeReveal = progressBetween(frame, beat.start + 6, splitCue + 45);
+  const linkProgress = progressBetween(frame, mapsCue, mapsCue + 20);
+  const audioPacket = progressBetween(frame, voiceoverCue, voiceoverCue + 24);
+  const timingPacket = progressBetween(frame, whisperCue, whisperCue + 24);
+  const alignmentPercent = 100 * progressBetween(frame, whisperCue, whisperCue + 30);
 
   return (
-    <Stage
-      chapterIndex="02"
-      chapterTitle={chapter.title}
-      tone="amber"
-      legend={[
-        { label: "SCRIPT", tone: "cyan" },
-        { label: "VOICEOVER MP3", tone: "amber" },
-        { label: "WHISPER + SRT", tone: "emerald" },
-      ]}
-    >
+    <Stage tone="amber">
       <Sfx name="whoosh-fast" from={beat.start} volume={0.25} />
       <Sfx name="slide" from={splitCue} volume={0.24} />
       <Sfx name="magnetic-snap" from={mapsCue} volume={0.3} />
@@ -73,129 +67,95 @@ export const MainPointChapter: React.FC<ChapterComponentProps> = ({ chapter, cli
       <Sfx name="success-ding" from={whisperCue} volume={0.28} />
 
       <SceneBeat window={window}>
-        <SectionTitle
-          eyebrow="Sync Pipeline"
-          title="One Paragraph → Audio + Word Timings"
-          subtitle={
-            firstClip?.text ??
-            "Split your script into one paragraph per blank line to generate voiceover clips and Whisper timings."
-          }
-          tone="amber"
+        {/* Visual-first vertical flow: no repetitive title/eyebrow banner */}
+        <div style={slideUpStyle(frame, fps, beat.start + 4, 20)}>
+          <CodePanel
+            title="content/voiceover.md"
+            badge="2 PARAGRAPHS"
+            tone="cyan"
+            lines={SCRIPT_LINES}
+            revealProgress={codeReveal}
+            fontSize={20}
+          />
+        </div>
+
+        {/* Top-to-bottom animated connectors & packets */}
+        <VerticalFlowConnector
+          width={860}
+          height={108}
+          fromX={430}
+          branches={[
+            {
+              toX: 210,
+              tone: "amber",
+              linkProgress,
+              packetProgress: audioPacket,
+              packetLabel: "MP3",
+            },
+            {
+              toX: 650,
+              tone: "emerald",
+              linkProgress,
+              packetProgress: timingPacket,
+              packetLabel: "JSON",
+            },
+          ]}
         />
 
+        {/* 2-column vertical-friendly outputs */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1.05fr 140px 1fr",
-            alignItems: "center",
+            gridTemplateColumns: "repeat(2, 1fr)",
+            gap: 18,
           }}
         >
-          {/* Left: Source voiceover script */}
-          <div style={slideUpStyle(frame, fps, beat.start + 6, 22)}>
-            <CodePanel
-              title="content/voiceover.md"
-              badge="2 PARAGRAPHS"
-              tone="cyan"
-              lines={SCRIPT_LINES}
-              revealProgress={codeReveal}
-              fontSize={18}
-            />
+          <div style={slideUpStyle(frame, fps, splitCue, 18)}>
+            <NodeBox
+              tag="VOICEOVER"
+              title="voiceover/*.mp3"
+              subtitle="Normalized -14 LUFS clips"
+              tone="amber"
+              glow={frame >= voiceoverCue}
+              compact
+            >
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 12 }}>
+                <DataChip label="001.mp3" sublabel="4.3s" tone="amber" />
+                <DataChip label="002.mp3" sublabel="9.1s" tone="amber" />
+              </div>
+            </NodeBox>
           </div>
 
-          {/* Center: Animated SVG connectors & packets */}
-          <svg
-            width={140}
-            height={320}
-            viewBox="0 0 140 320"
-            style={{ overflow: "visible" }}
-          >
-            <SvgLink
-              x1={8}
-              y1={148}
-              x2={132}
-              y2={76}
-              progress={linkProgress}
-              tone="amber"
-              arrow
-            />
-            <SvgLink
-              x1={8}
-              y1={172}
-              x2={132}
-              y2={244}
-              progress={linkProgress}
+          <div style={slideUpStyle(frame, fps, mapsCue, 18)}>
+            <NodeBox
+              tag="TIMINGS"
+              title="timings/*.json"
+              subtitle="Exact word frames"
               tone="emerald"
-              arrow
-            />
-            <SvgPacket
-              x1={8}
-              y1={148}
-              x2={132}
-              y2={76}
-              progress={audioPacket}
-              tone="amber"
-              label="MP3"
-            />
-            <SvgPacket
-              x1={8}
-              y1={172}
-              x2={132}
-              y2={244}
-              progress={timingPacket}
-              tone="emerald"
-              label="JSON"
-            />
-          </svg>
-
-          {/* Right: Generated audio & timing outputs */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-            <div style={slideUpStyle(frame, fps, splitCue, 20)}>
-              <NodeBox
-                tag="VOICEOVER CLIPS"
-                title="public/voiceover/*.mp3"
-                subtitle="Normalized narration clips sequenced by VoiceoverTrack"
-                tone="amber"
-                glow={frame >= voiceoverCue}
-                compact
-              >
-                <div style={{ display: "flex", gap: 10, marginTop: 12 }}>
-                  <DataChip label="001.mp3" sublabel="4.3s" tone="amber" />
-                  <DataChip label="002.mp3" sublabel="9.1s" tone="amber" />
-                </div>
-              </NodeBox>
-            </div>
-
-            <div style={slideUpStyle(frame, fps, mapsCue, 20)}>
-              <NodeBox
-                tag="WHISPER SIDECARS"
-                title="content/timings/*.json"
-                subtitle="Exact word frames compiled into src/generated/timeline.json"
-                tone="emerald"
-                glow={frame >= whisperCue}
-                compact
-              >
-                <div style={{ marginTop: 12 }}>
-                  <MeterBar
-                    label="Word alignment"
-                    percent={alignmentPercent}
-                    tone="emerald"
-                    height={18}
-                  />
-                </div>
-              </NodeBox>
-            </div>
+              glow={frame >= whisperCue}
+              compact
+            >
+              <div style={{ marginTop: 12 }}>
+                <MeterBar
+                  label="Alignment"
+                  percent={alignmentPercent}
+                  tone="emerald"
+                  height={16}
+                />
+              </div>
+            </NodeBox>
           </div>
         </div>
 
         <div
           style={{
-            marginTop: 22,
-            ...slideUpStyle(frame, fps, mapsCue, 16),
+            marginTop: 20,
+            ...slideUpStyle(frame, fps, mapsCue, 14),
           }}
         >
           <CheckRow
-            label="content/subtitles.srt & content/youtube-chapters.txt"
-            detail="Auto-generated by mycli remotion sync and uploaded by GitHub Actions"
+            label="subtitles.srt & timeline.json"
+            detail="Auto-generated by mycli remotion sync"
             status={frame >= whisperCue ? "SYNCED" : "GENERATING"}
             tone="emerald"
             active={frame >= whisperCue}

@@ -25,8 +25,16 @@ export const TOKENS = {
     handwritten: "Caveat, cursive",
   },
   layout: {
-    safeMarginX: 120,
-    safeMarginY: 80,
+    // 1080x1920 YouTube Shorts asymmetric safe zones (clears top bar, right action rail, and bottom title/CTA overlay)
+    safeTop: 220,
+    safeBottom: 440,
+    safeLeft: 72,
+    safeRight: 148,
+    captionBottom: 452,
+    captionReserve: 200,
+    // Legacy aliases kept for convenience
+    safeMarginX: 72,
+    safeMarginY: 220,
   },
 } as const;
 

@@ -1,38 +1,34 @@
-# YouTube Publish Metadata
+# YouTube Shorts Publish Metadata
 
-## Recommended Title
-**<Primary Video Title>**
+## Recommended Title *(keep ≤ 60 characters for mobile display)*
+**<Punchy Short Title>**
 
 ### Alternative A/B Title Ideas
 - <Alternative angle 1 — curiosity / paradox>
-- <Alternative angle 2 — concrete metric or comparison>
-- <Alternative angle 3 — outcome / developer takeaway>
+- <Alternative angle 2 — concrete metric or contrast>
+- <Alternative angle 3 — direct outcome / takeaway>
 
 ---
 
-## Thumbnail (`src/Thumbnail.tsx` → `out/thumbnail.png`, 1280×720)
-- **Visual hook:** `<3–5 bold words>` paired with a high-contrast focal visual on the right.
-- **Safe zone:** Keep the bottom-right corner clear for YouTube's video duration badge.
+## Related Long-Form Video *(set in YouTube Studio → Related video)*
+- **Linked Video:** `<Title + URL of full video, or N/A if standalone>`
+
+---
+
+## Cover & Frame-0 Check (`src/Thumbnail.tsx` → `out/thumbnail.png`, 1080×1920)
+- **Frame-picker target:** Verify Frame `0–15` of `Main` is bold, unobstructed, and readable as a freeze-frame in the Shorts feed.
+- **Vertical cover still:** `out/thumbnail.png` (`1080×1920`, centered for both `9:16` shelves and `3:4`/square crops).
 
 ---
 
 ## Description (Copy-Paste Ready)
 
 ```text
-<Opening 1–2 hook sentences that reinforce the title and click promise.>
+<1–2 punchy lines reinforcing the hook and core takeaway.>
 
-<Brief 2–3 sentence summary of what the video breaks down and why it matters.>
+<Optional link/pointer to the full deep-dive video.>
 
-Chapters:
-00:00 Hook
-00:06 Main Point
-
-Key Takeaways:
-• <Takeaway 1>
-• <Takeaway 2>
-• <Takeaway 3>
-
-#TagOne #TagTwo #TagThree
+#shorts #TopicTagOne #TopicTagTwo
 ```
 
 ---
@@ -46,10 +42,10 @@ keyword one,keyword two,keyword three
 ---
 
 ## Publishing Settings & Checklist
+- **Format:** Vertical `9:16` (`1080×1920`), duration `<= 60s` target (`<= 180s` max)
 - **Category:** Science & Technology
 - **Language:** English
-- **Captions:** Upload `content/subtitles.srt` generated via `mycli` (in-video `CaptionsOverlay` is disabled by default)
-- **Chapters:** Copy timestamps from `content/youtube-chapters.txt` into the Description above
+- **Captions:** Burned-in kinetic captions enabled in video + upload `content/subtitles.srt` for YouTube CC
+- **Related Video:** Attach the corresponding long-form video in YouTube Studio (if applicable)
 - **Pinned Comment Idea:**
-  > <Engaging question tied to the video's topic to spark discussion in the comments.>
-- **End Screen:** Reserve clean visual space in the closing chapter for YouTube end-screen elements.
+  > <Short, engaging question or link to the full deep dive to spark discussion.>

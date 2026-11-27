@@ -1,22 +1,22 @@
 1
-00:00:00,300 --> 00:00:01,267
+00:00:00,067 --> 00:00:01,033
 Welcome to this video.
 
 2
-00:00:01,500 --> 00:00:03,967
+00:00:01,267 --> 00:00:03,733
 Replace this hook paragraph with
 your real opening narration.
 
 3
-00:00:05,867 --> 00:00:06,867
+00:00:04,667 --> 00:00:05,667
 Here is the second paragraph.
 
 4
-00:00:07,600 --> 00:00:11,900
+00:00:06,400 --> 00:00:10,700
 Split your script into one paragraph per
 blank line so each paragraph maps to one
 
 5
-00:00:11,900 --> 00:00:14,233
+00:00:10,700 --> 00:00:13,033
 voiceover clip and one
 Whisper timing sidecar.

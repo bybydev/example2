@@ -1,43 +1,50 @@
-# Storyboard — <Video Title>
+# Storyboard — <Short Title>
 
-- **Target length:** ~6–8 minutes (~1,000–1,300 words across chapters)
-- **Audience:** <Define your target viewer and depth>
-- **Canvas & visual system (`src/theme/tokens.ts`):** 1920×1080, 30 fps, safe margins `120px` X / `80px` Y
+> **Creative Note:** This template provides a shared visual palette, fonts, SFX, and Shorts safe-zone helpers — **do not blindly copy the starter demo's card/grid layout**. Define a bespoke visual style, motion language, and beat structure tailored to this specific Short's topic, and avoid stamping a chapter header, eyebrow, or title/subtitle onto every frame.
+
+- **Target length:** ~30–60 seconds (~75–150 words; hard YouTube Shorts cap 180s)
+- **Audience & Hook Angle:** <Define the viewer and the single surprising premise or takeaway>
+- **Related Long-Form Video (optional):** <Link or title of the full video if this Short drives to a deep dive>
+- **Canvas & Shorts safe zones (`src/theme/tokens.ts`):** `1080×1920` (`9:16`), `30 fps`
+  - Safe zones: `safeTop: 220px` | `safeBottom: 440px` | `safeLeft: 72px` | `safeRight: 148px` | `captionReserve: 200px`
   - Background: `#0B1020` | Surface cards: `#141B30` | Subtle border: `rgba(255,255,255,0.12)`
-  - **Semantic color coding (keep consistent across every chapter):**
-    - **Cyan (`#38BDF8`)** — Primary concept, baseline, parallel/efficient path
-    - **Amber (`#F59E0B`)** — Contrasting concept, trade-off, cost/latency pressure
-    - **Emerald (`#34D399`)** — Optimizations, wins, takeaways, positive outcomes
+  - **Semantic color coding (adapt per video, keep consistent within the Short):**
+    - **Cyan (`#38BDF8`)** — Primary concept, baseline, efficient path
+    - **Amber (`#F59E0B`)** — Contrast, trade-off, tension, cost/latency pressure
+    - **Emerald (`#34D399`)** — Payoff, win, optimization, resolution
     - **Rose (`#FB7185`)** — Bottlenecks, failure modes, hard ceilings, warnings
-  - Typography (`public/fonts/`, `src/theme/fonts.ts`): `Space Grotesk` (`display`) for titles & thumbnails, `Inter` (`sans`) for body & captions, `JetBrains Mono` (`mono`) for code, badges, and counters, `Caveat` (`handwritten`) for callout annotations.
-  - Audio (`src/lib/audio.tsx`): `VoiceoverTrack` (`public/voiceover/*.mp3`), `<BackgroundMusic />` (`public/music/bg-ambient.mp3`, `volume={0.08}`), and typed `<Sfx />` cues (`public/sfx/*.mp3`).
-- **Animation rule:** Anchor all key transitions and SFX cues to spoken words via `cueFrame()` / `wordFrame()` (`src/ui/motion.ts`, `src/lib/timeline.ts`) rather than hardcoded frame offsets.
+  - Typography (`public/fonts/`, `src/theme/fonts.ts`): `Space Grotesk` (`display`), `Inter` (`sans`), `JetBrains Mono` (`mono`), `Caveat` (`handwritten`).
+  - Captions & Audio: Burned-in kinetic `CaptionsOverlay` is **ON by default** in the lower-middle caption band; `VoiceoverTrack` (`public/voiceover/*.mp3`), `<BackgroundMusic />` (`volume={0.08}`), and `<Sfx />` cues (`public/sfx/*.mp3`).
+- **Visual & Pacing Rules:**
+  - **Frame 0 must hook immediately** (no fade-from-black; readable as a Shorts frame-picker freeze-frame).
+  - **Headerless by default (`showHeader={false}`):** skip repetitive eyebrows/titles on every beat — let visuals, custom SVGs, diagrams, and kinetic captions carry the story.
+  - Anchor all key transitions and `<Sfx>` cues to spoken words via `cueFrame()` / `wordFrame()`.
 
 ---
 
-## Chapter 01 — Hook (`01-hook`, paragraphs: 1)
+## Starter Demo Breakdown *(replace completely for each new Short)*
 
-**Goal:** Open with a concrete hook or paradox, frame the core question, and establish the video's thesis.
+### Chapter 01 — Hook (`01-hook`, paragraphs: 1)
+
+**Goal:** Deliver an immediate visual hook on frame 0 without wasting vertical space on repetitive headers.
 
 - **Paragraph 1 — Opening Hook:**
-  - **Beat:** State the hook and showcase bundled fonts, SFX, music, and synced Whisper timing.
-  - **Visuals:** `SectionTitle` + glowing thesis `Card` with handwritten `Caveat` note + 3-column `StatCallout` & `AnimatedNumber` strip.
-  - **Motion & `cueFrame` cues:** On `"Replace"` → slide in thesis banner; on `"hook"` → `pop-in` SFX + stat cards; on `"narration"` → `chime-positive` SFX + handwritten annotation.
+  - **Visuals:** Instant frame-0 hero headline + glowing thesis callout with `Caveat` annotation + 2-column vertical stats above the caption band.
+  - **Motion & `cueFrame` cues:** On `"Replace"` → pop in thesis card; on `"hook"` → `pop-in` SFX + 2-column stats; on `"narration"` → `chime-positive` SFX + synced duration card.
 
 ---
 
-## Chapter 02 — Main Point (`02-main-point`, paragraphs: 2)
+### Chapter 02 — Main Point (`02-main-point`, paragraphs: 2)
 
-**Goal:** Illustrate the script-to-timeline sync pipeline visually using diagrams and SFX.
+**Goal:** Demonstrate a purely visual beat (no title or eyebrow header) using a top-to-bottom vertical pipeline diagram.
 
 - **Paragraph 2 — Sync Pipeline:**
-  - **Beat:** Show `content/voiceover.md` splitting into `public/voiceover/*.mp3` and `content/timings/*.json` (+ `content/subtitles.srt`).
-  - **Visuals:** 3-column diagram (`CodePanel` → `SvgLink` + `SvgPacket` → stacked `NodeBox`es with `DataChip` & `MeterBar`) + bottom `CheckRow` for `content/subtitles.srt`.
-  - **Motion & `cueFrame` cues:** On `"Split"` → `slide` SFX + reveal `CodePanel`; on `"maps"` → `magnetic-snap` SFX + draw `SvgLink` connectors; on `"voiceover"` → `data-blip` SFX + `MP3` packet; on `"Whisper"` → `success-ding` SFX + `JSON` packet + `MeterBar` to 100% + `CheckRow` active.
+  - **Visuals:** `CodePanel` (`content/voiceover.md`) → `VerticalFlowConnector` (`MP3` & `JSON` packets) → 2-column `NodeBox` outputs (`voiceover/*.mp3`, `timings/*.json`) → compact `CheckRow`.
+  - **Motion & `cueFrame` cues:** On `"Split"` → `slide` SFX + reveal code; on `"maps"` → `magnetic-snap` SFX + draw vertical connectors; on `"voiceover"` → `data-blip` SFX + `MP3` packet; on `"Whisper"` → `success-ding` SFX + `JSON` packet + `MeterBar` to 100%.
 
 ---
 
-## Outro & End-Screen Notes (when adding your final chapter)
+## Closing Beat / Loop Notes (when adding your final chapter)
 
-- Mirror the opening contrast in one clean synthesis card so viewers leave with a single mental model.
-- Reserve clean visual space in the final ~15–20 seconds for YouTube end-screen cards.
+- End on a single visual payoff or seamless loop back to the opening hook — avoid long fade-outs.
+- If linking to a full-length video, optionally show a brief `RelatedVideoCTA` card pointing down toward YouTube Shorts' native Related Video link button at the bottom of the screen.
