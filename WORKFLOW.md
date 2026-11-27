@@ -10,7 +10,7 @@ Follow Steps 1 → 8 in order. Both human and AI can check off items (`- [x]`) a
 - [x] **Step 2:** Configure video (`video.config.json`) & write narration script (`content/voiceover.md`) — *Both*
 - [x] **Step 3:** Sync voiceover, Whisper timings, timeline & SRT (`mycli remotion sync`) — *Both (AI must ask permission first)*
 - [x] **Step 4:** Implement chapter visuals, diagrams & SFX (`src/chapters/`) — *AI (Human review)*
-- [ ] **Step 5:** Design YouTube thumbnail (`src/Thumbnail.tsx`) — *Both*
+- [x] **Step 5:** Design YouTube thumbnail (`src/Thumbnail.tsx`) — *Both*
 - [ ] **Step 6:** Finalize YouTube publishing metadata (`content/youtube-metadata.md`) — *Both*
 - [ ] **Step 7:** Run preflight health check (`mycli remotion doctor`) — *Both*
 - [ ] **Step 8:** Commit, push, render in GitHub Actions, QA & publish — *Human*
@@ -87,8 +87,8 @@ Follow Steps 1 → 8 in order. Both human and AI can check off items (`- [x]`) a
 - **Input:** Video title, visual hook concept, `src/theme/tokens.ts`.
 - **Output:** Updated `src/Thumbnail.tsx`.
 - **Pass condition:**
-  - [ ] Headline is readable at small mobile sizes and matches the video's semantic palette.
-  - [ ] Bottom-right timestamp zone is unobstructed.
+  - [x] Headline is readable at small mobile sizes and matches the video's semantic palette.
+  - [x] Bottom-right timestamp zone is unobstructed.
 
 ### Step 6 — Finalize YouTube Publishing Metadata
 - **Owner:** Both (AI + Human)
