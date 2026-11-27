@@ -9,7 +9,7 @@ Follow Steps 1 → 8 in order. Both human and AI can check off items (`- [x]`) a
 - [x] **Step 1:** Plan & write storyboard (`content/storyboard.md`) — *Both (AI must wait for human approval before Step 2)*
 - [x] **Step 2:** Configure video (`video.config.json`) & write narration script (`content/voiceover.md`) — *Both*
 - [x] **Step 3:** Sync voiceover, Whisper timings, timeline & SRT (`mycli remotion sync`) — *Both (AI must ask permission first)*
-- [ ] **Step 4:** Implement chapter visuals, diagrams & SFX (`src/chapters/`) — *AI (Human review)*
+- [x] **Step 4:** Implement chapter visuals, diagrams & SFX (`src/chapters/`) — *AI (Human review)*
 - [ ] **Step 5:** Design YouTube thumbnail (`src/Thumbnail.tsx`) — *Both*
 - [ ] **Step 6:** Finalize YouTube publishing metadata (`content/youtube-metadata.md`) — *Both*
 - [ ] **Step 7:** Run preflight health check (`mycli remotion doctor`) — *Both*
@@ -75,9 +75,9 @@ Follow Steps 1 → 8 in order. Both human and AI can check off items (`- [x]`) a
 - **Input:** `content/storyboard.md`, `src/generated/timeline.json`, `public/sfx/README.md`, `public/fonts/README.md`.
 - **Output:** Implemented `src/chapters/<id>/index.tsx` files and updated `src/chapters/index.ts` (plus `src/Video.tsx` / `src/Root.tsx` if adjusting `musicVolume` or `showCaptions`).
 - **Pass condition:**
-  - [ ] Every chapter in `video.config.json` is mapped in `src/chapters/index.ts`.
-  - [ ] Key animations and `<Sfx>` triggers are anchored via `cueFrame()`/`wordFrame()` (not arbitrary magic frames).
-  - [ ] All referenced SFX/asset paths exist in `public/`, and layouts fit within `1920×1080` safe margins (`120px` X / `80px` Y).
+  - [x] Every chapter in `video.config.json` is mapped in `src/chapters/index.ts`.
+  - [x] Key animations and `<Sfx>` triggers are anchored via `cueFrame()`/`wordFrame()` (not arbitrary magic frames).
+  - [x] All referenced SFX/asset paths exist in `public/`, and layouts fit within `1920×1080` safe margins (`120px` X / `80px` Y).
 
 ### Step 5 — Design YouTube Thumbnail
 - **Owner:** Both (AI + Human)
