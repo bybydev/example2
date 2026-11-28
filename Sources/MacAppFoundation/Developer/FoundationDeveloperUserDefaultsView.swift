@@ -153,11 +153,6 @@ enum FoundationDeveloperUserDefaultsCodec {
             return value
         }
     }
-
-    static func emptyPropertyList(for type: FoundationDeveloperUserDefaultsValueType) -> String {
-        let value: Any = type == .array ? [Any]() : [String: Any]()
-        return propertyListText(value) ?? ""
-    }
 }
 
 enum FoundationDeveloperUserDefaultsError: LocalizedError {
@@ -231,12 +226,17 @@ final class FoundationDeveloperUserDefaultsModel: ObservableObject {
     }
 }
 
-private struct FoundationDeveloperUserDefaultsEditorContext: Identifiable {
-    let id = UUID()
-    let row: FoundationDeveloperUserDefaultRow?
+private enum UserDefaultsScope: String, CaseIterable, Identifiable {
+    case stored
+    case all
+
+    var id: String { rawValue }
 
     var title: String {
-        row == nil ? "Add User Default" : "Edit User Default"
+        switch self {
+        case .stored: "App Stored"
+        case .all: "All Effective"
+        }
     }
 }
 
@@ -245,8 +245,8 @@ struct FoundationDeveloperUserDefaultsView: View {
     @Environment(\.macAppTheme) private var theme
 
     @StateObject private var model: FoundationDeveloperUserDefaultsModel
+    @State private var scope: UserDefaultsScope = .stored
     @State private var searchText = ""
-    @State private var editor: FoundationDeveloperUserDefaultsEditorContext?
     @State private var pendingDelete: FoundationDeveloperUserDefaultRow?
     @State private var resetConfirmationPresented = false
     @State private var statusMessage: String?
@@ -266,15 +266,14 @@ struct FoundationDeveloperUserDefaultsView: View {
     var body: some View {
         List {
             Section("Domain") {
-                LabeledContent(
-                    "Persistent domain",
-                    value: model.domainName ?? "Unavailable"
-                )
-                LabeledContent("Visible values", value: "\(model.rows.count)")
-                LabeledContent(
-                    "Stored values",
-                    value: "\(model.rows.filter(\.isPersistent).count)"
-                )
+                LabeledContent("Persistent domain", value: model.domainName ?? "Unavailable")
+                LabeledContent("Stored values", value: "\(model.rows.filter(\.isPersistent).count)")
+                Picker("Show", selection: $scope) {
+                    ForEach(UserDefaultsScope.allCases) { option in
+                        Text(option.title).tag(option)
+                    }
+                }
+                .pickerStyle(.segmented)
             }
 
             Section {
@@ -284,7 +283,7 @@ struct FoundationDeveloperUserDefaultsView: View {
                         systemImage: "slider.horizontal.3",
                         description: Text(
                             searchText.isEmpty
-                                ? "This app currently has no supported UserDefaults values."
+                                ? "No keys in this scope."
                                 : "No keys or values match your search."
                         )
                     )
@@ -301,12 +300,9 @@ struct FoundationDeveloperUserDefaultsView: View {
                         .font(.caption)
                         .foregroundStyle(theme.textMuted)
                 }
-            } footer: {
-                Text("Stored values live in the app's persistent domain. Effective-only values come from registration or another UserDefaults search domain; editing one creates an app-domain override.")
-                    .foregroundStyle(theme.textSecondary)
             }
 
-            Section("Developer Actions") {
+            Section("Actions") {
                 Button("Reset App UserDefaults", systemImage: "trash", role: .destructive) {
                     resetConfirmationPresented = true
                 }
@@ -324,14 +320,7 @@ struct FoundationDeveloperUserDefaultsView: View {
         .background(theme.canvas)
         .searchable(text: $searchText, prompt: "Search keys or values")
         .toolbar {
-            ToolbarItemGroup(placement: .primaryAction) {
-                Button {
-                    editor = FoundationDeveloperUserDefaultsEditorContext(row: nil)
-                } label: {
-                    Label("Add", systemImage: "plus")
-                }
-                .help("Add a UserDefaults value")
-
+            ToolbarItem(placement: .primaryAction) {
                 Button {
                     model.refresh()
                     statusMessage = "UserDefaults refreshed."
@@ -339,14 +328,6 @@ struct FoundationDeveloperUserDefaultsView: View {
                     Label("Refresh", systemImage: "arrow.clockwise")
                 }
                 .help("Refresh UserDefaults")
-            }
-        }
-        .sheet(item: $editor) { context in
-            FoundationDeveloperUserDefaultsEditorSheet(
-                context: context
-            ) { key, value in
-                model.set(value, forKey: key)
-                statusMessage = "Saved \(key)."
             }
         }
         .confirmationDialog(
@@ -359,18 +340,14 @@ struct FoundationDeveloperUserDefaultsView: View {
         ) { row in
             Button("Delete \(row.key)", role: .destructive) {
                 model.removeValue(forKey: row.key)
-                statusMessage = "Deleted stored value for \(row.key)."
+                statusMessage = "Removed \(row.key)."
                 pendingDelete = nil
             }
             Button("Cancel", role: .cancel) {
                 pendingDelete = nil
             }
         } message: { row in
-            Text(
-                row.isPersistent
-                    ? "The app-domain value will be removed. A registered or inherited fallback may become visible afterward."
-                    : "This value is not stored in the app domain, so there is no persistent value to delete."
-            )
+            Text("Removes \(row.key) from the app's persistent domain.")
         }
         .confirmationDialog(
             "Reset App UserDefaults?",
@@ -378,317 +355,88 @@ struct FoundationDeveloperUserDefaultsView: View {
         ) {
             Button("Reset App UserDefaults", role: .destructive) {
                 model.resetPersistentDomain()
-                statusMessage = "App UserDefaults domain reset."
+                statusMessage = "App UserDefaults reset."
             }
             Button("Cancel", role: .cancel) {}
         } message: {
-            Text("This removes every value stored in the app's persistent UserDefaults domain. Registered or inherited defaults may remain visible.")
-        }
-        .task {
-            while !Task.isCancelled {
-                try? await Task.sleep(for: .seconds(1))
-                model.refresh()
-            }
+            Text("Removes every stored value in the app's persistent UserDefaults domain.")
         }
     }
 
     private var filteredRows: [FoundationDeveloperUserDefaultRow] {
+        let scoped = scope == .stored ? model.rows.filter(\.isPersistent) : model.rows
         let query = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !query.isEmpty else { return model.rows }
-        return model.rows.filter {
+        guard !query.isEmpty else { return scoped }
+
+        return scoped.filter {
             $0.key.localizedCaseInsensitiveContains(query)
                 || $0.displayValue.localizedCaseInsensitiveContains(query)
-                || $0.type.title.localizedCaseInsensitiveContains(query)
         }
     }
 
     private func userDefaultRow(_ row: FoundationDeveloperUserDefaultRow) -> some View {
-        Button {
-            editor = FoundationDeveloperUserDefaultsEditorContext(row: row)
-        } label: {
-            HStack(alignment: .top, spacing: 12) {
-                Image(systemName: row.type.systemImage)
-                    .foregroundStyle(theme.accent)
-                    .frame(width: 18)
-
-                VStack(alignment: .leading, spacing: 4) {
+        HStack(alignment: .center, spacing: 10) {
+            VStack(alignment: .leading, spacing: 3) {
+                HStack(spacing: 6) {
                     Text(row.key)
-                        .font(.body.monospaced())
-                        .foregroundStyle(theme.textPrimary)
+                        .font(.callout.monospaced())
                         .textSelection(.enabled)
 
+                    Text(row.type.title)
+                        .font(.caption2)
+                        .foregroundStyle(theme.textMuted)
+                }
+
+                if row.type != .bool {
                     Text(row.displayValue)
                         .font(.caption.monospaced())
                         .foregroundStyle(theme.textSecondary)
                         .lineLimit(2)
                         .textSelection(.enabled)
                 }
-
-                Spacer(minLength: 12)
-
-                VStack(alignment: .trailing, spacing: 4) {
-                    Text(row.type.title)
-                        .font(.caption)
-                        .foregroundStyle(theme.textSecondary)
-
-                    Text(row.isPersistent ? "Stored" : "Effective")
-                        .font(.caption2.weight(.semibold))
-                        .foregroundStyle(row.isPersistent ? theme.success : theme.textMuted)
-                }
-            }
-            .padding(.vertical, 3)
-            .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
-        .contextMenu {
-            Button("Copy Key") {
-                copyToPasteboard(row.key)
             }
 
-            Button("Copy Value") {
-                copyToPasteboard(
-                    FoundationDeveloperUserDefaultsCodec.copyValue(row.value)
+            Spacer(minLength: 8)
+
+            if row.type == .bool {
+                Toggle(
+                    "",
+                    isOn: Binding(
+                        get: { (row.value as? NSNumber)?.boolValue == true },
+                        set: { newValue in
+                            model.set(newValue, forKey: row.key)
+                            statusMessage = "Updated \(row.key)."
+                        }
+                    )
                 )
+                .labelsHidden()
+                .toggleStyle(.switch)
+                .controlSize(.small)
             }
 
-            Divider()
-
-            Button("Edit") {
-                editor = FoundationDeveloperUserDefaultsEditorContext(row: row)
+            Button {
+                let text = FoundationDeveloperUserDefaultsCodec.copyValue(row.value)
+                let pasteboard = NSPasteboard.general
+                pasteboard.clearContents()
+                pasteboard.setString(text, forType: .string)
+                statusMessage = "Copied \(row.key)."
+            } label: {
+                Image(systemName: "doc.on.doc")
             }
+            .buttonStyle(.borderless)
+            .help("Copy value")
 
             if row.isPersistent {
-                Button("Delete", role: .destructive) {
+                Button(role: .destructive) {
                     pendingDelete = row
+                } label: {
+                    Image(systemName: "trash")
                 }
+                .buttonStyle(.borderless)
+                .help("Delete key")
             }
         }
-    }
-
-    private func copyToPasteboard(_ text: String) {
-        let pasteboard = NSPasteboard.general
-        pasteboard.clearContents()
-        pasteboard.setString(text, forType: .string)
-        statusMessage = "Copied."
-    }
-}
-
-@MainActor
-private struct FoundationDeveloperUserDefaultsEditorSheet: View {
-    @Environment(\.dismiss) private var dismiss
-    @Environment(\.macAppTheme) private var theme
-
-    private let originalRow: FoundationDeveloperUserDefaultRow?
-    private let onSave: (String, Any) -> Void
-
-    @State private var key: String
-    @State private var type: FoundationDeveloperUserDefaultsValueType
-    @State private var stringValue: String
-    @State private var boolValue: Bool
-    @State private var integerValue: String
-    @State private var doubleValue: String
-    @State private var dateValue: Date
-    @State private var dataValue: String
-    @State private var propertyListValue: String
-
-    init(
-        context: FoundationDeveloperUserDefaultsEditorContext,
-        onSave: @escaping (String, Any) -> Void
-    ) {
-        let row = context.row
-        originalRow = row
-        self.onSave = onSave
-
-        let initialType = row?.type ?? .string
-        _key = State(initialValue: row?.key ?? "")
-        _type = State(initialValue: initialType)
-        _stringValue = State(initialValue: row?.value as? String ?? "")
-        _boolValue = State(initialValue: (row?.value as? NSNumber)?.boolValue ?? false)
-        _integerValue = State(
-            initialValue: row.map {
-                String(($0.value as? NSNumber)?.int64Value ?? 0)
-            } ?? "0"
-        )
-        _doubleValue = State(
-            initialValue: row.map {
-                String(($0.value as? NSNumber)?.doubleValue ?? 0)
-            } ?? "0"
-        )
-        _dateValue = State(initialValue: row?.value as? Date ?? .now)
-        _dataValue = State(
-            initialValue: (row?.value as? Data)?.base64EncodedString() ?? ""
-        )
-        _propertyListValue = State(
-            initialValue: row.flatMap {
-                FoundationDeveloperUserDefaultsCodec.propertyListText($0.value)
-            } ?? FoundationDeveloperUserDefaultsCodec.emptyPropertyList(for: initialType)
-        )
-    }
-
-    var body: some View {
-        NavigationStack {
-            Form {
-                Section("Key") {
-                    TextField("Key", text: $key)
-                        .disabled(originalRow != nil)
-
-                    if let originalRow {
-                        LabeledContent(
-                            "Source",
-                            value: originalRow.isPersistent ? "Stored" : "Effective only"
-                        )
-                    }
-                }
-
-                Section("Value") {
-                    Picker("Type", selection: $type) {
-                        ForEach(FoundationDeveloperUserDefaultsValueType.allCases) { type in
-                            Text(type.title).tag(type)
-                        }
-                    }
-                    .onChange(of: type) { _, newType in
-                        if newType == .array || newType == .dictionary {
-                            propertyListValue = FoundationDeveloperUserDefaultsCodec.emptyPropertyList(
-                                for: newType
-                            )
-                        }
-                    }
-
-                    valueEditor
-                }
-
-                if let validationMessage {
-                    Section {
-                        Text(validationMessage)
-                            .font(.caption)
-                            .foregroundStyle(theme.destructive)
-                    }
-                }
-            }
-            .formStyle(.grouped)
-            .scrollContentBackground(.hidden)
-            .background(theme.canvas)
-            .foregroundStyle(theme.textPrimary)
-            .tint(theme.accent)
-            .navigationTitle(originalRow == nil ? "Add User Default" : "Edit User Default")
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") {
-                        dismiss()
-                    }
-                }
-
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") {
-                        guard let value = parsedValue else { return }
-                        onSave(normalizedKey, value)
-                        dismiss()
-                    }
-                    .fontWeight(.semibold)
-                    .disabled(validationMessage != nil)
-                }
-            }
-        }
-        .frame(minWidth: 560, minHeight: 460)
-    }
-
-    @ViewBuilder
-    private var valueEditor: some View {
-        switch type {
-        case .string:
-            TextField("Value", text: $stringValue, axis: .vertical)
-                .lineLimit(2...8)
-
-        case .bool:
-            Toggle("Value", isOn: $boolValue)
-
-        case .integer:
-            TextField("Integer", text: $integerValue)
-
-        case .double:
-            TextField("Double", text: $doubleValue)
-
-        case .date:
-            DatePicker("Date", selection: $dateValue)
-
-        case .data:
-            TextEditor(text: $dataValue)
-                .font(.body.monospaced())
-                .frame(minHeight: 140)
-            Text("Base64-encoded Data.")
-                .font(.caption)
-                .foregroundStyle(theme.textSecondary)
-
-        case .array, .dictionary:
-            TextEditor(text: $propertyListValue)
-                .font(.caption.monospaced())
-                .frame(minHeight: 220)
-            Text("Edit as an XML property list. UserDefaults supports property-list values including strings, numbers, booleans, dates, data, arrays, and dictionaries.")
-                .font(.caption)
-                .foregroundStyle(theme.textSecondary)
-        }
-    }
-
-    private var normalizedKey: String {
-        key.trimmingCharacters(in: .whitespacesAndNewlines)
-    }
-
-    private var parsedValue: Any? {
-        switch type {
-        case .string:
-            return stringValue
-        case .bool:
-            return boolValue
-        case .integer:
-            return Int(integerValue.trimmingCharacters(in: .whitespacesAndNewlines))
-        case .double:
-            return Double(doubleValue.trimmingCharacters(in: .whitespacesAndNewlines))
-        case .date:
-            return dateValue
-        case .data:
-            return Data(
-                base64Encoded: dataValue.trimmingCharacters(in: .whitespacesAndNewlines)
-            )
-        case .array, .dictionary:
-            return try? FoundationDeveloperUserDefaultsCodec.propertyListValue(
-                from: propertyListValue,
-                expectedType: type
-            )
-        }
-    }
-
-    private var validationMessage: String? {
-        if normalizedKey.isEmpty {
-            return "Key is required."
-        }
-
-        switch type {
-        case .integer:
-            if Int(integerValue.trimmingCharacters(in: .whitespacesAndNewlines)) == nil {
-                return "Enter a valid integer."
-            }
-        case .double:
-            if Double(doubleValue.trimmingCharacters(in: .whitespacesAndNewlines)) == nil {
-                return "Enter a valid double."
-            }
-        case .data:
-            if Data(base64Encoded: dataValue.trimmingCharacters(in: .whitespacesAndNewlines)) == nil {
-                return "Enter valid Base64 data."
-            }
-        case .array, .dictionary:
-            do {
-                _ = try FoundationDeveloperUserDefaultsCodec.propertyListValue(
-                    from: propertyListValue,
-                    expectedType: type
-                )
-            } catch {
-                return error.localizedDescription
-            }
-        case .string, .bool, .date:
-            break
-        }
-
-        return nil
+        .padding(.vertical, 2)
     }
 }
 #endif

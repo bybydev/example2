@@ -61,7 +61,10 @@ struct MacAppFoundationDemoApp: App {
         Window("MacAppFoundation Demo", id: DemoWindowID.main) {
             ContentView(
                 purchaseManager: purchases,
-                settingsRouter: settingsRouter
+                settingsRouter: settingsRouter,
+                onReplayOnboarding: {
+                    replayOnboarding()
+                }
             )
             .environment(demoState)
             .macAppTheme(themeStore, purchaseManager: purchases)
@@ -199,13 +202,6 @@ struct MacAppFoundationDemoApp: App {
                 FoundationDeveloperSection(
                     title: "Demo App",
                     items: [
-                        .toggle(
-                            FoundationDeveloperToggle(
-                                title: "Use Mock Data",
-                                value: { demoState.useMockData },
-                                setValue: { demoState.useMockData = $0 }
-                            )
-                        ),
                         .value(
                             FoundationDeveloperValue(
                                 title: "Demo Actions",
@@ -273,10 +269,10 @@ struct MacAppFoundationDemoApp: App {
             try? await previousAnalytics.applicationWillResignActive()
         }
     }
+    #endif
 
     private func replayOnboarding() {
         onboarding.restart()
         openWindow(id: DemoWindowID.onboarding)
     }
-    #endif
 }

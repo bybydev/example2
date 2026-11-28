@@ -2,98 +2,25 @@ import MacAppFoundation
 import SwiftUI
 
 @MainActor
-struct PaywallShowcaseView: View {
+struct PremiumShowcaseView: View {
     let purchaseManager: PurchaseManager
 
     @Environment(\.openWindow) private var openWindow
-
-    var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 22) {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("Pro Paywall")
-                        .font(.system(size: 30, weight: .bold))
-                    Text("The production paywall is app-configured but fully driven by PurchaseManager products, offers, state, restore, and entitlement.")
-                        .foregroundStyle(.secondary)
-                }
-
-                Button("Open Production Paywall") {
-                    openWindow(id: DemoWindowID.paywall)
-                }
-                .buttonStyle(.borderedProminent)
-                .controlSize(.large)
-
-                GroupBox("What this paywall demonstrates") {
-                    VStack(alignment: .leading, spacing: 11) {
-                        bullet("Native two-column macOS layout")
-                        bullet("Preferred/highlighted plan selection")
-                        bullet("7-day free-trial CTA and disclosure on Yearly")
-                        bullet("Paid introductory pricing on Monthly in simulated mode")
-                        bullet("Automatic Monthly vs Yearly savings badge")
-                        bullet("Lifetime purchase presentation")
-                        bullet("Restore purchases and Redeem Code")
-                        bullet("App-owned terms, privacy, and completion callbacks")
-                    }
-                    .padding(6)
-                }
-
-                GroupBox("Current catalog") {
-                    VStack(spacing: 0) {
-                        ForEach(Array(purchaseManager.products.enumerated()), id: \.element.id) { index, product in
-                            HStack {
-                                VStack(alignment: .leading, spacing: 3) {
-                                    Text(product.planLabel)
-                                        .fontWeight(.semibold)
-                                    if let headline = product.introductoryOfferHeadline {
-                                        Text(headline)
-                                            .font(.caption)
-                                            .foregroundStyle(Color.accentColor)
-                                    }
-                                }
-                                Spacer()
-                                Text(product.displayPrice)
-                                    .fontWeight(.semibold)
-                            }
-                            .padding(.vertical, 10)
-
-                            if index < purchaseManager.products.count - 1 {
-                                Divider()
-                            }
-                        }
-                    }
-                    .padding(.horizontal, 6)
-                }
-            }
-            .padding(28)
-            .frame(maxWidth: 780, alignment: .leading)
-        }
-        .navigationTitle("Pro Paywall")
-    }
-
-    private func bullet(_ text: String) -> some View {
-        Label(text, systemImage: "checkmark.circle.fill")
-            .foregroundStyle(.primary, Color.accentColor)
-    }
-}
-
-@MainActor
-struct GatingShowcaseView: View {
-    let purchaseManager: PurchaseManager
-
-    @Environment(\.openWindow) private var openWindow
+    @Environment(\.macAppTheme) private var theme
     @Environment(DemoState.self) private var demoState
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 22) {
                 VStack(alignment: .leading, spacing: 6) {
-                    Text("Pro Gating")
+                    Text("Premium UI")
                         .font(.system(size: 30, weight: .bold))
-                    Text("Every gate reads the same verified PurchaseManager entitlement and leaves paywall navigation to the app.")
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(theme.textPrimary)
+                    Text("Reusable badges, gates, popovers, and upsell surfaces driven by the shared PurchaseManager.")
+                        .foregroundStyle(theme.textSecondary)
                 }
 
-                GroupBox("Badges") {
+                GroupBox("ProBadge") {
                     HStack(spacing: 14) {
                         Text("Filled").proBadge(style: .filled)
                         Text("Outline").proBadge(style: .outline)
@@ -115,14 +42,14 @@ struct GatingShowcaseView: View {
                     } lockedContent: { feature in
                         ProLockedOverlay(
                             feature: feature,
-                            message: "The same content switches automatically when entitlement changes.",
+                            message: "This surface unlocks automatically when Pro becomes active.",
                             onUpgrade: { openWindow(id: DemoWindowID.paywall) }
                         )
                     }
-                    .frame(height: 180)
+                    .frame(height: 170)
                 }
 
-                GroupBox("Existing-content policy") {
+                GroupBox("Existing-Content Policy") {
                     ProGate(
                         purchaseManager: purchaseManager,
                         feature: DemoCommerce.automationFeature,
@@ -131,21 +58,21 @@ struct GatingShowcaseView: View {
                     ) {
                         allowedCard(
                             title: "Existing project stays accessible",
-                            message: "This remains available even when Pro expires; creation can still be gated separately."
+                            message: "Remains readable even when Free; new creation can still be gated separately."
                         )
                     } lockedContent: { feature in
                         ProLockedOverlay(feature: feature, onUpgrade: {
                             openWindow(id: DemoWindowID.paywall)
                         })
                     }
-                    .frame(height: 130)
+                    .frame(height: 120)
                 }
 
                 GroupBox("ProGateButton + ProLockPopover") {
                     VStack(alignment: .leading, spacing: 12) {
-                        Text("When Free, this button first shows the package's comparison popover. The popover upgrade action opens the app's paywall window.")
+                        Text("When Free, clicking shows the comparison popover before routing to the paywall.")
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(theme.textSecondary)
 
                         ProGateButton(
                             purchaseManager: purchaseManager,
@@ -165,98 +92,55 @@ struct GatingShowcaseView: View {
                         ) {
                             Label("Run Batch Workflow", systemImage: "play.fill")
                         }
-                        .buttonStyle(.borderedProminent)
+                        .buttonStyle(MacAppButtonStyle(.primary))
+                    }
+                    .padding(8)
+                }
+
+                GroupBox("ProUpsellView") {
+                    VStack(alignment: .leading, spacing: 14) {
+                        Button("Open Upsell Window", systemImage: "macwindow") {
+                            openWindow(id: DemoWindowID.upsell)
+                        }
+                        .buttonStyle(MacAppButtonStyle(.secondary))
+
+                        ProUpsellView(
+                            title: "Unlock the complete workflow",
+                            message: "Embedded instance of the reusable upsell surface.",
+                            features: Array(purchaseManager.features.prefix(3)),
+                            primaryActionTitle: "Show Pro Paywall",
+                            secondaryActionTitle: "Not Now",
+                            onPrimaryAction: {
+                                openWindow(id: DemoWindowID.paywall)
+                            },
+                            onSecondaryAction: {}
+                        )
                     }
                     .padding(8)
                 }
             }
             .padding(28)
             .frame(maxWidth: 800, alignment: .leading)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .navigationTitle("Gating")
+        .background(theme.canvas)
+        .navigationTitle("Premium UI")
     }
 
     private func allowedCard(title: String, message: String) -> some View {
         VStack(spacing: 7) {
             Image(systemName: "checkmark.seal.fill")
                 .font(.title2)
-                .foregroundStyle(Color.green)
+                .foregroundStyle(theme.success)
             Text(title)
                 .font(.headline)
+                .foregroundStyle(theme.textPrimary)
             Text(message)
                 .font(.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(theme.textSecondary)
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
-    }
-}
-
-@MainActor
-struct UpsellShowcaseView: View {
-    let purchaseManager: PurchaseManager
-
-    @Environment(\.openWindow) private var openWindow
-
-    var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 22) {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("Upsells")
-                        .font(.system(size: 30, weight: .bold))
-                    Text("Use the reusable surface for limits and locked workflows while keeping navigation app-owned.")
-                        .foregroundStyle(.secondary)
-                }
-
-                Button("Open Upsell Window") {
-                    openWindow(id: DemoWindowID.upsell)
-                }
-                .buttonStyle(.borderedProminent)
-                .controlSize(.large)
-
-                ProUpsellView(
-                    title: "Unlock the complete workflow",
-                    message: "This embedded instance is the exact package view used in the separate demo window.",
-                    features: Array(purchaseManager.features.prefix(3)),
-                    primaryActionTitle: "Show Pro Paywall",
-                    secondaryActionTitle: "Not Now",
-                    onPrimaryAction: {
-                        openWindow(id: DemoWindowID.paywall)
-                    },
-                    onSecondaryAction: {}
-                )
-            }
-            .padding(28)
-            .frame(maxWidth: 720, alignment: .leading)
-        }
-        .navigationTitle("Upsells")
-    }
-}
-
-@MainActor
-struct SettingsShowcaseView: View {
-    @Environment(\.openSettings) private var openSettings
-
-    var body: some View {
-        VStack(spacing: 18) {
-            Image(systemName: "gearshape.2")
-                .font(.system(size: 46))
-                .foregroundStyle(Color.accentColor)
-            Text("App-owned Settings")
-                .font(.title.bold())
-            Text("The demo uses a native General / Appearance / Plan / About Settings scene. Appearance and Plan content come from MacAppFoundation.")
-                .foregroundStyle(.secondary)
-                .multilineTextAlignment(.center)
-                .frame(maxWidth: 520)
-
-            Button("Open Settings") {
-                openSettings()
-            }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-        }
-        .padding(40)
-        .navigationTitle("Settings / Plan")
     }
 }

@@ -5,10 +5,9 @@ import SwiftUI
 
 /// Debug-only developer controls shared by MacAppFoundation apps.
 ///
-/// The window uses a native macOS navigation split view: stable destinations live
-/// in the sidebar, the selected destination owns the detail content, and deeper
-/// app-defined destinations push through the detail navigation stack. Editing
-/// flows are presented modally so navigation state stays independent from drafts.
+/// The window uses a native macOS navigation split view: built-in destinations
+/// cover Overview, Commerce, Analytics, Logs, and User Defaults, alongside
+/// optional app-registered replay flows and custom sections.
 @MainActor
 public struct FoundationDeveloperView: View {
     @Environment(\.macAppTheme) private var theme
@@ -24,7 +23,7 @@ public struct FoundationDeveloperView: View {
     @State private var latency: DeveloperPurchaseLatency = .normal
     @State private var replay: FoundationDeveloperReplay?
     @State private var actionError: String?
-    @State private var diagnosticsStatus: String?
+    @State private var diagnosticsCopied = false
     @State private var overviewAnalyticsSnapshot: AppAnalyticsDeveloperSnapshot?
 
     public init(
@@ -39,14 +38,33 @@ public struct FoundationDeveloperView: View {
         NavigationSplitView {
             sidebar
                 .navigationTitle(MacAppFoundationDeveloperTools.windowTitle)
-                .navigationSplitViewColumnWidth(min: 190, ideal: 220, max: 280)
+                .navigationSplitViewColumnWidth(min: 190, ideal: 210, max: 260)
         } detail: {
             NavigationStack {
                 detailView
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .navigationTitle(navigationTitle)
                     .toolbar {
-                        if showsCommerceRefresh {
+                        if selection == .overview {
+                            ToolbarItemGroup(placement: .primaryAction) {
+                                Button {
+                                    copyDiagnostics()
+                                } label: {
+                                    Label(
+                                        diagnosticsCopied ? "Copied" : "Copy Diagnostics",
+                                        systemImage: diagnosticsCopied ? "checkmark" : "doc.on.doc"
+                                    )
+                                }
+                                .help("Copy app and commerce diagnostics")
+
+                                Button {
+                                    refreshOverview()
+                                } label: {
+                                    Label("Refresh", systemImage: "arrow.clockwise")
+                                }
+                                .help("Refresh overview status")
+                            }
+                        } else if selection == .commerce {
                             ToolbarItem(placement: .primaryAction) {
                                 Button {
                                     refreshCommerce()
@@ -84,20 +102,12 @@ public struct FoundationDeveloperView: View {
 
     private var sidebar: some View {
         List(selection: $selection) {
-            Section("General") {
+            Section("Foundation") {
                 sidebarRow(.overview, title: "Overview", systemImage: "square.grid.2x2")
-                sidebarRow(.diagnostics, title: "Diagnostics", systemImage: "stethoscope")
+                sidebarRow(.commerce, title: "Commerce", systemImage: "creditcard")
                 sidebarRow(.analytics, title: "Analytics", systemImage: "chart.bar.xaxis")
                 sidebarRow(.logs, title: "Logs", systemImage: "text.alignleft")
                 sidebarRow(.userDefaults, title: "User Defaults", systemImage: "slider.horizontal.3")
-            }
-
-            Section("Commerce") {
-                sidebarRow(.purchases, title: "Purchases", systemImage: "creditcard")
-                sidebarRow(.products, title: "Products", systemImage: "cart")
-                sidebarRow(.entitlement, title: "Entitlement", systemImage: "checkmark.seal")
-                sidebarRow(.plans, title: "Simulated Plans", systemImage: "list.bullet.rectangle")
-                sidebarRow(.failures, title: "Failure Simulation", systemImage: "exclamationmark.triangle")
             }
 
             if !configuration.replays.isEmpty {
@@ -112,7 +122,7 @@ public struct FoundationDeveloperView: View {
                         sidebarRow(
                             .customSection(section.id),
                             title: section.title,
-                            systemImage: "slider.horizontal.3"
+                            systemImage: "wrench.and.screwdriver"
                         )
                     }
                 }
@@ -137,20 +147,10 @@ public struct FoundationDeveloperView: View {
         switch selection ?? .overview {
         case .overview:
             overviewView
-        case .purchases:
-            purchasesView
-        case .products:
-            FoundationDeveloperProductCatalogView(products: purchaseManager.products)
-        case .entitlement:
-            FoundationDeveloperEntitlementView(purchaseManager: purchaseManager)
-        case .plans:
-            FoundationDeveloperPlansView(purchaseManager: purchaseManager)
-        case .failures:
-            failureSimulationView
+        case .commerce:
+            commerceView
         case .replays:
             replayView
-        case .diagnostics:
-            diagnosticsView
         case .analytics:
             FoundationDeveloperAnalyticsView(
                 analytics: analytics,
@@ -166,31 +166,70 @@ public struct FoundationDeveloperView: View {
     }
 
     private var overviewView: some View {
-        Form {
-            appSection
-            runtimeSection
-            analyticsOverviewSection
+        let info = DeveloperAppInfo.current
+        return Form {
+            Section("App") {
+                LabeledContent("App", value: "\(info.displayName) \(info.versionAndBuild)")
+                LabeledContent("Bundle ID", value: info.bundleIdentifier)
+                LabeledContent("System", value: "\(ProcessInfo.processInfo.operatingSystemVersionString) · \(info.architecture)")
+                LabeledContent("Sandbox", value: info.isSandboxed ? "Enabled" : "Disabled")
+                LabeledContent("Theme", value: "\(theme.name) (\(theme.id.rawValue))")
+                LabeledContent(
+                    "MAF logging",
+                    value: MacAppFoundationLogging.isBootstrapped ? "Enabled" : "Not enabled"
+                )
+            }
 
             Section("Commerce") {
-                LabeledContent("Purchase mode", value: purchaseModeTitle)
-                LabeledContent("Live entitlement", value: entitlementTitle)
+                LabeledContent("Mode", value: purchaseModeTitle)
                 LabeledContent("Effective access", value: accessTitle)
-                LabeledContent("Product state", value: productLoadingTitle)
-                LabeledContent("Loaded products", value: "\(purchaseManager.products.count)")
+                LabeledContent("Activity", value: purchaseActivityTitle)
+                LabeledContent("Products", value: "\(purchaseManager.products.count) loaded (\(productLoadingTitle))")
+            }
+
+            Section("Analytics") {
+                if analytics == nil {
+                    LabeledContent("Client", value: "Not connected")
+                } else if let snapshot = overviewAnalyticsSnapshot {
+                    LabeledContent("Status", value: snapshot.configuration.effectiveEnabled ? "Enabled" : "Disabled")
+                    LabeledContent(
+                        "Storage mode",
+                        value: snapshot.configuration.storageMode == .inMemory ? "In Memory" : "Persisted"
+                    )
+                    LabeledContent("Stored UTC days", value: "\(snapshot.runtime.pendingDayCount)")
+                    LabeledContent("Installation ID") {
+                        Text(snapshot.runtime.installationID ?? "Not created")
+                            .font(.caption.monospaced())
+                            .textSelection(.enabled)
+                    }
+                } else {
+                    LabeledContent("Client", value: "Loading…")
+                }
+            }
+
+            Section("Paths") {
+                LabeledContent("Bundle") {
+                    Text(info.bundlePath)
+                        .font(.caption.monospaced())
+                        .textSelection(.enabled)
+                }
+
+                LabeledContent(info.isSandboxed ? "Container" : "Home") {
+                    Text(info.homeDirectory)
+                        .font(.caption.monospaced())
+                        .textSelection(.enabled)
+                }
             }
         }
         .developerFormStyle(theme: theme)
         .task(id: analytics.map(ObjectIdentifier.init)) {
-            while !Task.isCancelled {
-                await refreshOverviewAnalytics()
-                try? await Task.sleep(for: .seconds(1))
-            }
+            await refreshOverviewAnalytics()
         }
     }
 
-    private var purchasesView: some View {
+    private var commerceView: some View {
         Form {
-            Section("Purchase Mode") {
+            Section("Status") {
                 Toggle(
                     "Simulated purchases",
                     isOn: Binding(
@@ -207,8 +246,101 @@ public struct FoundationDeveloperView: View {
                 LabeledContent("Live entitlement", value: entitlementTitle)
                 LabeledContent("Effective access", value: accessTitle)
                 LabeledContent("Product state", value: productLoadingTitle)
-                LabeledContent("Loaded products", value: "\(purchaseManager.products.count)")
-                LabeledContent("Simulated entitlement", value: simulatedEntitlementTitle)
+                LabeledContent("Activity", value: purchaseActivityTitle)
+            }
+
+            if purchaseManager.isUsingSimulatedPurchases {
+                Section("Simulated Entitlement") {
+                    simulatedEntitlementRow(title: "Free", productID: nil)
+
+                    ForEach(purchaseManager.simulatedConfigurationSnapshot.productIDs, id: \.self) { productID in
+                        let title = purchaseManager.simulatedCatalogProducts
+                            .first(where: { $0.id == productID })?.displayName ?? productID
+                        simulatedEntitlementRow(title: title, productID: productID)
+                    }
+                }
+
+                Section("Failure & Latency Simulation") {
+                    Picker("Purchase outcome", selection: $purchaseOutcome) {
+                        ForEach(DeveloperPurchaseOutcome.allCases) { outcome in
+                            Text(outcome.title).tag(outcome)
+                        }
+                    }
+                    .onChange(of: purchaseOutcome) { _, newValue in
+                        applyPurchaseOutcome(newValue)
+                    }
+
+                    Toggle("Product loading failure", isOn: Binding(
+                        get: { catalogFailureEnabled },
+                        set: { enabled in
+                            catalogFailureEnabled = enabled
+                            Task { @MainActor in
+                                await purchaseManager.setSimulatedProductLoadingFailure(
+                                    enabled ? .noProductsAvailable : nil
+                                )
+                            }
+                        }
+                    ))
+
+                    Toggle("Restore failure", isOn: Binding(
+                        get: { restoreFailureEnabled },
+                        set: { enabled in
+                            restoreFailureEnabled = enabled
+                            purchaseManager.setSimulatedRestoreFailure(
+                                enabled ? DeveloperPurchaseOutcome.networkFailure.failure : nil
+                            )
+                        }
+                    ))
+
+                    Picker("Operation latency", selection: $latency) {
+                        ForEach(DeveloperPurchaseLatency.allCases) { latency in
+                            Text(latency.title).tag(latency)
+                        }
+                    }
+                    .onChange(of: latency) { _, newValue in
+                        purchaseManager.setSimulatedOperationDelay(newValue.duration)
+                    }
+
+                    Button("Reset failure simulation", systemImage: "arrow.counterclockwise") {
+                        Task { @MainActor in
+                            await purchaseManager.resetSimulatedFailures()
+                            resetFailureControls()
+                        }
+                    }
+                }
+            }
+
+            Section("Loaded Products") {
+                if purchaseManager.products.isEmpty {
+                    Text("No products loaded.")
+                        .foregroundStyle(theme.textSecondary)
+                } else {
+                    ForEach(purchaseManager.products) { product in
+                        VStack(alignment: .leading, spacing: 4) {
+                            HStack {
+                                Text(product.displayName)
+                                    .fontWeight(.semibold)
+                                if product.id == purchaseManager.preferredProduct?.id {
+                                    Text("PREFERRED")
+                                        .font(.caption2.bold())
+                                        .foregroundStyle(theme.accent)
+                                }
+                                Spacer()
+                                Text(product.displayPrice)
+                                    .fontWeight(.semibold)
+                            }
+                            Text("\(product.id) · \(product.planLabel)")
+                                .font(.caption.monospaced())
+                                .foregroundStyle(theme.textSecondary)
+                            if let offer = product.introductoryOffer {
+                                Text("\(offer.headline) · \(offer.isEligible ? "Eligible" : "Ineligible")")
+                                    .font(.caption)
+                                    .foregroundStyle(offer.isEligible ? theme.success : theme.textSecondary)
+                            }
+                        }
+                        .padding(.vertical, 2)
+                    }
+                }
             }
 
             Section("Actions") {
@@ -224,139 +356,63 @@ public struct FoundationDeveloperView: View {
                     }
                 }
 
-                Button("Reset simulated purchases", systemImage: "trash", role: .destructive) {
-                    Task { @MainActor in
-                        await purchaseManager.resetSimulatedPurchases()
-                        resetFailureControls()
+                if purchaseManager.isUsingSimulatedPurchases {
+                    Button("Reset simulated purchases", systemImage: "trash", role: .destructive) {
+                        Task { @MainActor in
+                            await purchaseManager.resetSimulatedPurchases()
+                            resetFailureControls()
+                        }
                     }
                 }
-                .disabled(!purchaseManager.isUsingSimulatedPurchases)
             }
         }
         .developerFormStyle(theme: theme)
     }
 
-    private var failureSimulationView: some View {
-        Form {
-            Section("Purchase Failure Simulation") {
-                Picker("Purchase outcome", selection: $purchaseOutcome) {
-                    ForEach(DeveloperPurchaseOutcome.allCases) { outcome in
-                        Text(outcome.title).tag(outcome)
-                    }
-                }
-                .onChange(of: purchaseOutcome) { _, newValue in
-                    applyPurchaseOutcome(newValue)
-                }
-
-                Toggle("Product loading failure", isOn: Binding(
-                    get: { catalogFailureEnabled },
-                    set: { enabled in
-                        catalogFailureEnabled = enabled
-                        Task { @MainActor in
-                            await purchaseManager.setSimulatedProductLoadingFailure(
-                                enabled ? .noProductsAvailable : nil
-                            )
-                        }
-                    }
-                ))
-
-                Toggle("Restore failure", isOn: Binding(
-                    get: { restoreFailureEnabled },
-                    set: { enabled in
-                        restoreFailureEnabled = enabled
-                        purchaseManager.setSimulatedRestoreFailure(
-                            enabled ? DeveloperPurchaseOutcome.networkFailure.failure : nil
-                        )
-                    }
-                ))
-
-                Picker("Operation latency", selection: $latency) {
-                    ForEach(DeveloperPurchaseLatency.allCases) { latency in
-                        Text(latency.title).tag(latency)
-                    }
-                }
-                .onChange(of: latency) { _, newValue in
-                    purchaseManager.setSimulatedOperationDelay(newValue.duration)
+    private func simulatedEntitlementRow(title: String, productID: String?) -> some View {
+        Button {
+            Task { @MainActor in
+                let ids: Set<String> = productID.map { [$0] } ?? []
+                await purchaseManager.setSimulatedPurchasedProductIDs(ids)
+            }
+        } label: {
+            HStack {
+                Text(title)
+                    .foregroundStyle(theme.textPrimary)
+                Spacer()
+                if isSimulatedEntitlementSelected(productID) {
+                    Image(systemName: "checkmark")
+                        .fontWeight(.semibold)
+                        .foregroundStyle(theme.accent)
                 }
             }
-
-            Section {
-                Button("Reset failure simulation", systemImage: "arrow.counterclockwise") {
-                    Task { @MainActor in
-                        await purchaseManager.resetSimulatedFailures()
-                        resetFailureControls()
-                    }
-                }
-            }
+            .contentShape(Rectangle())
         }
-        .developerFormStyle(theme: theme)
-        .disabled(!purchaseManager.isUsingSimulatedPurchases)
-        .overlay {
-            if !purchaseManager.isUsingSimulatedPurchases {
-                ContentUnavailableView(
-                    "Simulation Disabled",
-                    systemImage: "testtube.2",
-                    description: Text("Enable simulated purchases from the Purchases destination.")
-                )
-                .background(theme.canvas.opacity(0.96))
-            }
-        }
+        .buttonStyle(.plain)
+    }
+
+    private func isSimulatedEntitlementSelected(_ productID: String?) -> Bool {
+        let active = purchaseManager.simulatedPurchasedProductIDs
+        guard let productID else { return active.isEmpty }
+        return active == Set([productID])
     }
 
     private var replayView: some View {
         List {
-            if configuration.replays.isEmpty {
-                ContentUnavailableView(
-                    "No Replay Flows",
-                    systemImage: "play.rectangle",
-                    description: Text("Register app-owned flows in FoundationDeveloperConfiguration.")
-                )
-            } else {
-                ForEach(configuration.replays) { replay in
-                    Button {
-                        self.replay = replay
-                    } label: {
-                        Label(replay.title, systemImage: replay.systemImage)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .contentShape(Rectangle())
-                    }
-                    .buttonStyle(.plain)
-                    .padding(.vertical, 4)
+            ForEach(configuration.replays) { replay in
+                Button {
+                    self.replay = replay
+                } label: {
+                    Label(replay.title, systemImage: replay.systemImage)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .contentShape(Rectangle())
                 }
+                .buttonStyle(.plain)
+                .padding(.vertical, 4)
             }
         }
         .scrollContentBackground(.hidden)
         .background(theme.canvas)
-    }
-
-    private var diagnosticsView: some View {
-        Form {
-            Section("Commerce") {
-                LabeledContent("Purchase mode", value: purchaseModeTitle)
-                LabeledContent("Purchase activity", value: purchaseActivityTitle)
-                LabeledContent("Preferred product", value: purchaseManager.preferredProduct?.id ?? "None")
-                LabeledContent(
-                    "Configured products",
-                    value: "\(purchaseManager.simulatedConfigurationSnapshot.productIDs.count) simulated"
-                )
-            }
-
-            Section {
-                Button("Copy diagnostics", systemImage: "doc.on.doc") {
-                    let pasteboard = NSPasteboard.general
-                    pasteboard.clearContents()
-                    pasteboard.setString(diagnosticText, forType: .string)
-                    diagnosticsStatus = "Copied"
-                }
-
-                if let diagnosticsStatus {
-                    Text(diagnosticsStatus)
-                        .font(.caption)
-                        .foregroundStyle(theme.textSecondary)
-                }
-            }
-        }
-        .developerFormStyle(theme: theme)
     }
 
     @ViewBuilder
@@ -380,82 +436,10 @@ public struct FoundationDeveloperView: View {
         }
     }
 
-    private var appSection: some View {
-        let info = DeveloperAppInfo.current
-        return Section("App") {
-            LabeledContent("App", value: info.displayName)
-            LabeledContent("Version", value: info.versionAndBuild)
-            LabeledContent("Bundle ID", value: info.bundleIdentifier)
-            LabeledContent("Build configuration", value: "Debug")
-            LabeledContent("Architecture", value: info.architecture)
-            LabeledContent("Process ID", value: "\(info.processID)")
-            LabeledContent("macOS", value: ProcessInfo.processInfo.operatingSystemVersionString)
-        }
-    }
-
-    private var runtimeSection: some View {
-        let info = DeveloperAppInfo.current
-        return Section("Runtime") {
-            LabeledContent(
-                "MAF logging",
-                value: MacAppFoundationLogging.isBootstrapped ? "Enabled" : "Not enabled"
-            )
-            LabeledContent("Theme", value: "\(theme.name) · \(theme.id.rawValue)")
-            LabeledContent("Sandbox", value: info.isSandboxed ? "Enabled" : "Disabled")
-            LabeledContent("UserDefaults domain", value: info.bundleIdentifier)
-
-            LabeledContent("Bundle path") {
-                Text(info.bundlePath)
-                    .font(.caption.monospaced())
-                    .textSelection(.enabled)
-            }
-
-            LabeledContent("Executable path") {
-                Text(info.executablePath)
-                    .font(.caption.monospaced())
-                    .textSelection(.enabled)
-            }
-
-            LabeledContent(info.isSandboxed ? "Container home" : "Home directory") {
-                Text(info.homeDirectory)
-                    .font(.caption.monospaced())
-                    .textSelection(.enabled)
-            }
-        }
-    }
-
-    private var analyticsOverviewSection: some View {
-        Section("Analytics") {
-            if analytics == nil {
-                LabeledContent("Client", value: "Not connected")
-            } else if let snapshot = overviewAnalyticsSnapshot {
-                LabeledContent(
-                    "Configured",
-                    value: snapshot.configuration.configuredEnabled ? "On" : "Off"
-                )
-                LabeledContent(
-                    "Effective",
-                    value: snapshot.configuration.effectiveEnabled ? "On" : "Off"
-                )
-                LabeledContent(
-                    "Override",
-                    value: snapshot.configuration.developerEnabledOverride.map {
-                        $0 ? "On" : "Off"
-                    } ?? "Configured"
-                )
-                LabeledContent(
-                    "Storage mode",
-                    value: snapshot.configuration.storageMode == .inMemory ? "In Memory" : "Persisted"
-                )
-
-                LabeledContent("Installation ID") {
-                    Text(snapshot.runtime.installationID ?? "Not created")
-                        .font(.caption.monospaced())
-                        .textSelection(.enabled)
-                }
-            } else {
-                LabeledContent("Client", value: "Loading…")
-            }
+    private func refreshOverview() {
+        Task { @MainActor in
+            await purchaseManager.refreshEntitlements()
+            await refreshOverviewAnalytics()
         }
     }
 
@@ -466,6 +450,17 @@ public struct FoundationDeveloperView: View {
         }
 
         overviewAnalyticsSnapshot = try? await analytics.developerSnapshot()
+    }
+
+    private func copyDiagnostics() {
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.setString(diagnosticText, forType: .string)
+        diagnosticsCopied = true
+        Task { @MainActor in
+            try? await Task.sleep(for: .seconds(1.5))
+            diagnosticsCopied = false
+        }
     }
 
     @ViewBuilder
@@ -513,20 +508,10 @@ public struct FoundationDeveloperView: View {
         switch selection ?? .overview {
         case .overview:
             "Overview"
-        case .purchases:
-            "Purchases"
-        case .products:
-            "Products"
-        case .entitlement:
-            "Entitlement"
-        case .plans:
-            "Simulated Plans"
-        case .failures:
-            "Failure Simulation"
+        case .commerce:
+            "Commerce"
         case .replays:
             "Replay"
-        case .diagnostics:
-            "Diagnostics"
         case .analytics:
             "Analytics"
         case .logs:
@@ -537,15 +522,6 @@ public struct FoundationDeveloperView: View {
             configuration.additionalSections
                 .first(where: { $0.id == sectionID })?
                 .title ?? MacAppFoundationDeveloperTools.windowTitle
-        }
-    }
-
-    private var showsCommerceRefresh: Bool {
-        switch selection ?? .overview {
-        case .overview, .purchases, .products, .entitlement, .plans, .failures:
-            true
-        case .replays, .diagnostics, .analytics, .logs, .userDefaults, .customSection(_:):
-            false
         }
     }
 
@@ -591,12 +567,6 @@ public struct FoundationDeveloperView: View {
             let sourceLabel = source == .storeKit ? "StoreKit" : "Verified cache"
             return "\(productIDs) · \(sourceLabel)"
         }
-    }
-
-    private var simulatedEntitlementTitle: String {
-        let ids = purchaseManager.simulatedPurchasedProductIDs
-        guard !ids.isEmpty else { return "Free" }
-        return ids.sorted().joined(separator: ", ")
     }
 
     private var productLoadingTitle: String {
@@ -648,13 +618,8 @@ public struct FoundationDeveloperView: View {
 
 private enum DeveloperDestination: Hashable {
     case overview
-    case purchases
-    case products
-    case entitlement
-    case plans
-    case failures
+    case commerce
     case replays
-    case diagnostics
     case analytics
     case logs
     case userDefaults
@@ -675,10 +640,8 @@ private struct DeveloperAppInfo {
     let build: String
     let bundleIdentifier: String
     let architecture: String
-    let processID: Int32
     let isSandboxed: Bool
     let bundlePath: String
-    let executablePath: String
     let homeDirectory: String
 
     var versionAndBuild: String {
@@ -701,10 +664,8 @@ private struct DeveloperAppInfo {
             build: build,
             bundleIdentifier: bundle.bundleIdentifier ?? "—",
             architecture: currentArchitecture,
-            processID: ProcessInfo.processInfo.processIdentifier,
             isSandboxed: sandboxEnabled,
             bundlePath: bundle.bundleURL.path,
-            executablePath: bundle.executableURL?.path ?? "—",
             homeDirectory: NSHomeDirectory()
         )
     }

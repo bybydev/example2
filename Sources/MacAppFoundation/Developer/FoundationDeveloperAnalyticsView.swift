@@ -124,12 +124,10 @@ struct FoundationDeveloperAnalyticsView: View {
     private var configuredView: some View {
         if let snapshot {
             List {
-                configurationSection(snapshot.configuration)
-                limitsSection(snapshot.limits)
-                runtimeSection(snapshot.runtime)
-                liveActivitySection
+                controlsSection(snapshot.configuration)
+                statusSection(snapshot)
                 storedDaysSection(snapshot.days)
-                developerActionsSection
+                liveActivitySection
             }
             .listStyle(.inset)
             .scrollContentBackground(.hidden)
@@ -148,19 +146,10 @@ struct FoundationDeveloperAnalyticsView: View {
         }
     }
 
-    private func configurationSection(
+    private func controlsSection(
         _ configuration: AppAnalyticsDeveloperSnapshot.Configuration
     ) -> some View {
         Section {
-            LabeledContent(
-                "Configured enabled",
-                value: configuration.configuredEnabled ? "Yes" : "No"
-            )
-            LabeledContent(
-                "Effective enabled",
-                value: configuration.effectiveEnabled ? "Yes" : "No"
-            )
-
             if let analytics {
                 LabeledContent("Developer override") {
                     Picker(
@@ -188,12 +177,12 @@ struct FoundationDeveloperAnalyticsView: View {
                     }
                     .labelsHidden()
                     .pickerStyle(.segmented)
-                    .frame(width: 260)
+                    .frame(width: 240)
                 }
 
-                LabeledContent("Storage Mode") {
+                LabeledContent("Storage mode") {
                     Picker(
-                        "Storage Mode",
+                        "Storage mode",
                         selection: Binding(
                             get: { configuration.storageMode },
                             set: { selection in
@@ -209,166 +198,97 @@ struct FoundationDeveloperAnalyticsView: View {
                     }
                     .labelsHidden()
                     .pickerStyle(.segmented)
-                    .frame(width: 260)
+                    .frame(width: 240)
                     .disabled(onStorageModeChange == nil)
+                }
+
+                HStack(spacing: 10) {
+                    Button("Send Test Event", systemImage: "paperplane") {
+                        Task { await sendTestEvent(analytics) }
+                    }
+                    .disabled(isFlushing)
+
+                    Button("Flush Now", systemImage: "arrow.up.circle") {
+                        Task { await flush(analytics) }
+                    }
+                    .disabled(isFlushing)
+
+                    Spacer()
+
+                    Button("Reset Local State", systemImage: "trash", role: .destructive) {
+                        resetConfirmationPresented = true
+                    }
                 }
             }
 
-            copyableValue("App ID", configuration.appID)
-            copyableValue("App key", configuration.appKey ?? "Not configured")
-            copyableValue("Server", configuration.baseURL.absoluteString)
-            copyableValue("Batch endpoint", configuration.endpointURL.absoluteString)
-            LabeledContent(
-                "Configured app version",
-                value: configuration.configuredAppVersion ?? "Automatic"
-            )
-            LabeledContent(
-                "Resolved app version",
-                value: configuration.resolvedAppVersion ?? "Unavailable"
-            )
-            LabeledContent(
-                "Upload interval",
-                value: durationLabel(configuration.uploadInterval)
-            )
-            LabeledContent("Transport retries", value: "\(configuration.transportRetryCount)")
-            copyableValue("Transport type", configuration.transportType)
-            copyableValue("State store type", configuration.stateStoreType)
-            copyableValue("State storage key", configuration.stateStorageKey)
-            copyableValue("Keychain service", configuration.keychainService)
+            if let actionStatus {
+                Label(
+                    actionStatus,
+                    systemImage: actionStatusIsError
+                        ? "xmark.circle.fill"
+                        : "checkmark.circle.fill"
+                )
+                .font(.caption)
+                .foregroundStyle(actionStatusIsError ? theme.destructive : theme.success)
+                .textSelection(.enabled)
+            }
         } header: {
-            Text("Configuration")
+            Text("Controls")
         } footer: {
-            Text("Persisted mode stores the installation ID in Keychain and daily counters in UserDefaults. In-memory mode keeps the installation ID and daily counters in memory for the lifetime of the current AppAnalyticsClient instance only—switching storage modes or restarting creates a new client with a fresh ID and empty counters.")
+            Text("Persisted mode keeps the installation ID in Keychain and counters in UserDefaults. In-memory mode keeps both in memory for this client instance only.")
                 .foregroundStyle(theme.textSecondary)
         }
     }
 
-    private func limitsSection(
-        _ limits: AppAnalyticsDeveloperSnapshot.Limits
+    private func statusSection(
+        _ snapshot: AppAnalyticsDeveloperSnapshot
     ) -> some View {
-        Section("Client Limits") {
-            LabeledContent("Days per batch", value: "\(limits.maxDaysPerBatch)")
-            LabeledContent("Offline age", value: "\(limits.maxOfflineAgeDays) days")
-            LabeledContent("Event counters / day", value: "\(limits.maxEventsPerDay)")
-            LabeledContent("Occurrences / event / day", value: "\(limits.maxEventCountPerDay)")
-            LabeledContent("Total event occurrences / day", value: "\(limits.maxTotalEventCountPerDay)")
-            LabeledContent("Error counters / day", value: "\(limits.maxErrorsPerDay)")
-            LabeledContent("Total errors / day", value: "\(limits.maxTotalErrorCountPerDay)")
-            LabeledContent("Sessions / day", value: "\(limits.maxSessionsPerDay)")
-            LabeledContent("Session seconds / day", value: "\(limits.maxSessionSecondsPerDay)")
-            LabeledContent("Request body", value: byteCountLabel(limits.maxBodyBytes))
-            LabeledContent("Session resume timeout", value: durationLabel(limits.sessionTimeout))
-        }
-    }
+        let configuration = snapshot.configuration
+        let runtime = snapshot.runtime
 
-    private func runtimeSection(
-        _ runtime: AppAnalyticsDeveloperSnapshot.Runtime
-    ) -> some View {
-        Section("Runtime") {
+        return Section("Status") {
+            LabeledContent(
+                "Enabled",
+                value: "\(configuration.effectiveEnabled ? "On" : "Off") (configured: \(configuration.configuredEnabled ? "On" : "Off"))"
+            )
+            copyableValue("App ID", configuration.appID)
+            copyableValue("Endpoint", configuration.endpointURL.absoluteString)
             copyableValue("Installation ID", runtime.installationID ?? "Not created")
 
             if let installationIdentityError = runtime.installationIdentityError {
-                LabeledContent("Installation identity error") {
+                LabeledContent("Identity error") {
                     Text(installationIdentityError)
                         .foregroundStyle(theme.destructive)
                         .textSelection(.enabled)
                 }
             }
 
-            LabeledContent("OS", value: runtime.osVersion)
-            LabeledContent("Build", value: runtime.appBuild ?? "Unavailable")
-            LabeledContent("Device family", value: runtime.deviceFamily)
-            LabeledContent("Architecture", value: runtime.architecture ?? "Unavailable")
+            LabeledContent("Upload interval", value: durationLabel(configuration.uploadInterval))
             LabeledContent("Active session", value: runtime.activeSession ? "Yes" : "No")
-            LabeledContent(
-                "Session active since",
-                value: dateLabel(runtime.sessionActiveSince)
-            )
-            LabeledContent(
-                "Last session activity",
-                value: dateLabel(runtime.sessionLastActivityAt)
-            )
             LabeledContent("Stored UTC days", value: "\(runtime.pendingDayCount)")
             LabeledContent("Last upload", value: dateLabel(runtime.lastUploadAt))
+            LabeledContent("Next attempt", value: dateLabel(runtime.nextUploadAttemptAt))
             LabeledContent(
-                "Next automatic attempt",
-                value: dateLabel(runtime.nextUploadAttemptAt)
+                "Pipeline",
+                value: runtime.uploadInFlight
+                    ? "Uploading"
+                    : (runtime.automaticUploadScheduled ? "Scheduled" : "Idle")
             )
-            LabeledContent(
-                "Automatic upload task",
-                value: runtime.automaticUploadScheduled ? "Scheduled" : "Idle"
-            )
-            LabeledContent(
-                "Upload pipeline",
-                value: runtime.uploadInFlight ? "In flight" : "Idle"
-            )
-        }
-    }
-
-    private var liveActivitySection: some View {
-        Section {
-            if activityStore.entries.isEmpty {
-                Text("No analytics activity captured yet.")
-                    .foregroundStyle(theme.textSecondary)
-            } else {
-                ForEach(activityStore.entries.reversed()) { entry in
-                    VStack(alignment: .leading, spacing: 3) {
-                        HStack(spacing: 8) {
-                            Text(timestampFormatter.string(from: entry.timestamp))
-                                .font(.caption.monospaced())
-                                .foregroundStyle(theme.textMuted)
-
-                            Text(entry.kind.rawValue)
-                                .font(.caption.weight(.semibold))
-
-                            Text(entry.title)
-                                .font(.caption.monospaced())
-                                .textSelection(.enabled)
-
-                            Spacer()
-                        }
-
-                        if let detail = entry.detail {
-                            Text(detail)
-                                .font(.caption.monospaced())
-                                .foregroundStyle(theme.textSecondary)
-                                .textSelection(.enabled)
-                        }
-                    }
-                    .padding(.vertical, 2)
-                }
-            }
-        } header: {
-            HStack {
-                Text("Live Activity")
-                Spacer()
-                Text("\(activityStore.entries.count) / 500")
-                    .font(.caption)
-                    .foregroundStyle(theme.textMuted)
-            }
-        } footer: {
-            Text("Debug-only stream of analytics events, errors, lifecycle changes, uploads, resets, and failures captured by the live AppAnalyticsClient.")
-                .foregroundStyle(theme.textSecondary)
         }
     }
 
     private func storedDaysSection(
         _ days: [AppAnalyticsDeveloperSnapshot.Day]
     ) -> some View {
-        Section("Persisted Cumulative State") {
+        Section("Stored Counters") {
             if days.isEmpty {
                 Text("No locally stored analytics counters.")
                     .foregroundStyle(theme.textSecondary)
             } else {
                 ForEach(days) { day in
                     DisclosureGroup {
-                        LabeledContent("Sessions", value: "\(day.sessions)")
-                        LabeledContent("Session seconds", value: "\(day.sessionSeconds)")
+                        LabeledContent("Sessions", value: "\(day.sessions) (\(day.sessionSeconds)s)")
                         LabeledContent("App version", value: day.appVersion ?? "Unavailable")
-                        LabeledContent("OS", value: day.osVersion ?? "Unavailable")
-                        LabeledContent("Build", value: day.appBuild ?? "Unavailable")
-                        LabeledContent("Device", value: day.deviceFamily ?? "Unavailable")
-                        LabeledContent("Architecture", value: day.architecture ?? "Unavailable")
 
                         if !day.events.isEmpty {
                             Text("Events")
@@ -412,43 +332,55 @@ struct FoundationDeveloperAnalyticsView: View {
         }
     }
 
-    private var developerActionsSection: some View {
-        Section("Developer Actions") {
-            Button("Send Test Event", systemImage: "paperplane") {
-                if let analytics {
-                    Task { await sendTestEvent(analytics) }
+    private var liveActivitySection: some View {
+        Section {
+            if activityStore.entries.isEmpty {
+                Text("No analytics activity captured yet.")
+                    .foregroundStyle(theme.textSecondary)
+            } else {
+                ForEach(activityStore.entries.reversed()) { entry in
+                    VStack(alignment: .leading, spacing: 3) {
+                        HStack(spacing: 8) {
+                            Text(timestampFormatter.string(from: entry.timestamp))
+                                .font(.caption.monospaced())
+                                .foregroundStyle(theme.textMuted)
+
+                            Text(entry.kind.rawValue)
+                                .font(.caption.weight(.semibold))
+
+                            Text(entry.title)
+                                .font(.caption.monospaced())
+                                .textSelection(.enabled)
+
+                            Spacer()
+                        }
+
+                        if let detail = entry.detail {
+                            Text(detail)
+                                .font(.caption.monospaced())
+                                .foregroundStyle(theme.textSecondary)
+                                .textSelection(.enabled)
+                        }
+                    }
+                    .padding(.vertical, 2)
                 }
             }
-            .disabled(analytics == nil || isFlushing)
-
-            Button("Flush Now", systemImage: "arrow.up.circle") {
-                if let analytics {
-                    Task { await flush(analytics) }
+        } header: {
+            HStack {
+                Text("Live Activity")
+                Spacer()
+                Text("\(activityStore.entries.count) / 500")
+                    .font(.caption)
+                    .foregroundStyle(theme.textMuted)
+                if !activityStore.entries.isEmpty {
+                    Button("Clear") {
+                        activityStore.clear()
+                        actionStatus = "Live analytics activity cleared."
+                        actionStatusIsError = false
+                    }
+                    .buttonStyle(.borderless)
+                    .font(.caption)
                 }
-            }
-            .disabled(analytics == nil || isFlushing)
-
-            Button("Clear Live Activity", systemImage: "eraser") {
-                activityStore.clear()
-                actionStatus = "Live analytics activity cleared."
-                actionStatusIsError = false
-            }
-            .disabled(activityStore.entries.isEmpty)
-
-            Button("Reset Local State", systemImage: "trash", role: .destructive) {
-                resetConfirmationPresented = true
-            }
-
-            if let actionStatus {
-                Label(
-                    actionStatus,
-                    systemImage: actionStatusIsError
-                        ? "xmark.circle.fill"
-                        : "checkmark.circle.fill"
-                )
-                .font(.caption)
-                .foregroundStyle(actionStatusIsError ? theme.destructive : theme.success)
-                .textSelection(.enabled)
             }
         }
     }
@@ -510,7 +442,7 @@ struct FoundationDeveloperAnalyticsView: View {
     ) {
         guard storageMode != current else { return }
         onStorageModeChange?(storageMode)
-        actionStatus = "Switched storage mode to \(storageModeTitle(storageMode)) with a new analytics client."
+        actionStatus = "Switched storage mode to \(storageModeTitle(storageMode))."
         actionStatusIsError = false
     }
 
@@ -599,10 +531,6 @@ struct FoundationDeveloperAnalyticsView: View {
         return "\(Int(interval)) sec"
     }
 
-    private func byteCountLabel(_ bytes: Int) -> String {
-        ByteCountFormatter.string(fromByteCount: Int64(bytes), countStyle: .memory)
-    }
-
     private func dateLabel(_ date: Date?) -> String {
         guard let date else { return "None" }
         return timestampFormatter.string(from: date)
@@ -625,17 +553,11 @@ struct FoundationDeveloperAnalyticsView: View {
             "Developer override: \(snapshot.configuration.developerEnabledOverride.map { $0 ? "true" : "false" } ?? "configured")",
             "Storage mode: \(storageModeTitle(snapshot.configuration.storageMode))",
             "App ID: \(snapshot.configuration.appID)",
-            "App key: \(snapshot.configuration.appKey ?? "Not configured")",
-            "Server: \(snapshot.configuration.baseURL.absoluteString)",
             "Endpoint: \(snapshot.configuration.endpointURL.absoluteString)",
-            "Transport: \(snapshot.configuration.transportType)",
-            "State store: \(snapshot.configuration.stateStoreType)",
-            "State storage key: \(snapshot.configuration.stateStorageKey)",
-            "Keychain service: \(snapshot.configuration.keychainService)",
             "Installation ID: \(snapshot.runtime.installationID ?? "Not created")",
             "Active session: \(snapshot.runtime.activeSession)",
             "Last upload: \(dateLabel(snapshot.runtime.lastUploadAt))",
-            "Next automatic attempt: \(dateLabel(snapshot.runtime.nextUploadAttemptAt))",
+            "Next attempt: \(dateLabel(snapshot.runtime.nextUploadAttemptAt))",
             ""
         ]
 

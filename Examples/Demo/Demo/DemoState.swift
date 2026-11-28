@@ -4,8 +4,6 @@ import Observation
 @MainActor
 @Observable
 final class DemoState {
-    var useMockData = false
-    var showTips = true
     var compactCards = false
     var analyticsEnabled = true
     var analyticsStorageMode: AppAnalyticsStorageMode = .persisted
@@ -18,8 +16,6 @@ final class DemoState {
     }
 
     func reset() {
-        useMockData = false
-        showTips = true
         compactCards = false
         analyticsEnabled = true
         analyticsStorageMode = .persisted
