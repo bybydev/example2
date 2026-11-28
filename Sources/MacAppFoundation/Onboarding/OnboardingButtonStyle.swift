@@ -2,17 +2,14 @@ import SwiftUI
 
 /// A framework-owned button style for onboarding actions.
 ///
-/// The style uses explicit sizing, padding, shape, and pressed-state treatment so
-/// onboarding controls stay visually consistent across supported macOS releases.
+/// The style uses explicit sizing, padding, shape, hover, and pressed-state
+/// treatment so onboarding controls stay visually consistent across supported
+/// macOS releases.
 public struct OnboardingButtonStyle: ButtonStyle {
     public enum Prominence: Sendable, Equatable {
         case secondary
         case primary
     }
-
-    @Environment(\.isEnabled) private var isEnabled
-    @Environment(\.macAppTheme) private var theme
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private let prominence: Prominence
 
@@ -21,27 +18,70 @@ public struct OnboardingButtonStyle: ButtonStyle {
     }
 
     public func makeBody(configuration: Configuration) -> some View {
+        OnboardingButtonStyleBody(
+            label: configuration.label,
+            prominence: prominence,
+            isPressed: configuration.isPressed
+        )
+    }
+}
+
+private struct OnboardingButtonStyleBody<Label: View>: View {
+    let label: Label
+    let prominence: OnboardingButtonStyle.Prominence
+    let isPressed: Bool
+
+    @Environment(\.isEnabled) private var isEnabled
+    @Environment(\.macAppTheme) private var theme
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var isHovering = false
+
+    var body: some View {
         let shape = RoundedRectangle(cornerRadius: 7, style: .continuous)
 
-        configuration.label
-            .font(.system(size: 13, weight: .medium))
+        label
+            .font(.system(size: 13, weight: prominence == .primary ? .semibold : .medium))
             .lineLimit(1)
             .foregroundStyle(foregroundColor)
+            .tint(foregroundColor)
             .padding(.horizontal, 14)
             .frame(minHeight: 30)
             .background {
-                shape.fill(backgroundColor(isPressed: configuration.isPressed))
+                shape.fill(backgroundColor)
             }
             .overlay {
                 shape.strokeBorder(borderColor, lineWidth: 1)
             }
             .contentShape(shape)
             .opacity(isEnabled ? 1 : 0.55)
-            .scaleEffect(configuration.isPressed && !reduceMotion ? 0.98 : 1)
+            .scaleEffect(isPressed && isEnabled && !reduceMotion ? 0.98 : 1)
+            .onHover { hovering in
+                guard isEnabled else {
+                    isHovering = false
+                    return
+                }
+
+                if reduceMotion {
+                    isHovering = hovering
+                } else {
+                    withAnimation(.easeOut(duration: 0.12)) {
+                        isHovering = hovering
+                    }
+                }
+            }
+            .onChange(of: isEnabled) { _, enabled in
+                if !enabled {
+                    isHovering = false
+                }
+            }
             .animation(
                 reduceMotion ? nil : .easeOut(duration: 0.08),
-                value: configuration.isPressed
+                value: isPressed
             )
+    }
+
+    private var effectiveHover: Bool {
+        isHovering && isEnabled
     }
 
     private var foregroundColor: Color {
@@ -53,19 +93,23 @@ public struct OnboardingButtonStyle: ButtonStyle {
         }
     }
 
-    private func backgroundColor(isPressed: Bool) -> Color {
+    private var backgroundColor: Color {
         switch prominence {
         case .secondary:
-            isPressed ? theme.selection : theme.surfaceRaised
+            if isPressed && isEnabled { return theme.selection }
+            if effectiveHover { return theme.selection.opacity(0.72) }
+            return theme.surfaceRaised
         case .primary:
-            theme.accent.opacity(isPressed ? 0.84 : 1)
+            if isPressed && isEnabled { return theme.accent.opacity(0.84) }
+            if effectiveHover { return theme.accent.opacity(0.9) }
+            return theme.accent
         }
     }
 
     private var borderColor: Color {
         switch prominence {
         case .secondary:
-            theme.border
+            effectiveHover ? theme.accent.opacity(0.45) : theme.border
         case .primary:
             .clear
         }
