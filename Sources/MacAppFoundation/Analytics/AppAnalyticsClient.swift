@@ -79,6 +79,7 @@ public actor AppAnalyticsClient {
         static let maxBodyBytes = 32 * 1024
         static let sessionTimeout: TimeInterval = 30 * 60
         static let defaultRateLimitBackoff: TimeInterval = 60
+        static let maxRateLimitBackoff: TimeInterval = 24 * 60 * 60
     }
 
     private struct EventState: Codable, Sendable {
@@ -241,6 +242,9 @@ public actor AppAnalyticsClient {
     /// when it starts and refuses to write or upload once it no longer matches, so a
     /// disable (even one immediately followed by a re-enable) fences off in-flight work.
     private var enablementGeneration: UInt64 = 0
+    /// Incremented whenever local state is explicitly reset so an in-flight upload
+    /// started before the reset cannot write stale bookkeeping back into the store.
+    private var stateResetGeneration: UInt64 = 0
 
     #if DEBUG
     private var developerEnabledOverride: Bool? = nil
@@ -502,8 +506,9 @@ public actor AppAnalyticsClient {
         scheduleAutomaticFlush()
     }
 
-    public func applicationDidBecomeActive(at timestamp: Date = Date()) async throws {
+    public func applicationDidBecomeActive(at timestamp: Date? = nil) async throws {
         guard effectiveEnabled else { return }
+        let timestamp = timestamp ?? now()
         let generation = enablementGeneration
         await acquireStateAccess()
         guard isCurrent(generation) else {
@@ -574,8 +579,9 @@ public actor AppAnalyticsClient {
         scheduleAutomaticFlush()
     }
 
-    public func applicationWillResignActive(at timestamp: Date = Date()) async throws {
+    public func applicationWillResignActive(at timestamp: Date? = nil) async throws {
         guard effectiveEnabled else { return }
+        let timestamp = timestamp ?? now()
         let generation = enablementGeneration
         await acquireStateAccess()
         guard isCurrent(generation) else {
@@ -628,16 +634,27 @@ public actor AppAnalyticsClient {
             await automaticUploadTask.value
         }
 
+        await acquireUploadSlot()
+        defer { releaseUploadSlot() }
+        guard isCurrent(generation) else {
+            #if DEBUG
+            developerRecord(.upload, title: "Explicit flush abandoned", detail: "Analytics disabled")
+            #endif
+            return
+        }
+
         #if DEBUG
         developerRecord(.upload, title: "Explicit flush started")
         #endif
 
-        await acquireUploadSlot()
-        defer { releaseUploadSlot() }
         do {
             try await performFlush(at: now(), force: true, generation: generation)
             #if DEBUG
-            developerRecord(.upload, title: "Explicit flush completed")
+            if isCurrent(generation) {
+                developerRecord(.upload, title: "Explicit flush completed")
+            } else {
+                developerRecord(.upload, title: "Explicit flush abandoned", detail: "Analytics disabled")
+            }
             #endif
         } catch {
             #if DEBUG
@@ -716,6 +733,7 @@ public actor AppAnalyticsClient {
 
     public func resetLocalState() async throws {
         await acquireStateAccess()
+        stateResetGeneration &+= 1
         do {
             try await stateStore.remove()
             #if DEBUG
@@ -869,6 +887,7 @@ public actor AppAnalyticsClient {
 
         let currentDay = prepared.currentDay
         let batches = prepared.batches
+        let resetGeneration = prepared.resetGeneration
         // Never create or read an installation identity on behalf of disabled analytics.
         guard isCurrent(generation) else { return }
         let installationID = try await installationID()
@@ -880,7 +899,12 @@ public actor AppAnalyticsClient {
                 // A disable while a previous batch (or the identity lookup) was suspended
                 // stops the upload here: no further batches and no state merge.
                 guard isCurrent(generation) else { return }
-                try await send(batch, installationID: installationID)
+                let sent = try await send(
+                    batch,
+                    installationID: installationID,
+                    generation: generation
+                )
+                guard sent else { return }
                 acceptedHistoricalDays.formUnion(
                     batch.days.lazy.map(\.day).filter { $0 != currentDay }
                 )
@@ -896,7 +920,8 @@ public actor AppAnalyticsClient {
                 completedAt: completionTimestamp,
                 retryDate: retryDate,
                 succeeded: false,
-                generation: generation
+                generation: generation,
+                resetGeneration: resetGeneration
             )
             throw error
         }
@@ -906,7 +931,8 @@ public actor AppAnalyticsClient {
             completedAt: now(),
             retryDate: nil,
             succeeded: true,
-            generation: generation
+            generation: generation,
+            resetGeneration: resetGeneration
         )
     }
 
@@ -914,12 +940,13 @@ public actor AppAnalyticsClient {
         at timestamp: Date,
         force: Bool,
         generation: UInt64
-    ) async throws -> (batches: [Batch], currentDay: String)? {
+    ) async throws -> (batches: [Batch], currentDay: String, resetGeneration: UInt64)? {
         await acquireStateAccess()
         guard isCurrent(generation) else {
             releaseStateAccess()
             return nil
         }
+        let resetGeneration = stateResetGeneration
         do {
             var snapshot = try await loadState()
             pruneExpiredDays(in: &snapshot, relativeTo: timestamp)
@@ -964,7 +991,7 @@ public actor AppAnalyticsClient {
             // batches are immutable upload input and the local-state gate is released here.
             try await saveState(snapshot, generation: generation)
             releaseStateAccess()
-            return (batches, currentDay)
+            return (batches, currentDay, resetGeneration)
         } catch {
             releaseStateAccess()
             throw error
@@ -976,12 +1003,13 @@ public actor AppAnalyticsClient {
         completedAt timestamp: Date,
         retryDate: Date?,
         succeeded: Bool,
-        generation: UInt64
+        generation: UInt64,
+        resetGeneration: UInt64
     ) async throws {
         await acquireStateAccess()
-        // Local state was cleared by a disable while the request was in flight. Merging
-        // now would resurrect upload bookkeeping, so the result is dropped.
-        guard isCurrent(generation) else {
+        // Local state was cleared by a disable or explicit reset while the request was
+        // in flight. Merging now would resurrect upload bookkeeping, so drop the result.
+        guard isCurrent(generation), resetGeneration == stateResetGeneration else {
             releaseStateAccess()
             return
         }
@@ -1009,7 +1037,11 @@ public actor AppAnalyticsClient {
         }
     }
 
-    private func send(_ batch: Batch, installationID: String) async throws {
+    private func send(
+        _ batch: Batch,
+        installationID: String,
+        generation: UInt64
+    ) async throws -> Bool {
         let body = try encoder.encode(batch)
         guard body.count <= Limits.maxBodyBytes else {
             throw AppAnalyticsError.invalidConfiguration(
@@ -1046,6 +1078,11 @@ public actor AppAnalyticsClient {
 
         var transportAttempts = 0
         while true {
+            try Task.checkCancellation()
+            guard isCurrent(generation) else {
+                return false
+            }
+
             do {
                 let (data, response) = try await transport.data(for: request)
                 guard (200..<300).contains(response.statusCode) else {
@@ -1073,7 +1110,7 @@ public actor AppAnalyticsClient {
                     detail: "request=\(batch.requestId) · days=\(decoded.acceptedDays.joined(separator: ","))"
                 )
                 #endif
-                return
+                return true
             } catch is CancellationError {
                 throw CancellationError()
             } catch let error as URLError where error.code == .cancelled {
@@ -1081,6 +1118,8 @@ public actor AppAnalyticsClient {
             } catch let error as AppAnalyticsError {
                 switch error {
                 case .transport where transportAttempts < configuration.transportRetryCount:
+                    try Task.checkCancellation()
+                    guard isCurrent(generation) else { return false }
                     transportAttempts += 1
                     #if DEBUG
                     developerRecord(
@@ -1095,6 +1134,8 @@ public actor AppAnalyticsClient {
                 }
             } catch {
                 if transportAttempts < configuration.transportRetryCount {
+                    try Task.checkCancellation()
+                    guard isCurrent(generation) else { return false }
                     transportAttempts += 1
                     #if DEBUG
                     developerRecord(
@@ -1137,7 +1178,7 @@ public actor AppAnalyticsClient {
         do {
             try Task.checkCancellation()
             let value: String
-            if let stored = try await secureStore.string(for: account) {
+            if let stored = try await secureStore.string(for: account), !stored.isEmpty {
                 value = stored
             } else {
                 let generated = UUID().uuidString.lowercased()
@@ -1145,7 +1186,8 @@ public actor AppAnalyticsClient {
                     try await secureStore.set(generated, for: account)
                     value = generated
                 } catch {
-                    if let racedValue = try? await secureStore.string(for: account) {
+                    if let racedValue = try? await secureStore.string(for: account),
+                       !racedValue.isEmpty {
                         value = racedValue
                     } else {
                         throw error
@@ -1156,6 +1198,9 @@ public actor AppAnalyticsClient {
             return value
         } catch {
             await AppAnalyticsInstallationGate.shared.release(gateKey)
+            if error is CancellationError {
+                throw error
+            }
             if let analyticsError = error as? AppAnalyticsError {
                 throw analyticsError
             }
@@ -1294,61 +1339,71 @@ public actor AppAnalyticsClient {
                     return BatchEvent(name: event.name, dimension: event.dimension, count: count)
                 }
 
+            var remainingErrorOccurrences = Limits.maxTotalErrorCountPerDay
             let errors = (day.errors ?? [:]).values
                 .sorted {
                     if $0.code != $1.code { return $0.code < $1.code }
                     if $0.component != $1.component { return $0.component < $1.component }
                     return $0.severity.rawValue < $1.severity.rawValue
                 }
-                .map {
-                    BatchError(
-                        code: $0.code,
-                        component: $0.component,
-                        severity: $0.severity,
-                        count: min(max(0, $0.count), Limits.maxTotalErrorCountPerDay)
+                .prefix(Limits.maxErrorsPerDay)
+                .compactMap { error -> BatchError? in
+                    guard remainingErrorOccurrences > 0 else { return nil }
+                    let count = min(max(0, error.count), remainingErrorOccurrences)
+                    guard count > 0 else { return nil }
+                    remainingErrorOccurrences -= count
+                    return BatchError(
+                        code: error.code,
+                        component: error.component,
+                        severity: error.severity,
+                        count: count
                     )
                 }
-                .filter { $0.count > 0 }
 
             guard events.count <= Limits.maxEventsPerDay else {
                 throw AppAnalyticsError.invalidConfiguration(
                     "Stored analytics exceeds the per-day event-counter limit."
                 )
             }
-            guard errors.count <= Limits.maxErrorsPerDay,
-                  errors.reduce(0, { $0 + $1.count }) <= Limits.maxTotalErrorCountPerDay else {
-                throw AppAnalyticsError.invalidConfiguration(
-                    "Stored analytics exceeds the per-day error limits."
-                )
-            }
 
-            if !pending.isEmpty,
-               (pending.count >= Limits.maxDaysPerBatch
-                || pendingEventCounters + events.count > Limits.maxEventCountersPerBatch
-                || pendingErrorCounters + errors.count > Limits.maxErrorCountersPerBatch) {
-                finishPending()
-            }
-
-            pending.append(
-                BatchDay(
-                    day: key,
-                    appVersion: day.appVersion,
-                    osVersion: day.osVersion,
-                    appBuild: day.appBuild,
-                    deviceFamily: day.deviceFamily,
-                    architecture: day.architecture,
-                    sessions: min(day.sessions, Limits.maxSessionsPerDay),
-                    sessionSeconds: min(day.sessionSeconds, Limits.maxSessionSecondsPerDay),
-                    events: events,
-                    errors: errors
-                )
+            let batchDay = BatchDay(
+                day: key,
+                appVersion: day.appVersion,
+                osVersion: day.osVersion,
+                appBuild: day.appBuild,
+                deviceFamily: day.deviceFamily,
+                architecture: day.architecture,
+                sessions: min(day.sessions, Limits.maxSessionsPerDay),
+                sessionSeconds: min(day.sessionSeconds, Limits.maxSessionSecondsPerDay),
+                events: events,
+                errors: errors
             )
+
+            if !pending.isEmpty {
+                let exceedsCountLimits = pending.count >= Limits.maxDaysPerBatch
+                    || pendingEventCounters + events.count > Limits.maxEventCountersPerBatch
+                    || pendingErrorCounters + errors.count > Limits.maxErrorCountersPerBatch
+                if exceedsCountLimits
+                    || (try encodedByteCount(for: pending + [batchDay])) > Limits.maxBodyBytes {
+                    finishPending()
+                }
+            }
+
+            pending.append(batchDay)
             pendingEventCounters += events.count
             pendingErrorCounters += errors.count
         }
 
         finishPending()
         return result
+    }
+
+    private func encodedByteCount(for days: [BatchDay]) throws -> Int {
+        let candidate = Batch(
+            requestId: "native-00000000-0000-0000-0000-000000000000",
+            days: days
+        )
+        return try encoder.encode(candidate).count
     }
 
     private func resolvedAppVersion() -> String? {
@@ -1422,7 +1477,7 @@ public actor AppAnalyticsClient {
         }
     }
 
-    private static func automaticRetryDate(for error: Error, relativeTo timestamp: Date) -> Date? {
+    static func automaticRetryDate(for error: Error, relativeTo timestamp: Date) -> Date? {
         guard let analyticsError = error as? AppAnalyticsError else { return nil }
         guard case .server(let code, _, let retryAfter) = analyticsError,
               code == "rate_limited" || code == "http_429" else { return nil }
@@ -1430,8 +1485,9 @@ public actor AppAnalyticsClient {
         let seconds: TimeInterval
         if let retryAfter,
            let parsed = TimeInterval(retryAfter.trimmingCharacters(in: .whitespacesAndNewlines)),
+           parsed.isFinite,
            parsed >= 0 {
-            seconds = parsed
+            seconds = min(parsed, Limits.maxRateLimitBackoff)
         } else {
             seconds = Limits.defaultRateLimitBackoff
         }
@@ -1479,11 +1535,15 @@ public actor AppAnalyticsClient {
         JSONDecoder()
     }
 
-    private static var utcCalendar: Calendar {
+    private static let utcCalendar: Calendar = {
         var calendar = Calendar(identifier: .gregorian)
         calendar.timeZone = TimeZone(secondsFromGMT: 0)!
         return calendar
-    }
+    }()
+
+    private static let nativeVersionExtraScalars: Set<UInt32> = [46, 95, 43, 45]
+    private static let dimensionExtraScalars: Set<UInt32> = [46, 95, 58, 47, 43, 45]
+    private static let appVersionExtraScalars: Set<UInt32> = [46, 95, 43, 40, 41, 45]
 
     private static func dayKey(for date: Date) -> String {
         let components = utcCalendar.dateComponents([.year, .month, .day], from: date)
@@ -1521,9 +1581,8 @@ public actor AppAnalyticsClient {
               value.count <= Limits.maxNativeContextLength,
               let first = value.unicodeScalars.first,
               isAlphaNumericASCII(first) else { return nil }
-        let extra: Set<UInt32> = [46, 95, 43, 45]
         guard value.unicodeScalars.dropFirst().allSatisfy({
-            isAlphaNumericASCII($0) || extra.contains($0.value)
+            isAlphaNumericASCII($0) || nativeVersionExtraScalars.contains($0.value)
         }) else { return nil }
         return value
     }
@@ -1570,9 +1629,8 @@ public actor AppAnalyticsClient {
         guard !value.isEmpty,
               let first = value.unicodeScalars.first,
               isAlphaNumericASCII(first) else { return false }
-        let extra: Set<UInt32> = [46, 95, 58, 47, 43, 45]
         return value.unicodeScalars.dropFirst().allSatisfy {
-            isAlphaNumericASCII($0) || extra.contains($0.value)
+            isAlphaNumericASCII($0) || dimensionExtraScalars.contains($0.value)
         }
     }
 
@@ -1580,9 +1638,8 @@ public actor AppAnalyticsClient {
         guard !value.isEmpty,
               let first = value.unicodeScalars.first,
               isAlphaNumericASCII(first) else { return false }
-        let extra: Set<UInt32> = [46, 95, 43, 40, 41, 45]
         return value.unicodeScalars.dropFirst().allSatisfy {
-            isAlphaNumericASCII($0) || extra.contains($0.value)
+            isAlphaNumericASCII($0) || appVersionExtraScalars.contains($0.value)
         }
     }
 

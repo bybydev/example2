@@ -798,3 +798,212 @@ private func analyticsReliabilityDays(_ request: URLRequest) throws -> [[String:
     let names = Set(latestEvents.compactMap { $0["name"] as? String })
     #expect(names == ["after_reenable"])
 }
+
+private actor BlockingFailureAnalyticsTransport: AppAnalyticsTransport {
+    private let failFromRequestIndex: Int
+    private var requests: [URLRequest] = []
+    private var released = false
+
+    init(failFromRequestIndex: Int = 1) {
+        self.failFromRequestIndex = failFromRequestIndex
+    }
+
+    func data(for request: URLRequest) async throws -> (Data, HTTPURLResponse) {
+        requests.append(request)
+        let index = requests.count
+        if index < failFromRequestIndex {
+            let body = try analyticsReliabilityRequestBody(request)
+            let requestID = try #require(body["requestId"] as? String)
+            let days = try #require(body["days"] as? [[String: Any]])
+            let acceptedDays = days.compactMap { $0["day"] as? String }
+            let payload: [String: Any] = [
+                "ok": true,
+                "requestId": requestID,
+                "acceptedDays": acceptedDays,
+            ]
+            return (
+                try JSONSerialization.data(withJSONObject: payload),
+                HTTPURLResponse(
+                    url: request.url!,
+                    statusCode: 200,
+                    httpVersion: nil,
+                    headerFields: nil
+                )!
+            )
+        }
+        if index == failFromRequestIndex {
+            while !released {
+                await Task.yield()
+            }
+        }
+        throw URLError(.networkConnectionLost)
+    }
+
+    func waitForRequestCount(_ expected: Int) async {
+        while requests.count < expected {
+            await Task.yield()
+        }
+    }
+
+    func release() {
+        released = true
+    }
+
+    func requestCount() -> Int {
+        requests.count
+    }
+}
+
+@Test func disablingDuringFailingFlushFencesOffTransportRetries() async throws {
+    let transport = BlockingFailureAnalyticsTransport(failFromRequestIndex: 2)
+    let store = ReliabilityMemoryAnalyticsStateStore()
+    let client = AppAnalyticsClient(
+        configuration: analyticsReliabilityConfiguration(
+            uploadInterval: 86_400,
+            transportRetryCount: 2
+        ),
+        transport: transport,
+        stateStore: store,
+        now: { analyticsReliabilityDate("2026-09-05T10:00:00Z") }
+    )
+
+    try await client.track("retry_fenced_event")
+    await client.waitForAutomaticUpload()
+    #expect(await transport.requestCount() == 1)
+
+    let flushTask = Task {
+        try? await client.flush()
+    }
+    await transport.waitForRequestCount(2)
+
+    await client.setEnabled(false)
+    await transport.release()
+    await flushTask.value
+
+    #expect(await transport.requestCount() == 2)
+    #expect(try await store.load() == nil)
+}
+
+@Test func resetLocalStateDuringInFlightUploadPreventsStaleMetadataMerge() async throws {
+    let transport = BlockingAnalyticsTransport(firstOutcome: .success)
+    let store = ReliabilityMemoryAnalyticsStateStore()
+    let client = AppAnalyticsClient(
+        configuration: analyticsReliabilityConfiguration(uploadInterval: 86_400),
+        transport: transport,
+        stateStore: store,
+        now: { analyticsReliabilityDate("2026-09-05T10:00:00Z") }
+    )
+
+    try await client.track("before_reset")
+    await transport.waitForRequestCount(1)
+
+    try await client.resetLocalState()
+    await transport.releaseFirstRequest()
+    await client.waitForAutomaticUpload()
+
+    #expect(try await store.load() == nil)
+    #expect(try await client.pendingDayCount() == 0)
+}
+
+@Test func retryAfterRejectsNonFiniteAndClampsHugeValues() {
+    let now = analyticsReliabilityDate("2026-09-05T10:00:00Z")
+
+    let infError = AppAnalyticsError.server(
+        code: "rate_limited",
+        message: "Slow down",
+        retryAfter: "inf"
+    )
+    #expect(
+        AppAnalyticsClient.automaticRetryDate(for: infError, relativeTo: now)
+            == now.addingTimeInterval(60)
+    )
+
+    let nanError = AppAnalyticsError.server(
+        code: "http_429",
+        message: "Too many requests",
+        retryAfter: "nan"
+    )
+    #expect(
+        AppAnalyticsClient.automaticRetryDate(for: nanError, relativeTo: now)
+            == now.addingTimeInterval(60)
+    )
+
+    let hugeError = AppAnalyticsError.server(
+        code: "rate_limited",
+        message: "Slow down",
+        retryAfter: "99999999"
+    )
+    #expect(
+        AppAnalyticsClient.automaticRetryDate(for: hugeError, relativeTo: now)
+            == now.addingTimeInterval(24 * 60 * 60)
+    )
+}
+
+@Test func lifecycleMethodsDefaultToInjectedClock() async throws {
+    let clock = AnalyticsReliabilityClock(analyticsReliabilityDate("2026-09-05T10:00:00Z"))
+    let transport = ScriptedAnalyticsTransport()
+    let client = AppAnalyticsClient(
+        configuration: analyticsReliabilityConfiguration(uploadInterval: 86_400),
+        transport: transport,
+        stateStore: ReliabilityMemoryAnalyticsStateStore(),
+        now: { clock.now() }
+    )
+
+    try await client.applicationDidBecomeActive()
+    clock.advance(by: 300)
+    try await client.applicationWillResignActive()
+    await client.waitForAutomaticUpload()
+    try await client.flush()
+
+    let request = try #require(await transport.capturedRequests().last)
+    let day = try #require(analyticsReliabilityDays(request).first)
+    #expect(day["day"] as? String == "2026-09-05")
+    #expect(day["sessions"] as? Int == 1)
+    #expect(day["sessionSeconds"] as? Int == 300)
+}
+
+@Test func batchesSplitWhenEncodedPayloadWouldExceedServerByteLimit() async throws {
+    let clock = AnalyticsReliabilityClock(analyticsReliabilityDate("2026-09-01T10:00:00Z"))
+    let transport = ScriptedAnalyticsTransport()
+    let store = ReliabilityMemoryAnalyticsStateStore()
+    let client = AppAnalyticsClient(
+        configuration: analyticsReliabilityConfiguration(uploadInterval: 10 * 24 * 60 * 60),
+        transport: transport,
+        stateStore: store,
+        now: { clock.now() }
+    )
+
+    let longDimension = String(repeating: "d", count: 64)
+    let longComponent = String(repeating: "c", count: 48)
+    let eventSuffix = String(repeating: "e", count: 39)
+    let errorSuffix = String(repeating: "x", count: 39)
+
+    for dayOffset in 0..<7 {
+        clock.set(
+            analyticsReliabilityDate("2026-09-01T10:00:00Z")
+                .addingTimeInterval(TimeInterval(dayOffset * 86_400))
+        )
+        for eventIndex in 0..<14 {
+            let padded = eventIndex < 10 ? "0\(eventIndex)" : "\(eventIndex)"
+            try await client.track("event_\(padded)_\(eventSuffix)", dimension: longDimension)
+            if dayOffset == 0 && eventIndex == 0 {
+                await client.waitForAutomaticUpload()
+            }
+        }
+        for errorIndex in 0..<20 {
+            let padded = errorIndex < 10 ? "0\(errorIndex)" : "\(errorIndex)"
+            try await client.trackError("error_\(padded)_\(errorSuffix)", component: longComponent)
+        }
+    }
+    await client.waitForAutomaticUpload()
+
+    let beforeFlushCount = await transport.requestCount()
+    try await client.flush()
+
+    let requests = Array((await transport.capturedRequests()).dropFirst(beforeFlushCount))
+    #expect(requests.count >= 2)
+    for request in requests {
+        let body = try #require(request.httpBody)
+        #expect(body.count <= 32 * 1024)
+    }
+}

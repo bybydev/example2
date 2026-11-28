@@ -44,9 +44,7 @@ public struct AppAnalyticsConfiguration: Sendable {
         self.appID = appID
         self.appKey = appKey
         self.enabled = enabled
-        self.baseURL = ProcessInfo.processInfo.environment["CI"] == nil
-            ? baseURL
-            : URL(string: "http://localhost:1")!
+        self.baseURL = baseURL
         self.keychainService = keychainService
         self.stateStorageKey = stateStorageKey
             ?? "com.hoangbkit.MacAppFoundation.analytics.\(appID)"
