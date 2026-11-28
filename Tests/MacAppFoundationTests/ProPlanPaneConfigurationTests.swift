@@ -16,7 +16,9 @@ final class ProPlanPaneConfigurationTests: XCTestCase {
             "You have access to Demo Pro features."
         )
         XCTAssertEqual(configuration.upgradeButtonTitle, "Upgrade to Pro")
+        XCTAssertEqual(configuration.viewPlansButtonTitle, "View Plans")
         XCTAssertEqual(configuration.manageSubscriptionTitle, "Manage Subscription")
+        XCTAssertEqual(configuration.restorePurchasesTitle, "Restore Purchases")
         XCTAssertEqual(
             configuration.manageSubscriptionURL.absoluteString,
             "https://apps.apple.com/account/subscriptions"
@@ -41,7 +43,9 @@ final class ProPlanPaneConfigurationTests: XCTestCase {
             freeDescription: "Starter access",
             proDescription: "Everything unlocked",
             upgradeButtonTitle: "See Plans",
+            viewPlansButtonTitle: "Compare Plans",
             manageSubscriptionTitle: "Manage Plan",
+            restorePurchasesTitle: "Recover Purchases",
             manageSubscriptionURL: manageURL,
             features: [feature]
         )
@@ -51,7 +55,9 @@ final class ProPlanPaneConfigurationTests: XCTestCase {
         XCTAssertEqual(configuration.freeDescription, "Starter access")
         XCTAssertEqual(configuration.proDescription, "Everything unlocked")
         XCTAssertEqual(configuration.upgradeButtonTitle, "See Plans")
+        XCTAssertEqual(configuration.viewPlansButtonTitle, "Compare Plans")
         XCTAssertEqual(configuration.manageSubscriptionTitle, "Manage Plan")
+        XCTAssertEqual(configuration.restorePurchasesTitle, "Recover Purchases")
         XCTAssertEqual(configuration.manageSubscriptionURL, manageURL)
         XCTAssertEqual(configuration.features, [feature])
     }

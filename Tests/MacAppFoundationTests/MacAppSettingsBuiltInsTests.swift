@@ -275,7 +275,63 @@ struct MacAppSettingsBuiltInsTests {
     }
 
     @MainActor
-    @Test("Plan pane actions match free, subscription, lifetime, and mixed entitlements")
+    @Test("Plan pane badge shows known plan label and omits redundant or unloaded badges")
+    func planPaneBadgeLabel() {
+        let monthly = StoreProduct(
+            id: "pro.monthly",
+            displayName: "Monthly",
+            description: "",
+            displayPrice: "$4.99",
+            price: 4.99,
+            subscriptionPeriod: .init(value: 1, unit: .month)
+        )
+        let lifetime = StoreProduct(
+            id: "pro.lifetime",
+            displayName: "Lifetime",
+            description: "",
+            displayPrice: "$79.99",
+            price: 79.99
+        )
+
+        #expect(
+            ProPlanPanePresentationState.planBadgeLabel(
+                hasPro: false,
+                activeProduct: monthly,
+                proTitle: "Pro"
+            ) == nil
+        )
+        #expect(
+            ProPlanPanePresentationState.planBadgeLabel(
+                hasPro: true,
+                activeProduct: nil,
+                proTitle: "Pro"
+            ) == nil
+        )
+        #expect(
+            ProPlanPanePresentationState.planBadgeLabel(
+                hasPro: true,
+                activeProduct: monthly,
+                proTitle: "Pro"
+            ) == "MONTHLY"
+        )
+        #expect(
+            ProPlanPanePresentationState.planBadgeLabel(
+                hasPro: true,
+                activeProduct: lifetime,
+                proTitle: "Pro"
+            ) == "LIFETIME"
+        )
+        #expect(
+            ProPlanPanePresentationState.planBadgeLabel(
+                hasPro: true,
+                activeProduct: lifetime,
+                proTitle: "Lifetime"
+            ) == nil
+        )
+    }
+
+    @MainActor
+    @Test("Plan pane actions match free, subscription, lifetime, offline, and mixed entitlements")
     func planPaneActions() {
         let monthly = StoreProduct(
             id: "pro.monthly",
@@ -301,6 +357,16 @@ struct MacAppSettingsBuiltInsTests {
         #expect(free.showsUpgrade)
         #expect(!free.showsViewPlans)
         #expect(!free.showsManageSubscription)
+        #expect(free.upgradeButtonKind == .primary)
+        #expect(free.restoreButtonKind == .quiet)
+
+        let freeWithStaleSubscription = ProPlanPaneActionState(
+            hasPro: false,
+            activeProduct: nil,
+            activeSubscriptionProduct: monthly
+        )
+        #expect(freeWithStaleSubscription.showsUpgrade)
+        #expect(!freeWithStaleSubscription.showsManageSubscription)
 
         let subscription = ProPlanPaneActionState(
             hasPro: true,
@@ -310,6 +376,9 @@ struct MacAppSettingsBuiltInsTests {
         #expect(!subscription.showsUpgrade)
         #expect(subscription.showsViewPlans)
         #expect(subscription.showsManageSubscription)
+        #expect(subscription.viewPlansButtonKind == .secondary)
+        #expect(subscription.manageSubscriptionButtonKind == .secondary)
+        #expect(subscription.restoreButtonKind == .quiet)
 
         let lifetimeOnly = ProPlanPaneActionState(
             hasPro: true,
@@ -319,6 +388,17 @@ struct MacAppSettingsBuiltInsTests {
         #expect(!lifetimeOnly.showsUpgrade)
         #expect(!lifetimeOnly.showsViewPlans)
         #expect(!lifetimeOnly.showsManageSubscription)
+        #expect(lifetimeOnly.restoreButtonKind == .secondary)
+
+        let offlinePro = ProPlanPaneActionState(
+            hasPro: true,
+            activeProduct: nil,
+            activeSubscriptionProduct: nil
+        )
+        #expect(!offlinePro.showsUpgrade)
+        #expect(!offlinePro.showsViewPlans)
+        #expect(!offlinePro.showsManageSubscription)
+        #expect(offlinePro.restoreButtonKind == .secondary)
 
         let lifetimeAndSubscription = ProPlanPaneActionState(
             hasPro: true,
@@ -328,5 +408,7 @@ struct MacAppSettingsBuiltInsTests {
         #expect(!lifetimeAndSubscription.showsUpgrade)
         #expect(!lifetimeAndSubscription.showsViewPlans)
         #expect(lifetimeAndSubscription.showsManageSubscription)
+        #expect(lifetimeAndSubscription.manageSubscriptionButtonKind == .secondary)
+        #expect(lifetimeAndSubscription.restoreButtonKind == .quiet)
     }
 }

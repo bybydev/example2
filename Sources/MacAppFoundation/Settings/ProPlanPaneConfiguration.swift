@@ -1,6 +1,6 @@
 import Foundation
 
-/// App-owned copy and links for the Spokio-style macOS Pro plan pane.
+/// App-owned copy and links for ``ProPlanPane``.
 public struct ProPlanPaneConfiguration: Sendable, Equatable {
     public let appName: String
     public let freeTitle: String

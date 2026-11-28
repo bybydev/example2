@@ -1,6 +1,7 @@
+import Foundation
 import SwiftUI
 
-/// A reusable macOS Plan pane adapted directly from Spokio's Settings UI.
+/// A reusable macOS Plan pane backed by ``PurchaseManager``.
 ///
 /// The consuming app owns its `Settings` scene, tab selection, General/About
 /// panes, and paywall presentation. MacAppFoundation owns only this reusable
@@ -8,10 +9,13 @@ import SwiftUI
 @MainActor
 public struct ProPlanPane: View {
     @Environment(\.macAppTheme) private var theme
+    @Environment(\.openURL) private var openURL
 
     private let purchaseManager: PurchaseManager
     private let configuration: ProPlanPaneConfiguration
     private let onUpgrade: () -> Void
+
+    @State private var restoreStatus: ProPlanPaneRestoreStatus?
 
     public init(
         purchaseManager: PurchaseManager,
@@ -25,122 +29,201 @@ public struct ProPlanPane: View {
 
     public var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            ZStack(alignment: .topTrailing) {
-                LinearGradient(
-                    colors: headerGradientColors,
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-
-                Group {
-                    switch presentationState {
-                    case .free:
-                        Image(systemName: "sparkles")
-                            .font(.system(size: 28))
-                            .foregroundStyle(theme.textSecondary)
-                    case .pro:
-                        Image(systemName: "checkmark.seal.fill")
-                            .font(.system(size: 28))
-                            .foregroundStyle(theme.accent)
-                    }
-                }
-                .padding(18)
-
-                VStack(alignment: .leading, spacing: 14) {
-                    HStack(alignment: .center, spacing: 10) {
-                        Text(planTitle)
-                            .font(.system(size: 30, weight: .bold, design: .rounded))
-                            .foregroundStyle(theme.textPrimary)
-
-                        if presentationState == .pro {
-                            Text(currentPlanLabel)
-                                .font(.system(size: 11, weight: .bold, design: .rounded))
-                                .padding(.horizontal, 10)
-                                .padding(.vertical, 5)
-                                .background(theme.surfaceRaised, in: Capsule())
-                                .overlay {
-                                    Capsule()
-                                        .stroke(theme.border, lineWidth: 0.5)
-                                }
-                                .foregroundStyle(theme.accent)
-                        }
-                    }
-
-                    Text(planDescription)
-                    .font(.system(size: 13, weight: .medium, design: .rounded))
-                    .foregroundStyle(theme.textSecondary)
-
-                    HStack(spacing: 4) {
-                        if actionState.showsUpgrade {
-                            Button(configuration.upgradeButtonTitle, action: onUpgrade)
-                                .buttonStyle(ProPlanActionButtonStyle(.primary))
-                        }
-
-                        if actionState.showsViewPlans {
-                            Button(configuration.viewPlansButtonTitle, action: onUpgrade)
-                                .buttonStyle(ProPlanActionButtonStyle(.primary))
-                        }
-
-                        if actionState.showsManageSubscription {
-                            Link(
-                                configuration.manageSubscriptionTitle,
-                                destination: configuration.manageSubscriptionURL
-                            )
-                            .buttonStyle(
-                                ProPlanActionButtonStyle(
-                                    hasVisibleActionBeforeManageSubscription ? .quiet : .primary
-                                )
-                            )
-                        }
-
-                        Button {
-                            Task {
-                                _ = await purchaseManager.restorePurchases()
-                            }
-                        } label: {
-                            if purchaseManager.isRestoring {
-                                HStack(spacing: 6) {
-                                    ProgressView()
-                                        .controlSize(.small)
-                                    Text("Restoring…")
-                                }
-                            } else {
-                                Text(configuration.restorePurchasesTitle)
-                            }
-                        }
-                        .buttonStyle(
-                            ProPlanActionButtonStyle(
-                                hasVisibleActionBeforeRestore ? .quiet : .primary
-                            )
-                        )
-                        .disabled(purchaseManager.isBusy || purchaseManager.isPurchasePending)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(14)
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-            .overlay {
-                RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .stroke(theme.border, lineWidth: 1)
-            }
+            headerCard
 
             if !resolvedFeatures.isEmpty {
                 ProPlanFeatureList(
                     features: resolvedFeatures,
                     presentationState: presentationState
                 )
-                .padding(14)
-                .background(theme.surface, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                .padding(16)
+                .background(
+                    theme.surface,
+                    in: RoundedRectangle(cornerRadius: 12, style: .continuous)
+                )
                 .overlay {
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
-                        .stroke(theme.border, lineWidth: 1)
+                        .strokeBorder(theme.border, lineWidth: 1)
                 }
             }
         }
-        .task {
+        .task(id: ObjectIdentifier(purchaseManager)) {
             await purchaseManager.prepare()
+        }
+        .onChange(of: purchaseManager.hasPro) { _, hasPro in
+            if hasPro, case .restored = restoreStatus {
+                return
+            }
+            restoreStatus = nil
+        }
+    }
+
+    private var headerCard: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(alignment: .top, spacing: 12) {
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack(alignment: .center, spacing: 10) {
+                        Text(planTitle)
+                            .font(.system(size: 28, weight: .bold))
+                            .foregroundStyle(theme.textPrimary)
+                            .accessibilityAddTraits(.isHeader)
+
+                        if let planBadgeLabel {
+                            Text(planBadgeLabel)
+                                .font(.system(size: 11, weight: .bold))
+                                .padding(.horizontal, 9)
+                                .padding(.vertical, 4)
+                                .background(theme.surfaceRaised, in: Capsule())
+                                .overlay {
+                                    Capsule()
+                                        .strokeBorder(theme.border, lineWidth: 0.75)
+                                }
+                                .foregroundStyle(theme.accent)
+                        }
+                    }
+
+                    Text(planDescription)
+                        .font(.system(size: 13))
+                        .foregroundStyle(theme.textSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+
+                Spacer(minLength: 8)
+
+                headerStatusIcon
+            }
+
+            actionRow
+
+            if let activeStatusBanner {
+                statusBannerView(activeStatusBanner)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(16)
+        .background {
+            LinearGradient(
+                colors: headerGradientColors,
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                .strokeBorder(theme.border, lineWidth: 1)
+        }
+    }
+
+    private var headerStatusIcon: some View {
+        Image(systemName: presentationState == .pro ? "checkmark.seal.fill" : "sparkles")
+            .font(.system(size: 26))
+            .foregroundStyle(presentationState == .pro ? theme.accent : theme.textSecondary)
+            .accessibilityHidden(true)
+    }
+
+    private var actionRow: some View {
+        HStack(spacing: 8) {
+            if actionState.showsUpgrade {
+                Button(configuration.upgradeButtonTitle, action: onUpgrade)
+                    .buttonStyle(MacAppButtonStyle(actionState.upgradeButtonKind))
+            }
+
+            if actionState.showsViewPlans {
+                Button(configuration.viewPlansButtonTitle, action: onUpgrade)
+                    .buttonStyle(MacAppButtonStyle(actionState.viewPlansButtonKind))
+            }
+
+            if actionState.showsManageSubscription {
+                Button {
+                    openURL(configuration.manageSubscriptionURL)
+                } label: {
+                    HStack(spacing: 5) {
+                        Text(configuration.manageSubscriptionTitle)
+                        Image(systemName: "arrow.up.right")
+                            .font(.system(size: 10, weight: .semibold))
+                            .accessibilityHidden(true)
+                    }
+                }
+                .buttonStyle(MacAppButtonStyle(actionState.manageSubscriptionButtonKind))
+                .accessibilityAddTraits(.isLink)
+            }
+
+            Button {
+                restorePurchases()
+            } label: {
+                if purchaseManager.isRestoring {
+                    HStack(spacing: 6) {
+                        ProgressView()
+                            .controlSize(.small)
+                        Text("Restoring…")
+                    }
+                } else {
+                    Text(configuration.restorePurchasesTitle)
+                }
+            }
+            .buttonStyle(MacAppButtonStyle(actionState.restoreButtonKind))
+            .disabled(purchaseManager.isBusy || purchaseManager.isPurchasePending)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private func statusBannerView(_ banner: ProPlanPaneStatusBanner) -> some View {
+        HStack(alignment: .firstTextBaseline, spacing: 6) {
+            Image(systemName: banner.systemImage)
+                .font(.system(size: 11, weight: .semibold))
+                .foregroundStyle(statusIconColor(for: banner.tone))
+                .accessibilityHidden(true)
+
+            Text(banner.message)
+                .font(.system(size: 12))
+                .foregroundStyle(statusTextColor(for: banner.tone))
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .accessibilityElement(children: .combine)
+    }
+
+    private func statusIconColor(for tone: ProPlanPaneStatusBanner.Tone) -> Color {
+        switch tone {
+        case .success:
+            theme.success
+        case .info:
+            theme.textSecondary
+        case .warning:
+            theme.warning
+        case .error:
+            theme.destructive
+        }
+    }
+
+    private func statusTextColor(for tone: ProPlanPaneStatusBanner.Tone) -> Color {
+        switch tone {
+        case .success, .info, .warning:
+            theme.textSecondary
+        case .error:
+            theme.destructive
+        }
+    }
+
+    private func restorePurchases() {
+        guard !purchaseManager.isBusy, !purchaseManager.isPurchasePending else {
+            return
+        }
+
+        restoreStatus = nil
+
+        Task {
+            switch await purchaseManager.restorePurchases() {
+            case .restored:
+                restoreStatus = .restored("Purchases restored.")
+            case .nothingToRestore:
+                restoreStatus = .info("No previous purchases were found.")
+            case .failed(let failure):
+                if failure.code != .userCancelled {
+                    restoreStatus = .error(failure.message)
+                }
+                purchaseManager.clearActivity()
+            }
         }
     }
 
@@ -165,14 +248,39 @@ public struct ProPlanPane: View {
         )
     }
 
-    private var hasVisibleActionBeforeManageSubscription: Bool {
-        actionState.showsUpgrade || actionState.showsViewPlans
-    }
+    private var activeStatusBanner: ProPlanPaneStatusBanner? {
+        if purchaseManager.isPurchasePending {
+            return ProPlanPaneStatusBanner(
+                tone: .warning,
+                systemImage: "clock.fill",
+                message: "A purchase is pending approval."
+            )
+        }
 
-    private var hasVisibleActionBeforeRestore: Bool {
-        actionState.showsUpgrade
-            || actionState.showsViewPlans
-            || actionState.showsManageSubscription
+        guard let restoreStatus else {
+            return nil
+        }
+
+        switch restoreStatus {
+        case .restored(let message):
+            return ProPlanPaneStatusBanner(
+                tone: .success,
+                systemImage: "checkmark.circle.fill",
+                message: message
+            )
+        case .info(let message):
+            return ProPlanPaneStatusBanner(
+                tone: .info,
+                systemImage: "info.circle",
+                message: message
+            )
+        case .error(let message):
+            return ProPlanPaneStatusBanner(
+                tone: .error,
+                systemImage: "exclamationmark.triangle.fill",
+                message: message
+            )
+        }
     }
 
     private var resolvedFeatures: [PurchaseFeature] {
@@ -197,66 +305,32 @@ public struct ProPlanPane: View {
         }
     }
 
-    private var currentPlanLabel: String {
-        purchaseManager.activeProduct?.planLabel.uppercased() ?? "PRO"
-    }
-}
-
-@MainActor
-private struct ProPlanActionButtonStyle: ButtonStyle {
-    enum Kind {
-        case primary
-        case quiet
-    }
-
-    @Environment(\.macAppTheme) private var theme
-
-    let kind: Kind
-
-    init(_ kind: Kind) {
-        self.kind = kind
-    }
-
-    func makeBody(configuration: Configuration) -> some View {
-        ProPlanActionButtonBody(
-            configuration: configuration,
-            kind: kind,
-            theme: theme
+    private var planBadgeLabel: String? {
+        ProPlanPanePresentationState.planBadgeLabel(
+            hasPro: purchaseManager.hasPro,
+            activeProduct: purchaseManager.activeProduct,
+            proTitle: configuration.proTitle
         )
     }
 }
 
-@MainActor
-private struct ProPlanActionButtonBody: View {
-    let configuration: ButtonStyle.Configuration
-    let kind: ProPlanActionButtonStyle.Kind
-    let theme: MacAppTheme
+private enum ProPlanPaneRestoreStatus: Equatable {
+    case restored(String)
+    case info(String)
+    case error(String)
+}
 
-    @State private var isHovering = false
-
-    var body: some View {
-        configuration.label
-            .font(.system(size: 13, weight: .medium, design: .rounded))
-            .foregroundStyle(kind == .primary ? theme.accent : theme.textSecondary)
-            .padding(.horizontal, 8)
-            .frame(minHeight: 32)
-            .background(
-                backgroundColor,
-                in: RoundedRectangle(cornerRadius: 8, style: .continuous)
-            )
-            .contentShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
-            .onHover { isHovering = $0 }
+private struct ProPlanPaneStatusBanner: Equatable {
+    enum Tone: Equatable {
+        case success
+        case info
+        case warning
+        case error
     }
 
-    private var backgroundColor: Color {
-        if configuration.isPressed {
-            return theme.selection
-        }
-        if isHovering {
-            return theme.selection.opacity(0.55)
-        }
-        return .clear
-    }
+    let tone: Tone
+    let systemImage: String
+    let message: String
 }
 
 @MainActor
@@ -267,12 +341,12 @@ private struct ProPlanFeatureList: View {
     let presentationState: ProPlanPanePresentationState
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 12) {
             ForEach(features) { feature in
                 HStack(alignment: .top, spacing: 12) {
                     RoundedRectangle(cornerRadius: 8, style: .continuous)
                         .fill(featureIconBackground)
-                        .frame(width: 26, height: 26)
+                        .frame(width: 28, height: 28)
                         .overlay {
                             Image(systemName: feature.systemImage)
                                 .font(.system(size: 13, weight: .semibold))
@@ -280,25 +354,68 @@ private struct ProPlanFeatureList: View {
                         }
                         .overlay {
                             RoundedRectangle(cornerRadius: 8, style: .continuous)
-                                .stroke(theme.border, lineWidth: 0.5)
+                                .strokeBorder(theme.border, lineWidth: 0.5)
                         }
+                        .accessibilityHidden(true)
 
                     VStack(alignment: .leading, spacing: 2) {
                         Text(feature.title)
-                            .font(.system(size: 13, weight: .semibold, design: .rounded))
+                            .font(.system(size: 13, weight: .semibold))
                             .foregroundStyle(theme.textPrimary)
 
                         Text(feature.message)
-                            .font(.system(size: 12, weight: .medium, design: .rounded))
+                            .font(.system(size: 12))
                             .foregroundStyle(theme.textSecondary)
                             .fixedSize(horizontal: false, vertical: true)
                     }
 
-                    Spacer(minLength: 0)
+                    Spacer(minLength: 8)
+
+                    tierIndicator(for: feature)
                 }
+                .accessibilityElement(children: .combine)
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    @ViewBuilder
+    private func tierIndicator(for feature: PurchaseFeature) -> some View {
+        let rawValue = presentationState == .pro ? feature.proValue : feature.freeValue
+        let value = rawValue.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        if !value.isEmpty {
+            HStack(spacing: 4) {
+                if presentationState == .pro {
+                    Image(systemName: "checkmark")
+                        .font(.system(size: 9, weight: .bold))
+                        .accessibilityHidden(true)
+                }
+
+                Text(value)
+                    .font(.system(size: 11, weight: .medium))
+                    .lineLimit(1)
+            }
+            .foregroundStyle(presentationState == .pro ? theme.accent : theme.textSecondary)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 4)
+            .background(
+                presentationState == .pro ? theme.accentSoft : theme.surfaceRaised,
+                in: Capsule()
+            )
+            .overlay {
+                Capsule()
+                    .strokeBorder(
+                        presentationState == .pro ? theme.accent.opacity(0.22) : theme.border,
+                        lineWidth: 0.5
+                    )
+            }
+        } else if presentationState == .pro {
+            Image(systemName: "checkmark.circle.fill")
+                .font(.system(size: 14))
+                .foregroundStyle(theme.accent)
+                .accessibilityLabel("Included")
+        }
     }
 
     private var featureIconBackground: Color {
@@ -322,6 +439,32 @@ enum ProPlanPanePresentationState: Equatable {
     init(hasPro: Bool) {
         self = hasPro ? .pro : .free
     }
+
+    static func planBadgeLabel(
+        hasPro: Bool,
+        activeProduct: StoreProduct?,
+        proTitle: String
+    ) -> String? {
+        guard hasPro, let activeProduct else {
+            return nil
+        }
+
+        let label = activeProduct.planLabel
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .uppercased()
+        guard !label.isEmpty else {
+            return nil
+        }
+
+        let normalizedTitle = proTitle
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .uppercased()
+        guard label != normalizedTitle else {
+            return nil
+        }
+
+        return label
+    }
 }
 
 struct ProPlanPaneActionState: Equatable {
@@ -336,6 +479,26 @@ struct ProPlanPaneActionState: Equatable {
     ) {
         showsUpgrade = !hasPro
         showsViewPlans = hasPro && activeProduct?.isRecurring == true
-        showsManageSubscription = activeSubscriptionProduct != nil
+        showsManageSubscription = hasPro && activeSubscriptionProduct != nil
+    }
+
+    var upgradeButtonKind: MacAppButtonStyle.Kind {
+        .primary
+    }
+
+    var viewPlansButtonKind: MacAppButtonStyle.Kind {
+        .secondary
+    }
+
+    var manageSubscriptionButtonKind: MacAppButtonStyle.Kind {
+        .secondary
+    }
+
+    var restoreButtonKind: MacAppButtonStyle.Kind {
+        hasLeadingAction ? .quiet : .secondary
+    }
+
+    private var hasLeadingAction: Bool {
+        showsUpgrade || showsViewPlans || showsManageSubscription
     }
 }

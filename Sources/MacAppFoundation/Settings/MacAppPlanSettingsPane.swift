@@ -31,6 +31,7 @@ public struct MacAppPlanSettingsPane: View {
             )
             .padding(22)
             .frame(maxWidth: 760, alignment: .topLeading)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
         .background(theme.canvas)
     }
