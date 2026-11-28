@@ -53,7 +53,8 @@ final class AppAnalyticsEnvironmentTests: XCTestCase {
         await client.waitForAutomaticUpload()
 
         try await client.flush()
-        let firstSnapshot = try XCTUnwrap(await lastSessionSnapshot(from: transport))
+        let rawFirstSnapshot = try await lastSessionSnapshot(from: transport)
+        let firstSnapshot = try XCTUnwrap(rawFirstSnapshot)
         XCTAssertEqual(firstSnapshot.sessions, 1)
         XCTAssertEqual(firstSnapshot.sessionSeconds, 60)
 
@@ -71,7 +72,8 @@ final class AppAnalyticsEnvironmentTests: XCTestCase {
         await client.waitForAutomaticUpload()
 
         try await client.flush()
-        let secondSnapshot = try XCTUnwrap(await lastSessionSnapshot(from: transport))
+        let rawSecondSnapshot = try await lastSessionSnapshot(from: transport)
+        let secondSnapshot = try XCTUnwrap(rawSecondSnapshot)
         XCTAssertEqual(secondSnapshot.sessions, 2)
         XCTAssertEqual(secondSnapshot.sessionSeconds, 180)
 
@@ -88,7 +90,8 @@ final class AppAnalyticsEnvironmentTests: XCTestCase {
         await client.waitForAutomaticUpload()
 
         try await client.flush()
-        let finalSnapshot = try XCTUnwrap(await lastSessionSnapshot(from: transport))
+        let rawFinalSnapshot = try await lastSessionSnapshot(from: transport)
+        let finalSnapshot = try XCTUnwrap(rawFinalSnapshot)
         XCTAssertEqual(finalSnapshot.sessions, 2)
         XCTAssertEqual(finalSnapshot.sessionSeconds, 180)
     }
