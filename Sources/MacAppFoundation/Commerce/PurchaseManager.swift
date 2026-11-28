@@ -248,14 +248,16 @@ public final class PurchaseManager {
     /// Starts transaction observation, verifies entitlements, and loads the product catalog.
     /// Calling this method repeatedly is safe.
     public func prepare() async {
-        if !hasPrepared {
-            hasPrepared = true
-            startObservingTransactions()
-            startObservingSubscriptionStatus()
-        }
-
+        ensureObserversStarted()
         await refreshEntitlements()
         await loadProducts()
+    }
+
+    func ensureObserversStarted() {
+        guard !hasPrepared else { return }
+        hasPrepared = true
+        startObservingTransactions()
+        startObservingSubscriptionStatus()
     }
 
     public func loadProducts(force: Bool = false) async {

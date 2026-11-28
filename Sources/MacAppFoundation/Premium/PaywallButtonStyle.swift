@@ -55,7 +55,7 @@ private struct PaywallButtonStyleBody<Label: View>: View {
             }
             .contentShape(shape)
             .opacity(isEnabled ? 1 : 0.55)
-            .scaleEffect(isPressed && !reduceMotion ? 0.98 : 1)
+            .scaleEffect(isPressed && isEnabled && !reduceMotion ? 0.98 : 1)
             .onHover { hovering in
                 guard isEnabled else {
                     isHovering = false
@@ -70,10 +70,19 @@ private struct PaywallButtonStyleBody<Label: View>: View {
                     }
                 }
             }
+            .onChange(of: isEnabled) { _, enabled in
+                if !enabled {
+                    isHovering = false
+                }
+            }
             .animation(
                 reduceMotion ? nil : .easeOut(duration: 0.08),
                 value: isPressed
             )
+    }
+
+    private var effectiveHover: Bool {
+        isHovering && isEnabled
     }
 
     private var font: Font {
@@ -112,25 +121,25 @@ private struct PaywallButtonStyleBody<Label: View>: View {
         case .secondary:
             theme.textPrimary
         case .text:
-            isHovering ? theme.textPrimary : theme.textSecondary
+            effectiveHover ? theme.textPrimary : theme.textSecondary
         }
     }
 
     private var backgroundColor: Color {
         switch kind {
         case .primary:
-            if isPressed { return theme.accent.opacity(0.84) }
-            if isHovering { return theme.accent.opacity(0.9) }
+            if isPressed && isEnabled { return theme.accent.opacity(0.84) }
+            if effectiveHover { return theme.accent.opacity(0.9) }
             return theme.accent
 
         case .secondary:
-            if isPressed { return theme.selection }
-            if isHovering { return theme.selection.opacity(0.72) }
+            if isPressed && isEnabled { return theme.selection }
+            if effectiveHover { return theme.selection.opacity(0.72) }
             return theme.surfaceRaised
 
         case .text:
-            if isPressed { return theme.selection }
-            if isHovering { return theme.selection.opacity(0.72) }
+            if isPressed && isEnabled { return theme.selection }
+            if effectiveHover { return theme.selection.opacity(0.72) }
             return .clear
         }
     }
@@ -140,7 +149,7 @@ private struct PaywallButtonStyleBody<Label: View>: View {
         case .primary, .text:
             .clear
         case .secondary:
-            isHovering ? theme.accent.opacity(0.65) : theme.border
+            effectiveHover ? theme.accent.opacity(0.65) : theme.border
         }
     }
 }

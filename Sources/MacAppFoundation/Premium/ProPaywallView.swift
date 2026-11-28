@@ -5,14 +5,15 @@ import SwiftUI
 
 /// Native macOS Pro paywall built on ``PurchaseManager``.
 ///
-/// The layout is adapted from PaywallKit's proven desktop paywall while all
-/// purchase state, entitlement verification, and simulation remain owned by
-/// MacAppFoundation's commerce layer.
+/// Purchase state, entitlement verification, and simulation remain owned by
+/// MacAppFoundation's commerce layer while the host app supplies copy, features,
+/// and legal links through ``ProPaywallConfiguration``.
 public struct ProPaywallView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.displayScale) private var displayScale
     @Environment(\.macAppTheme) private var theme
     @Environment(\.appAnalytics) private var analytics
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private let purchaseManager: PurchaseManager
     private let configuration: ProPaywallConfiguration
@@ -81,12 +82,13 @@ public struct ProPaywallView: View {
         .foregroundStyle(theme.textPrimary)
         .background(theme.canvas)
         .tint(theme.accent)
-        .task {
+        .task(id: ObjectIdentifier(purchaseManager)) {
             if !didTrackPaywallView {
                 didTrackPaywallView = true
                 track(ProPaywallAnalytics.paywallViewed)
             }
 
+            purchaseManager.ensureObserversStarted()
             await purchaseManager.refreshProductsForPresentation()
             await purchaseManager.refreshEntitlements()
             selectDefaultPlanIfNeeded()
@@ -105,6 +107,16 @@ public struct ProPaywallView: View {
                 track(ProPaywallAnalytics.offerCodeSucceeded)
                 Task {
                     await purchaseManager.refreshEntitlements()
+                    if purchaseManager.hasPro {
+                        didCompleteCommerce = true
+                        restoreMessage = "Offer code redeemed."
+                        if let activeProduct = purchaseManager.activeProduct {
+                            onPurchased?(activeProduct)
+                        }
+                        dismiss()
+                    } else {
+                        restoreMessage = "Offer code redeemed."
+                    }
                 }
             case .failure(let error):
                 track(ProPaywallAnalytics.offerCodeFailed(error))
@@ -126,6 +138,7 @@ public struct ProPaywallView: View {
                 Text(configuration.title)
                     .font(.system(size: 34, weight: .bold))
                     .foregroundStyle(theme.textPrimary)
+                    .accessibilityAddTraits(.isHeader)
 
                 Text(configuration.subtitle)
                     .font(.headline)
@@ -150,6 +163,7 @@ public struct ProPaywallView: View {
                                         .fixedSize(horizontal: false, vertical: true)
                                 }
                             }
+                            .accessibilityElement(children: .combine)
                         }
                     }
                     .frame(maxWidth: .infinity, alignment: .topLeading)
@@ -172,9 +186,10 @@ public struct ProPaywallView: View {
                 productContent
 
                 purchaseButton
-                    .padding(.top, 28)
+                    .padding(.top, 12)
 
-                if let disclosure = selectedProduct?.introductoryOfferDisclosure {
+                if let disclosure = selectedProduct?.introductoryOfferDisclosure,
+                   canPurchaseSelectedProduct {
                     Text(disclosure)
                         .font(.caption2)
                         .foregroundStyle(theme.textSecondary)
@@ -195,7 +210,7 @@ public struct ProPaywallView: View {
             maxHeight: .infinity,
             alignment: .topLeading
         )
-        .padding(.top, 20)
+        .padding(.top, 8)
     }
 
     @ViewBuilder
@@ -230,98 +245,40 @@ public struct ProPaywallView: View {
             } else {
                 VStack(spacing: 12) {
                     ForEach(paywallProducts) { product in
-                        planCard(product)
-                    }
-                }
-            }
-        }
-    }
-
-    private func planCard(_ product: StoreProduct) -> some View {
-        let isSelected = selectedProductID == product.id
-
-        return Button {
-            guard !purchaseManager.isBusy, !purchaseManager.isPurchasePending else { return }
-            if selectedProductID != product.id {
-                track(ProPaywallAnalytics.planSelected(product))
-            }
-            withAnimation(.snappy) {
-                selectedProductID = product.id
-            }
-        } label: {
-            HStack(alignment: .center, spacing: 12) {
-                selectionIndicator(isSelected: isSelected)
-
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(product.planLabel)
-                        .font(.headline)
-                        .foregroundStyle(theme.textPrimary)
-
-                    if let headline = product.introductoryOfferHeadline {
-                        Text(headline)
-                            .font(.caption.weight(.semibold))
-                            .foregroundStyle(theme.accent)
-
-                        if let postOffer = product.postIntroductoryOfferBillingDescription {
-                            Text(postOffer)
-                                .font(.caption2)
-                                .foregroundStyle(theme.textSecondary)
-                                .fixedSize(horizontal: false, vertical: true)
+                        ProPaywallPlanCard(
+                            product: product,
+                            isSelected: selectedProductID == product.id,
+                            isActivePlan: purchaseManager.activeProduct?.id == product.id,
+                            badge: badge(for: product)
+                        ) {
+                            guard !purchaseManager.isBusy, !purchaseManager.isPurchasePending else {
+                                return
+                            }
+                            if selectedProductID != product.id {
+                                track(ProPaywallAnalytics.planSelected(product))
+                            }
+                            if reduceMotion {
+                                selectedProductID = product.id
+                            } else {
+                                withAnimation(.snappy) {
+                                    selectedProductID = product.id
+                                }
+                            }
                         }
-                    } else {
-                        Text(product.isLifetime ? "Pay once" : product.billingDescription)
-                            .font(.caption)
-                            .foregroundStyle(theme.textSecondary)
-                            .fixedSize(horizontal: false, vertical: true)
+                        .disabled(purchaseManager.isBusy || purchaseManager.isPurchasePending)
                     }
                 }
-
-                Spacer(minLength: 10)
-
-                VStack(alignment: .trailing, spacing: 7) {
-                    if let badge = badge(for: product) {
-                        Text(badge)
-                            .font(.caption2.bold())
-                            .foregroundStyle(theme.accent)
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 4)
-                            .background(theme.accentSoft, in: Capsule())
-                    }
-
-                    Text(product.displayPrice)
-                        .font(.headline.weight(.bold))
-                        .foregroundStyle(theme.textPrimary)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.65)
-                }
             }
-            .padding(16)
-            .frame(maxWidth: .infinity, minHeight: 78, alignment: .leading)
-            .background(
-                isSelected ? theme.selection : theme.surface,
-                in: RoundedRectangle(cornerRadius: 14, style: .continuous)
-            )
-            .overlay {
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .strokeBorder(
-                        isSelected ? theme.accent : theme.border,
-                        lineWidth: isSelected ? 2 : 1
-                    )
-            }
-            .contentShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
         }
-        .buttonStyle(.plain)
-        .disabled(purchaseManager.isBusy || purchaseManager.isPurchasePending)
-        .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 
     private var purchaseButton: some View {
         Button {
             guard let product = selectedProduct,
-                  !purchaseManager.isBusy,
-                  !purchaseManager.isPurchasePending
+                  canPurchaseSelectedProduct
             else { return }
 
+            restoreMessage = nil
             track(ProPaywallAnalytics.purchaseStarted(product))
 
             Task {
@@ -360,11 +317,7 @@ public struct ProPaywallView: View {
             .frame(maxWidth: .infinity)
         }
         .buttonStyle(PaywallButtonStyle(.primary))
-        .disabled(
-            selectedProduct == nil
-                || purchaseManager.isBusy
-                || purchaseManager.isPurchasePending
-        )
+        .disabled(!canPurchaseSelectedProduct)
     }
 
     private var bottomBar: some View {
@@ -389,7 +342,7 @@ public struct ProPaywallView: View {
                     isOfferCodeRedemptionPresented = true
                 }
                 .buttonStyle(PaywallButtonStyle(.text))
-                .disabled(purchaseManager.isBusy)
+                .disabled(purchaseManager.isBusy || purchaseManager.isPurchasePending)
             }
 
             if let restoreMessage {
@@ -408,6 +361,7 @@ public struct ProPaywallView: View {
                 Label("Close", systemImage: "xmark")
             }
             .buttonStyle(PaywallButtonStyle(.secondary))
+            .keyboardShortcut(.cancelAction)
             .disabled(purchaseManager.isBusy)
         }
     }
@@ -455,23 +409,7 @@ public struct ProPaywallView: View {
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                     .fill(theme.accent)
             )
-    }
-
-    private func selectionIndicator(isSelected: Bool) -> some View {
-        ZStack {
-            Circle()
-                .strokeBorder(
-                    isSelected ? theme.accent : theme.textMuted,
-                    lineWidth: 1.5
-                )
-            if isSelected {
-                Circle()
-                    .fill(theme.accent)
-                    .padding(4)
-            }
-        }
-        .frame(width: 21, height: 21)
-        .accessibilityHidden(true)
+            .accessibilityHidden(true)
     }
 
     private var resolvedFeatures: [ProPaywallFeature] {
@@ -490,39 +428,37 @@ public struct ProPaywallView: View {
         return paywallProducts.first(where: { $0.id == selectedProductID })
     }
 
+    private var canPurchaseSelectedProduct: Bool {
+        ProPaywallPresentation.canPurchase(
+            selectedProduct: selectedProduct,
+            activeProduct: purchaseManager.activeProduct,
+            isBusy: purchaseManager.isBusy,
+            isPurchasePending: purchaseManager.isPurchasePending
+        )
+    }
+
     private var purchaseButtonTitle: String {
-        if purchaseManager.isPurchasing {
-            return "Purchasing…"
-        }
-        if purchaseManager.isPurchasePending {
-            return "Pending Approval"
-        }
-        guard let selectedProduct else {
-            return configuration.purchaseButtonTitle
-        }
-        return selectedProduct.purchaseActionTitle(
+        ProPaywallPresentation.purchaseButtonTitle(
+            isPurchasing: purchaseManager.isPurchasing,
+            isPurchasePending: purchaseManager.isPurchasePending,
+            selectedProduct: selectedProduct,
+            activeProduct: purchaseManager.activeProduct,
             defaultTitle: configuration.purchaseButtonTitle
         )
     }
 
     private func selectDefaultPlanIfNeeded() {
-        if let selectedProductID,
-           paywallProducts.contains(where: { $0.id == selectedProductID }) {
-            return
-        }
-
-        if let highlightedProductID = configuration.highlightedProductID,
-           paywallProducts.contains(where: { $0.id == highlightedProductID }) {
-            selectedProductID = highlightedProductID
-            return
-        }
-
-        selectedProductID = purchaseManager.preferredEntitlementProduct?.id
-            ?? paywallProducts.first?.id
+        selectedProductID = ProPaywallPresentation.defaultSelectedProductID(
+            currentSelection: selectedProductID,
+            products: paywallProducts,
+            highlightedProductID: configuration.highlightedProductID,
+            preferredProductID: purchaseManager.preferredEntitlementProduct?.id,
+            activeProductID: purchaseManager.activeProduct?.id
+        )
     }
 
     private func restorePurchases() {
-        guard !purchaseManager.isBusy else { return }
+        guard !purchaseManager.isBusy, !purchaseManager.isPurchasePending else { return }
         restoreMessage = nil
         track(ProPaywallAnalytics.restoreStarted)
 
@@ -538,8 +474,10 @@ public struct ProPaywallView: View {
                 track(ProPaywallAnalytics.restoreNothingToRestore)
                 restoreMessage = "No previous purchases were found."
             case .failed(let failure):
-                track(ProPaywallAnalytics.restoreFailed(failure))
-                restoreMessage = failure.message
+                if failure.code != .userCancelled {
+                    track(ProPaywallAnalytics.restoreFailed(failure))
+                    restoreMessage = failure.message
+                }
                 purchaseManager.clearActivity()
             }
         }
@@ -554,50 +492,13 @@ public struct ProPaywallView: View {
     }
 
     private func badge(for product: StoreProduct) -> String? {
-        if configuration.highlightedProductID == product.id {
-            let configuredBadge = configuration.highlightedProductBadge
-                .trimmingCharacters(in: .whitespacesAndNewlines)
-            if !configuredBadge.isEmpty {
-                return configuredBadge
-            }
-        }
-
-        if isYearlyPlan(product),
-           let monthlyProduct = paywallProducts.first(where: isMonthlyPlan),
-           let savingsPercentage = yearlySavingsPercentage(
-               monthlyPrice: monthlyProduct.price,
-               yearlyPrice: product.price
-           ) {
-            return "SAVE \(savingsPercentage)%"
-        }
-
-        return nil
-    }
-
-    private func isMonthlyPlan(_ product: StoreProduct) -> Bool {
-        guard let period = product.subscriptionPeriod else { return false }
-        return period.value == 1 && period.unit == .month
-    }
-
-    private func isYearlyPlan(_ product: StoreProduct) -> Bool {
-        guard let period = product.subscriptionPeriod else { return false }
-        return (period.value == 1 && period.unit == .year)
-            || (period.value == 12 && period.unit == .month)
-    }
-
-    private func yearlySavingsPercentage(
-        monthlyPrice: Double,
-        yearlyPrice: Double
-    ) -> Int? {
-        let annualizedMonthlyPrice = monthlyPrice * 12
-        guard annualizedMonthlyPrice > 0,
-              yearlyPrice >= 0,
-              yearlyPrice < annualizedMonthlyPrice
-        else { return nil }
-
-        let percentage = ((annualizedMonthlyPrice - yearlyPrice) / annualizedMonthlyPrice) * 100
-        let rounded = Int(percentage.rounded())
-        return rounded > 0 ? rounded : nil
+        ProPaywallPresentation.badge(
+            for: product,
+            products: paywallProducts,
+            highlightedProductID: configuration.highlightedProductID,
+            highlightedProductBadge: configuration.highlightedProductBadge,
+            activeProductID: purchaseManager.activeProduct?.id
+        )
     }
 
     private var alertBinding: Binding<Bool> {
@@ -630,6 +531,290 @@ public struct ProPaywallView: View {
         } else {
             alertMessage = error.localizedDescription
         }
+    }
+}
+
+enum ProPaywallPresentation {
+    static func defaultSelectedProductID(
+        currentSelection: String?,
+        products: [StoreProduct],
+        highlightedProductID: String?,
+        preferredProductID: String?,
+        activeProductID: String?
+    ) -> String? {
+        if let currentSelection,
+           products.contains(where: { $0.id == currentSelection }) {
+            return currentSelection
+        }
+
+        let selectableProducts = products.filter { $0.id != activeProductID }
+        let candidates = selectableProducts.isEmpty ? products : selectableProducts
+
+        if let highlightedProductID,
+           candidates.contains(where: { $0.id == highlightedProductID }) {
+            return highlightedProductID
+        }
+
+        if let preferredProductID,
+           candidates.contains(where: { $0.id == preferredProductID }) {
+            return preferredProductID
+        }
+
+        return candidates.first?.id
+    }
+
+    static func badge(
+        for product: StoreProduct,
+        products: [StoreProduct],
+        highlightedProductID: String?,
+        highlightedProductBadge: String,
+        activeProductID: String?
+    ) -> String? {
+        if activeProductID == product.id {
+            return "CURRENT PLAN"
+        }
+
+        if highlightedProductID == product.id {
+            let configuredBadge = highlightedProductBadge
+                .trimmingCharacters(in: .whitespacesAndNewlines)
+            if !configuredBadge.isEmpty {
+                return configuredBadge
+            }
+        }
+
+        if isYearlyPlan(product),
+           let monthlyProduct = products.first(where: isMonthlyPlan),
+           let savingsPercentage = yearlySavingsPercentage(
+               monthlyPrice: monthlyProduct.price,
+               yearlyPrice: product.price
+           ) {
+            return "SAVE \(savingsPercentage)%"
+        }
+
+        return nil
+    }
+
+    static func canPurchase(
+        selectedProduct: StoreProduct?,
+        activeProduct: StoreProduct?,
+        isBusy: Bool,
+        isPurchasePending: Bool
+    ) -> Bool {
+        guard let selectedProduct,
+              !isBusy,
+              !isPurchasePending
+        else { return false }
+
+        if activeProduct?.id == selectedProduct.id {
+            return false
+        }
+
+        if activeProduct?.isLifetime == true {
+            return false
+        }
+
+        return true
+    }
+
+    static func purchaseButtonTitle(
+        isPurchasing: Bool,
+        isPurchasePending: Bool,
+        selectedProduct: StoreProduct?,
+        activeProduct: StoreProduct?,
+        defaultTitle: String
+    ) -> String {
+        if isPurchasing {
+            return "Purchasing…"
+        }
+        if isPurchasePending {
+            return "Pending Approval"
+        }
+        guard let selectedProduct else {
+            return defaultTitle
+        }
+        if activeProduct?.id == selectedProduct.id {
+            return "Current Plan"
+        }
+        if activeProduct?.isLifetime == true {
+            return "Pro Lifetime Active"
+        }
+        return selectedProduct.purchaseActionTitle(defaultTitle: defaultTitle)
+    }
+
+    static func yearlySavingsPercentage(
+        monthlyPrice: Double,
+        yearlyPrice: Double
+    ) -> Int? {
+        let annualizedMonthlyPrice = monthlyPrice * 12
+        guard annualizedMonthlyPrice > 0,
+              yearlyPrice >= 0,
+              yearlyPrice < annualizedMonthlyPrice
+        else { return nil }
+
+        let percentage = ((annualizedMonthlyPrice - yearlyPrice) / annualizedMonthlyPrice) * 100
+        let rounded = Int(percentage.rounded())
+        return rounded > 0 ? rounded : nil
+    }
+
+    private static func isMonthlyPlan(_ product: StoreProduct) -> Bool {
+        guard let period = product.subscriptionPeriod else { return false }
+        return period.value == 1 && period.unit == .month
+    }
+
+    private static func isYearlyPlan(_ product: StoreProduct) -> Bool {
+        guard let period = product.subscriptionPeriod else { return false }
+        return (period.value == 1 && period.unit == .year)
+            || (period.value == 12 && period.unit == .month)
+    }
+}
+
+private struct ProPaywallPlanCard: View {
+    let product: StoreProduct
+    let isSelected: Bool
+    let isActivePlan: Bool
+    let badge: String?
+    let onSelect: () -> Void
+
+    @Environment(\.isEnabled) private var isEnabled
+    @Environment(\.macAppTheme) private var theme
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var isHovering = false
+
+    var body: some View {
+        Button(action: onSelect) {
+            HStack(alignment: .center, spacing: 12) {
+                selectionIndicator
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(product.planLabel)
+                        .font(.headline)
+                        .foregroundStyle(theme.textPrimary)
+
+                    if !isActivePlan, let headline = product.introductoryOfferHeadline {
+                        Text(headline)
+                            .font(.caption.weight(.semibold))
+                            .foregroundStyle(theme.accent)
+
+                        if let postOffer = product.postIntroductoryOfferBillingDescription {
+                            Text(postOffer)
+                                .font(.caption2)
+                                .foregroundStyle(theme.textSecondary)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                    } else {
+                        Text(product.isLifetime ? "Pay once" : product.billingDescription)
+                            .font(.caption)
+                            .foregroundStyle(theme.textSecondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+
+                Spacer(minLength: 10)
+
+                VStack(alignment: .trailing, spacing: 7) {
+                    if let badge {
+                        Text(badge)
+                            .font(.caption2.bold())
+                            .foregroundStyle(isActivePlan ? theme.textSecondary : theme.accent)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 4)
+                            .background(
+                                isActivePlan ? theme.surfaceRaised : theme.accentSoft,
+                                in: Capsule()
+                            )
+                            .overlay {
+                                if isActivePlan {
+                                    Capsule()
+                                        .strokeBorder(theme.border, lineWidth: 0.5)
+                                }
+                            }
+                    }
+
+                    Text(product.displayPrice)
+                        .font(.headline.weight(.bold))
+                        .foregroundStyle(theme.textPrimary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.65)
+                }
+            }
+            .padding(16)
+            .frame(maxWidth: .infinity, minHeight: 78, alignment: .leading)
+            .background(
+                cardBackground,
+                in: RoundedRectangle(cornerRadius: 14, style: .continuous)
+            )
+            .overlay {
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .strokeBorder(
+                        cardBorder,
+                        lineWidth: isSelected ? 2 : 1
+                    )
+            }
+            .contentShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+        }
+        .buttonStyle(.plain)
+        .onHover { hovering in
+            guard isEnabled else {
+                isHovering = false
+                return
+            }
+
+            if reduceMotion {
+                isHovering = hovering
+            } else {
+                withAnimation(.easeOut(duration: 0.12)) {
+                    isHovering = hovering
+                }
+            }
+        }
+        .onChange(of: isEnabled) { _, enabled in
+            if !enabled {
+                isHovering = false
+            }
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
+    }
+
+    private var effectiveHover: Bool {
+        isHovering && isEnabled
+    }
+
+    private var cardBackground: Color {
+        if isSelected {
+            return theme.selection
+        }
+        if effectiveHover {
+            return theme.selection.opacity(0.45)
+        }
+        return theme.surface
+    }
+
+    private var cardBorder: Color {
+        if isSelected {
+            return theme.accent
+        }
+        if effectiveHover {
+            return theme.accent.opacity(0.45)
+        }
+        return theme.border
+    }
+
+    private var selectionIndicator: some View {
+        ZStack {
+            Circle()
+                .strokeBorder(
+                    isSelected ? theme.accent : theme.textMuted,
+                    lineWidth: 1.5
+                )
+            if isSelected {
+                Circle()
+                    .fill(theme.accent)
+                    .padding(4)
+            }
+        }
+        .frame(width: 21, height: 21)
+        .accessibilityHidden(true)
     }
 }
 
