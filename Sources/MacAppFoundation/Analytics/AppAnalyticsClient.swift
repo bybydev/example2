@@ -248,6 +248,7 @@ public actor AppAnalyticsClient {
 
     #if DEBUG
     private var developerEnabledOverride: Bool? = nil
+    private var developerActivityStore: AppAnalyticsDeveloperActivityStore? = nil
     #endif
 
     private var effectiveEnabled: Bool {
@@ -1929,13 +1930,18 @@ extension AppAnalyticsClient {
 
 #if DEBUG
 extension AppAnalyticsClient {
+    func developerSetActivityStore(_ store: AppAnalyticsDeveloperActivityStore?) {
+        developerActivityStore = store
+    }
+
     private func developerRecord(
         _ kind: AppAnalyticsDeveloperActivityStore.Kind,
         title: String,
         detail: String? = nil
     ) {
+        let store = developerActivityStore
         Task { @MainActor in
-            AppAnalyticsDeveloperActivityStore.shared.append(
+            (store ?? AppAnalyticsDeveloperActivityStore.shared).append(
                 kind: kind,
                 title: title,
                 detail: detail

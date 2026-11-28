@@ -5,17 +5,17 @@ import XCTest
 
 final class AppAnalyticsDeveloperToolsTests: XCTestCase {
     func testDeveloperSnapshotExposesConfigurationAndPersistedCounters() async throws {
-        let store = DeveloperAnalyticsMemoryStore()
+        let store = TestAnalyticsStateStore()
         let appKey = "com.example.analytics"
         let client = AppAnalyticsClient(
-            configuration: AppAnalyticsConfiguration(
+            configuration: makeTestAnalyticsConfiguration(
                 appID: "developer-test",
                 appKey: appKey,
-                baseURL: URL(string: "https://analytics.example.com")!,
                 appVersion: "1.2.3",
-                uploadInterval: 300
+                uploadInterval: 300,
+                storageMode: .inMemory
             ),
-            transport: DeveloperAnalyticsTransport(),
+            transport: TestAnalyticsTransport(),
             stateStore: store
         )
 
@@ -43,17 +43,16 @@ final class AppAnalyticsDeveloperToolsTests: XCTestCase {
     }
 
     func testDeveloperOverrideCanEnableConfiguredDisabledAnalytics() async throws {
-        let transport = DeveloperAnalyticsTransport()
-        let store = DeveloperAnalyticsMemoryStore()
+        let store = TestAnalyticsStateStore()
         let client = AppAnalyticsClient(
-            configuration: AppAnalyticsConfiguration(
+            configuration: makeTestAnalyticsConfiguration(
                 appID: "developer-disabled-test",
                 appKey: "com.example.disabledoverride",
-                baseURL: URL(string: "https://analytics.example.com")!,
                 enabled: false,
-                uploadInterval: 300
+                uploadInterval: 300,
+                storageMode: .inMemory
             ),
-            transport: transport,
+            transport: TestAnalyticsTransport(),
             stateStore: store
         )
 
@@ -81,15 +80,15 @@ final class AppAnalyticsDeveloperToolsTests: XCTestCase {
 
     func testDeveloperOverrideCanDisableConfiguredEnabledAnalytics() async throws {
         let client = AppAnalyticsClient(
-            configuration: AppAnalyticsConfiguration(
+            configuration: makeTestAnalyticsConfiguration(
                 appID: "developer-enabled-test",
                 appKey: "com.example.enabledoverride",
-                baseURL: URL(string: "https://analytics.example.com")!,
                 enabled: true,
-                uploadInterval: 300
+                uploadInterval: 300,
+                storageMode: .inMemory
             ),
-            transport: DeveloperAnalyticsTransport(),
-            stateStore: DeveloperAnalyticsMemoryStore()
+            transport: TestAnalyticsTransport(),
+            stateStore: TestAnalyticsStateStore()
         )
 
         await client.developerSetEnabledOverride(false)
@@ -102,53 +101,71 @@ final class AppAnalyticsDeveloperToolsTests: XCTestCase {
         XCTAssertTrue(snapshot.days.isEmpty)
 
         await client.developerSetEnabledOverride(nil)
+        try await client.track("resumed_after_override", dimension: "local")
+        await client.waitForAutomaticUpload()
+
         snapshot = try await client.developerSnapshot()
         XCTAssertTrue(snapshot.configuration.configuredEnabled)
         XCTAssertTrue(snapshot.configuration.effectiveEnabled)
         XCTAssertNil(snapshot.configuration.developerEnabledOverride)
+        XCTAssertTrue(
+            snapshot.days.flatMap(\.events).contains {
+                $0.name == "resumed_after_override" && $0.dimension == "local"
+            }
+        )
     }
 
     @MainActor
     func testTrackedEventAppearsInLiveDeveloperActivity() async throws {
-        AppAnalyticsDeveloperActivityStore.shared.clear()
-
+        let activityStore = AppAnalyticsDeveloperActivityStore()
         let client = AppAnalyticsClient(
-            configuration: AppAnalyticsConfiguration(
+            configuration: makeTestAnalyticsConfiguration(
                 appID: "developer-live-test",
                 appKey: "com.example.liveanalytics",
-                baseURL: URL(string: "https://analytics.example.com")!,
-                uploadInterval: 300
+                uploadInterval: 300,
+                storageMode: .inMemory
             ),
-            transport: DeveloperAnalyticsTransport(),
-            stateStore: DeveloperAnalyticsMemoryStore()
+            transport: TestAnalyticsTransport(),
+            stateStore: TestAnalyticsStateStore()
         )
+        await client.developerSetActivityStore(activityStore)
 
         try await client.track("generation_completed", dimension: "local")
-        await Task.yield()
+        await client.waitForAutomaticUpload()
+
+        let clock = ContinuousClock()
+        let deadline = clock.now.advanced(by: .seconds(1))
+        while clock.now < deadline {
+            if activityStore.entries.contains(where: {
+                $0.kind == .event
+                    && $0.title == "generation_completed"
+                    && $0.detail?.contains("dimension=local") == true
+            }) {
+                break
+            }
+            try? await Task.sleep(for: .milliseconds(5))
+        }
 
         XCTAssertTrue(
-            AppAnalyticsDeveloperActivityStore.shared.entries.contains {
+            activityStore.entries.contains {
                 $0.kind == .event
                     && $0.title == "generation_completed"
                     && $0.detail?.contains("dimension=local") == true
             }
         )
-
-        AppAnalyticsDeveloperActivityStore.shared.clear()
     }
 
     func testDeveloperSnapshotReflectsInMemoryStorageModeWithoutTouchingKeychain() async throws {
         let keychainService = "com.hoangbkit.MacAppFoundationTests.DeveloperInMemory.\(UUID().uuidString)"
         let secureStore = AppAnalyticsSecureStore(service: keychainService)
         let client = AppAnalyticsClient(
-            configuration: AppAnalyticsConfiguration(
+            configuration: makeTestAnalyticsConfiguration(
                 appID: "developer-in-memory",
-                baseURL: URL(string: "https://analytics.example.com")!,
                 keychainService: keychainService,
                 uploadInterval: 300,
                 storageMode: .inMemory
             ),
-            transport: DeveloperAnalyticsTransport()
+            transport: TestAnalyticsTransport()
         )
 
         let initialSnapshot = try await client.developerSnapshot()
@@ -164,53 +181,6 @@ final class AppAnalyticsDeveloperToolsTests: XCTestCase {
         XCTAssertNotNil(uploadedSnapshot.runtime.installationID)
         let storedInKeychain = try await secureStore.string(for: "developer-in-memory.installation")
         XCTAssertNil(storedInKeychain)
-    }
-}
-
-private actor DeveloperAnalyticsMemoryStore: AppAnalyticsStateStoring {
-    private var data: Data?
-
-    func load() async throws -> Data? {
-        data
-    }
-
-    func save(_ data: Data) async throws {
-        self.data = data
-    }
-
-    func remove() async throws {
-        data = nil
-    }
-}
-
-private struct DeveloperAnalyticsTransport: AppAnalyticsTransport {
-    func data(for request: URLRequest) async throws -> (Data, HTTPURLResponse) {
-        let body = try XCTUnwrap(request.httpBody)
-        let object = try XCTUnwrap(
-            JSONSerialization.jsonObject(with: body) as? [String: Any]
-        )
-        let requestID = try XCTUnwrap(object["requestId"] as? String)
-        let days = try XCTUnwrap(object["days"] as? [[String: Any]])
-        let acceptedDays = try days.map { day in
-            try XCTUnwrap(day["day"] as? String)
-        }
-
-        let responseBody = try JSONSerialization.data(
-            withJSONObject: [
-                "ok": true,
-                "requestId": requestID,
-                "acceptedDays": acceptedDays,
-            ]
-        )
-        let response = try XCTUnwrap(
-            HTTPURLResponse(
-                url: request.url!,
-                statusCode: 200,
-                httpVersion: nil,
-                headerFields: nil
-            )
-        )
-        return (responseBody, response)
     }
 }
 #endif

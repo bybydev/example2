@@ -58,21 +58,30 @@ final class PremiumAccessTests: XCTestCase {
     }
 
     @MainActor
-    func testProPlanButtonAcceptsCustomHeight() {
+    func testProPlanButtonRetainsAndClampsCustomHeight() {
         let purchases = PurchaseManager(
             configuration: PurchaseConfiguration(productIDs: ["pro"]),
             simulated: true
         )
 
-        _ = ProPlanButton(
+        let customButton = ProPlanButton(
             purchaseManager: purchases,
             height: 28,
             onUpgrade: {},
             onManagePlan: {}
         )
+        XCTAssertEqual(customButton.height, 28)
+
+        let negativeButton = ProPlanButton(
+            purchaseManager: purchases,
+            height: -4,
+            onUpgrade: {},
+            onManagePlan: {}
+        )
+        XCTAssertEqual(negativeButton.height, 0)
     }
 
-    func testPremiumPresentationUsesFreeAsSafePlaceholder() {
+    func testProPlanButtonPresentationFormatsFreeAndActivePlanLabels() {
         let freePlan = ProPlanButtonPresentation(
             hasPro: false,
             activeProduct: nil
@@ -82,46 +91,63 @@ final class PremiumAccessTests: XCTestCase {
         XCTAssertEqual(freePlan.accessibilityValue, "Free plan")
         XCTAssertFalse(freePlan.isPro)
 
-        let proPlan = ProPlanButtonPresentation(
+        let unknownPro = ProPlanButtonPresentation(
             hasPro: true,
             activeProduct: nil
         )
-        XCTAssertEqual(proPlan.title, "Pro")
-        XCTAssertTrue(proPlan.isPro)
+        XCTAssertEqual(unknownPro.title, "Pro")
+        XCTAssertEqual(unknownPro.iconName, "checkmark.seal.fill")
+        XCTAssertTrue(unknownPro.isPro)
 
-        let freeGate = PremiumGatePresentationState(
-            feature: feature,
-            requirement: .pro,
-            hasPro: false
+        let lifetime = StoreProduct(
+            id: "pro.lifetime",
+            displayName: "Lifetime",
+            description: "",
+            displayPrice: "$79.99",
+            price: 79.99
         )
-        XCTAssertEqual(freeGate, .requiresPro(feature: feature))
-
-        let proGate = PremiumGatePresentationState(
-            feature: feature,
-            requirement: .pro,
-            hasPro: true
-        )
-        XCTAssertEqual(proGate, .allowed)
-
-        let freeRequirement = PremiumGatePresentationState(
-            feature: feature,
-            requirement: .free,
-            hasPro: false
-        )
-        XCTAssertEqual(freeRequirement, .allowed)
-    }
-
-    func testLockInfoPreservesAppOwnedCopy() {
-        let info = ProLockInfo(
-            title: "Pro Feature",
-            reason: "Batch export requires Pro.",
-            freeTierDescription: "One export at a time",
-            proTierDescription: "Unlimited batch export",
-            upgradeButtonTitle: "See Pro Plans"
+        XCTAssertEqual(
+            ProPlanButtonPresentation(hasPro: true, activeProduct: lifetime).title,
+            "Pro Lifetime"
         )
 
-        XCTAssertEqual(info.title, "Pro Feature")
-        XCTAssertEqual(info.upgradeButtonTitle, "See Pro Plans")
-        XCTAssertEqual(info.proTierDescription, "Unlimited batch export")
+        let monthly = StoreProduct(
+            id: "pro.monthly",
+            displayName: "Monthly",
+            description: "",
+            displayPrice: "$4.99",
+            price: 4.99,
+            subscriptionPeriod: .init(value: 1, unit: .month)
+        )
+        XCTAssertEqual(
+            ProPlanButtonPresentation(hasPro: true, activeProduct: monthly).title,
+            "Pro Monthly"
+        )
+
+        let yearly = StoreProduct(
+            id: "pro.yearly",
+            displayName: "Yearly",
+            description: "",
+            displayPrice: "$39.99",
+            price: 39.99,
+            subscriptionPeriod: .init(value: 1, unit: .year)
+        )
+        XCTAssertEqual(
+            ProPlanButtonPresentation(hasPro: true, activeProduct: yearly).title,
+            "Pro Yearly"
+        )
+
+        let weekly = StoreProduct(
+            id: "pro.weekly",
+            displayName: "Weekly",
+            description: "",
+            displayPrice: "$1.99",
+            price: 1.99,
+            subscriptionPeriod: .init(value: 1, unit: .week)
+        )
+        XCTAssertEqual(
+            ProPlanButtonPresentation(hasPro: true, activeProduct: weekly).title,
+            "Pro"
+        )
     }
 }

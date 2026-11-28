@@ -168,6 +168,10 @@ public final class PurchaseManager {
         activity.isPending
     }
 
+    var isEntitlementRetryScheduled: Bool {
+        entitlementRetryTask != nil
+    }
+
     public var pendingProductID: String? {
         if case .pending(let productID) = activity {
             return productID

@@ -124,28 +124,26 @@ final class FoundationDeveloperUserDefaultsTests: XCTestCase {
         )
     }
 
-    func testComplexPropertyListRoundTrip() throws {
-        let array: [Any] = [
-            "value",
-            3,
-            true,
-            Data([1, 2]),
-        ]
-
-        let text = try XCTUnwrap(
-            FoundationDeveloperUserDefaultsCodec.propertyListText(array)
+    func testCodecFormatsDisplayAndCopyValuesForComplexTypes() {
+        let bytes = Data([1, 2, 3])
+        XCTAssertEqual(FoundationDeveloperUserDefaultsCodec.displayValue(bytes), "3 bytes")
+        XCTAssertEqual(
+            FoundationDeveloperUserDefaultsCodec.copyValue(bytes),
+            bytes.base64EncodedString()
         )
-        let decoded = try FoundationDeveloperUserDefaultsCodec.propertyListValue(
-            from: text,
-            expectedType: .array
-        )
-        let decodedArray = try XCTUnwrap(decoded as? [Any])
 
-        XCTAssertEqual(decodedArray.count, 4)
-        XCTAssertEqual(decodedArray[0] as? String, "value")
-        XCTAssertEqual((decodedArray[1] as? NSNumber)?.intValue, 3)
-        XCTAssertEqual((decodedArray[2] as? NSNumber)?.boolValue, true)
-        XCTAssertEqual(decodedArray[3] as? Data, Data([1, 2]))
+        let array: [Any] = ["value", 3, true]
+        XCTAssertEqual(FoundationDeveloperUserDefaultsCodec.displayValue(array), "3 items")
+        let copiedArray = FoundationDeveloperUserDefaultsCodec.copyValue(array)
+        XCTAssertTrue(copiedArray.contains("<array>"))
+        XCTAssertTrue(copiedArray.contains("<string>value</string>"))
+
+        let dictionary: [String: Any] = ["enabled": true, "name": "demo"]
+        XCTAssertEqual(FoundationDeveloperUserDefaultsCodec.displayValue(dictionary), "2 keys")
+        let copiedDictionary = FoundationDeveloperUserDefaultsCodec.copyValue(dictionary)
+        XCTAssertTrue(copiedDictionary.contains("<dict>"))
+        XCTAssertTrue(copiedDictionary.contains("<key>name</key>"))
+        XCTAssertTrue(copiedDictionary.contains("<string>demo</string>"))
     }
 }
 #endif

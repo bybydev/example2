@@ -2,86 +2,6 @@ import Foundation
 import Testing
 @testable import MacAppFoundation
 
-private actor MemoryAnalyticsStateStore: AppAnalyticsStateStoring {
-    private var data: Data?
-
-    func load() async throws -> Data? { data }
-    func save(_ data: Data) async throws { self.data = data }
-    func remove() async throws { data = nil }
-    func containsData() -> Bool { data != nil }
-}
-
-private actor MockAnalyticsTransport: AppAnalyticsTransport {
-    private var requests: [URLRequest] = []
-
-    func data(for request: URLRequest) async throws -> (Data, HTTPURLResponse) {
-        requests.append(request)
-        guard let body = request.httpBody,
-              let object = try JSONSerialization.jsonObject(with: body) as? [String: Any],
-              let requestID = object["requestId"] as? String,
-              let days = object["days"] as? [[String: Any]] else {
-            throw AppAnalyticsError.invalidResponse
-        }
-        let acceptedDays = days.compactMap { $0["day"] as? String }
-        let payload: [String: Any] = [
-            "ok": true,
-            "requestId": requestID,
-            "acceptedDays": acceptedDays,
-        ]
-        let response = HTTPURLResponse(
-            url: request.url!,
-            statusCode: 200,
-            httpVersion: nil,
-            headerFields: nil
-        )!
-        return (try JSONSerialization.data(withJSONObject: payload), response)
-    }
-
-    func capturedRequests() -> [URLRequest] { requests }
-}
-
-private func analyticsConfiguration(
-    appKey: String? = "test-key-123456789",
-    enabled: Bool = true,
-    uploadInterval: TimeInterval = 21_600,
-    storageMode: AppAnalyticsStorageMode = .persisted
-) -> AppAnalyticsConfiguration {
-    AppAnalyticsConfiguration(
-        appID: "analytics-test",
-        appKey: appKey,
-        baseURL: URL(string: "https://example.com")!,
-        enabled: enabled,
-        keychainService: "com.hoangbkit.MacAppFoundationTests.\(UUID().uuidString)",
-        stateStorageKey: "analytics-state-\(UUID().uuidString)",
-        appVersion: "1.2.3",
-        uploadInterval: uploadInterval,
-        transportRetryCount: 0,
-        storageMode: storageMode
-    )
-}
-
-private func isoDate(_ value: String) -> Date {
-    ISO8601DateFormatter().date(from: value)!
-}
-
-private func analyticsContext() -> AppAnalyticsClientContext {
-    AppAnalyticsClientContext(
-        osVersion: "26.0.1",
-        appBuild: "143",
-        deviceFamily: "mac",
-        architecture: "arm64"
-    )
-}
-
-
-private func requestBody(_ request: URLRequest) throws -> [String: Any] {
-    guard let body = request.httpBody,
-          let object = try JSONSerialization.jsonObject(with: body) as? [String: Any] else {
-        throw AppAnalyticsError.invalidResponse
-    }
-    return object
-}
-
 @Test func analyticsConfigurationDefaultsToTwentySecondUploadInterval() {
     let configuration = AppAnalyticsConfiguration(
         appID: "analytics-test",
@@ -94,14 +14,14 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 }
 
 @Test func disabledAnalyticsIsCompletelyInert() async throws {
-    let transport = MockAnalyticsTransport()
-    let store = MemoryAnalyticsStateStore()
+    let transport = TestAnalyticsTransport()
+    let store = TestAnalyticsStateStore()
     let client = AppAnalyticsClient(
-        configuration: analyticsConfiguration(enabled: false),
+        configuration: makeTestAnalyticsConfiguration(enabled: false),
         transport: transport,
         stateStore: store,
-        now: { isoDate("2026-09-05T10:00:00Z") },
-        clientContext: analyticsContext()
+        now: { testAnalyticsDate("2026-09-05T10:00:00Z") },
+        clientContext: testAnalyticsContext()
     )
 
     try await client.track("Not Valid")
@@ -116,16 +36,16 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 }
 
 @Test func analyticsFlushMatchesNativeServerContract() async throws {
-    let transport = MockAnalyticsTransport()
-    let store = MemoryAnalyticsStateStore()
-    let timestamp = isoDate("2026-09-05T10:00:00Z")
-    let configuration = analyticsConfiguration()
+    let transport = TestAnalyticsTransport()
+    let store = TestAnalyticsStateStore()
+    let timestamp = testAnalyticsDate("2026-09-05T10:00:00Z")
+    let configuration = makeTestAnalyticsConfiguration()
     let client = AppAnalyticsClient(
         configuration: configuration,
         transport: transport,
         stateStore: store,
         now: { timestamp },
-        clientContext: analyticsContext()
+        clientContext: testAnalyticsContext()
     )
 
     try await client.track("generation_completed", dimension: "nano", count: 2)
@@ -141,9 +61,11 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
     #expect(request.value(forHTTPHeaderField: "X-App-Build") == "143")
     #expect(request.value(forHTTPHeaderField: "X-Installation-ID")?.isEmpty == false)
 
-    let body = try requestBody(request)
+    let body = try testAnalyticsRequestBody(request)
     #expect(body["schemaVersion"] as? Int == 1)
-    #expect((body["requestId"] as? String)?.hasPrefix("native-") == true)
+    let bodyRequestID = try #require(body["requestId"] as? String)
+    #expect(bodyRequestID.hasPrefix("native-"))
+    #expect(request.value(forHTTPHeaderField: "X-Request-ID") == bodyRequestID)
     let days = try #require(body["days"] as? [[String: Any]])
     #expect(days.count == 1)
     #expect(days[0]["day"] as? String == "2026-09-05")
@@ -163,13 +85,13 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 }
 
 @Test func analyticsOmitsAppKeyHeaderWhenNotConfigured() async throws {
-    let transport = MockAnalyticsTransport()
+    let transport = TestAnalyticsTransport()
     let client = AppAnalyticsClient(
-        configuration: analyticsConfiguration(appKey: nil),
+        configuration: makeTestAnalyticsConfiguration(appKey: nil),
         transport: transport,
-        stateStore: MemoryAnalyticsStateStore(),
-        now: { isoDate("2026-09-05T10:00:00Z") },
-        clientContext: analyticsContext()
+        stateStore: TestAnalyticsStateStore(),
+        now: { testAnalyticsDate("2026-09-05T10:00:00Z") },
+        clientContext: testAnalyticsContext()
     )
 
     try await client.track("generation_completed")
@@ -182,15 +104,15 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 }
 
 @Test func analyticsTracksBoundedCumulativeErrors() async throws {
-    let transport = MockAnalyticsTransport()
-    let store = MemoryAnalyticsStateStore()
-    let timestamp = isoDate("2026-09-05T10:00:00Z")
+    let transport = TestAnalyticsTransport()
+    let store = TestAnalyticsStateStore()
+    let timestamp = testAnalyticsDate("2026-09-05T10:00:00Z")
     let client = AppAnalyticsClient(
-        configuration: analyticsConfiguration(uploadInterval: 86_400),
+        configuration: makeTestAnalyticsConfiguration(uploadInterval: 86_400),
         transport: transport,
         stateStore: store,
         now: { timestamp },
-        clientContext: analyticsContext()
+        clientContext: testAnalyticsContext()
     )
 
     try await client.trackError(
@@ -211,7 +133,7 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
     try await client.flush()
 
     let request = try #require(await transport.capturedRequests().last)
-    let body = try requestBody(request)
+    let body = try testAnalyticsRequestBody(request)
     let days = try #require(body["days"] as? [[String: Any]])
     let errors = try #require(days[0]["errors"] as? [[String: Any]])
     #expect(errors.count == 2)
@@ -229,11 +151,11 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 
 @Test func analyticsRejectsInvalidOrExcessErrorSignals() async throws {
     let client = AppAnalyticsClient(
-        configuration: analyticsConfiguration(uploadInterval: 86_400),
-        transport: MockAnalyticsTransport(),
-        stateStore: MemoryAnalyticsStateStore(),
-        now: { isoDate("2026-09-05T10:00:00Z") },
-        clientContext: analyticsContext()
+        configuration: makeTestAnalyticsConfiguration(uploadInterval: 86_400),
+        transport: TestAnalyticsTransport(),
+        stateStore: TestAnalyticsStateStore(),
+        now: { testAnalyticsDate("2026-09-05T10:00:00Z") },
+        clientContext: testAnalyticsContext()
     )
 
     await #expect(throws: AppAnalyticsError.self) {
@@ -252,38 +174,12 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
     }
 }
 
-@Test func analyticsSessionAccountingExcludesInactiveTimeAndUsesThirtyMinuteTimeout() async throws {
-    let transport = MockAnalyticsTransport()
-    let store = MemoryAnalyticsStateStore()
-    let flushTime = isoDate("2026-09-05T11:05:00Z")
-    let client = AppAnalyticsClient(
-        configuration: analyticsConfiguration(),
-        transport: transport,
-        stateStore: store,
-        now: { flushTime }
-    )
-
-    try await client.applicationDidBecomeActive(at: isoDate("2026-09-05T10:00:00Z"))
-    try await client.applicationWillResignActive(at: isoDate("2026-09-05T10:10:00Z"))
-    try await client.applicationDidBecomeActive(at: isoDate("2026-09-05T10:20:00Z"))
-    try await client.applicationWillResignActive(at: isoDate("2026-09-05T10:25:00Z"))
-    try await client.applicationDidBecomeActive(at: isoDate("2026-09-05T11:00:00Z"))
-    try await client.applicationWillResignActive(at: flushTime)
-    try await client.flush()
-
-    let request = try #require(await transport.capturedRequests().last)
-    let body = try requestBody(request)
-    let days = try #require(body["days"] as? [[String: Any]])
-    #expect(days[0]["sessions"] as? Int == 2)
-    #expect(days[0]["sessionSeconds"] as? Int == 1_200)
-}
-
 @Test func analyticsRejectsInvalidEventNamesBeforePersistence() async throws {
     let client = AppAnalyticsClient(
-        configuration: analyticsConfiguration(),
-        transport: MockAnalyticsTransport(),
-        stateStore: MemoryAnalyticsStateStore(),
-        now: { isoDate("2026-09-05T10:00:00Z") }
+        configuration: makeTestAnalyticsConfiguration(),
+        transport: TestAnalyticsTransport(),
+        stateStore: TestAnalyticsStateStore(),
+        now: { testAnalyticsDate("2026-09-05T10:00:00Z") }
     )
 
     await #expect(throws: AppAnalyticsError.self) {
@@ -293,12 +189,12 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 }
 
 @Test func inMemoryInstallationIDIsStableWithinClient() async throws {
-    let transport = MockAnalyticsTransport()
+    let transport = TestAnalyticsTransport()
     let client = AppAnalyticsClient(
-        configuration: analyticsConfiguration(uploadInterval: 0, storageMode: .inMemory),
+        configuration: makeTestAnalyticsConfiguration(uploadInterval: 0, storageMode: .inMemory),
         transport: transport,
-        stateStore: MemoryAnalyticsStateStore(),
-        now: { isoDate("2026-09-05T10:00:00Z") }
+        stateStore: TestAnalyticsStateStore(),
+        now: { testAnalyticsDate("2026-09-05T10:00:00Z") }
     )
 
     try await client.track("generation_completed")
@@ -318,19 +214,16 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
     let secureStore = AppAnalyticsSecureStore(service: service)
 
     func trackedID() async throws -> String {
-        let transport = MockAnalyticsTransport()
+        let transport = TestAnalyticsTransport()
         let client = AppAnalyticsClient(
-            configuration: AppAnalyticsConfiguration(
-                appID: "analytics-test",
-                baseURL: URL(string: "https://example.com")!,
+            configuration: makeTestAnalyticsConfiguration(
                 keychainService: service,
-                stateStorageKey: "analytics-state-\(UUID().uuidString)",
                 uploadInterval: 0,
                 storageMode: .inMemory
             ),
             transport: transport,
-            stateStore: MemoryAnalyticsStateStore(),
-            now: { isoDate("2026-09-05T10:00:00Z") }
+            stateStore: TestAnalyticsStateStore(),
+            now: { testAnalyticsDate("2026-09-05T10:00:00Z") }
         )
         try await client.track("generation_completed")
         await client.waitForAutomaticUpload()
@@ -346,21 +239,19 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 
 @Test func inMemoryInstallationIDIgnoresKeychainIdentity() async throws {
     let service = "com.hoangbkit.MacAppFoundationTests.InMemory.\(UUID().uuidString)"
+    defer { deleteTestAnalyticsKeychainItems(service: service) }
 
     func trackedID(for mode: AppAnalyticsStorageMode) async throws -> String {
-        let transport = MockAnalyticsTransport()
+        let transport = TestAnalyticsTransport()
         let client = AppAnalyticsClient(
-            configuration: AppAnalyticsConfiguration(
-                appID: "analytics-test",
-                baseURL: URL(string: "https://example.com")!,
+            configuration: makeTestAnalyticsConfiguration(
                 keychainService: service,
-                stateStorageKey: "analytics-state-\(UUID().uuidString)",
                 uploadInterval: 0,
                 storageMode: mode
             ),
             transport: transport,
-            stateStore: MemoryAnalyticsStateStore(),
-            now: { isoDate("2026-09-05T10:00:00Z") }
+            stateStore: TestAnalyticsStateStore(),
+            now: { testAnalyticsDate("2026-09-05T10:00:00Z") }
         )
         try await client.track("generation_completed")
         await client.waitForAutomaticUpload()
@@ -375,9 +266,7 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 
 @Test func inMemoryStorageModeDoesNotWriteUserDefaults() async throws {
     let key = "analytics-in-memory-\(UUID().uuidString)"
-    let configuration = AppAnalyticsConfiguration(
-        appID: "analytics-test",
-        baseURL: URL(string: "https://example.com")!,
+    let configuration = makeTestAnalyticsConfiguration(
         stateStorageKey: key,
         uploadInterval: 86_400,
         storageMode: .inMemory
@@ -385,7 +274,7 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 
     let client = AppAnalyticsClient(
         configuration: configuration,
-        transport: MockAnalyticsTransport()
+        transport: TestAnalyticsTransport()
     )
     try await client.track("generation_completed", count: 3)
     try await client.flush()
@@ -394,36 +283,34 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 }
 
 @Test func inMemoryStorageModeCountersArePerClient() async throws {
-    let configuration = AppAnalyticsConfiguration(
-        appID: "analytics-test",
-        baseURL: URL(string: "https://example.com")!,
+    let configuration = makeTestAnalyticsConfiguration(
         uploadInterval: 86_400,
         storageMode: .inMemory
     )
 
     let first = AppAnalyticsClient(
         configuration: configuration,
-        transport: MockAnalyticsTransport()
+        transport: TestAnalyticsTransport()
     )
     try await first.track("generation_completed", count: 3)
     #expect(try await first.pendingDayCount() == 1)
 
     let second = AppAnalyticsClient(
         configuration: configuration,
-        transport: MockAnalyticsTransport()
+        transport: TestAnalyticsTransport()
     )
     #expect(try await second.pendingDayCount() == 0)
 }
 
 @Test func explicitlyInjectedStateStoreWinsOverStorageMode() async throws {
-    let customStore = MemoryAnalyticsStateStore()
-    let configuration = analyticsConfiguration(
+    let customStore = TestAnalyticsStateStore()
+    let configuration = makeTestAnalyticsConfiguration(
         uploadInterval: 86_400,
         storageMode: .inMemory
     )
     let client = AppAnalyticsClient(
         configuration: configuration,
-        transport: MockAnalyticsTransport(),
+        transport: TestAnalyticsTransport(),
         stateStore: customStore
     )
 
@@ -433,13 +320,13 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 }
 
 @Test func setEnabledFalseStopsAllAnalyticsWorkAndClearsStateWithoutFinalUpload() async throws {
-    let transport = MockAnalyticsTransport()
-    let store = MemoryAnalyticsStateStore()
+    let transport = TestAnalyticsTransport()
+    let store = TestAnalyticsStateStore()
     let client = AppAnalyticsClient(
-        configuration: analyticsConfiguration(uploadInterval: 86_400),
+        configuration: makeTestAnalyticsConfiguration(uploadInterval: 86_400),
         transport: transport,
         stateStore: store,
-        now: { isoDate("2026-09-05T10:00:00Z") }
+        now: { testAnalyticsDate("2026-09-05T10:00:00Z") }
     )
 
     try await client.track("generation_completed")
@@ -457,8 +344,8 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 
     try await client.track("export_completed")
     try await client.trackError("model_load_failed", component: "generation")
-    try await client.applicationDidBecomeActive(at: isoDate("2026-09-05T10:00:00Z"))
-    try await client.applicationWillResignActive(at: isoDate("2026-09-05T10:01:00Z"))
+    try await client.applicationDidBecomeActive(at: testAnalyticsDate("2026-09-05T10:00:00Z"))
+    try await client.applicationWillResignActive(at: testAnalyticsDate("2026-09-05T10:01:00Z"))
     try await client.flush()
     await client.waitForAutomaticUpload()
 
@@ -468,12 +355,12 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 }
 
 @Test func reEnablingAnalyticsStartsFromCleanStateAndPreservesInstallationIdentity() async throws {
-    let transport = MockAnalyticsTransport()
+    let transport = TestAnalyticsTransport()
     let client = AppAnalyticsClient(
-        configuration: analyticsConfiguration(uploadInterval: 86_400, storageMode: .inMemory),
+        configuration: makeTestAnalyticsConfiguration(uploadInterval: 86_400, storageMode: .inMemory),
         transport: transport,
-        stateStore: MemoryAnalyticsStateStore(),
-        now: { isoDate("2026-09-05T10:00:00Z") }
+        stateStore: TestAnalyticsStateStore(),
+        now: { testAnalyticsDate("2026-09-05T10:00:00Z") }
     )
 
     try await client.track("generation_completed", count: 5)
@@ -493,7 +380,7 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
     let secondInstallationID = try #require(lastRequest.value(forHTTPHeaderField: "X-Installation-ID"))
     #expect(firstInstallationID == secondInstallationID)
 
-    let body = try requestBody(lastRequest)
+    let body = try testAnalyticsRequestBody(lastRequest)
     let days = try #require(body["days"] as? [[String: Any]])
     let events = try #require(days[0]["events"] as? [[String: Any]])
     #expect(events.count == 1)
@@ -501,15 +388,15 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 }
 
 @Test func setEnabledIsIdempotentAndDoesNotClearPreexistingStateWhenAlreadyDisabled() async throws {
-    let transport = MockAnalyticsTransport()
-    let store = MemoryAnalyticsStateStore()
-    let configuration = analyticsConfiguration(uploadInterval: 86_400)
+    let transport = TestAnalyticsTransport()
+    let store = TestAnalyticsStateStore()
+    let configuration = makeTestAnalyticsConfiguration(uploadInterval: 86_400)
 
     let firstClient = AppAnalyticsClient(
         configuration: configuration,
         transport: transport,
         stateStore: store,
-        now: { isoDate("2026-09-05T10:00:00Z") }
+        now: { testAnalyticsDate("2026-09-05T10:00:00Z") }
     )
     try await firstClient.track("generation_completed", count: 2)
     await firstClient.waitForAutomaticUpload()
@@ -526,7 +413,7 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
         configuration: disabledConfig,
         transport: transport,
         stateStore: store,
-        now: { isoDate("2026-09-05T10:00:00Z") }
+        now: { testAnalyticsDate("2026-09-05T10:00:00Z") }
     )
     await disabledClient.setEnabled(false)
     #expect(await store.containsData())
@@ -536,13 +423,22 @@ private func requestBody(_ request: URLRequest) throws -> [String: Any] {
 }
 
 @Test func resetLocalStateWorksWhileAnalyticsDisabled() async throws {
+    let seededState = try testAnalyticsPersistedState(days: [
+        "2026-09-05": testAnalyticsPersistedDay(events: [("persisted_event", nil, 2)]),
+    ])
+    let store = TestAnalyticsStateStore(data: seededState)
     let client = AppAnalyticsClient(
-        configuration: analyticsConfiguration(enabled: false),
-        transport: MockAnalyticsTransport(),
-        stateStore: MemoryAnalyticsStateStore(),
-        now: { isoDate("2026-09-05T10:00:00Z") }
+        configuration: makeTestAnalyticsConfiguration(enabled: false),
+        transport: TestAnalyticsTransport(),
+        stateStore: store,
+        now: { testAnalyticsDate("2026-09-05T10:00:00Z") }
     )
 
+    #expect(await store.containsData())
+    #expect(try await client.pendingDayCount() == 1)
+
     try await client.resetLocalState()
+
+    #expect(await store.containsData() == false)
     #expect(try await client.pendingDayCount() == 0)
 }

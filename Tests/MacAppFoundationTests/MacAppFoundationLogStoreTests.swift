@@ -4,7 +4,7 @@ import XCTest
 
 @MainActor
 final class MacAppFoundationLogStoreTests: XCTestCase {
-    func testStoreKeepsOnlyNewestEntriesWithinLimit() {
+    func testStoreKeepsOnlyNewestEntriesWithinLimitAndClears() {
         let store = MacAppFoundationLogStore(maximumEntries: 2)
 
         store.append(entry("first"))
@@ -12,11 +12,6 @@ final class MacAppFoundationLogStoreTests: XCTestCase {
         store.append(entry("third"))
 
         XCTAssertEqual(store.entries.map(\.message), ["second", "third"])
-    }
-
-    func testClearRemovesCapturedEntries() {
-        let store = MacAppFoundationLogStore(maximumEntries: 2)
-        store.append(entry("entry"))
 
         store.clear()
 

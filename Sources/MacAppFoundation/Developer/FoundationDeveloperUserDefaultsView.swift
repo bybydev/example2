@@ -124,46 +124,6 @@ enum FoundationDeveloperUserDefaultsCodec {
         }
         return String(data: data, encoding: .utf8)
     }
-
-    static func propertyListValue(
-        from text: String,
-        expectedType: FoundationDeveloperUserDefaultsValueType
-    ) throws -> Any {
-        let data = Data(text.utf8)
-        let value = try PropertyListSerialization.propertyList(
-            from: data,
-            options: [],
-            format: nil
-        )
-
-        switch expectedType {
-        case .array where value is [Any]:
-            return value
-        case .dictionary where value is [String: Any]:
-            return value
-        case .array:
-            throw FoundationDeveloperUserDefaultsError.invalidValue(
-                "The property list root must be an array."
-            )
-        case .dictionary:
-            throw FoundationDeveloperUserDefaultsError.invalidValue(
-                "The property list root must be a dictionary."
-            )
-        default:
-            return value
-        }
-    }
-}
-
-enum FoundationDeveloperUserDefaultsError: LocalizedError {
-    case invalidValue(String)
-
-    var errorDescription: String? {
-        switch self {
-        case .invalidValue(let message):
-            message
-        }
-    }
 }
 
 @MainActor

@@ -1,18 +1,65 @@
 import Foundation
+import SwiftUI
 import Testing
 @testable import MacAppFoundation
 
 @Suite("MacAppTheme")
 @MainActor
 struct MacAppThemeTests {
-    @Test("Built-in theme IDs are unique")
-    func builtInThemeIDsAreUnique() {
+    @Test("Built-in catalog exposes all 13 themes with stable raw IDs")
+    func builtInCatalogAndStableRawIDs() {
+        let expected: [(id: MacAppThemeID, rawValue: String)] = [
+            (.system, "system"),
+            (.githubDarkDimmed, "github-dark-dimmed"),
+            (.midnight, "midnight"),
+            (.ocean, "ocean"),
+            (.aurora, "aurora"),
+            (.ember, "ember"),
+            (.graphite, "graphite"),
+            (.porcelain, "porcelain"),
+            (.blossom, "blossom"),
+            (.morningMist, "morning-mist"),
+            (.softSage, "soft-sage"),
+            (.sunrise, "sunrise"),
+            (.githubLight, "github-light"),
+        ]
+
         let themes = MacAppThemeCatalog.allBuiltIn
         let ids = themes.map(\.id)
 
         #expect(themes.count == 13)
         #expect(Set(ids).count == themes.count)
-        #expect(ids.first == .system)
+        #expect(ids == expected.map(\.id))
+        #expect(ids.map(\.rawValue) == expected.map(\.rawValue))
+        #expect(MacAppThemeCatalog.theme(for: "unknown") == nil)
+    }
+
+    @Test("Environment defaults to System theme and round-trips assigned theme")
+    func environmentDefaultsToSystemAndRoundTrips() {
+        var values = EnvironmentValues()
+        #expect(values.macAppTheme.id == .system)
+        #expect(values.macAppTheme.preferredColorScheme == nil)
+
+        values.macAppTheme = MacAppThemeCatalog.midnight
+        #expect(values.macAppTheme.id == .midnight)
+    }
+
+    @Test("allBuiltIn and builtIns helpers preserve order, filter unknown IDs, and fall back to System")
+    func configurationBuiltInHelpers() {
+        let allBuiltIn = MacAppThemeConfiguration.allBuiltIn(defaultThemeID: .midnight)
+        #expect(allBuiltIn.themes.count == MacAppThemeCatalog.allBuiltIn.count)
+        #expect(allBuiltIn.defaultThemeID == .midnight)
+
+        let subset = MacAppThemeConfiguration.builtIns(
+            [.porcelain, "unknown", .midnight],
+            defaultThemeID: .midnight
+        )
+        #expect(subset.themes.map(\.id) == [.porcelain, .midnight])
+        #expect(subset.defaultThemeID == .midnight)
+
+        let unknownOnly = MacAppThemeConfiguration.builtIns(["does-not-exist"])
+        #expect(unknownOnly.themes.map(\.id) == [.system])
+        #expect(unknownOnly.defaultThemeID == .system)
     }
 
     @Test("Configuration supports a subset of built-in themes")
@@ -43,7 +90,7 @@ struct MacAppThemeTests {
         #expect(configuration.defaultThemeID == .ocean)
     }
 
-    @Test("Configuration accepts app-defined themes")
+    @Test("Configuration accepts app-defined themes and preserves catalog order")
     func configurationAcceptsCustomTheme() {
         let customID: MacAppThemeID = "demo-custom"
         let customTheme = MacAppTheme(
@@ -54,11 +101,12 @@ struct MacAppThemeTests {
             palette: MacAppThemeCatalog.midnight.palette
         )
         let configuration = MacAppThemeConfiguration(
-            themes: [.system, customTheme],
+            themes: [.porcelain, customTheme, .midnight],
             defaultThemeID: customID,
             storageKey: "theme-tests.custom"
         )
 
+        #expect(configuration.themes.map(\.id) == [.porcelain, customID, .midnight])
         #expect(configuration.theme(for: customID)?.name == "Demo Custom")
         #expect(configuration.defaultThemeID == customID)
     }
@@ -170,6 +218,35 @@ struct MacAppThemeTests {
         let restoredStore = MacAppThemeStore(configuration: configuration, defaults: defaults)
         #expect(restoredStore.selectedThemeID == .midnight)
         #expect(restoredStore.currentTheme.id == .midnight)
+    }
+
+    @Test("Store reset restores configured default and clears active Pro preview")
+    func storeResetRestoresDefaultAndClearsPreview() {
+        let suiteName = "MacAppThemeTests.reset.\(UUID().uuidString)"
+        let defaults = UserDefaults(suiteName: suiteName)!
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+
+        let configuration = MacAppThemeConfiguration(
+            themes: [.system, .midnight, .ocean],
+            defaultThemeID: .system,
+            storageKey: "theme",
+            proThemeIDs: [.ocean],
+            previewBehavior: .init(schedulesAutomaticExpiration: false)
+        )
+        let store = MacAppThemeStore(configuration: configuration, defaults: defaults)
+
+        store.select(.midnight)
+        _ = store.choose(.ocean, hasPro: false)
+        #expect(store.isPreviewActive)
+
+        store.reset()
+
+        #expect(store.selectedThemeID == .system)
+        #expect(defaults.string(forKey: "theme") == MacAppThemeID.system.rawValue)
+        #expect(!store.isPreviewActive)
+        #expect(store.previewThemeID == nil)
+        #expect(defaults.string(forKey: "theme.previewThemeID") == nil)
+        #expect(defaults.object(forKey: "theme.previewExpiresAt") == nil)
     }
 
     @Test("Store ignores a persisted theme not exposed by the app")

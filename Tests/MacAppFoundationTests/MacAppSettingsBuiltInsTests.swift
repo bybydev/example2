@@ -4,11 +4,19 @@ import Testing
 
 @Suite("MacAppSettings built-ins")
 struct MacAppSettingsBuiltInsTests {
+    private func makeDefaults() -> (UserDefaults, String) {
+        let suiteName = "MacAppSettingsBuiltInsTests.\(UUID().uuidString)"
+        let defaults = UserDefaults(suiteName: suiteName)!
+        defaults.removePersistentDomain(forName: suiteName)
+        return (defaults, suiteName)
+    }
+
     @MainActor
     @Test("Theme pane uses stable built-in metadata")
     func themeMetadata() {
-        let defaults = UserDefaults(suiteName: "MacAppSettingsBuiltInsTests.theme")!
-        defaults.removePersistentDomain(forName: "MacAppSettingsBuiltInsTests.theme")
+        let (defaults, suiteName) = makeDefaults()
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+
         let store = MacAppThemeStore(
             configuration: .builtIns([.system, .midnight]),
             defaults: defaults
@@ -22,58 +30,19 @@ struct MacAppSettingsBuiltInsTests {
     }
 
     @MainActor
-    @Test("Theme pane accepts optional commerce dependencies")
-    func themeCommerceMetadata() {
-        let defaults = UserDefaults(suiteName: "MacAppSettingsBuiltInsTests.entitledTheme")!
-        defaults.removePersistentDomain(forName: "MacAppSettingsBuiltInsTests.entitledTheme")
-        let store = MacAppThemeStore(
-            configuration: .builtIns(
-                [.system, .midnight],
-                proThemeIDs: [.midnight]
-            ),
-            defaults: defaults
-        )
-        let purchases = PurchaseManager(
-            configuration: PurchaseConfiguration(productIDs: ["pro"]),
-            simulated: true
-        )
+    @Test("Theme settings pane validates commerce dependencies only when Pro themes exist")
+    func themeSettingsPaneCommerceDependencyValidation() {
+        let (defaults, suiteName) = makeDefaults()
+        defer { defaults.removePersistentDomain(forName: suiteName) }
 
-        let pane = MacAppSettingsPane.theme(
-            themeStore: store,
-            purchaseManager: purchases,
-            variant: .compact,
-            onUpgrade: {}
-        )
-
-        #expect(pane.id == .theme)
-        #expect(pane.title == "Theme")
-    }
-
-    @MainActor
-    @Test("Free-only Theme pane needs no commerce dependencies")
-    func freeThemeNeedsNoCommerceDependencies() {
-        let defaults = UserDefaults(suiteName: "MacAppSettingsBuiltInsTests.freeTheme")!
-        defaults.removePersistentDomain(forName: "MacAppSettingsBuiltInsTests.freeTheme")
-        let store = MacAppThemeStore(
+        let freeStore = MacAppThemeStore(
             configuration: .builtIns([.system, .midnight]),
             defaults: defaults
         )
+        #expect(MacAppThemeSettingsPane(themeStore: freeStore).configurationErrorMessage == nil)
 
-        let pane = MacAppThemeSettingsPane(themeStore: store)
-
-        #expect(pane.configurationErrorMessage == nil)
-    }
-
-    @MainActor
-    @Test("Pro Theme pane accepts both commerce dependencies")
-    func proThemeAcceptsCommerceDependencies() {
-        let defaults = UserDefaults(suiteName: "MacAppSettingsBuiltInsTests.validProTheme")!
-        defaults.removePersistentDomain(forName: "MacAppSettingsBuiltInsTests.validProTheme")
-        let store = MacAppThemeStore(
-            configuration: .builtIns(
-                [.system, .midnight],
-                proThemeIDs: [.midnight]
-            ),
+        let proStore = MacAppThemeStore(
+            configuration: .builtIns([.system, .midnight], proThemeIDs: [.midnight]),
             defaults: defaults
         )
         let purchases = PurchaseManager(
@@ -81,84 +50,29 @@ struct MacAppSettingsBuiltInsTests {
             simulated: true
         )
 
-        let pane = MacAppThemeSettingsPane(
-            themeStore: store,
-            purchaseManager: purchases,
-            onUpgrade: {}
+        #expect(MacAppThemeSettingsPane(themeStore: proStore).configurationErrorMessage != nil)
+        #expect(
+            MacAppThemeSettingsPane(themeStore: proStore, onUpgrade: {}).configurationErrorMessage != nil
         )
-
-        #expect(pane.configurationErrorMessage == nil)
-    }
-
-    @MainActor
-    @Test("Pro Theme pane reports missing PurchaseManager")
-    func proThemeReportsMissingPurchaseManager() {
-        let defaults = UserDefaults(suiteName: "MacAppSettingsBuiltInsTests.missingPurchases")!
-        defaults.removePersistentDomain(forName: "MacAppSettingsBuiltInsTests.missingPurchases")
-        let store = MacAppThemeStore(
-            configuration: .builtIns(
-                [.system, .midnight],
-                proThemeIDs: [.midnight]
-            ),
-            defaults: defaults
+        #expect(
+            MacAppThemeSettingsPane(themeStore: proStore, purchaseManager: purchases)
+                .configurationErrorMessage != nil
         )
-
-        let pane = MacAppThemeSettingsPane(
-            themeStore: store,
-            onUpgrade: {}
+        #expect(
+            MacAppThemeSettingsPane(
+                themeStore: proStore,
+                purchaseManager: purchases,
+                onUpgrade: {}
+            ).configurationErrorMessage == nil
         )
-
-        #expect(pane.configurationErrorMessage != nil)
-    }
-
-    @MainActor
-    @Test("Pro Theme pane reports missing upgrade action")
-    func proThemeReportsMissingUpgradeAction() {
-        let defaults = UserDefaults(suiteName: "MacAppSettingsBuiltInsTests.missingUpgrade")!
-        defaults.removePersistentDomain(forName: "MacAppSettingsBuiltInsTests.missingUpgrade")
-        let store = MacAppThemeStore(
-            configuration: .builtIns(
-                [.system, .midnight],
-                proThemeIDs: [.midnight]
-            ),
-            defaults: defaults
-        )
-        let purchases = PurchaseManager(
-            configuration: PurchaseConfiguration(productIDs: ["pro"]),
-            simulated: true
-        )
-
-        let pane = MacAppThemeSettingsPane(
-            themeStore: store,
-            purchaseManager: purchases
-        )
-
-        #expect(pane.configurationErrorMessage != nil)
-    }
-
-    @MainActor
-    @Test("Pro Theme pane reports when both commerce dependencies are missing")
-    func proThemeReportsMissingCommerceDependencies() {
-        let defaults = UserDefaults(suiteName: "MacAppSettingsBuiltInsTests.missingCommerce")!
-        defaults.removePersistentDomain(forName: "MacAppSettingsBuiltInsTests.missingCommerce")
-        let store = MacAppThemeStore(
-            configuration: .builtIns(
-                [.system, .midnight],
-                proThemeIDs: [.midnight]
-            ),
-            defaults: defaults
-        )
-
-        let pane = MacAppThemeSettingsPane(themeStore: store)
-
-        #expect(pane.configurationErrorMessage != nil)
     }
 
     @MainActor
     @Test("Theme preview progress follows remaining preview time")
     func themePreviewProgressTracksRemainingTime() {
-        let defaults = UserDefaults(suiteName: "MacAppSettingsBuiltInsTests.previewProgress")!
-        defaults.removePersistentDomain(forName: "MacAppSettingsBuiltInsTests.previewProgress")
+        let (defaults, suiteName) = makeDefaults()
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+
         var now = Date(timeIntervalSince1970: 1_000)
         let configuration = MacAppThemeConfiguration(
             themes: [.system, .midnight],
@@ -197,8 +111,9 @@ struct MacAppSettingsBuiltInsTests {
     @MainActor
     @Test("Default built-ins are a flat Theme then Plan pane list")
     func defaultPanes() {
-        let defaults = UserDefaults(suiteName: "MacAppSettingsBuiltInsTests.defaults")!
-        defaults.removePersistentDomain(forName: "MacAppSettingsBuiltInsTests.defaults")
+        let (defaults, suiteName) = makeDefaults()
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+
         let store = MacAppThemeStore(defaults: defaults)
         let purchases = PurchaseManager(
             configuration: PurchaseConfiguration(productIDs: ["pro"]),
@@ -218,8 +133,9 @@ struct MacAppSettingsBuiltInsTests {
     @MainActor
     @Test("Apps can disable either built-in pane")
     func subsetBuiltIns() {
-        let defaults = UserDefaults(suiteName: "MacAppSettingsBuiltInsTests.subset")!
-        defaults.removePersistentDomain(forName: "MacAppSettingsBuiltInsTests.subset")
+        let (defaults, suiteName) = makeDefaults()
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+
         let store = MacAppThemeStore(defaults: defaults)
         let purchases = PurchaseManager(
             configuration: PurchaseConfiguration(productIDs: ["pro"]),
@@ -248,8 +164,9 @@ struct MacAppSettingsBuiltInsTests {
     @MainActor
     @Test("Grouped section helpers remain available for larger settings surfaces")
     func groupedSectionsRemainAvailable() {
-        let defaults = UserDefaults(suiteName: "MacAppSettingsBuiltInsTests.grouped")!
-        defaults.removePersistentDomain(forName: "MacAppSettingsBuiltInsTests.grouped")
+        let (defaults, suiteName) = makeDefaults()
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+
         let store = MacAppThemeStore(defaults: defaults)
         let purchases = PurchaseManager(
             configuration: PurchaseConfiguration(productIDs: ["pro"]),
@@ -265,176 +182,5 @@ struct MacAppSettingsBuiltInsTests {
 
         #expect(sections.map { $0.id } == [.application, .account])
         #expect(sections.flatMap { $0.panes }.map { $0.id } == [.theme, .plan])
-    }
-
-    @MainActor
-    @Test("Plan pane presentation distinguishes Free and Pro")
-    func planPanePresentationState() {
-        #expect(ProPlanPanePresentationState(hasPro: false) == .free)
-        #expect(ProPlanPanePresentationState(hasPro: true) == .pro)
-    }
-
-    @MainActor
-    @Test("Plan pane uses comparison table when features have tier values")
-    func planPaneComparisonTableDetection() {
-        let comparable = PurchaseFeature(
-            id: "batch",
-            systemImage: "square.stack.3d.up",
-            title: "Batch workflows",
-            message: "Process many items in one operation.",
-            freeValue: "One item",
-            proValue: "Unlimited"
-        )
-        let plain = PurchaseFeature(
-            id: "plain",
-            systemImage: "sparkles",
-            title: "Plain feature",
-            message: "Description only.",
-            freeValue: " ",
-            proValue: ""
-        )
-
-        #expect(ProPlanPanePresentationState.showsComparisonTable(for: [comparable]))
-        #expect(ProPlanPanePresentationState.showsComparisonTable(for: [plain, comparable]))
-        #expect(!ProPlanPanePresentationState.showsComparisonTable(for: [plain]))
-        #expect(!ProPlanPanePresentationState.showsComparisonTable(for: []))
-    }
-
-    @MainActor
-    @Test("Plan pane badge shows known plan label and omits redundant or unloaded badges")
-    func planPaneBadgeLabel() {
-        let monthly = StoreProduct(
-            id: "pro.monthly",
-            displayName: "Monthly",
-            description: "",
-            displayPrice: "$4.99",
-            price: 4.99,
-            subscriptionPeriod: .init(value: 1, unit: .month)
-        )
-        let lifetime = StoreProduct(
-            id: "pro.lifetime",
-            displayName: "Lifetime",
-            description: "",
-            displayPrice: "$79.99",
-            price: 79.99
-        )
-
-        #expect(
-            ProPlanPanePresentationState.planBadgeLabel(
-                hasPro: false,
-                activeProduct: monthly,
-                proTitle: "Pro"
-            ) == nil
-        )
-        #expect(
-            ProPlanPanePresentationState.planBadgeLabel(
-                hasPro: true,
-                activeProduct: nil,
-                proTitle: "Pro"
-            ) == nil
-        )
-        #expect(
-            ProPlanPanePresentationState.planBadgeLabel(
-                hasPro: true,
-                activeProduct: monthly,
-                proTitle: "Pro"
-            ) == "MONTHLY"
-        )
-        #expect(
-            ProPlanPanePresentationState.planBadgeLabel(
-                hasPro: true,
-                activeProduct: lifetime,
-                proTitle: "Pro"
-            ) == "LIFETIME"
-        )
-        #expect(
-            ProPlanPanePresentationState.planBadgeLabel(
-                hasPro: true,
-                activeProduct: lifetime,
-                proTitle: "Lifetime"
-            ) == nil
-        )
-    }
-
-    @MainActor
-    @Test("Plan pane actions match free, subscription, lifetime, offline, and mixed entitlements")
-    func planPaneActions() {
-        let monthly = StoreProduct(
-            id: "pro.monthly",
-            displayName: "Monthly",
-            description: "",
-            displayPrice: "$4.99",
-            price: 4.99,
-            subscriptionPeriod: .init(value: 1, unit: .month)
-        )
-        let lifetime = StoreProduct(
-            id: "pro.lifetime",
-            displayName: "Lifetime",
-            description: "",
-            displayPrice: "$79.99",
-            price: 79.99
-        )
-
-        let free = ProPlanPaneActionState(
-            hasPro: false,
-            activeProduct: nil,
-            activeSubscriptionProduct: nil
-        )
-        #expect(free.showsUpgrade)
-        #expect(!free.showsViewPlans)
-        #expect(!free.showsManageSubscription)
-        #expect(free.upgradeButtonKind == .primary)
-        #expect(free.restoreButtonKind == .quiet)
-
-        let freeWithStaleSubscription = ProPlanPaneActionState(
-            hasPro: false,
-            activeProduct: nil,
-            activeSubscriptionProduct: monthly
-        )
-        #expect(freeWithStaleSubscription.showsUpgrade)
-        #expect(!freeWithStaleSubscription.showsManageSubscription)
-
-        let subscription = ProPlanPaneActionState(
-            hasPro: true,
-            activeProduct: monthly,
-            activeSubscriptionProduct: monthly
-        )
-        #expect(!subscription.showsUpgrade)
-        #expect(subscription.showsViewPlans)
-        #expect(subscription.showsManageSubscription)
-        #expect(subscription.viewPlansButtonKind == .secondary)
-        #expect(subscription.manageSubscriptionButtonKind == .secondary)
-        #expect(subscription.restoreButtonKind == .quiet)
-
-        let lifetimeOnly = ProPlanPaneActionState(
-            hasPro: true,
-            activeProduct: lifetime,
-            activeSubscriptionProduct: nil
-        )
-        #expect(!lifetimeOnly.showsUpgrade)
-        #expect(!lifetimeOnly.showsViewPlans)
-        #expect(!lifetimeOnly.showsManageSubscription)
-        #expect(lifetimeOnly.restoreButtonKind == .secondary)
-
-        let offlinePro = ProPlanPaneActionState(
-            hasPro: true,
-            activeProduct: nil,
-            activeSubscriptionProduct: nil
-        )
-        #expect(!offlinePro.showsUpgrade)
-        #expect(!offlinePro.showsViewPlans)
-        #expect(!offlinePro.showsManageSubscription)
-        #expect(offlinePro.restoreButtonKind == .secondary)
-
-        let lifetimeAndSubscription = ProPlanPaneActionState(
-            hasPro: true,
-            activeProduct: lifetime,
-            activeSubscriptionProduct: monthly
-        )
-        #expect(!lifetimeAndSubscription.showsUpgrade)
-        #expect(!lifetimeAndSubscription.showsViewPlans)
-        #expect(lifetimeAndSubscription.showsManageSubscription)
-        #expect(lifetimeAndSubscription.manageSubscriptionButtonKind == .secondary)
-        #expect(lifetimeAndSubscription.restoreButtonKind == .quiet)
     }
 }

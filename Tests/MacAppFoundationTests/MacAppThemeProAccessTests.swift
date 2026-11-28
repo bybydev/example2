@@ -250,11 +250,22 @@ struct MacAppThemeProAccessTests {
         defaults.set(MacAppThemeID.midnight.rawValue, forKey: "theme")
 
         let store = MacAppThemeStore(configuration: configuration, defaults: defaults)
+        let snapshot = EntitlementSnapshot(
+            activeProductIDs: ["pro"],
+            latestExpirationDate: nil
+        )
 
         #expect(store.selectedThemeID == .midnight)
         #expect(store.effectiveThemeID(hasPro: false) == .system)
         #expect(store.currentTheme(hasPro: false).id == .system)
+        #expect(store.currentTheme(entitlementState: .inactive, hasPro: false).id == .system)
         #expect(store.effectiveThemeID(hasPro: true) == .midnight)
+        #expect(
+            store.currentTheme(
+                entitlementState: .active(snapshot),
+                hasPro: true
+            ).id == .midnight
+        )
         #expect(defaults.string(forKey: "theme") == MacAppThemeID.midnight.rawValue)
     }
 
@@ -274,19 +285,28 @@ struct MacAppThemeProAccessTests {
         )
     }
 
-    @Test("Checking entitlement preserves a persisted Free theme")
+    @Test("Checking entitlement preserves a persisted non-default Free theme")
     func checkingEntitlementPreservesPersistedFreeTheme() {
         let (defaults, suiteName) = makeDefaults()
         defer { defaults.removePersistentDomain(forName: suiteName) }
-        defaults.set(MacAppThemeID.system.rawValue, forKey: "theme")
+        defaults.set(MacAppThemeID.porcelain.rawValue, forKey: "theme")
 
-        let store = MacAppThemeStore(configuration: configuration, defaults: defaults)
+        let configurationWithFreeTheme = MacAppThemeConfiguration(
+            themes: [.system, .porcelain, .midnight],
+            defaultThemeID: .system,
+            storageKey: "theme",
+            proThemeIDs: [.midnight]
+        )
+        let store = MacAppThemeStore(
+            configuration: configurationWithFreeTheme,
+            defaults: defaults
+        )
 
         #expect(
             store.currentTheme(
                 entitlementState: .checking,
                 hasPro: false
-            ).id == .system
+            ).id == .porcelain
         )
     }
 
@@ -302,42 +322,6 @@ struct MacAppThemeProAccessTests {
             store.currentTheme(
                 entitlementState: .checking,
                 hasPro: false
-            ).id == .midnight
-        )
-    }
-
-    @Test("Resolved Free entitlement falls back from a persisted Pro theme")
-    func resolvedFreeEntitlementFallsBackFromPersistedProTheme() {
-        let (defaults, suiteName) = makeDefaults()
-        defer { defaults.removePersistentDomain(forName: suiteName) }
-        defaults.set(MacAppThemeID.midnight.rawValue, forKey: "theme")
-
-        let store = MacAppThemeStore(configuration: configuration, defaults: defaults)
-
-        #expect(
-            store.currentTheme(
-                entitlementState: .inactive,
-                hasPro: false
-            ).id == .system
-        )
-    }
-
-    @Test("Resolved Pro entitlement keeps a persisted Pro theme")
-    func resolvedProEntitlementKeepsPersistedProTheme() {
-        let (defaults, suiteName) = makeDefaults()
-        defer { defaults.removePersistentDomain(forName: suiteName) }
-        defaults.set(MacAppThemeID.midnight.rawValue, forKey: "theme")
-
-        let store = MacAppThemeStore(configuration: configuration, defaults: defaults)
-        let snapshot = EntitlementSnapshot(
-            activeProductIDs: ["pro"],
-            latestExpirationDate: nil
-        )
-
-        #expect(
-            store.currentTheme(
-                entitlementState: .active(snapshot),
-                hasPro: true
             ).id == .midnight
         )
     }

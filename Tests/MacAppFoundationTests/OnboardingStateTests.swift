@@ -5,8 +5,8 @@ import XCTest
 @MainActor
 final class OnboardingStateTests: XCTestCase {
     func testProgressResumesUntilCompletion() {
-        let defaults = makeDefaults()
-        defer { defaults.removePersistentDomain(forName: defaultsSuiteName) }
+        let (defaults, suiteName) = makeDefaults()
+        defer { defaults.removePersistentDomain(forName: suiteName) }
 
         let state = OnboardingState(
             id: "demo",
@@ -30,8 +30,8 @@ final class OnboardingStateTests: XCTestCase {
     }
 
     func testCompletionPersists() {
-        let defaults = makeDefaults()
-        defer { defaults.removePersistentDomain(forName: defaultsSuiteName) }
+        let (defaults, suiteName) = makeDefaults()
+        defer { defaults.removePersistentDomain(forName: suiteName) }
 
         let state = OnboardingState(
             id: "demo",
@@ -49,8 +49,8 @@ final class OnboardingStateTests: XCTestCase {
     }
 
     func testReplayRestartsWithoutClearingCompletion() {
-        let defaults = makeDefaults()
-        defer { defaults.removePersistentDomain(forName: defaultsSuiteName) }
+        let (defaults, suiteName) = makeDefaults()
+        defer { defaults.removePersistentDomain(forName: suiteName) }
 
         let state = OnboardingState(
             id: "demo",
@@ -74,8 +74,8 @@ final class OnboardingStateTests: XCTestCase {
     }
 
     func testResetRestoresFirstLaunchState() {
-        let defaults = makeDefaults()
-        defer { defaults.removePersistentDomain(forName: defaultsSuiteName) }
+        let (defaults, suiteName) = makeDefaults()
+        defer { defaults.removePersistentDomain(forName: suiteName) }
 
         let state = OnboardingState(
             id: "demo",
@@ -99,8 +99,8 @@ final class OnboardingStateTests: XCTestCase {
     }
 
     func testNavigationBoundariesAndClamping() {
-        let defaults = makeDefaults()
-        defer { defaults.removePersistentDomain(forName: defaultsSuiteName) }
+        let (defaults, suiteName) = makeDefaults()
+        defer { defaults.removePersistentDomain(forName: suiteName) }
 
         let state = OnboardingState(
             id: "demo",
@@ -187,13 +187,10 @@ final class OnboardingStateTests: XCTestCase {
         XCTAssertEqual(truncatedBetweenActions.originX, 96)
     }
 
-    private var defaultsSuiteName: String {
-        "MacAppFoundationTests.OnboardingState"
-    }
-
-    private func makeDefaults() -> UserDefaults {
-        let defaults = UserDefaults(suiteName: defaultsSuiteName)!
-        defaults.removePersistentDomain(forName: defaultsSuiteName)
-        return defaults
+    private func makeDefaults() -> (UserDefaults, String) {
+        let suiteName = "MacAppFoundationTests.OnboardingState.\(UUID().uuidString)"
+        let defaults = UserDefaults(suiteName: suiteName)!
+        defaults.removePersistentDomain(forName: suiteName)
+        return (defaults, suiteName)
     }
 }

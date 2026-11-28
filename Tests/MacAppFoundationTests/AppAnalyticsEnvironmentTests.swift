@@ -5,22 +5,13 @@ import XCTest
 @testable import MacAppFoundation
 
 final class AppAnalyticsEnvironmentTests: XCTestCase {
-    func testAnalyticsEnvironmentDefaultsToNil() {
-        let values = EnvironmentValues()
-        XCTAssertNil(values.appAnalytics)
-    }
-
-    func testAnalyticsEnvironmentCanCarrySharedClient() throws {
-        let baseURL = try XCTUnwrap(URL(string: "https://analytics.example.com"))
-        let configuration = AppAnalyticsConfiguration(
-            appID: "test-app",
-            baseURL: baseURL
-        )
-        XCTAssertEqual(configuration.baseURL, baseURL)
-
-        let client = AppAnalyticsClient(configuration: configuration)
+    func testAnalyticsEnvironmentDefaultsToNilAndStoresClient() {
         var values = EnvironmentValues()
+        XCTAssertNil(values.appAnalytics)
 
+        let client = AppAnalyticsClient(
+            configuration: makeTestAnalyticsConfiguration(appID: "test-app")
+        )
         values.appAnalytics = client
 
         XCTAssertTrue(values.appAnalytics === client)
@@ -29,16 +20,14 @@ final class AppAnalyticsEnvironmentTests: XCTestCase {
     @MainActor
     func testLifecycleCoordinatorDeduplicatesNotificationsAcrossMultipleScenes() async throws {
         let center = NotificationCenter()
-        let store = LifecycleCoordinatorMemoryStore()
-        let transport = LifecycleCoordinatorMockTransport()
-        let startDate = Date(timeIntervalSince1970: 1_788_602_400)
-        let clock = LifecycleCoordinatorClock(startDate)
+        let store = TestAnalyticsStateStore()
+        let transport = TestAnalyticsTransport()
+        let startDate = testAnalyticsDate("2026-09-05T10:00:00Z")
+        let clock = TestAnalyticsClock(startDate)
         let client = AppAnalyticsClient(
-            configuration: AppAnalyticsConfiguration(
+            configuration: makeTestAnalyticsConfiguration(
                 appID: "lifecycle-dedupe",
-                baseURL: try XCTUnwrap(URL(string: "https://analytics.example.com")),
                 uploadInterval: 86_400,
-                transportRetryCount: 0,
                 storageMode: .inMemory
             ),
             transport: transport,
@@ -51,112 +40,72 @@ final class AppAnalyticsEnvironmentTests: XCTestCase {
             isApplicationActive: { true }
         )
 
+        // Registering three scenes starts only one session.
         let tokenA = coordinator.register(client)
         let tokenB = coordinator.register(client)
         let tokenC = coordinator.register(client)
         await coordinator.waitForPendingEvents(for: client)
         await client.waitForAutomaticUpload()
 
-        let savesAfterRegister = await store.saveCount()
-        XCTAssertEqual(savesAfterRegister, 3)
-
         clock.set(startDate.addingTimeInterval(60))
         center.post(name: NSApplication.willResignActiveNotification, object: nil)
         await coordinator.waitForPendingEvents(for: client)
         await client.waitForAutomaticUpload()
 
-        let savesAfterResign = await store.saveCount()
-        XCTAssertEqual(savesAfterResign, 5)
+        try await client.flush()
+        let firstSnapshot = try XCTUnwrap(await lastSessionSnapshot(from: transport))
+        XCTAssertEqual(firstSnapshot.sessions, 1)
+        XCTAssertEqual(firstSnapshot.sessionSeconds, 60)
 
+        // Unregistering two of three scenes keeps notifications active (and deduplicated).
         coordinator.unregister(tokenA)
         coordinator.unregister(tokenB)
-        coordinator.unregister(tokenC)
 
         clock.set(startDate.addingTimeInterval(3_600))
         center.post(name: NSApplication.didBecomeActiveNotification, object: nil)
         await coordinator.waitForPendingEvents(for: client)
+
+        clock.set(startDate.addingTimeInterval(3_720))
+        center.post(name: NSApplication.willResignActiveNotification, object: nil)
+        await coordinator.waitForPendingEvents(for: client)
         await client.waitForAutomaticUpload()
 
-        let savesAfterUnregister = await store.saveCount()
-        XCTAssertEqual(savesAfterUnregister, 5)
+        try await client.flush()
+        let secondSnapshot = try XCTUnwrap(await lastSessionSnapshot(from: transport))
+        XCTAssertEqual(secondSnapshot.sessions, 2)
+        XCTAssertEqual(secondSnapshot.sessionSeconds, 180)
+
+        // Unregistering the final scene tears down observers so later notifications are ignored.
+        coordinator.unregister(tokenC)
+
+        clock.set(startDate.addingTimeInterval(7_200))
+        center.post(name: NSApplication.didBecomeActiveNotification, object: nil)
+        await coordinator.waitForPendingEvents(for: client)
+
+        clock.set(startDate.addingTimeInterval(7_320))
+        center.post(name: NSApplication.willResignActiveNotification, object: nil)
+        await coordinator.waitForPendingEvents(for: client)
+        await client.waitForAutomaticUpload()
 
         try await client.flush()
-        let snapshot = await transport.lastSessionSnapshot()
-        XCTAssertEqual(snapshot.sessions, 1)
-        XCTAssertEqual(snapshot.sessionSeconds, 60)
-    }
-}
-
-private final class LifecycleCoordinatorClock: @unchecked Sendable {
-    private let lock = NSLock()
-    private var value: Date
-
-    init(_ value: Date) {
-        self.value = value
+        let finalSnapshot = try XCTUnwrap(await lastSessionSnapshot(from: transport))
+        XCTAssertEqual(finalSnapshot.sessions, 2)
+        XCTAssertEqual(finalSnapshot.sessionSeconds, 180)
     }
 
-    func now() -> Date {
-        lock.lock()
-        defer { lock.unlock() }
-        return value
-    }
-
-    func set(_ value: Date) {
-        lock.lock()
-        self.value = value
-        lock.unlock()
-    }
-}
-
-private actor LifecycleCoordinatorMemoryStore: AppAnalyticsStateStoring {
-    private var data: Data?
-    private var saves = 0
-
-    func load() async throws -> Data? { data }
-
-    func save(_ data: Data) async throws {
-        self.data = data
-        saves += 1
-    }
-
-    func remove() async throws {
-        data = nil
-    }
-
-    func saveCount() -> Int {
-        saves
-    }
-}
-
-private actor LifecycleCoordinatorMockTransport: AppAnalyticsTransport {
-    private var lastSessions: Int?
-    private var lastSessionSeconds: Int?
-
-    func data(for request: URLRequest) async throws -> (Data, HTTPURLResponse) {
-        let response = HTTPURLResponse(
-            url: request.url!,
-            statusCode: 200,
-            httpVersion: nil,
-            headerFields: nil
-        )!
-        let body = request.httpBody ?? Data()
-        let json = (try? JSONSerialization.jsonObject(with: body) as? [String: Any]) ?? [:]
-        let requestID = json["requestId"] as? String ?? ""
-        let days = json["days"] as? [[String: Any]] ?? []
-        if let lastDay = days.last {
-            lastSessions = lastDay["sessions"] as? Int
-            lastSessionSeconds = lastDay["sessionSeconds"] as? Int
+    private func lastSessionSnapshot(
+        from transport: TestAnalyticsTransport
+    ) async throws -> (sessions: Int?, sessionSeconds: Int?)? {
+        guard let request = await transport.capturedRequests().last else {
+            return nil
         }
-        let acceptedDays = days.compactMap { $0["day"] as? String }
-        let payload: [String: Any] = [
-            "ok": true,
-            "requestId": requestID,
-            "acceptedDays": acceptedDays,
-        ]
-        return (try JSONSerialization.data(withJSONObject: payload), response)
-    }
-
-    func lastSessionSnapshot() -> (sessions: Int?, sessionSeconds: Int?) {
-        (lastSessions, lastSessionSeconds)
+        let days = try testAnalyticsDays(request)
+        guard let lastDay = days.last else {
+            return nil
+        }
+        return (
+            sessions: lastDay["sessions"] as? Int,
+            sessionSeconds: lastDay["sessionSeconds"] as? Int
+        )
     }
 }

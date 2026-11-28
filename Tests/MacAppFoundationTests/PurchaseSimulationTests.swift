@@ -1,19 +1,55 @@
 #if DEBUG
+import Foundation
 import XCTest
 @testable import MacAppFoundation
 
 @MainActor
 final class PurchaseSimulationTests: XCTestCase {
-    func testOfflineCacheOptInDoesNotChangeSimulatedFreeSemantics() async {
+    func testOfflineCacheOptInDoesNotChangeSimulatedFreeSemantics() async throws {
+        let now = Date(timeIntervalSince1970: 1_800_000_000)
+        let store = InMemoryEntitlementStore()
+        let context = PurchaseEntitlementContext(
+            bundleID: Bundle.main.bundleIdentifier ?? "com.example.test",
+            environment: .production,
+            appTransactionID: "sim-account"
+        )
+        let cachedLifetime = VerifiedEntitlementCache(
+            context: context,
+            verifiedAt: now,
+            lastObservedAt: now,
+            records: [
+                EntitlementRecord(
+                    productID: Self.monthly.id,
+                    purchaseDate: now.addingTimeInterval(-3_600),
+                    productKind: .nonConsumable,
+                    ownership: .purchased,
+                    transactionID: "cached-tx",
+                    originalTransactionID: "cached-orig",
+                    appTransactionID: context.appTransactionID,
+                    environment: context.environment
+                )
+            ],
+            entitledProductIDs: [Self.monthly.id]
+        )
+        try store.set(JSONEncoder().encode(cachedLifetime), for: context.storageAccount)
+        try store.set(
+            JSONEncoder().encode(PersistedPurchaseIdentity(context: context, verifiedAt: now)),
+            for: context.identityStorageAccount
+        )
+        store.resetCounters()
+
         let manager = PurchaseManager(
             configuration: PurchaseConfiguration(
                 productIDs: [Self.monthly.id],
                 productLoadAttempts: 1,
                 offlineEntitlements: .verifiedCache(.init())
             ),
-            simulated: true,
-            simulatedProducts: [Self.monthly],
-            simulatedOperationDelay: .milliseconds(0)
+            service: SimulatedPurchaseService(
+                products: [Self.monthly],
+                operationDelay: .milliseconds(0)
+            ),
+            entitlementStore: store,
+            now: { now.addingTimeInterval(60) }
         )
 
         await manager.prepare()
@@ -21,6 +57,20 @@ final class PurchaseSimulationTests: XCTestCase {
         XCTAssertFalse(manager.hasPro)
         XCTAssertEqual(manager.entitlementState, .inactive)
         XCTAssertEqual(manager.accessState, .inactive)
+        XCTAssertFalse(manager.isEntitlementRetryScheduled)
+        XCTAssertEqual(store.readCount, 0)
+        XCTAssertEqual(store.writeCount, 0)
+        XCTAssertEqual(store.removeCount, 0)
+
+        let outcome = await manager.purchase(Self.monthly)
+        if case .success = outcome {
+            XCTAssertTrue(manager.hasPro)
+        } else {
+            XCTFail("Expected simulated purchase to succeed")
+        }
+        XCTAssertEqual(store.readCount, 0)
+        XCTAssertEqual(store.writeCount, 0)
+        XCTAssertEqual(store.removeCount, 0)
     }
 
     func testSimulatedCatalogCanChangeWithoutMutatingLiveConfiguration() async {
@@ -222,8 +272,14 @@ final class PurchaseSimulationTests: XCTestCase {
         manager.setSimulatedRestoreFailure(.unknown)
 
         await manager.resetSimulatedPurchases()
-        await manager.purchase(Self.monthly)
 
+        let emptyRestoreOutcome = await manager.restorePurchases()
+        XCTAssertEqual(emptyRestoreOutcome, .nothingToRestore)
+
+        await manager.purchase(Self.monthly)
+        let restoredOutcome = await manager.restorePurchases()
+
+        XCTAssertEqual(restoredOutcome, .restored)
         XCTAssertTrue(manager.hasPro)
         XCTAssertEqual(manager.activity, .idle)
         XCTAssertEqual(manager.productLoadingState, .loaded)
@@ -263,10 +319,12 @@ final class PurchaseSimulationTests: XCTestCase {
             ),
             simulated: true,
             simulatedProducts: [Self.monthly],
-            simulatedOperationDelay: .milliseconds(150)
+            simulatedOperationDelay: .milliseconds(300)
         )
         let staleLoad = Task { await manager.loadProducts(force: true) }
-        try? await Task.sleep(for: .milliseconds(20))
+        while manager.productLoadingState != .loading {
+            await Task.yield()
+        }
 
         let yearly = StoreProduct(
             id: "pro.yearly",

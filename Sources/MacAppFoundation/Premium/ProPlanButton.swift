@@ -10,7 +10,7 @@ public struct ProPlanButton: View {
     public static let accessibilityIdentifier = "MacAppFoundation.ProPlanButton"
 
     private let purchaseManager: PurchaseManager
-    private let height: CGFloat
+    let height: CGFloat
     private let onUpgrade: () -> Void
     private let onManagePlan: () -> Void
 

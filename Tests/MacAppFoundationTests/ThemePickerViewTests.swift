@@ -63,9 +63,58 @@ struct ThemePickerViewTests {
             proThemeIDs: [.midnight]
         )
         let store = MacAppThemeStore(configuration: configuration, defaults: defaults)
-        let picker = ThemePickerView(themeStore: store)
+        let purchases = PurchaseManager(
+            configuration: PurchaseConfiguration(productIDs: ["pro"]),
+            simulated: true
+        )
+        let picker = ThemePickerView(
+            themeStore: store,
+            purchaseManager: purchases,
+            onUpgrade: {}
+        )
 
-        #expect(picker.configurationErrorMessage != nil)
+        #expect(
+            picker.configurationErrorMessage?.contains(
+                "at least one Free Light theme and one Free Dark theme"
+            ) == true
+        )
+    }
+
+    @Test("Pro themes require PurchaseManager and upgrade action")
+    func proThemesRequireCommerceDependencies() {
+        let (defaults, suiteName) = makeDefaults()
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+
+        let configuration = MacAppThemeConfiguration(
+            themes: [
+                .system,
+                MacAppThemeCatalog.midnight,
+                MacAppThemeCatalog.porcelain,
+                MacAppThemeCatalog.ocean,
+            ],
+            defaultThemeID: .system,
+            storageKey: "theme",
+            proThemeIDs: [.ocean]
+        )
+        let store = MacAppThemeStore(configuration: configuration, defaults: defaults)
+        let purchases = PurchaseManager(
+            configuration: PurchaseConfiguration(productIDs: ["pro"]),
+            simulated: true
+        )
+
+        let missingBoth = ThemePickerView(themeStore: store)
+        #expect(
+            missingBoth.configurationErrorMessage?.contains(
+                "missing PurchaseManager or onUpgrade"
+            ) == true
+        )
+
+        let complete = ThemePickerView(
+            themeStore: store,
+            purchaseManager: purchases,
+            onUpgrade: {}
+        )
+        #expect(complete.configurationErrorMessage == nil)
     }
 
     @Test("Picker accepts Free light and dark coverage")
