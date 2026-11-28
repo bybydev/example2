@@ -118,4 +118,38 @@ final class V1IntegrationSurfaceTests: XCTestCase {
         XCTAssertEqual(manager.features, [purchaseFeature])
         XCTAssertFalse(manager.hasPro)
     }
+
+    func testProUpsellBenefitPreservesTierValuesFromPurchaseFeature() {
+        let feature = PurchaseFeature(
+            id: "batch",
+            systemImage: "square.stack.3d.up",
+            title: "Batch workflows",
+            message: "Process multiple items at once.",
+            freeValue: "Single item",
+            proValue: "Unlimited"
+        )
+
+        let fromFeature = ProUpsellBenefit(feature)
+        XCTAssertEqual(fromFeature.freeValue, "Single item")
+        XCTAssertEqual(fromFeature.proValue, "Unlimited")
+        XCTAssertTrue(
+            ProFeatureComparisonSection.showsComparisonTable(
+                for: [ProFeatureComparisonItem(fromFeature)]
+            )
+        )
+
+        let plainBenefit = ProUpsellBenefit(
+            id: "plain",
+            systemImage: "sparkles",
+            title: "Plain benefit",
+            message: "Description only."
+        )
+        XCTAssertEqual(plainBenefit.freeValue, "")
+        XCTAssertEqual(plainBenefit.proValue, "")
+        XCTAssertFalse(
+            ProFeatureComparisonSection.showsComparisonTable(
+                for: [ProFeatureComparisonItem(plainBenefit)]
+            )
+        )
+    }
 }

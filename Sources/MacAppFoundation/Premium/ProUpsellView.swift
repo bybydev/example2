@@ -5,17 +5,23 @@ public struct ProUpsellBenefit: Identifiable, Hashable, Sendable {
     public let systemImage: String
     public let title: String
     public let message: String
+    public let freeValue: String
+    public let proValue: String
 
     public init(
         id: String,
         systemImage: String,
         title: String,
-        message: String
+        message: String,
+        freeValue: String = "",
+        proValue: String = ""
     ) {
         self.id = id
         self.systemImage = systemImage
         self.title = title
         self.message = message
+        self.freeValue = freeValue
+        self.proValue = proValue
     }
 
     public init(_ feature: PurchaseFeature) {
@@ -23,7 +29,9 @@ public struct ProUpsellBenefit: Identifiable, Hashable, Sendable {
             id: feature.id,
             systemImage: feature.systemImage,
             title: feature.title,
-            message: feature.message
+            message: feature.message,
+            freeValue: feature.freeValue,
+            proValue: feature.proValue
         )
     }
 }
@@ -93,29 +101,13 @@ public struct ProUpsellView: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
 
-            VStack(alignment: .leading, spacing: 16) {
-                ForEach(benefits) { benefit in
-                    HStack(alignment: .top, spacing: 14) {
-                        Image(systemName: benefit.systemImage)
-                            .font(.system(size: 15, weight: .semibold))
-                            .foregroundStyle(theme.accentForeground)
-                            .frame(width: 36, height: 36)
-                            .background(
-                                RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                    .fill(theme.accent)
-                            )
-
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text(benefit.title)
-                                .font(.headline)
-                                .foregroundStyle(theme.textPrimary)
-                            Text(benefit.message)
-                                .font(.body)
-                                .foregroundStyle(theme.textSecondary)
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
-                    }
-                }
+            if !benefits.isEmpty {
+                ProFeatureComparisonSection(
+                    items: benefits.map(ProFeatureComparisonItem.init),
+                    isProActive: false,
+                    freeColumnWidth: 116,
+                    proColumnWidth: 128
+                )
             }
 
             HStack(spacing: 12) {

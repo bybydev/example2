@@ -1,1 +1,2 @@
 - Do not run builds or tests
+- Only do exactly what is requested; present an edit plan before changing files, and do not make assumptions or add unrequested features (this package is shared by many apps)
