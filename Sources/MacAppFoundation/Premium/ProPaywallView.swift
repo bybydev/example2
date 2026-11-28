@@ -416,7 +416,7 @@ public struct ProPaywallView: View {
         if !configuration.features.isEmpty {
             return configuration.features
         }
-        return purchaseManager.configuration.features.map(ProPaywallFeature.init)
+        return purchaseManager.features.map(ProPaywallFeature.init)
     }
 
     private var paywallProducts: [StoreProduct] {

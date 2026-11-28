@@ -1,3 +1,4 @@
+import AppKit
 import XCTest
 @testable import MacAppFoundation
 
@@ -490,6 +491,103 @@ final class PurchaseManagerTests: XCTestCase {
         XCTAssertTrue(manager.hasPro)
     }
 
+    func testRefreshEntitlementsClearsPendingAskToBuyWhenProductIsActive() async {
+        let service = MockPurchaseService()
+        service.productsResult = [Self.monthly]
+        service.purchaseOutcome = .pending
+        let manager = PurchaseManager(
+            configuration: PurchaseConfiguration(productIDs: [Self.monthly.id]),
+            service: service
+        )
+
+        await manager.prepare()
+        await manager.purchase(Self.monthly)
+        XCTAssertEqual(manager.activity, .pending(productID: Self.monthly.id))
+
+        service.entitlements = [EntitlementRecord(productID: Self.monthly.id)]
+        await manager.refreshEntitlements()
+
+        XCTAssertEqual(manager.activity, .idle)
+        XCTAssertTrue(manager.hasPro)
+    }
+
+    func testCancelRestoreWithTimeoutUnblocksImmediately() async {
+        let service = MockPurchaseService()
+        service.syncDelay = .seconds(10)
+        let manager = PurchaseManager(
+            configuration: PurchaseConfiguration(productIDs: [Self.monthly.id]),
+            service: service
+        )
+
+        let clock = ContinuousClock()
+        let start = clock.now
+        let restoreTask = Task {
+            await manager.restorePurchases(timeout: .seconds(10))
+        }
+        try? await Task.sleep(for: .milliseconds(30))
+        XCTAssertTrue(manager.isRestoring)
+
+        manager.cancelRestore()
+        let outcome = await restoreTask.value
+        let elapsed = start.duration(to: clock.now)
+
+        XCTAssertEqual(outcome, .failed(.userCancelled))
+        XCTAssertEqual(manager.activity, .idle)
+        XCTAssertLessThan(elapsed, .seconds(1))
+    }
+
+    func testCancellingLoadProductsDuringRetryStopsRetriesAndResetsToIdle() async {
+        let service = MockPurchaseService()
+        service.productLoadingFailure = PurchaseFailure(
+            code: .networkUnavailable,
+            message: "Offline"
+        )
+        let manager = PurchaseManager(
+            configuration: PurchaseConfiguration(
+                productIDs: [Self.monthly.id],
+                productLoadAttempts: 3
+            ),
+            service: service
+        )
+
+        let loadTask = Task {
+            await manager.loadProducts()
+        }
+        try? await Task.sleep(for: .milliseconds(50))
+        loadTask.cancel()
+        await loadTask.value
+
+        XCTAssertEqual(service.productLoadCount, 1)
+        XCTAssertEqual(manager.productLoadingState, .idle)
+    }
+
+    func testPurchaseLifecycleCoordinatorDeduplicatesPrepareAndActivationRefresh() async {
+        let center = NotificationCenter()
+        let service = MockPurchaseService()
+        service.productsResult = [Self.monthly]
+        let manager = PurchaseManager(
+            configuration: PurchaseConfiguration(productIDs: [Self.monthly.id]),
+            service: service
+        )
+        let coordinator = PurchaseLifecycleCoordinator(notificationCenter: center)
+
+        let tokenA = coordinator.register(manager)
+        let tokenB = coordinator.register(manager)
+        await coordinator.waitForPendingWork(for: manager)
+        XCTAssertEqual(service.entitlementRequestCount, 1)
+
+        center.post(name: NSApplication.didBecomeActiveNotification, object: nil)
+        await coordinator.waitForPendingWork(for: manager)
+        XCTAssertEqual(service.entitlementRequestCount, 2)
+
+        coordinator.unregister(tokenA)
+        coordinator.unregister(tokenB)
+
+        center.post(name: NSApplication.didBecomeActiveNotification, object: nil)
+        await coordinator.waitForPendingWork(for: manager)
+        XCTAssertEqual(service.entitlementRequestCount, 2)
+    }
+
     func testPreferredProductUsesConfiguredCatalogOrder() async {
         let service = MockPurchaseService()
         service.productsResult = [Self.yearly, Self.monthly]
@@ -658,14 +756,15 @@ private final class MockPurchaseService: PurchaseServing {
     var productLoadCount = 0
     var purchaseCount = 0
     var syncCount = 0
+    var syncDelay: Duration = .milliseconds(0)
     var syncFailure: PurchaseFailure?
     var productLoadingFailure: PurchaseFailure?
     var observedProductIDs: Set<String> = []
     var observedSubscriptionStatusProductIDs: Set<String> = []
+    var entitlementRequestCount = 0
 
     private var updateContinuations: [AsyncStream<String>.Continuation] = []
     private var subscriptionStatusUpdateContinuations: [AsyncStream<String>.Continuation] = []
-    private var entitlementRequestCount = 0
     private var firstEntitlementRefreshContinuation: CheckedContinuation<Void, Never>?
     private var productRequestCount = 0
     private var firstProductLoadContinuation: CheckedContinuation<Void, Never>?
@@ -757,6 +856,9 @@ private final class MockPurchaseService: PurchaseServing {
 
     func sync() async throws {
         syncCount += 1
+        if syncDelay > .zero {
+            try await Task.sleep(for: syncDelay)
+        }
         if let syncFailure {
             throw syncFailure
         }

@@ -281,6 +281,9 @@ public final class PurchaseManager {
                 configuration: configuration,
                 productLoadGeneration: loadGeneration
             ) else {
+                if Task.isCancelled, loadGeneration == productLoadGeneration {
+                    productLoadingState = .idle
+                }
                 return
             }
             guard loadGeneration == productLoadGeneration else { return }
@@ -341,9 +344,11 @@ public final class PurchaseManager {
         var lastFailure = PurchaseFailure.noProductsAvailable
 
         for attempt in 1...configuration.productLoadAttempts {
+            guard !Task.isCancelled else { return nil }
             do {
                 let loadedProducts = try await service.products(for: configuration.productIDs)
-                guard generation == serviceGeneration,
+                guard !Task.isCancelled,
+                      generation == serviceGeneration,
                       productLoadGeneration == self.productLoadGeneration
                 else { return nil }
 
@@ -358,15 +363,20 @@ public final class PurchaseManager {
 
                 return orderedProducts
             } catch {
-                guard generation == serviceGeneration else { return nil }
+                guard !Task.isCancelled, generation == serviceGeneration else { return nil }
                 lastFailure = Self.mapFailure(error)
                 guard attempt < configuration.productLoadAttempts else {
                     break
                 }
 
                 let delay = UInt64(attempt) * 350_000_000
-                try? await Task.sleep(nanoseconds: delay)
-                guard generation == serviceGeneration,
+                do {
+                    try await Task.sleep(nanoseconds: delay)
+                } catch {
+                    return nil
+                }
+                guard !Task.isCancelled,
+                      generation == serviceGeneration,
                       productLoadGeneration == self.productLoadGeneration
                 else { return nil }
             }
@@ -443,6 +453,10 @@ public final class PurchaseManager {
         entitlementState = liveState
         entitlementContext = context
         accessState = resolution.state
+        if case .pending(let pendingProductID) = activity,
+           resolution.state.snapshot?.activeProductIDs.contains(pendingProductID) == true {
+            activity = .idle
+        }
         applyCacheMutation(resolution.cacheMutation)
         updateEntitlementRetry(shouldRetry: resolution.shouldRetry)
 
@@ -566,6 +580,7 @@ public final class PurchaseManager {
                 && recordMatchesContext($0, context: context)
                 && $0.revocationDate == nil
                 && !$0.isUpgraded
+                && $0.subscriptionState?.isExplicitlyInactive != true
                 && ($0.productKind == .autoRenewable || $0.productKind == .nonConsumable)
         }
 
@@ -574,6 +589,7 @@ public final class PurchaseManager {
         }
         let liveProductIDs = Set(eligibleLiveRecords.map(\.productID))
         var hadUnavailableLookup = false
+        var didVerifyAnyRecord = !eligibleLiveRecords.isEmpty
 
         if let existingCache, existingCache.matches(context) {
             for cachedRecord in existingCache.entitlements
@@ -589,6 +605,9 @@ public final class PurchaseManager {
                         policy: policy,
                         now: date
                     ) {
+                        if replacement.verifiedAt == date {
+                            didVerifyAnyRecord = true
+                        }
                         persisted.append(replacement)
                     }
                 case .notPurchased:
@@ -618,6 +637,7 @@ public final class PurchaseManager {
                         context: context,
                         now: date
                     ) {
+                        didVerifyAnyRecord = true
                         persisted.append(persistedRecord)
                     }
                 case .notPurchased:
@@ -644,7 +664,7 @@ public final class PurchaseManager {
             return ReconciledCacheResult(
                 cache: existingCache.replacingEntitlements(
                     uniquePersisted,
-                    verifiedAt: date,
+                    verifiedAt: didVerifyAnyRecord ? date : existingCache.verifiedAt,
                     observedAt: date
                 ),
                 hadUnavailableLookup: hadUnavailableLookup
@@ -1179,34 +1199,65 @@ public final class PurchaseManager {
         }
 
         let gate = RestoreGate()
-        return try await withCheckedThrowingContinuation { continuation in
-            gate.activate(continuation)
-
-            Task { [service, gate] in
-                do {
-                    try await service.sync()
-                    gate.resumeReturning()
-                } catch {
-                    gate.resumeThrowing(error)
+        return try await withTaskCancellationHandler {
+            try await withCheckedThrowingContinuation { continuation in
+                if Task.isCancelled {
+                    continuation.resume(throwing: CancellationError())
+                    return
                 }
-            }
 
-            let timeoutTask = Task { [gate] in
-                try? await Task.sleep(for: timeout)
-                gate.resumeThrowing(PurchaseFailure.timeout)
+                gate.activate(continuation)
+
+                let syncTask = Task { [service, gate] in
+                    do {
+                        try await service.sync()
+                        gate.resumeReturning()
+                    } catch {
+                        gate.resumeThrowing(error)
+                    }
+                }
+                gate.attachSyncTask(syncTask)
+
+                let timeoutTask = Task { [gate] in
+                    do {
+                        try await Task.sleep(for: timeout)
+                        gate.resumeThrowing(PurchaseFailure.timeout)
+                    } catch {
+                        return
+                    }
+                }
+                gate.attachTimeoutTask(timeoutTask)
             }
-            gate.attachTimeoutTask(timeoutTask)
+        } onCancel: {
+            Task { @MainActor [gate] in
+                gate.cancel()
+            }
         }
     }
 
     @MainActor
     private final class RestoreGate {
         private var continuation: CheckedContinuation<Void, Error>?
+        private var syncTask: Task<Void, Never>?
         private var timeoutTask: Task<Void, Never>?
         private var didFinish = false
+        private var didCancel = false
 
         func activate(_ continuation: CheckedContinuation<Void, Error>) {
+            if didCancel {
+                didFinish = true
+                continuation.resume(throwing: CancellationError())
+                return
+            }
             self.continuation = continuation
+        }
+
+        func attachSyncTask(_ task: Task<Void, Never>) {
+            guard !didFinish else {
+                task.cancel()
+                return
+            }
+            syncTask = task
         }
 
         func attachTimeoutTask(_ task: Task<Void, Never>) {
@@ -1215,6 +1266,11 @@ public final class PurchaseManager {
                 return
             }
             timeoutTask = task
+        }
+
+        func cancel() {
+            didCancel = true
+            finish { $0.resume(throwing: CancellationError()) }
         }
 
         func resumeReturning() {
@@ -1226,11 +1282,14 @@ public final class PurchaseManager {
         }
 
         private func finish(_ resume: (CheckedContinuation<Void, Error>) -> Void) {
-            guard !didFinish, let continuation else { return }
-            didFinish = true
-            self.continuation = nil
+            guard !didFinish else { return }
+            syncTask?.cancel()
+            syncTask = nil
             timeoutTask?.cancel()
             timeoutTask = nil
+            guard let continuation else { return }
+            didFinish = true
+            self.continuation = nil
             resume(continuation)
         }
     }
@@ -1383,7 +1442,7 @@ public final class PurchaseManager {
     }
     #endif
 
-    private var activeConfiguration: PurchaseConfiguration {
+    var activeConfiguration: PurchaseConfiguration {
         #if DEBUG
         if service is SimulatedPurchaseService {
             return simulatedConfiguration

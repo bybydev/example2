@@ -289,6 +289,48 @@ final class PurchaseSimulationTests: XCTestCase {
         XCTAssertEqual(manager.products, [yearly])
     }
 
+    func testSimulatedFeaturesFollowSimulatedConfigurationEdits() async {
+        let manager = makeManager()
+        await manager.prepare()
+        let customFeature = PurchaseFeature(
+            id: "sim_feature",
+            systemImage: "sparkles",
+            title: "Simulated Feature",
+            message: "Added in simulator.",
+            freeValue: "Off",
+            proValue: "On"
+        )
+
+        await manager.configureSimulatedCatalog(
+            configuration: PurchaseConfiguration(
+                productIDs: [Self.monthly.id],
+                features: [customFeature],
+                productLoadAttempts: 1
+            ),
+            products: [Self.monthly]
+        )
+
+        XCTAssertTrue(manager.configuration.features.isEmpty)
+        XCTAssertEqual(manager.features, [customFeature])
+    }
+
+    func testSimulatedSubscriptionPurchasePopulatesSubscriptionMetadata() async throws {
+        let manager = makeManager()
+        await manager.prepare()
+
+        let outcome = await manager.purchase(Self.monthly)
+        guard case .success(let record) = outcome else {
+            return XCTFail("Expected successful simulated purchase")
+        }
+
+        XCTAssertEqual(record.productKind, .autoRenewable)
+        XCTAssertEqual(record.ownership, .purchased)
+        XCTAssertEqual(record.subscriptionState, .subscribed)
+        let expirationDate = try XCTUnwrap(record.expirationDate)
+        XCTAssertGreaterThan(expirationDate, record.purchaseDate)
+        XCTAssertNotNil(manager.accessState.snapshot?.latestExpirationDate)
+    }
+
     private func makeManager() -> PurchaseManager {
         PurchaseManager(
             configuration: PurchaseConfiguration(

@@ -39,7 +39,10 @@ final class LiveStoreKitService: PurchaseServing {
 
     func products(for identifiers: [String]) async throws -> [StoreProduct] {
         let products = try await Product.products(for: identifiers)
-        productsByID = Dictionary(uniqueKeysWithValues: products.map { ($0.id, $0) })
+        productsByID = Dictionary(
+            products.map { ($0.id, $0) },
+            uniquingKeysWith: { _, latest in latest }
+        )
 
         var storeProducts: [StoreProduct] = []
         storeProducts.reserveCapacity(products.count)
@@ -143,14 +146,20 @@ final class LiveStoreKitService: PurchaseServing {
                         break
                     }
 
-                    guard case .verified(let transaction) = verification,
-                          productIDs.contains(transaction.productID)
-                    else {
-                        continue
+                    switch verification {
+                    case .verified(let transaction):
+                        guard productIDs.contains(transaction.productID) else {
+                            continue
+                        }
+                        await transaction.finish()
+                        continuation.yield(transaction.productID)
+                    case .unverified(let transaction, let error):
+                        if productIDs.contains(transaction.productID) {
+                            Self.logger.warning(
+                                "Skipping unverified StoreKit transaction update: \(String(describing: error), privacy: .public)"
+                            )
+                        }
                     }
-
-                    await transaction.finish()
-                    continuation.yield(transaction.productID)
                 }
                 continuation.finish()
             }

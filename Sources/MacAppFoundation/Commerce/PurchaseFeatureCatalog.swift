@@ -3,7 +3,7 @@ import Foundation
 public extension PurchaseManager {
     /// Registered capabilities used by premium purchase surfaces.
     var features: [PurchaseFeature] {
-        configuration.features
+        activeConfiguration.features
     }
 
     /// The loaded product currently best representing the active entitlement.

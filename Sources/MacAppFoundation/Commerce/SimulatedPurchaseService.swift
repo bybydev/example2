@@ -78,10 +78,7 @@ final class SimulatedPurchaseService: PurchaseServing {
             persistPurchasedProductIDs()
             publishEntitlementUpdate(for: productID)
             return .success(
-                EntitlementRecord(
-                    productID: product.id,
-                    purchaseDate: purchaseDate
-                )
+                makeEntitlementRecord(for: product.id, purchaseDate: purchaseDate)
             )
         case .pending:
             return .pending
@@ -95,8 +92,8 @@ final class SimulatedPurchaseService: PurchaseServing {
     func currentEntitlements() async -> [EntitlementRecord] {
         await waitForSimulationDelay()
         return purchasedProductIDs.sorted().map { productID in
-            EntitlementRecord(
-                productID: productID,
+            makeEntitlementRecord(
+                for: productID,
                 purchaseDate: purchaseDates[productID] ?? .now
             )
         }
@@ -215,6 +212,70 @@ final class SimulatedPurchaseService: PurchaseServing {
     private func publishEntitlementUpdate(for productID: String) {
         for continuation in updateContinuations.values {
             continuation.yield(productID)
+        }
+    }
+
+    private func makeEntitlementRecord(
+        for productID: String,
+        purchaseDate: Date
+    ) -> EntitlementRecord {
+        let product = productsByID[productID]
+        let productKind: EntitlementProductKind
+        switch product?.type {
+        case .autoRenewable:
+            productKind = .autoRenewable
+        case .nonConsumable:
+            productKind = .nonConsumable
+        case .consumable, .nonRenewable:
+            productKind = .unsupported
+        case .unknown, .none:
+            productKind = .unknown
+        }
+
+        let expirationDate: Date?
+        if productKind == .autoRenewable {
+            expirationDate = Self.simulatedExpirationDate(
+                from: purchaseDate,
+                period: product?.subscriptionPeriod
+            )
+        } else {
+            expirationDate = nil
+        }
+
+        return EntitlementRecord(
+            productID: productID,
+            purchaseDate: purchaseDate,
+            expirationDate: expirationDate,
+            productKind: productKind,
+            ownership: .purchased,
+            subscriptionState: productKind == .autoRenewable ? .subscribed : nil
+        )
+    }
+
+    private static func simulatedExpirationDate(
+        from purchaseDate: Date,
+        period: StoreProduct.SubscriptionPeriod?
+    ) -> Date {
+        let calendar = Calendar(identifier: .gregorian)
+        guard let period else {
+            return purchaseDate.addingTimeInterval(30 * 24 * 60 * 60)
+        }
+
+        switch period.unit {
+        case .day:
+            return calendar.date(byAdding: .day, value: period.value, to: purchaseDate)
+                ?? purchaseDate.addingTimeInterval(TimeInterval(period.value * 86_400))
+        case .week:
+            return calendar.date(byAdding: .day, value: period.value * 7, to: purchaseDate)
+                ?? purchaseDate.addingTimeInterval(TimeInterval(period.value * 7 * 86_400))
+        case .month:
+            return calendar.date(byAdding: .month, value: period.value, to: purchaseDate)
+                ?? purchaseDate.addingTimeInterval(TimeInterval(period.value * 30 * 86_400))
+        case .year:
+            return calendar.date(byAdding: .year, value: period.value, to: purchaseDate)
+                ?? purchaseDate.addingTimeInterval(TimeInterval(period.value * 365 * 86_400))
+        case .unknown:
+            return purchaseDate.addingTimeInterval(30 * 24 * 60 * 60)
         }
     }
 

@@ -1225,6 +1225,43 @@ final class OfflineEntitlementTests: XCTestCase {
         XCTAssertNil(manager.activeProduct)
     }
 
+    func testOfflineFallbackPreservesOriginalCacheVerifiedAtTimestamp() async throws {
+        let verifiedAt = Date(timeIntervalSince1970: 1_800_000_000)
+        let offlineCheckAt = verifiedAt.addingTimeInterval(3_600)
+        let context = Self.context(account: "account-a")
+        let store = InMemoryEntitlementStore()
+        let onlineManager = PurchaseManager(
+            configuration: Self.configuration(productIDs: [Self.lifetime.id]),
+            service: OfflineTestPurchaseService(
+                context: context,
+                entitlements: [Self.lifetimeRecord(context: context)],
+                products: [Self.lifetime]
+            ),
+            entitlementStore: store,
+            now: { verifiedAt }
+        )
+        await onlineManager.prepare()
+
+        let offlineManager = PurchaseManager(
+            configuration: Self.configuration(productIDs: [Self.lifetime.id]),
+            service: OfflineTestPurchaseService(
+                context: context,
+                entitlements: [],
+                products: [Self.lifetime],
+                defaultLatestLookup: .unavailable
+            ),
+            entitlementStore: store,
+            now: { offlineCheckAt }
+        )
+        await offlineManager.prepare()
+
+        XCTAssertTrue(offlineManager.hasPro)
+        let rawData = try XCTUnwrap(try store.data(for: context.storageAccount))
+        let cache = try JSONDecoder().decode(VerifiedEntitlementCache.self, from: rawData)
+        XCTAssertEqual(cache.verifiedAt, verifiedAt)
+        XCTAssertEqual(cache.lastObservedAt, offlineCheckAt)
+    }
+
     private static func waitUntil(
         timeout: Duration = .seconds(1),
         condition: @escaping @MainActor () -> Bool

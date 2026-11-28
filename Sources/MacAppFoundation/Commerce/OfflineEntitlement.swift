@@ -222,6 +222,7 @@ struct VerifiedEntitlementCache: Codable, Sendable, Equatable {
                 entitledProductIDs.contains($0.productID)
                     && $0.revocationDate == nil
                     && !$0.isUpgraded
+                    && $0.subscriptionState?.isExplicitlyInactive != true
                     && ($0.productKind == .autoRenewable || $0.productKind == .nonConsumable)
             }
             .map { PersistedEntitlementRecord($0, verifiedAt: verifiedAt) }
