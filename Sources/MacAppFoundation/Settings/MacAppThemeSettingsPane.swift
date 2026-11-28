@@ -12,12 +12,13 @@ public struct MacAppThemeSettingsPane: View {
         case compact
     }
 
-    @Bindable private var themeStore: MacAppThemeStore
+    private let themeStore: MacAppThemeStore
     private let purchaseManager: PurchaseManager?
     private let variant: Variant
     private let onUpgrade: (() -> Void)?
 
     @Environment(\.macAppTheme) private var theme
+    @State private var systemAppearance = MacAppSystemColorSchemeObserver()
 
     /// Creates MAF's Theme pane.
     ///
@@ -45,35 +46,49 @@ public struct MacAppThemeSettingsPane: View {
             }
         }
         .background(theme.canvas)
+        .onAppear {
+            systemAppearance.start()
+        }
+        .onDisappear {
+            systemAppearance.stop()
+        }
+        .task {
+            synchronizeEntitlementIfNeeded()
+        }
+        .onChange(of: purchaseManager?.hasPro) { _, _ in
+            synchronizeEntitlementIfNeeded()
+        }
     }
 
     private var themeList: some View {
-        TimelineView(.periodic(from: .now, by: 1)) { _ in
-            let hasPro = purchaseManager?.hasPro ?? false
-            let proThemeIDs = themeStore.configuration.proThemeIDs
-            let previewableThemeIDs = hasPro
-                ? Set<MacAppThemeID>()
-                : Set(proThemeIDs.filter { themeStore.canPreview($0, hasPro: false) })
-            let lockedThemeIDs = hasPro
-                ? Set<MacAppThemeID>()
-                : proThemeIDs.subtracting(previewableThemeIDs)
+        let hasPro = purchaseManager?.hasPro ?? false
+        let isPreviewTimerActive = !hasPro && themeStore.isPreviewActive
+
+        return TimelineView(
+            .animation(minimumInterval: 1, paused: !isPreviewTimerActive)
+        ) { _ in
+            let state = MacAppThemePickerState(
+                themeStore: themeStore,
+                purchaseManager: purchaseManager
+            )
 
             ScrollView {
                 MacAppThemePicker(
-                    themes: themeStore.configuration.themes,
-                    selectedThemeID: themeStore.effectiveThemeID(hasPro: hasPro),
-                    previewingThemeID: themeStore.isPreviewActive
-                        ? themeStore.previewThemeID
-                        : nil,
-                    previewProgress: previewProgress,
-                    previewableThemeIDs: previewableThemeIDs,
-                    lockedThemeIDs: lockedThemeIDs,
+                    themes: MacAppThemePickerState.resolvedThemes(
+                        from: themeStore.configuration,
+                        systemColorScheme: systemAppearance.colorScheme
+                    ),
+                    selectedThemeID: state.selectedThemeID,
+                    previewingThemeID: state.previewingThemeID,
+                    previewProgress: state.previewProgress,
+                    previewableThemeIDs: state.previewableThemeIDs,
+                    lockedThemeIDs: state.lockedThemeIDs,
                     compact: variant == .compact,
                     onSelect: { themeID in
-                        themeStore.select(themeID, hasPro: hasPro)
+                        themeStore.select(themeID, hasPro: state.hasPro)
                     },
                     onPreviewSelect: { themeID in
-                        let result = themeStore.choose(themeID, hasPro: hasPro)
+                        let result = themeStore.choose(themeID, hasPro: state.hasPro)
                         if case .requiresPro = result {
                             onUpgrade?()
                         }
@@ -86,24 +101,31 @@ public struct MacAppThemeSettingsPane: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             .safeAreaInset(edge: .bottom, spacing: 0) {
-                if themeStore.isPreviewActive {
-                    previewStatus(hasPro: hasPro)
-                        .frame(maxWidth: .infinity)
-                        .padding(.horizontal, 22)
-                        .padding(.top, 8)
-                        .padding(.bottom, 12)
+                if state.showsPreviewStatus {
+                    MacAppThemePreviewStatusBar(
+                        previewThemeName: themeStore.previewTheme?.name ?? "Pro theme",
+                        fallbackThemeName: themeStore.themeAfterPreview(hasPro: state.hasPro).name,
+                        countdown: MacAppThemePickerState.formattedCountdown(
+                            seconds: themeStore.previewRemainingSeconds
+                        ),
+                        onUpgrade: onUpgrade,
+                        onEnd: {
+                            themeStore.endPreview()
+                        }
+                    )
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, 22)
+                    .padding(.top, 8)
+                    .padding(.bottom, 12)
                 }
             }
         }
     }
 
     var previewProgress: Double {
-        guard themeStore.isPreviewActive else { return 0 }
-        let duration = themeStore.configuration.previewBehavior.defaultDuration
-        guard duration > 0 else { return 0 }
-        return min(
-            1,
-            max(0, Double(themeStore.previewRemainingSeconds) / duration)
+        MacAppThemePickerState.previewProgress(
+            for: themeStore,
+            hasPro: purchaseManager?.hasPro ?? false
         )
     }
 
@@ -113,6 +135,13 @@ public struct MacAppThemeSettingsPane: View {
             return "This Theme pane includes Pro themes but is missing PurchaseManager or onUpgrade. Pass both dependencies to enable Pro theme access and upgrades."
         }
         return nil
+    }
+
+    private func synchronizeEntitlementIfNeeded() {
+        if let hasPro = purchaseManager?.hasPro {
+            themeStore.synchronizeProAccess(hasPro)
+        }
+        themeStore.refreshPreviewState()
     }
 
     private func configurationErrorView(_ message: String) -> some View {
@@ -134,58 +163,5 @@ public struct MacAppThemeSettingsPane: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(32)
         .accessibilityElement(children: .combine)
-    }
-
-    private func previewStatus(hasPro: Bool) -> some View {
-        HStack(spacing: 12) {
-            Image(systemName: "timer")
-                .font(.headline)
-                .foregroundStyle(theme.accent)
-
-            VStack(alignment: .leading, spacing: 2) {
-                Text("Previewing \(themeStore.previewTheme?.name ?? "Pro theme")")
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(theme.textPrimary)
-
-                Text(
-                    "Returns to \(themeStore.themeAfterPreview(hasPro: hasPro).name) in \(countdown)"
-                )
-                .font(.caption)
-                .foregroundStyle(theme.textSecondary)
-            }
-
-            Spacer(minLength: 8)
-
-            if let onUpgrade {
-                Button("Unlock Pro", action: onUpgrade)
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.small)
-            }
-
-            Button("End") {
-                themeStore.endPreview()
-            }
-            .buttonStyle(.bordered)
-            .controlSize(.small)
-        }
-        .padding(12)
-        .background(
-            theme.surfaceRaised,
-            in: RoundedRectangle(cornerRadius: 12, style: .continuous)
-        )
-        .overlay {
-            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                .stroke(theme.border, lineWidth: 1)
-        }
-        .shadow(color: theme.shadow, radius: 8, y: 3)
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel(
-            "Previewing \(themeStore.previewTheme?.name ?? "Pro theme"). Returns to \(themeStore.themeAfterPreview(hasPro: hasPro).name) in \(countdown)."
-        )
-    }
-
-    private var countdown: String {
-        let seconds = themeStore.previewRemainingSeconds
-        return String(format: "%d:%02d", seconds / 60, seconds % 60)
     }
 }

@@ -147,7 +147,7 @@ public struct MacAppThemePreviewCard: View {
             .padding(compact ? 8 : 10)
             .background(cardBackground, in: cardShape)
             .overlay {
-                cardShape.stroke(borderColor, lineWidth: isFocused ? 2 : 1)
+                cardShape.strokeBorder(borderColor, lineWidth: isFocused ? 2 : 1)
             }
             .contentShape(cardShape)
             .scaleEffect(isHovering && !reduceMotion ? 1.01 : 1)
@@ -185,12 +185,12 @@ public struct MacAppThemePreviewCard: View {
         ZStack {
             if isPreviewing {
                 Circle()
-                    .stroke(theme.accent.opacity(0.18), lineWidth: 2)
+                    .stroke(activeTheme.accent.opacity(0.18), lineWidth: 2)
 
                 Circle()
                     .trim(from: 0, to: CGFloat(previewProgress))
                     .stroke(
-                        theme.accent,
+                        activeTheme.accent,
                         style: StrokeStyle(lineWidth: 2, lineCap: .round)
                     )
                     .rotationEffect(.degrees(-90))
@@ -202,7 +202,7 @@ public struct MacAppThemePreviewCard: View {
 
             Image(systemName: isPreviewing ? "lock.open.fill" : "lock.fill")
                 .font(.system(size: 9.5, weight: .semibold))
-                .foregroundStyle(theme.accent)
+                .foregroundStyle(activeTheme.accent)
                 .contentTransition(.symbolEffect)
         }
         .frame(width: 22, height: 22)
@@ -232,20 +232,22 @@ public struct MacAppThemePreviewCard: View {
             VStack(alignment: .leading, spacing: 6) {
                 RoundedRectangle(cornerRadius: 4)
                     .fill(theme.textPrimary.opacity(0.82))
-                    .frame(width: 78, height: 7)
+                    .frame(maxWidth: compact ? 64 : 78)
+                    .frame(height: 7)
                 RoundedRectangle(cornerRadius: 4)
                     .fill(theme.textMuted.opacity(0.48))
-                    .frame(width: 112, height: 6)
+                    .frame(maxWidth: compact ? 92 : 112)
+                    .frame(height: 6)
 
                 HStack {
                     Spacer()
                     RoundedRectangle(cornerRadius: 10)
                         .fill(theme.selection)
-                        .frame(width: 70, height: 24)
+                        .frame(width: compact ? 58 : 70, height: 24)
                         .overlay(alignment: .center) {
                             RoundedRectangle(cornerRadius: 3)
                                 .fill(theme.accent)
-                                .frame(width: 34, height: 5)
+                                .frame(width: compact ? 28 : 34, height: 5)
                         }
                 }
             }

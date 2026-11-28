@@ -408,6 +408,18 @@ public final class MacAppThemeStore {
 
 @MainActor
 enum MacAppApplicationAppearance {
+    static let systemInterfaceThemeChangedNotification = Notification.Name(
+        "AppleInterfaceThemeChangedNotification"
+    )
+
+    /// Reads macOS's system appearance preference directly, independent of any
+    /// `NSApplication.shared.appearance` override applied for forced Light/Dark themes.
+    static func systemColorScheme(
+        interfaceStyle: String? = UserDefaults.standard.string(forKey: "AppleInterfaceStyle")
+    ) -> ColorScheme {
+        interfaceStyle == "Dark" ? .dark : .light
+    }
+
     static func appearanceName(
         for effectiveThemeID: MacAppThemeID,
         theme: MacAppTheme
@@ -478,6 +490,45 @@ enum MacAppApplicationAppearance {
         }
 
         return colorScheme(for: effectiveAppearance())
+    }
+}
+
+@MainActor
+@Observable
+final class MacAppSystemColorSchemeObserver {
+    private(set) var colorScheme: ColorScheme
+
+    @ObservationIgnored private var observer: NSObjectProtocol?
+
+    init() {
+        self.colorScheme = MacAppApplicationAppearance.systemColorScheme()
+    }
+
+    func start() {
+        refresh()
+        guard observer == nil else { return }
+        observer = DistributedNotificationCenter.default().addObserver(
+            forName: MacAppApplicationAppearance.systemInterfaceThemeChangedNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            MainActor.assumeIsolated {
+                self?.refresh()
+            }
+        }
+    }
+
+    func stop() {
+        guard let observer else { return }
+        DistributedNotificationCenter.default().removeObserver(observer)
+        self.observer = nil
+    }
+
+    func refresh() {
+        let latest = MacAppApplicationAppearance.systemColorScheme()
+        if colorScheme != latest {
+            colorScheme = latest
+        }
     }
 }
 
