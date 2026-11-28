@@ -1384,8 +1384,8 @@ public actor AppAnalyticsClient {
                 let exceedsCountLimits = pending.count >= Limits.maxDaysPerBatch
                     || pendingEventCounters + events.count > Limits.maxEventCountersPerBatch
                     || pendingErrorCounters + errors.count > Limits.maxErrorCountersPerBatch
-                if exceedsCountLimits
-                    || (try encodedByteCount(for: pending + [batchDay])) > Limits.maxBodyBytes {
+                if try exceedsCountLimits
+                    || encodedByteCount(for: pending + [batchDay]) > Limits.maxBodyBytes {
                     finishPending()
                 }
             }
