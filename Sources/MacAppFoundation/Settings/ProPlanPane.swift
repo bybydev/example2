@@ -32,15 +32,17 @@ public struct ProPlanPane: View {
             headerCard
 
             if !resolvedFeatures.isEmpty {
-                ProPlanFeatureList(
+                ProPlanFeatureSection(
                     features: resolvedFeatures,
+                    freeTitle: configuration.freeTitle,
+                    proTitle: configuration.proTitle,
                     presentationState: presentationState
                 )
-                .padding(16)
                 .background(
                     theme.surface,
                     in: RoundedRectangle(cornerRadius: 12, style: .continuous)
                 )
+                .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                 .overlay {
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                         .strokeBorder(theme.border, lineWidth: 1)
@@ -334,29 +336,117 @@ private struct ProPlanPaneStatusBanner: Equatable {
 }
 
 @MainActor
-private struct ProPlanFeatureList: View {
+private struct ProPlanFeatureSection: View {
     @Environment(\.macAppTheme) private var theme
 
     let features: [PurchaseFeature]
+    let freeTitle: String
+    let proTitle: String
     let presentationState: ProPlanPanePresentationState
 
+    private let freeColumnWidth: CGFloat = 128
+    private let proColumnWidth: CGFloat = 140
+
     var body: some View {
+        if ProPlanPanePresentationState.showsComparisonTable(for: features) {
+            comparisonTable
+        } else {
+            fallbackFeatureList
+        }
+    }
+
+    private var comparisonTable: some View {
+        VStack(spacing: 0) {
+            HStack(alignment: .center, spacing: 0) {
+                Text("FEATURE")
+                    .font(.system(size: 11, weight: .semibold))
+                    .tracking(0.4)
+                    .foregroundStyle(theme.textMuted)
+                    .padding(.leading, 16)
+                    .padding(.trailing, 12)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+                Text(freeTitle.uppercased())
+                    .font(.system(size: 11, weight: .semibold))
+                    .tracking(0.4)
+                    .foregroundStyle(theme.textSecondary)
+                    .lineLimit(1)
+                    .padding(.horizontal, 12)
+                    .frame(width: freeColumnWidth, alignment: .leading)
+
+                HStack(spacing: 4) {
+                    if presentationState == .pro {
+                        Image(systemName: "checkmark")
+                            .font(.system(size: 10, weight: .bold))
+                            .accessibilityHidden(true)
+                    }
+
+                    Text(proTitle.uppercased())
+                        .font(.system(size: 11, weight: .semibold))
+                        .tracking(0.4)
+                        .lineLimit(1)
+                }
+                .foregroundStyle(theme.accent)
+                .padding(.leading, 12)
+                .padding(.trailing, 16)
+                .frame(width: proColumnWidth, alignment: .leading)
+            }
+            .padding(.vertical, 10)
+            .accessibilityHidden(true)
+
+            ForEach(features) { feature in
+                Rectangle()
+                    .fill(theme.separator.opacity(0.72))
+                    .frame(height: 1)
+
+                HStack(alignment: .center, spacing: 0) {
+                    HStack(alignment: .center, spacing: 10) {
+                        featureIcon(feature.systemImage, size: 26, cornerRadius: 7, glyphSize: 12)
+
+                        Text(feature.title)
+                            .font(.system(size: 13, weight: .medium))
+                            .foregroundStyle(theme.textPrimary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    .padding(.leading, 16)
+                    .padding(.trailing, 12)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+                    Text(displayValue(feature.freeValue))
+                        .font(.system(size: 12))
+                        .foregroundStyle(theme.textSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(.horizontal, 12)
+                        .frame(width: freeColumnWidth, alignment: .leading)
+
+                    Text(displayValue(feature.proValue))
+                        .font(.system(size: 12, weight: .medium))
+                        .foregroundStyle(presentationState == .pro ? theme.accent : theme.textPrimary)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(.leading, 12)
+                        .padding(.trailing, 16)
+                        .frame(width: proColumnWidth, alignment: .leading)
+                }
+                .padding(.vertical, 10)
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(feature.title)
+                .accessibilityValue(
+                    "\(freeTitle): \(displayValue(feature.freeValue)), \(proTitle): \(displayValue(feature.proValue))"
+                )
+            }
+        }
+        .background(alignment: .trailing) {
+            theme.accentSoft.opacity(0.35)
+                .frame(width: proColumnWidth)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private var fallbackFeatureList: some View {
         VStack(alignment: .leading, spacing: 12) {
             ForEach(features) { feature in
                 HStack(alignment: .top, spacing: 12) {
-                    RoundedRectangle(cornerRadius: 8, style: .continuous)
-                        .fill(featureIconBackground)
-                        .frame(width: 28, height: 28)
-                        .overlay {
-                            Image(systemName: feature.systemImage)
-                                .font(.system(size: 13, weight: .semibold))
-                                .foregroundStyle(featureIconForeground)
-                        }
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 8, style: .continuous)
-                                .strokeBorder(theme.border, lineWidth: 0.5)
-                        }
-                        .accessibilityHidden(true)
+                    featureIcon(feature.systemImage, size: 28, cornerRadius: 8, glyphSize: 13)
 
                     VStack(alignment: .leading, spacing: 2) {
                         Text(feature.title)
@@ -369,53 +459,39 @@ private struct ProPlanFeatureList: View {
                             .fixedSize(horizontal: false, vertical: true)
                     }
 
-                    Spacer(minLength: 8)
-
-                    tierIndicator(for: feature)
+                    Spacer(minLength: 0)
                 }
                 .accessibilityElement(children: .combine)
             }
         }
+        .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 
-    @ViewBuilder
-    private func tierIndicator(for feature: PurchaseFeature) -> some View {
-        let rawValue = presentationState == .pro ? feature.proValue : feature.freeValue
-        let value = rawValue.trimmingCharacters(in: .whitespacesAndNewlines)
-
-        if !value.isEmpty {
-            HStack(spacing: 4) {
-                if presentationState == .pro {
-                    Image(systemName: "checkmark")
-                        .font(.system(size: 9, weight: .bold))
-                        .accessibilityHidden(true)
-                }
-
-                Text(value)
-                    .font(.system(size: 11, weight: .medium))
-                    .lineLimit(1)
-            }
-            .foregroundStyle(presentationState == .pro ? theme.accent : theme.textSecondary)
-            .padding(.horizontal, 8)
-            .padding(.vertical, 4)
-            .background(
-                presentationState == .pro ? theme.accentSoft : theme.surfaceRaised,
-                in: Capsule()
-            )
+    private func featureIcon(
+        _ systemImage: String,
+        size: CGFloat,
+        cornerRadius: CGFloat,
+        glyphSize: CGFloat
+    ) -> some View {
+        RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+            .fill(featureIconBackground)
+            .frame(width: size, height: size)
             .overlay {
-                Capsule()
-                    .strokeBorder(
-                        presentationState == .pro ? theme.accent.opacity(0.22) : theme.border,
-                        lineWidth: 0.5
-                    )
+                Image(systemName: systemImage)
+                    .font(.system(size: glyphSize, weight: .semibold))
+                    .foregroundStyle(featureIconForeground)
             }
-        } else if presentationState == .pro {
-            Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 14))
-                .foregroundStyle(theme.accent)
-                .accessibilityLabel("Included")
-        }
+            .overlay {
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .strokeBorder(theme.border, lineWidth: 0.5)
+            }
+            .accessibilityHidden(true)
+    }
+
+    private func displayValue(_ rawValue: String) -> String {
+        let trimmed = rawValue.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? "—" : trimmed
     }
 
     private var featureIconBackground: Color {
@@ -438,6 +514,13 @@ enum ProPlanPanePresentationState: Equatable {
 
     init(hasPro: Bool) {
         self = hasPro ? .pro : .free
+    }
+
+    static func showsComparisonTable(for features: [PurchaseFeature]) -> Bool {
+        features.contains {
+            !$0.freeValue.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+                || !$0.proValue.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        }
     }
 
     static func planBadgeLabel(

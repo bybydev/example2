@@ -275,6 +275,32 @@ struct MacAppSettingsBuiltInsTests {
     }
 
     @MainActor
+    @Test("Plan pane uses comparison table when features have tier values")
+    func planPaneComparisonTableDetection() {
+        let comparable = PurchaseFeature(
+            id: "batch",
+            systemImage: "square.stack.3d.up",
+            title: "Batch workflows",
+            message: "Process many items in one operation.",
+            freeValue: "One item",
+            proValue: "Unlimited"
+        )
+        let plain = PurchaseFeature(
+            id: "plain",
+            systemImage: "sparkles",
+            title: "Plain feature",
+            message: "Description only.",
+            freeValue: " ",
+            proValue: ""
+        )
+
+        #expect(ProPlanPanePresentationState.showsComparisonTable(for: [comparable]))
+        #expect(ProPlanPanePresentationState.showsComparisonTable(for: [plain, comparable]))
+        #expect(!ProPlanPanePresentationState.showsComparisonTable(for: [plain]))
+        #expect(!ProPlanPanePresentationState.showsComparisonTable(for: []))
+    }
+
+    @MainActor
     @Test("Plan pane badge shows known plan label and omits redundant or unloaded badges")
     func planPaneBadgeLabel() {
         let monthly = StoreProduct(
